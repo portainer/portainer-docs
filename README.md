@@ -1,5 +1,7 @@
 # Portainer documentation
 
+[![Documentation Status](https://readthedocs.org/projects/portainer/badge/?version=stable)](http://portainer.readthedocs.io/en/stable/?badge=stable)
+
 Documentation is available at http://portainer.readthedocs.io/
 
 # Contribute
