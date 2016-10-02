@@ -13,6 +13,7 @@ Contents:
    deployment
    configuration
    templates
+   contribute
    faq
 
 
