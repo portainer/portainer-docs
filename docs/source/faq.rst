@@ -68,3 +68,5 @@ You can generate the authentication file using the following command:
 .. code-block:: bash
 
   docker run --rm httpd htpasswd -nbB <USERNAME> <PASSWORD> /etc/nginx/conf.d/portainer.htpasswd
+
+You can also checkout our pre-configured setup using Docker compose `here <https://github.com/portainer/portainer-compose>`_.
