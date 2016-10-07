@@ -1,6 +1,6 @@
 # Portainer documentation
 
-[![Documentation Status](https://readthedocs.org/projects/portainer/badge/?version=stable)](http://portainer.readthedocs.io/en/stable/?badge=stable)
+[![Documentation Status](https://readthedocs.org/projects/portainer/badge/?version=latest)](http://portainer.readthedocs.io/en/latest/?badge=latest)
 
 Documentation is available at http://portainer.readthedocs.io/
 
