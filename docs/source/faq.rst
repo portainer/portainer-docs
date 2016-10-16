@@ -70,3 +70,13 @@ You can generate the authentication file using the following command:
   docker run --rm httpd htpasswd -nbB <USERNAME> <PASSWORD> /etc/nginx/conf.d/portainer.htpasswd
 
 You can also checkout our pre-configured setup using Docker compose `here <https://github.com/portainer/portainer-compose>`_.
+
+Exposed ports in the container view redirects me to 0.0.0.0, what can I do?
+===========================================================================
+
+In order for Portainer to be able to redirect you to your Docker host IP address and not the 0.0.0.0 address, you will have
+to change the configuration of your Docker daemon and add the ``--ip`` option.
+
+Have a look at the `Docker documentation <https://docs.docker.com/engine/reference/commandline/dockerd/>`_ for more details.
+
+Note that you will have to restart your Docker daemon for the changes to be taken in effect.
