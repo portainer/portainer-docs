@@ -80,3 +80,10 @@ to change the configuration of your Docker daemon and add the ``--ip`` option.
 Have a look at the `Docker documentation <https://docs.docker.com/engine/reference/commandline/dockerd/>`_ for more details.
 
 Note that you will have to restart your Docker daemon for the changes to be taken in effect.
+
+
+Why does Portainer not work in Kitematic?
+=========================================
+
+Portainer has to be connected to a Docker instance either by bind-mounting the Docker socket or using the ``-H`` flag in the container command to specify
+the Docker host address. Unfortunately, Kitematic does not allow you to specify any of these at the moment.
