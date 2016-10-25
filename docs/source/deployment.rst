@@ -4,6 +4,14 @@ Deployment
 
 Portainer is built to run on Docker and is really simple to deploy.
 
+**Note**: the following instructions target Docker for Linux, if your target is Docker for Windows please use the
+``portainer/portainer:windows`` Docker image instead of the ``portainer/portainer`` Docker image.
+
+Portainer deployment scenarios can be executed on both platforms unless specified.
+
+Quick start
+===========
+
 The most common deployment scenario is to deploy Portainer to manage a remote Docker host, it's as simple as:
 
 .. code-block:: bash
@@ -14,8 +22,21 @@ Voilà, you can now access Portainer by pointing your web browser at ``http://DO
 
 Ensure you replace ``DOCKER_HOST`` with address of your Docker host where Portainer is running.
 
+Connect to a remote Docker engine
+=================================
+
+In order to connect to a remote host, use the ``-H`` flag and the ``tcp://`` protocol:
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 portainer/portainer -H tcp://<REMOTE_HOST>:<REMOTE_PORT>
+
+Ensure you replace ``REMOTE_HOST`` and ``REMOTE_PORT`` with the address/port of the Docker engine you want to manage.
+
 Connect to a local Docker engine
 ================================
+
+*Docker for Linux only*
 
 By default, Portainer will try to connect to the local Docker engine using the unix socket path at ``/var/run/docker.sock``
 
@@ -37,17 +58,6 @@ You can also specify an alternative path to the Docker socket using the ``-H`` f
 .. code-block:: bash
 
   $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/docker/docker.sock portainer/portainer -H unix:///docker/docker.sock
-
-Connect to a remote Docker engine
-=================================
-
-In order to connect to a remote host, use the ``-H`` flag and the ``tcp://`` protocol:
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 portainer/portainer -H tcp://<REMOTE_HOST>:<REMOTE_PORT>
-
-Ensure you replace ``REMOTE_HOST`` and ``REMOTE_PORT`` with the address/port of the Docker engine you want to manage.
 
 Connect to a Docker engine with TLS enabled
 ===========================================
