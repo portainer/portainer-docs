@@ -71,6 +71,77 @@ You can generate the authentication file using the following command:
 
 You can also checkout our pre-configured setup using Docker compose `here <https://github.com/portainer/portainer-compose>`_.
 
+How can I configure my reverse proxy to serve Portainer using HAProxy?
+======================================================================
+
+Here is a working configuration for HAProxy to serve Portainer at `portainer.127.0.0.1.xip.io`:
+
+.. code-block:: haproxy
+
+  global
+      maxconn                     10000
+      daemon
+      ssl-server-verify           none
+      tune.ssl.default-dh-param   2048
+
+  defaults
+      mode    http
+      log     global
+      option  httplog
+      option  dontlognull
+      option  http-server-close
+      option  forwardfor          except 127.0.0.0/8
+      option  redispatch
+      retries 30
+      timeout http-request        300s
+      timeout queue               1m
+      timeout connect             10s
+      timeout client              1m
+      timeout server              1m
+      timeout http-keep-alive     10s
+      timeout check               10s
+      maxconn 10000
+
+  userlist users
+      group all
+      group demo
+      group haproxy
+
+  listen stats
+      bind            *:2100
+      mode            http
+      stats           enable
+      maxconn         10
+      timeout client  10s
+      timeout server  10s
+      timeout connect 10s
+      timeout         queue   10s
+      stats           hide-version
+      stats           refresh 30s
+      stats           show-node
+      stats           realm Haproxy\ Statistics
+      stats           uri  /
+      stats           admin if TRUE
+
+  frontend www-http
+      bind    *:80
+      stats   enable
+      mode    http
+      option  http-keep-alive
+
+      acl portainer   hdr_end(host)   -i portainer.127.0.0.1.xip.io
+
+      use_backend     portainer       if portainer
+
+  backend portainer
+      stats   enable
+      option  forwardfor
+      option  http-keep-alive
+      server  portainer    127.0.0.1:9000 check
+
+
+**Note**: http-keep-alive must be set for both frontend and backend
+
 Exposed ports in the container view redirects me to 0.0.0.0, what can I do?
 ===========================================================================
 
