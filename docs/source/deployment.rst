@@ -59,6 +59,22 @@ You can also specify an alternative path to the Docker socket using the ``-H`` f
 
   $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/docker/docker.sock portainer/portainer -H unix:///docker/docker.sock
 
+Connect to a Swarm cluster
+==========================
+
+If you want to manage a cluster created with Docker Swarm or using the swarm mode of Docker 1.12 all you need to do
+is to add the ``--swarm`` flag to the portainer command line.
+
+**Note**: Ensure you connect to either a *primary* node when connecting to a Docker Swarm cluster or a *manager* node
+when connecting to a cluster created with Docker swarm mode.
+
+For example, when connecting to a remote Swarm node:
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 portainer/portainer -H tcp://<REMOTE_HOST>:<REMOTE_PORT> --swarm
+
+
 Connect to a Docker engine with TLS enabled
 ===========================================
 
