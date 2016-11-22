@@ -97,8 +97,8 @@ You must ensure these files are present in the container using a bind mount:
 You can also use the ``--tlscacert``, ``--tlscert`` and ``--tlskey`` flags if you want to change the default path to the CA, certificate and key file respectively:
 
 .. code-block:: bash
-
-  $ docker run -d -p 9000:9000 portainer/portainer -v /path/to/certs:/certs -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
+ 
+  $ docker run -d -p 9000:9000 -v /path/to/certs:/certs portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
 
 Without Docker
 ==============
