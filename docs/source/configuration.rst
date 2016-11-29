@@ -9,7 +9,7 @@ Hiding specific containers
 
 Portainer allows you to hide containers with a specific label by using the ``-l`` flag.
 
-For example, take a container started with the label owner=acme:
+For example, take a container started with the label *owner=acme* (note that this is an example label, you can define your own labels):
 
 .. code-block:: bash
 
