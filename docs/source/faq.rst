@@ -21,11 +21,11 @@ Here is a working configuration for Nginx (tested on 1.11) to serve Portainer at
         proxy_set_header Connection "";
         proxy_pass http://portainer/;
     }
-    location /portainer/ws/ {
+    location /portainer/dockerapi/ {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
         proxy_http_version 1.1;
-        proxy_pass http://portainer/ws/;
+        proxy_pass http://portainer/dockerapi/;
     }
   }
 
@@ -53,11 +53,11 @@ Here is a working configuration for Nginx (tested on 1.11 with **bcrypt** suppor
         proxy_set_header Connection "";
         proxy_pass http://portainer/;
     }
-    location /portainer/ws/ {
+    location /portainer/dockerapi/ {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
         proxy_http_version 1.1;
-        proxy_pass http://portainer/ws/;
+        proxy_pass http://portainer/dockerapi/;
     }
   }
 
