@@ -58,7 +58,6 @@ The following CLI flags are available:
 
 * ``--host``, ``-H``: Docker daemon endpoint (default: ``unix:///var/run/docker.sock``)
 * ``--bind``, ``-p``: Address and port to serve Portainer (default: ``:9000``)
-* ``--swarm``, ``-s``: Docker Swarm cluster / swarm-mode support (default: ``false``)
 * ``--tlsverify``: TLS support (default: ``false``)
 * ``--tlscacert``: Path to the CA (default: ``/certs/ca.pem``)
 * ``--tlscert``: Path to the TLS certificate file (default: ``/certs/cert.pem``)
