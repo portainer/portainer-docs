@@ -37,7 +37,7 @@ After your first authentication, Portainer will ask you information about the Do
 
 You'll have the following choices:
 
-* (**LINUX ONLY**) Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI)
+* (**LINUX ONLY**) Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI when running Portainer)
 * Manage a remote Docker engine, you'll just have to specify the url to your Docker endpoint, give it a name and TLS info if needed
 
 Declare initial endpoint via CLI
