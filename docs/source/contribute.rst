@@ -28,6 +28,12 @@ Install the dependencies using ``npm``:
 
   $ npm install
 
+Build the app locally:
+
+.. code-block:: bash
+
+  $ grunt build
+
 Start a live-reload process, the local application will be updated when you save your changes:
 
 .. code-block:: bash
