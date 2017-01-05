@@ -127,3 +127,12 @@ to the `css` folder inside the container:
 .. code-block:: bash
 
   $ docker run -d -p 9000:9000 -v <your-absolute-path>/css:/css/ portainer/portainer
+
+I am getting the error "Your session has expired" on login and cannot login. What's wrong?
+==========================================================================================
+
+When running Portainer inside a container, it will use your Docker engine system time to calculate the authentication
+token expiry time. A timedrift in your Docker system time might occur when using computer/VM hibernation. You need to ensure
+that your Docker engine system time is the same as your machine system time and if not, restart your Docker engine.
+
+As simple way to check your Docker system time is to use ``docker info`` or if the information is not available ``docker run busybox date``.
