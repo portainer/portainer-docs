@@ -57,7 +57,7 @@ The Docker image associated to the template. The image tag **must** be included.
 This field is **mandatory**.
 
 ``registry``
----------
+------------
 
 The registry where the Docker image is stored. If not specified, Portainer will use the Dockerhub as the default registry.
 

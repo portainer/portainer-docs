@@ -56,12 +56,13 @@ Available flags
 
 The following CLI flags are available:
 
-* ``--host``, ``-H``: Docker daemon endpoint (default: ``unix:///var/run/docker.sock``)
+* ``--host``, ``-H``: Docker daemon endpoint
 * ``--bind``, ``-p``: Address and port to serve Portainer (default: ``:9000``)
+* ``--data``, ``-d``: Directory where Portainer data will be stored (default: ``/data`` on Linux, ``C:\data`` on Windows)
 * ``--tlsverify``: TLS support (default: ``false``)
-* ``--tlscacert``: Path to the CA (default: ``/certs/ca.pem``)
-* ``--tlscert``: Path to the TLS certificate file (default: ``/certs/cert.pem``)
-* ``--tlskey``: Path to the TLS key (default: ``/certs/key.pem``)
+* ``--tlscacert``: Path to the CA (default: ``/certs/ca.pem`` on Linux, `C:\certs\ca.pem` on Windows)
+* ``--tlscert``: Path to the TLS certificate file (default: ``/certs/cert.pem``, `C:\certs\cert.pem` on Windows)
+* ``--tlskey``: Path to the TLS key (default: ``/certs/key.pem``, `C:\certs\key.pem` on Windows)
 * ``--hide-label``, ``-l``: Hide containers with a specific label in the UI
 * ``--logo``: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
 * ``--templates``, ``-t``: URL to templates (apps) definitions (default: ``https://raw.githubusercontent.com/portainer/templates/master/templates.json``)

@@ -4,10 +4,15 @@ Deployment
 
 Portainer is built to run on Docker and is really simple to deploy.
 
-**Note**: the following instructions target Docker for Linux, if your target is Docker for Windows please use the
-``portainer/portainer:windows`` Docker image instead of the ``portainer/portainer`` Docker image.
+**Note**: the following instructions target Docker for Linux (also works on Mac), if you want to use Portainer on another platform please change the `portainer/portainer` image accordingly:
+
+* Docker **on** Windows (different that Docker **for** Windows): `portainer/portainer:windows`
+* ARM: `portainer/portainer:arm`
+* ARM64: `portainer/portainer:arm64`
 
 Portainer deployment scenarios can be executed on both platforms unless specified.
+
+Note for Windows users: Docker **for** Windows is different than Docker **on** Windows, please ensure your installation type before starting.
 
 Quick start
 ===========
@@ -32,7 +37,7 @@ After your first authentication, Portainer will ask you information about the Do
 
 You'll have the following choices:
 
-* Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI)
+* (**LINUX ONLY**) Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI)
 * Manage a remote Docker engine, you'll just have to specify the url to your Docker endpoint, give it a name and TLS info if needed
 
 Declare initial endpoint via CLI
@@ -85,7 +90,7 @@ If your Docker engine is protected using TLS, you'll need to ensure that you hav
 
 You can upload the required files via the Portainer UI or use the ``--tlsverify`` flag on the CLI.
 
-Portainer will try to use the following paths to the files specified previously:
+Portainer will try to use the following paths to the files specified previously (on Linux, see the configuration section for details about Windows):
 
 * CA: ``/certs/ca.pem``
 * certificate: ``/certs/cert.pem``
@@ -106,7 +111,7 @@ You can also use the ``--tlscacert``, ``--tlscert`` and ``--tlskey`` flags if yo
 Persist Portainer data
 ======================
 
-By default, Portainer will store its data inside the container in the `/data` folder (this can be changed via CLI, see configuration).
+By default, Portainer will store its data inside the container in the `/data` folder on Linux (`C:\data` on Windows, this can be changed via CLI, see configuration).
 
 You'll need to persist Portainer data to keep your changes after restart/upgrade of the Portainer container. You can use a bind mount
 to persist the data on the Docker host folder:
@@ -114,6 +119,12 @@ to persist the data on the Docker host folder:
 .. code-block:: bash
 
   $ docker run -d -p 9000:9000 -v /path/on/host/data:/data portainer/portainer
+
+On Windows:
+
+.. code-block:: powershell
+
+  $ docker run -d -p 9000:9000 -v C:\ProgramData\Portainer:C:\data portainer/portainer:windows
 
 
 Without Docker
@@ -126,8 +137,8 @@ Download and extract the binary to a location on disk:
 .. code-block:: bash
 
   $ cd /opt
-  $ wget https://github.com/portainer/portainer/releases/download/1.11.0/portainer-1.11.0-linux-amd64.tar.gz
-  $ tar xvpfz portainer-1.11.0-linux-amd64.tar.gz
+  $ wget https://github.com/portainer/portainer/releases/download/1.11.1/portainer-1.11.1-linux-amd64.tar.gz
+  $ tar xvpfz portainer-1.11.1-linux-amd64.tar.gz
 
 Then just use the portainer binary as you would use CLI flags with Docker.
 
