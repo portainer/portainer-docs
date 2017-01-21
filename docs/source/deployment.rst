@@ -144,7 +144,8 @@ Then just use the portainer binary as you would use CLI flags with Docker.
 
 .. code-block:: bash
 
-  $ /opt/portainer/portainer -H tcp://DOCKER_HOST:DOCKER_PORT
+  $ cd /opt/portainer
+  $ ./portainer -H tcp://DOCKER_HOST:DOCKER_PORT
 
 You can use the ``-p`` flag to serve Portainer on another port:
 
