@@ -28,11 +28,19 @@ Install the dependencies using ``npm``:
 
   $ npm install
 
+Note for CentOS users, you'll need to create a symlink to the ``shasum`` binary:
+
+.. code-block:: bash
+
+  $ ln -s /usr/bin/sha1sum /usr/bin/shasum
+
+
 Build the app locally:
 
 .. code-block:: bash
 
   $ grunt build
+
 
 Start a live-reload process, the local application will be updated when you save your changes:
 
