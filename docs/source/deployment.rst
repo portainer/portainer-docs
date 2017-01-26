@@ -4,15 +4,7 @@ Deployment
 
 Portainer is built to run on Docker and is really simple to deploy.
 
-**Note**: the following instructions target Docker for Linux (also works on Mac), if you want to use Portainer on another platform please change the `portainer/portainer` image accordingly:
-
-* Docker **on** Windows (different that Docker **for** Windows): `portainer/portainer:windows`
-* ARM: `portainer/portainer:arm`
-* ARM64: `portainer/portainer:arm64`
-
-Portainer deployment scenarios can be executed on both platforms unless specified.
-
-Note for Windows users: Docker **for** Windows is different than Docker **on** Windows, please ensure your installation type before starting.
+Portainer deployment scenarios can be executed on any platform unless specified.
 
 Quick start
 ===========
@@ -37,7 +29,7 @@ After your first authentication, Portainer will ask you information about the Do
 
 You'll have the following choices:
 
-* (**LINUX ONLY**) Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI when running Portainer)
+* **Not available for Windows Containers (Windows Server 2016)** - Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI when running Portainer)
 * Manage a remote Docker engine, you'll just have to specify the url to your Docker endpoint, give it a name and TLS info if needed
 
 Declare initial endpoint via CLI
@@ -51,7 +43,7 @@ You can specify the initial endpoint you want Portainer to manage via the CLI, u
 
 Ensure you replace ``REMOTE_HOST`` and ``REMOTE_PORT`` with the address/port of the Docker engine you want to manage.
 
-You can also bind mount the Docker socket to manage a local Docker engine:
+You can also bind mount the Docker socket to manage a local Docker engine (**not available for Windows Containers (Windows Server 2016)**):
 
 .. code-block:: bash
 
@@ -71,7 +63,13 @@ Portainer will automatically detect if your endpoint is part of a Swarm cluster 
 **Note**: Ensure you connect to either a *primary* node when connecting to a Docker Swarm cluster or a *manager* node
 when connecting to a cluster created with Docker swarm mode.
 
-If you're using swarm mode, you can also deploy it as a service in your cluster:
+As simple as:
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 portainer/portainer -H tcp://<SWARM_MANAGER_IP>:2375
+
+Alternatively, if you're using swarm mode, you can also deploy it as a service in your cluster:
 
 .. code-block:: bash
 
@@ -151,4 +149,4 @@ You can use the ``-p`` flag to serve Portainer on another port:
 
 .. code-block:: bash
 
-  $ /opt/portainer/portainer -H tcp://DOCKER_HOST:DOCKER_PORT -p 8080
+  $ ./portainer -H tcp://DOCKER_HOST:DOCKER_PORT -p 8080
