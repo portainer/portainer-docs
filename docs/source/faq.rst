@@ -136,3 +136,6 @@ token expiry time. A timedrift in your Docker system time might occur when using
 that your Docker engine system time is the same as your machine system time and if not, restart your Docker engine.
 
 As simple way to check your Docker system time is to use ``docker info`` or if the information is not available ``docker run busybox date``.
+
+Users of Docker for Windows can also fix this by navigating to hyper-v-management -> virtual machines -> right-click on MobyLinuxVM -> settings -> integration services
+and enabling the time sync checkbox in the services list. 
