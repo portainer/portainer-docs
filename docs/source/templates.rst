@@ -70,6 +70,14 @@ A JSON array describing the environment variables required by the template. Each
 
 An input will be generated in the templates view for each element in the array.
 
+Depending on the value in `type` field, the view
+will display a different input. For example, when using the value `container` for the `type` field, the UI will display a dropdown with all
+the running containers. The container hostname will then be inserted as a value in the environment variable.
+
+Supported types:
+
+* `container`
+
 This field is **optional**.
 
 Element format:
@@ -79,6 +87,7 @@ Element format:
   {
     "name": "the name of the environment variable, as supported in the container image (mandatory)",
     "label": "label for the input in the UI (mandatory)",
+    "type": "only container is available at the moment (optional)",
     "set": "pre-defined value for the variable, will not generate an input in the UI (optional)"
   }
 
