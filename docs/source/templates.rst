@@ -130,6 +130,23 @@ Example:
     ]
   }
 
+``network``
+-----------
+
+A string corresponding to the name of an existing Docker network.
+
+Will auto-select the network (if it exists) in the templates view.
+
+This field is **optional**.
+
+Example:
+
+.. code-block:: json
+
+  {
+    "network": "host"
+  }
+
 ``volumes``
 -----------
 
