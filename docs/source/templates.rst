@@ -63,6 +63,22 @@ The registry where the Docker image is stored. If not specified, Portainer will 
 
 This field is **optional**.
 
+``command``
+------------
+
+The command to run in the container. If not specified, the container will use the default command specified in its Dockerfile.
+
+This field is **optional**.
+
+Example:
+
+.. code-block:: json
+
+  {
+    "command": "/bin/bash -c \"echo hello\" && exit 777"
+  }
+
+
 ``env``
 -------
 
