@@ -30,7 +30,7 @@ Note that the ``-l`` flag can be repeated multiple times to specify multiple lab
 Use your own logo
 =================
 
-You do not like our logo? Want to make Portainer more corporate? Don't worry, you can easily switch for an external logo using the ``--logo`` flag:
+You do not like our logo? Want to make Portainer more corporate? Don't worry, you can easily switch for an external logo (it must be exactly 155px by 55px) using the ``--logo`` flag:
 
 .. code-block:: bash
 
