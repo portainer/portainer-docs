@@ -4,6 +4,16 @@ Configuration
 
 Portainer can be easily tuned using CLI flags.
 
+Disable authentication
+======================
+
+To disable Portainer internal authentication mechanism, start Portainer with the ``--no-auth`` flag:
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --no-auth
+
+
 Hiding specific containers
 ==========================
 
@@ -66,3 +76,4 @@ The following CLI flags are available:
 * ``--hide-label``, ``-l``: Hide containers with a specific label in the UI
 * ``--logo``: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
 * ``--templates``, ``-t``: URL to templates (apps) definitions (default: ``https://raw.githubusercontent.com/portainer/templates/master/templates.json``)
+* ``-no-auth``: Disable internal authentication mechanism (default: ``false``)
