@@ -61,6 +61,21 @@ Add the ``--templates`` flag and specify the external location of your templates
 
 For more information about hosting your own template definitions see :doc:`Templates <templates>`
 
+Use an external endpoint source
+===============================
+
+Portainer gives you the option to define all the endpoints available in the UI from a JSON file.
+
+You just need to start Portainer with the ``--external-endpoints`` flag and specify the path to the JSON file in the container.
+
+Note: when using the external endpoint management, endpoint management will be disabled in the UI.
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 -v /tmp/endpoints:/endpoints portainer/portainer --external-endpoints /endpoints/endpoints.json
+
+For more information about the endpoint definition format see :doc:`External endpoints <external_endpoints>`
+
 Available flags
 ===============
 
@@ -76,4 +91,6 @@ The following CLI flags are available:
 * ``--hide-label``, ``-l``: Hide containers with a specific label in the UI
 * ``--logo``: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
 * ``--templates``, ``-t``: URL to templates (apps) definitions (default: ``https://raw.githubusercontent.com/portainer/templates/master/templates.json``)
-* ``-no-auth``: Disable internal authentication mechanism (default: ``false``)
+* ``--no-auth``: Disable internal authentication mechanism (default: ``false``)
+* ``--external-endpoints``: Enable external endpoint management by specifying the path to a JSON endpoint source in a file
+* ``--sync-interval``: Time interval between two endpoints synchronization requests expressed as a string, e.g. ``30s``, ``5m``, ``1h``... as supported by the `time.ParseDuration method <https://golang.org/pkg/time/#ParseDuration>`_ (default: ``60s``)

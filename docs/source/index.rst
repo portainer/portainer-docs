@@ -12,6 +12,7 @@ Contents:
 
    deployment
    configuration
+   external_endpoints
    templates
    contribute
    faq
