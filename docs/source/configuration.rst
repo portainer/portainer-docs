@@ -91,6 +91,7 @@ The following CLI flags are available:
 * ``--hide-label``, ``-l``: Hide containers with a specific label in the UI
 * ``--logo``: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
 * ``--templates``, ``-t``: URL to templates (apps) definitions (default: ``https://raw.githubusercontent.com/portainer/templates/master/templates.json``)
+* ``--no-analytics``: Disable analytics (default: ``false``)
 * ``--no-auth``: Disable internal authentication mechanism (default: ``false``)
 * ``--external-endpoints``: Enable external endpoint management by specifying the path to a JSON endpoint source in a file
 * ``--sync-interval``: Time interval between two endpoints synchronization requests expressed as a string, e.g. ``30s``, ``5m``, ``1h``... as supported by the `time.ParseDuration method <https://golang.org/pkg/time/#ParseDuration>`_ (default: ``60s``)
