@@ -181,6 +181,20 @@ Example:
     "ports": ["80/tcp", "443/tcp"]
   }
 
+``privileged``
+--------------
+
+Should the container be started in privileged mode. Boolean, will default to false if not specified.
+
+This field is **optional**.
+
+.. code-block:: json
+
+  {
+    "privileged": true
+  }
+
+
 Build and host your own templates
 =================================
 
