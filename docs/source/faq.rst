@@ -138,4 +138,19 @@ that your Docker engine system time is the same as your machine system time and 
 As simple way to check your Docker system time is to use ``docker info`` or if the information is not available ``docker run busybox date``.
 
 Users of Docker for Windows can also fix this by navigating to hyper-v-management -> virtual machines -> right-click on MobyLinuxVM -> settings -> integration services
-and enabling the time sync checkbox in the services list. 
+and enabling the time sync checkbox in the services list.
+
+How can I access the Docker API on port 2375 on Windows?
+========================================================
+
+On some Windows setup, Docker is listening on the local loopback address and cannot be accessed from within the
+Portainer container. You can use ``netsh`` to create a port redirection, and then use the newly created IP address
+to connect from Portainer.
+
+Create a redirection from the loopback address on port 2375 to a newly created address **10.0.75.1** on port 2375 (DOS/Powershell command):
+
+.. code-block:: bash
+
+  > netsh interface portproxy add v4tov4 listenaddress=10.0.75.1 listenport=2375 connectaddress=127.0.0.1 connectport=2375
+
+You'll then be able to use **10.0.75.1:2375** as the URL of your endpoint.
