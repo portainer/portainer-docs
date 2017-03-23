@@ -19,7 +19,7 @@ Checkout the project and go inside the root directory:
 
 .. code-block:: bash
 
-  $ git checkout https://github.com/portainer/portainer.git
+  $ git clone https://github.com/portainer/portainer.git
   $ cd portainer
 
 Install the dependencies using ``npm``:
