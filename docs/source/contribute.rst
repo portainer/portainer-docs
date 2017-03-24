@@ -28,6 +28,12 @@ Install the dependencies using ``npm``:
 
   $ npm install
 
+Ensure that a folder named `bower_components` is created in the root directory, if not run the following command:
+
+.. code-block:: bash
+
+  $ bower install
+
 Note for CentOS users, you'll need to create a symlink to the ``shasum`` binary:
 
 .. code-block:: bash
