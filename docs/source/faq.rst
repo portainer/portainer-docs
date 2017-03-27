@@ -154,3 +154,18 @@ Create a redirection from the loopback address on port 2375 to a newly created a
   > netsh interface portproxy add v4tov4 listenaddress=10.0.75.1 listenport=2375 connectaddress=127.0.0.1 connectport=2375
 
 You'll then be able to use **10.0.75.1:2375** as the URL of your endpoint.
+
+How can I use Portainer behind a proxy?
+=======================================
+
+When using Portainer behind a proxy, some features requiring access to the Internet (such as Apps Templates) might be
+unavailable.
+
+When running Portainer as a container, you can specify the ``HTTP_PROXY`` and ``HTTPS_PROXY`` env var to specify
+which proxy should be used.
+
+Example:
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 -e HTTP_PROXY=my.proxy.domain:7777 portainer/portainer
