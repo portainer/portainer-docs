@@ -120,7 +120,7 @@ to persist the data on the Docker host folder:
 
 On Windows:
 
-.. code-block:: powershell
+.. code-block:: bash
 
   $ docker run -d -p 9000:9000 -v C:\ProgramData\Portainer:C:\data portainer/portainer:windows
 
@@ -140,8 +140,12 @@ Download and extract the binary to a location on disk:
 
 Then just use the portainer binary as you would use CLI flags with Docker.
 
+**Note**: Portainer will try to write its data into the `/data` folder by default. You must ensure
+this folder exists first.
+
 .. code-block:: bash
 
+  $ mkdir /data
   $ cd /opt
   $ ./portainer/portainer
 
@@ -150,3 +154,9 @@ You can use the ``-p`` flag to serve Portainer on another port:
 .. code-block:: bash
 
   $ ./portainer/portainer -p :8080
+
+You can change the folder used by Portainer to store its data with the ``-d`` flag:
+
+.. code-block:: bash
+
+  $ ./portainer/portainer -d /opt/portainer-data
