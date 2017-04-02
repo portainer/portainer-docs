@@ -13,6 +13,28 @@ To disable Portainer internal authentication mechanism, start Portainer with the
 
   $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --no-auth
 
+Admin password
+==============
+
+Portainer allows you to specify an encrypted password from the command line for the admin account. You need to generate the encrypted password first.
+
+You can generate an encrypted password with the following command:
+
+.. code-block:: bash
+
+  $ htpasswd -nb -B admin <password> | cut -d ":" -f 2
+
+or if your system does not provide htpasswd you can use a docker container with the command:
+
+.. code-block:: bash
+
+  $ docker run --rm httpd:2.4-alpine htpasswd -nbB admin <password> | cut -d ":" -f 2
+
+To specify the admin password from the command line, start Portainer with the ``--admin-password`` flag:
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --admin-password '$2y$05$qFHAlNAH0A.6oCDe1/4W.ueCWC/iTfBMXIHBI97QYfMWlMCJ7N.a6'
 
 Hiding specific containers
 ==========================
@@ -95,3 +117,4 @@ The following CLI flags are available:
 * ``--no-auth``: Disable internal authentication mechanism (default: ``false``)
 * ``--external-endpoints``: Enable external endpoint management by specifying the path to a JSON endpoint source in a file
 * ``--sync-interval``: Time interval between two endpoints synchronization requests expressed as a string, e.g. ``30s``, ``5m``, ``1h``... as supported by the `time.ParseDuration method <https://golang.org/pkg/time/#ParseDuration>`_ (default: ``60s``)
+* ``--admin-password``: Admin password in the form ``admin:<hashed_password>``
