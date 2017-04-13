@@ -137,6 +137,27 @@ If you deployed Portainer as a Docker Swarm service:
       portainer/portainer \
       -H unix:///var/run/docker.sock
 
+SSL
+===
+
+By default, Portainer runs without SSL. However it is possible to enable this, e.g.:
+
+.. code-block:: bash
+
+  $ docker run -p 443:9000 -v ~/local-certs:/certs portainer --ssl --sslcert /certs/server.crt --sslkey /certs/server.key
+
+This `document`_ instructs how to create a cert and a key:
+
+.. code-block:: bash
+
+  $ openssl genrsa -out server.key 2048
+  $ openssl ecparam -genkey -name secp384r1 -out server.key
+  $ openssl req -new -x509 -sha256 -key server.key -out server.crt -days 3650
+
+Note that `Certbot`_ could be used as well to create a cert and a key.
+
+.. _document: https://gist.github.com/denji/12b3a568f092ab951456
+.. _Certbot: https://certbot.eff.org/
 
 Without Docker
 ==============
