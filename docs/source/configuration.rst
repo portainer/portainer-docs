@@ -95,3 +95,6 @@ The following CLI flags are available:
 * ``--no-auth``: Disable internal authentication mechanism (default: ``false``)
 * ``--external-endpoints``: Enable external endpoint management by specifying the path to a JSON endpoint source in a file
 * ``--sync-interval``: Time interval between two endpoints synchronization requests expressed as a string, e.g. ``30s``, ``5m``, ``1h``... as supported by the `time.ParseDuration method <https://golang.org/pkg/time/#ParseDuration>`_ (default: ``60s``)
+* ``--ssl``: Secure Portainer instance using SSL (default: ``false``)
+* ``--sslcert``: Path to the SSL certificate used to secure the Portainer instance (default: ``/certs/portainer.crt``, ``C:\certs\portainer.crt`` on Windows)
+* ``--sslkey``: Path to the SSL key used to secure the Portainer instance (default: ``/certs/portainer.key``, ``C:\certs\portainer.key`` on Windows)
