@@ -109,7 +109,7 @@ You can also use the ``--tlscacert``, ``--tlscert`` and ``--tlskey`` flags if yo
 Persist Portainer data
 ======================
 
-By default, Portainer will store its data inside the container in the `/data` folder on Linux (`C:\data` on Windows, this can be changed via CLI, see configuration).
+By default, Portainer will store its data inside the container in the `/data` folder on Linux (`C:\\data` on Windows, this can be changed via CLI, see configuration).
 
 You'll need to persist Portainer data to keep your changes after restart/upgrade of the Portainer container. You can use a bind mount
 to persist the data on the Docker host folder:
@@ -120,9 +120,22 @@ to persist the data on the Docker host folder:
 
 On Windows:
 
-.. code-block:: bash
+.. code-block:: none
 
   $ docker run -d -p 9000:9000 -v C:\ProgramData\Portainer:C:\data portainer/portainer:windows
+
+If you deployed Portainer as a Docker Swarm service:
+
+.. code-block:: bash
+
+  $ docker service create \
+      --name portainer \
+      --publish 9000:9000 \
+      --constraint 'node.role == manager' \
+      --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+      --mount type=bind,src=/path/on/host/data,dst=/data \
+      portainer/portainer \
+      -H unix:///var/run/docker.sock
 
 
 Without Docker
