@@ -142,8 +142,6 @@ Secure Portainer using SSL
 
 By default, Portainer's web interface and API is exposed over HTTP. This is not secured, it's recommended to enable SSL in a production environment. You can use the flags ``--ssl``, ``--sslcert`` and ``--sslkey`` to enable SSL:
 
-By default, Portainer runs without SSL. However it is possible to enable this, e.g.:
-
 .. code-block:: bash
 
   $ docker run -p 443:9000 -v ~/local-certs:/certs portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
