@@ -194,6 +194,22 @@ This field is **optional**.
     "privileged": true
   }
 
+``note``
+--------
+
+Usage / extra information about the template. This will be displayed inside the template
+creation form in the Portainer UI.
+
+Supports HTML.
+
+This field is **optional**.
+
+.. code-block:: json
+
+  {
+    "note": "You can use this field to specify extra information. <br/> It supports <b>HTML</b>."
+  }
+
 
 Build and host your own templates
 =================================
