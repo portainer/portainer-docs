@@ -210,6 +210,33 @@ This field is **optional**.
     "note": "You can use this field to specify extra information. <br/> It supports <b>HTML</b>."
   }
 
+``platform``
+------------
+
+Supported platform. This field value must be set to **linux** or **windows**. This will display a small
+platform related icon in the Portainer UI.
+
+This field is **optional**.
+
+.. code-block:: json
+
+  {
+    "platform": "linux"
+  }
+
+``categories``
+--------------
+
+An array of categories that will be associated to the template. Portainer UI category filter
+will be populated based on all available categories.
+
+This field is **optional**.
+
+.. code-block:: json
+
+  {
+    "categories": ["webserver", "open-source"]
+  }
 
 Build and host your own templates
 =================================
