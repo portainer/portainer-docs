@@ -137,6 +137,29 @@ If you deployed Portainer as a Docker Swarm service:
       portainer/portainer \
       -H unix:///var/run/docker.sock
 
+Secure Portainer using SSL
+==========================
+
+By default, Portainer's web interface and API is exposed over HTTP. This is not secured, it's recommended to enable SSL in a production environment.
+
+To do so, you can use the following flags ``--ssl``, ``--sslcert`` and ``--sslkey``:
+
+.. code-block:: bash
+
+  $ docker run -p 443:9000 -v ~/local-certs:/certs portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+
+You can use the following commands to generate the required files:
+
+.. code-block:: bash
+
+  $ openssl genrsa -out portainer.key 2048
+  $ openssl ecparam -genkey -name secp384r1 -out portainer.key
+  $ openssl req -new -x509 -sha256 -key portainer.key -out portainer.crt -days 3650
+
+Note that `Certbot`_ could be used as well to generate a certificate and a key.
+
+.. _Certbot: https://certbot.eff.org/
+
 
 Without Docker
 ==============
