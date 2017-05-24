@@ -169,3 +169,20 @@ Example:
 .. code-block:: bash
 
   $ docker run -d -p 9000:9000 -e HTTP_PROXY=my.proxy.domain:7777 portainer/portainer
+
+How can I upgrade my version of Portainer?
+==========================================
+
+If you're running Portainer as a container, it's simply a matter of Docker image version. Just stop your existing Portainer
+container, pull the latest *portainer/portainer* image and create a new Portainer container (using the same options you used to
+create the previous one).
+
+If you're running Portainer as a service in a Swarm cluster, you can issue the following command to update the image (assuming your Docker service
+is called *portainer*):
+
+.. code-block:: bash
+
+  $ docker service update --image portainer/portainer:latest portainer
+
+If you're running Porainer outside of Docker, download and extract the new binaries and restart the Portainer binary using the same
+options you used before.
