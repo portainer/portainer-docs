@@ -15,6 +15,7 @@ Contents:
    external_endpoints
    templates
    contribute
+   limitations
    faq
 
 
