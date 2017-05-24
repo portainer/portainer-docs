@@ -194,6 +194,20 @@ This field is **optional**.
     "privileged": true
   }
 
+
+``interactive``
+---------------
+
+Should the container be started in foreground (equivalent of ``-i -t`` flags). Boolean, will default to false if not specified.
+
+This field is **optional**.
+
+.. code-block:: json
+
+  {
+    "interactive": true
+  }
+
 ``note``
 --------
 
