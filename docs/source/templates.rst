@@ -208,6 +208,24 @@ This field is **optional**.
     "interactive": true
   }
 
+``restart_policy``
+------------------
+
+Restart policy associated to the container. Value must be one of the following:
+
+* no
+* unless-stopped
+* on-failure
+* always
+
+This field is **optional**. Will default to ``always`` if not specified.
+
+.. code-block:: json
+
+  {
+    "restart_policy": "unless-stopped"
+  }
+
 ``note``
 --------
 
