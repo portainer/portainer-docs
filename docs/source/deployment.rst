@@ -122,7 +122,7 @@ On Windows:
 
 .. code-block:: none
 
-  $ docker run -d -p 9000:9000 -v C:\ProgramData\Portainer:C:\data portainer/portainer:windows
+  $ docker run -d -p 9000:9000 -v C:\ProgramData\Portainer:C:\data portainer/portainer
 
 If you deployed Portainer as a Docker Swarm service:
 
