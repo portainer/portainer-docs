@@ -184,5 +184,5 @@ is called *portainer*):
 
   $ docker service update --image portainer/portainer:latest portainer
 
-If you're running Porainer outside of Docker, download and extract the new binaries and restart the Portainer binary using the same
+If you're running Portainer outside of Docker, download and extract the new binaries and restart the Portainer binary using the same
 options you used before.
