@@ -146,7 +146,7 @@ To do so, you can use the following flags ``--ssl``, ``--sslcert`` and ``--sslke
 
 .. code-block:: bash
 
-  $ docker run -p 443:9000 -v ~/local-certs:/certs portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+  $ docker run -p 443:9000 -v ~/local-certs:/certs portainer/portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
 
 You can use the following commands to generate the required files:
 
