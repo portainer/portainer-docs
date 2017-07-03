@@ -11,6 +11,7 @@ Requirements
 ------------
 
 Ensure you have `Docker <https://docs.docker.com/engine/installation/>`_, `Node.js <https://nodejs.org/en/>`_ >= 0.8.4 and `npm <https://www.npmjs.com/>`_ installed locally.
+Create an account in `Docker's registry <https://cloud.docker.com/>`_ (if you don't have it yet) and log in using "docker login" command.
 
 Build
 -----
