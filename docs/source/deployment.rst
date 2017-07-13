@@ -13,11 +13,13 @@ Deploying Portainer is as simple as:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 portainer/portainer
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
 
 Voilà, you can now access Portainer by pointing your web browser at ``http://DOCKER_HOST:9000``
 
 Ensure you replace ``DOCKER_HOST`` with address of your Docker host where Portainer is running.
+
+**Note**: The ``-v /var/run/docker.sock:/var/run/docker.sock`` option is available on Linux environments only.
 
 You'll then be prompted to specify a new password for the ``admin`` account. After specifying your password,
 you'll then be able to connect to the Portainer UI.
@@ -29,7 +31,7 @@ After your first authentication, Portainer will ask you information about the Do
 
 You'll have the following choices:
 
-* **Not available for Windows Containers (Windows Server 2016)** - Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI when running Portainer)
+* **Not available for Windows native Containers (Windows Server 2016)** - Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI when running Portainer)
 * Manage a remote Docker engine, you'll just have to specify the url to your Docker endpoint, give it a name and TLS info if needed
 
 Declare initial endpoint via CLI
