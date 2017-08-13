@@ -12,6 +12,7 @@ Contents:
 
    deployment
    configuration
+   API
    external_endpoints
    templates
    contribute
