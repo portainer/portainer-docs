@@ -13,21 +13,30 @@ Deploying Portainer is as simple as:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
 
 Voilà, you can now access Portainer by pointing your web browser at ``http://DOCKER_HOST:9000``
 
-Ensure you replace ``DOCKER_HOST`` with address of your Docker host where Portainer is running.
+Ensure you replace ``DOCKER_HOST`` with the address of the Docker host where Portainer is running.
 
-**Note**: The ``-v /var/run/docker.sock:/var/run/docker.sock`` option is available on Linux environments only.
+**Note 1**: The ``-v /var/run/docker.sock:/var/run/docker.sock`` option is available on Linux environments only.
+
+**Note 2**: The ``-v /opt/portainer:/data`` option will persist Portainer data in `/opt/portainer` on the host where Portainer is running. You can specify another location on your filesystem.
+
+**Note 3**: If your host is using **SELinux**, you'll need to pass the ``--privileged`` flag to the Docker run command:
+
+.. code-block:: bash
+
+  $ docker run -d --privileged -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
+
 
 You'll then be prompted to specify a new password for the ``admin`` account. After specifying your password,
-you'll then be able to connect to the Portainer UI.
+you'll be able to connect to the Portainer UI.
 
-Manage a new endpoint
-=====================
+Manage a new Docker environment
+===============================
 
-After your first authentication, Portainer will ask you information about the Docker endpoint you want to manage.
+After your first authentication, Portainer will ask you information about the Docker environment you want to manage.
 
 You'll have the following choices:
 
@@ -49,13 +58,7 @@ You can also bind mount the Docker socket to manage a local Docker engine (**not
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
-
-**Note**: If your host is using SELinux, you'll need to pass the ``--privileged`` flag to the Docker run command:
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock
 
 Connect to a Swarm cluster
 ==========================
