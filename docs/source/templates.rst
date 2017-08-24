@@ -161,7 +161,15 @@ Example:
 .. code-block:: json
 
   {
-    "volumes": ["/var/lib/mysql", "/var/log/mysql"]
+    "volumes": [
+      {
+        "container": "/etc/nginx"
+      },
+      {
+        "container": "/usr/share/nginx/html",
+        "bind": "/var/www"
+      }
+    ]
   }
 
 ``ports``
