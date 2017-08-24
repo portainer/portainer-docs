@@ -150,9 +150,9 @@ Example:
 ``volumes``
 -----------
 
-A JSON array describing the associated volumes of the template. Each element in the array must be a valid JSON string.
+A JSON array describing the associated volumes of the template. Each element in the array must be a valid JSON object that has a required container property.
 
-For each element in the array, a Docker volume will be created and associated when starting the container.
+For each element in the array, a Docker volume will be created and associated when starting the container. If a bind property is defined it will be used as the source of a bind mount.
 
 This field is **optional**.
 
