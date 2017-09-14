@@ -17,6 +17,7 @@ It must consist of an array with every endpoint definition consisting of one ele
       "Name": "my-second-endpoint",
       "URL": "tcp://mysecondendpoint.mydomain:2375",
       "TLS": true,
+      "TLSSkipVerify": true,
       "TLSCACert": "/tmp/ca.pem",
       "TLSCert": "/tmp/cert.pem",
       "TLSKey": "/tmp/key.pem"
@@ -66,6 +67,14 @@ Specify this field to true if you need to use TLS to connect to the endpoint. De
 When applying the true value to this field, Portainer will expect the TLSCACertPath, TLSCertPath and TLSKeyPath fields to be defined too.
 
 This field is **optional**.
+
+``TLSSkipVerify``
+-----------------
+
+Specify this field to true if you want to skip server verification. Defaults to ``false``.
+
+This field is **optional**.
+
 
 ``TLSCACert``
 -------------
