@@ -13,7 +13,7 @@ Deploying Portainer is as simple as:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
+  $ docker run -d -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
 
 Voilà, you can now access Portainer by pointing your web browser at ``http://DOCKER_HOST:9000``
 
@@ -27,8 +27,9 @@ Ensure you replace ``DOCKER_HOST`` with the address of the Docker host where Por
 
 .. code-block:: bash
 
-  $ docker run -d --privileged -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
-
+  $ docker run -d --privileged -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
+  
+**Note 4**: The ``--restart=always`` makes sure the container restarts automatically after every system reboot or after container issues/problems
 
 You'll then be prompted to specify a new password for the ``admin`` account. After specifying your password,
 you'll be able to connect to the Portainer UI.
@@ -50,7 +51,7 @@ You can specify the initial endpoint you want Portainer to manage via the CLI, u
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 portainer/portainer -H tcp://<REMOTE_HOST>:<REMOTE_PORT>
+  $ docker run -d -p 9000:9000 --restart=always portainer/portainer -H tcp://<REMOTE_HOST>:<REMOTE_PORT>
 
 Ensure you replace ``REMOTE_HOST`` and ``REMOTE_PORT`` with the address/port of the Docker engine you want to manage.
 
@@ -58,7 +59,7 @@ You can also bind mount the Docker socket to manage a local Docker engine (**not
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock
+  $ docker run -d -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock
 
 Connect to a Swarm cluster
 ==========================
@@ -72,7 +73,7 @@ As simple as:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 portainer/portainer -H tcp://<SWARM_MANAGER_IP>:2375
+  $ docker run -d -p 9000:9000 --restart=always portainer/portainer -H tcp://<SWARM_MANAGER_IP>:2375
 
 Alternatively, if you're using swarm mode, you can also deploy it as a service in your cluster:
 
@@ -81,6 +82,7 @@ Alternatively, if you're using swarm mode, you can also deploy it as a service i
   $ docker service create \
       --name portainer \
       --publish 9000:9000 \
+      --restart=always \
       --constraint 'node.role == manager' \
       --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
       portainer/portainer \
@@ -103,13 +105,13 @@ You must ensure these files are present in the container using a bind mount:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /path/to/certs:/certs portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify
+  $ docker run -d -p 9000:9000 --restart=always -v /path/to/certs:/certs portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify
 
 You can also use the ``--tlscacert``, ``--tlscert`` and ``--tlskey`` flags if you want to change the default path to the CA, certificate and key file respectively:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /path/to/certs:/certs portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
+  $ docker run -d -p 9000:9000 --restart=always -v /path/to/certs:/certs portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
 
 Persist Portainer data
 ======================
@@ -121,13 +123,13 @@ to persist the data on the Docker host folder:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /path/on/host/data:/data portainer/portainer
+  $ docker run -d -p 9000:9000 --restart=always -v /path/on/host/data:/data portainer/portainer
 
 On Windows:
 
 .. code-block:: none
 
-  $ docker run -d -p 9000:9000 -v C:\ProgramData\Portainer:C:\data portainer/portainer
+  $ docker run -d -p 9000:9000 --restart=always -v C:\ProgramData\Portainer:C:\data portainer/portainer
 
 If you deployed Portainer as a Docker Swarm service:
 
@@ -136,6 +138,7 @@ If you deployed Portainer as a Docker Swarm service:
   $ docker service create \
       --name portainer \
       --publish 9000:9000 \
+      --restart=always \
       --constraint 'node.role == manager' \
       --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
       --mount type=bind,src=/path/on/host/data,dst=/data \
@@ -151,7 +154,7 @@ To do so, you can use the following flags ``--ssl``, ``--sslcert`` and ``--sslke
 
 .. code-block:: bash
 
-  $ docker run -p 443:9000 -v ~/local-certs:/certs portainer/portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+  $ docker run -p 443:9000 --restart=always -v ~/local-certs:/certs portainer/portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
 
 You can use the following commands to generate the required files:
 
