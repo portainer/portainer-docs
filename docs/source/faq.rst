@@ -2,6 +2,16 @@
 FAQ
 ===
 
+How can I setup Portainer on Windows Server 2016 ?
+==================================================
+
+Have a look at the `Airdesk blog post <http://blog.airdesk.com/2017/10/windows-containers-portainer-gui.html>`_ for instructions.
+
+How can I play with Portainer outside of the public demo?
+=========================================================
+
+You can deploy Portainer as a stack in `Play-with-Docker <http://play-with-docker.com/?stack=https://raw.githubusercontent.com/portainer/portainer-compose/master/docker-stack.yml&stack_name=portainer>`_.
+
 How can I configure my reverse proxy to serve Portainer?
 ========================================================
 
@@ -118,16 +128,6 @@ I restarted Portainer and lost all my data, why?
 Portainer data is stored inside the Docker container. If you want to keep the data of your Portainer instance
 after reboot/upgrade, you'll need to persist the data. See :doc:`Deployment <deployment>`
 
-How can I use a custom CSS file to customize Portainer look?
-============================================================
-
-A workaround can be used to specify your own `vendor.css` and `portainer.css` files. Simply bind mount the folder of your choice
-to the `css` folder inside the container:
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 -v <your-absolute-path>/css:/css/ portainer/portainer
-
 I am getting the error "Your session has expired" on login and cannot login. What's wrong?
 ==========================================================================================
 
@@ -186,3 +186,8 @@ is called *portainer*):
 
 If you're running Portainer outside of Docker, download and extract the new binaries and restart the Portainer binary using the same
 options you used before.
+
+How can I manage a remote Dokku host with Portainer?
+====================================================
+
+Have a look at `this gist <https://gist.github.com/woudsma/03c69260715327ee8453f73b121f416c>`_ for instructions.
