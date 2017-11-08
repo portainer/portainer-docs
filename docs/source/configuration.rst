@@ -36,6 +36,28 @@ To specify the admin password from the command line, start Portainer with the ``
 
   $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --admin-password '$2y$05$qFHAlNAH0A.6oCDe1/4W.ueCWC/iTfBMXIHBI97QYfMWlMCJ7N.a6'
 
+You can also store the password inside a file and use the ``--admin-password-file`` flag:
+
+.. code-block:: bash
+
+  $ echo -n mypassword > /tmp/portainer_password
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -v /tmp/portainer_password:/tmp/portainer_password --admin-password-file /tmp/portainer_password
+
+This works well with Swarm & Docker secrets too:
+
+.. code-block:: bash
+
+  $ echo -n mypassword | docker secret create portainer-pass -
+  $ docker service create \
+    --name portainer \
+    --secret portainer-pass \
+    --publish 9000:9000 \
+    --constraint 'node.role == manager' \
+    --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+    nenadilic84/portainer:test \
+    --admin-password-file '/run/secrets/portainer-pass' \
+    -H unix:///var/run/docker.sock
+
 **Note**: This will automatically create an administrator account called **admin** with the specified password.
 
 Hiding specific containers
@@ -126,6 +148,7 @@ The following CLI flags are available:
 * ``--external-endpoints``: Enable external endpoint management by specifying the path to a JSON endpoint source in a file
 * ``--sync-interval``: Time interval between two endpoints synchronization requests expressed as a string, e.g. ``30s``, ``5m``, ``1h``... as supported by the `time.ParseDuration method <https://golang.org/pkg/time/#ParseDuration>`_ (default: ``60s``)
 * ``--admin-password``: Admin password in the form ``admin:<hashed_password>``
+* ``--admin-password-file``: Path to the file containing the password for the admin user
 * ``--ssl``: Secure Portainer instance using SSL (default: ``false``)
 * ``--sslcert``: Path to the SSL certificate used to secure the Portainer instance (default: ``/certs/portainer.crt``, ``C:\certs\portainer.crt`` on Windows)
 * ``--sslkey``: Path to the SSL key used to secure the Portainer instance (default: ``/certs/portainer.key``, ``C:\certs\portainer.key`` on Windows)
