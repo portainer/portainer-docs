@@ -38,5 +38,6 @@ Portainer can be deployed on the following platforms:
 * Linux arm
 * Linux arm64
 * Linux ppc64le
+* Linux s390x
 * Windows amd64
 * Darwin amd64
