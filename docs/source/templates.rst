@@ -50,19 +50,19 @@ Description of the template.
 
 This field is **mandatory**.
 
-``logo``
---------
-
-URL of the template's logo.
-
-This field is **mandatory**.
-
 ``image``
 ---------
 
 The Docker image associated to the template. The image tag **must** be included.
 
 This field is **mandatory**.
+
+``logo``
+--------
+
+URL of the template's logo.
+
+This field is **optional**.
 
 ``registry``
 ------------
@@ -333,13 +333,6 @@ Description of the template.
 
 This field is **mandatory**.
 
-``logo``
---------
-
-URL of the template's logo.
-
-This field is **mandatory**.
-
 ``repository``
 --------------
 
@@ -367,6 +360,12 @@ Example:
 
 This field is **mandatory**.
 
+``logo``
+--------
+
+URL of the template's logo.
+
+This field is **optional**.
 
 ``env``
 -------
