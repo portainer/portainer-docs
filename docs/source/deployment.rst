@@ -187,17 +187,17 @@ this folder exists first.
 .. code-block:: bash
 
   $ mkdir /data
-  $ cd /opt
-  $ ./portainer/portainer
+  $ cd /opt/portainer
+  $ ./portainer
 
 You can use the ``-p`` flag to serve Portainer on another port:
 
 .. code-block:: bash
 
-  $ ./portainer/portainer -p :8080
+  $ ./portainer -p :8080
 
 You can change the folder used by Portainer to store its data with the ``-d`` flag:
 
 .. code-block:: bash
 
-  $ ./portainer/portainer -d /opt/portainer-data
+  $ ./portainer -d /opt/portainer-data
