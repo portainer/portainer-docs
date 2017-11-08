@@ -6,16 +6,17 @@ Template definitions are written in JSON.
 
 It must consist of an array with every template definition consisting of one element.
 
-Template definition format
-==========================
+Container template definition format
+====================================
 
 A template element must be a valid `JSON <http://www.json.org/>`_ object.
 
-Example:
+Example of a container template:
 
 .. code-block:: json
 
   {
+    "type": "container",
     "title": "Nginx",
     "description": "High performance web server",
     "logo": "https://cloudinovasi.id/assets/img/logos/nginx.png",
@@ -27,6 +28,13 @@ Example:
   }
 
 It is composed of multiple fields, some mandatory and some optionals.
+
+``type``
+--------
+
+Template type, either `container` or `stack`.
+
+This field is **mandatory**.
 
 ``title``
 ---------
@@ -232,6 +240,191 @@ This field is **optional**. Will default to ``always`` if not specified.
 
   {
     "restart_policy": "unless-stopped"
+  }
+
+``note``
+--------
+
+Usage / extra information about the template. This will be displayed inside the template
+creation form in the Portainer UI.
+
+Supports HTML.
+
+This field is **optional**.
+
+.. code-block:: json
+
+  {
+    "note": "You can use this field to specify extra information. <br/> It supports <b>HTML</b>."
+  }
+
+``platform``
+------------
+
+Supported platform. This field value must be set to **linux** or **windows**. This will display a small
+platform related icon in the Portainer UI.
+
+This field is **optional**.
+
+.. code-block:: json
+
+  {
+    "platform": "linux"
+  }
+
+``categories``
+--------------
+
+An array of categories that will be associated to the template. Portainer UI category filter
+will be populated based on all available categories.
+
+This field is **optional**.
+
+.. code-block:: json
+
+  {
+    "categories": ["webserver", "open-source"]
+  }
+
+
+Stack template definition format
+================================
+
+A template element must be a valid `JSON <http://www.json.org/>`_ object.
+
+Example of a stack template:
+
+.. code-block:: json
+
+  {
+    "type": "stack",
+    "title": "CockroachDB",
+    "description": "CockroachDB cluster",
+    "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
+    "categories": ["database"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
+    "repository": {
+      "url": "https://github.com/portainer/templates",
+      "stackfile": "stacks/cockroachdb/docker-stack.yml"
+    }
+  }
+
+It is composed of multiple fields, some mandatory and some optionals.
+
+``type``
+--------
+
+Template type, either `container` or `stack`.
+
+This field is **mandatory**.
+
+``title``
+---------
+
+Title of the template.
+
+This field is **mandatory**.
+
+``description``
+---------------
+
+Description of the template.
+
+This field is **mandatory**.
+
+``logo``
+--------
+
+URL of the template's logo.
+
+This field is **mandatory**.
+
+``repository``
+--------------
+
+A JSON object describing the public git repository from where the stack template will be loaded. It indicates
+the URL of the git repository as well as the path to the Compose file inside the repository.
+
+Element format:
+
+.. code-block:: json
+
+  {
+    "url": "URL of the public git repository (mandatory)",
+    "stackfile": "Path to the Compose file inside the repository (mandatory)",
+  }
+
+Example:
+
+.. code-block:: json
+
+  {
+    "url": "https://github.com/portainer/templates",
+    "stackfile": "stacks/cockroachdb/docker-stack.yml"
+  }
+
+
+This field is **mandatory**.
+
+
+``env``
+-------
+
+A JSON array describing the environment variables required by the template. Each element in the array must be a valid JSON object.
+
+An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of
+inputs can be generated (text input, select).
+
+This field is **optional**.
+
+Element format:
+
+.. code-block:: json
+
+  {
+    "name": "the name of the environment variable, as supported in the container image (mandatory)",
+    "label": "label for the input in the UI (mandatory unless set is present)",
+    "description": "a short description for this input, will be available as a tooltip in the UI (optional)",
+    "set": "pre-defined value for the variable, will not generate an input in the UI (optional)",
+    "select": "an array of possible values, will generate a select input (optional)"
+  }
+
+Example:
+
+.. code-block:: json
+
+  {
+    "env": [
+      {
+        "name": "MYSQL_ROOT_PASSWORD",
+        "label": "Root password",
+        "description": "Password used by the root user."
+      },
+      {
+        "name": "ENV_VAR_WITH_DEFAULT_VALUE",
+        "set": "some_value"
+      },
+      {
+        "name": "ENV_VAR_WITH_SELECT_VALUE",
+        "label": "An environment variable",
+        "select": [
+          {
+            "text": "Yes, I agree",
+            "value": "Y"
+          },
+          {
+            "text": "No, I disagree",
+            "value": "N"
+          },
+          {
+            "text": "Maybe",
+            "value": "YN"
+          }
+        ],
+        "description": "Some environment variable."
+      }
+    ]
   }
 
 ``note``
