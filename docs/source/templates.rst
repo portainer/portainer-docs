@@ -292,6 +292,9 @@ Stack template definition format
 
 A template element must be a valid `JSON <http://www.json.org/>`_ object.
 
+Stack templates can only be deployed inside Swarm clusters via ``docker stack deploy``. Portainer is not compatible
+with ``docker-compose`` at the moment.
+
 Example of a stack template:
 
 .. code-block:: json
