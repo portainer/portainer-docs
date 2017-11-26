@@ -176,8 +176,8 @@ Download and extract the binary to a location on disk:
 .. code-block:: bash
 
   $ cd /opt
-  $ wget https://github.com/portainer/portainer/releases/download/1.15.2/portainer-1.15.2-linux-amd64.tar.gz
-  $ tar xvpfz portainer-1.15.2-linux-amd64.tar.gz
+  $ wget https://github.com/portainer/portainer/releases/download/1.15.3/portainer-1.15.3-linux-amd64.tar.gz
+  $ tar xvpfz portainer-1.15.3-linux-amd64.tar.gz
 
 Then just use the portainer binary as you would use CLI flags with Docker.
 
