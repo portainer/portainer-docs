@@ -34,7 +34,6 @@ Supported platforms
 Portainer can be deployed on the following platforms:
 
 * Linux amd64
-* Linux 386
 * Linux arm
 * Linux arm64
 * Linux ppc64le
