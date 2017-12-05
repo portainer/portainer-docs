@@ -50,7 +50,7 @@ Access Portainer at `http://localhost:9000 <http://localhost:9000>`_
 
    .. code-block:: bash
 
-   $ grunt lint
+     $ grunt lint
 
 Contribution guidelines
 =======================
