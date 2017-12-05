@@ -10,7 +10,7 @@ Build Portainer locally
 Requirements
 ------------
 
-Ensure you have `Docker <https://docs.docker.com/engine/installation/>`_, `Node.js <https://nodejs.org/en/>`_ >= 0.8.4 and `npm <https://www.npmjs.com/>`_ installed locally.
+Ensure you have `Docker <https://docs.docker.com/engine/installation/>`_, `Node.js <https://nodejs.org/en/>`_ >= 0.8.4, and `yarn <https://yarnpkg.com>`_.
 
 Build
 -----
@@ -22,24 +22,11 @@ Checkout the project and go inside the root directory:
   $ git clone https://github.com/portainer/portainer.git
   $ cd portainer
 
-Install the dependencies using ``npm``:
+Install dependencies with yarn:
 
 .. code-block:: bash
 
-  $ npm install -g bower && npm install
-
-Ensure that a folder named `bower_components` is created in the root directory, if not run the following command:
-
-.. code-block:: bash
-
-  $ bower install --allow-root
-
-Note for CentOS users, you'll need to create a symlink to the ``shasum`` binary:
-
-.. code-block:: bash
-
-  $ ln -s /usr/bin/sha1sum /usr/bin/shasum
-
+  $ yarn
 
 Build the app locally:
 
@@ -47,8 +34,7 @@ Build the app locally:
 
   $ grunt build
 
-
-Start a live-reload process, the local application will be updated when you save your changes:
+Start a watched build process:
 
 .. code-block:: bash
 
@@ -56,11 +42,15 @@ Start a live-reload process, the local application will be updated when you save
 
 Access Portainer at `http://localhost:9000 <http://localhost:9000>`_
 
-Do not forget to `lint <http://www.javascriptlint.com/>`_ your code:
+.. TIP::
+   The frontend application will be updated when you save your changes to any of the sources (:file:`app/**/*.js`, :file:`assets/css/app.css` or :file:`index.html`). Just refresh the browser.
 
-.. code-block:: bash
+.. IMPORTANT::
+   Do not forget to `lint <http://www.javascriptlint.com/>`_ your code:
 
-  $ grunt lint
+   .. code-block:: bash
+
+     $ grunt lint
 
 Contribution guidelines
 =======================
