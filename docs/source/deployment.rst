@@ -13,7 +13,7 @@ Deploying Portainer is as simple as:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
+  $ docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
 
 Voilà, you can now access Portainer by pointing your web browser at ``http://DOCKER_HOST:9000``
 
