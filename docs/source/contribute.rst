@@ -32,13 +32,13 @@ Build the app locally:
 
 .. code-block:: bash
 
-  $ grunt build
+  $ yarn grunt build
 
 Start a watched build process:
 
 .. code-block:: bash
 
-  $ grunt run-dev
+  $ yarn grunt run-dev
 
 Access Portainer at `http://localhost:9000 <http://localhost:9000>`_
 
@@ -50,7 +50,7 @@ Access Portainer at `http://localhost:9000 <http://localhost:9000>`_
 
    .. code-block:: bash
 
-     $ grunt lint
+     $ yarn grunt lint
 
 Contribution guidelines
 =======================
