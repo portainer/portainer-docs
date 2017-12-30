@@ -54,7 +54,7 @@ This works well with Swarm & Docker secrets too:
     --publish 9000:9000 \
     --constraint 'node.role == manager' \
     --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
-    nenadilic84/portainer:test \
+    portainer/portainer \
     --admin-password-file '/run/secrets/portainer-pass' \
     -H unix:///var/run/docker.sock
 
