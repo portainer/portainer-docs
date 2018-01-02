@@ -45,21 +45,29 @@ Alternative nginx configuration (tested on v.1.13.7)
 
 .. code-block:: nginx-1-13-7
 
-  rewrite ^/portainer$ /portainer/ redirect;
-
-  location ~ ^/portainer/(.*)$ {
-    proxy_pass              http://portainer/$1;
-    proxy_redirect          off;
-    proxy_set_header        Host            $host;
-    proxy_set_header        X-Real-IP       $remote_addr;
-    proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
-    client_max_body_size    10m;
-    client_body_buffer_size 128k;
-    proxy_connect_timeout   90;
-    proxy_send_timeout      90;
-    proxy_read_timeout      90;
-    proxy_buffers           32 4k;
+  upstream portainer {
+      server ADDRESS:PORT;
   }
+
+  server {
+    listen 80;
+
+    rewrite ^/portainer$ /portainer/ redirect;
+
+    location ~ ^/portainer/(.*)$ {
+      proxy_pass              http://portainer/$1;
+      proxy_redirect          off;
+      proxy_set_header        Host            $host;
+      proxy_set_header        X-Real-IP       $remote_addr;
+      proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+      client_max_body_size    10m;
+      client_body_buffer_size 128k;
+      proxy_connect_timeout   90;
+      proxy_send_timeout      90;
+      proxy_read_timeout      90;
+      proxy_buffers           32 4k;
+    }
+}
 
 How can I configure my reverse proxy to serve Portainer using HAProxy?
 ======================================================================
