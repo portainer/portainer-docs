@@ -67,7 +67,7 @@ Alternative nginx configuration (tested on v.1.13.7)
       proxy_read_timeout      90;
       proxy_buffers           32 4k;
     }
-}
+  }
 
 How can I configure my reverse proxy to serve Portainer using HAProxy?
 ======================================================================
