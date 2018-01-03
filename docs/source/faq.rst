@@ -43,7 +43,7 @@ Replace ``ADDRESS:PORT`` with the Portainer server/container details.
 
 Alternative nginx configuration (tested on v.1.13.7)
 
-.. code-block:: nginx-1-13-7
+.. code-block:: nginx
 
   upstream portainer {
       server ADDRESS:PORT;
