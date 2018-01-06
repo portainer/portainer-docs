@@ -197,6 +197,27 @@ Example:
     "ports": ["80/tcp", "443/tcp"]
   }
 
+
+``labels``
+----------
+
+A JSON array describing the labels associated to the template. Each element in the array must be a valid JSON object with two properties ``name`` and ``value``.
+
+This field is **optional**.
+
+Example:
+
+.. code-block:: json
+
+  {
+    "labels": [
+      { "name": "com.example.vendor", "value": "Acme" },
+      { "name": "com.example.license", "value": "GPL" },
+      { "name": "com.example.version", "value": "1.0" }
+    ]
+  }
+
+
 ``privileged``
 --------------
 
