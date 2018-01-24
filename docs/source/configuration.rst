@@ -63,9 +63,6 @@ This works well with Swarm & Docker secrets too:
 Hiding specific containers
 ==========================
 
-**Deprecation notice**: the ``-l`` flag is deprecated and will be remove in future versions. Use the settings section in Portainer UI
-to manage hidden containers.
-
 Portainer allows you to hide containers with a specific label by using the ``-l`` flag.
 
 For example, take a container started with the label *owner=acme* (note that this is an example label, you can define your own labels):
@@ -89,9 +86,6 @@ Note that the ``-l`` flag can be repeated multiple times to specify multiple lab
 Use your own logo
 =================
 
-**Deprecation notice**: the ``--logo`` flag is deprecated and will be remove in future versions. Use the settings section in Portainer UI
-to change the logo.
-
 You do not like our logo? Want to make Portainer more corporate? Don't worry, you can easily switch for an external logo (it must be exactly 155px by 55px) using the ``--logo`` flag:
 
 .. code-block:: bash
@@ -100,9 +94,6 @@ You do not like our logo? Want to make Portainer more corporate? Don't worry, yo
 
 Use your own templates
 ======================
-
-**Deprecation notice**: the ``--templates`` flag is deprecated and will be remove in future versions. Use the settings section in Portainer UI
-to change templates.
 
 Portainer allows you to rapidly deploy containers using App Templates.
 
@@ -152,12 +143,6 @@ The following CLI flags are available:
 * ``--ssl``: Secure Portainer instance using SSL (default: ``false``)
 * ``--sslcert``: Path to the SSL certificate used to secure the Portainer instance (default: ``/certs/portainer.crt``, ``C:\certs\portainer.crt`` on Windows)
 * ``--sslkey``: Path to the SSL key used to secure the Portainer instance (default: ``/certs/portainer.key``, ``C:\certs\portainer.key`` on Windows)
-
-Deprecated flags
-================
-
-The following CLI flags are deprecated and should not be used anymore:
-
 * ``--hide-label``, ``-l``: Hide containers with a specific label in the UI
 * ``--logo``: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
 * ``--templates``, ``-t``: URL to templates (apps) definitions (default: ``https://raw.githubusercontent.com/portainer/templates/master/templates.json``)
