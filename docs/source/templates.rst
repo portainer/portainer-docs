@@ -57,6 +57,14 @@ The Docker image associated to the template. The image tag **must** be included.
 
 This field is **mandatory**.
 
+``name``
+--------
+
+Default name to use for this template in the UI.
+
+This field is **optional**.
+
+
 ``logo``
 --------
 
@@ -383,6 +391,14 @@ Example:
 
 
 This field is **mandatory**.
+
+``name``
+--------
+
+Default name to use for this template in the UI.
+
+This field is **optional**.
+
 
 ``logo``
 --------
