@@ -16,6 +16,9 @@ To disable Portainer internal authentication mechanism, start Portainer with the
 Admin password
 ==============
 
+``From the command line``
+-------------------------
+
 Portainer allows you to specify an encrypted password from the command line for the admin account. You need to generate the encrypted password first.
 
 You can generate an encrypted password with the following command:
@@ -36,10 +39,14 @@ To specify the admin password from the command line, start Portainer with the ``
 
   $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --admin-password '$2y$05$qFHAlNAH0A.6oCDe1/4W.ueCWC/iTfBMXIHBI97QYfMWlMCJ7N.a6'
 
-You can also store the password inside a file and use the ``--admin-password-file`` flag:
+``Inside a file``
+-----------------
+
+You can also store the plaintext password inside a file and use the ``--admin-password-file`` flag:
 
 .. code-block:: bash
 
+  # mypassword is plaintext here
   $ echo -n mypassword > /tmp/portainer_password
   $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -v /tmp/portainer_password:/tmp/portainer_password --admin-password-file /tmp/portainer_password
 
@@ -47,6 +54,7 @@ This works well with Swarm & Docker secrets too:
 
 .. code-block:: bash
 
+  # mypassword is plaintext here
   $ echo -n mypassword | docker secret create portainer-pass -
   $ docker service create \
     --name portainer \
