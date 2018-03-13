@@ -10,7 +10,7 @@ Build Portainer locally
 Requirements
 ------------
 
-Ensure you have `Docker <https://docs.docker.com/engine/installation/>`_, `Node.js <https://nodejs.org/en/>`_ >= 0.8.4, and `yarn <https://yarnpkg.com>`_.
+Ensure you have `Docker <https://docs.docker.com/engine/installation/>`_, `Node.js <https://nodejs.org/en/>`_ >= 6, and `yarn <https://yarnpkg.com>`_.
 
 Build
 -----
