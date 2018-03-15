@@ -43,6 +43,18 @@ You'll have the following choices:
 * **Not available for Windows native Containers (Windows Server 2016)** - Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI when running Portainer)
 * Manage a remote Docker engine, you'll just have to specify the url to your Docker endpoint, give it a name and TLS info if needed
 
+Manage a remote Docker engine
+=============================
+
+To manage a remote Docker engine, this engine must enable network access (usually on TCP 2375, 2376 with TLS).
+
+You have to take into account the **security issues depending on your network environment**.
+
+Please refer to `Daemon socket option`_ in the Docker Reference and to `Docker Engine on Windows`_.
+
+.. _Docker Engine on Windows: https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-docker/configure-docker-daemon
+.. _Daemon socket option: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
+
 Declare initial endpoint via CLI
 ================================
 
