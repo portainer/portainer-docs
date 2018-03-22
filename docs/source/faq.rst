@@ -191,3 +191,8 @@ How can I manage a remote Dokku host with Portainer?
 ====================================================
 
 Have a look at `this gist <https://gist.github.com/woudsma/03c69260715327ee8453f73b121f416c>`_ for instructions.
+
+How can I enable LDAP authentication ?
+======================================
+
+Have a look at `this post <https://www.linkedin.com/pulse/teamgroup-management-docker-portainerio-neil-cresswell>`_ for detailed instructions.
