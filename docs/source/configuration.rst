@@ -48,7 +48,7 @@ You can also store the plaintext password inside a file and use the ``--admin-pa
 
   # mypassword is plaintext here
   $ echo -n mypassword > /tmp/portainer_password
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -v /tmp/portainer_password:/tmp/portainer_password --admin-password-file /tmp/portainer_password
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer --admin-password-file /tmp/portainer_password
 
 This works well with Swarm & Docker secrets too:
 
