@@ -271,6 +271,19 @@ This field is **optional**. Will default to ``always`` if not specified.
     "restart_policy": "unless-stopped"
   }
 
+``hostname``
+------------------
+
+Set the hostname of the container.
+
+This field is **optional**. Will use Docker default if not specified.
+
+.. code-block:: json
+
+  {
+    "hostname": "mycontainername"
+  }
+
 ``note``
 --------
 
