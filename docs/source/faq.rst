@@ -2,6 +2,28 @@
 FAQ
 ===
 
+My host is using SELinux, can I use Portainer ?
+===============================================
+
+If you want to manage a local Docker environment with **SELinux** enabled, you'll need to pass the ``--privileged`` flag to the Docker run command when deploying Portainer:
+
+::
+
+  $ docker run -d --privileged -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+
+
+How can I expose the Docker API over TCP so that Portainer can communicate with my environment?
+===============================================================================================
+
+To manage a remote Docker environment, Portainer must be able to communicate with the Docker API over the network (usually on TCP 2375, 2376 with TLS).
+
+You have to take into account the **security issues depending on your network environment**.
+
+Please refer to `Daemon socket option`_ in the Docker Reference and to `Docker Engine on Windows`_.
+
+.. _Docker Engine on Windows: https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-docker/configure-docker-daemon
+.. _Daemon socket option: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
+
 How can I setup Portainer on Windows Server 2016 ?
 ==================================================
 

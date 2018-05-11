@@ -11,98 +11,85 @@ Quick start
 
 Deploying Portainer is as simple as:
 
-.. code-block:: bash
+::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer 
+  $ docker volume create portainer_data
+  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 
-Voilà, you can now access Portainer by pointing your web browser at ``http://DOCKER_HOST:9000``
+Voilà, you can now use Portainer by accessing the port 9000 on the server where Portainer is running.
 
-Ensure you replace ``DOCKER_HOST`` with the address of the Docker host where Portainer is running.
+Inside a Swarm cluster
+======================
 
-**Note 1**: The ``-v /var/run/docker.sock:/var/run/docker.sock`` option is available on Linux environments only.
+Use our agent setup to deploy Portainer inside a Swarm cluster.
 
-**Note 2**: The ``-v /opt/portainer:/data`` option will persist Portainer data in `/opt/portainer` on the host where Portainer is running. You can specify another location on your filesystem.
+**Note**: This setup will assume that you're executing the following instructions on a Swarm manager node.
 
-**Note 3**: If your host is using **SELinux**, you'll need to pass the ``--privileged`` flag to the Docker run command:
+::
 
-.. code-block:: bash
+  $ curl -L https://portainer.io/download/portainer-agent-stack.yml -o portainer-agent-stack.yml
+  $ docker stack deploy --compose-file=portainer-agent-stack.yml portainer
 
-  $ docker run -d --privileged -p 9000:9000 --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
+Have a look at the Advanced deployment section below to find more details on how to connect an existing Portainer
+instance to a manually deployed Portainer agent.
 
+Persist Portainer data
+======================
 
-You'll then be prompted to specify a new password for the ``admin`` account. After specifying your password,
-you'll be able to connect to the Portainer UI.
+By default, Portainer store its data inside the container in the ``/data`` folder on Linux (``C:\\data`` on Windows).
 
-Manage a new Docker environment
-===============================
+You'll need to persist Portainer data to keep your changes after restart/upgrade of the Portainer container. You can use a bind mount
+to persist the data on the Docker host folder:
 
-After your first authentication, Portainer will ask you information about the Docker environment you want to manage.
+::
 
-You'll have the following choices:
+  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /path/on/host/data:/data portainer/portainer
 
-* **Not available for Windows native Containers (Windows Server 2016)** - Manage the local engine where Portainer is running (you'll need to bind mount the Docker socket via `-v /var/run/docker.sock:/var/run/docker.sock` on the Docker CLI when running Portainer)
-* Manage a remote Docker engine, you'll just have to specify the url to your Docker endpoint, give it a name and TLS info if needed
+Example on Windows:
 
-Manage a remote Docker engine
-=============================
+::
 
-To manage a remote Docker engine, this engine must enable network access (usually on TCP 2375, 2376 with TLS).
+  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v C:\ProgramData\Portainer:C:\data portainer/portainer
 
-You have to take into account the **security issues depending on your network environment**.
+If you deployed Portainer as a Docker Swarm service:
 
-Please refer to `Daemon socket option`_ in the Docker Reference and to `Docker Engine on Windows`_.
-
-.. _Docker Engine on Windows: https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-docker/configure-docker-daemon
-.. _Daemon socket option: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
-
-Declare initial endpoint via CLI
-================================
-
-You can specify the initial endpoint you want Portainer to manage via the CLI, use the ``-H`` flag and the ``tcp://`` protocol to connect to a remote Docker endpoint:
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 --name portainer portainer/portainer -H tcp://<REMOTE_HOST>:<REMOTE_PORT>
-
-Ensure you replace ``REMOTE_HOST`` and ``REMOTE_PORT`` with the address/port of the Docker engine you want to manage.
-
-You can also bind mount the Docker socket to manage a local Docker engine (**not available for Windows Containers (Windows Server 2016)**):
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 --name portainer -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock
-
-Connect to a Swarm cluster
-==========================
-
-Portainer will automatically detect if your endpoint is part of a Swarm cluster (either Docker Swarm or Swarm mode).
-
-**Note**: Ensure you connect to either a *primary* node when connecting to a Docker Swarm cluster or a *manager* node
-when connecting to a cluster created with Docker swarm mode.
-
-As simple as:
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 --name portainer portainer/portainer -H tcp://<SWARM_MANAGER_IP>:2375
-
-Alternatively, if you're using swarm mode, you can also deploy it as a service in your cluster:
-
-.. code-block:: bash
+::
 
   $ docker service create \
       --name portainer \
       --publish 9000:9000 \
       --replicas=1 \
       --constraint 'node.role == manager' \
-      --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
-      portainer/portainer \
-      -H unix:///var/run/docker.sock
+      --mount type=bind,src=//path/on/host/data,dst=/data \
+      portainer/portainer
 
-Connect to a Docker engine with TLS enabled
-===========================================
+**Note**: The Swarm service example will persist Portainer data in ``/path/on/host/data`` for each host in the cluster. If the container is re-scheduled on another node,
+existing Portainer data might not be available. Persisting data across all nodes of a Swarm cluster is outside the scope of this documentation.
 
-If your Docker engine is protected using TLS, you'll need to ensure that you have access to CA, the certificate and the public key used to access your Docker engine.
+
+Advanced deployment
+===================
+
+Advanced Portainer deployment scenarios.
+
+Declaring the Docker environment to manage upon deployment
+----------------------------------------------------------
+
+You can specify the initial environment you want Portainer to manage via the CLI, use the ``-H`` flag and the ``tcp://`` protocol to connect to a remote Docker environment:
+
+::
+
+  $ docker run -d -p 9000:9000 --name portainer --restart always -v portainer_data:/data portainer/portainer -H tcp://<REMOTE_HOST>:<REMOTE_PORT>
+
+Ensure you replace ``REMOTE_HOST`` and ``REMOTE_PORT`` with the address/port of the Docker server you want to manage.
+
+You can also bind mount the Docker socket to manage a local Docker environment (**only possible on environments where the Unix socket is available**):
+
+::
+
+  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer -H unix:///var/run/docker.sock
+
+If your Docker environment is protected using TLS, you'll need to ensure that you have access to CA, the certificate and the public key used to access your Docker engine.
 
 You can upload the required files via the Portainer UI or use the ``--tlsverify`` flag on the CLI.
 
@@ -114,62 +101,32 @@ Portainer will try to use the following paths to the files specified previously 
 
 You must ensure these files are present in the container using a bind mount:
 
-.. code-block:: bash
+::
 
-  $ docker run -d -p 9000:9000 --name portainer -v /path/to/certs:/certs portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify
+  $ docker run -d -p 9000:9000 --name portainer --restart always  -v /path/to/certs:/certs -v portainer_data:/data portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify
 
 You can also use the ``--tlscacert``, ``--tlscert`` and ``--tlskey`` flags if you want to change the default path to the CA, certificate and key file respectively:
 
-.. code-block:: bash
+::
 
   $ docker run -d -p 9000:9000 --name portainer -v /path/to/certs:/certs portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
+  $ docker run -d -p 9000:9000 --name portainer --restart always  -v /path/to/certs:/certs -v portainer_data:/data portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
 
-Persist Portainer data
-======================
-
-By default, Portainer will store its data inside the container in the `/data` folder on Linux (`C:\\data` on Windows, this can be changed via CLI, see configuration).
-
-You'll need to persist Portainer data to keep your changes after restart/upgrade of the Portainer container. You can use a bind mount
-to persist the data on the Docker host folder:
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 --name portainer -v /path/on/host/data:/data portainer/portainer
-
-On Windows:
-
-.. code-block:: none
-
-  $ docker run -d -p 9000:9000 --name portainer -v C:\ProgramData\Portainer:C:\data portainer/portainer
-
-If you deployed Portainer as a Docker Swarm service:
-
-.. code-block:: bash
-
-  $ docker service create \
-      --name portainer \
-      --publish 9000:9000 \
-      --replicas=1 \
-      --constraint 'node.role == manager' \
-      --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
-      --mount type=bind,src=/path/on/host/data,dst=/data \
-      portainer/portainer \
-      -H unix:///var/run/docker.sock
 
 Secure Portainer using SSL
-==========================
+--------------------------
 
 By default, Portainer's web interface and API is exposed over HTTP. This is not secured, it's recommended to enable SSL in a production environment.
 
 To do so, you can use the following flags ``--ssl``, ``--sslcert`` and ``--sslkey``:
 
-.. code-block:: bash
+::
 
-  $ docker run -p 443:9000 --name portainer -v ~/local-certs:/certs portainer/portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+  $ docker run -d -p 443:9000 --name portainer --restart always -v ~/local-certs:/certs -v portainer_data:/data portainer/portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
 
 You can use the following commands to generate the required files:
 
-.. code-block:: bash
+::
 
   $ openssl genrsa -out portainer.key 2048
   $ openssl ecparam -genkey -name secp384r1 -out portainer.key
@@ -180,14 +137,39 @@ Note that `Certbot`_ could be used as well to generate a certificate and a key.
 .. _Certbot: https://certbot.eff.org/
 
 
-Without Docker
-==============
+Deploy Portainer via docker-compose
+-----------------------------------
+
+You can use `docker-compose`_ to deploy Portainer.
+
+Here is an example compose file:
+
+.. code-block:: yaml
+
+  version: '2'
+
+  services:
+    portainer:
+      image: portainer/portainer
+      command: -H unix:///var/run/docker.sock
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - portainer_data:/data
+
+  volumes:
+    portainer_data:
+
+
+.. _docker-compose: https://docs.docker.com/compose/
+
+Deploy Portainer without Docker
+-------------------------------
 
 Portainer binaries are available on each release page: `Portainer releases <https://github.com/portainer/portainer/releases>`_
 
 Download and extract the binary to a location on disk:
 
-.. code-block:: bash
+::
 
   $ cd /opt
   $ wget https://github.com/portainer/portainer/releases/download/1.17.0/portainer-1.17.0-linux-amd64.tar.gz
@@ -196,9 +178,9 @@ Download and extract the binary to a location on disk:
 Then just use the portainer binary as you would use CLI flags with Docker.
 
 **Note**: Portainer will try to write its data into the `/data` folder by default. You must ensure
-this folder exists first.
+this folder exists first (or change the path it will use via the ``--data``, see below).
 
-.. code-block:: bash
+::
 
   $ mkdir /data
   $ cd /opt/portainer
@@ -206,12 +188,12 @@ this folder exists first.
 
 You can use the ``-p`` flag to serve Portainer on another port:
 
-.. code-block:: bash
+::
 
   $ ./portainer -p :8080
 
-You can change the folder used by Portainer to store its data with the ``-d`` flag:
+You can change the folder used by Portainer to store its data with the ``--data`` flag:
 
-.. code-block:: bash
+::
 
-  $ ./portainer -d /opt/portainer-data
+  $ ./portainer --data /opt/portainer-data

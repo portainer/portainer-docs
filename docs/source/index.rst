@@ -13,6 +13,7 @@ Contents:
    deployment
    configuration
    API
+   agent
    external_endpoints
    templates
    contribute
