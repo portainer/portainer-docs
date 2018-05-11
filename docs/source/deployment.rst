@@ -30,7 +30,7 @@ Use our agent setup to deploy Portainer inside a Swarm cluster.
   $ curl -L https://portainer.io/download/portainer-agent-stack.yml -o portainer-agent-stack.yml
   $ docker stack deploy --compose-file=portainer-agent-stack.yml portainer
 
-Have a look at the Advanced deployment section below to find more details on how to connect an existing Portainer
+Have a look at the :ref:`Agent` section to find more details on how to connect an existing Portainer
 instance to a manually deployed Portainer agent.
 
 Persist Portainer data
