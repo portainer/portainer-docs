@@ -11,6 +11,7 @@ If you want to manage a local Docker environment with **SELinux** enabled, you'l
 
   $ docker run -d --privileged -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 
+You can also have a look at this helper: https://github.com/dpw/selinux-dockersock.
 
 How can I expose the Docker API over TCP so that Portainer can communicate with my environment?
 ===============================================================================================
