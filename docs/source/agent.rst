@@ -73,20 +73,47 @@ Connecting an existing Portainer instance to an agent
 
 If you want to connect an existing Portainer instance to an agent, you can choose the **Agent** environment type when creating a new endpoint.
 
-Ensure that you exposed the Agent port inside your Swarm cluster via when you deployed the agent (default port is 9001):
+Ensure that you exposed the Agent port inside your Swarm cluster (using **host** mode) when you deployed the agent (default port is 9001):
 
 ::
 
   $ docker service create \
       --name portainer_agent \
       --network portainer_agent_network \
-      --publish 9001:9001 \
+      --publish mode=host,target=9001,published=9001 \
       -e AGENT_CLUSTER_ADDR=tasks.portainer_agent \
       --mode global \
       --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
       portainer/agent
 
 You can then use the address of any node in your cluster (with the agent port) inside the Agent URL field.
+
+Alternatively, you can deploy the agent using the following stack:
+
+.. code-block:: yaml
+
+  version: '3.2'
+
+  services:
+    agent:
+      image: portainer/agent
+      environment:
+        AGENT_CLUSTER_ADDR: tasks.agent
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+      ports:
+        - target: 9001
+          published: 9001
+          protocol: tcp
+          mode: host
+      networks:
+        - portainer_agent
+      deploy:
+        mode: global
+
+  networks:
+    portainer_agent:
+      driver: overlay
 
 Configuration
 -------------
