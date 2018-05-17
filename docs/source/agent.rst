@@ -5,22 +5,18 @@ Agent
 Purpose
 =======
 
-The purpose of the agent is to work around a Docker API limitation. When using the Docker API to manage a Docker environment, the user interactions with specific resources (containers, networks, volumes and images) are limited to these available on the node targeted by the Docker API request.
+The Portainer Agent is a workaround for a Docker API limitation when using the Docker API to manage a Docker environment. The user interactions with specific resources (containers, networks, volumes and images) are limited to those available on the node targeted by the Docker API request.
 
-Docker Swarm mode introduce the concept of cluster of Docker nodes. With that concept, it also introduces the services, tasks, configs and secrets which are cluster aware resources. This means that you can query for the list of service or inspect a task inside any node on the cluster as long as you're executing the Docker API request on a manager node.
+Docker Swarm mode introduces a concept which is the clustering of Docker nodes. It also adds services, tasks, configs and secrets which are cluster-aware resources. Cluster-aware means that you can query for a list of services or inspect a task inside any node on the cluster, as long as you’re executing the Docker API request on a manager node.
 
-Containers, networks, volumes and images are node specific resources, not cluster aware. If you want to get the list of all the volumes available on the node number 3 inside your cluster, you need to execute the request to query the volumes on that specific node.
+Containers, networks, volumes and images are node specific resources, not cluster-aware. When you, for example, want to list all the volumes available on a node inside your cluster, you will need to send a query to that specific node.
 
-The agent purpose aims to solve that issue and make the containers, networks and volumes resources cluster aware while keeping the Docker API request format.
-
-This means that you only need to execute one Docker API request to retrieve all the volumes inside your cluster for example.
-
-The final goal is to bring a better Docker UX when managing Swarm clusters.
+The purpose of the agent aims to allows previously node specific resources to be cluster-aware, all while keeping the Docker API request format. As aforementioned, this means that you only need to execute one Docker API request to retrieve all these resources from every node inside the cluster. In all bringing a better Docker user experience when managing Swarm clusters.
 
 Deployment
 ==========
 
-Instructions to deploy the Portainer agent and to connect Portainer to an agent.
+Here follow the instructions to deploy the Agent, and to connect it to Portainer.
 
 Deploy it as a stack
 --------------------
@@ -32,19 +28,19 @@ Manual deployment
 
 Overall, the setup consists of the following steps:
 
-* Step 1: create a new overlay network in your Swarm cluster for the Portainer agent
-* Step 2: deploy the Portainer agent as a global service in your cluster (inside the overlay network created previously)
-* Step 3: connect your Portainer instance to any of the agents by using the agent IP:PORT as an endpoint
+* Step 1: Create a new overlay network in your Swarm cluster for the Agent.
+* Step 2: Deploy the Agent as a global service in your cluster (connected to the overlay network).
+* Step 3: Connect your Portainer instance to any of the agents by using the Agent's IP:PORT as an endpoint.
 
-**Note**: This setup will assume that you're executing the following instructions on a Swarm manager node.
+**Note**: This setup assumes that you are executing the following instructions on a Swarm manager node.
 
-First step, create a new overlay network in your Swarm cluster:
+*Step 1*, creating a new overlay network in your Swarm cluster:
 
 ::
 
   $ docker network create --driver overlay portainer_agent_network
 
-Second step, deploy the agent as a global service inside the network you previously created:
+*Step 2*, deploying the Agent as a `global` service in your cluster:
 
 ::
 
@@ -56,7 +52,7 @@ Second step, deploy the agent as a global service inside the network you previou
       --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
       portainer/agent
 
-Third step, deploy the Portainer instance as a service:
+*Step 3*, deploying the Portainer instance as a service:
 
 ::
 
@@ -73,7 +69,7 @@ Connecting an existing Portainer instance to an agent
 
 If you want to connect an existing Portainer instance to an agent, you can choose the **Agent** environment type when creating a new endpoint.
 
-Ensure that you exposed the Agent port inside your Swarm cluster (using **host** mode) when you deployed the agent (default port is 9001):
+Ensure when deploying the agent, that you expose the Agent's port inside your Swarm cluster, and that the mode is set to **host**  (default port is 9001):
 
 ::
 
