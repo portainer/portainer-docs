@@ -168,7 +168,9 @@ Example:
 
 A JSON array describing the associated volumes of the template. Each element in the array must be a valid JSON object that has a required container property.
 
-For each element in the array, a Docker volume will be created and associated when starting the container. If a bind property is defined it will be used as the source of a bind mount.
+For each element in the array, a Docker volume will be created and associated when starting the container.
+If a bind property is defined it will be used as the source of a bind mount.
+If a readonly property is is defined and true, the volume will be mounted in read-only mode.
 
 This field is **optional**.
 
@@ -183,7 +185,8 @@ Example:
       },
       {
         "container": "/usr/share/nginx/html",
-        "bind": "/var/www"
+        "bind": "/var/www",
+        "readonly": true
       }
     ]
   }
