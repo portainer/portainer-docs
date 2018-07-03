@@ -16,13 +16,13 @@ Example of a container template:
 .. code-block:: json
 
   {
-    "type": "container",
+    "type": 1,
     "title": "Nginx",
     "description": "High performance web server",
     "logo": "https://cloudinovasi.id/assets/img/logos/nginx.png",
     "image": "nginx:latest",
     "ports": [
-      "80/tcp",
+      "8080:80/tcp",
       "443/tcp"
     ]
   }
@@ -32,7 +32,7 @@ It is composed of multiple fields, some mandatory and some optionals.
 ``type``
 --------
 
-Template type, either `container` or `stack`.
+Template type, valid values are: 1 (container), 2 (Swarm stack) or 3 (Compose stack).
 
 This field is **mandatory**.
 
@@ -56,6 +56,22 @@ This field is **mandatory**.
 The Docker image associated to the template. The image tag **must** be included.
 
 This field is **mandatory**.
+
+``administrator_only``
+----------------------
+
+Should the template be available to administrator users only.
+
+This field is **optional**.
+
+Example:
+
+.. code-block:: json
+
+  {
+    "administrator_only": true
+  }
+
 
 ``name``
 --------
@@ -95,56 +111,69 @@ Example:
   }
 
 
-``env``
--------
+  ``env``
+  -------
 
-A JSON array describing the environment variables required by the template. Each element in the array must be a valid JSON object.
+  A JSON array describing the environment variables required by the template. Each element in the array must be a valid JSON object.
 
-An input will be generated in the templates view for each element in the array.
+  An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of
+  inputs can be generated (text input, select).
 
-Depending on the value in `type` field, the view
-will display a different input. For example, when using the value `container` for the `type` field, the UI will display a dropdown with all
-the running containers. The container hostname will then be inserted as a value in the environment variable.
+  This field is **optional**.
 
-Supported types:
+  Element format:
 
-* `container`
+  .. code-block:: json
 
-This field is **optional**.
+    {
+      "name": "the name of the environment variable, as supported in the container image (mandatory)",
+      "label": "label for the input in the UI (mandatory unless set is present)",
+      "description": "a short description for this input, will be available as a tooltip in the UI (optional)",
+      "default": "default value associated to the variable (optional)",
+      "preset": "boolean. If set to true, the UI will not generate an input (optional)",
+      "select": "an array of possible values, will generate a select input (optional)"
+    }
 
-Element format:
+  Example:
 
-.. code-block:: json
+  .. code-block:: json
 
-  {
-    "name": "the name of the environment variable, as supported in the container image (mandatory)",
-    "label": "label for the input in the UI (mandatory)",
-    "type": "only container is available at the moment (optional)",
-    "set": "pre-defined value for the variable, will not generate an input in the UI (optional)"
-  }
+    {
+      "env": [
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "label": "Root password",
+          "description": "Password used by the root user."
+        },
+        {
+          "name": "ENV_VAR_WITH_DEFAULT_VALUE",
+          "default": "default_value",
+          "preset": true
+        },
+        {
+          "name": "ENV_VAR_WITH_SELECT_VALUE",
+          "label": "An environment variable",
+          "description": "A description for this env var",
+          "select": [
+            {
+              "text": "Yes, I agree",
+              "value": "Y",
+              "default": true
+            },
+            {
+              "text": "No, I disagree",
+              "value": "N"
+            },
+            {
+              "text": "Maybe",
+              "value": "YN"
+            }
+          ],
+          "description": "Some environment variable."
+        }
+      ]
+    }
 
-Example:
-
-.. code-block:: json
-
-  {
-    "env": [
-      {
-        "name": "MYSQL_ROOT_PASSWORD",
-        "label": "Root password"
-      },
-      {
-        "name": "MYSQL_USER",
-        "label": "MySQL user",
-        "set": "myuser"
-      },
-      {
-        "name": "MYSQL_PASSWORD",
-        "label": "MySQL password",
-        "set": "mypassword"
-      }
-    ]
-  }
 
 ``network``
 -----------
@@ -193,7 +222,9 @@ Example:
 
 A JSON array describing the ports exposed by template. Each element in the array must be a valid JSON string specifying the port number in the container and the protocol.
 
-Each port will be automatically bound on the host by Docker when starting the container.
+It can be optionally prefixed with the port that must be mapped on the host in the ``port:`` form.
+
+If the host port is not specified, the Docker host will automatically assign one when starting the container.
 
 This field is **optional**.
 
@@ -202,7 +233,7 @@ Example:
 .. code-block:: json
 
   {
-    "ports": ["80/tcp", "443/tcp"]
+    "ports": ["8080:80/tcp", "443/tcp"]
   }
 
 
@@ -342,7 +373,7 @@ Example of a stack template:
 .. code-block:: json
 
   {
-    "type": "stack",
+    "type": 2,
     "title": "CockroachDB",
     "description": "CockroachDB cluster",
     "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
@@ -360,7 +391,7 @@ It is composed of multiple fields, some mandatory and some optionals.
 ``type``
 --------
 
-Template type, either `container` or `stack`.
+Template type, valid values are: 1 (container), 2 (Swarm stack) or 3 (Compose stack).
 
 This field is **mandatory**.
 
@@ -405,6 +436,22 @@ Example:
 
 This field is **mandatory**.
 
+``administrator_only``
+----------------------
+
+Should the template be available to administrator users only.
+
+This field is **optional**.
+
+Example:
+
+.. code-block:: json
+
+  {
+    "administrator_only": true
+  }
+
+
 ``name``
 --------
 
@@ -438,7 +485,8 @@ Element format:
     "name": "the name of the environment variable, as supported in the container image (mandatory)",
     "label": "label for the input in the UI (mandatory unless set is present)",
     "description": "a short description for this input, will be available as a tooltip in the UI (optional)",
-    "set": "pre-defined value for the variable, will not generate an input in the UI (optional)",
+    "default": "default value associated to the variable (optional)",
+    "preset": "boolean. If set to true, the UI will not generate an input (optional)",
     "select": "an array of possible values, will generate a select input (optional)"
   }
 
@@ -455,15 +503,18 @@ Example:
       },
       {
         "name": "ENV_VAR_WITH_DEFAULT_VALUE",
-        "set": "some_value"
+        "default": "default_value",
+        "preset": true
       },
       {
         "name": "ENV_VAR_WITH_SELECT_VALUE",
         "label": "An environment variable",
+        "description": "A description for this env var",
         "select": [
           {
             "text": "Yes, I agree",
-            "value": "Y"
+            "value": "Y",
+            "default": true
           },
           {
             "text": "No, I disagree",
