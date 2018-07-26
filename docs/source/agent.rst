@@ -38,7 +38,7 @@ Overall, the setup consists of the following steps:
 
 ::
 
-  $ docker network create --driver overlay portainer_agent_network
+  $ docker network create --driver overlay --attachable portainer_agent_network
 
 *Step 2*, deploying the Agent as a `global` service in your cluster:
 
@@ -49,6 +49,7 @@ Overall, the setup consists of the following steps:
       --network portainer_agent_network \
       -e AGENT_CLUSTER_ADDR=tasks.portainer_agent \
       --mode global \
+      --constraint 'node.platform.os == linux' \
       --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
       portainer/agent
 
@@ -63,6 +64,15 @@ Overall, the setup consists of the following steps:
       --replicas=1 \
       --constraint 'node.role == manager' \
       portainer/portainer -H "tcp://tasks.portainer_agent:9001" --tlsskipverify
+
+*Step 4*, deploying the Agent for all Windows Server nodes
+
+Because of Docker limitation you need deploy Agent to all Windows Server nodes by running following command on each of them.
+
+::
+
+  $ docker run -d --name portainer_agent --restart always --network portainer_agent_network -e AGENT_CLUSTER_ADDR=tasks.agent --mount type=npipe,source=\\.\pipe\docker_engine,target=\\.\pipe\docker_engine portainer/agent:windows1803-amd64
+
 
 Connecting an existing Portainer instance to an agent
 -----------------------------------------------------
@@ -106,10 +116,13 @@ Alternatively, you can deploy the agent using the following stack:
         - portainer_agent
       deploy:
         mode: global
+      placement:
+        constraints: [node.platform.os == linux]
 
   networks:
     portainer_agent:
       driver: overlay
+      attachable: true
 
 Configuration
 -------------

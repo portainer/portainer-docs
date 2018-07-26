@@ -45,12 +45,27 @@ to persist the data on the Docker host folder:
 
   $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /path/on/host/data:/data portainer/portainer
 
-Example on Windows:
+Windows
+----------------------------------------------------------
+Docker for Windows 10 supports running both Linux and Windows containers and you need use different start command depending which one you are using.
+Windows Server supports only native Windows containers.
+
+Example for Linux containers:
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v C:\ProgramData\Portainer:C:\data portainer/portainer
+  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v C:\ProgramData\Portainer:/data portainer/portainer
 
+
+Example for native Windows containers:
+
+::
+
+  $ docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v C:\ProgramData\Portainer:/data portainer/portainer
+
+
+Docker Swarm service
+----------------------------------------------------------
 If you deployed Portainer as a Docker Swarm service:
 
 ::
