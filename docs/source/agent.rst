@@ -51,6 +51,7 @@ Overall, the setup consists of the following steps:
       --mode global \
       --constraint 'node.platform.os == linux' \
       --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
+      --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes \
       portainer/agent
 
 *Step 3*, deploying the Portainer instance as a service:
@@ -90,6 +91,7 @@ Ensure when deploying the agent, that you expose the Agent's port inside your Sw
       -e AGENT_CLUSTER_ADDR=tasks.portainer_agent \
       --mode global \
       --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
+      --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes \
       portainer/agent
 
 You can then use the address of any node in your cluster (with the agent port) inside the Agent URL field.
@@ -107,6 +109,7 @@ Alternatively, you can deploy the agent using the following stack:
         AGENT_CLUSTER_ADDR: tasks.agent
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
+        - /var/lib/docker/volumes:/var/lib/docker/volumes
       ports:
         - target: 9001
           published: 9001
