@@ -106,9 +106,36 @@ Use your own templates
 
 Portainer allows you to rapidly deploy containers using App Templates.
 
-By default `Portainer templates <https://raw.githubusercontent.com/portainer/templates/master/templates.json>`_ will be used but you can also define your own templates.
+By default `Portainer templates <https://raw.githubusercontent.com/portainer/portainer/master/templates.json>`_ will be used but you can also define your own templates.
 
-Add the ``--templates`` flag and specify the external location of your templates when starting Portainer:
+Note: at the moment, templates are only loaded once at first Portainer startup. If you already deployed a Portainer instance and want to use your own templates after this,
+you'll need to clear any existing templates (default templates) via the HTTP API.
+
+There are two ways to specify your own templates:
+
+Bind-mount your own templates
+-----------------------------
+
+Using the `--template-file` flag you can specify the path to your own template file on the file-system. By default, it points to `/templates.json` on both Linux and Windows hosts.
+
+For example, you can mount your own template file inside the container:
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/my/templates.json:/templates.json portainer/portainer
+
+
+Or using the `--template-file` to specify a specific path to the templates file:
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/template/folder:/templates portainer/portainer --template-file /templates/templates.json
+
+
+Host your template file
+-----------------------
+
+Using the `--templates` flag you can specify an URL where the template file can be accessed via HTTP.
 
 .. code-block:: bash
 
@@ -154,4 +181,5 @@ The following CLI flags are available:
 * ``--sslkey``: Path to the SSL key used to secure the Portainer instance (default: ``/certs/portainer.key``, ``C:\certs\portainer.key`` on Windows)
 * ``--hide-label``, ``-l``: Hide containers with a specific label in the UI
 * ``--logo``: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
-* ``--templates``, ``-t``: URL to templates (apps) definitions (default: ``https://raw.githubusercontent.com/portainer/templates/master/templates.json``)
+* ``--templates``, ``-t``: URL to templates (apps) definitions
+* ``--template-file``: Path on disk to templates (apps) definitions (default: ``/templates.json``)

@@ -580,7 +580,10 @@ This field is **optional**.
 Build and host your own templates
 =================================
 
-You can build your own container that will use `Nginx <https://hub.docker.com/_/nginx/>`_ to serve the templates definitions.
+
+The simplest way to use your own templates is to bind mount your own template file directly into the Portainer container, see :doc:`Configuration <configuration>`.
+
+You can also build your own container that will use `Nginx <https://hub.docker.com/_/nginx/>`_ to serve the templates definitions.
 
 Clone the `Portainer templates repository <https://github.com/portainer/templates>`_, edit the templates file, build and run the container:
 

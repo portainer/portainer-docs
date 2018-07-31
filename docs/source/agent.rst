@@ -13,8 +13,8 @@ Containers, networks, volumes and images are node specific resources, not cluste
 
 The purpose of the agent aims to allows previously node specific resources to be cluster-aware, all while keeping the Docker API request format. As aforementioned, this means that you only need to execute one Docker API request to retrieve all these resources from every node inside the cluster. In all bringing a better Docker user experience when managing Swarm clusters.
 
-Deployment
-==========
+Agent deployment
+================
 
 Here follow the instructions to deploy the Agent, and to connect it to Portainer.
 
@@ -127,8 +127,8 @@ Alternatively, you can deploy the agent using the following stack:
       driver: overlay
       attachable: true
 
-Configuration
--------------
+Agent configuration
+-------------------
 
 You can change the configuration of the agent by using environment variables.
 
