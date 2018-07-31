@@ -61,7 +61,7 @@ Example for native Windows containers:
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v C:\ProgramData\Portainer:/data portainer/portainer
+  $ docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v C:\ProgramData\Portainer:C:\data portainer/portainer
 
 
 Docker Swarm service
