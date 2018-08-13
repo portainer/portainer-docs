@@ -89,8 +89,8 @@ Here is a working configuration for HAProxy to serve Portainer at `portainer.127
       timeout http-request        300s
       timeout queue               1m
       timeout connect             10s
-      timeout client              1m
-      timeout server              1m
+      timeout client              1d
+      timeout server              1d
       timeout http-keep-alive     10s
       timeout check               10s
       maxconn 10000
