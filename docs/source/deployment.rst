@@ -199,7 +199,7 @@ this folder exists first (or change the path it will use via the ``--data``, see
 
   $ mkdir /data
   $ cd /opt/portainer
-  $ ./portainer
+  $ ./portainer --template-file "${PWD}/templates.json"
 
 You can use the ``-p`` flag to serve Portainer on another port:
 
