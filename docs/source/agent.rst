@@ -119,8 +119,8 @@ Alternatively, you can deploy the agent using the following stack:
         - portainer_agent
       deploy:
         mode: global
-      placement:
-        constraints: [node.platform.os == linux]
+        placement:
+          constraints: [node.platform.os == linux]
 
   networks:
     portainer_agent:
