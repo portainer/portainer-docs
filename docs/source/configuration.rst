@@ -163,23 +163,25 @@ Available flags
 
 The following CLI flags are available:
 
-* ``--host``, ``-H``: Docker daemon endpoint
-* ``--bind``, ``-p``: Address and port to serve Portainer (default: ``:9000``)
-* ``--data``, ``-d``: Directory where Portainer data will be stored (default: ``/data`` on Linux, ``C:\data`` on Windows)
-* ``--tlsverify``: TLS support (default: ``false``)
-* ``--tlscacert``: Path to the CA (default: ``/certs/ca.pem`` on Linux, ``C:\certs\ca.pem`` on Windows)
-* ``--tlscert``: Path to the TLS certificate file (default: ``/certs/cert.pem``, ``C:\certs\cert.pem`` on Windows)
-* ``--tlskey``: Path to the TLS key (default: ``/certs/key.pem``, ``C:\certs\key.pem`` on Windows)
-* ``--no-analytics``: Disable analytics (default: ``false``)
-* ``--no-auth``: Disable internal authentication mechanism (default: ``false``)
-* ``--external-endpoints``: Enable external endpoint management by specifying the path to a JSON endpoint source in a file
-* ``--sync-interval``: Time interval between two endpoints synchronization requests expressed as a string, e.g. ``30s``, ``5m``, ``1h``... as supported by the `time.ParseDuration method <https://golang.org/pkg/time/#ParseDuration>`_ (default: ``60s``)
 * ``--admin-password``: Admin password in the form ``admin:<hashed_password>``
 * ``--admin-password-file``: Path to the file containing the password for the admin user
+* ``--bind``, ``-p``: Address and port to serve Portainer (default: ``:9000``)
+* ``--data``, ``-d``: Directory where Portainer data will be stored (default: ``/data`` on Linux, ``C:\data`` on Windows)
+* ``--external-endpoints``: Enable external endpoint management by specifying the path to a JSON endpoint source in a file
+* ``--hide-label``, ``-l``: Hide containers with a specific label in the UI
+* ``--host``, ``-H``: Docker daemon endpoint
+* ``--logo``: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
+* ``--no-analytics``: Disable analytics (default: ``false``)
+* ``--no-auth``: Disable internal authentication mechanism (default: ``false``)
+* ``--no-snapshot``: Disable periodic endpoint snapshot (default: ``false``)
+* ``--snapshot-interval``: Time interval between two endpoint snapshot jobs expressed as a string, e.g. ``30s``, ``5m``, ``1h``... as supported by the `time.ParseDuration method <https://golang.org/pkg/time/#ParseDuration>`_ (default: ``5m``)
 * ``--ssl``: Secure Portainer instance using SSL (default: ``false``)
 * ``--sslcert``: Path to the SSL certificate used to secure the Portainer instance (default: ``/certs/portainer.crt``, ``C:\certs\portainer.crt`` on Windows)
 * ``--sslkey``: Path to the SSL key used to secure the Portainer instance (default: ``/certs/portainer.key``, ``C:\certs\portainer.key`` on Windows)
-* ``--hide-label``, ``-l``: Hide containers with a specific label in the UI
-* ``--logo``: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
+* ``--sync-interval``: Time interval between two endpoint synchronization requests expressed as a string, e.g. ``30s``, ``5m``, ``1h``... as supported by the `time.ParseDuration method <https://golang.org/pkg/time/#ParseDuration>`_ (default: ``60s``)
 * ``--templates``, ``-t``: URL to templates (apps) definitions
 * ``--template-file``: Path on disk to templates (apps) definitions (default: ``/templates.json``)
+* ``--tlscacert``: Path to the CA (default: ``/certs/ca.pem`` on Linux, ``C:\certs\ca.pem`` on Windows)
+* ``--tlscert``: Path to the TLS certificate file (default: ``/certs/cert.pem``, ``C:\certs\cert.pem`` on Windows)
+* ``--tlskey``: Path to the TLS key (default: ``/certs/key.pem``, ``C:\certs\key.pem`` on Windows)
+* ``--tlsverify``: TLS support (default: ``false``)
