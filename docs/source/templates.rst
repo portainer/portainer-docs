@@ -368,9 +368,6 @@ Stack template definition format
 
 A template element must be a valid `JSON <http://www.json.org/>`_ object.
 
-Stack templates can only be deployed inside Swarm clusters via ``docker stack deploy``. Portainer is not compatible
-with ``docker-compose`` at the moment.
-
 Example of a stack template:
 
 .. code-block:: json
@@ -395,6 +392,8 @@ It is composed of multiple fields, some mandatory and some optionals.
 --------
 
 Template type, valid values are: 1 (container), 2 (Swarm stack) or 3 (Compose stack).
+
+A Swarm stack will be deployed using the equivalent of ``docker stack deploy`` whereas a Compose stack will be deployed using the equivalent of ``docker-compose``.
 
 This field is **mandatory**.
 
