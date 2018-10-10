@@ -167,6 +167,9 @@ Here is an example compose file:
     portainer:
       image: portainer/portainer
       command: -H unix:///var/run/docker.sock
+      restart: always
+      ports:
+        - 9000:9000
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
         - portainer_data:/data
