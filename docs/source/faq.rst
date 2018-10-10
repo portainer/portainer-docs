@@ -218,4 +218,6 @@ Have a look at `this gist <https://gist.github.com/woudsma/03c69260715327ee8453f
 How can I enable LDAP authentication ?
 ======================================
 
-Have a look at `this post <https://www.linkedin.com/pulse/teamgroup-management-docker-portainerio-neil-cresswell>`_ for detailed instructions.
+Have a look at `this post <https://www.linkedin.com/pulse/how-enable-ldapad-authentication-portainerio-neil-cresswell/>`_ for detailed instructions.
+
+More details about automatic user creation and team assignment in `this post <https://www.linkedin.com/pulse/ldap-usersgroups-portainer-neil-cresswell/>`_.
