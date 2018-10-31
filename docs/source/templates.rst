@@ -111,68 +111,68 @@ Example:
   }
 
 
-  ``env``
-  -------
+``env``
+-------
 
-  A JSON array describing the environment variables required by the template. Each element in the array must be a valid JSON object.
+A JSON array describing the environment variables required by the template. Each element in the array must be a valid JSON object.
 
-  An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of
-  inputs can be generated (text input, select).
+An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of
+inputs can be generated (text input, select).
 
-  This field is **optional**.
+This field is **optional**.
 
-  Element format:
+Element format:
 
-  .. code-block:: json
+.. code-block:: json
 
-    {
-      "name": "the name of the environment variable, as supported in the container image (mandatory)",
-      "label": "label for the input in the UI (mandatory unless set is present)",
-      "description": "a short description for this input, will be available as a tooltip in the UI (optional)",
-      "default": "default value associated to the variable (optional)",
-      "preset": "boolean. If set to true, the UI will not generate an input (optional)",
-      "select": "an array of possible values, will generate a select input (optional)"
-    }
+  {
+    "name": "the name of the environment variable, as supported in the container image (mandatory)",
+    "label": "label for the input in the UI (mandatory unless set is present)",
+    "description": "a short description for this input, will be available as a tooltip in the UI (optional)",
+    "default": "default value associated to the variable (optional)",
+    "preset": "boolean. If set to true, the UI will not generate an input (optional)",
+    "select": "an array of possible values, will generate a select input (optional)"
+  }
 
-  Example:
+Example:
 
-  .. code-block:: json
+.. code-block:: json
 
-    {
-      "env": [
-        {
-          "name": "MYSQL_ROOT_PASSWORD",
-          "label": "Root password",
-          "description": "Password used by the root user."
-        },
-        {
-          "name": "ENV_VAR_WITH_DEFAULT_VALUE",
-          "default": "default_value",
-          "preset": true
-        },
-        {
-          "name": "ENV_VAR_WITH_SELECT_VALUE",
-          "label": "An environment variable",
-          "description": "A description for this env var",
-          "select": [
-            {
-              "text": "Yes, I agree",
-              "value": "Y",
-              "default": true
-            },
-            {
-              "text": "No, I disagree",
-              "value": "N"
-            },
-            {
-              "text": "Maybe",
-              "value": "YN"
-            }
-          ],
-          "description": "Some environment variable."
-        }
-      ]
-    }
+  {
+    "env": [
+      {
+        "name": "MYSQL_ROOT_PASSWORD",
+        "label": "Root password",
+        "description": "Password used by the root user."
+      },
+      {
+        "name": "ENV_VAR_WITH_DEFAULT_VALUE",
+        "default": "default_value",
+        "preset": true
+      },
+      {
+        "name": "ENV_VAR_WITH_SELECT_VALUE",
+        "label": "An environment variable",
+        "description": "A description for this env var",
+        "select": [
+          {
+            "text": "Yes, I agree",
+            "value": "Y",
+            "default": true
+          },
+          {
+            "text": "No, I disagree",
+            "value": "N"
+          },
+          {
+            "text": "Maybe",
+            "value": "YN"
+          }
+        ],
+        "description": "Some environment variable."
+      }
+    ]
+  }
 
 
 ``network``
