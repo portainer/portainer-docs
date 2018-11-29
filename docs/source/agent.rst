@@ -74,6 +74,8 @@ Because of Docker limitation you need deploy Agent to all Windows Server nodes b
 
   $ docker run -d --name portainer_agent --restart always --network portainer_agent_network -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mount type=npipe,source=\\.\pipe\docker_engine,target=\\.\pipe\docker_engine portainer/agent:windows1803-amd64
 
+**Note**: If you're using Windows server 1803, you might need to open up DNS ports to support the DNS resolution of `tasks.portainer_agent`. See: https://success.docker.com/article/swarm-internal-dns-is-inaccessible-on-windows-server-1803
+
 
 Connecting an existing Portainer instance to an agent
 -----------------------------------------------------
