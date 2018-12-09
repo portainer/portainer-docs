@@ -38,7 +38,7 @@ Start a watched build process:
 
 .. code-block:: bash
 
-  $ yarn dev
+  $ yarn start
 
 Access Portainer at `http://localhost:9000 <http://localhost:9000>`_
 
