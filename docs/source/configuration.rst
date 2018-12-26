@@ -4,15 +4,6 @@ Configuration
 
 Portainer can be easily tuned using CLI flags.
 
-Disable authentication
-======================
-
-To disable Portainer internal authentication mechanism, start Portainer with the ``--no-auth`` flag:
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --no-auth
-
 Admin password
 ==============
 
@@ -157,6 +148,18 @@ Note: when using the external endpoint management, endpoint management will be d
   $ docker run -d -p 9000:9000 -v /tmp/endpoints:/endpoints portainer/portainer --external-endpoints /endpoints/endpoints.json
 
 For more information about the endpoint definition format see :doc:`External endpoints <external_endpoints>`
+
+Disable authentication
+======================
+
+**WARNING**: The Portainer.io team strongly disadvises to disable authentication for security reasons.
+
+To disable Portainer internal authentication mechanism, start Portainer with the ``--no-auth`` flag:
+
+.. code-block:: bash
+
+  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --no-auth
+
 
 Available flags
 ===============
