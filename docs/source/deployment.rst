@@ -178,7 +178,10 @@ Here is an example compose file:
     portainer_data:
 
 
+`Click here`_ to download the Compose file.
+
 .. _docker-compose: https://docs.docker.com/compose/
+.. _Click here: https://downloads.portainer.io/docker-compose.yml
 
 Deploy Portainer without Docker
 -------------------------------
