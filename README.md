@@ -6,12 +6,11 @@ Documentation is available at http://portainer.readthedocs.io/
 
 # Contribute
 
-Ensure you have python and install the requirements:
+After modifying the documentation files inside the `docs/source` folder, you can
+build the documentation locally to preview your changes.
 
 ```shell
-$ pip install -r requirements.txt
+$ docker run --rm -v ${PWD}/docs:/src portainer/docbuilder:latest make html
 ```
 
-You can then modify the docs in the `docs/source` folder.
-
-When done, build it using `make html` inside the `docs` directory.
+HTML files will be available under `docs/build/html` for preview.
