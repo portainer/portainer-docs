@@ -13,10 +13,10 @@ Containers, networks, volumes and images are node specific resources, not cluste
 
 The purpose of the agent aims to allow previously node specific resources to be cluster-aware. All while keeping the Docker API request format. As aforementioned, this means that you only need to execute one Docker API request to retrieve all these resources from every node inside the cluster. In all bringing a better Docker user experience when managing Swarm clusters.
 
-Agent deployment
-================
+Deployment
+==========
 
-Here follow the instructions to deploy the Agent, and to connect it to Portainer.
+Instructions on how to deploy the Agent and how to connect it to Portainer.
 
 Deploy it as a stack
 --------------------
@@ -129,8 +129,129 @@ Alternatively, you can deploy the agent using the following stack:
       driver: overlay
       attachable: true
 
-Agent configuration
--------------------
+Configuration
+=============
+
+You can use variant agent configurations to achieve different setups or enable specific features.
+
+Shared secret
+-------------
+
+By default, the agent will register the first Portainer instance that connects to it and prevent connections from any other instance after that.
+
+To bypass this security mecanism, Portainer and the agent can be configured at deployment time to use a shared secret. This configuration allows multiple
+Portainer instances to connect to the same agent endpoint.
+
+The ``AGENT_SECRET`` environment variable can be used to define the shared secret.
+
+When deploying the agent as a service:
+
+::
+
+  $ docker service create \
+      --name portainer_agent \
+      --network portainer_agent_network \
+      --publish mode=host,target=9001,published=9001 \
+      -e AGENT_CLUSTER_ADDR=tasks.portainer_agent \
+      -e AGENT_SECRET=mysecrettoken \
+      --mode global \
+      --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
+      --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes \
+      portainer/agent
+
+
+Via a stack file:
+
+.. code-block:: yaml
+
+  version: '3.2'
+
+  services:
+    agent:
+      image: portainer/agent
+      environment:
+        AGENT_CLUSTER_ADDR: tasks.agent
+        AGENT_SECRET: mysecrettoken
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /var/lib/docker/volumes:/var/lib/docker/volumes
+      ports:
+        - target: 9001
+          published: 9001
+          protocol: tcp
+          mode: host
+      networks:
+        - portainer_agent
+      deploy:
+        mode: global
+        placement:
+          constraints: [node.platform.os == linux]
+
+  networks:
+    portainer_agent:
+      driver: overlay
+      attachable: true
+
+
+The ``AGENT_SECRET`` must be specified when deploying Portainer as well:
+
+::
+
+  $ docker run -d -p 9000:9000 --name portainer --restart always -e AGENT_SECRET=mysecrettoken -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+
+
+
+Enable host management features
+-------------------------------
+
+The following features are disabled by default for security reasons:
+
+* Ability to manage the filesystem of the host where the agent is running
+* Ability to retrieve hardware information about the host where the agent is running (PCI devices/disks)
+
+In order to enable these features, the agent must be configured properly by:
+
+* Enabling the host management features via the ``CAP_HOST_MANAGEMENT`` environment variable
+* Bind-mounting the root of the host in the agent container (must be bind-mounted in ``/host``)
+
+Example when deploying the agent via a stack file:
+
+.. code-block:: yaml
+
+  version: '3.2'
+
+  services:
+    agent:
+      image: portainer/agent
+      environment:
+        AGENT_CLUSTER_ADDR: tasks.agent
+        CAP_HOST_MANAGEMENT: 1
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /var/lib/docker/volumes:/var/lib/docker/volumes
+        - /:/host
+      ports:
+        - target: 9001
+          published: 9001
+          protocol: tcp
+          mode: host
+      networks:
+        - portainer_agent
+      deploy:
+        mode: global
+        placement:
+          constraints: [node.platform.os == linux]
+
+  networks:
+    portainer_agent:
+      driver: overlay
+      attachable: true
+
+
+
+
+Available options
+-----------------
 
 You can change the configuration of the agent by using environment variables.
 
@@ -138,3 +259,15 @@ The following environment variables can be tuned:
 
 * AGENT_PORT: Agent port (default: ``9001``)
 * LOG_LEVEL: Agent log level (default: ``INFO``)
+* AGENT_CLUSTER_ADDR: Address used by each agent to form a cluster. It is recommended to set this value to ``tasks.<AGENT_SERVICE_NAME>`` when deploying the agent inside a Swarm cluster.
+* AGENT_SECRET: Shared secret used to authorize Portainer instances to connect to the agent
+* CAP_HOST_MANAGEMENT: Enable host management features by setting the value to ``1``
+
+Usage
+=====
+
+API
+---
+
+If you want to use the Portainer API to query containers running on a specific node inside a Swarm cluster and when using the Portainer agent setup, you can specify the ``X-PortainerAgent-Target`` header in the HTTP request to target a specific node in the cluster.
+The value must be set to the name of a specific node that can be retrieved via the ``NodeName`` property when querying cluster resources (containers, volumes...).
