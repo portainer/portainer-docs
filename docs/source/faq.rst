@@ -220,4 +220,11 @@ How can I enable LDAP authentication ?
 
 Have a look at `this post <https://www.linkedin.com/pulse/how-enable-ldapad-authentication-portainerio-neil-cresswell/>`_ for detailed instructions.
 
-More details about automatic user creation and team assignment in `this post <https://www.linkedin.com/pulse/ldap-usersgroups-portainer-neil-cresswell/>`_.
+More details about automatic user creation and team assignment in `this article <https://www.linkedin.com/pulse/ldap-usersgroups-portainer-neil-cresswell/>`_.
+
+Where can I find the source code of the Portainer agent ?
+=========================================================
+
+The Portainer agent is a closed source software.
+
+Release notes for the Portainer agent are available via `this repository <https://github.com/portainer/agent-public/releases>`_.
