@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Portainer'
-copyright = u'2016, Portainer.io'
+copyright = u'2019, Portainer.io'
 author = u'Portainer.io'
 
 # The version info for the project you're documenting, acts as replacement for
