@@ -10,16 +10,17 @@ Build Portainer locally
 Requirements
 ------------
 
-Ensure you have `Docker <https://docs.docker.com/engine/installation/>`_, `Node.js <https://nodejs.org/en/>`_ >= 6, and `yarn <https://yarnpkg.com>`_.
+Ensure you have `Docker <https://docs.docker.com/engine/installation/>`_, `Node.js <https://nodejs.org/en/>`_ >= 6, `yarn <https://yarnpkg.com>`_ and `Golang (>= 1.11) <https://golang.org/>`_ installed on your system.
 
 Build
 -----
 
-Checkout the project and go inside the root directory:
+Checkout the project, set up the project inside your ``$GOPATH`` and go inside the root directory:
 
 .. code-block:: bash
 
   $ git clone https://github.com/portainer/portainer.git
+  $ ln -s ${GOPATH}/src/github.com/portainer/portainer ${PWD}/portainer/api
   $ cd portainer
 
 Install dependencies with yarn:
@@ -28,13 +29,7 @@ Install dependencies with yarn:
 
   $ yarn
 
-Build the app locally:
-
-.. code-block:: bash
-
-  $ yarn build
-
-Start a watched build process:
+Build and run the project:
 
 .. code-block:: bash
 
