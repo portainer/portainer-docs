@@ -20,7 +20,8 @@ Checkout the project, set up the project inside your ``$GOPATH`` and go inside t
 .. code-block:: bash
 
   $ git clone https://github.com/portainer/portainer.git
-  $ ln -s ${GOPATH}/src/github.com/portainer/portainer ${PWD}/portainer/api
+  $ mkdir -p ${GOPATH}/src/github.com/portainer
+  $ ln -s ${PWD}/portainer/api ${GOPATH}/src/github.com/portainer/portainer
   $ cd portainer
 
 Install dependencies with yarn:
