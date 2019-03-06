@@ -149,18 +149,6 @@ Note: when using the external endpoint management, endpoint management will be d
 
 For more information about the endpoint definition format see :doc:`External endpoints <external_endpoints>`
 
-Disable authentication
-======================
-
-**WARNING**: The Portainer.io team strongly disadvises to disable authentication for security reasons.
-
-To disable Portainer internal authentication mechanism, start Portainer with the ``--no-auth`` flag:
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --no-auth
-
-
 Available flags
 ===============
 
@@ -175,7 +163,6 @@ The following CLI flags are available:
 * ``--host``, ``-H``: Docker daemon endpoint
 * ``--logo``: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
 * ``--no-analytics``: Disable analytics (default: ``false``)
-* ``--no-auth``: Disable internal authentication mechanism (default: ``false``)
 * ``--no-snapshot``: Disable periodic endpoint snapshot (default: ``false``)
 * ``--snapshot-interval``: Time interval between two endpoint snapshot jobs expressed as a string, e.g. ``30s``, ``5m``, ``1h``... as supported by the `time.ParseDuration method <https://golang.org/pkg/time/#ParseDuration>`_ (default: ``5m``)
 * ``--ssl``: Secure Portainer instance using SSL (default: ``false``)
