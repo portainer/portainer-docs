@@ -68,7 +68,7 @@ Overall, the setup consists of the following steps:
 
 *Step 4*, deploying the Agent for all Windows Server nodes
 
-Because of Docker limitation you need deploy Agent to all Windows Server nodes by running following command on each of them.
+Because of Docker limitation you need to deploy the Agent to all Windows Server nodes by running following command on each of them.
 
 ::
 
