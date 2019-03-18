@@ -147,10 +147,20 @@ You can use the following commands to generate the required files:
   $ openssl ecparam -genkey -name secp384r1 -out portainer.key
   $ openssl req -new -x509 -sha256 -key portainer.key -out portainer.crt -days 3650
 
-Note that `Certbot`_ could be used as well to generate a certificate and a key.
+Note that `Certbot`_ could be used as well to generate a certificate and a key. However, because Docker has issues with `symlinks`_, if you use Certbot, you will need to pass both the "live" and "archive" directories as volumes (shown below).
 
 .. _Certbot: https://certbot.eff.org/
+.. _symlinks: https://github.com/portainer/portainer/issues/2302
 
+::
+
+  docker run -d -p 9000:9000 \
+	  -v /var/run/docker.sock:/var/run/docker.sock \
+	  -v /root/portainer/data:/data \
+	  -v /etc/letsencrypt/live/<redacted>:/certs/live/<redacted>:ro \
+	  -v /etc/letsencrypt/archive/<redacted>:/certs/archive/<redacted>:ro \
+	  --name portainer \
+	  portainer/portainer:1.13.4 --ssl --sslcert /certs/live/<redacted>/cert.pem --sslkey /certs/live/<redacted>/privkey.pem
 
 Deploy Portainer via docker-compose
 -----------------------------------
