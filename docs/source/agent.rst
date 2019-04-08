@@ -139,7 +139,7 @@ Shared secret
 
 By default, the agent will register the first Portainer instance that connects to it and prevent connections from any other instance after that.
 
-To bypass this security mecanism, Portainer and the agent can be configured at deployment time to use a shared secret. This configuration allows multiple
+To bypass this security mechanism, Portainer and the agent can be configured at deployment time to use a shared secret. This configuration allows multiple
 Portainer instances to connect to the same agent endpoint.
 
 The ``AGENT_SECRET`` environment variable can be used to define the shared secret.
