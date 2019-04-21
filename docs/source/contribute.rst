@@ -21,7 +21,7 @@ Checkout the project, set up the project inside your ``$GOPATH`` and go inside t
 
   $ git clone https://github.com/portainer/portainer.git
   $ mkdir -p ${GOPATH}/src/github.com/portainer
-  $ ln -s ${PWD}/portainer/api ${GOPATH}/src/github.com/portainer/portainer
+  $ ln -s ${PWD}/portainer ${GOPATH}/src/github.com/portainer/portainer
   $ cd portainer
 
 Install dependencies with yarn:
