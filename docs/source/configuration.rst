@@ -10,9 +10,9 @@ Admin password
 ``From the command line``
 -------------------------
 
-Portainer allows you to specify an encrypted password from the command line for the admin account. You need to generate the encrypted password first.
+Portainer allows you to specify a bcrypt encrypted password from the command line for the admin account. You need to generate the bcrypt encrypted password first.
 
-You can generate an encrypted password with the following command:
+You can generate the encrypted password with the following command:
 
 .. code-block:: bash
 
@@ -154,7 +154,7 @@ Available flags
 
 The following CLI flags are available:
 
-* ``--admin-password``: Admin password in the form ``admin:<hashed_password>``
+* ``--admin-password``: Specify a bcrypt hashed password for the admin user
 * ``--admin-password-file``: Path to the file containing the password for the admin user
 * ``--bind``, ``-p``: Address and port to serve Portainer (default: ``:9000``)
 * ``--data``, ``-d``: Directory where Portainer data will be stored (default: ``/data`` on Linux, ``C:\data`` on Windows)
