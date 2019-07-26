@@ -28,7 +28,7 @@ To specify the admin password from the command line, start Portainer with the ``
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --admin-password='$2y$05$qFHAlNAH0A.6oCDe1/4W.ueCWC/iTfBMXIHBI97QYfMWlMCJ7N.a6'
+  $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --admin-password='$2y$05$qFHAlNAH0A.6oCDe1/4W.ueCWC/iTfBMXIHBI97QYfMWlMCJ7N.a6'
 
 ``Inside a file``
 -----------------
@@ -39,7 +39,7 @@ You can also store the plaintext password inside a file and use the ``--admin-pa
 
   # mypassword is plaintext here
   $ echo -n mypassword > /tmp/portainer_password
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer --admin-password-file /tmp/portainer_password
+  $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer --admin-password-file /tmp/portainer_password
 
 This works well with Swarm & Docker secrets too:
 
@@ -51,6 +51,7 @@ This works well with Swarm & Docker secrets too:
     --name portainer \
     --secret portainer-pass \
     --publish 9000:9000 \
+    --publish 8000:8000 \
     --replicas=1 \
     --constraint 'node.role == manager' \
     --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
@@ -75,13 +76,13 @@ To hide this container, simply add the ``-l owner=acme`` option on the CLI when 
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -l owner=acme
+  $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -l owner=acme
 
 Note that the ``-l`` flag can be repeated multiple times to specify multiple labels:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -l owner=acme -l service=secret
+  $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -l owner=acme -l service=secret
 
 Use your own logo
 =================
@@ -90,7 +91,7 @@ You do not like our logo? Want to make Portainer more corporate? Don't worry, yo
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
+  $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
 
 Use your own templates
 ======================
@@ -113,14 +114,14 @@ For example, you can mount your own template file inside the container:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/my/templates.json:/templates.json portainer/portainer
+  $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/my/templates.json:/templates.json portainer/portainer
 
 
 Or using the `--template-file` to specify a specific path to the templates file:
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/template/folder:/templates portainer/portainer --template-file /templates/templates.json
+  $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/template/folder:/templates portainer/portainer --template-file /templates/templates.json
 
 
 Host your template file
@@ -130,7 +131,7 @@ Using the `--templates` flag you can specify an URL where the template file can 
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --templates http://my-host.my-domain/templates.json
+  $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --templates http://my-host.my-domain/templates.json
 
 For more information about hosting your own template definitions see :doc:`Templates <templates>`
 
@@ -145,7 +146,7 @@ Note: when using the external endpoint management, endpoint management will be d
 
 .. code-block:: bash
 
-  $ docker run -d -p 9000:9000 -v /tmp/endpoints:/endpoints portainer/portainer --external-endpoints /endpoints/endpoints.json
+  $ docker run -d -p 9000:9000 -p 8000:8000 -v /tmp/endpoints:/endpoints portainer/portainer --external-endpoints /endpoints/endpoints.json
 
 For more information about the endpoint definition format see :doc:`External endpoints <external_endpoints>`
 

@@ -62,6 +62,7 @@ Overall, the setup consists of the following steps:
       --name portainer \
       --network portainer_agent_network \
       --publish 9000:9000 \
+      --publish 8000:8000 \
       --replicas=1 \
       --constraint 'node.role == manager' \
       portainer/portainer -H "tcp://tasks.portainer_agent:9001" --tlsskipverify
@@ -197,7 +198,7 @@ The ``AGENT_SECRET`` must be specified when deploying Portainer as well:
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always -e AGENT_SECRET=mysecrettoken -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -e AGENT_SECRET=mysecrettoken -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 
 
 

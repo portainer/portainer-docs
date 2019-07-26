@@ -14,7 +14,7 @@ Deploying Portainer is as simple as:
 ::
 
   $ docker volume create portainer_data
-  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 
 Voilà, you can now use Portainer by accessing the port 9000 on the server where Portainer is running.
 
@@ -43,7 +43,7 @@ to persist the data on the Docker host folder:
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /path/on/host/data:/data portainer/portainer
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /path/on/host/data:/data portainer/portainer
 
 Windows
 ----------------------------------------------------------
@@ -54,14 +54,14 @@ Example for Linux containers:
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v C:\ProgramData\Portainer:/data portainer/portainer
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v C:\ProgramData\Portainer:/data portainer/portainer
 
 
 Example for native Windows containers:
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v C:\ProgramData\Portainer:C:\data portainer/portainer
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v C:\ProgramData\Portainer:C:\data portainer/portainer
 
 
 Docker Swarm service
@@ -73,6 +73,7 @@ If you deployed Portainer as a Docker Swarm service:
   $ docker service create \
       --name portainer \
       --publish 9000:9000 \
+      --publish 8000:8000 \
       --replicas=1 \
       --constraint 'node.role == manager' \
       --mount type=bind,src=//path/on/host/data,dst=/data \
@@ -94,7 +95,7 @@ You can specify the initial environment you want Portainer to manage via the CLI
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always -v portainer_data:/data portainer/portainer -H tcp://<REMOTE_HOST>:<REMOTE_PORT>
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v portainer_data:/data portainer/portainer -H tcp://<REMOTE_HOST>:<REMOTE_PORT>
 
 Ensure you replace ``REMOTE_HOST`` and ``REMOTE_PORT`` with the address/port of the Docker server you want to manage.
 
@@ -102,7 +103,7 @@ You can also bind mount the Docker socket to manage a local Docker environment (
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer -H unix:///var/run/docker.sock
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer -H unix:///var/run/docker.sock
 
 If your Docker environment is protected using TLS, you'll need to ensure that you have access to CA, the certificate and the public key used to access your Docker engine.
 
@@ -118,14 +119,14 @@ You must ensure these files are present in the container using a bind mount:
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer --restart always  -v /path/to/certs:/certs -v portainer_data:/data portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always  -v /path/to/certs:/certs -v portainer_data:/data portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify
 
 You can also use the ``--tlscacert``, ``--tlscert`` and ``--tlskey`` flags if you want to change the default path to the CA, certificate and key file respectively:
 
 ::
 
-  $ docker run -d -p 9000:9000 --name portainer -v /path/to/certs:/certs portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
-  $ docker run -d -p 9000:9000 --name portainer --restart always  -v /path/to/certs:/certs -v portainer_data:/data portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer -v /path/to/certs:/certs portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
+  $ docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always  -v /path/to/certs:/certs -v portainer_data:/data portainer/portainer -H tcp://<DOCKER_HOST>:<DOCKER_PORT> --tlsverify --tlscacert /certs/myCa.pem --tlscert /certs/myCert.pem --tlskey /certs/myKey.pem
 
 
 Secure Portainer using SSL
@@ -137,7 +138,7 @@ To do so, you can use the following flags ``--ssl``, ``--sslcert`` and ``--sslke
 
 ::
 
-  $ docker run -d -p 443:9000 --name portainer --restart always -v ~/local-certs:/certs -v portainer_data:/data portainer/portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+  $ docker run -d -p 443:9000 -p 8000:8000 --name portainer --restart always -v ~/local-certs:/certs -v portainer_data:/data portainer/portainer --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
 
 You can use the following commands to generate the required files:
 
@@ -154,7 +155,7 @@ Note that `Certbot`_ could be used as well to generate a certificate and a key. 
 
 ::
 
-  docker run -d -p 9000:9000 \
+  docker run -d -p 9000:9000 -p 8000:8000 \
 	  -v /var/run/docker.sock:/var/run/docker.sock \
 	  -v /root/portainer/data:/data \
 	  -v /etc/letsencrypt/live/<redacted>:/certs/live/<redacted>:ro \
@@ -180,6 +181,7 @@ Here is an example compose file:
       restart: always
       ports:
         - 9000:9000
+        - 8000:8000
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
         - portainer_data:/data
