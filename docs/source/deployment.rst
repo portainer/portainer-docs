@@ -9,7 +9,7 @@ Portainer deployment scenarios can be executed on any platform unless specified.
 Quick start
 ===========
 
-Deploying Portainer is as simple as:
+If you are running Linux, deploying Portainer is as simple as:
 
 ::
 
@@ -38,8 +38,7 @@ Persist Portainer data
 
 By default, Portainer store its data inside the container in the ``/data`` folder on Linux (``C:\\data`` on Windows).
 
-You'll need to persist Portainer data to keep your changes after restart/upgrade of the Portainer container. You can use a bind mount
-to persist the data on the Docker host folder:
+You'll need to persist Portainer data to keep your changes after restart/upgrade of the Portainer container. You can use a bind mount on Linux to persist the data on the Docker host folder:
 
 ::
 
@@ -47,8 +46,10 @@ to persist the data on the Docker host folder:
 
 Windows
 ----------------------------------------------------------
-Docker for Windows 10 supports running both Linux and Windows containers and you need use different start command depending which one you are using.
+Docker for Windows 10 supports running both Linux and Windows containers and you need to use a different start command depending which container type you are using.
 Windows Server supports only native Windows containers.
+
+**Note:** You must create the folder in which you want the data to be persisted before running the following command. For example, if you want the data to persist in C:\ProgramData\Portainer you need to create the Portainer directory within C:\ProgramData as it does not exist by default.
 
 Example for Linux containers:
 
