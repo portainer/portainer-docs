@@ -225,6 +225,5 @@ More details about automatic user creation and team assignment in `this article 
 Where can I find the source code of the Portainer agent ?
 =========================================================
 
-The Portainer agent is a closed source software.
+The source can be found in the `portainer agent repository <https://github.com/portainer/agent/>`_.
 
-Release notes for the Portainer agent are available via `this repository <https://github.com/portainer/agent-public/releases>`_.
