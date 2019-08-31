@@ -28,6 +28,11 @@ Portainer is compatible with the following versions of Docker Swarm standalone:
 
 **Note:** this is not related to Docker Swarm mode, see https://docs.docker.com/swarm/swarm_at_scale/deploy-app/
 
+Docker Compose
+==============
+
+Compose (`type: 3`) Application Template definitions are limited to using the `version: "2"` form. This is a docker/libcompose limitation.
+
 Supported platforms
 ===================
 
