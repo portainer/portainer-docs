@@ -176,3 +176,4 @@ The following CLI flags are available:
 * ``--tlscert``: Path to the TLS certificate file (default: ``/certs/cert.pem``, ``C:\certs\cert.pem`` on Windows)
 * ``--tlskey``: Path to the TLS key (default: ``/certs/key.pem``, ``C:\certs\key.pem`` on Windows)
 * ``--tlsverify``: TLS support (default: ``false``)
+* ``--tunnel-port``: Specify an alternate tunnel port for the edge agent when 8000 is taken. Use ``--tunnel-port 8001`` with ``-p 8001:8001`` to make the edge agent communicate on port 8001
