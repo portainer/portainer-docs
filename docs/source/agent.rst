@@ -47,7 +47,6 @@ Overall, the setup consists of the following steps:
   $ docker service create \
       --name portainer_agent \
       --network portainer_agent_network \
-      -e AGENT_CLUSTER_ADDR=tasks.portainer_agent \
       --mode global \
       --constraint 'node.platform.os == linux' \
       --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
@@ -91,7 +90,6 @@ Ensure when deploying the agent, that you expose the Agent's port inside your Sw
       --name portainer_agent \
       --network portainer_agent_network \
       --publish mode=host,target=9001,published=9001 \
-      -e AGENT_CLUSTER_ADDR=tasks.portainer_agent \
       --mode global \
       --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
       --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes \
@@ -108,8 +106,6 @@ Alternatively, you can deploy the agent using the following stack:
   services:
     agent:
       image: portainer/agent
-      environment:
-        AGENT_CLUSTER_ADDR: tasks.agent
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
         - /var/lib/docker/volumes:/var/lib/docker/volumes
@@ -153,7 +149,6 @@ When deploying the agent as a service:
       --name portainer_agent \
       --network portainer_agent_network \
       --publish mode=host,target=9001,published=9001 \
-      -e AGENT_CLUSTER_ADDR=tasks.portainer_agent \
       -e AGENT_SECRET=mysecrettoken \
       --mode global \
       --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock \
@@ -171,7 +166,6 @@ Via a stack file:
     agent:
       image: portainer/agent
       environment:
-        AGENT_CLUSTER_ADDR: tasks.agent
         AGENT_SECRET: mysecrettoken
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
@@ -225,7 +219,6 @@ Example when deploying the agent via a stack file:
     agent:
       image: portainer/agent
       environment:
-        AGENT_CLUSTER_ADDR: tasks.agent
         CAP_HOST_MANAGEMENT: 1
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
@@ -260,7 +253,7 @@ The following environment variables can be tuned:
 
 * AGENT_PORT: Agent port (default: ``9001``)
 * LOG_LEVEL: Agent log level (default: ``INFO``)
-* AGENT_CLUSTER_ADDR: Address used by each agent to form a cluster. It is recommended to set this value to ``tasks.<AGENT_SERVICE_NAME>`` when deploying the agent inside a Swarm cluster.
+* AGENT_CLUSTER_ADDR: Address used by each agent to form a cluster.
 * AGENT_SECRET: Shared secret used to authorize Portainer instances to connect to the agent
 * CAP_HOST_MANAGEMENT: Enable host management features by setting the value to ``1``
 
