@@ -2,9 +2,7 @@
 Deployment
 ==========
 
-Portainer is built to run on Docker and is really simple to deploy.
-
-Portainer deployment scenarios can be executed on any platform unless specified.
+Portainer is built to run on Docker and is really simple to deploy. Portainer deployment scenarios can be executed on any platform unless specified.
 
 Quick start
 ===========
@@ -20,9 +18,10 @@ Voilà, you can now use Portainer by accessing the port 9000 on the server where
 
 Inside a Swarm cluster
 ======================
+Before deploying Portainer inside your Swarm cluster, you should ensure that Docker and your Swarm are configured correctly.
+You can refer to the :ref:`Troubleshooting` section to ensure you have correctly configured your environment.
 
-Use our agent setup to deploy Portainer inside a Swarm cluster.
-
+Following the above, you are ready to deploy Portainer inside a Swarm cluster using using our recommended agent enabled deployment.
 **Note**: This setup will assume that you're executing the following instructions on a Swarm manager node.
 
 ::

@@ -16,6 +16,7 @@ Contents:
    agent
    external_endpoints
    templates
+   troubleshooting
    contribute
    limitations
    faq
