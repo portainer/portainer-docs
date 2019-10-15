@@ -95,6 +95,8 @@ Ensure when deploying the agent, that you expose the Agent's port inside your Sw
       --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes \
       portainer/agent
 
+**Note**: Please be aware that this could potentially open up the Agent for use by anybody in case the Docker host is reachable from the internet. Publishing the Agent port 9001 in host mode basically means opening up this port in the Docker hosts firewall for all interfaces. Therefore it is highly recommended to use the ``AGENT_SECRET`` environment variable to define a shared secret, see :ref:`Shared secret`. The Agent implements the `Trust On First Use (TOFU) <https://en.wikipedia.org/wiki/Trust_on_first_use>`_ principle, so only the first Portainer to connect will be able to use it, but you want to avoid an attacker beating you to it.
+
 You can then use the address of any node in your cluster (with the agent port) inside the Agent URL field.
 
 Alternatively, you can deploy the agent using the following stack:
@@ -125,6 +127,8 @@ Alternatively, you can deploy the agent using the following stack:
     portainer_agent:
       driver: overlay
       attachable: true
+
+**Note**: In case you are running only a single Agent cluster in the same Swarm overlay network as your Portainer instance, you can just omit publishing the Agent port 9001. Portainer and the Agents will be able to communicate with each other inside the same overlay network and there is no need for the Agents to be accessible from the outside.
 
 Configuration
 =============
