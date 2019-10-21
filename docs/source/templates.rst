@@ -34,6 +34,8 @@ It is composed of multiple fields, some mandatory and some optionals.
 
 Template type, valid values are: 1 (container), 2 (Swarm stack) or 3 (Compose stack).
 
+**NOTE:** Type 3 (Compose stack) is limited to using the version: "2" stack format, this is a limitation of docker/libcompose.
+
 This field is **mandatory**.
 
 ``title``
@@ -394,6 +396,8 @@ It is composed of multiple fields, some mandatory and some optionals.
 Template type, valid values are: 1 (container), 2 (Swarm stack) or 3 (Compose stack).
 
 A Swarm stack will be deployed using the equivalent of ``docker stack deploy`` whereas a Compose stack will be deployed using the equivalent of ``docker-compose``.
+
+**NOTE:** Type 3 (Compose stack) is limited to using the version: "2" stack format, this is a limitation of docker/libcompose.
 
 This field is **mandatory**.
 
