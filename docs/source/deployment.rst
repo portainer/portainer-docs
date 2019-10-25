@@ -21,7 +21,7 @@ Inside a Swarm cluster
 Before deploying Portainer inside your Swarm cluster, you should ensure that Docker and your Swarm are configured correctly.
 You can refer to the :ref:`Troubleshooting` section to ensure you have correctly configured your environment.
 
-Following the above, you are ready to deploy Portainer inside a Swarm cluster using using our recommended agent enabled deployment.
+Following the above, you are ready to deploy Portainer inside a Swarm cluster using our recommended agent-enabled deployment.
 **Note**: This setup will assume that you're executing the following instructions on a Swarm manager node.
 
 ::
@@ -45,7 +45,7 @@ You'll need to persist Portainer data to keep your changes after restart/upgrade
 
 Windows
 ----------------------------------------------------------
-Docker for Windows 10 supports running both Linux and Windows containers and you need to use a different start command depending which container type you are using.
+Docker for Windows 10 supports running both Linux and Windows containers and you need to use a different start command depending on which container type you are using.
 Windows Server supports only native Windows containers.
 
 **Note:** You must create the folder in which you want the data to be persisted before running the following command. For example, if you want the data to persist in C:\ProgramData\Portainer you need to create the Portainer directory within C:\ProgramData as it does not exist by default.
