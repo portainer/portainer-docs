@@ -2,6 +2,186 @@
 FAQ
 ===
 
+Contact us
+==========
+If you are still experiencing issues after reading this FAQ, feel free to contact us via any one of the following channels:
+
+
+- Email: info@portainer.io
+- `Slack <https://join.slack.com/t/portainer/shared_invite/enQtNDk3ODQ5MjI2MjI4LWM1OWMzNmUxMTkxZjc1MmU0ZGIwOTllMWI2YzMyNGI2MjY5NmMxMzhkNTRkNGZkYWU3OTQxODUxMWRmZTE5NTM>`__
+- `Twitter <https://twitter.com/portainerio>`__
+- `GitHub <https://github.com/portainer/portainer/issues/new?template=Custom.md>`__
+- `The Portainer Website <https://www.portainer.io/registration/>`__
+
+How do I reset my Portainer password?
+=====================================
+
+At this stage, you cannot resest your password using Portainer if you have forgotten it. You can however ask another Portainer admin to reset the password for you. 
+
+There is an open feature request for this functionality which can be tracked on our GitHub repository `here. <https://github.com/portainer/portainer/issues/512>`__
+
+Why are my stacks marked as Limited in Portainer?
+=================================================
+
+When you see a stack file shown as **limited** in the Portainer UI, it is because Portainer does not have the related stack file in it's database. 
+This is either because the stack was deployed outside of Portainer, or because Portainer has lost it's database. 
+
+If you wish to manage the stack file within Portainer, you will need to deploy it within Portainer so that the file is kept in the database & ensure that the database is persisted.
+
+Why is my version number not matching the latest version?
+=========================================================
+
+If you have recently updated your version of Portainer, this is an indication that your browser is holding onto the previous version number of Portainer in it's cache. 
+To properly clear your cache, you will need to go into the browser settings and empty the cache. 
+
+**Note:** You can use ``Ctrl + shift + R`` on most browsers to load the specific page without cache, however you will need to repeat this on each page of Portainer to load the changes.
+
+Can I activate my extension licenses without an internet connection?
+====================================================================
+
+Currently, it is not possible to activate extensions offline as Portainer runs a license check against our license verification server. There is a feature request open for this offline activation functionality which can be tracked on our GitHub repository `here. <https://github.com/portainer/portainer/issues/3080>`__
+
+
+My licenses/extensions don't activate, what do I do?
+====================================================
+
+* As stated above, Portainer needs internet access to activate extensions. One way to test is to run a busybox container and see if it can reach the internet via ping or curl.
+* If Portainer can reach the internet then this is not the problem. If you have access to the Portainer data filesystem you can check whether the extension binaries have been downloaded. Navigate to the filesystem in use by Portainer and check the bin directory to make sure the extension has been downloaded. If there is no extensions present, then there is an issue with Portainer downloading the extension. 
+* If the extensions are present, then you may have a permissions issue and they may not be able to run. Check to make sure that they are executeable.
+
+Users have access to an endpoint, but they cannot see anything. Why?
+====================================================================
+
+* By default all resources inside an endpoint are assigned to administrator only for security reasons. To give non-admin users access you can use the **access control** widget within each resource to assign users ownership, or you can make the resource public to give all users access.
+* Alternatively, when using the Role Based Access Control (RBAC) extension you can assign users and teams a role at the endpoint level. You can read more about the RBAC extension and it's features `here. <https://www.portainer.io/product/rbac/>`__
+
+**Note:** The RBAC extension requires Portainer version 1.21.0 or newer.
+
+Portainer lost it's configuration, why?
+=======================================
+
+**Portainer as a Container:** If you have not created a persistent volume for your Portainer container, then Portainer data will be stored inside the Docker container. If the container is then restarted, you will lose all of your data. 
+
+**Portainer as a Service:** If you have not created a persistent volume for your Portainer service, then Portainer data will be stored inside the Docker container created by the service. If the service is updated, you may lose your Portainer configuration. 
+
+`See Deployment <https://portainer.readthedocs.io/en/stable/deployment.html>`__ on how to create a persistent volume. If you have a persistent volume, then the issue may be that Portainer is not constrained to the node where the data is persisted. **See the below section for more info**.
+
+How do I make sure Portainer stays where my data is persisted?
+==============================================================
+
+Our recommended deployment stack file constrains Portainer to a manager node, when you have multiple managers this will potentially become a problem. Each stack or service **update** action could move the Portainer container between them, and you may see Portainer appear as a fresh install. 
+
+**The solution is to constrain your Portainer container to the node where your Portainer data is being persisted.**
+
+* Step 1: Following deployment of `our stack file <https://portainer.readthedocs.io/en/stable/deployment.html#inside-a-swarm-cluster>`__ you will need to find the hostname of the node where the Portainer volume is being persisted. Within Portainer, navigate to the volumes view and note down the hostname of your portainer volume. In this example the hostname is **owner**.
+
+Alternatively you can run ``docker node ls`` and note down the hostname of the node where your Portainer data is persisted. 
+
+.. figure:: ./images/Viewing-hostname-of-Portainer-volume.png
+    :align: center
+    :alt: Viewing hostname of Portainer volume
+    :figclass: align-center
+
+    Viewing hostname of Portainer volume
+
+* Step 2: Navigate to the Service details view for your Portainer service & navigate to placement constraints.
+
+.. figure:: ./images/Navigating-to-placement-constraints-for-your-Portainer-service.png
+    :align: center
+    :alt: Navigating to placement constraints for your Portainer service
+    :figclass: align-center
+
+    Navigating to placement constraints for your Portainer service
+
+* Step 3: Click the placement constraints button to add a new constraint and fill in **node.hostname** for the name and the hostname you gathered previously for the value.
+
+* Step 4. Click the Apply changes button to apply your constraint.
+
+.. figure:: ./images/Applying-the-addtional-constraint.png
+    :align: center
+    :alt: Applying the addtional constraint
+    :figclass: align-center
+
+    Applying the addtional constraint
+
+Why doesn't Portainer support compose version 3 on a standalone (non-swarm) host?
+=================================================================================
+
+Portainer uses the library Libcompose to deploy stacks on a standalone host, this library has been depreciated by Docker and the repository for it sits unmaintained. You can view this repository `here. <https://github.com/portainer/portainer/issues/2054>`__
+
+How do I get the logs from Portainer?
+=====================================
+
+You can either get the logs for Portainer from Portainer's own GUI or from the Docker CLI on the command line.
+
+**Getting Portainer's logs from within Portainer**
+
+* Step 1. Navigate to the Container view and click on the logs button for your Portainer container.
+
+.. figure:: ./images/Navigating-to-the-Container-logs-view-for-the-Portainer-container.png
+    :align: center
+    :alt: Navigating to the Container logs view for the Portainer container
+    :figclass: align-center
+
+    Navigating to the Container logs view for the Portainer container
+
+* Step 2. Click on the copy button to copy the logs of the Portainer container to your clipboard.
+
+.. figure:: ./images/Copying-the-logs-of-the-Portainer-container.png
+    :align: center
+    :alt: Copying the logs of the Portainer container
+    :figclass: align-center
+
+    Copying the logs of the Portainer container
+
+**Getting Portainer's logs from the Docker CLI**
+
+* Step 1. Navigate to the commandline of a docker manager node/ non-swarm docker host and enter ``docker ps -a`` to list all of the Docker containers.
+* Step 2. Note down the **CONTAINER_ID** attribute of your Portainer container.
+* Step 3. Enter the following command and the logs of the Portainer container will output to the commandline: docker container logs **CONTAINER_ID**
+
+Published ports in the services view redirect me to *about:blank#blocked*, what can I do?
+=========================================================================================
+
+If you deployed the recommended agent stack or manage the **local** endpoint, you will need to set a public IP on your endpoint for published ports to work on services in Portainer. 
+
+**How to set the public IP of an endpoint:**
+
+* Step 1: Go to endpoints view
+* Step 2: Click on your endpoint to see it's details
+* Fill in the Public IP field for your endpoint like below:
+
+*For an agent endpoint, add the IP of one of the nodes from your cluster*
+
+.. figure:: ./images/Setting-public-IP-of-Agent-endpoint.png
+    :align: center
+    :alt: Setting public IP of Agent endpoint
+    :figclass: align-center
+
+    Setting public IP of Agent endpoint
+
+*For the local endpoint add the IP of the host*
+
+.. figure:: ./images/Setting-public-IP-of-local-endpoint.png
+    :align: center
+    :alt: Setting public IP of local endpoint
+    :figclass: align-center
+
+    Setting public IP of local endpoint
+
+
+Clicking on the published port in the Services view should now correctly redirect you to the published port of your service in the browser.
+
+External endpoints are not working in the latest Portainer version, is this a bug?
+==================================================================================
+
+We are aware that the ``--external-endpoint`` feature is not working in some of the latest versions of Portainer. If you require use of external endpoints, we recommend rolling back to Portainer version 1.21.0 until a fix has been released. 
+
+Where can I find the source code of the Portainer agent?
+========================================================
+
+The Portainer agent is now open source! You can find it's source code `here. <https://github.com/portainer/agent>`__
+
 My host is using SELinux, can I use Portainer ?
 ===============================================
 
@@ -13,217 +193,46 @@ If you want to manage a local Docker environment with **SELinux** enabled, you'l
 
 You can also have a look at this helper: https://github.com/dpw/selinux-dockersock.
 
+How can I use Portainer behind a proxy?
+=======================================
+With Portainer behind a proxy, some features requiring access to the Internet (such as Apps Templates) might be unavailable. When running Portainer as a container, you can set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` env vars to specify which proxy should be used:
+::
+
+  $ docker run -d -p 9000:9000 -p 8000:8000 -e HTTP_PROXY=my.proxy.domain:7777 portainer/portainer
+
+For examples on how to configure a reverse proxy to work with Portainer, you can refer to our example repo `here. <https://github.com/portainer/portainer-compose>`__ 
+
+**Note:** these are in no way production ready, and are intended solely for demonstration purposes.
+
 How can I expose the Docker API over TCP so that Portainer can communicate with my environment?
 ===============================================================================================
 
-To manage a remote Docker environment, Portainer must be able to communicate with the Docker API over the network (usually on TCP 2375, 2376 with TLS).
+Portainer strongly recommend to deploy Portainer using our agent enabled deployment due to the risk involved with exposing the Dokcer API. If for whatever reason it is not possible to configure Portainer with the Agent, you can configure Portainer to communicate with the Docker API over the network (usually on TCP 2375, 2376 with TLS). Refer to `Daemon socket option <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option>`_ in the Docker Reference and to Docker Engine on Windows.
 
-You have to take into account the **security issues depending on your network environment**.
-
-Please refer to `Daemon socket option`_ in the Docker Reference and to `Docker Engine on Windows`_.
-
-.. _Docker Engine on Windows: https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-docker/configure-docker-daemon
-.. _Daemon socket option: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
-
-How can I setup Portainer on Windows Server 2016 ?
+How can I set up Portainer on Windows Server 2016?
 ==================================================
 
-Have a look at the `Airdesk blog post <http://blog.airdesk.com/2017/10/windows-containers-portainer-gui.html>`_ for instructions.
+`This is a great blog post <https://blog.airdesk.com/2017/10/windows-containers-portainer-gui.html>`__ which gives instructions on how to set up Portainer on Windows Server 2016.
+
+**Note:** this is applicable to Windows Server 2016 only.
 
 How can I play with Portainer outside of the public demo?
 =========================================================
 
-You can deploy Portainer as a stack in `Play-with-Docker <http://play-with-docker.com/?stack=https://raw.githubusercontent.com/portainer/portainer-compose/master/docker-stack.yml&stack_name=portainer>`_.
-
-How can I configure my reverse proxy to serve Portainer?
-========================================================
-
-Here is a working configuration for Nginx (tested on 1.11) to serve Portainer at `myhost.mydomain/portainer`:
-
-.. code-block:: nginx
-
-  upstream portainer {
-      server ADDRESS:PORT;
-  }
-
-  server {
-    listen 80;
-
-    location /portainer/ {
-        proxy_http_version 1.1;
-        proxy_set_header Connection "";
-        proxy_pass http://portainer/;
-    }
-    location /portainer/api/websocket/ {
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-        proxy_http_version 1.1;
-        proxy_pass http://portainer/api/websocket/;
-    }
-  }
-
-Replace ``ADDRESS:PORT`` with the Portainer server/container details.
-
-How can I configure my reverse proxy to serve Portainer using HAProxy?
-======================================================================
-
-Here is a working configuration for HAProxy to serve Portainer at `portainer.127.0.0.1.xip.io`:
-
-.. code-block:: haproxy
-
-  global
-      maxconn                     10000
-      daemon
-      ssl-server-verify           none
-      tune.ssl.default-dh-param   2048
-
-  defaults
-      mode    http
-      log     global
-      option  httplog
-      option  dontlognull
-      option  http-server-close
-      option  forwardfor          except 127.0.0.0/8
-      option  redispatch
-      retries 30
-      timeout http-request        300s
-      timeout queue               1m
-      timeout connect             10s
-      timeout client              1d
-      timeout server              1d
-      timeout http-keep-alive     10s
-      timeout check               10s
-      maxconn 10000
-
-  userlist users
-      group all
-      group demo
-      group haproxy
-
-  listen stats
-      bind            *:2100
-      mode            http
-      stats           enable
-      maxconn         10
-      timeout client  10s
-      timeout server  10s
-      timeout connect 10s
-      timeout         queue   10s
-      stats           hide-version
-      stats           refresh 30s
-      stats           show-node
-      stats           realm Haproxy\ Statistics
-      stats           uri  /
-      stats           admin if TRUE
-
-  frontend www-http
-      bind    *:80
-      stats   enable
-      mode    http
-      option  http-keep-alive
-
-      acl portainer   hdr_end(host)   -i portainer.127.0.0.1.xip.io
-
-      use_backend     portainer       if portainer
-
-  backend portainer
-      stats   enable
-      option  forwardfor
-      option  http-keep-alive
-      server  portainer    127.0.0.1:9000 check
-
-
-**Note**: http-keep-alive must be set for both frontend and backend
+You can deploy Portainer as a stack in `Play-with-Docker. <http://play-with-docker.com/?stack=https://raw.githubusercontent.com/portainer/portainer-compose/master/docker-stack.yml&stack_name=portainer>`__
 
 Exposed ports in the container view redirects me to 0.0.0.0, what can I do?
 ===========================================================================
 
-In order for Portainer to be able to redirect you to your Docker host IP address and not the 0.0.0.0 address, you will have
-to change the configuration of your Docker daemon and add the ``--ip`` option.
+In order for Portainer to be able to redirect you to your Docker host IP address and not the **0.0.0.0** address, you will have to change the configuration of your Docker daemon and add the ``--ip`` option. **Note:** that you will have to restart your Docker daemon for the changes to be taken in effect.
 
 Have a look at the `Docker documentation <https://docs.docker.com/engine/reference/commandline/dockerd/>`_ for more details.
 
-Note that you will have to restart your Docker daemon for the changes to be taken in effect.
+How do I troubleshoot Portainer?
+================================
 
-I restarted Portainer and lost all my data, why?
-================================================
+* Depending on your issue, make sure you first check the Portainer documentation and our user guides to ensure everything is configured correctly.
+* The next thing is to check the logs of Portainer & the Portainer Agent. For instructions on how to do this, refer to the Portainer logs section above.
+* If you cannot see anything wrong with your configuration or anything in the container logs, then the next step is to `troubleshoot your environment. <https://portainer.readthedocs.io/en/stable/troubleshooting.html>`__
 
-Portainer data is stored inside the Docker container. If you want to keep the data of your Portainer instance
-after reboot/upgrade, you'll need to persist the data. See :doc:`Deployment <deployment>`
-
-I am getting the error "Your session has expired" on login and cannot login. What's wrong?
-==========================================================================================
-
-When running Portainer inside a container, it will use your Docker engine system time to calculate the authentication
-token expiry time. A timedrift in your Docker system time might occur when using computer/VM hibernation. You need to ensure
-that your Docker engine system time is the same as your machine system time and if not, restart your Docker engine.
-
-As simple way to check your Docker system time is to use ``docker info`` or if the information is not available ``docker run busybox date``.
-
-Users of Docker for Windows can also fix this by navigating to hyper-v-management -> virtual machines -> right-click on MobyLinuxVM -> settings -> integration services
-and enabling the time sync checkbox in the services list.
-
-How can I access the Docker API on port 2375 on Windows?
-========================================================
-
-On some Windows setup, Docker is listening on the local loopback address and cannot be accessed from within the
-Portainer container. You can use ``netsh`` to create a port redirection, and then use the newly created IP address
-to connect from Portainer.
-
-Create a redirection from the loopback address on port 2375 to a newly created address **10.0.75.1** on port 2375 (DOS/Powershell command):
-
-.. code-block:: bash
-
-  > netsh interface portproxy add v4tov4 listenaddress=10.0.75.1 listenport=2375 connectaddress=127.0.0.1 connectport=2375
-
-You'll then be able to use **10.0.75.1:2375** as the URL of your endpoint.
-
-How can I use Portainer behind a proxy?
-=======================================
-
-When using Portainer behind a proxy, some features requiring access to the Internet (such as Apps Templates) might be
-unavailable.
-
-When running Portainer as a container, you can specify the ``HTTP_PROXY`` and ``HTTPS_PROXY`` env var to specify
-which proxy should be used.
-
-Example:
-
-.. code-block:: bash
-
-  $ docker run -d -p 9000:9000 -p 8000:8000 -e HTTP_PROXY=my.proxy.domain:7777 portainer/portainer
-
-How can I upgrade my version of Portainer?
-==========================================
-
-If you're running Portainer as a container, it's simply a matter of Docker image version. Just stop your existing Portainer
-container, pull the latest *portainer/portainer* image and create a new Portainer container (using the same options you used to
-create the previous one).
-
-If you're running Portainer as a service in a Swarm cluster, you can issue the following command to update the image (assuming your Docker service
-is called *portainer*):
-
-.. code-block:: bash
-
-  $ docker service update --image portainer/portainer:latest portainer
-
-If you're running Portainer outside of Docker, download and extract the new binaries and restart the Portainer binary using the same
-options you used before.
-
-How can I manage a remote Dokku host with Portainer?
-====================================================
-
-Have a look at `this gist <https://gist.github.com/woudsma/03c69260715327ee8453f73b121f416c>`_ for instructions.
-
-How can I enable LDAP authentication ?
-======================================
-
-Have a look at `this post <https://www.linkedin.com/pulse/how-enable-ldapad-authentication-portainerio-neil-cresswell/>`_ for detailed instructions.
-
-More details about automatic user creation and team assignment in `this article <https://www.linkedin.com/pulse/ldap-usersgroups-portainer-neil-cresswell/>`_.
-
-Where can I find the source code of the Portainer agent ?
-=========================================================
-
-The source can be found in the `portainer agent repository <https://github.com/portainer/agent/>`_.
-
+Make sure that Docker is running with the command ``docker version``.
