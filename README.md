@@ -29,3 +29,4 @@ into the running container and finally open a terminal for you inside it.
 
 Inside the devcontainer based project workspace you can then run the
 pre-defined VS Code Task "Make HTML" to build the documentation.
+Refer to [this link](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_run-tasks-from-the-terminal-menu) on how to run tasks in VS Code.
