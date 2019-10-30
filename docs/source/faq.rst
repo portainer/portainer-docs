@@ -16,7 +16,7 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 How do I reset my Portainer password?
 =====================================
 
-At this stage, you cannot resest your password using Portainer if you have forgotten it. You can however ask another Portainer admin to reset the password for you. 
+At this stage, you cannot reset your password using Portainer if you have forgotten it. You can however ask another Portainer admin to reset the password for you. 
 
 There is an open feature request for this functionality which can be tracked on our GitHub repository `here. <https://github.com/portainer/portainer/issues/512>`__
 
@@ -47,7 +47,7 @@ My licenses/extensions don't activate, what do I do?
 
 * As stated above, Portainer needs internet access to activate extensions. One way to test is to run a busybox container and see if it can reach the internet via ping or curl.
 * If Portainer can reach the internet then this is not the problem. If you have access to the Portainer data filesystem you can check whether the extension binaries have been downloaded. Navigate to the filesystem in use by Portainer and check the bin directory to make sure the extension has been downloaded. If there is no extensions present, then there is an issue with Portainer downloading the extension. 
-* If the extensions are present, then you may have a permissions issue and they may not be able to run. Check to make sure that they are executeable.
+* If the extensions are present, then you may have a permissions issue and they may not be able to run. Check to make sure that they are executable.
 
 Users have access to an endpoint, but they cannot see anything. Why?
 ====================================================================
@@ -73,7 +73,7 @@ Our recommended deployment stack file constrains Portainer to a manager node, wh
 
 **The solution is to constrain your Portainer container to the node where your Portainer data is being persisted.**
 
-* Step 1: Following deployment of `our stack file <https://portainer.readthedocs.io/en/stable/deployment.html#inside-a-swarm-cluster>`__ you will need to find the hostname of the node where the Portainer volume is being persisted. Within Portainer, navigate to the volumes view and note down the hostname of your portainer volume. In this example the hostname is **owner**.
+* Step 1: Following deployment of `our stack file <https://portainer.readthedocs.io/en/stable/deployment.html#inside-a-swarm-cluster>`__ you will need to find the hostname of the node where the Portainer volume is being persisted. Within Portainer, navigate to the volumes view and note down the hostname of your Portainer volume. In this example the hostname is **owner**.
 
 Alternatively you can run ``docker node ls`` and note down the hostname of the node where your Portainer data is persisted. 
 
@@ -97,12 +97,12 @@ Alternatively you can run ``docker node ls`` and note down the hostname of the n
 
 * Step 4. Click the Apply changes button to apply your constraint.
 
-.. figure:: ./images/Applying-the-addtional-constraint.png
+.. figure:: ./images/Applying-the-additional-constraint.png
     :align: center
-    :alt: Applying the addtional constraint
+    :alt: Applying the additional constraint
     :figclass: align-center
 
-    Applying the addtional constraint
+    Applying the additional constraint
 
 Why doesn't Portainer support compose version 3 on a standalone (non-swarm) host?
 =================================================================================
@@ -136,7 +136,7 @@ You can either get the logs for Portainer from Portainer's own GUI or from the D
 
 **Getting Portainer's logs from the Docker CLI**
 
-* Step 1. Navigate to the commandline of a docker manager node/ non-swarm docker host and enter ``docker ps -a`` to list all of the Docker containers.
+* Step 1. Navigate to the commandline of a Docker manager node/ non-swarm Docker host and enter ``docker ps -a`` to list all of the Docker containers.
 * Step 2. Note down the **CONTAINER_ID** attribute of your Portainer container.
 * Step 3. Enter the following command and the logs of the Portainer container will output to the commandline: docker container logs **CONTAINER_ID**
 
@@ -207,7 +207,7 @@ For examples on how to configure a reverse proxy to work with Portainer, you can
 How can I expose the Docker API over TCP so that Portainer can communicate with my environment?
 ===============================================================================================
 
-Portainer strongly recommend to deploy Portainer using our agent enabled deployment due to the risk involved with exposing the Dokcer API. If for whatever reason it is not possible to configure Portainer with the Agent, you can configure Portainer to communicate with the Docker API over the network (usually on TCP 2375, 2376 with TLS). Refer to `Daemon socket option <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option>`_ in the Docker Reference and to Docker Engine on Windows.
+Portainer strongly recommend to deploy Portainer using our agent enabled deployment due to the risk involved with exposing the Docker API. If for whatever reason it is not possible to configure Portainer with the Agent, you can configure Portainer to communicate with the Docker API over the network (usually on TCP 2375, 2376 with TLS). Refer to `Daemon socket option <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option>`_ in the Docker Reference and to Docker Engine on Windows.
 
 How can I set up Portainer on Windows Server 2016?
 ==================================================
