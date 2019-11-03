@@ -49,6 +49,9 @@ My licenses/extensions don't activate, what do I do?
 * If Portainer can reach the internet then this is not the problem. If you have access to the Portainer data filesystem you can check whether the extension binaries have been downloaded. Navigate to the filesystem in use by Portainer and check the bin directory to make sure the extension has been downloaded. If there is no extensions present, then there is an issue with Portainer downloading the extension. 
 * If the extensions are present, then you may have a permissions issue and they may not be able to run. Check to make sure that they are executable.
 
+**Note:** Open Media Vault mounts filesystems & shared volumes with the ``noexec`` flag by default, meaning Portainer extensions can't be enabled.
+To fix this, remove ``noexec`` from the ``OMV_FSTAB_MNTOPS_EXT4`` variable. If the filesystem or shared volume is already mounted, modify the variable in the fstab section of ``/etc/openmediavault/config.xml``, otherwise modify the variable in ``/etc/default/openmediavault``. 
+
 Users have access to an endpoint, but they cannot see anything. Why?
 ====================================================================
 
