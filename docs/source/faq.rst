@@ -8,7 +8,7 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 
 
 - Email: info@portainer.io
-- `Slack <https://join.slack.com/t/portainer/shared_invite/enQtNDk3ODQ5MjI2MjI4LWM1OWMzNmUxMTkxZjc1MmU0ZGIwOTllMWI2YzMyNGI2MjY5NmMxMzhkNTRkNGZkYWU3OTQxODUxMWRmZTE5NTM>`__
+- `Slack <https://join.slack.com/t/portainer/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg>`__
 - `Twitter <https://twitter.com/portainerio>`__
 - `GitHub <https://github.com/portainer/portainer/issues/new?template=Custom.md>`__
 - `The Portainer Website <https://www.portainer.io/registration/>`__
