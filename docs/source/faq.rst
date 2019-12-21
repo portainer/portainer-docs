@@ -2,6 +2,12 @@
 FAQ
 ===
 
+2FA
+===============================================
+
+2FA is available paired through OAuth in the external authentication extension.
+
+
 My host is using SELinux, can I use Portainer ?
 ===============================================
 
