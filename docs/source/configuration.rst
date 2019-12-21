@@ -177,3 +177,18 @@ The following CLI flags are available:
 * ``--tlskey``: Path to the TLS key (default: ``/certs/key.pem``, ``C:\certs\key.pem`` on Windows)
 * ``--tlsverify``: TLS support (default: ``false``)
 * ``--tunnel-port``: Specify an alternate tunnel port to use with the Edge agent. Use ``--tunnel-port 8001`` with ``-p 8001:8001`` to make the Edge agent communicate on port 8001
+
+Volumes
+==============
+Certain Containers which need to store _data require Peristant Volumes,
+So you containter does not loose data when it is restarted.
+
+You can Bind a volume from the Host to your container when creating a new "Service",
+
+In the Volumes tab (next to Command & Logging) select > map additional volume > click bind
+
+Then specify the direcotry within the container eg. ```/var/www/html```
+
+Then Specify the Host Directory eg. ```/home/user/container/1```
+
+This will bind the host directory to a volume within the containter to make it "Persistant"
