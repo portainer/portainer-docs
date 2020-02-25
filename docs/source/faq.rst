@@ -20,13 +20,15 @@ At this stage, you cannot reset your password using Portainer if you have forgot
 
 There is an open feature request for this functionality which can be tracked on our GitHub repository `here. <https://github.com/portainer/portainer/issues/512>`__
 
-Why are my stacks marked as Limited in Portainer?
+Why are my stacks showing as Limited in Portainer?
 =================================================
 
-When you see a stack file shown as **limited** in the Portainer UI, it is because Portainer does not have the related stack file in it's database. 
-This is either because the stack was deployed outside of Portainer, or because Portainer has lost it's database. 
+A **Limited** stack as the name implies has limited functionality. This includes browsing through to related services from the Stack Details view, or deleting the stack.
+A stack could show as Limited in Portainer, either because the stack was deployed outside of Portainer (Portainer doesn't have a copy of the Stack file) or because
+the Portainer database has been lost (the volume it is on isn't persisted and/or highly available).
 
-If you wish to manage the stack file within Portainer, you will need to deploy it within Portainer so that the file is kept in the database & ensure that the database is persisted.
+A **Total control** stack in Portainer brings you added functionality such as editing and updating a stack, duplicating the stack or migrating the stack.
+If you wish to have a Total control stack , you will need to deploy it within Portainer so that the file is kept in the database & ensure that the database is persisted and/or highly available.
 
 Why is my version number not matching the latest version?
 =========================================================
@@ -40,7 +42,6 @@ Can I activate my extension licenses without an internet connection?
 ====================================================================
 
 Currently, it is not possible to activate extensions offline as Portainer runs a license check against our license verification server. There is a feature request open for this offline activation functionality which can be tracked on our GitHub repository `here. <https://github.com/portainer/portainer/issues/3080>`__
-
 
 My licenses/extensions don't activate, what do I do?
 ====================================================
