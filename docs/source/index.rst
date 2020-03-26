@@ -14,7 +14,6 @@ Contents:
    configuration
    API
    agent
-   external_endpoints
    templates
    troubleshooting
    contribute
