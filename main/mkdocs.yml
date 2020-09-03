@@ -1,0 +1,35 @@
+site_name: Portainer Documentation
+nav:
+    - Home: index.md
+    - Portainer CE 2.0 : /v2.0/
+        # - 'Deploying Portainer' : 'deployce.md'
+        # - 'Adding Endpoints' : 'addingendpointsce.md'
+        # - 'Adding Authentication Sources' : 'authenticationce.md'
+        # - 'Creating and Managing users' : 'usersce.md'
+        # - 'Creating and Managing Teams' : 'teamsce.md'
+        # - 'Configuring Registries' : 'registriesce.md'
+        # - 'Configuring Portainer Settings' : 'settingsce.md'
+        # - 'Advanced Deployments' : 'adeploymentsce.md'
+        # - 'Portainer Deployment Troubleshooting' : 'troubleshootingce.md'
+    - Portainer Business: /be/
+theme:
+  features:
+    - instant
+  logo: assets/logo.png
+  name: material
+  palette:
+    primary: light-blue
+repo_name: portainer/portainer
+repo_url: https://github.com/portainer/portainer
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/linkedin
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/youtube
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/facebook
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/reddit
+      link: https://twitter.com/squidfunk
