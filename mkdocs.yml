@@ -1,9 +1,11 @@
 site_name: Portainer Documentation
 nav:
     - Home: index.md
-    - Portainer 1.24.1 : /v1.24.1/
-    - Portainer CE 2.0 : /v2.0/
-    - Portainer Business: /be/
+    - Portainer CE 2.0 :
+      - Deploying Portainer:
+        - 'Requirements' : '/v2.0/requirements.md'
+        - 'CLI options' : /v2.0/clioptions.md
+    - Portainer Business: portainer_business.md
 theme:
   features:
     - instant
