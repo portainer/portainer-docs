@@ -1,16 +1,8 @@
 site_name: Portainer Documentation
 nav:
     - Home: index.md
+    - Portainer 1.24.1 : /v1.24.1/
     - Portainer CE 2.0 : /v2.0/
-        # - 'Deploying Portainer' : 'deployce.md'
-        # - 'Adding Endpoints' : 'addingendpointsce.md'
-        # - 'Adding Authentication Sources' : 'authenticationce.md'
-        # - 'Creating and Managing users' : 'usersce.md'
-        # - 'Creating and Managing Teams' : 'teamsce.md'
-        # - 'Configuring Registries' : 'registriesce.md'
-        # - 'Configuring Portainer Settings' : 'settingsce.md'
-        # - 'Advanced Deployments' : 'adeploymentsce.md'
-        # - 'Portainer Deployment Troubleshooting' : 'troubleshootingce.md'
     - Portainer Business: /be/
 theme:
   features:
@@ -20,7 +12,7 @@ theme:
   palette:
     primary: light-blue
 repo_name: portainer/portainer
-repo_url: https://github.com/portainer/portainer
+repo_url: https://github.com/portainer/portainer-docs
 extra:
   social:
     - icon: fontawesome/brands/twitter
