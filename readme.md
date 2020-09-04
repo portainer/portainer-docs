@@ -7,7 +7,7 @@ This repository contains the Portainer v1.x, v2.0 and futures versions documenta
 
 ## Contributing
 We welcome and encourage community contributions.
-For information about contributing to the Portainer documentation, see [Contribution guidelines](CONTRIBUTING.md).
+For information about contributing to the Portainer documentation, see [Contribution guidelines](contributing.md).
 
 The [issues](https://github.com/portainer/portainer-docs/issues) of this repo is the place to manage our To Do. We encourage you to see what has to be done, take a task and contribute.
 
