@@ -1,6 +1,6 @@
 # Contributing to Portainer Documentation
 
-We want to create a unique place to have all the documentation of Portainer, for the past releases and future ones. This documentation will be hosted in this address (In definition).
+We want to create a unique place to have all the documentation of Portainer, for the past releases and future ones. This documentation will be hosted in this address (to be defined).
 
 ## Make suggested updates
 
