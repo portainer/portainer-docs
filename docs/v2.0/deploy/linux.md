@@ -10,11 +10,11 @@ Note that Portainer CE 2.0 supports Kubernetes version 1.16, 1.17 and 1.18 only.
 
 First, add the Portainer helm repo running the following:
 
-<code>$ helm repo add portainer https://portainer.github.io/k8s/</code>
-<code>$ helm repo update</code>
+<pre><code>$ helm repo add portainer https://portainer.github.io/k8s/</code></pre>
+<pre><code>$ helm repo update</code></pre>
 
 Then, create the Portainer namespace in your cluster
 
-<code>$ kubectl create namespace portainer</code>
+<pre><code>$ kubectl create namespace portainer</code></pre>
 
 
