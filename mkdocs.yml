@@ -6,10 +6,10 @@ nav:
       - Deploying Portainer:
         - 'Requirements' : 'v2.0/deploy/requirements.md'
         - 'CLI options' : 'v2.0/deploy/clioptions.md'
-        - 'Using SSL with Portainer' : 'v2.0/deploy/ssl.md'
         - 'Deploying on Linux' : 'v2.0/deploy/linux.md'
         - 'Deploying on Windows Server' : 'v2.0/deploy/windowsserver.md'
         - 'Deploying on Windows 10' : 'v2.0/deploy/windows10.md'
+        - 'Using SSL with Portainer' : 'v2.0/deploy/ssl.md'
         - 'Initial Setup' : 'v2.0/deploy/initialsetup.md'
       - Adding Endpoints:
         - 'Local Endpoint' : 'v2.0/endpoints/local.md'
