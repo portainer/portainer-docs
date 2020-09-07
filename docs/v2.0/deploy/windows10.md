@@ -78,6 +78,49 @@ Once this is done, you can continue with the installation running the following 
 <pre><code>$ curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml</code></pre>
 <pre><code>$ docker stack deploy -c portainer-agent-stack.yml portainer</code></pre>
 
-### Notes
+### Docker Standalone using Windows Containers
 
-Theses deployments was tested in Windows 10 Pro 2004 edition.
+One scenario running Docker in Windows is running Windows Containers. This is feature that has to be enable. To do this, open a PowerShell window as administrator a run:
+
+<pre><code>Enable-WindowsOptionalFeature -Online -FeatureName containers -All</code></pre>
+
+Once this is done, you need to open a PowerShell console and run the following commands:
+
+<pre><code>$ docker volume create portainer_data</code></pre>
+<pre><code>$ docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce</code></pre>
+
+Now, you can navigate to http://localhost:9000 and start using Portainer.
+
+### Docker Swarm using Windows Containers
+
+You can use our YML manifest to run Portainer in Windows using Windows Containers. In a Powershell windows, you must run:
+
+<pre><code>$ curl https://downloads.portainer.io/portainer_windows_stack.yml -o portainer_windows_stack.yml</code></pre>
+<pre><code>$ docker stack deploy --compose-file=portainer_windows_stack.yml portainer</code></pre>
+
+## Deploy Portainer Agent in Windows running WSL
+
+### Docker Standalone
+Run the following command to deploy the Agent in your Docker host.
+
+<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent</code></pre>
+
+### Docker Swarm
+Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command on a manger node in the remote cluster.
+
+<pre><code>$ docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind
+src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes –-mount type=bind,src=/,dst=/host portainer/agent</code></pre>
+
+## Deploy Portainer Agent in Windows using Windows Containers.
+
+### Docker standalone
+
+To run Portainer Agent in a Windows Container scenario, you need to execute the following commands:
+
+<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent</code></pre>
+
+## Notes
+
+Theses deployments was tested in Windows 10 Pro 2004 edition. To use Windows Containers, you need to run Windows 10 ver 1803 or newest.
+
+Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes. 
