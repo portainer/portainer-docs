@@ -5,12 +5,12 @@ nav:
     - Portainer CE 2.0:
       - Deploying Portainer:
         - 'Requirements' : 'v2.0/deploy/requirements.md'
-        - 'CLI options' : 'v2.0/deploy/clioptions.md'
+        - 'CLI options' : 'v2.0/deploy/cli.md'
         - 'Deploying on Linux' : 'v2.0/deploy/linux.md'
         - 'Deploying on Windows Server' : 'v2.0/deploy/windowsserver.md'
         - 'Deploying on Windows 10' : 'v2.0/deploy/windows10.md'
         - 'Using SSL with Portainer' : 'v2.0/deploy/ssl.md'
-        - 'Initial Setup' : 'v2.0/deploy/initialsetup.md'
+        - 'Initial Setup' : 'v2.0/deploy/initial.md'
       - Adding Endpoints:
         - 'Local Endpoint' : 'v2.0/endpoints/local.md'
         - 'Deploy and connect Portainer agent in Docker' : 'v2.0/endpoints/docker.md'
@@ -43,6 +43,7 @@ theme:
   features:
     - instant
   logo: assets/logo.png
+  favicon: assets/icon.webp
   name: material
   palette:
     primary: light-blue
@@ -51,12 +52,12 @@ repo_url: https://github.com/portainer/portainer-docs
 extra:
   social:
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
+      link: https://twitter.com/portainerio
     - icon: fontawesome/brands/linkedin
-      link: https://twitter.com/squidfunk
+      link: https://www.linkedin.com/company/portainer/
     - icon: fontawesome/brands/youtube
-      link: https://twitter.com/squidfunk
+      link: https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg
     - icon: fontawesome/brands/facebook
-      link: https://twitter.com/squidfunk
+      link: https://www.facebook.com/portainerio/
     - icon: fontawesome/brands/reddit
-      link: https://twitter.com/squidfunk
+      link: https://reddit.com/r/portainer

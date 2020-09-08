@@ -1,0 +1,35 @@
+# Requeriments
+
+In this article, you will find information about the supported platforms and Docker versions.
+
+## Supported Platforms
+
+Portainer can be deployed on the following platforms:
+
+- Linux amd64
+- Linux arm
+- Linux arm64
+- Linux ppc64le
+- Linux s390x
+- Windows amd64
+- Darwin amd64
+
+## Supported Docker Versions
+
+The required Docker version to have full support is 1.9.1 or newest. Docker 1.9 is partially supported. Older versions than indicated here, are not supported.
+
+## Supported Docker Swarm
+
+Portainer is compatible with the following versions of Docker Swarm: v1.2.3
+
+## Supported Kubernetes versions
+
+The following versions of Kubernetes are fully supported:
+
+- 1.16
+- 1.17
+- 1.18
+
+## Notes
+
+Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes. 

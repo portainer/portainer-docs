@@ -42,7 +42,7 @@ Portainer is comprised of two elements, the Portainer Server, and the Portainer 
 
 Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
 
-To see the requeriments, please, visit the page of [requirements](v2.0/deploy/requeriments.md)
+To see the requeriments, please, visit the page of [requirements](/v2.0/deploy/requeriments.md)
 
 ### Docker Standalone in WSL2
 
