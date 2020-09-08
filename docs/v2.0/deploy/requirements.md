@@ -1,4 +1,4 @@
-# Requeriments
+# Requirements
 
 In this article, you will find information about the supported platforms and Docker versions.
 
