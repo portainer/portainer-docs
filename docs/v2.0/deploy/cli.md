@@ -12,7 +12,7 @@ You can generate the encrypted password with the following command if you have i
 
 If you system don't have the mentioned package, you can run a container to run the command:
 
-<pre><code>docker run --rm httpd:2.4-alpine htpasswd -nbB admin "your-password" | cut -d ":" -f 2</pre></code>
+<pre><code>docker run --rm httpd:2.4-alpine htpasswd -nbB admin "your-password" | cut -d ":" -f 2</code></pre>
 
 To specify the admin password from the command line, start Portainer with the <code>--admin-password</code> flag:
 
@@ -105,3 +105,7 @@ The following CLI flags are available:
 * <code>--tlskey</code>: Path to the TLS key (default: /certs/key.pem, C:\certs\key.pem on Windows)
 * <code>--tlsverify</code>: TLS support (default: false)
 * <code>--tunnel-port</code>: Specify an alternate tunnel port to use with the Edge agent. Use --tunnel-port 8001 with -p 8001:8001 to make the Edge agent communicate on port 8001
+
+## Notes
+
+Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes. 
