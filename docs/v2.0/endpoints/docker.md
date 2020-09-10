@@ -1,8 +1,8 @@
 # Deploy and connect Portainer Agent in Docker
 
-If you want to manage any standalone Docker Host, is required to connect to the Docker API directly. To expose the Docker API to admit remote connections, you need to follow [theses steps](https://docs.docker.com/engine/install/linux-postinstall/#configuring-remote-access-with-systemd-unit-file)
+If you want to manage any standalone Docker Host, is required to connect to the Docker API directly. To expose the Docker API to admit remote connections, you need to follow [theses steps](https://docs.docker.com/engine/install/linux-postinstall/#configuring-remote-access-with-systemd-unit-file).
 
-Once this is done, we going trought too se how to connect to the Docker API using TLS and Without TLS
+Once this is done, we going trought too se how to connect to the Docker API using TLS and Without TLS.
 
 ## Connect to Docker Host API without TLS
 
