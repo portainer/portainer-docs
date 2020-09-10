@@ -12,7 +12,7 @@ You can generate the encrypted password with the following command if you have i
 
 If you system don't have the mentioned package, you can run a container to run the command:
 
-<pre><code>docker run --rm httpd:2.4-alpine htpasswd -nbB admin "your-password" | cut -d ":" -f 2</code></pre>
+<pre><code>docker run --rm httpd:2.4-alpine htpasswd -nbB admin "your-password" | cut -d ":" -f 2</code>s</pre>
 
 To specify the admin password from the command line, start Portainer with the <code>--admin-password</code> flag:
 
