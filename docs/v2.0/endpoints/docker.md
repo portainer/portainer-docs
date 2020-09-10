@@ -1,6 +1,6 @@
 # Deploy and connect Portainer Agent in Docker
 
-If you want to manage any standalone Docker Host, is required to connect to the Docker API directly. To expose the Docker API to be admin remote connections, you need to follow [theses steps](https://docs.docker.com/engine/install/linux-postinstall/#configuring-remote-access-with-systemd-unit-file)
+If you want to manage any standalone Docker Host, is required to connect to the Docker API directly. To expose the Docker API to admit remote connections, you need to follow [theses steps](https://docs.docker.com/engine/install/linux-postinstall/#configuring-remote-access-with-systemd-unit-file)
 
 Once this is done, we going trought too se how to connect to the Docker API using TLS and Without TLS
 
@@ -16,9 +16,6 @@ The next step is <b>choose the environment</b> type and select <b>Docker</b>. In
 * Endpoint URL: Is the name or IP address to connect to the Docker Host. Don't forget to specify the port. When you set Docker to use TLS, the default port is <b>2376</b>
 * Public IP: URL or IP address where exposed containers will be reachable. This field is optional and will default to the endpoint URL.
 * TLS: Enable this option if you need to connect to the Docker endpoint with TLS.
-* TLS CA Certificate: Define your CA Cerficate.
-* TLS Certificate: Define your certificate.
-* TLS Key: Define your certificate key.
 
 Once all this has be specified, you can click in the <b>Add Endpoint</b> button. 
 
@@ -42,6 +39,9 @@ The next step is <b>choose the environment</b> type and select <b>Docker</b>. In
 * Endpoint URL: Is the name or IP address to connect to the Docker Host. Don't forget to specify the port. 
 * Public IP: URL or IP address where exposed containers will be reachable. This field is optional and will default to the endpoint URL.
 * TLS: Enable this option if you need to connect to the Docker endpoint with TLS.
+* TLS CA Certificate: Define your CA Cerficate.
+* TLS Certificate: Define your certificate.
+* TLS Key: Define your certificate key.
 
 Once all this has be specified, you can click in the <b>Add Endpoint</b> button. 
 
@@ -52,4 +52,5 @@ Scroll down to the bottom of the page and do click in the <b>Add Endpoint</b> bu
 ![docker_endpoint](assets/docker_6.png)
 
 ## Notes
-Do you think that is missing something here? Contribute with this admin guide forking the repo Portainer-Docs and propose changes.
+
+Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes.
