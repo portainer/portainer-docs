@@ -11,14 +11,14 @@ nav:
         - 'Deploying on Windows 10' : 'v2.0/deploy/windows10.md'
         - 'Using SSL with Portainer' : 'v2.0/deploy/ssl.md'
         - 'Initial Setup' : 'v2.0/deploy/initial.md'
-      - Adding Endpoints:
-        - 'Local Endpoint' : 'v2.0/endpoints/local.md'
-        - 'Deploy and connect Portainer agent in Docker' : 'v2.0/endpoints/docker.md'
-        - 'Deploy and connect Portainer agent in Swarm' : 'v2.0/endpoints/swarm.md'
-        - 'Deploy and connect Portainer agent in Kubernetes' : 'v2.0/endpoints/kubernetes.md'
+      - Managing Endpoints:
+        - 'Add Local Endpoint' : 'v2.0/endpoints/local.md'
+        - 'Add Docker Endpoint' : 'v2.0/endpoints/docker.md'
+        - 'Add Docker Swarm Endpoint' : 'v2.0/endpoints/swarm.md'
+        - 'Add Kubernetes Endpoint' : 'v2.0/endpoints/kubernetes.md'
+        - 'Add Edge Endpoint' : 'v2.0/endpoints/edge.md'
+        - 'Add ACI Endpoint' : 'v2.0/endpoints/aci.md'
         - 'Kubernetes: Configuring Cluster Capabilities and Permissions' : 'v2.0/endpoints/kcandp.md'
-        - 'Deploy and connect Portainer Edge agent' : 'v2.0/endpoints/edge.md'
-        - 'Deploy and connect ACI endpoint' : 'v2.0/endpoints/aci.md'
         - 'Creating Endpoints Groups and Endpoint Tags' : 'v2.0/endpoints/groupstags.md'
         - 'Managing Endpoints Access' : 'v2.0/endpoints/access.md'
       - Authentication Sources:
