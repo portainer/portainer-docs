@@ -18,7 +18,6 @@ nav:
         - 'Add Kubernetes Endpoint' : 'v2.0/endpoints/kubernetes.md'
         - 'Add Edge Endpoint' : 'v2.0/endpoints/edge.md'
         - 'Add ACI Endpoint' : 'v2.0/endpoints/aci.md'
-        - 'Kubernetes: Configuring Cluster Capabilities and Permissions' : 'v2.0/endpoints/kcandp.md'
         - 'Creating Endpoints Groups and Endpoint Tags' : 'v2.0/endpoints/groupstags.md'
         - 'Managing Endpoints Access' : 'v2.0/endpoints/access.md'
       - Authentication Sources:
