@@ -33,6 +33,7 @@ nav:
         - 'Reset Administrator Password' : 'v2.0/users/reset-admin.md'
       - Registries:
         - 'Connect to a registry' : 'v2.0/registries/connect.md'
+        - 'Enable Docker Hub authentication' : 'v2.0/registries/auth-docker-hub.md'
       - Configuring Settings:
         - 'Security Options' : 'v2.0/settings/security.md'
         - 'Edge Computing' : 'v2.0/settings/edge.md'
