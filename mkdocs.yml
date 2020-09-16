@@ -24,10 +24,13 @@ nav:
         - 'LDAP' : 'v2.0/auth/ldap.md'
         - 'OAuth' : 'v2.0/auth/oauth.md'
         - 'Internal' : 'v2.0/auth/internal.md'
-      - Managing users:
+      - Managing Users & Teams:
         - 'Create a User' : 'v2.0/users/create.md'
-      - Managing Teams:
-        - 'Create a Team' : 'v2.0/teams/create.md'
+        - 'Create a Team' : 'v2.0/users/create-team.md'
+        - 'Promote a User as Admin' : 'v2.0/users/promoting.md'
+        - 'Add a User to a Team' : 'v2.0/users/user-team.md'
+        - 'Reset User Password' : 'v2.0/users/reset-user.md'
+        - 'Reset Administrator Password' : 'v2.0/users/reset-admin.md'
       - Registries:
         - 'Connect to a registry' : 'v2.0/registries/connect.md'
       - Configuring Settings:
