@@ -18,6 +18,6 @@ If everything goes well, you must see a confirmation pop up and also the user li
 
 ![promote](assets/promote4.png)
 
-# Notes
+#Notes
 
 Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes.
