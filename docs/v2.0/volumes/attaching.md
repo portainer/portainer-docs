@@ -8,31 +8,31 @@ Portainer is capable to attach a new volume to a running container and in this h
 
 Once you logged in Portainer, you need to go to <b>Containers</b> option and select the <b>container</b> that you want to attach a volume.
 
-![volumes](assets/attaching_1.png)
+![volumes](assets/attach_1.png)
 
 The next step is doing a click in <b>Duplicate/Edit.</b>
 
-![volumes](assets/attaching_2.png)
+![volumes](assets/attach_2.png)
 
 Scroll down to the bottom to the page until the options for this container. Select Volumes and do a click in <b>Map an Additional Volume.</b>
 
-![volumes](assets/attaching_3.png)
+![volumes](assets/attach_3.png)
 
 The next thing is to type the path in the container, how you can see in this example, for an NGINX container, the path to persist is "/usr/share/nginx/html". Also, we need to specify the volume created.
 
-![volumes](assets/attaching_4.png)
+![volumes](assets/attach_4.png)
 
 Is all look good, the only thing you need to is click in <b>Deploy The Container</b>. You will receive the following warning:
 
-![volumes](assets/attaching_5.png)
+![volumes](assets/attach_5.png)
 
 Is everything worked as expected, you will have a confirmation pop up.
 
-![volumes](assets/attaching_6.png)
+![volumes](assets/attach_6.png)
 
 To confirm, click in your container, scroll down until you see volumes configuration. You will see something like this:
 
-![volumes](assets/attaching_7.png)
+![volumes](assets/attach_7.png)
 
 ## Notes
 
