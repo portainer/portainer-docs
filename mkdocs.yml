@@ -42,6 +42,8 @@ nav:
         - 'Scaling a service' : 'v2.0/services/scale.md'
         - 'View service logs' : 'v2.0/services/logs.md'
         - 'View status of service tasks' : 'v2.0/services/status.md'
+      - Managing Applications:
+        - 'Create a new application' : 'v2.0/apps/create.md'
       - Registries:
         - 'Connect to a Registry' : 'v2.0/registries/connect.md'
         - 'Enable Docker Hub authentication' : 'v2.0/registries/auth-docker-hub.md'
