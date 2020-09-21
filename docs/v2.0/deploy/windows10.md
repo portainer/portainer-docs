@@ -1,6 +1,6 @@
 # Deploy Portainer in Windows 10
 
-## Deploy Portainer in Kubernetes trough Docker Desktop. 
+## Deploy Portainer in Kubernetes through Docker Desktop. 
 
 You can deploy Portainer in a Kubernetes environment in Windows using Docker Desktop. Note: This scenario is for testing purpose only.
 
