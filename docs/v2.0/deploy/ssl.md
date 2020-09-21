@@ -1,6 +1,6 @@
 # Secure Portainer using SSL
 
-By default, Portainer’s web interface and API is exposed over HTTP. This is not secured, it’s recommended to enable SSL in a production environment.
+By default, Portainer’s web interface and API is exposed over HTTP. This is not secure, Portainer recommends enabling SSL, particularly in a production environment.
 
 To do so, you can use the following flags <code>--ssl</code>, <code>--sslcert</code> and <code>--sslkey</code>:
 
