@@ -1,4 +1,4 @@
-# Add a new registry
+# Add / Connect a new registry
 
 Portainer is capable to connect to the main registries. From Portainer you will able to connect to Quay.io, Azure Container Registry, Gitlab Container Registry, and a Custom Registry. In this help article, you will learn how to add a new registry.
 

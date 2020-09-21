@@ -37,8 +37,13 @@ nav:
         - 'Attach existent volume' : 'v2.0/volumes/attaching.md'
       - Managing Containers:
         - 'Create new container' : 'v2.0/containers/create.md'
+      - Managing Services:
+        - 'Create a new service' : 'v2.0/services/create.md'
+        - 'Scaling a service' : 'v2.0/services/scale.md'
+        - 'View service logs' : 'v2.0/services/logs.md'
+        - 'View status of service tasks' : 'v2.0/services/status.md'
       - Registries:
-        - 'Connect to a registry' : 'v2.0/registries/connect.md'
+        - 'Connect to a Registry' : 'v2.0/registries/connect.md'
         - 'Enable Docker Hub authentication' : 'v2.0/registries/auth-docker-hub.md'
       - Configuring Settings:
         - 'Security Options' : 'v2.0/settings/security.md'
