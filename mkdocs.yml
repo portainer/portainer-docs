@@ -30,19 +30,6 @@ nav:
         - 'Add a User to a Team' : 'v2.0/users/user-team.md'
         - 'Reset User Password' : 'v2.0/users/reset-user.md'
         - 'Reset Administrator Password' : 'v2.0/users/reset-admin.md'
-      - Managing Volumes:
-        - 'Browse a volume' : 'v2.0/volumes/browse.md'
-        - 'Create a volume' : 'v2.0/volumes/create.md'
-        - 'Attach existent volume' : 'v2.0/volumes/attaching.md'
-      - Managing Containers:
-        - 'Create new container' : 'v2.0/containers/create.md'
-      - Managing Services:
-        - 'Create a new service' : 'v2.0/services/create.md'
-        - 'Scaling a service' : 'v2.0/services/scale.md'
-        - 'View service logs' : 'v2.0/services/logs.md'
-        - 'View status of service tasks' : 'v2.0/services/status.md'
-      - Managing Applications:
-        - 'Create a new application' : 'v2.0/apps/create.md'
       - Registries:
         - 'Connect to a Registry' : 'v2.0/registries/connect.md'
         - 'Enable Docker Hub authentication' : 'v2.0/registries/auth-docker-hub.md'
@@ -54,6 +41,20 @@ nav:
         - 'Using Portainer with Reverse Proxies' : 'v2.0/ad/rp.md'
       - Portainer Deployment Troubleshooting : 'v2.0/troubleshooting/index.md'
     - Portainer CE 2.0 User Guide:
+      - Managing Containers:
+        - 'Create new container' : 'v2.0/containers/create.md'
+      - Managing Services:
+        - 'Create a new service' : 'v2.0/services/create.md'
+        - 'Scaling a service' : 'v2.0/services/scale.md'
+        - 'View service logs' : 'v2.0/services/logs.md'
+        - 'View status of service tasks' : 'v2.0/services/status.md'
+      - Managing Applications:
+        - 'Create a new application' : 'v2.0/apps/create.md'
+      - Managing Volumes:
+        - 'Browse a volume' : 'v2.0/volumes/browse.md'
+        - 'Create a volume' : 'v2.0/volumes/create.md'
+        - 'Attach existent volume' : 'v2.0/volumes/attaching.md'
+
 theme:
   features:
     - instant
