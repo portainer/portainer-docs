@@ -1,10 +1,10 @@
 # Add a Azure Container Instace Endpoint
 
-Portainer CE allows you to deploy and manage apps in Azure Container Instances quickly and easily and like no other tool. There is no need to type commands in via CLI or go to Azure Portal to manage your containers; Portainer does it all. Simply deploy Portainer in an Azure container and manage it like any other node.
+Portainer CE allows you to deploy and manage apps in Azure Container Instances quickly and easily and like no other tool. There is no need to type commands via CLI or go to Azure Portal to manage your containers; Portainer does it all. Simply deploy Portainer in an Azure container and manage it like any other node.
 
 ## Requirements
 
-Before to connect to your Azure Subscription, you need to create an Azure AD Application. You can find information about how do it in this [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
+Before connecting to your Azure Subscription, you need to create an Azure AD Application. YFor more information see the [Microsoft Documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
 
 ## Adding an ACI Endpoint
 
@@ -15,13 +15,13 @@ To add an ACI Endpoint you will need the following information:
 * Tenant ID: You can get your tenant ID of Azure Subscription page
 * Authentication ID: This value is from the process of Application creation in Azure.
 
-Once you have this values, you can start to add an ACI Endpoint to Azure. 
+Once you have these values, you can start to add an ACI Endpoint to Azure. 
 
-First, go to <b>Endpoints</b> and do a click in <b>Add Endpoint</b>
+1. Go to <b>Endpoints</b> 2. Click <b>Add Endpoints</b>
 
 ![aci](assets/aci_1.png)
 
-The following step is choose <b>Azure</b> and fill with the information about your Application and Azure Subscription. Once is all set. Do a click in <b>Add Endpoint</b> button.
+3. Select <b>Azure</b> 4. Complete <b>Application</b> and <b>Azure Subscription</b> 5. Click <b>Add Endpoint</b>
 
 ![aci](assets/aci_2.png)
 

@@ -1,20 +1,20 @@
 # Add Kubernetes Endpoint
 
-Adding Kubernetes endpoints to Portainer CE 2.0 is very straightforward. As requirement you need to define if you going to deploy the Agents for Kubernetes via NodePort or Load Balancer. In this guide, you will see how to deploy in both scenarios.
+Adding Kubernetes endpoints to Portainer CE 2.0 is very straightforward. As requirement you need to define if you  are going to deploy the Agents for Kubernetes via NodePort or Load Balancer. In this guide, you will see how to deploy in both scenarios.
 
-You can view the supported Kubernetes versions in this [page](/v2.0/deploy/requirements.md).
+You can view the supported Kubernetes versions in this [page].
+For more information on supported Kubernetes Versions please view the [Requirements] (/v2.0/deploy/requirements.md) page.
 
 ## Add Kubernetes Endpoint via NodePort.
 
 ### Deploying the Agent.
 
-Once you login to Portainer, you need go to <b>Endpoints</b> and pick in the <b>environment type</b> section, <b>Agent</b>.
-
-In the tab below to the information section, you need pick <b>Kubernetes via Node Port</b> and copy the command displayed in the page. Note: Is important run the command in the Kubernetes node before to fill the environment details.
+Once logged into Portainer go to 1. <b>Endpoints</b> 2. Select <b>Agent</b> from <b>Environment Type</b> section. 3. Select <b>Kubernetes via Node Port</b> in the tabbed Information section, 4. Copy the command.
+Note: It is important to fill the environment details by first running the command in the Kubernetes node.
 
 ![kubernetes](assets/kubernetes_1.png)
 
-The command in this scenario is the same of each time you want to add a new Kubernetes Endpoint via NodePort to Portainer. The command is the following:
+This command is the same each time you want to add a new Kubernetes Endpoint via NodePort:
 
 <pre><code>curl -L https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml -o portainer-agent-k8s.yaml; kubectl apply -f portainer-agent-k8s.yaml</code></pre>
 
@@ -30,7 +30,7 @@ service/portainer-agent created
 service/portainer-agent-headless created
 deployment.apps/portainer-agent created</code></pre>
 
-To validate is the Agent is running, you can run the following command:
+To validate if the Agent is running, you can run the following command:
 
 <pre><code>$ kubectl get pods --namespace=portainer</code></pre>
 
@@ -49,13 +49,13 @@ Once the Agent is running in the Kubernetes host, you need to fill the <b>enviro
 * Endpoint URL: Define your IP or name to connect to the endpoint (Kubernetes host) and specify the port (30778) if this is needed. This field is requiered.
 * Public IP: URL or IP address where exposed containers will be reachable. This field is optional and will default to the endpoint URL.
 
-In the <b>Metada</b> section, you can define a <b>group</b> and <b>tags</b> for this endpoint.
+In the <b>Metadata</b> section, you can define a <b>group</b> and <b>tags</b> for this endpoint.
 
 See the following screenshot for reference.
 
 ![kubernetes](assets/kubernetes_2.png)
 
-When everything is set, you only need to click in <b>Add Endpoint</b> button. If everything work as expected, you will see the last screen for configuration. 
+Once everything is set click <b>Add Endpoint</b>. You will then see the final configuration screen (below).
 
 In this screen, you can set the following options:
 
@@ -73,7 +73,7 @@ See the following screenshot for reference:
 
 ![kubernetes](assets/kubernetes_3.png)
 
-Once all is set, you must click in <b>Save Configuration</b> button. Congratulations. You Kubernetes endpoint via Node Port was added.
+Once this has all been set, click <b>Save Configuration</b>. Congratulations! Your Kubernetes endpoint was added.
 
 ## Add Kubernetes Endpoint via Load Balancer
 
