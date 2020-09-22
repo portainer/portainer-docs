@@ -10,7 +10,7 @@ You can generate the encrypted password with the following command if you have i
 
 <pre><code>$ htpasswd -nb -B admin "your-password" | cut -d ":" -f 2</code></pre>
 
-If you system don't have the mentioned package, you can run a container to run the command:
+If your system does not have the mentioned command, you can run a container to run the command:
 
 <pre><code>docker run --rm httpd:2.4-alpine htpasswd -nbB admin "your-password" | cut -d ":" -f 2</code>s</pre>
 
@@ -25,7 +25,7 @@ Add your password to a file running the following command:
 
 <pre><code>$ echo -n mypassword > /tmp/portainer_password</code></pre>
 
-Now you can start the Portainer container running:
+Now you can start the Portainer container by running:
 
 <pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ce --admin-password-file /tmp/portainer_password</code></pre>
 
@@ -68,6 +68,7 @@ Note that the -l flag can be repeated multiple times to specify multiple labels:
 You do not like our logo? Want to make Portainer more corporate? Don’t worry, you can easily switch for an external logo (it must be exactly 155px by 55px) using the <code>--logo flag</code>:
 
 <pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"</code></pre>
+This can also be completed via the GUI in the Portaner Settings menu
 
 ## Use your own templates
 
@@ -81,7 +82,7 @@ Using the <code>--templates</code> flag you can specify an URL where the templat
 
 <pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --templates http://my-host.my-domain/templates.json</code></pre>
 
-Suggestion: You can host yours templates files in [Github](https://www.github.com)
+Suggestion: You can host your template files in [Github](https://www.github.com)
 
 ## Available flags
 

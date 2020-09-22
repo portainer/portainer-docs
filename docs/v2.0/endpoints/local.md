@@ -2,19 +2,20 @@
 
 You can only add a local endpoint during the creation of the Portainer container. You cannot add a local endpoint after Portainer was deployed. 
 
-You can view how to install Portainer (including adding local endpoint) in the following articles:
+You can view how to install Portainer (including adding a local endpoint) in the following articles:
 
 ## Deploy Portainer in Linux
 
-You can view in this [link](/v2.0/deploy/linux/) how to install Portainer in Linux Environments.
+To learn more go to [Deploy Portainer] (/v2.0/deploy/linux/) in Linux Environments.
 
 ## Deploy Portainer in Windows 10 and Windows Server
 
-You can view [here](/v2.0/deploy/windows10) how to deploy Portainer in Windows 10 and [here](/v2.0/deploy/windowsserver) how to deploy in Windows Server. 
+
+To learn more go to [Deploying on Windows 10] (/v2.0/deploy/windows10) or [Deploying on Windows Server](/v2.0/deploy/windowsserver).
 
 ## Initial Setup
 
-Adding a local endpoint must be do it in the initial setup. You can view about this in [this page](/v2.0/deploy/initial/)
+Adding a local endpoint must be done in the initial setup. To learn more see [initial setup](/v2.0/deploy/initial/)
 
 ## Notes
 

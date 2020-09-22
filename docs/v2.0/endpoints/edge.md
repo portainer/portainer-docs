@@ -2,11 +2,12 @@
 
 The edge agent was created as a way to manage an edge compute environment where devices typically lack the networking capability to run the traditional Portainer agent.
 
-### Portainer must now expose port 8000.
+### Expose port 8000.
 
-This scenario only apply when Portainer is running in a Docker or Docker Swarm environment.
+This scenario only applies when Portainer is running in a Docker or Docker Swarm environment.
 
-Portainer communicates with the edge agent over port 8000; through this port the edge agent can poll the Portainer instance, connect to Portainer, see when it is needed & initiate a tunnel or receive config updates Without port 8000 exposed on Portainer, you cannot access the edge endpoint. If you already have Portainer deployed, you need to redeploy with port 8000 exposed alongside the port used to access Portainer.
+Portainer communicates with the edge agent over port 8000; through this port the edge agent can poll the Portainer instance, connect to Portainer, see when it is needed & initiate a tunnel or receive config updates. Without port 8000 exposed on Portainer, you cannot access the edge endpoint. If you already have Portainer deployed, you need to redeploy with port 8000 exposed alongside the port used to access Portainer.
+Using the CLI flag --tunnel-port you are able to set a different port if 8000 is already in use. For more information see [CLI options] (/v2.0/deploy/cli.md).
 
 ## Recommended Portainer deployment methods.
 
@@ -16,78 +17,79 @@ Portainer communicates with the edge agent over port 8000; through this port the
 
 ## Deploying Edge agent in Docker Standalone environment.
 
-To add an Edge Endpoint to Portainer, you need to click in <b>Endpoints</b> and then in <b>Add Endpoint</b> button.
+To add an Edge Endpoint to Portainer: 1. Click <b>Endpoints</b>  2. Click <b>Add Endpoint</b> button.
 
 ![edge](assets/edge_1.png)
 
-Click in Edge Adgent, assign a name to the endpoint to easy remember and identify in the future. Set the value <b>Portainer Server URL</b> indicating the Public IP of your Portainer and the Port. Choose the <b>Pull Frecuency</b>, by default is each five seconds and then, do a click in the <b>Add Endpoint</b> button.
+1. Click <b>Edge Agent</b> 2. Assign <b>friendly name</b> 3. Set the <b>Portainer Server URL</b> indicating the Public IP of your Portainer instance and the <b>port</b> 4. Define a <b>Pull Frequency</b> (default is 5s) and 5. Click <b>Add Endpoint</b>
 
 ![edge](assets/edge_2.png)
 
-In the next screen, click in Docker Standalone tab and then in the <b>Copy Command</b> button.
+In the next screen, 1. Select <b>Docker Standalone</b>in the tabbed <b>Information</b> section and then 2. <b>Copy Command</b>
 
 ![edge](assets/edge_3.png)
 
-You needs to run this command in the Docker Standalone host and the expected results looks when you run a <code>docker ps</code> command is:
+This command needs to be run in the Docker Standalone. Running <code>docker ps</code> should result in something similar to:
 
 <pre><code>CONTAINER ID        IMAGE                            COMMAND             CREATED             STATUS              PORTS                    NAMES
 b9e27f356de8        portainer/agent                  "./agent"           12 seconds ago      Up 12 seconds                                portainer_edge_agent</code></pre>
 
-The next step, is doing a scroll down to <b>Configuration</b> section and define the IP address of the Edge node you want to manage. Is everything is sect, click in <b>Update Endpoint</b> button.
+Next, in the <b>Configuration</b> section, 1. Define the <b>IP address</b> of the node you want to manage 2. Click <b>Update Endpoint</b>.
 
 ![edge](assets/edge_4.png)
 
-If everything works as expected, you will see the following pop up. 
+You should then see the following pop up.
 
 ![edge](assets/edge_5.png)
 
 ## Deploying Edge agent in Docker Swarm environment.
 
-Add a Docker Swarm environment with Edge Agent is very similar to the scenario with Docker Standalone.
+Adding a Docker Swarm environment with Edge Agent is very similar to the scenario with Docker Standalone.
 
-First, click in <b>Endpoints</b> and then, do a click in <b>Add Endpoints</b> button.
+To add an Edge Endpoint to Portainer: 1. Click <b>Endpoints</b>  2. Click <b>Add Endpoint</b> button.
+
 
 ![swarm_edge](assets/edge_swarm_1.png)
 
-Click in Edge Adgent, assign a name to the endpoint to easy remember and identify in the future. Set the value <b>Portainer Server URL</b> indicating the Public IP of your Portainer and the Port. Choose the <b>Pull Frecuency</b>, by default is each five seconds and then, do a click in the <b>Add Endpoint</b> button.
+1. Click <b>Edge Agent</b> 2. Assign <b>friendly name</b> 3. Set the <b>Portainer Server URL</b> indicating the Public IP of your Portainer instance and the <b>port</b> 4. Define a <b>Pull Frequency</b> (default is 5s) and 5. Click <b>Add Endpoint</b>
 
 ![edge](assets/edge_swarm_2.png)
 
-In the next screen, click in Docker Swarm tab and then in the <b>Copy Command</b> button.
+In the next screen, 1. Select <b>Docker Swarm</b>in the tabbed <b>Information</b> section and then 2. <b>Copy Command</b>
 
 ![edge](assets/edge_swarm_3.png)
 
-You needs to run this command in the Docker Swarm node and the expected results is the following:
+Run the command in the <b>Docker Swarm</b> node, expected results should look similar to:
 
 <pre><code>cp2v1mqzkjpcroo3ama8wsve1
 overall progress: 1 out of 1 tasks
 okei8p76rf6k: running   [==================================================>]
 verify: Service converged</code></pre>
 
-When you run <code>docker service ls</code> you will see a output like this:
+Running <code>docker service ls</code> you should see:
 
 <pre><code>ID                  NAME                   MODE                REPLICAS            IMAGE                    PORTS
 cp2v1mqzkjpc        portainer_edge_agent   global              1/1                 portainer/agent:latest</code></pre>
 
-The next step, is doing a scroll down to <b>Configuration</b> section and define the IP address of the Edge node you want to manage. Is everything is sect, click in <b>Update Endpoint</b> button.
+Next, in the <b>Configuration</b> section, 1. Define the <b>IP address</b> of the node you want to manage 2. Click <b>Update Endpoint</b>.
 
 ![edge](assets/edge_swarm_4.png)
 
-If everything works as expected, you will see the following pop up. 
+You should then see the following pop up:
 
 ![edge](assets/edge_swarm_5.png)
 
 ## Deploying Edge agent in Kubernetes environment.
 
-To add an Edge Endpoint to Portainer, you need to click in <b>Endpoints</b> and then in <b>Add Endpoint</b> button.
+To add an Edge Endpoint to Portainer: 1. Click <b>Endpoints</b>  2. Click <b>Add Endpoint</b> button.
 
 ![edge_kubernetes](assets/edge_kubernetes_1.png)
 
-Click in Edge Adgent, assign a name to the endpoint to easy remember and identify in the future. Set the value <b>Portainer Server URL</b> indicating the Public IP of your Portainer and the Port. Choose the <b>Pull Frecuency</b>, by default is each five seconds and then, do a click in the <b>Add Endpoint</b> button.
+1. Click <b>Edge Agent</b> 2. Assign <b>friendly name</b> 3. Set the <b>Portainer Server URL</b> indicating the Public IP of your Portainer instance and the <b>port</b> 4. Define a <b>Pull Frequency</b> (default is 5s) and 5. Click <b>Add Endpoint</b>
 
 ![edge_kubernetes](assets/edge_kubernetes_2.png)
 
-In the next screen, click in Kubernetes tab and then in the <b>Copy Command</b> button.
+In the next screen, 1. Select <b>Docker Swarm</b>in the tabbed <b>Information</b> section and then 2. <b>Copy Command</b>.
 
 You need to run this command in the Kubernetes host and the expected results is the following:
 
@@ -117,11 +119,11 @@ You can validate if the Edge Agent is running in your host executing the followi
 
 <pre><code>$ kubectl get pods --namespace=portainer</code></pre>
 
-After run the command, you can enter the IP address of the host and click in <b>\Update Endpoint</b> button.
+After running the command, you can enter the IP address of the host and click in <b>Update Endpoint</b> button.
 
 ![edge_kubernetes](assets/edge_kubernetes_3.png)
 
-If everything works as expected. You will see the following pop up.
+You should then see the following pop up:
 
 ||||| SPACE FOR POP UP |||||
 
