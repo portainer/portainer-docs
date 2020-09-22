@@ -1,8 +1,7 @@
 site_name: Portainer Documentation
 nav:
     - Home: index.md
-    - Portainer 1.24.1: '#'
-    - Portainer CE 2.0:
+    - Portainer CE 2.0 Admin Guide:
       - Deploying Portainer:
         - 'Requirements' : 'v2.0/deploy/requirements.md'
         - 'CLI options' : 'v2.0/deploy/cli.md'
@@ -54,7 +53,7 @@ nav:
       - Advanced Deployments:
         - 'Using Portainer with Reverse Proxies' : 'v2.0/ad/rp.md'
       - Portainer Deployment Troubleshooting : 'v2.0/troubleshooting/index.md'
-    - Portainer Business: '#'
+    - Portainer CE 2.0 User Guide:
 theme:
   features:
     - instant
