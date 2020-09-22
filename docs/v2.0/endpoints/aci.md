@@ -1,10 +1,10 @@
-# Add a Azure Container Instace Endpoint
+# Add an Azure Container Instance Endpoint
 
-Portainer CE allows you to deploy and manage apps in Azure Container Instances quickly and easily and like no other tool. There is no need to type commands via CLI or go to Azure Portal to manage your containers; Portainer does it all. Simply deploy Portainer in an Azure container and manage it like any other node.
+Portainer CE allows you to deploy and manage apps in Azure Container Instances quickly and easily and like no other tool. There is no need to type commands via CLI or go to the Azure Portal to manage your containers; Portainer does it all. Simply deploy Portainer in an Azure container and manage it like any other node.
 
 ## Requirements
 
-Before connecting to your Azure Subscription, you need to create an Azure AD Application. YFor more information see the [Microsoft Documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
+Before connecting to your Azure Subscription, you need to create an Azure AD Application. For more information see the [Microsoft Documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
 
 ## Adding an ACI Endpoint
 
