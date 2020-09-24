@@ -54,7 +54,10 @@ nav:
         - 'Browse a volume' : 'v2.0/volumes/browse.md'
         - 'Create a volume' : 'v2.0/volumes/create.md'
         - 'Attach existent volume' : 'v2.0/volumes/attaching.md'
-
+extra_css:
+    - css/extra.css
+extra_javascript:
+    - js/extrajs.js
 theme:
   features:
     - instant
