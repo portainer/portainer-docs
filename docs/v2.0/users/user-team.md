@@ -16,4 +16,4 @@ It's done. The user is part of the team. You can confirm seeing in the list of T
 
 # Notes
 
-Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes.
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).

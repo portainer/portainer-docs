@@ -83,4 +83,4 @@ After that selecte in what endpoints you need to run this job and clic in <b>Cre
 
 ## Notes
 
-Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes.
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).

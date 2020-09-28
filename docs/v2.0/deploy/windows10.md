@@ -123,4 +123,4 @@ To run Portainer Agent in a Windows Container scenario, you need to execute the 
 
 These deployments were tested in Windows 10 Pro 2004 edition. To use Windows Containers, you need to run Windows 10 ver 1803 or newest.
 
-Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes. 
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
