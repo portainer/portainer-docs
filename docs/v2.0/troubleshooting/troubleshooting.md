@@ -2,11 +2,11 @@
 
 If you are still experiencing issues after reading this FAQ, feel free to contact us via any one of the following channels:
 
-Email: [info@portainer.io
-Slack
-Twitter
-GitHub
-The Portainer Website
+Email: [info@portainer.io](mailto:info@portainer.io)
+[Slack](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/)
+[Twitter](https://twitter.com/portainerio)
+[GitHub](https://github.com/portainer)
+[The Portainer Website](https://www.portainer.io)
 
 ## How do I reset my Portainer password?
 
