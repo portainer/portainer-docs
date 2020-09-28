@@ -41,7 +41,7 @@ nav:
         - 'Using Portainer with Reverse Proxies' : 'v2.0/ad/rp.md'
       - Portainer Deployment Troubleshooting : 'v2.0/troubleshooting/troubleshooting.md'
       - Deprecated and removed features : 'v2.0/troubleshooting/deprecated.md'
-    - Portainer CE 2.0 User Guide:
+    - Portainer CE 2.0 User Guide (WIP):
       - Managing Containers:
         - 'Create new container' : 'v2.0/containers/create.md'
       - Managing Services:
