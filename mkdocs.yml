@@ -19,6 +19,7 @@ nav:
         - 'Add ACI Endpoint' : 'v2.0/endpoints/aci.md'
         - 'Creating Endpoints Groups and Endpoint Tags' : 'v2.0/endpoints/groupstags.md'
         - 'Managing Endpoints Access' : 'v2.0/endpoints/access.md'
+        - 'Add Endpoint trough Portainer API' : 'v2.0/endpoints/api.md'
       - Authentication Sources:
         - 'LDAP' : 'v2.0/auth/ldap.md'
         - 'OAuth' : 'v2.0/auth/oauth.md'
