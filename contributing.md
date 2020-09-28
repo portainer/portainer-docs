@@ -1,8 +1,8 @@
 # Contributing to Portainer Documentation
 
-We want to create a unique place to have all the documentation of Portainer, for the past releases and future ones. This documentation will be hosted in this address (to be defined).
+We aspire to have all Portainer documentation in one easily accessible location, for past and current releases. To see the live version of these docs, please visit our [documentation site] (https://documentation.portainer.io).
 
-## Make suggested updates
+## To Suggest Updates
 
 ### Fork and clone Portainer Documentation Repository
 [Fork this repository](https://help.github.com/articles/fork-a-repo/) and [clone it](https://help.github.com/articles/cloning-a-repository/) to your local machine.
@@ -40,7 +40,7 @@ You need a cool management tool to manage it.
 ```
 
 ### Details
-We want to build a reliable Admin guide for each version of Portainer. It's essential to explain the details about that configuration/installation or troubleshooting guide. We don't want an easy and simplified guide or tutorial. Don't use acronyms, but if you're using, please, create a link to an explanation about those.
+We want to build a reliable Admin guide for each version of Portainer. It's essential to explain the details about that configuration/installation or troubleshooting guide. We don't want an over-simplified guide or tutorial. Try not to use acronyms, but if you are, please create a link to an explanation about those.
 
 ### Screenshots
 
@@ -48,8 +48,9 @@ Screenshots are welcome. Make sure that you're using the version of Portainer of
 
 ### Doubts and questions.
 
-We're thankful for your contributions; if you have any doubt, please, open an issue to address that doubt or question.
+We're thankful for your contributions; if you have any questions or concerns please feel free to open an issue, contact us via our [slack channel] (https://portainer.slack.com). 
 
-### Something to contribute for this guide?
+#### Doc Contributions
 
-All contributions are thankfully and welcome. If you see improvements to do to this guide, please, create a pull request with the details. 
+We welcome and encourage community contributions.
+For information about contributing to the Portainer documentation, see [Contribution guidelines](contributing.md).

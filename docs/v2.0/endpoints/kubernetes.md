@@ -148,4 +148,4 @@ Once all is set, you must click in <b>Save Configuration</b> button. Congratulat
 
 ## Notes
 
-Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes.
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
