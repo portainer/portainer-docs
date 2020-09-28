@@ -2,7 +2,7 @@
 
 If you are still experiencing issues after reading this FAQ, feel free to contact us via any one of the following channels:
 
-Email: info@portainer.io
+Email: [info@portainer.io
 Slack
 Twitter
 GitHub
