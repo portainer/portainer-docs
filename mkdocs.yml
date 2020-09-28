@@ -39,7 +39,8 @@ nav:
         - 'App Templates' : 'v2.0/settings/apps.md'
       - Advanced Deployments:
         - 'Using Portainer with Reverse Proxies' : 'v2.0/ad/rp.md'
-      - Portainer Deployment Troubleshooting : 'v2.0/troubleshooting/index.md'
+      - Portainer Deployment Troubleshooting : 'v2.0/troubleshooting/troubleshooting.md'
+      - Deprecated and removed features : 'v2.0/troubleshooting/deprecated.md'
     - Portainer CE 2.0 User Guide:
       - Managing Containers:
         - 'Create new container' : 'v2.0/containers/create.md'
