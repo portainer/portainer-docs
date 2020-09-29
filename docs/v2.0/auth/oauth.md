@@ -1,4 +1,4 @@
-# OAth authentication
+# OAuth authentication
 
 Portainer allows that the authentication can be done with OAuth and with this help article, you will see a overview of what's the requirement to configure Portainer CE 2.0 with OAuth. 
 

@@ -38,11 +38,6 @@
 }
 
 
-/** CONTENT BOX **/
-
-
-
-
 
 
 .md-typeset {
@@ -54,7 +49,7 @@
 .md-typeset h1 {
     margin: .5em 0 1.25em;
     color: #323c48;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2.6em;
     line-height: 1.3;
     letter-spacing: -0.01em;
@@ -64,7 +59,7 @@
     margin: 1.6em 0 .64em;
     color: #323c48;
     font-weight: 700;
-    font-size: 1.6em;
+    font-size: 1.7em;
     line-height: 1.4;
     letter-spacing: -0.01em;
 }
@@ -91,26 +86,25 @@
 }
 
 .md-nav__item .md-nav__link--active {
-    color: white;
+    color: white !important;
     background-color: #e86a25;
     border-radius: 0px;
-    padding: .6rem 0 .6rem .6rem;
-	margin:0;
+    padding: 10px;
+    margin-left:-0.6rem;
+    padding-right:0px;
 }
 .md-nav__item .md-nav__link--active:hover {
 	color: white;
 }
 .md-nav__item {
-    margin-bottom:  0.6rem;
+    
     border-top: 1px solid darkgray;
-	padding: 0 .6rem;
-
 }
 
 .md-nav__item--active {
-    margin: 0;
+   
     border-top: 1px solid darkgray;
-	padding: 0 0.6rem;
+    
 
 }
 
@@ -119,12 +113,36 @@
 color: #e86a25;
 }
 
-.md-nav__item--nested>.md-nav__link
-{
-	    margin-bottom:  0.6rem;
-}
+
 
 .md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg
 {
-	width:100%;
+	width:100% !important;
 }
+.md-nav__link
+{
+margin-bottom: 0.4rem !important;
+margin-top: 0.4rem !important;
+}
+
+.md-nav__title .md-nav__button.md-logo img, .md-nav__title .md-nav__button.md-logo svg {
+width: 100%;
+height: 100%;
+}
+
+@media screen and (max-width: 76.1875em) 
+{.md-nav--primary .md-nav__item--active>.md-nav__link {
+
+margin-left:0px;
+
+}
+}
+
+@media screen and (max-width: 76.1875em)
+{
+.md-nav--primary .md-nav__item--active>.md-nav__link:focus, .md-nav--primary .md-nav__item--active>.md-nav__link:hover {
+color: #e86a25;
+
+}
+}
+

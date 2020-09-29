@@ -15,7 +15,7 @@ The Portainer development team is here to assist you on your container journey; 
 ## Support Channels
 
 As the Portainer community continues to grow, we continue to support the community to the best of our ability.  
-Being a free and opensource product, we have been heavily reliant on our community to provide "how to" support to our community, recently we have invested significant time in improving and updating our documentation found on this site. While we endeavour to cover as many scenarios as possible there may be some that our documentation doesn’t cover. 
+Being a free and opensource product, we have been heavily reliant on our community to provide "how to" support to our community, recently we have invested significant time in improving and updating our documentation found on this site and our [YouTube channel](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg). While we endeavour to cover as many scenarios as possible there may be some that our documentation doesn’t cover. 
 
 We strongly encourage posting such questions to the community via the  [Slack channel](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/). While other platforms exist (Reddit, Discord, Stack Overflow) these are monitored much less frequently by the Portainer team.
 
