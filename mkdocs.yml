@@ -59,6 +59,7 @@ nav:
         - 'Create a volume' : 'v2.0/volumes/create.md'
         - 'Attach existent volume' : 'v2.0/volumes/attaching.md'
     - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
+    - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
 extra_css:
     - css/extra.css
 extra_javascript:
