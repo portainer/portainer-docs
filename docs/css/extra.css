@@ -9,7 +9,7 @@
     z-index: 2;
     height: 2.8rem;
     color: var(--md-primary-bg-color);
-    background-color: var(--md-primary-fg-color);
+    background-color: #13bef9;
     box-shadow: 0 0 0.2rem rgba(0,0,0,0), 0 0.2rem 0.4rem rgba(0,0,0,0);
     transition: color 250ms,background-color 250ms;
     padding-top: 5px;

@@ -1,4 +1,4 @@
-# Create/Add a new endpoint trough Portainer API
+# Create/Add a new endpoint through Portainer API
 
 In this help article, you will learn how to add the following type of endpoints trough our API:
 
@@ -12,7 +12,7 @@ The API documentation is available [here](https://app.swaggerhub.com/apis/devian
 
 <b>NOTE:</b> We're using httpie to execute HTTP queries from the CLI.
 
-Once you deploy portainer (see Deploying Portainer section) you need to initialize your admin user.
+Once you have deployed portainer (see [Deploying Portainer](../deploy/requirements.md)) you need to initialize your admin user.
 
 ## Initialize the admin password
 
@@ -28,19 +28,19 @@ The response is a JSON object containing the JWT token inside the jwt field:
   "jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImV4cCI6MTQ5OTM3NjE1NH0.NJ6vE8FY1WG6jsRQzfMqeatJ4vh2TWAeeYfDhP71YEE"
 }</code></pre>
 
-You need to retrieve this token. You will need to pass this token inside the <b>Authorization</b> header when executing an authentication query against the API.
+You need to retrieve this token and pass it into the <b>Authorization</b> header when executing an authentication query against the API.
 
-The value of the <b>Authorization</b> header must be of the form Bearer <code><JWT_TOKEN></code>.
+The value of the <b>Authorization</b> header must be of the form Bearer <code>JWT_TOKEN</code>.
 
 <pre><code>Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImV4cCI6MTQ5OTM3NjE1NH0.NJ6vE8FY1WG6jsRQzfMqeatJ4vh2TWAeeYfDhP71YEE</code></pre>
 
-<b>NOTE:</b> This token has a 8 hour validity, you'll need to generate another token to execute authenticated queries once this one expires.
+<b>NOTE:</b> This token has an 8 hour validity, you'll need to generate another token to execute authenticated queries once this one expires.
 
 ## Local endpoint via the Docker socket
 
-This query will create an endpoint called test-local and will use the Docker socket to communicate with this environment.
+This query will create an endpoint called <b>test-local</b> and will use the Docker socket to communicate with this environment.
 
-<b>NOTE:</b> This example requires to you bind-mount the Docker socket when running Portainer.
+<b>NOTE:</b> This example requires to you bind-mount the Docker socket when running Portainer. Run the following:
 
 <pre><code>$ http --form POST :9000/api/endpoints \
 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImV4cCI6MTQ5OTM3NjE1NH0.NJ6vE8FY1WG6jsRQzfMqeatJ4vh2TWAeeYfDhP71YEE" \
@@ -134,4 +134,4 @@ Retrieve this ID, it will be used to execute queries against the Docker engine f
 
 ## Notes
 
-Do you think that is missing something here? Contribute with this admin guide forking the repo [Portainer-Docs](https://github.com/portainer/portainer-docs) and propose changes.
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).

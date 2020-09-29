@@ -10,7 +10,7 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 
 * [Portainer.io](https://www.portainer.io) or the contact us tool at the bottom right of screen
 
-* email [support@portainer.io](mailto:support@portainer.io)
+* Email [support@portainer.io](mailto:support@portainer.io)
 
 ## How do I reset my Portainer password?
 
