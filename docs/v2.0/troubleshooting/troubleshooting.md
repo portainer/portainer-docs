@@ -6,7 +6,7 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 
 * [GitHub](https://github.com/portainer) to log an issue if you've found a bug
 
-* [Youtube] (https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg) for guided tutorials and updates
+* [Youtube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg) for guided tutorials and updates
 
 * [Portainer.io](https://www.portainer.io) or the contact us tool at the bottom right of screen
 
