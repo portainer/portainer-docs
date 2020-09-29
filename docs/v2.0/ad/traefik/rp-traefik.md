@@ -1,4 +1,4 @@
-# Deploy Portainer behind Traefik Proxy
+  # Deploy Portainer behind Traefik Proxy
 
 [Traefik Proxy](https://traefik.io/traefik/) is a reverse proxy and load balancing solution focused on micro services.
 
@@ -103,6 +103,7 @@ Before deploying, you need to create 2 elements: Networks and volumes.
 <pre><code>$ docker volume create portainer_data</code></pre>
 
 3. Save the below recipe as portainer.yml
+
 <pre><code>version: '3.2'
 
 services:
@@ -175,7 +176,8 @@ networks:
     external: true
 
 volumes:
-   data:</code></pre>
+   data:
+</code></pre>
 
 4. Before you can deploy, you need to customize this labels to match with the URL that you want. 
 
