@@ -1,4 +1,4 @@
-  # Deploy Portainer behind Traefik Proxy
+# Deploy Portainer behind Traefik Proxy
 
 [Traefik Proxy](https://traefik.io/traefik/) is a reverse proxy and load balancing solution focused on micro services.
 
