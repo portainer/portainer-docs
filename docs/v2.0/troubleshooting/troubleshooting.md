@@ -2,25 +2,31 @@
 
 If you are still experiencing issues after reading this FAQ, feel free to contact us via any one of the following channels:
 
-Email: [info@portainer.io](mailto:info@portainer.io)
-[Slack](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/)
-[Twitter](https://twitter.com/portainerio)
-[GitHub](https://github.com/portainer)
-[The Portainer Website](https://www.portainer.io)
+* [Slack](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/) for community support
+
+* [GitHub](https://github.com/portainer) to log an issue if you've found a bug
+
+* [Youtube] (https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg) for guided tutorials and updates
+
+* [Portainer.io](https://www.portainer.io) or the contact us tool at the bottom right of screen
+
+* email [support@portainer.io](mailto:support@portainer.io)
 
 ## How do I reset my Portainer password?
 
-You can however ask another Portainer admin to reset the password for you, or alternatively if it is for the default admin account (from when Portainer was initialized), you can try our [password reset helper tool](https://github.com/portainer/helper-reset-password).
+You can ask another Portainer admin to reset the password for you, or alternatively if it is for the default admin account (from when Portainer was initialized), you can try our [password reset helper tool](https://github.com/portainer/helper-reset-password).
 
 There is an open feature request to bring this functionality inside Portainer, which can be tracked on our [GitHub repository here](https://github.com/portainer/portainer/issues/512).
 
-## Why is my version number not matching the latest version?
+## Why does my version number not match the latest version?
 
-If you have recently updated your version of Portainer, this is an indication that your browser is holding onto the previous version number of Portainer in it’s cache. To properly clear your cache, you will need to go into the browser settings and empty the cache.
+If you have recently updated your version of Portainer, this usually indicates your browser has cached the page. To properly clear your cache, you will need to go into the browser settings and empty the cache.
 
 Note: You can use Ctrl + shift + R on most browsers to load the specific page without cache, however you will need to repeat this on each page of Portainer to load the changes.
 
-## Users have access to an endpoint, but they cannot see anything. Why?
+Please also check you have pulled from the latest repo url. 
+
+## Users have access to an endpoint, but they cannot see anything.
 
 By default all resources inside an endpoint are assigned to administrator only for security reasons. To give non-admin users access you can use the access control widget within each resource to assign users ownership, or you can make the resource public to give all users access.
 

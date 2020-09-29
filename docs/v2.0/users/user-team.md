@@ -1,18 +1,14 @@
 # Add a user to a team
 
-In this help article, you will learn how to add a user to a team.
-
-## Adding a User to a Team
-
-The first step is to do a click in <b>Users</b> settings, do a click in <b>Teams</b> and choose the team that you want to add users.
+First select <b>Users</b> under <b>settings</b>, then select <b>Teams</b> and choose the team that you want to add users to.
 
 ![user-team](assets/userteam1.png)
 
-Click in <b>Add</b> to add that user to the team.
+Click <b>Add</b> next to the user you want to add to the team.
 
 ![user-team](assets/userteam2.png)
 
-It's done. The user is part of the team. You can confirm seeing in the list of Team Members.
+You should now see the user under team members
 
 # Notes
 

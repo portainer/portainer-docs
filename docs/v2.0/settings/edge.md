@@ -6,78 +6,82 @@ Remote devices may be distributed across multiple sites and/or across many diffe
 
 ## Enabling Edge Compute Features
 
-To start to use this features, you need to enable from the Portainer Settings. 
+First you must enable Edge Compute in the Portainer Settings.
 
-Once you logged into Portainer, click in <b>Settings</b> and scroll down to <b>Edge Compute</b> section.
-
-Enable the toogle and click in <b>Save Settings</b>
+1. Click <b>Settings</b> and scroll down to <b>Edge Compute</b> section.
+ 
+2. Enable the toggle and 3. click <b>Save Settings</b>
 
 ![edge](assets/edge_1.png)
 
-After that, you will see that a few options appears in the left column. 
+After that, you will see that a few options appear in the side menu. 
 
 ![edge](assets/edge_2.png)
 
-Now, let's going to walktrough for that options in the following sections.
-
 ## Edge Groups
 
-Edge Groups is a option that enable you to create groups of Edge endpoints based in a manual selection or in a dynamic way trough <b>tags</b>. This feature is very useful when you manage multiple Edge Endpoints in multiple zones.
+Edge Groups allows you to create groups of Edge endpoints based on a manual selection or synamically through <b>tags</b>. This feature is very useful when you manage multiple Edge Endpoints in multiple zones.
 
-To create a group, go to <b>Edge Groups</b> and then a clic in <b>Add Edge Group</b>.
+To create a group, 1. go to <b>Edge Groups</b> and then 2. click <b>Add Edge Group</b>.
 
 ![edge](assets/edge_3.png)
 
-Name the group and pick if you want to make a <b>Static</b> group type selecting Edge endpoints manually or choose Dynamic that automatically associate endpoints to that group trough determined tags.
+1. Enter a <b>Name</b> and then 2. select either <b>Static</b> or <b>Dynamic</b>.
 
-If you choose <b>Static</b>. Select the Endpoints you want to add to that group and do a click in <b>Add edge group</b>.
+### Static
+
+3. Select the Endpoints you want to add to that group 4. These should then appear in the table on the right and finally 5. Click <b>Add edge group</b>
 
 ![edge](assets/edge_4.png)
 
-If you choose <b>Dynamic</b> you can choose two options to match via <b>Tags</b> your Edge endpoints. 
+### Dynamic
+
+3. If you choose <b>Dynamic</b> you must choose between two options to match via <b>Tags</b> your Edge endpoints:
 
 * Partial Match: Associate any endpoint matching at least one of the selected tags. (Each endpoint can have multiple tags).
 * Full Match: Associate any endpoint matching all of the selected tags.
 
-Type the tag and endpoints with that tag will appear in the screen. After that do a click in <b>Add edge group</b>
+4. Type the tag and endpoints with that tag will appear in the screen. Finally, click <b>Add edge group</b>
 
 ![edge](assets/edge_5.png)
 
 ## Edge Stacks
 
-This feature is very powerful because can help you to deploy multiple applications to a multiple endpoints from a single screen and multiple sources.
+This feature allows the deployment of multiple application to multiple endpoints from a single screen and multiple sources.
 
-To start using it. Click in <b>Edge Stacks</b> and then in <b>Add stack</b>.
+1. Select <b>Edge Stacks</b> and then 2. Click <b>Add stack</b>.
 
 ![edge](assets/edge_6.png)
 
-The following step is name your stack and select an or several <b>Edge Groups</b>.
+Next 1. <b>Name</b> your stack and 2. select one or more <b>Edge Groups</b>.
 
-In the <b>Build Methond</b> you need to define how to deploy your app. Several options are available:
+3. In the <b>Build Methond</b> you need to define how to deploy your app from one of these options:
 
 * Web Editor: You can use our web editor to write or paste a docker-compose file. 
 * Upload: Upload a docker-compose.yml file from your computer
 * Repository: Use a git repository where the compose file is. 
 * Template: Use an Edge stack template. 
 
-Once this set, do a click in <b>Deploy stack</b>
+4. Once complete, click <b>Deploy stack</b>
 
 ![edge](assets/edge_7.png)
 
 ## Edge Jobs
 
-This feature is useful to define task to run of multiple Edge endpoints, fox example, backup. 
+This feature is useful to define a task to run on multiple Edge endpoints, for example, backup. 
 
-Go to <b>Edge Jobs</b>, name your job and choose between the following two options:
+Go to <b>Edge Jobs</b>.
+Then 1. Name your job and 2. Choose between the following two options:
 
 * Basic Configuration: Select a date from a calendar
 * Advanced Configuration: Write your own cron rule.
 
-Select if this job is a recurring one and select the job time.
+3. Select if this job is a recurring job and enter the job time.
 
-After that you can use our web editor to write or paste your script directly or upload from your computer. 
+You can then use the web editor to write or paste the script. 
 
-After that selecte in what endpoints you need to run this job and clic in <b>Create edge job</b>
+4. Select the target endpoints
+5. To create and run the job click <b>Create edge job</b>
 
 ![edge](assets/edge_8.png)
 

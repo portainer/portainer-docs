@@ -1,12 +1,12 @@
 # Reset password for the Admin user
 
-Yep, we know, life can be challenging because you forgot or lost your Admin password to access to Portainer. In this help article, you will learn how to do a password reset to the Admin user of Portainer.
+It can happen to anyone, admin passwords get forgoteen and lost all the time. If this ever happens to your Portainer admin, you can follow these steps to reset it.
 
 ## Resetting Admin password in Portainer running as container
 
 Reset the password for the Admin user can be accomplished using our reset [password container helper](https://github.com/portainer/helper-reset-password).
 
-First, we need to stop our Portainer container. We can do this running:
+First, stop the Portainer container by running:
 
 <pre><code>$ docker stop "id-portainer-container"</code></pre>
 
@@ -14,7 +14,7 @@ Run the helper with the following command. Be advised that you need to mount the
 
 <pre><code>$ docker run --rm -v portainer_data:/data portainer/helper-reset-password</code></pre>
 
-If everything works as expected, you will see an output like this:
+If successful, your output should look like this:
 
 <pre><code>2020/06/04 00:13:58 Password successfully updated for user: admin
 2020/06/04 00:13:58 Use the following password to login: &_4#\3^5V8vLTd)E"NWiJBs26G*9HPl1</code></pre>
@@ -33,7 +33,7 @@ Run the helper using the same bind-mount/volume for the data volume:
 
 <pre><code>docker run --rm -v portainer_portainer_data:/data portainer/helper-reset-password</code></pre>
 
-If everything works as expected, you will see an output like this:
+If successful, your output should look like this:
 
 <pre><code>2020/06/04 00:13:58 Password successfully updated for user: admin
 2020/06/04 00:13:58 Use the following password to login: &_4#\3^5V8vLTd)E"NWiJBs26G*9HPl1</code></pre>

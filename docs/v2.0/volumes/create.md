@@ -1,6 +1,6 @@
 # How to create a new volume
 
-Volumes are used to make persistent storage and you will able to manage them from Portainer. Note: Create a standalone volume is supported in a Docker Swarm and Docker Standalone endpoints.
+Volumes are used to make persistent storage that you can manage from Portainer. Note: Create a standalone volume is supported in a Docker Swarm and Docker Standalone endpoints.
 
 In this help article, you will learn how to add/create a new volume.
 

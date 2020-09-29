@@ -4,15 +4,15 @@ The Team Management feature means that you can now assign users into teams, auth
 
 ## Creating a Team
 
-To create a team in Portainer, you need to click in <b>Users</b> and then click in <b>Teams</b>.
+To create a team in Portainer, select <b>Users</b>.
 
 ![team](assets/team1.png)
 
-Type the name of Team and do a click in <b>Create Team</b>.
+Then 1. select <b>Teams</b> 2.Type the name of Team and 3. click <b>Create Team</b>.
 
 ![team](assets/team2.webp)
 
-List all the teams created.
+All teams created are listed
 
 ![team](assets/team3.png)
 

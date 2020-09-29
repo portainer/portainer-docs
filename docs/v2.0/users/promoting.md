@@ -1,20 +1,18 @@
 # How to promote a regular user to administrator
 
-In this help article, you going to see, how to promote a regular user in the administrator of Portainer.
-
-## Promoting a User to Administrator
-
-Go and click in <b>Users</b> and choose what user you want to promote.
+First click <b>Users</b> and select the user you want to promote.
 
 ![promote](assets/promote1.png)
 
-Enable the toggle <b>Administrator</b> in the following image and click in <b>Save</b>.
+Enable the toggle <b>Administrator</b> in the next screen and click <b>Save</b>.
 
 ![promote](assets/promote2.png)
 
-If everything goes well, you must see a confirmation pop up and also the user listed as Admnistrator.
+Confirmation appears at the top right of screen.
 
 ![promote](assets/promote3.png)
+
+The user list now shows the selected user with the administrator role. 
 
 ![promote](assets/promote4.png)
 
