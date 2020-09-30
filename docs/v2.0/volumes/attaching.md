@@ -1,36 +1,35 @@
-# Attach a existent volume to a Container
+# Attach an existing Volume to a Container
 
-Portainer is capable to attach a new volume to a running container and in this help article, you will learn how to do it.
-
-<b>Be advised that this operation destroys the running container and start a new one with the volume attached. Backup your data before doing this operation.</b>
+Portainer can attach a new volume to a running container.
+<b>Be advised that this operation destroys the running container and starts a new one with the volume attached. Backup your data before doing this operation.</b>
 
 ## Attaching a volume
 
-Once you logged in Portainer, you need to go to <b>Containers</b> option and select the <b>container</b> that you want to attach a volume.
+Go to <b>Containers</b> and select the <b>container</b> that you want to attach a volume to.
 
 ![volumes](assets/attach_1.png)
 
-The next step is doing a click in <b>Duplicate/Edit.</b>
+Click <b>Duplicate/Edit.</b>
 
 ![volumes](assets/attach_2.png)
 
-Scroll down to the bottom to the page until the options for this container. Select Volumes and do a click in <b>Map an Additional Volume.</b>
+Scroll down to see the options for this container. Select <b>Volumes</b> and click <b>Map an Additional Volume.</b>
 
 ![volumes](assets/attach_3.png)
 
-The next thing is to type the path in the container, how you can see in this example, for an NGINX container, the path to persist is "/usr/share/nginx/html". Also, we need to specify the volume created.
+Next, type the path in the container, in the example below, for an NGINX container, the path to persist is "/usr/share/nginx/html". We also need to specify the volume created.
 
 ![volumes](assets/attach_4.png)
 
-Is all look good, the only thing you need to is click in <b>Deploy The Container</b>. You will receive the following warning:
+Finally, click <b>Deploy The Container</b>. You will receive the following warning:
 
 ![volumes](assets/attach_5.png)
 
-Is everything worked as expected, you will have a confirmation pop up.
+If successful you will see the confirmation pop up at the top right of screen
 
 ![volumes](assets/attach_6.png)
 
-To confirm, click in your container, scroll down until you see volumes configuration. You will see something like this:
+To confirm the configuration of your container, select it and scroll to the volume configuration, you should see a similar screen to the below:
 
 ![volumes](assets/attach_7.png)
 

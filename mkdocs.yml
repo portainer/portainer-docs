@@ -4,7 +4,7 @@ nav:
     - Portainer CE 2.0 Admin Guide:
       - Deploying Portainer:
         - 'Requirements' : 'v2.0/deploy/requirements.md'
-        - 'CLI options' : 'v2.0/deploy/cli.md'
+        - 'CLI Options' : 'v2.0/deploy/cli.md'
         - 'Deploying on Linux' : 'v2.0/deploy/linux.md'
         - 'Deploying on Windows Server' : 'v2.0/deploy/windowsserver.md'
         - 'Deploying on Windows 10' : 'v2.0/deploy/windows10.md'
@@ -33,7 +33,7 @@ nav:
         - 'Reset Administrator Password' : 'v2.0/users/reset-admin.md'
       - Registries:
         - 'Connect to a Registry' : 'v2.0/registries/connect.md'
-        - 'Enable Docker Hub authentication' : 'v2.0/registries/auth-docker-hub.md'
+        - 'Enable Docker Hub Authentication' : 'v2.0/registries/auth-docker-hub.md'
       - Configuring Settings:
         - 'Security Options' : 'v2.0/settings/security.md'
         - 'Edge Computing' : 'v2.0/settings/edge.md'
@@ -43,21 +43,21 @@ nav:
             - 'Traefik' : 'v2.0/ad/traefik/rp-traefik.md'
             - 'Nginx' : 'v2.0/ad/nginx/rp-nginx.md'
       - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
-      - Deprecated and removed features : 'v2.0/troubleshooting/deprecated.md'
+      - Deprecated and Removed Features : 'v2.0/troubleshooting/deprecated.md'
     - Portainer CE 2.0 User Guide (WIP):
       - Managing Containers:
-        - 'Create new container' : 'v2.0/containers/create.md'
+        - 'Create New Container' : 'v2.0/containers/create.md'
       - Managing Services:
-        - 'Create a new service' : 'v2.0/services/create.md'
-        - 'Scaling a service' : 'v2.0/services/scale.md'
-        - 'View service logs' : 'v2.0/services/logs.md'
-        - 'View status of service tasks' : 'v2.0/services/status.md'
+        - 'Create a New Service' : 'v2.0/services/create.md'
+        - 'Scaling a Service' : 'v2.0/services/scale.md'
+        - 'View Service Logs' : 'v2.0/services/logs.md'
+        - 'Service Task Status' : 'v2.0/services/status.md'
       - Managing Applications:
-        - 'Create a new application' : 'v2.0/apps/create.md'
+        - 'Create a New Application' : 'v2.0/apps/create.md'
       - Managing Volumes:
-        - 'Browse a volume' : 'v2.0/volumes/browse.md'
-        - 'Create a volume' : 'v2.0/volumes/create.md'
-        - 'Attach existent volume' : 'v2.0/volumes/attaching.md'
+        - 'Browse a Volume' : 'v2.0/volumes/browse.md'
+        - 'Create a Volume' : 'v2.0/volumes/create.md'
+        - 'Attach an Existing Volume' : 'v2.0/volumes/attaching.md'
     - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
     - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
 extra_css:

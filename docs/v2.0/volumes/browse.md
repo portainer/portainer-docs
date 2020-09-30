@@ -1,10 +1,10 @@
-# Browse an volume
+# Browse a volume
 
-Portainer is capable of offering you the capability to browse a volume in Docker Swarm nodes. In this help article, you will learn how to do it.
+Portainer allows users to view volumes in Docker Swarm nodes.
 
 ## Browsing a Volume
 
-Once you logged to Portainer, do a click in <b>Volumes</b> option, and then do a click in <b>browse</b> next to the volume you want to explore.
+Click <b>Volumes</b> from the side menu, and then click <b>browse</b> next to the volume you want to explore.
 
 ![volumes](assets/browse_1.png)
 

@@ -1,22 +1,22 @@
-# Scale a service
+# How to scale a service
 
-In this help article, you will learn how to scale your services. This is a powerful feature because, in no time, Portainer allows you to scale your services horizontally.
+This is a powerful feature that allows you to scale your services horizontally.
 
-## Scaling Applications
+## Scaling a Service
 
-Once you logged in Portainer, do a click in <b>Services</b> and then do a click in <b>scale</b>.
+Click in <b>Services</b> and then Click <b>scale</b>.
 
 ![scale](assets/scale_1.png)
 
-Enter the number of replicas you want for this service and click on the <b>check</b>.
+Enter the number of replicas you want for this service and select the <b>check</b>.
 
 ![scale](assets/scale_2.png)
 
-If everything works as expected, you will see the following pop up.
+If successful you will see the green pop up at the top right of screen. 
 
 ![scale](assets/scale_3.png)
 
-After a few seconds (depends on the size of the container), you can refresh this page, and you will see (as this case) three replicas running.
+Refreshing this page will show you the replicas (3 in this case) running, depending on the size of the containers, you may have a slight delay in seeing this.
 
 ![scale](assets/scale_4.png)
 

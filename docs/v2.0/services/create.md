@@ -1,26 +1,31 @@
-# Create a new service
-
-In this help article, you will learn how to deploy a new service. This article applies to Docker Swarm environments.
+# How to Create a new service
 
 The services are collections of containers. In this case, We're going to deploy an NGINX Web Server.
+<b>Note</b>: This article only covers Docker Swarm environments at present. 
 
 ## Creating a new service
 
-Once you logged into Portainer, click in Services and then <b>Add Service</b>.
+Click <b>Services</b> from the side menu and then <b>Add Service</b>.
 
 ![services](assets/create_1.png)
 
-Fill according to your needs. Choose a name for the service, the image you going to use, ask your self if need to be replicated in the same host, or deployed in Global mode (One container on each host).
+Complete the fields:
 
-Also, you need to define how the ports are exposing for that service.
+* Name: Choose a name for the service
+
+* Registry & Image: Select where these are located
+
+* Replicated or Global: Replicated in the same host or deployed Globally with one container in each host
+
+* Ports: define the ports to expose for that service
 
 ![services](assets/create_2.png)
 
-At the bottom of the page, you will see more options to configure your service, if needed, set up according to. If not. Do a click in <b>Create The Service</b>.
+Further settings are available on this screen, once these have been set, click <b>Create The Service</b>.
 
 ![services](assets/create_3.png)
 
-If everything works as expected, you will see your service listed.
+If successful, your service will be listed in the table of services.
 
 ![services](assets/create_4.png)
 
