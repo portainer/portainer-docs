@@ -22,7 +22,7 @@ There is an open feature request to bring this functionality inside Portainer, w
 
 If you have recently updated your version of Portainer, this usually indicates your browser has cached the page. To properly clear your cache, you will need to go into the browser settings and empty the cache.
 
-Note: You can use Ctrl + shift + R on most browsers to load the specific page without cache, however you will need to repeat this on each page of Portainer to load the changes.
+Note: You can use Ctrl + Shift + R on most browsers to load the specific page without cache, however you will need to repeat this on each page of Portainer to load the changes.
 
 Please also check you have pulled from the latest repo url. 
 
