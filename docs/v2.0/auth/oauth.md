@@ -33,6 +33,10 @@ To understand how to enable access to an OAuth Teams and Users, please, refer to
 
 Take a look at the following examples for configuration OAuth using Azure and Google Configuration.
 
+* The client ID, called application ID in the MSFT world.
+* The tenant ID (grayed information in the screenshot), is a GUID specific for your ID.
+* This is just a custom defined name for the URL of Portainer.
+
 ![azure](assets/azure.jpg)
 
 
