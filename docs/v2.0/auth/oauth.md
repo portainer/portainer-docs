@@ -29,6 +29,16 @@ Once that all fields are completed, do a click in <b>Save Settings</b>
 
 To understand how to enable access to an OAuth Teams and Users, please, refer to [this article](/v2.0/endpoints/access).
 
+## Examples
+
+Take a look at the following examples for configuration OAuth using Azure and Google Configuration.
+
+![azure](assets/azure.jpg)
+
+
+![google](assets/google.png)
+
+
 # Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
