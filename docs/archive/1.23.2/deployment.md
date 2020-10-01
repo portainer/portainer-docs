@@ -174,7 +174,7 @@ Portainer.
 
 Here is an example compose file:
 
-``` {.sourceCode .yaml}
+<pre><code>
 version: '2'
 
 services:
@@ -191,7 +191,7 @@ services:
 
 volumes:
   portainer_data:
-```
+</code></pre>
 
 [Click here](https://downloads.portainer.io/docker-compose.yml) to
 download the Compose file.

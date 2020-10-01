@@ -13,7 +13,7 @@ A template element must be a valid [JSON](http://www.json.org/) object.
 
 Example of a container template:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "type": 1,
   "title": "Nginx",
@@ -25,7 +25,7 @@ Example of a container template:
     "443/tcp"
   ]
 }
-```
+</code></pre>
 
 It is composed of multiple fields, some mandatory and some optionals.
 
@@ -66,11 +66,11 @@ This field is **optional**.
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "administrator_only": true
 }
-```
+</code></pre>
 
 ### `name`
 
@@ -100,11 +100,11 @@ This field is **optional**.
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "command": "/bin/bash -c \"echo hello\" && exit 777"
 }
-```
+</code></pre>
 
 ### `env`
 
@@ -119,7 +119,7 @@ This field is **optional**.
 
 Element format:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "name": "the name of the environment variable, as supported in the container image (mandatory)",
   "label": "label for the input in the UI (mandatory unless set is present)",
@@ -128,11 +128,11 @@ Element format:
   "preset": "boolean. If set to true, the UI will not generate an input (optional)",
   "select": "an array of possible values, will generate a select input (optional)"
 }
-```
+</code></pre>
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "env": [
     {
@@ -168,7 +168,7 @@ Example:
     }
   ]
 }
-```
+</code></pre>
 
 ### `network`
 
@@ -180,11 +180,11 @@ This field is **optional**.
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "network": "host"
 }
-```
+</code></pre>
 
 ### `volumes`
 
@@ -201,7 +201,7 @@ This field is **optional**.
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "volumes": [
     {
@@ -214,7 +214,7 @@ Example:
     }
   ]
 }
-```
+</code></pre>
 
 ### `ports`
 
@@ -232,11 +232,11 @@ This field is **optional**.
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "ports": ["8080:80/tcp", "443/tcp"]
 }
-```
+</code></pre>
 
 ### `labels`
 
@@ -248,7 +248,7 @@ This field is **optional**.
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "labels": [
     { "name": "com.example.vendor", "value": "Acme" },
@@ -256,7 +256,7 @@ Example:
     { "name": "com.example.version", "value": "1.0" }
   ]
 }
-```
+</code></pre>
 
 ### `privileged`
 
@@ -265,11 +265,11 @@ default to false if not specified.
 
 This field is **optional**.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "privileged": true
 }
-```
+</code></pre>
 
 ### `interactive`
 
@@ -278,11 +278,11 @@ flags). Boolean, will default to false if not specified.
 
 This field is **optional**.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "interactive": true
 }
-```
+</code></pre>
 
 ### `restart_policy`
 
@@ -296,11 +296,11 @@ following:
 
 This field is **optional**. Will default to `always` if not specified.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "restart_policy": "unless-stopped"
 }
-```
+</code></pre>
 
 ### `hostname`
 
@@ -308,11 +308,11 @@ Set the hostname of the container.
 
 This field is **optional**. Will use Docker default if not specified.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "hostname": "mycontainername"
 }
-```
+</code></pre>
 
 ### `note`
 
@@ -323,11 +323,11 @@ Supports HTML.
 
 This field is **optional**.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "note": "You can use this field to specify extra information. <br/> It supports <b>HTML</b>."
 }
-```
+</code></pre>
 
 ### `platform`
 
@@ -337,11 +337,11 @@ Portainer UI.
 
 This field is **optional**.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "platform": "linux"
 }
-```
+</code></pre>
 
 ### `categories`
 
@@ -351,11 +351,11 @@ categories.
 
 This field is **optional**.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "categories": ["webserver", "open-source"]
 }
-```
+</code></pre>
 
 Stack template definition format
 --------------------------------
@@ -364,7 +364,7 @@ A template element must be a valid [JSON](http://www.json.org/) object.
 
 Example of a stack template:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "type": 2,
   "title": "CockroachDB",
@@ -378,7 +378,7 @@ Example of a stack template:
     "stackfile": "stacks/cockroachdb/docker-stack.yml"
   }
 }
-```
+</code></pre>
 
 It is composed of multiple fields, some mandatory and some optionals.
 
@@ -416,21 +416,21 @@ well as the path to the Compose file inside the repository.
 
 Element format:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "url": "URL of the public git repository (mandatory)",
   "stackfile": "Path to the Compose file inside the repository (mandatory)",
 }
-```
+</code></pre>
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "url": "https://github.com/portainer/templates",
   "stackfile": "stacks/cockroachdb/docker-stack.yml"
 }
-```
+</code></pre>
 
 This field is **mandatory**.
 
@@ -442,11 +442,11 @@ This field is **optional**.
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "administrator_only": true
 }
-```
+</code></pre>
 
 ### `name`
 
@@ -473,7 +473,7 @@ This field is **optional**.
 
 Element format:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "name": "the name of the environment variable, as supported in the container image (mandatory)",
   "label": "label for the input in the UI (mandatory unless set is present)",
@@ -482,11 +482,11 @@ Element format:
   "preset": "boolean. If set to true, the UI will not generate an input (optional)",
   "select": "an array of possible values, will generate a select input (optional)"
 }
-```
+</code></pre>
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "env": [
     {
@@ -522,7 +522,7 @@ Example:
     }
   ]
 }
-```
+</code></pre>
 
 ### `note`
 
@@ -533,11 +533,11 @@ Supports HTML.
 
 This field is **optional**.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "note": "You can use this field to specify extra information. <br/> It supports <b>HTML</b>."
 }
-```
+</code></pre>
 
 ### `platform`
 
@@ -547,11 +547,11 @@ Portainer UI.
 
 This field is **optional**.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "platform": "linux"
 }
-```
+</code></pre>
 
 ### `categories`
 
@@ -561,11 +561,11 @@ categories.
 
 This field is **optional**.
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "categories": ["webserver", "open-source"]
 }
-```
+</code></pre>
 
 Build and host your own templates
 ---------------------------------
@@ -582,13 +582,13 @@ Clone the [Portainer templates
 repository](https://github.com/portainer/templates), edit the templates
 file, build and run the container:
 
-``` {.sourceCode .bash}
+</code></pre> {.sourceCode .bash}
 $ git clone https://github.com/portainer/templates.git portainer-templates
 $ cd portainer-templates
 # Edit the file templates.json
 $ docker build -t portainer-templates .
 $ docker run -d -p "8080:80" portainer-templates
-```
+</code></pre>
 
 Now you can access your templates definitions at
 `http://docker-host:8080/templates.json`.
@@ -596,6 +596,6 @@ Now you can access your templates definitions at
 You can also mount the `templates.json` file inside the container, so
 you can edit the file and see live changes:
 
-``` {.sourceCode .bash}
+</code></pre> {.sourceCode .bash}
 $ docker run -d -p "8080:80" -v "${PWD}/templates.json:/usr/share/nginx/html/templates.json" portainer-templates
-```
+</code></pre>

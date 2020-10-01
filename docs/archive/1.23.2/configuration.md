@@ -14,41 +14,30 @@ encrypted password first.
 
 You can generate the encrypted password with the following command:
 
-``` {.sourceCode .bash}
-$ htpasswd -nb -B admin <password> | cut -d ":" -f 2
-```
+<pre><code>$ htpasswd -nb -B admin <password> | cut -d ":" -f 2</code></pre>
 
 or if your system does not provide htpasswd you can use a docker
 container with the command:
 
-``` {.sourceCode .bash}
-$ docker run --rm httpd:2.4-alpine htpasswd -nbB admin <password> | cut -d ":" -f 2
-```
+<pre><code>$ docker run --rm httpd:2.4-alpine htpasswd -nbB admin "password" | cut -d ":" -f 2</code></pre>
 
-To specify the admin password from the command line, start Portainer
-with the `--admin-password` flag:
+To specify the admin password from the command line, start Portainer with the <code>--admin-password</code> flag:
 
-``` {.sourceCode .bash}
-$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --admin-password='$2y$05$qFHAlNAH0A.6oCDe1/4W.ueCWC/iTfBMXIHBI97QYfMWlMCJ7N.a6'
-```
+<pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --admin-password='$2y$05$qFHAlNAH0A.6oCDe1/4W.ueCWC/iTfBMXIHBI97QYfMWlMCJ7N.a6'</code></pre>
 
 ### `Inside a file`
 
-You can also store the plaintext password inside a file and use the
-`--admin-password-file` flag:
+You can also store the plaintext password inside a file and use the <code>--admin-password-file</code> flag:
 
-``` {.sourceCode .bash}
-# mypassword is plaintext here
-$ echo -n mypassword > /tmp/portainer_password
-$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer --admin-password-file /tmp/portainer_password
-```
+<pre><code>$ echo -n mypassword > /tmp/portainer_password</code></pre>
+
+<pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer --admin-password-file /tmp/portainer_password</code></pre>
 
 This works well with Swarm & Docker secrets too:
 
-``` {.sourceCode .bash}
-# mypassword is plaintext here
-$ echo -n mypassword | docker secret create portainer-pass -
-$ docker service create \
+<pre><code>$ echo -n mypassword | docker secret create portainer-pass -</code></pre>
+
+<pre><code>$ docker service create \
   --name portainer \
   --secret portainer-pass \
   --publish 9000:9000 \
@@ -58,38 +47,35 @@ $ docker service create \
   --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
   portainer/portainer \
   --admin-password-file '/run/secrets/portainer-pass' \
-  -H unix:///var/run/docker.sock
-```
+  -H unix:///var/run/docker.sock</code></pre>
 
-**Note**: This will automatically create an administrator account called
-**admin** with the specified password.
+<b>Note</b>: This will automatically create an administrator account called **admin** with the specified password.
 
 Hiding specific containers
 --------------------------
 
-Portainer allows you to hide containers with a specific label by using
-the `-l` flag.
+Portainer allows you to hide containers with a specific label by using the <code>-l</code> flag.
 
 For example, take a container started with the label *owner=acme* (note
 that this is an example label, you can define your own labels):
 
-``` {.sourceCode .bash}
+<pre><code>
 $ docker run -d --label owner=acme nginx
-```
+</code></pre>
 
 To hide this container, simply add the `-l owner=acme` option on the CLI
 when starting Portainer:
 
-``` {.sourceCode .bash}
+<pre><code>
 $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -l owner=acme
-```
+</code></pre>
 
 Note that the `-l` flag can be repeated multiple times to specify
 multiple labels:
 
-``` {.sourceCode .bash}
+<pre><code>
 $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -l owner=acme -l service=secret
-```
+</code></pre>
 
 Use your own logo
 -----------------
@@ -98,9 +84,9 @@ You do not like our logo? Want to make Portainer more corporate? Don't
 worry, you can easily switch for an external logo (it must be exactly
 155px by 55px) using the `--logo` flag:
 
-``` {.sourceCode .bash}
+<pre><code>
 $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
-```
+</code></pre>
 
 Use your own templates
 ----------------------
@@ -126,25 +112,25 @@ template file on the file-system. By default, it points to
 
 For example, you can mount your own template file inside the container:
 
-``` {.sourceCode .bash}
+<pre><code>
 $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/my/templates.json:/templates.json portainer/portainer
-```
+</code></pre>
 
 Or using the --template-file to specify a specific path to the templates
 file:
 
-``` {.sourceCode .bash}
+<pre><code>
 $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/template/folder:/templates portainer/portainer --template-file /templates/templates.json
-```
+</code></pre>
 
 ### Host your template file
 
 Using the --templates flag you can specify an URL where the template
 file can be accessed via HTTP.
 
-``` {.sourceCode .bash}
+<pre><code>
 $ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --templates http://my-host.my-domain/templates.json
-```
+</code></pre>
 
 For more information about hosting your own template definitions see
 Templates \<templates\>
@@ -161,9 +147,9 @@ and specify the path to the JSON file in the container.
 Note: when using the external endpoint management, endpoint management
 will be disabled in the UI.
 
-``` {.sourceCode .bash}
+<pre><code>
 $ docker run -d -p 9000:9000 -p 8000:8000 -v /tmp/endpoints:/endpoints portainer/portainer --external-endpoints /endpoints/endpoints.json
-```
+</code></pre>
 
 For more information about the endpoint definition format see
 External endpoints \<external\_endpoints\>

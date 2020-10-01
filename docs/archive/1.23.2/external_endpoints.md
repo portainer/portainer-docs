@@ -6,7 +6,7 @@ External endpoint definitions are written in JSON.
 It must consist of an array with every endpoint definition consisting of
 one element.
 
-``` {.sourceCode .json}
+<pre><code>
 [
   {
     "Name": "my-first-endpoint",
@@ -22,7 +22,7 @@ one element.
     "TLSKey": "/tmp/key.pem"
   }
 ]
-```
+</code></pre>
 
 Endpoint definition format
 --------------------------
@@ -31,7 +31,7 @@ An endpoint element must be a valid [JSON](http://www.json.org/) object.
 
 Example:
 
-``` {.sourceCode .json}
+<pre><code>
 {
   "Name": "my-secure-endpoint",
   "URL": "tcp://myendpoint.mydomain:2375",
@@ -40,7 +40,7 @@ Example:
   "TLSCert": "/tmp/cert.pem",
   "TLSKey": "/tmp/key.pem"
 }
-```
+</code></pre>
 
 It is composed of multiple fields, some mandatory and some optionals.
 
