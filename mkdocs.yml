@@ -60,6 +60,18 @@ nav:
         - 'Attach an Existing Volume' : 'v2.0/volumes/attaching.md'
     - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
     - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
+    - Older Releases :
+        - CE 1.23.2 :
+            - 'Agent' : 'archive/1.23.2/agent.md'
+            - 'API' : 'archive/1.23.2/API.md'
+            - 'Configuration' : 'archive/1.23.2/configuration.md'
+            - 'Deployment' : 'archive/1.23.2/deployment.md'
+            - 'External Endpoints' : 'archive/1.23.2/external_endpoints.md'
+            - 'Limitations' : 'archive/1.23.2/limitations.md'
+            - 'Templates' : 'archive/1.23.2/templates.md'
+            - 'Troubleshooting' : 'archive/1.23.2/troubleshooting.md'
+            - 'User Guide' : 'archive/1.23.2/userguide.md'
+            - 'FAQ' : 'archive/1.23.2/faq.md'    
 extra_css:
     - css/extra.css
 extra_javascript:
