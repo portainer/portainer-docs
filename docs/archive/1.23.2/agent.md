@@ -125,7 +125,7 @@ port) inside the Agent URL field.
 
 Alternatively, you can deploy the agent using the following stack:
 
-``` {.sourceCode .yaml}
+<pre><code>
 version: '3.2'
 
 services:
@@ -150,7 +150,7 @@ networks:
   portainer_agent:
     driver: overlay
     attachable: true
-```
+</code></pre>
 
 **Note**: In case you are running only a single Agent cluster in the
 same Swarm overlay network as your Portainer instance, you can just omit
@@ -192,7 +192,7 @@ When deploying the agent as a service:
 
 Via a stack file:
 
-``` {.sourceCode .yaml}
+<pre><code>
 version: '3.2'
 
 services:
@@ -219,7 +219,7 @@ networks:
   portainer_agent:
     driver: overlay
     attachable: true
-```
+</code></pre>
 
 The `AGENT_SECRET` must be specified when deploying Portainer as well:
 
@@ -244,7 +244,7 @@ by:
 
 Example when deploying the agent via a stack file:
 
-``` {.sourceCode .yaml}
+<pre><code>
 version: '3.2'
 
 services:
@@ -272,7 +272,7 @@ networks:
   portainer_agent:
     driver: overlay
     attachable: true
-```
+</code></pre>
 
 ### Available options
 
