@@ -6,6 +6,26 @@ To deploy Portainer within a Kubernetes cluster, you can either use our HELM cha
 
 Note that Portainer CE 2.0 supports Kubernetes version 1.16, 1.17 and 1.18 only.
 
+### Pre-Req Note:
+Portainer requires data persistence, and as a result needs at least one storage-class available to use. Portainer will attempt to use the "default" storage class during deployment. If you do NOT have a storage class tagged as "default" the deployment will likely fail.
+
+You can check if you have a default storage class by running:
+
+<pre><code> > kubectl get sc </code></pre>
+
+and looking for a storage class with (default) after its name:
+
+![defaultsc](assets/defaultsc.png)
+
+If you want to make a storage class the default, you can type the command:
+
+<pre><code> > kubectl patch storageclass <storage-class-name> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}' </code></pre>
+
+and replace <storage-class-name> with the name of your storage class (eg: kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+
+Alternatively, if you are using HELM you can use: 
+<pre><code> --set persistence.storageClass=<storage-class-name> </code></pre>
+
 ### Using Helm
 
 First, add the Portainer helm repo running the following:
