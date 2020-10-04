@@ -16,7 +16,7 @@ correctly on your system.
 The above command should have returned information about Docker running
 on your system. Below is a snippet of what this may look like.
 
-``` {.sourceCode .bash}
+<pre><code>
 $ Client: Docker Engine - Community
     Version:           19.03.3
     API version:       1.40
@@ -25,7 +25,7 @@ $ Client: Docker Engine - Community
     Built:             Tue Oct  8 00:59:59 2019
     OS/Arch:           linux/amd64
     Experimental:      false
-```
+</code></pre>
 
 Ensuring Docker Swarm is configured correctly
 ---------------------------------------------
