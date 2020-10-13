@@ -45,16 +45,19 @@ nav:
       - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
       - Deprecated and Removed Features : 'v2.0/troubleshooting/deprecated.md'
     - Portainer CE 2.0 User Guide (WIP):
-      - Managing Containers:
+      - Stacks:
+        - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
+        - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
+      - Containers:
         - 'Create New Container' : 'v2.0/containers/create.md'
-      - Managing Services:
+      - Services:
         - 'Create a New Service' : 'v2.0/services/create.md'
         - 'Scaling a Service' : 'v2.0/services/scale.md'
         - 'View Service Logs' : 'v2.0/services/logs.md'
         - 'Service Task Status' : 'v2.0/services/status.md'
-      - Managing Applications:
+      - Applications:
         - 'Create a New Application' : 'v2.0/apps/create.md'
-      - Managing Volumes:
+      - Volumes:
         - 'Browse a Volume' : 'v2.0/volumes/browse.md'
         - 'Create a Volume' : 'v2.0/volumes/create.md'
         - 'Attach an Existing Volume' : 'v2.0/volumes/attaching.md'
