@@ -48,6 +48,8 @@ nav:
       - Stacks:
         - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
         - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
+        - 'Duplicate / Migrate Stacks' : 'v2.0/stacks/duplicate_migration.md'
+        - 'Inspect a Stack' : 'v2.0/stacks/inspect.md'
       - Containers:
         - 'Create New Container' : 'v2.0/containers/create.md'
       - Services:
@@ -55,6 +57,8 @@ nav:
         - 'Scaling a Service' : 'v2.0/services/scale.md'
         - 'View Service Logs' : 'v2.0/services/logs.md'
         - 'Service Task Status' : 'v2.0/services/status.md'
+        - 'Configure Service Options' : 'v2.0/services/options.md'
+        - 'Rollback a Service' : 'v2.0/services/rollback.md'
       - Applications:
         - 'Create a New Application' : 'v2.0/apps/create.md'
       - Volumes:
