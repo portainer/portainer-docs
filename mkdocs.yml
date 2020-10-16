@@ -52,6 +52,16 @@ nav:
         - 'Inspect a Stack' : 'v2.0/stacks/inspect.md'
       - Containers:
         - 'Create New Container' : 'v2.0/containers/create.md'
+        - 'Delete/Remove a Container' : 'v2.0/containers/delete.md'
+        - 'Inspect a Container' : 'v2.0/containers/inspect.md'
+        - 'View logs' : 'v2.0/containers/logs.md'
+        - 'View Container stats' : 'v2.0/containers/stats.md'
+        - 'Access container console' : 'v2.0/containers/console.md'
+        - 'Change Container Ownership' : 'v2.0/containers/ownership.md'
+        - 'Duplicated/Edit a Container' : 'v2.0/containers/duplicate-edit.md'
+      - App Templates:
+        - 'Deploy an Stack' : 'v2.0/templates/deploy_stack.md'
+        - 'Deploy an App (Container)' : 'v2.0/templates/deploy_container.md'
       - Services:
         - 'Create a New Service' : 'v2.0/services/create.md'
         - 'Scaling a Service' : 'v2.0/services/scale.md'
