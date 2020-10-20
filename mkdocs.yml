@@ -62,6 +62,14 @@ nav:
       - App Templates:
         - 'Deploy an Stack' : 'v2.0/templates/deploy_stack.md'
         - 'Deploy an App (Container)' : 'v2.0/templates/deploy_container.md'
+      - Images:
+        - 'Pull images' : 'v2.0/images/pull.md'
+        - 'Import images' : 'v2.0/images/import.md'
+        - 'Export images' : 'v2.0/images/export.md'
+        - 'Build images' : 'v2.0/images/build.md'
+      - Networks:
+        - 'Add a Network' : 'v2.0/networks/add.md'
+        - 'Delete a Network' : 'v2.0/networks/delete.md'
       - Services:
         - 'Create a New Service' : 'v2.0/services/create.md'
         - 'Scaling a Service' : 'v2.0/services/scale.md'
@@ -69,12 +77,19 @@ nav:
         - 'Service Task Status' : 'v2.0/services/status.md'
         - 'Configure Service Options' : 'v2.0/services/options.md'
         - 'Rollback a Service' : 'v2.0/services/rollback.md'
-      - Applications:
+      - Applications (Kubernetes):
         - 'Create a New Application' : 'v2.0/apps/create.md'
       - Volumes:
         - 'Browse a Volume' : 'v2.0/volumes/browse.md'
         - 'Create a Volume' : 'v2.0/volumes/create.md'
         - 'Attach an Existing Volume' : 'v2.0/volumes/attaching.md'
+        - 'Delete a Volume' : 'v2.0/volumes/delete.md'
+      - Configs:
+        - 'Add custom configs' : 'v2.0/configs/add.md'
+        - 'Delete configs' : 'v2.0/configs/delete.md'
+      - Secrets:
+        - 'Add a new secret' : 'v2.0/secrets/add.md'
+        - 'Delete secrets' : 'v2.0/secrets/delete.md'
     - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
     - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
     - Older Releases :
