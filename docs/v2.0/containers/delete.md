@@ -1,18 +1,18 @@
 # Delete/Remove a container
 
-In Portainer, you can Remove/Delete containers in a very easy way.
+In Portainer, you can Remove/Delete containers in simply and easily.
 
 ## Deleting Containers
 
-To delete a container, do a click in <b>Containers</b>, then, select the container you want delete and click in <b>Remove</b>
+To delete a container, click <b>Containers</b>, then check the container you want delete and select <b>Remove</b>
 
 ![delete](assets/delete-1.png)
 
-A pop up will be ask for confirmation, also, you need to define if you delete the non persistente volumes, after that, do a click in <b>Remove</b>
+A pop up will ask for confirmation, and ask you decide if you want to <b>automatically the non-persistent volumes</b>. Once you selection has been made, click <b>Remove</b>
 
 ![delete](assets/delete-2.png)
 
-Is everything work as expected, you will see a pop up confirming that the container was removed. 
+If successfully removed, a pop up will confirm this.
 
 ![delete](assets/delete-3.png)
 

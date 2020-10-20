@@ -1,16 +1,16 @@
 # Inspect a Container
 
-You can inspect a container from Portainer is easy and very straight forward way. This feature allows you to view information about your container, for example, networking settings, volumes, images, etc.
+Inspecting a container allows you to view information about your container, such as networking settings, volumes, images, etc.
 
 ## Inspecting a Container
 
-To inspect a container, do a click in <b>Containers</b> and do a click in the icon, select your container and click in <b>Inspect</b>
+To inspect a container, click <b>Containers</b>, select your container and click the <b>Inspect</b> button.
 
 ![inspect](assets/inspect-1.png)
 
 ![inspect](assets/inspect-2.png)
 
-Here, you can view all the information of this container. Do a click in the category you have interest. 
+Here, you can view all the information of this container. Clicking on a category will show more information if available. 
 
 ![inspect](assets/inspect-3.png)
 

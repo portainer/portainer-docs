@@ -1,6 +1,6 @@
 # Change Container Ownership
 
-Sometimes you need to specify the usage of resources to certains teams or users. Portainer can help with this. From our GUI, you will capable to delegate resources to teams and users. Take a look how to do it. 
+Portainer allows you to to limit the usage of resources to certains teams or users from the GUI.
 
 ## Changing Container Ownership
 
@@ -8,7 +8,7 @@ To change your container ownership, click in <b>Containers</b>, pick the contain
 
 ![ownership](assets/ownership-1.png)
 
-Scroll down to the <b>Access Control</b> section and click in <b>Change Ownership</b>. 
+Scroll down to <b>Access Control</b> section and click <b>Change Ownership</b>. 
 
 ![ownership](assets/ownership-2.png)
 
@@ -20,11 +20,11 @@ You will see three options:
 
 ![ownership](assets/ownership-3.png)
 
-After you define the ownership, do a click in <b>Update Ownership</b>. You will see a warning. 
+After you define the ownership, click <b>Update Ownership</b>. You will be presented with a warning:
 
 ![ownership](assets/ownership-4.png)
 
-If everything works as expected, you will see a pop up confirming your action:
+If everything works as expected, you will see a pop up confirming your updates:
 
 ![ownership](assets/ownership-5.png)
 

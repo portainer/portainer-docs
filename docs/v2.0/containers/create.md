@@ -17,7 +17,7 @@ Add details to your container:
 
 * Image: The name of the image you want to deploy
 
-* Ports: expose the desired ports
+* Ports: Expose the desired ports
 
 * Advanced Settings: Many options available here to customise the deploymeny from volume and environment configuration to capabilities
 
@@ -27,7 +27,7 @@ Once complete, click <b>Deploy the Container<b/>.
 ![container](assets/create_3.png)
 
 
-If successful your container will shown in the Container List. 
+If successful your container will be shown in the Container List. 
 
 ![contaier](assets/create_4.png)
 

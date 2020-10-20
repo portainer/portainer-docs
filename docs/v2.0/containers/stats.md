@@ -1,18 +1,18 @@
 # View Container Stats
 
-The stats are very important to understand the resource consumption of yours containers. In Portainer, you will able to watch how much resources is using a specific container. 
+Stats are very important to understand the resource consumption of yours containers. In Portainer, you are able to monitor this from the UI. 
 
 ## Viewing Container Stats
 
-To watch a container stats, do a click in <b>Containers</b>, select the container you want to see the stats.
+First Click <b>Containers</b>, select the container you want to see the stats.
 
 ![stats](assets/inspect-1.png)
 
-Then, do a click in <b>Stats</b>
+Then click <b>Stats</b>
 
 ![stats](assets/stats-1.png)
 
-Here, you can view in a very comprehensive way the consumptions of your container. You will able to see the following stats:
+Here, you can view a very comprehensive list of consumption stats:
 
 * Memory Usage
 * CPU Usage

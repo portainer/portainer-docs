@@ -1,14 +1,20 @@
 # Inspect a Stack
 
-In Portainer, you can inspect your stacks to see where are running or access to their logs and stats. 
+In Portainer, you can inspect your stacks to see what is running or access to their logs and stats. 
 
 ## Inspecting a Stack
 
-To inspect the task associated to your stack, log in in Portainer, do a click in <b>Stacks</b> and then choose what stack you want to inspect.
+To inspect the task associated to your stack, select <b>Stacks</b> and then select the stack you want to inspect.
 
 ![inspect](assets/inspect-1.png)
 
-Here you can view where the service part of this stack are running or stopped, how much replicas running in which host. Also, you can access to logs, inspect of these tasks, stats and even access to the container console.
+Here you can:
+* View what services that make up this stack 
+* If they are running or stopped
+* How many replicas running in each host
+* Access to logs
+* Inspect the task stats
+* Access to the container console
 
 ![inspect](assets/inspect-2.png)
 
