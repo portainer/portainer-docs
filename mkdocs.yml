@@ -44,7 +44,7 @@ nav:
             - 'Nginx' : 'v2.0/ad/nginx/rp-nginx.md'
       - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
       - Deprecated and Removed Features : 'v2.0/troubleshooting/deprecated.md'
-    - Portainer CE 2.0 User Guide (WIP):
+    - Portainer CE 2.0 User Guide:
       - Stacks:
         - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
         - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
