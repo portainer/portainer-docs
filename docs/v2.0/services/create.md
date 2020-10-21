@@ -1,6 +1,7 @@
 # How to Create a new service
 
-The services are collections of containers. In this case, We're going to deploy an NGINX Web Server.
+Services are collections of containers. In this example, ee're going to deploy an NGINX Web Server.
+
 <b>Note</b>: This article only covers Docker Swarm environments at present. 
 
 ## Creating a new service
@@ -21,7 +22,7 @@ Complete the fields:
 
 ![services](assets/create_2.png)
 
-Further settings are available on this screen, once these have been set, click <b>Create The Service</b>.
+Further settings are available on this screen, once these have been set appropriately, click <b>Create The Service</b>.
 
 ![services](assets/create_3.png)
 

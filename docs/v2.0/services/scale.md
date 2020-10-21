@@ -4,11 +4,11 @@ This is a powerful feature that allows you to scale your services horizontally.
 
 ## Scaling a Service
 
-Click in <b>Services</b> and then Click <b>scale</b>.
+Click <b>Services</b> and then Click <b>scale</b>.
 
 ![scale](assets/scale_1.png)
 
-Enter the number of replicas you want for this service and select the <b>check</b>.
+Enter the number of replicas you want for this service and click the <b>check box</b>.
 
 ![scale](assets/scale_2.png)
 

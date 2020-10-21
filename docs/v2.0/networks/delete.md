@@ -1,10 +1,10 @@
 # Delete a Network
 
-From Portainer UI you can delete networks. 
+Portainer allows you to delete networks. 
 
 ## Deleting Networks
 
-To delete a network, do a click in <b>Networks</b>, select the network you want to delete, and do a click in <b>Remove</b>.
+To delete a network, click <b>Networks</b>, select the <b>network</b> you want to delete, and click <b>Remove</b>.
 
 ![delete](assets/delete-1.png)
 

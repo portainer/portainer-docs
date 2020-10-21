@@ -1,18 +1,18 @@
 # Deploy an standalone app (Container)
 
-From Portainer, you will able to deploy an standalone app from the default template list. In this help article, you will learn how to do it. 
+From Portainer, you can deploy a standalone app from the default template list.
 
 ## Deploying an standalone app
 
-To deploy a standalone container from the templates, you need to go to <b>App Templates</b>, enable the toogle <b>Show container templates</b> and pick the app you want to deploy. For this example, I will deploy an Apache Web Server.
+To deploy a standalone container from the templates, you need to go to <b>App Templates</b>, enable the toggle <b>Show container templates</b> and pick the app you want to deploy. For this example, we will deploy an Apache Web Server.
 
 ![templates](assets/container-1.png)
 
-After that, define a name, network, access control if needed, port mapping, volumes and when all is set, do a click in <b>Deploy the Container</b>.
+After that, define a <b>name</b>, <b>network</b>, <b>access control</b> if needed, <b>port mapping</b>, <b>volumes</b> and when all is set, do a click in <b>Deploy the Container</b>.
 
 ![templates](assets/container-2.png)
 
-Meanwhile the container is deployed, you will see an animation in the button.
+You will see an animation in the button while the container is deploying:
 
 ![templates](assets/container-3.png)
 

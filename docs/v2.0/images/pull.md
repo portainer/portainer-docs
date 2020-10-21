@@ -1,30 +1,31 @@
 # Pull Images
 
-From the Portainer UI you can pull images from any registry. This option is only available, at this moment, when you manage Docker and Docker Swarm environments.
+You can pull images from any registry already added to Portainer, see how to [add new registries](/v2./registries/connect/) to Portainer for more information. This option is currently only available, when you manage Docker and Docker Swarm environments.
 
 ## Pulling Images
 
 ### Pulling in Simple Mode
 
-To pull images from Docker Hub or another registry that you connect before in Portainer. Go to <b>Images</b> and then type the name of the image, select the node when the image is going to be downloaded and click in <b>Pull the Image</b>.
+To pull images from Docker Hub or another registry that you have connected before you must do the following:
+Go to <b>Images</b> and then type the <b>name</b> of the image, select the <b>node</b> that will download the image and click <b>Pull the Image</b>.
 
 ![pull](assets/pull-1.png)
 
 ![pull](assets/pull-2.png)
 
-When the image is sucessful downloaded, you will see a pop up at the right top corner.
+When the image is sucessfully downloaded, you will see a pop up at the right top corner.
 
 ![pull](assets/pull-3.png)
 
-To see how to add new registries to Portainer, [click here](/v2./registries/connect/).
-
 ### Pulling in Advanced Mode
 
-Another option to download images is in <b>Advanced Mode</b>. The difference with the <b>Simple Mode</b> is the possibility to define a custom registry URL, port and image. This use case is ideal when you run your own private registry.
+Using <b>Advanced Mode</b> you can define a <b>custom registry URL</b>, <b>port</b> and <b>image</b>. This use case is ideal when you run your own private registry.
 
-To pull images, go to <b>Images</b> click in Advanced Mode and then, define your registry, port and image, also, you need to specify the node where the image is going to be downloaded and do a click in <b>Pull the Image</b>
+To pull images, go to <b>Images</b> click in <b>Advanced Mode</b> and then, define your <b>registry</b>, <b>port</b>, <b>image</b>, and specify the <b>node</b> where the image is going to be downloaded and click <b>Pull the Image</b>
 
 ![pull](assets/pull-4.png)
+
+You will see an animation in the button while the imeage is downloading:
 
 ![pull](assets/pull-2.png)
 

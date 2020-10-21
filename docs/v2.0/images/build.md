@@ -8,23 +8,23 @@ Portainer allows you to create/build new images from a friendly UI. You can defi
 
 ## Building an Image using our web editor
 
-Go to <b>Images</b> and click in <b>Build a new image</b>.
+Go to <b>Images</b> and click <b>Build a new image</b>.
 
 ![build](assets/build-1.png)
 
-In the next screen, you need to define a name for you image and start to write your dockerfile in the editor.
+In the next screen, you need to define a <b>name</b> for your image and start to write your dockerfile in the editor.
 
-<b>Note</b>: You can define multiple names for you image.
+<b>Note</b>: You can define <b>multiple names</b> for you image.
 
 ![build](assets/build-2.png)
 
-When you're ready, scrolldown, select the node you going to save the image and click in <b>Build the image</b>
+When you're ready, scrolldown, select the <b>node</b> you going to save the image to and click <b>Build the image</b>
 
 ![build](assets/build-3.png)
 
 ![build](assets/build-4.png)
 
-When the building process is complete, you need to click in the tab <b>Output</b> and you will see the history of the building and the result. If everything works as expected, you will see something like this at the end of the output:
+When the building process is complete, you need to click in the tab <b>Output</b> and you will see the build history and the result. If everything works as expected, you will see a similar output to this:
 
 ![build](assets/build-5.png)
 

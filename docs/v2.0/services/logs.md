@@ -4,7 +4,7 @@ Service logs are incredibly useful for troubleshooting issues and service behavi
 
 ## Accessing to Service Logs
 
-Click <b>Services</b> and then choose the service you want to view the logs.
+Click <b>Services</b> and then choose the service you want to view the logs for.
 
 ![logs](assets/logs_1.png)
 

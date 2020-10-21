@@ -14,13 +14,13 @@ The environment variables are useful to set configuration at the same time that 
 
 ### Labels
 
-Containers labels can be used to leave notes of that container or specify configuration.
+Container labels can be used to leave notes of that container or specify configuration.
 
 ![options](assets/options-2.png)
 
 ### Mounts
 
-You can mount or bind volumes from Portainer. Also, you can set if that volume needs to set in Read Only. The only thing you need to do is select a created volume, specify the path in container and click in <b>Apply Changes</b>.
+You can mount or bind volumes from Portainer. You can also set if that volume needs to set in <b>Read Only</b>. The only thing you need to do is select a created volume, specify the path in container and click <b>Apply Changes</b>.
 
 ![options](assets/options-3.png)
 
@@ -28,19 +28,19 @@ You can mount or bind volumes from Portainer. Also, you can set if that volume n
 
 ### Networks
 
-You can define one or more networks to you service, even, after of deploy it. You only need to create your network and then, select from the dropdown list. 
+You can define one or more networks for your service; this can even been done after it has been deployed. You only need to <b>create your network</b> and then, select from the dropdown list. 
 
 ![options](assets/options-4.png)
 
 ### Published Ports
 
-Here, you can publish ports to access to this container from outside the host. You can set new or modify the current ports.
+Here, you can publish ports to access this container from outside the host. You can set new or modify the current ports.
 
 ![options](assets/options-5.png)
 
 ### Host file entries
 
-When you need to specify manually a hostname or url, you can set up from here and associated that URL to a internal or external IP Address.
+This is used when you need to manually specify a hostname or url; associat the URL to an internal or external IP Address.
 
 ![options](assets/options-6.png)
 
@@ -48,7 +48,7 @@ When you need to specify manually a hostname or url, you can set up from here an
 
 ### Resource limits and reservations
 
-From Portiner, you can set limitations about the resource utilization, like Memory, CPU Reservation, CPU Limit, etc. 
+From Portainer, you can set limitations about the resource utilization, like Memory, CPU Reservation, CPU Limit, etc. 
 
 ![options](assets/options-7.png)
 
@@ -60,7 +60,7 @@ Use placement constraints to control the nodes a service can be assigned to.
 
 ### Placement preferences
 
-While placement constraints limit the nodes a service can run on, placement preferences try to place tasks on appropriate nodes in an algorithmic way (currently, only spread evenly).
+While placement constraints limit the nodes a service can run on, placement preferences try to place tasks on appropriate nodes in an algorithmic way (currently, this is only spread evenly).
 
 ![options](assets/options-9.png)
 
@@ -74,7 +74,7 @@ The options are the following:
 * On Failure: Restart the container if it exits due to an error, which manifests as a non-zero exit code.
 * None: Do not automatically restart the container.
 
-Also, you can adjust Restart Delay, Max Attempts and Restart Window. 
+You can also adjust Restart Delay, Max Attempts and Restart Window. 
 
 ![options](assets/options-10.png)
 
