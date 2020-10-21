@@ -43,9 +43,9 @@ volumes:
 
 To setup and start working with this recipe, you need to change the VIRTUAL_HOST value. You can then run the following:
 
-<pre><code>$ docker-compose up -d</code></pre>
+<pre><code>docker-compose up -d</code></pre>
 
-Once complete, you will able to run <code>$ docker ps</code> and you will see an output similar to this:
+Once complete, you will able to run <code> docker ps</code> and you will see an output similar to this:
 
 <pre><code>CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                              NAMES
 088da047e931        portainer/portainer-ce:2.0.0   "/portainer -H unix:…"   32 minutes ago       Up 22 minutes        0.0.0.0:8000->8000/tcp, 9000/tcp   nginx-port_portainer_1
@@ -63,13 +63,13 @@ Before deploying, you need to create 2 elements: Networks and volumes.
 
 1. First, create 2 networks for the agent to communicate with Portainer Server and other to "expose" the Portainer container to the same network that as the Reverse Proxy
 
-<pre><code>$ docker network create -d overlay proxy</code></pre>
+<pre><code> docker network create -d overlay proxy</code></pre>
 
-<pre><code>$ docker network create -d agent_network</code></pre>
+<pre><code> docker network create -d agent_network</code></pre>
 
 2. Then create the volume:
 
-<pre><code>$ docker volume create portainer_data</code></pre>
+<pre><code> docker volume create portainer_data</code></pre>
 
 3. Save the below recipe as portainer.yml
 
@@ -137,9 +137,9 @@ volumes:
 
 5. You're now ready to deploy Portainer by executing the following:
 
-<pre><code>$ docker stack deploy portainer -c portainer.yml</code></pre>
+<pre><code> docker stack deploy portainer -c portainer.yml</code></pre>
 
-6. To check the deployment you can run <code>$ docker service ls</code> and you will see an output similar to the following:
+6. To check the deployment you can run <code> docker service ls</code> and you will see an output similar to the following:
 
 <pre><code>ID                  NAME                    MODE                REPLICAS            IMAGE                          PORTS
 gy2bjxid0g4p        portainer_agent         global              1/1                 portainer/agent:latest

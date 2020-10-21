@@ -8,11 +8,11 @@ Reset the password for the Admin user can be accomplished using our reset [passw
 
 First, stop the Portainer container by running:
 
-<pre><code>$ docker stop "id-portainer-container"</code></pre>
+<pre><code> docker stop "id-portainer-container"</code></pre>
 
 Run the helper with the following command. Be advised that you need to mount the Portainer data volume.
 
-<pre><code>$ docker run --rm -v portainer_data:/data portainer/helper-reset-password</code></pre>
+<pre><code> docker run --rm -v portainer_data:/data portainer/helper-reset-password</code></pre>
 
 If successful, your output should look like this:
 

@@ -8,7 +8,7 @@ Portainer allows you to specify a bcrypt encrypted password from the command lin
 
 You can generate the encrypted password with the following command if you have installed apache2-utils package:
 
-<pre><code>$ htpasswd -nb -B admin "your-password" | cut -d ":" -f 2</code></pre>
+<pre><code> htpasswd -nb -B admin "your-password" | cut -d ":" -f 2</code></pre>
 
 If your system does not have the mentioned command, you can run a container to run the command:
 
@@ -23,17 +23,17 @@ You can also store the plaintext password inside a file and use the <code>--admi
 
 Add your password to a file running the following command: 
 
-<pre><code>$ echo -n mypassword > /tmp/portainer_password</code></pre>
+<pre><code> echo -n mypassword > /tmp/portainer_password</code></pre>
 
 Now you can start the Portainer container by running:
 
-<pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ce --admin-password-file /tmp/portainer_password</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ce --admin-password-file /tmp/portainer_password</code></pre>
 
 This works well with Docker Swarm and Docker secrets too:
 
-<pre><code>$ echo -n mypassword | docker secret create portainer-pass -</code></pre>
+<pre><code> echo -n mypassword | docker secret create portainer-pass -</code></pre>
 
-<pre><code>$ docker service create \
+<pre><code> docker service create \
   --name portainer \
   --secret portainer-pass \
   --publish 9000:9000 \
@@ -53,21 +53,21 @@ Portainer allows you to hide containers with a specific label by using the -l fl
 
 For example, take a container started with the label owner=acme (note that this is an example label, you can define your own labels):
 
-<pre><code>$ docker run -d --label owner=acme nginx</code></pre>
+<pre><code> docker run -d --label owner=acme nginx</code></pre>
 
 To hide this container, simply add the -l owner=acme option on the CLI when starting Portainer:
 
-<pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce -l owner=acme</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce -l owner=acme</code></pre>
 
 Note that the -l flag can be repeated multiple times to specify multiple labels:
 
-<pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce -l owner=acme -l service=secret</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce -l owner=acme -l service=secret</code></pre>
 
 ## Use your own logo
 
 You do not like our logo? Want to make Portainer more corporate? Don’t worry, you can easily switch for an external logo (it must be exactly 155px by 55px) using the <code>--logo flag</code>:
 
-<pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"</code></pre>
 This can also be completed via the GUI in the Portaner Settings menu
 
 ## Use your own templates
@@ -80,7 +80,7 @@ Note: at the moment, templates are only loaded once at first Portainer startup. 
 
 Using the <code>--templates</code> flag you can specify an URL where the template file can be accessed via HTTP.
 
-<pre><code>$ docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --templates http://my-host.my-domain/templates.json</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --templates http://my-host.my-domain/templates.json</code></pre>
 
 Suggestion: You can host your template files in [Github](https://www.github.com)
 

@@ -26,8 +26,8 @@ Lastly, you need to restart your Windows Server. After it has restarted, you're 
 
 ### Docker Standalone
 
-<pre><code>$ docker volume create portainer_data</code></pre>
-<pre><code>$ docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce</code></pre>
+<pre><code> docker volume create portainer_data</code></pre>
+<pre><code> docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce</code></pre>
 
 Now, you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.
 
@@ -35,8 +35,8 @@ Now, you can navigate to http://localhost:9000 or the IP of the server and start
 
 You can use our YML manifest to run Portainer in Windows using Windows Containers. In Powershell, run:
 
-<pre><code>$ curl https://downloads.portainer.io/portainer_windows_stack.yml -o portainer_windows_stack.yml</code></pre>
-<pre><code>$ docker stack deploy --compose-file=portainer_windows_stack.yml portainer</code></pre>
+<pre><code> curl https://downloads.portainer.io/portainer_windows_stack.yml -o portainer_windows_stack.yml</code></pre>
+<pre><code> docker stack deploy --compose-file=portainer_windows_stack.yml portainer</code></pre>
 
 Now, you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.
 

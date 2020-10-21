@@ -19,7 +19,7 @@ and looking for a storage class with (default) after its name:
 
 If you want to make a storage class the default, you can type the command:
 
-<pre><code> > kubectl patch storageclass <storage-class-name> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}' </code></pre>
+<pre><code> >kubectl patch storageclass <storage-class-name> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}' </code></pre>
 
 and replace <storage-class-name> with the name of your storage class (eg: kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 
@@ -30,40 +30,40 @@ Alternatively, if you are using HELM you can use:
 
 First, add the Portainer helm repo running the following:
 
-<pre><code>$ helm repo add portainer https://portainer.github.io/k8s/</code></pre>
-<pre><code>$ helm repo update</code></pre>
+<pre><code> helm repo add portainer https://portainer.github.io/k8s/</code></pre>
+<pre><code> helm repo update</code></pre>
 
 Then, create the Portainer namespace in your cluster
 
-<pre><code>$ kubectl create namespace portainer</code></pre>
+<pre><code> kubectl create namespace portainer</code></pre>
 
 #### For NodePort
 
 Using the following command, Portainer will run in the port 30777
 
-<pre><code>$ helm install -n portainer portainer portainer/portainer</code></pre>
+<pre><code> helm install -n portainer portainer portainer/portainer</code></pre>
 
 #### For Load Balancer
 
 Using the following command, Portainer will run in the port 9000.
 
-<pre><code>$ helm install -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
+<pre><code> helm install -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
 
 #### For Ingress
 
-<pre><code>$ helm install -n portainer portainer portainer/portainer --set service.type=ClusterIP</code></pre>
+<pre><code> helm install -n portainer portainer portainer/portainer --set service.type=ClusterIP</code></pre>
 
 ### Using YAML Manifest
 
 First create the Portainer namespace in your cluster
 
-<pre><code>$ kubectl create namespace portainer</code></pre>
+<pre><code> kubectl create namespace portainer</code></pre>
 
 #### For NodePort
 
 Using the following command, Portainer will run in the port 30777
 
-<pre><code>$ kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml</code></pre>
+<pre><code> kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml</code></pre>
 
 #### For Load Balancer
 
@@ -81,16 +81,16 @@ To see the requeriments, please, visit the page of [requirements](/v2.0/deploy/r
 
 Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see portainer and agent scenario below):
 
-<pre><code>$ docker volume create portainer_data</code></pre>
+<pre><code> docker volume create portainer_data</code></pre>
 
-<pre><code>$ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</code></pre>
+<pre><code> docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</code></pre>
 
 ### Docker Swarm
 
 Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.
 
-<pre><code>$ curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml</code></pre>
-<pre><code>$ docker stack deploy -c portainer-agent-stack.yml portainer</code></pre>
+<pre><code> curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml</code></pre>
+<pre><code> docker stack deploy -c portainer-agent-stack.yml portainer</code></pre>
 
 ## Portainer Agent Deployments Only
 
@@ -102,7 +102,7 @@ Run the following command to deploy the Agent in your Docker host.
 ### Docker Swarm
 Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.
 
-<pre><code>$ docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes –-mount type=bind,src=/,dst=/host portainer/agent</code></pre>
+<pre><code> docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes –-mount type=bind,src=/,dst=/host portainer/agent</code></pre>
 
 ## Notes
 

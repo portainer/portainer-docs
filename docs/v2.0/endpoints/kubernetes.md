@@ -32,7 +32,7 @@ deployment.apps/portainer-agent created</code></pre>
 
 To validate if the Agent is running, you can run the following command:
 
-<pre><code>$ kubectl get pods --namespace=portainer</code></pre>
+<pre><code> kubectl get pods --namespace=portainer</code></pre>
 
 The result of that command should be something like this:
 
@@ -103,7 +103,7 @@ deployment.apps/portainer-agent created</code></pre>
 
 To validate is the Agent is running, you can run the following command:
 
-<pre><code>$ kubectl get pods --namespace=portainer</code></pre>
+<pre><code> kubectl get pods --namespace=portainer</code></pre>
 
 The result of that command should be something like this:
 

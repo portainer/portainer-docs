@@ -26,7 +26,7 @@ Creating service portainer-agent_agent</code></pre>
 
 To validate is the Agent is running, you can run the following command:
 
-<pre><code>$ docker service ls</code></pre>
+<pre><code> docker service ls</code></pre>
 
 The result of that command should be something like this:
 
