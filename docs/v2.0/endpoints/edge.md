@@ -117,7 +117,7 @@ Portainer Edge agent successfully deployed</code></pre>
 
 You can validate if the Edge Agent is running in your host executing the following command:
 
-<pre><code>$ kubectl get pods --namespace=portainer</code></pre>
+<pre><code> kubectl get pods --namespace=portainer</code></pre>
 
 After running the command, you can enter the IP address of the host and click in <b>Update Endpoint</b> button.
 

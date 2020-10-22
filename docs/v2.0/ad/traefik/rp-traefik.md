@@ -94,13 +94,13 @@ Before deploying, you need to create 2 elements: Networks and volumes.
 
 1. First, create 2 overlay networks:
 
-<pre><code>$ docker network create -d overlay agent_network</code></pre>
+<pre><code> docker network create -d overlay agent_network</code></pre>
 
-<pre><code>$ docker network create -d overlay public</code></pre>
+<pre><code> docker network create -d overlay public</code></pre>
 
 2. Then create the volume:
 
-<pre><code>$ docker volume create portainer_data</code></pre>
+<pre><code> docker volume create portainer_data</code></pre>
 
 3. Save the below recipe as portainer.yml
 
@@ -187,9 +187,9 @@ volumes:
 
 5. You're now ready to deploy Portainer by executing the following:
 
-<pre><code>$ docker stack deploy portainer -c portainer.yml</code></pre>
+<pre><code> docker stack deploy portainer -c portainer.yml</code></pre>
 
-6. To check the deployment you can run <code>$ docker service ls</code> and you will see an output similar to the following:
+6. To check the deployment you can run <code> docker service ls</code> and you will see an output similar to the following:
 
 <pre><code>ID                  NAME                  MODE                REPLICAS            IMAGE                          PORTS
 lt21zrypsll6        portainer_agent       global              1/1                 portainer/agent:latest

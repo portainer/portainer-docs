@@ -16,11 +16,11 @@ Once you have deployed portainer (see [Deploying Portainer](../deploy/requiremen
 
 ## Initialize the admin password
 
-<pre><code>$ http POST :9000/api/users/admin/init Username="admin" Password="adminpassword"</code></pre>
+<pre><code> http POST :9000/api/users/admin/init Username="admin" Password="adminpassword"</code></pre>
 
 ## Authenticate against the API using the admin account
 
-<pre><code>$ http POST :9000/api/auth Username="admin" Password="adminpassword"</code></pre>
+<pre><code> http POST :9000/api/auth Username="admin" Password="adminpassword"</code></pre>
 
 The response is a JSON object containing the JWT token inside the jwt field:
 
@@ -42,7 +42,7 @@ This query will create an endpoint called <b>test-local</b> and will use the Doc
 
 <b>NOTE:</b> This example requires to you bind-mount the Docker socket when running Portainer. Run the following:
 
-<pre><code>$ http --form POST :9000/api/endpoints \
+<pre><code> http --form POST :9000/api/endpoints \
 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImV4cCI6MTQ5OTM3NjE1NH0.NJ6vE8FY1WG6jsRQzfMqeatJ4vh2TWAeeYfDhP71YEE" \
 Name="test-local" EndpointType=1</code></pre>
 
@@ -73,7 +73,7 @@ This query will create an endpoint called <b>test-remote</b> and will communicat
 
 <b>NOTE:</b> The Docker API must be exposed on that IP address & port. Please refer to the Docker documentation to check how to configure this.
 
-<pre><code>$ http --form POST :9000/api/endpoints \
+<pre><code> http --form POST :9000/api/endpoints \
 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImV4cCI6MTQ5OTM3NjE1NH0.NJ6vE8FY1WG6jsRQzfMqeatJ4vh2TWAeeYfDhP71YEE" \
 Name="test-remote" URL="tcp://10.0.7.10:2375" EndpointType=1</code></pre>
 
@@ -104,7 +104,7 @@ This query will create an endpoint called <b>test-remote-tls</b> and will commun
 
 <b>NOTE:</b> The Docker API must be exposed on that IP address & port. Please refer to the Docker documentation to check how to configure this.
 
-<pre><code>$ http --form POST :9000/api/endpoints \
+<pre><code> http --form POST :9000/api/endpoints \
 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImV4cCI6MTQ5OTM3NjE1NH0.NJ6vE8FY1WG6jsRQzfMqeatJ4vh2TWAeeYfDhP71YEE" \
 Name="test-remote" URL="tcp://10.0.7.10:2376" EndpointType=1 TLS="true" TLSCACertFile@/path/to/ca.pem TLSCertFile@/path/to/cert.pem TLSKeyFile@/path/to/key.pem</code></pre>
 
