@@ -45,55 +45,78 @@ nav:
       - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
       - Deprecated and Removed Features : 'v2.0/troubleshooting/deprecated.md'
     - Portainer CE 2.0 User Guide:
-      - Stacks:
-        - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
-        - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
-        - 'Duplicate / Migrate Stacks' : 'v2.0/stacks/duplicate_migration.md'
-        - 'Inspect a Stack' : 'v2.0/stacks/inspect.md'
-      - Containers:
-        - 'Create New Container' : 'v2.0/containers/create.md'
-        - 'Delete/Remove a Container' : 'v2.0/containers/delete.md'
-        - 'Inspect a Container' : 'v2.0/containers/inspect.md'
-        - 'View logs' : 'v2.0/containers/logs.md'
-        - 'View Container stats' : 'v2.0/containers/stats.md'
-        - 'Access container console' : 'v2.0/containers/console.md'
-        - 'Change Container Ownership' : 'v2.0/containers/ownership.md'
-        - 'Duplicated/Edit a Container' : 'v2.0/containers/duplicate-edit.md'
-      - App Templates:
-        - 'Deploy an Stack' : 'v2.0/templates/deploy_stack.md'
-        - 'Deploy an App (Container)' : 'v2.0/templates/deploy_container.md'
-      - Images:
-        - 'Pull images' : 'v2.0/images/pull.md'
-        - 'Import images' : 'v2.0/images/import.md'
-        - 'Export images' : 'v2.0/images/export.md'
-        - 'Build images' : 'v2.0/images/build.md'
-      - Networks:
-        - 'Add a Network' : 'v2.0/networks/add.md'
-        - 'Delete a Network' : 'v2.0/networks/delete.md'
-      - Services:
-        - 'Create a New Service' : 'v2.0/services/create.md'
-        - 'Scaling a Service' : 'v2.0/services/scale.md'
-        - 'View Service Logs' : 'v2.0/services/logs.md'
-        - 'Service Task Status' : 'v2.0/services/status.md'
-        - 'Configure Service Options' : 'v2.0/services/options.md'
-        - 'Rollback a Service' : 'v2.0/services/rollback.md'
-      - Applications (Kubernetes):
-        - 'Create a New Application' : 'v2.0/apps/create.md'
-      - Volumes:
-        - 'Browse a Volume' : 'v2.0/volumes/browse.md'
-        - 'Create a Volume' : 'v2.0/volumes/create.md'
-        - 'Attach an Existing Volume' : 'v2.0/volumes/attaching.md'
-        - 'Delete a Volume' : 'v2.0/volumes/delete.md'
-      - Configs:
-        - 'Add custom configs' : 'v2.0/configs/add.md'
-        - 'Delete configs' : 'v2.0/configs/delete.md'
-      - Secrets:
-        - 'Add a new secret' : 'v2.0/secrets/add.md'
-        - 'Delete secrets' : 'v2.0/secrets/delete.md'
+      - Docker & Docker Swarm:
+        - 'Stacks':
+          - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
+          - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
+          - 'Duplicate / Migrate Stacks' : 'v2.0/stacks/duplicate_migration.md'
+          - 'Inspect a Stack' : 'v2.0/stacks/inspect.md'
+        - 'Containers':
+          - 'Create New Container' : 'v2.0/containers/create.md'
+          - 'Delete/Remove a Container' : 'v2.0/containers/delete.md'
+          - 'Inspect a Container' : 'v2.0/containers/inspect.md'
+          - 'View logs' : 'v2.0/containers/logs.md'
+          - 'View Container stats' : 'v2.0/containers/stats.md'
+          - 'Access container console' : 'v2.0/containers/console.md'
+          - 'Change Container Ownership' : 'v2.0/containers/ownership.md'
+          - 'Duplicated/Edit a Container' : 'v2.0/containers/duplicate-edit.md'
+        - 'App Templates':
+          - 'Deploy an Stack' : 'v2.0/templates/deploy_stack.md'
+          - 'Deploy an App (Container)' : 'v2.0/templates/deploy_container.md'
+        - 'Images':
+          - 'Pull images' : 'v2.0/images/pull.md'
+          - 'Import images' : 'v2.0/images/import.md'
+          - 'Export images' : 'v2.0/images/export.md'
+          - 'Build images' : 'v2.0/images/build.md'
+        - 'Networks':
+          - 'Add a Network' : 'v2.0/networks/add.md'
+          - 'Delete a Network' : 'v2.0/networks/delete.md'
+        - 'Services':
+          - 'Create a New Service' : 'v2.0/services/create.md'
+          - 'Scaling a Service' : 'v2.0/services/scale.md'
+          - 'View Service Logs' : 'v2.0/services/logs.md'
+          - 'Service Task Status' : 'v2.0/services/status.md'
+          - 'Configure Service Options' : 'v2.0/services/options.md'
+          - 'Rollback a Service' : 'v2.0/services/rollback.md'
+        - 'Volumes':
+          - 'Browse a Volume' : 'v2.0/volumes/browse.md'
+          - 'Create a Volume' : 'v2.0/volumes/create.md'
+          - 'Attach an Existing Volume' : 'v2.0/volumes/attaching.md'
+          - 'Delete a Volume' : 'v2.0/volumes/delete.md'
+        - 'Configs':
+          - 'Add custom configs' : 'v2.0/configs/add.md'
+          - 'Delete configs' : 'v2.0/configs/delete.md'
+        - 'Secrets':
+          - 'Add a new secret' : 'v2.0/secrets/add.md'
+          - 'Delete secrets' : 'v2.0/secrets/delete.md'
+      - Kubernetes:
+        - 'Applications':
+          - 'Deploy a new application' : 'v2.0/kubernetes/applications/create.md'
+          - 'Deploy from a Kubernetes Manifest' : 'v2.0/kubernetes/applications/manifest.md'
+          - 'Delete an Application' : 'v2.0/kubernetes/applications/delete.md'
+          - 'Inspect an Application' : 'v2.0/kubernetes/applications/inspect.md'
+        - 'Resource Pools':
+          - 'Create a Resource Pool' : 'v2.0/kubernetes/resource_pools/create.md'
+          - 'Manage Access' : 'v2.0/kubernetes/resource_pools/access.md'
+          - 'Delete a Resource Pool' : 'v2.0/kubernetes/resource_pools/delete.md'
+        - 'Volumes':
+          - 'Inspect a volume' : 'v2.0/kubernetes/volumes/inspect.md'
+          - 'Remove a volume' : 'v2.0/kubernetes/volumes/remove.md'
+          - 'Inspect and increase local volume' : 'v2.0/kubernetes/volumes/increase.md'
+        - 'Configurations':
+          - 'Add a configuration' : 'v2.0/kubernetes/configurations/add.md'
+          - 'Remove a configuration' : 'v2.0/kubernetes/configurations/remove.md'
+        - 'Cluster':
+          - 'Inspect cluster' : 'v2.0/kubernetes/cluster/inspect.md'
+          - 'Add Labels' : 'v2.0/kubernetes/cluster/labels.md'
+      - ACI:
+        - 'About ACI' : 'v2.0/aci/aci.md'
+        - 'Add New Container': 'v2.0/aci/add_container.md'
+        - 'Delete a Container': 'v2.0/aci/delete_container.md'
     - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
     - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
-    - Older Releases :
-        - CE 1.23.2 :
+    - Older Releases:
+        - CE 1.23.2:
             - 'Agent' : 'archive/1.23.2/agent.md'
             - 'API' : 'archive/1.23.2/API.md'
             - 'Configuration' : 'archive/1.23.2/configuration.md'
