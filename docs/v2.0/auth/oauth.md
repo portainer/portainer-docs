@@ -31,7 +31,7 @@ To understand how to enable access to an OAuth Teams and Users, please, refer to
 
 ## Examples
 
-Take a look at the following examples for configuration OAuth using Azure and Google Configuration.
+Take a look at the following examples for configuration OAuth using Azure, Google and Github configuration.
 
 * The client ID, called application ID in the MSFT world.
 * The tenant ID (grayed information in the screenshot), is a GUID specific for your ID.
@@ -41,6 +41,9 @@ Take a look at the following examples for configuration OAuth using Azure and Go
 
 
 ![google](assets/google.png)
+
+
+![github](assets/github.jpg)
 
 
 # Notes
