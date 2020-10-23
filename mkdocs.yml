@@ -101,14 +101,13 @@ nav:
           - 'Delete a Resource Pool' : 'v2.0/kubernetes/resource_pools/delete.md'
         - 'Volumes':
           - 'Inspect a volume' : 'v2.0/kubernetes/volumes/inspect.md'
+          - 'Resize a volume' : 'v2.0/kubernetes/volumes/resize.md'
           - 'Remove a volume' : 'v2.0/kubernetes/volumes/remove.md'
-          - 'Inspect and increase local volume' : 'v2.0/kubernetes/volumes/increase.md'
         - 'Configurations':
           - 'Add a configuration' : 'v2.0/kubernetes/configurations/add.md'
           - 'Remove a configuration' : 'v2.0/kubernetes/configurations/remove.md'
         - 'Cluster':
           - 'Inspect cluster' : 'v2.0/kubernetes/cluster/inspect.md'
-          - 'Add Labels' : 'v2.0/kubernetes/cluster/labels.md'
       - ACI:
         - 'About ACI' : 'v2.0/aci/aci.md'
         - 'Add New Container': 'v2.0/aci/add_container.md'
