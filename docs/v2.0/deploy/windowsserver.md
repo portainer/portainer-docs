@@ -48,6 +48,14 @@ To run Portainer Agent in a Windows Container scenario, you need to execute the 
 
 <pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent</code></pre>
 
+### Docker Swarm
+
+```curl -L https://downloads.portainer.io/win-agent.yml -o win-agent.yml```
+
+```docker stack deploy --compose-file=win-agent.yml portainer-agent```
+
+Then you just connect to one IP of the remote cluster on port 9001.
+
 ## Notes
 
 These deployments were tested in Windows Server 2019 2004 edition. To use Windows Containers, you need to run Windows Server 2019 ver 1803 or newest.

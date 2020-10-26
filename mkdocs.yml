@@ -45,7 +45,7 @@ nav:
       - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
       - Deprecated and Removed Features : 'v2.0/troubleshooting/deprecated.md'
     - Portainer CE 2.0 User Guide:
-      - Docker & Docker Swarm:
+      - Docker, Docker Swarm and Edge:
         - 'Stacks':
           - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
           - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
@@ -89,6 +89,8 @@ nav:
         - 'Secrets':
           - 'Add a new secret' : 'v2.0/secrets/add.md'
           - 'Delete secrets' : 'v2.0/secrets/delete.md'
+        - 'Edge Jobs' :
+          - 'Add a Job' : 'v2.0/edge/jobs/add.md'
       - Kubernetes:
         - 'Applications':
           - 'Deploy a new application' : 'v2.0/kubernetes/applications/create.md'
@@ -110,8 +112,8 @@ nav:
           - 'Inspect cluster' : 'v2.0/kubernetes/cluster/inspect.md'
       - ACI:
         - 'About ACI' : 'v2.0/aci/aci.md'
-        - 'Add New Container': 'v2.0/aci/add_container.md'
-        - 'Delete a Container': 'v2.0/aci/delete_container.md'
+        - 'Add New Container' : 'v2.0/aci/add_container.md'
+        - 'Delete a Container' : 'v2.0/aci/delete_container.md'
     - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
     - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
     - Older Releases:
