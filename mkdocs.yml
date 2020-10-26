@@ -36,7 +36,7 @@ nav:
         - 'Enable Docker Hub Authentication' : 'v2.0/registries/auth-docker-hub.md'
       - Configuring Settings:
         - 'Security Options' : 'v2.0/settings/security.md'
-        - 'Edge Computing' : 'v2.0/settings/edge.md'
+        - 'Enable Edge Computing' : 'v2.0/settings/edge.md'
         - 'App Templates' : 'v2.0/settings/apps.md'
       - Advanced Deployments:
         - 'Using Portainer with Reverse Proxies':
@@ -45,7 +45,7 @@ nav:
       - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
       - Deprecated and Removed Features : 'v2.0/troubleshooting/deprecated.md'
     - Portainer CE 2.0 User Guide:
-      - Docker, Docker Swarm and Edge:
+      - Docker & Docker Swarm:
         - 'Stacks':
           - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
           - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
@@ -89,8 +89,6 @@ nav:
         - 'Secrets':
           - 'Add a new secret' : 'v2.0/secrets/add.md'
           - 'Delete secrets' : 'v2.0/secrets/delete.md'
-        - 'Edge Jobs' :
-          - 'Add a Job' : 'v2.0/edge/jobs/add.md'
       - Kubernetes:
         - 'Applications':
           - 'Deploy a new application' : 'v2.0/kubernetes/applications/create.md'
@@ -106,7 +104,7 @@ nav:
           - 'Resize a volume' : 'v2.0/kubernetes/volumes/resize.md'
           - 'Remove a volume' : 'v2.0/kubernetes/volumes/remove.md'
         - 'Configurations':
-          - 'Add a configuration' : 'v2.0/kubernetes/configurations/add.md'
+          - 'Add a configuration' : 'v2.0/kubernetes/configurations/create.md'
           - 'Remove a configuration' : 'v2.0/kubernetes/configurations/remove.md'
         - 'Cluster':
           - 'Inspect cluster' : 'v2.0/kubernetes/cluster/inspect.md'
@@ -114,6 +112,10 @@ nav:
         - 'About ACI' : 'v2.0/aci/aci.md'
         - 'Add New Container' : 'v2.0/aci/add_container.md'
         - 'Delete a Container' : 'v2.0/aci/delete_container.md'
+      - Edge:
+        - 'Add a Stack' : 'v2.0/edge/stacks.md'
+        - 'Add a Job' : 'v2.0/edge/jobs/add.md'
+        - 'Managing Edge Groups' : 'v2.0/edge/groups.md'
     - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
     - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
     - Older Releases:
