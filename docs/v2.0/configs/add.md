@@ -4,7 +4,7 @@ Docker 17.06 introduces swarm service configs, which allow you to store non-sens
 
 ## Adding Configs
 
-To add configs to Portainer do a click in <b>Configs</b> and then in <b>Add config</b>.
+To add configs to Portainer click <b>Configs</b> and then <b>Add config</b>.
 
 ![configs](assets/configs-1.png)
 
@@ -12,7 +12,7 @@ Then, in the Editor, you need to write your configuration. In this example, you 
 
 Once this config is defined, you can add labels and/or manage access control of this config. 
 
-When everything is set, do a click in <b>Create config</b>.
+When everything is set, click <b>Create config</b>.
 
 ![configs](assets/configs-2.png)
 

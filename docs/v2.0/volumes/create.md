@@ -1,7 +1,7 @@
 # How to create a new volume
 
 Volumes are used to make persistent storage that you can manage from Portainer. 
-Note: Create a standalone volume is only supported in a Docker Swarm and Docker Standalone endpoints.
+Note: Creating a standalone volume is only supported in a Docker Swarm and Docker Standalone endpoints.
 
 ## Creating a LOCAL volume
 
@@ -22,7 +22,7 @@ Once complete, click <b>Create the Volume</b>.
 
 ## Creating an NFS volume
 
-In Portainer, you can mount a NFS volume to persist the data of your containers. To achieve this, go to <b>Volumes</b> and then click <b>Create Volume.</b>
+In Portainer, you can mount an NFS volume to persist the data of your containers. To achieve this, go to <b>Volumes</b> and then click <b>Create Volume.</b>
 
 ![volumes](assets/create_1.png)
 

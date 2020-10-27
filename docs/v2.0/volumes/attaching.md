@@ -1,7 +1,7 @@
 # Attach an existing Volume to a Container
 
 Portainer can attach a new volume to a running container.
-<b>Be advised that this operation destroys the running container and starts a new one with the volume attached. Backup your data before doing this operation.</b>
+<b>Be advised that this operation destroys the running container and starts a new one with the volume attached. Backup your data before doing this.</b>
 
 ## Attaching a volume
 
@@ -25,7 +25,7 @@ Finally, click <b>Deploy The Container</b>. You will receive the following warni
 
 ![volumes](assets/attach_5.png)
 
-If successful you will see the confirmation pop up at the top right of screen
+If successful you will see the confirmation pop up at the top right of screen.
 
 ![volumes](assets/attach_6.png)
 

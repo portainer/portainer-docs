@@ -1,10 +1,10 @@
 # Delete a Volume
 
-From Portainer UI you can delete a volume. Note that all the content inside that the volume is going to be erased.
+From Portainer you can delete a volume. Note that all the content inside the deleted volume will be erased.
 
 ## Deleting a Volume
 
-Go to <b>Volumes</b>, select the volume you want remove, and do a click in <b>Remove</b>. 
+Go to <b>Volumes</b>, select the volume you want remove, and click <b>Remove</b>. 
 
 ![delete](assets/delete-1.png)
 

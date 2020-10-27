@@ -1,10 +1,10 @@
 # Delete a configuration
 
-From Portainer GUI, you can delete configurations created before.
+From Portainer, you can delete configurations created previously.
 
 ## Deleting a configuration
 
-Go to <b>Configurations</b>, select the configuration and then, do a click in <b>Remove</b>.
+Go to <b>Configurations</b>, select the configuration and then, click <b>Remove</b>.
 
 ![remove](assets/remove-1.png)
 

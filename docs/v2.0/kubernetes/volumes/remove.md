@@ -1,46 +1,46 @@
 # Remove a Volume
 
-In portainer you will able to remove volumes. Be avised that the volume need to be unattached from any container.
+In portainer you can remove volumes, but please note the volume needs to be unattached from any container beforehand.
 
 ## Unattaching a volume from a container
 
-To remove the volume that is attached to a container, go to <b>Applications</b>, select the App.
+To remove the volume that is attached to a container, go to <b>Applications</b> and select the App.
 
 ![volumes](assets/remove-1.png)
 
-Do a click in <b>Edit this application</b>.
+Click <b>Edit this application</b>.
 
 ![volumes](assets/remove-2.png)
 
-Scroll down to the section <b>Persisting Data</b>, do a click in the trash basket icon. 
+Scroll down to the section <b>Persisting Data</b> anc click the trash basket icon. 
 
 ![volumes](assets/remove-3.png)
 
-You will see the volume labeled.
+You will see the volume label with a strikethough effect.
 
 ![volumes](assets/remove-4.png)
 
-Scroll down and do a click in <b>Update Application</b>.
+Scroll down anc click <b>Update Application</b>.
 
 ![volumes](assets/remove-5.png)
 
-You will see a warning about this action. If you're sure about, do a click in <b>Update</b>.
+A warning will pop up. Click <b>Update</b> to confirm.
 
 ![volumes](assets/remove-6.png)
 
 # Removing a Volume
 
-If you volume are free, now, you can delete it. 
+If your volume is free you can delete it. 
 
-To do this, do a click in <b>Volumes</b>, select the volume you want delete, and a click in <b>Remove</b>.
+First click <b>Volumes</b>, select the volume you want delete, and click <b>Remove</b>.
 
 ![volumes](assets/remove-7.png)
 
-You will asked for confirmation, if you're sure do a click in <b>Remove</b>.
+You will be asked for confirmation, click <b>Remove</b> to confirm.
 
 ![volumes](assets/remove-8.png)
 
-If everything work as expected, you will see a pop up confirmating this action:
+If everything works as expected, you will see a pop up confirmating this action:
 
 ![volumes](assets/remove-9.png)
 

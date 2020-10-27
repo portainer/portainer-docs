@@ -12,11 +12,11 @@ You can use secrets to manage any sensitive data which a container needs at runt
 
 ## Creating a Secret
 
-To create a secret in Portainer, go to <b>Secrets</b> and click in <b>Add Secret</b>.
+To create a secret in Portainer, go to <b>Secrets</b> and click <b>Add Secret</b>.
 
 ![secrets](assets/secret-1.png)
 
-In the next screen, you need to set a name for you secret, define the 'secret', choose if you need to encode that secret, this is useful when you set a password in plain text and do a click in <b>Create the secret</b>.
+In the next screen, you need to set a <b>name</b> for you secret, define the <b>'secret'</b>, choose if you need to encode that secret, (this is useful when you set a password in plain text) and click <b>Create the secret</b>.
 
 ![secrets](assets/secret-2.png)
 

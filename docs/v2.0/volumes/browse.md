@@ -8,7 +8,7 @@ Click <b>Volumes</b> from the side menu, and then click <b>browse</b> next to th
 
 ![volumes](assets/browse_1.png)
 
-From this screen, you can upload files to this volume and expose it to the container quickly and without using any CLI.
+From this screen, you can upload files to this volume and expose it to the container quickly and without using a CLI.
 
 ![volumes](assets/browse_2.png)
 

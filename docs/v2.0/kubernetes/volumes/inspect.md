@@ -1,30 +1,30 @@
 # Inspect a volume
 
-In Portainer, you will capable to inspect volumes that you mounted in Kubernetes Pod.
+In Portainer, you can inspect volumes that you mounted in a Kubernetes Pod.
 
 ## Inspecting a Volume
 
-To inspect a volume, go to <b>Volumes</b> and the choose the volume you want inspect.
+Go to <b>Volumes</b> and then choose the volume you want inspect.
 
-In a first view, you will able to see the following data:
+In the first view, you will see the following data:
 
 * Resource pool where this volume was saved
-* Used By: Name of the app that's using the volume
+* Used By: Name of the app that is using the volume
 * Storage: What is the storage
 * Size  
-* Created: Information about who and when was created.
+* Created: Information about who and when it was created.
 
 ![volumes](assets/inspect-1.png)
 
-After you click in the volume, you will see three tabs, in the first one, you will information about the volume itself.
+After select the volume, you will see three tabs, in the first one, you will information about the volume itself.
 
 ![volumes](assets/inspect-2.png)
 
-In the tab <b>events</b>, you will see the events related to this volume:
+In the <b>events</b> tab you will see the events related to this volume:
 
 ![volumes](assets/inspect-3.png)
 
-And the YAML tab, you will see the configuration of this volume in YAML format. From this tab, you can copy the content and save in a file. 
+And the YAML tab you will see the configuration of this volume in YAML format. From this tab, you can copy and save the content as a backup.
 
 ![volumes](assets/inspect-4.png)
 

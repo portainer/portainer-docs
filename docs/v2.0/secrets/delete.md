@@ -1,10 +1,10 @@
 # Delete a Secret
 
-Is a good practice delete the secrets that you don't need anymore. From the Portainer UI, you ca do it easily.
+It is good practice to delete the secrets that you don't need anymore.
 
 ## Deleting a Secret
 
-To delete a secret, go to <b>Secrets</b>, select the secret you want delete and then, click in <b>Remove</b>.
+To delete a secret, go to <b>Secrets</b>, select the secret you want delete and then, click <b>Remove</b>.
 
 ![secrets](assets/delete-1.png)
 ## Notes

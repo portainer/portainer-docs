@@ -4,7 +4,7 @@ You can remove/delete applications using the Portainer GUI.
 
 ## Deleting an Application
 
-To delete an Application, do a click in <b>Applications</b>, select the Application you want to delete and then do a click in <b>Remove</b>.
+To delete an Application, click <b>Applications</b>, select the Application you want to delete and then click <b>Remove</b>.
 
 ![delete](assets/delete-1.png)
 

@@ -1,10 +1,10 @@
 # Delete Configs
 
-From Portainer UI you can delete the configs that you created before. 
+From Portainer you can delete the configs that you created before. 
 
 ## Deleting Configs
 
-To delete a config, go to <b>Configs</b>, select the config you want to delete and click in <b>Remove</b>.
+To delete a config, go to <b>Configs</b>, select the config you want to delete and click <b>Remove</b>.
 
 ![configs](assets/config-delete-1.png)
 
