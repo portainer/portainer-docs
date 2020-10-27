@@ -1,6 +1,6 @@
 # Deploy an Edge Stack
 
-This feature allows the deployment of multiple application to multiple endpoints from a single screen and multiple sources. 
+This feature allows the deployment of multiple applications to multiple endpoints from a single screen and multiple sources. 
 
 Edge stacks lets you deploy an app to all selected edge endpoints concurrently, regardless of their current state (online, disconneted, new).
 

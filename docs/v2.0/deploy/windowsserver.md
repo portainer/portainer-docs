@@ -1,6 +1,6 @@
 # Deploy Portainer in Windows Server
 
-To run Portainer in a Windows Server Environment, you need to create exceptions in the firewall. Thoses, can be easy added trough PowerShell, running the following commands:
+To run Portainer in a Windows Server Environment, you need to create exceptions in the firewall. These, can be easy added trough PowerShell, running the following commands:
 
 <pre><code>netsh advfirewall firewall add rule name="cluster_management" dir=in action=allow protocol=TCP localport=2377</code></pre>
 

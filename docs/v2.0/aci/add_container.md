@@ -1,38 +1,38 @@
 # Add a Container Instance
 
-From Portainer you'll able to add new containers in your Azures Container Instance service. Take a look at the next section to learn how to do it.
+From Portainer you can add new containers in your Azure Container Instance service.
 
 ## Adding a New Container Instance
 
-From Portainer's Home, click in your Azure Container Instance endpoint. 
+From Portainer Home, click in your Azure Container Instance <b>endpoint</b>. 
 
 ![aci](assets/add-1.png)
 
-Click in Container Instances and then in <b>Add Container</b>.
+Click <b>Container Instances</b> and then <b>Add Container</b>.
 
 ![aci](assets/add-2.png)
 
-In the next screen, you need to define the container configuration, let's see what options you have available:
+In the next screen, you need to define the container configuration, these options are available:
 
-* Subscription: If you have two or more subscription attached, you can choose where you want to deploy your container.
+* Subscription: If you have two or more subscriptions attached, you can choose where you want to deploy your container.
 * Resource Group: If you have two or more Resources groups created, you need to define where you want to deploy your container.
-* Location: Here you need to define in wich datacenter you want to run your container.
+* Location: Here you need to define in which datacenter you want to run your container.
 * Name: Name your container.
 * Image: Type the name of the image you want to deploy.
-* OS: If is a Linux based container, choose Linux, if for example is a Windows Server container, choose Windows.
+* OS: Select the appropriate OS, usually Linux or Windows.
 * Port Mapping: Choose what port you need to publish to the Internet.
 * CPU: Define how much CPU you want for your container.
 * Memory: Define how much memory you want for your container.
 
-When everything is set, do a click in <b>Deploy the Container</b>.
+When everything is set, click <b>Deploy the Container</b>.
 
 ![aci](assets/add-3.png)
 
-Meanwhile the deployment is going, you will see this message in the button. 
+Meanwhile the deployment is in progress this message will show in the button.
 
 ![aci](assets/add-4.png)
 
-After the deployment was complete, Portainer will exit to the container list and you will see your new container deployed in Azure Container Instances.
+After the deployment has completed, Portainer will exit to the container list and you will see your new container deployed in Azure Container Instances.
 
 ![aci](assets/add-5.png)
 
