@@ -17,14 +17,9 @@ The Portainer development team is here to assist you on your container journey; 
 As the Portainer community continues to grow, we continue to support the community to the best of our ability.  
 Being a free and opensource product, we have been heavily reliant on our community to provide "how to" support to our community, recently we have invested significant time in improving and updating our documentation found on this site and our [YouTube channel](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg). While we endeavour to cover as many scenarios as possible there may be some that our documentation doesn’t cover. 
 
-We strongly encourage posting such questions to the community via the  [Slack channel](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/). While other platforms exist (Reddit, Discord, Stack Overflow) these are monitored much less frequently by the Portainer team.
-
-
-If you are uncomfortable posting your question publicly you can contact us via the Contact Us widget at the bottom of screen, we will respond as soon as we are able to. 
-
 To streamline our operations and allow us to focus on delivering the right support and features in the right areas at the right time we encourage our users to do the following:
 
-* <b>QUESTIONS</b> should be posted either to the [Slack channel](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/), via the Contact Us widget at the bottom of screen or via email to [support@portainer.io](mailto:support@portainer.io)
+* <b>QUESTIONS</b> should be posted to either [Github Issues] (https://github.com/portainer/portainer/issues) or the [community Slack channel](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/). While other platforms exist (Reddit, Discord, Stack Overflow) the Portainer team is less active in these. If you are uncomfortable posting your question publicly you can contact us via the Contact Us widget at the bottom of screen, we will respond as soon as we are able to. 
 
 *	Suspected <b>BUGS</b> should be posted to Github and will be managed by our support and development teams as appropriate.
 
