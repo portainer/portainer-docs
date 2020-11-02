@@ -131,7 +131,8 @@ nav:
             - 'Templates' : 'archive/1.23.2/templates.md'
             - 'Troubleshooting' : 'archive/1.23.2/troubleshooting.md'
             - 'User Guide' : 'archive/1.23.2/userguide.md'
-            - 'FAQ' : 'archive/1.23.2/faq.md'    
+            - 'FAQ' : 'archive/1.23.2/faq.md'
+    - Contributing to Portainer : 'archive/contributing.md'
 extra_css:
     - css/extra.css
 extra_javascript:
