@@ -2,7 +2,8 @@
 
 How to setup the development environment
 
-<b>Note</b>: Make sure you have installed the dependencies for this project on your Mac or Linux machine before continuing this tutorial. 
+<b>Note</b>: Make sure you have installed the dependencies for this project on your [Mac](/contributing/tools-macos) or [Linux](/contributing/tools-linux) machine before continuing this tutorial.
+
 <b>Note 2</b>: Windows is currently not supported by the Portainer development environment.
 
 ## Instructions:
