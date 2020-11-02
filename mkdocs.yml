@@ -132,7 +132,12 @@ nav:
             - 'Troubleshooting' : 'archive/1.23.2/troubleshooting.md'
             - 'User Guide' : 'archive/1.23.2/userguide.md'
             - 'FAQ' : 'archive/1.23.2/faq.md'
-    - Contributing to Portainer : 'archive/contributing.md'
+    - Contributing to Portainer:
+            - 'Instructions' : 'contributing/instructions.md'
+            - 'Install required tools on Mac OS' : 'contributing/tools-macos.md'
+            - 'Install required tools on Linux' : 'contributing/tools-linux.md'
+
+
 extra_css:
     - css/extra.css
 extra_javascript:
