@@ -51,6 +51,8 @@ nav:
           - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
           - 'Duplicate / Migrate Stacks' : 'v2.0/stacks/duplicate_migration.md'
           - 'Inspect a Stack' : 'v2.0/stacks/inspect.md'
+        - 'Webhooks':
+          - 'Configure a Webhook' : 'v2.0/webhooks/create.md'
         - 'Containers':
           - 'Create New Container' : 'v2.0/containers/create.md'
           - 'Delete/Remove a Container' : 'v2.0/containers/delete.md'
