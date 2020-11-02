@@ -56,7 +56,7 @@ With Portainer behind a proxy, some features requiring access to the Internet (s
 
 <pre><code> docker run -d -p 9000:9000 -p 8000:8000 -e HTTP_PROXY=my.proxy.domain:7777 portainer/portainer-ce</code></pre>
 
-For examples on how to configure a reverse proxy to work with Portainer, you can refer to our example repo here.
+For examples on how to configure a reverse proxy to work with Portainer, you can refer to our example repo [here](https://github.com/portainer/portainer-compose).
 
 Note: these are in no way production ready, and are intended solely for demonstration purposes.
 
