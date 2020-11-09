@@ -13,7 +13,7 @@ Portainer can be deployed on the following platforms:
 
 ## Supported Docker Versions
 
-The required Docker version to have full support is 1.9.1 or newest. Docker 1.9 is partially supported. Older versions than indicated here, are not supported.
+The required Docker version to have full support is 19.1 or the newest. Docker 19 is partially supported. Older versions than indicated here, are not supported.
 
 ## Supported Docker Swarm
 
