@@ -155,7 +155,6 @@ nav:
       - Registries:
         - 'Description of Registry Management' : 'v2.0-be/registries/description.md'
         - 'Connect to a Registry' : 'v2.0-be/registries/connect.md'
-        - 'Browse a Registry' : 'v2.0-be/registries/browse.md'
         - 'Enable Docker Hub Authentication' : 'v2.0-be/registries/auth-docker-hub.md'
       - Configuring Settings:
         - 'Security Options' : 'v2.0-be/settings/security.md'
@@ -241,6 +240,9 @@ nav:
         - 'Add a Stack' : 'v2.0-be/edge/stacks.md'
         - 'Add a Job' : 'v2.0-be/edge/jobs/add.md'
         - 'Managing Edge Groups' : 'v2.0-be/edge/groups.md'
+      - Registries:
+        - 'Browse a Registry' : 'v2.0-be/registries/browse.md'
+        - 'Manage a Registry' : 'v2.0-be/registries/manage.md'
     - FAQs : 'v2.0-be/troubleshooting/troubleshooting.md'
     - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
     - Older Releases:

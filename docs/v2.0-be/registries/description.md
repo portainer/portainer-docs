@@ -7,3 +7,7 @@ The Registry Manager feature enables simple operational management of your docke
 Portainer Business Edition enables you to retag an image as a means to promote it through the deployment lifecycle, or simply add or remove tags to annotate changes or usage. Also allows you to clean up legacy images by safely deleting unused images.
 
 <b>*</b> The registry must support Docker Registry API v2. Currently supported registries: Private Docker registry, Azure Container Registry, Sonatype Nexus3.
+
+# Notes
+
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
