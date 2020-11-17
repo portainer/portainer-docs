@@ -19,6 +19,18 @@ You can enable or disable this using the checkbox shown:
 ![statics](assets/initial-2.png)
 This can be changed at any time via the Portainer Settings screen
 
+## License Registration
+
+In order to activate Portainer Business Edition, you need to provide a Portainer Business Edition valid license.
+
+Enter the license and do a click in <b>Submit</b>.
+
+![license](assets/license1.png)
+
+If you need to add more licenses, you can do it later from the menu, click in the options <b>Licenses</b>.
+
+If everything work as expected, the next step is connect Portainer to the initial endpoint.
+
 ## Connect Portainer to the container environment
 
 If you installed [Portainer in Kubernetes](/v2.0-be-be/deploy/linux/#deploy-portainer-in-kubernetes) you would choose Kubernetes, but if you [installed in Docker](/v2.0-be-be/deploy/linux/#deploy-portainer-in-docker), you may want choose manage the local Docker environment. 

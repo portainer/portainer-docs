@@ -137,11 +137,15 @@ nav:
         - 'Creating Endpoints Groups and Endpoint Tags' : 'v2.0-be/endpoints/groupstags.md'
         - 'Managing Endpoints Access' : 'v2.0-be/endpoints/access.md'
         - 'Add Endpoint through Portainer API' : 'v2.0-be/endpoints/api.md'
+      - Licensing:
+        - 'Add or remove license key' : 'v2.0-be/licenses/licenses.md'
       - Authentication Sources:
         - 'LDAP' : 'v2.0-be/auth/ldap.md'
         - 'OAuth' : 'v2.0-be/auth/oauth.md'
         - 'Internal' : 'v2.0-be/auth/internal.md'
       - Managing Users & Teams:
+        - 'Description of RBAC' : 'v2.0-be/users/roles.md'
+        - 'Effective access viewer' : 'v2.0-be/users/viewer.md'
         - 'Create a User' : 'v2.0-be/users/create.md'
         - 'Create a Team' : 'v2.0-be/users/create-team.md'
         - 'Promote a User as Admin' : 'v2.0-be/users/promoting.md'
@@ -149,7 +153,9 @@ nav:
         - 'Reset User Password' : 'v2.0-be/users/reset-user.md'
         - 'Reset Administrator Password' : 'v2.0-be/users/reset-admin.md'
       - Registries:
+        - 'Description of Registry Management' : 'v2.0-be/registries/description.md'
         - 'Connect to a Registry' : 'v2.0-be/registries/connect.md'
+        - 'Browse a Registry' : 'v2.0-be/registries/browse.md'
         - 'Enable Docker Hub Authentication' : 'v2.0-be/registries/auth-docker-hub.md'
       - Configuring Settings:
         - 'Security Options' : 'v2.0-be/settings/security.md'
