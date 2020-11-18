@@ -140,7 +140,9 @@ nav:
       - Licensing:
         - 'Add or remove license key' : 'v2.0-be/licenses/licenses.md'
       - Authentication Sources:
+        - 'Automatic User Provisioning' : 'v2.0-be/auth/auto.md'
         - 'LDAP' : 'v2.0-be/auth/ldap.md'
+        - 'Active Directory' : 'v2.0/auth/ad.md'
         - 'OAuth' : 'v2.0-be/auth/oauth.md'
         - 'Internal' : 'v2.0-be/auth/internal.md'
       - Managing Users & Teams:

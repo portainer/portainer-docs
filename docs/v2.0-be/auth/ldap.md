@@ -6,22 +6,23 @@ In order to configure Portainer LDAP authentication, you first need to add a use
 
 ## Enabling LDAP
 
-Log into Portainer as an administrator and navigate to Settings > Authentication. Select the ‘LDAP Authentication' option. Portainer will then display additional fields for configuring LDAP.
+Log into Portainer as an administrator and navigate to Settings > Authentication. Select the ‘LDAP Authentication' option. You will see two options: <b>Custom</b> where you can define a custom/third party LDAP Server to use and <b>OpenLDAP</b> where you will capable to enter all the data needed to connect with OpenLDAP.
+
+## Custom LDAP
 
 ![auth](assets/ldap_1.png)
 
 Enter in the IP address/FQDN and the port number of your LDAP server, and then select to either connect anonymously (your LDAP server must support this), or enter a user account that has READ access to the directory. Click "Test Connectivity" to validate you can connect.
 
-Note: For AD use the Reader DN format should be <code>username@MYDOMAIN.com</code> or <code>domain\userfirstname.userlastname</code>. For OpenLDAP, the Reader DN format should be <code>CN=<USERNAME>,DC=DOMAIN,DC=DOMAIN</code>.
+A configuration with Anonymous mode on (must be supported)
 
-![auth](assets/ldap_2.webp)
-![auth](assets/ldap_3.webp)
+![auth](assets/ldap2.png)
 
-You can now configure the remaining LDAP settings:
+A configuration defining <b>Reader DN</b> and <b>Password</b>.
 
-![auth](assets/ldap_3.webp)
+![auth](assets/ldap3.png)
 
-## Explanation of Settings
+### Explanation of Settings
 
 Here is an explanation of the above settings:
 
@@ -55,7 +56,7 @@ Example below shows that in the domain portainer.local, we have an OU called "Gr
 
 ![auth](assets/ldap_5.png)
 
-### Group Search
+### Team auto-population configurations
 
 Portainer optionally allows you to set a Group Search as well as the User Search. If this is configured, if an LDAP user is a member of an LDAP group, and that LDAP Group corresponds to an identically named Portainer TEAM, then the LDAP user will automatically be placed into the Portainer Team based on their LDAP group membership. This is very useful for automatically granting access to Portainer endpoints via group membership.
 
@@ -76,7 +77,75 @@ Portainer optionally allows you to set a Group Search as well as the User Search
 Navigate to User Management. Create a username that matches your LDAP source users with the format defined when enabling LDAP (either ‘username’ or ‘username@mydomain.com’).
 
 ![auth](assets/ldap_8.webp)
+
 ![auth](assets/ldap_9.webp)
+
+## OpenLDAP
+
+![auth](assets/openldap1.png)
+
+Enter in the IP address/FQDN and the port number of your LDAP server, and then select to either connect anonymously (your LDAP server must support this), or enter a user account that has READ access to the directory. Click "Test Connectivity" to validate you can connect.
+
+A configuration with Anonymous mode on (must be supported)
+
+![auth](assets/ldap2.png)
+
+A configuration defining <b>Reader DN</b> and <b>Password</b>.
+
+![auth](assets/ldap3.png)
+
+### Explanation of Settings
+
+Here is an explanation of the above settings:
+
+### LDAP Security
+
+* Use StartTLS: After initial connection, elevate the insecure connection to secure.
+* Use TLS: Initiate a connection to LDAP using TLS.
+* Skip Verification of Certificate: If you do not have access to the certificate of the LDAP server, skipping verification enables encrypted communications, but you must manually ensure that you are talking to the intended LDAP server that you gave in your URL. If that gets maliciously redirected then you could be talking to a different server. Use with caution.
+* TLS CA Certificate: Upload your CA Certificate for the secure connection.
+* Connectivity Check:Validate successful connectivity before continuing.
+
+### Automatic User Provisioning
+
+* Automatic User Provisioning: Enabling this setting automatically creates users within Portainer once they are successfully authenticated by LDAP. If you do not enable this, you must manually create users with the same username as the corresponding LDAP directory.
+
+### User Search Configurations
+
+* Root Domain: Will be used the DN used when you authenticate to the OpenLDAP Server.
+* User Search Path (Optional): Here you can define differents OU or Folder.
+* Allowed Groups (optional): You can specify another group and their path to the directory.
+* User Filter: is filled by default according to OpenLDAP configuration. 
+
+To check if everything work as expected, you can do a click in <b>Display Users</b> and you will see a list with the names configured in the directory.
+
+![auth](assets/openldap2.png)
+
+### Team auto-population configurations
+
+Portainer optionally allows you to set a Group Search as well as the User Search. If this is configured, if an LDAP user is a member of an LDAP group, and that LDAP Group corresponds to an identically named Portainer TEAM, then the LDAP user will automatically be placed into the Portainer Team based on their LDAP group membership. This is very useful for automatically granting access to Portainer endpoints via group membership.
+
+* Group Search Path (optional): Here you can define differents OU or Folder.
+* Group Base DN: Will be used the DN used when you authenticate to the OpenLDAP Server.
+* Group Filter: Is filled default according to OpenLDAP configuration. 
+
+To check if everything work as expected, you can do a click in <b>Display Users</b> and <b>Groups</b> and you will see a list with the names configured in the directory.
+
+![auth](assets/openldap3.png)
+
+### Test Login
+
+If you want to know if your configuration is valid, you can run a test login from the configuration of OpenLDAP settings. Scrolldown to <b>Test Login</b> Section, fill with a valid user and password and do a click in <b>Test</b>. If everything is work as expected, you will see a check beside of the button.
+
+![auth](assets/openldap4.png)
+
+### Optional - if you are NOT enabling user Auto Provisioning - Creating LDAP Users
+
+Navigate to User Management. Create a username that matches your LDAP source users with the format defined when enabling LDAP (either ‘username’ or ‘username@mydomain.com’).
+
+![auth](assets/ldap_8.webp)
+![auth](assets/ldap_9.webp)
+
 
 ## Notes
 

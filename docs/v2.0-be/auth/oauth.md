@@ -1,18 +1,56 @@
 # OAuth authentication
 
-Portainer allows that the authentication can be done with OAuth and with this help article, you will see a overview of what's the requirement to configure Portainer CE 2.0 with OAuth. 
+Portainer Business Edition can be connected to a severals OAuth providers in a easy way without need to understand complex configurations.
 
-## Start to configure OAuth authentication in Portainer
+### Microsoft OAuth Provider
 
-Once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>OAuth</b> option.
+To start to configure Microsoft OAuth Provider, once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>OAuth</b> option and then, do select <b>Microsoft</b>.
 
-![oauth](assets/oauth_1.png)
+![oauth](assets/microsoft1.png)
+
+Here, you only need to define the following information: 
+
+* Tenant ID: ID of the Azure Directory you wish to authenticate against. Also known as the Directory ID.
+* Application ID: Public identifier of the OAuth application.
+* Application key: The secret of this Application.
+
+Do a click in save and you're done.
+
+![oauth](assets/microsoft2.png)
+
+### Google OAuth Provider
+
+To start to configure Google OAuth Provider, once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>OAuth</b> option and then, do select <b>Google</b>.
+
+Define the following information and do a click in <b>Save settings</b>.
+
+* Client ID: Public identifier of the OAuth Application.
+* Client Secret: The secret of this client.
+
+![oauth](assets/google1.png)
+
+### Github
+
+To start to configure Github OAuth Provider, once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>OAuth</b> option and then, do select <b>Github</b>.
+
+Define the following information and do a click in <b>Save settings</b>.
+
+* Client ID: Public identifier of the OAuth Application.
+* Client Secret: The secret of this client.
+
+![oauth](assets/github.png)
+
+### Custom OAuth Provider
+
+To configure a custom OAuth provider, once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>custom</b> option.
+
+![oauth](assets/custom.png)
 
 In this screen, you need to configure the data that you OAuth provider give you to configure Portainer. The fields are:
 
 * Automatic User Provisioning: Toggle on this options if you want to create users for each user logged using OAuth. After enable the toggle, you need to define in wich team that users should be created. 
 
-![oauth](assets/oauth_2.png)
+![oauth](assets/custom2.png)
 
 * Client ID: This is the public identifier of the OAuth application.
 * Client Secret: Here, you need fill with the token access to the OAuth Application.
@@ -29,23 +67,6 @@ Once that all fields are completed, do a click in <b>Save Settings</b>
 
 To understand how to enable access to an OAuth Teams and Users, please, refer to [this article](/v2.0-be-be/endpoints/access).
 
-## Examples
-
-Take a look at the following examples for configuration OAuth using Azure, Google and Github configuration.
-
-* The client ID, called application ID in the MSFT world.
-* The tenant ID (grayed information in the screenshot), is a GUID specific for your ID.
-* This is just a custom defined name for the URL of Portainer.
-
-![azure](assets/azure.jpg)
-
-
-![google](assets/google.png)
-
-
-![github](assets/github.jpg)
-
-
-# Notes
+## Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).

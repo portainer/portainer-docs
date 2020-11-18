@@ -1,17 +1,39 @@
 # Add / Connect a new registry
 
+Portainer can connect to many of the well-known registries including Quay.io, Azure Container Registry, Gitlab Container Registry, and a Custom Registry. In this help, you will how to connect to them. 
 
-Portainer can connect to many of the well known registries including Quay.io, Azure Container Registry, Gitlab Container Registry, and a Custom Registry.
+## Quay.io
 
-## Adding a new registry
-
-Click <b>Registries</b> and then <b>Add Registry</b>.
+To connect to a Quay registry, go to <b>Registries</b> and then <b>Add Registry</b>
 
 ![registries](assets/registry1.png)
 
-Select the desired registry and then add your appropriate credentials details. Once complete click <b>Add Registry</b>.
+In the next screen, choose <b>Quay.io</b> and enter your <b>Username</b> and <b>Password</b>. After that, do a click in <b>Add registry</b>.
 
-![registries](assets/registry2.png)
+![registries](assets/quay.png)
+
+
+## Azure Container Registry
+
+To connect to a Azure registry, go to <b>Registries</b> and then <b>Add Registry</b>
+
+![registries](assets/registry1.png)
+
+In the next screen, choose <b>Azure</b>, name your registry, enter the <b>Registry URL</b>, <b>Username</b>, and <b>Password</b>. After that, do a click in <b>Add registry</b>.
+
+![registries](assets/azure.png)
+
+## Gitlab
+
+To connect to a Gitlab registry, go to <b>Registries</b> and then <b>Add Registry</b>
+
+![registries](assets/registry1.png)
+
+In the next screen, choose <b>Gitlab</b>, enter the <b>Username</b>, and <b>Personal Token</b>. After that, do a click in <b>Add registry</b>.
+
+<b>Note</b>: For information on how to generate a Gitlab Personal Access Token, follow the [Gitlab guide](https://gitlab.com/help/user/profile/personal_access_tokens.md).
+
+![registries](assets/gitlab.png)
 
 ## How to add a Custom Registry
 
