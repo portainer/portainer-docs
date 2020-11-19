@@ -6,9 +6,7 @@ From Portainer, you can deploy new applications in your Kubernetes cluster witho
 
 Deploying an application in Portainer to Kubernetes is very easy and very customizable depending on your need.
 
-To deploy a new application, you need to choose your <b>Kubernetes</b> Cluster, click <b>Applications</b> and then <b>Add Application</b>.
-
-![create](assets/create-1.png)
+To deploy a new application, click <b>Applications</b> and then <b>Add Application</b>.
 
 ![create](assets/create-2.png)
 

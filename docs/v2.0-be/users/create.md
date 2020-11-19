@@ -6,7 +6,7 @@ Portainer allows the management of users and access.
 
 Click <b>Users</b>
 
-![users](assets/user_1.webp)
+![users](assets/user_1.png)
 
 1. Type the username 2. pick a password (a strong one) and 3. click <b>Create User</b>.
 
@@ -16,7 +16,7 @@ Click <b>Users</b>
 
 Confirmation at the top right shows on completion.
 
-![users](assets/user_3.png)
+![users](assets/user_2.png)
 
 # Notes
 

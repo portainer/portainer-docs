@@ -10,11 +10,9 @@ To create a team in Portainer, select <b>Users</b>.
 
 Then 1. select <b>Teams</b> 2.Type the name of Team and 3. click <b>Create Team</b>.
 
-![team](assets/team2.webp)
+![team](assets/team2.png)
 
-All teams created are listed
-
-![team](assets/team3.png)
+Then, you're done.
 
 # Notes
 

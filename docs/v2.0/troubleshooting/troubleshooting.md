@@ -58,7 +58,7 @@ With Portainer behind a proxy, some features requiring access to the Internet (s
 
 For examples on how to configure a reverse proxy to work with Portainer, you can refer to our example repo [here](https://github.com/portainer/portainer-compose).
 
-Note: these are in no way production ready, and are intended solely for demonstration purposes.
+Note: these are in no way production-ready, and are intended solely for demonstration purposes.
 
 ## Exposed ports in the container view redirects me to 0.0.0.0, what can I do?
 
@@ -67,9 +67,6 @@ You can "fix" this in two ways.
 * In order for Portainer to be able to redirect you to your Docker host IP address and not the 0.0.0.0 address, you will have to change the configuration of your Docker daemon and add the --ip option. Note: that you will have to restart your Docker daemon for the changes to be taken in effect.
 
 * <b>Recommended</b>: Go to <b>Endpoints</b>, select your endpoint and introduce the IP of the host in the field <b>Public IP</b>. Do a click in <b>Update Endpoint</b>.
-
-![public_ip](assets/public_ip.png)
-
 
 ## TLS Settings in local Kubernetes endpoint
 

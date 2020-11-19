@@ -19,8 +19,6 @@ Scroll down to see the options for this container. Select <b>Volumes</b> and cli
 
 Next, type the path in the container, in the example below, for an NGINX container, the path to persist is "/usr/share/nginx/html". We also need to specify the volume created.
 
-![volumes](assets/attach_4.png)
-
 Finally, click <b>Deploy The Container</b>. You will receive the following warning:
 
 ![volumes](assets/attach_5.png)

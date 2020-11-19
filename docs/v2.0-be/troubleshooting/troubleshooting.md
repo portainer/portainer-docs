@@ -68,9 +68,6 @@ You can "fix" this in two ways.
 
 * <b>Recommended</b>: Go to <b>Endpoints</b>, select your endpoint and introduce the IP of the host in the field <b>Public IP</b>. Do a click in <b>Update Endpoint</b>.
 
-![public_ip](assets/public_ip.png)
-
-
 ## TLS Settings in local Kubernetes endpoint
 
 We're addressing a bug in the endpoint details view of a Kubernetes endpoint, TLS settings, and information about Docker TLS is incorrectly shown. Changing the TLS settings does not affect.
