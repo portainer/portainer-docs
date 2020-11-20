@@ -1,0 +1,299 @@
+site_name: Documentation
+nav:
+    - Home: index.md
+    - Portainer CE 2.0 Admin Guide:
+      - Deploying Portainer:
+        - 'Requirements' : 'v2.0/deploy/requirements.md'
+        - 'CLI Options' : 'v2.0/deploy/cli.md'
+        - 'Deploying on Linux' : 'v2.0/deploy/linux.md'
+        - 'Deploying on Windows Server' : 'v2.0/deploy/windowsserver.md'
+        - 'Deploying on Windows 10' : 'v2.0/deploy/windows10.md'
+        - 'Using SSL with Portainer' : 'v2.0/deploy/ssl.md'
+        - 'Initial Setup' : 'v2.0/deploy/initial.md'
+      - Managing Endpoints:
+        - 'Add Local Endpoint' : 'v2.0/endpoints/local.md'
+        - 'Add Docker Endpoint' : 'v2.0/endpoints/docker.md'
+        - 'Add Docker Swarm Endpoint' : 'v2.0/endpoints/swarm.md'
+        - 'Add Kubernetes Endpoint' : 'v2.0/endpoints/kubernetes.md'
+        - 'Add Edge Endpoint' : 'v2.0/endpoints/edge.md'
+        - 'Add ACI Endpoint' : 'v2.0/endpoints/aci.md'
+        - 'Creating Endpoints Groups and Endpoint Tags' : 'v2.0/endpoints/groupstags.md'
+        - 'Managing Endpoints Access' : 'v2.0/endpoints/access.md'
+        - 'Add Endpoint through Portainer API' : 'v2.0/endpoints/api.md'
+      - Authentication Sources:
+        - 'LDAP' : 'v2.0/auth/ldap.md'
+        - 'OAuth' : 'v2.0/auth/oauth.md'
+        - 'Internal' : 'v2.0/auth/internal.md'
+      - Managing Users & Teams:
+        - 'Create a User' : 'v2.0/users/create.md'
+        - 'Create a Team' : 'v2.0/users/create-team.md'
+        - 'Promote a User as Admin' : 'v2.0/users/promoting.md'
+        - 'Add a User to a Team' : 'v2.0/users/user-team.md'
+        - 'Reset User Password' : 'v2.0/users/reset-user.md'
+        - 'Reset Administrator Password' : 'v2.0/users/reset-admin.md'
+      - Registries:
+        - 'Connect to a Registry' : 'v2.0/registries/connect.md'
+        - 'Enable Docker Hub Authentication' : 'v2.0/registries/auth-docker-hub.md'
+      - Configuring Settings:
+        - 'Enable use of external load balancer' : 'v2.0/settings/lb.md'
+        - 'Security Options' : 'v2.0/settings/security.md'
+        - 'Enable Edge Computing' : 'v2.0/settings/edge.md'
+        - 'App Templates' : 'v2.0/settings/apps.md'
+      - Advanced Deployments:
+        - 'Using Portainer with Reverse Proxies':
+            - 'Traefik' : 'v2.0/ad/traefik/rp-traefik.md'
+            - 'Nginx' : 'v2.0/ad/nginx/rp-nginx.md'
+      - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
+      - Deprecated and Removed Features : 'v2.0/troubleshooting/deprecated.md'
+    - Portainer CE 2.0 User Guide:
+      - Docker & Docker Swarm:
+        - 'Stacks':
+          - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
+          - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
+          - 'Duplicate / Migrate Stacks' : 'v2.0/stacks/duplicate_migration.md'
+          - 'Inspect a Stack' : 'v2.0/stacks/inspect.md'
+        - 'Webhooks':
+          - 'Configure a Webhook' : 'v2.0/webhooks/create.md'
+        - 'Containers':
+          - 'Create New Container' : 'v2.0/containers/create.md'
+          - 'Delete/Remove a Container' : 'v2.0/containers/delete.md'
+          - 'Inspect a Container' : 'v2.0/containers/inspect.md'
+          - 'View logs' : 'v2.0/containers/logs.md'
+          - 'View Container stats' : 'v2.0/containers/stats.md'
+          - 'Access container console' : 'v2.0/containers/console.md'
+          - 'Change Container Ownership' : 'v2.0/containers/ownership.md'
+          - 'Duplicated/Edit a Container' : 'v2.0/containers/duplicate-edit.md'
+        - 'App Templates':
+          - 'Deploy an Stack' : 'v2.0/templates/deploy_stack.md'
+          - 'Deploy an App (Container)' : 'v2.0/templates/deploy_container.md'
+        - 'Images':
+          - 'Pull images' : 'v2.0/images/pull.md'
+          - 'Import images' : 'v2.0/images/import.md'
+          - 'Export images' : 'v2.0/images/export.md'
+          - 'Build images' : 'v2.0/images/build.md'
+        - 'Networks':
+          - 'Add a Network' : 'v2.0/networks/add.md'
+          - 'Delete a Network' : 'v2.0/networks/delete.md'
+        - 'Services':
+          - 'Create a New Service' : 'v2.0/services/create.md'
+          - 'Scaling a Service' : 'v2.0/services/scale.md'
+          - 'View Service Logs' : 'v2.0/services/logs.md'
+          - 'Service Task Status' : 'v2.0/services/status.md'
+          - 'Configure Service Options' : 'v2.0/services/options.md'
+          - 'Rollback a Service' : 'v2.0/services/rollback.md'
+        - 'Volumes':
+          - 'Browse a Volume' : 'v2.0/volumes/browse.md'
+          - 'Create a Volume' : 'v2.0/volumes/create.md'
+          - 'Attach an Existing Volume' : 'v2.0/volumes/attaching.md'
+          - 'Delete a Volume' : 'v2.0/volumes/delete.md'
+        - 'Configs':
+          - 'Add custom configs' : 'v2.0/configs/add.md'
+          - 'Delete configs' : 'v2.0/configs/delete.md'
+        - 'Secrets':
+          - 'Add a new secret' : 'v2.0/secrets/add.md'
+          - 'Delete secrets' : 'v2.0/secrets/delete.md'
+      - Kubernetes:
+        - 'Applications':
+          - 'Deploy a new application' : 'v2.0/kubernetes/applications/create.md'
+          - 'Deploy from a Kubernetes Manifest' : 'v2.0/kubernetes/applications/manifest.md'
+          - 'Delete an Application' : 'v2.0/kubernetes/applications/delete.md'
+          - 'Inspect an Application' : 'v2.0/kubernetes/applications/inspect.md'
+        - 'Resource Pools':
+          - 'Create a Resource Pool' : 'v2.0/kubernetes/resource_pools/create.md'
+          - 'Manage Access' : 'v2.0/kubernetes/resource_pools/access.md'
+          - 'Delete a Resource Pool' : 'v2.0/kubernetes/resource_pools/delete.md'
+        - 'Volumes':
+          - 'Inspect a volume' : 'v2.0/kubernetes/volumes/inspect.md'
+          - 'Resize a volume' : 'v2.0/kubernetes/volumes/resize.md'
+          - 'Remove a volume' : 'v2.0/kubernetes/volumes/remove.md'
+        - 'Configurations':
+          - 'Add a configuration' : 'v2.0/kubernetes/configurations/create.md'
+          - 'Remove a configuration' : 'v2.0/kubernetes/configurations/remove.md'
+        - 'Cluster':
+          - 'Inspect cluster' : 'v2.0/kubernetes/cluster/inspect.md'
+      - ACI:
+        - 'About ACI' : 'v2.0/aci/aci.md'
+        - 'Add New Container' : 'v2.0/aci/add_container.md'
+        - 'Delete a Container' : 'v2.0/aci/delete_container.md'
+      - Edge:
+        - 'Add a Stack' : 'v2.0/edge/stacks.md'
+        - 'Add a Job' : 'v2.0/edge/jobs/add.md'
+        - 'Managing Edge Groups' : 'v2.0/edge/groups.md'
+    - Portainer BE 2.0 Admin Guide:
+      - Deploying Portainer:
+        - 'Requirements' : 'v2.0-be/deploy/requirements.md'
+        - 'CLI Options' : 'v2.0-be/deploy/cli.md'
+        - 'Deploying on Linux' : 'v2.0-be/deploy/linux.md'
+        - 'Deploying on Windows Server' : 'v2.0-be/deploy/windowsserver.md'
+        - 'Deploying on Windows 10' : 'v2.0-be/deploy/windows10.md'
+        - 'Using SSL with Portainer' : 'v2.0-be/deploy/ssl.md'
+        - 'Initial Setup' : 'v2.0-be/deploy/initial.md'
+      - Managing Endpoints:
+        - 'Add Local Endpoint' : 'v2.0-be/endpoints/local.md'
+        - 'Add Docker Endpoint' : 'v2.0-be/endpoints/docker.md'
+        - 'Add Docker Swarm Endpoint' : 'v2.0-be/endpoints/swarm.md'
+        - 'Add Kubernetes Endpoint' : 'v2.0-be/endpoints/kubernetes.md'
+        - 'Add Edge Endpoint' : 'v2.0-be/endpoints/edge.md'
+        - 'Add ACI Endpoint' : 'v2.0-be/endpoints/aci.md'
+        - 'Creating Endpoints Groups and Endpoint Tags' : 'v2.0-be/endpoints/groupstags.md'
+        - 'Managing Endpoints Access' : 'v2.0-be/endpoints/access.md'
+        - 'Add Endpoint through Portainer API' : 'v2.0-be/endpoints/api.md'
+      - Licensing:
+        - 'Add or remove license key' : 'v2.0-be/licensing/licensing.md'
+      - Authentication Sources:
+        - 'Automatic User Provisioning' : 'v2.0-be/auth/auto.md'
+        - 'LDAP' : 'v2.0-be/auth/ldap.md'
+        - 'Active Directory' : 'v2.0-be/auth/ad.md'
+        - 'OAuth' : 'v2.0-be/auth/oauth.md'
+        - 'Internal' : 'v2.0-be/auth/internal.md'
+      - Managing Users & Teams:
+        - 'Description of RBAC' : 'v2.0-be/users/roles.md'
+        - 'Effective access viewer' : 'v2.0-be/users/viewer.md'
+        - 'Create a User' : 'v2.0-be/users/create.md'
+        - 'Create a Team' : 'v2.0-be/users/create-team.md'
+        - 'Promote a User as Admin' : 'v2.0-be/users/promoting.md'
+        - 'Add a User to a Team' : 'v2.0-be/users/user-team.md'
+        - 'Reset User Password' : 'v2.0-be/users/reset-user.md'
+        - 'Reset Administrator Password' : 'v2.0-be/users/reset-admin.md'
+      - Registries:
+        - 'Description of Registry Management' : 'v2.0-be/registries/description.md'
+        - 'Connect to a Registry' : 'v2.0-be/registries/connect.md'
+        - 'Enable Docker Hub Authentication' : 'v2.0-be/registries/auth-docker-hub.md'
+      - Configuring Settings:
+        - 'Enable use of external load balancer' : 'v2.0-be/settings/lb.md'
+        - 'Allow/Disallow over-commitment of resources' : 'v2.0-be/settings/overcommit.md'
+        - 'Limit usage of default namespace' : 'v2.0-be/settings/namespaces.md'
+        - 'Security Options' : 'v2.0-be/settings/security.md'
+        - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
+        - 'App Templates' : 'v2.0-be/settings/apps.md'
+      - Advanced Deployments:
+        - 'Using Portainer with Reverse Proxies':
+            - 'Traefik' : 'v2.0-be/ad/traefik/rp-traefik.md'
+            - 'Nginx' : 'v2.0-be/ad/nginx/rp-nginx.md'
+      - FAQs : 'v2.0-be/troubleshooting/troubleshooting.md'
+      - Deprecated and Removed Features : 'v2.0-be/troubleshooting/deprecated.md'
+    - Portainer BE 2.0 User Guide:
+      - Docker & Docker Swarm:
+        - 'Stacks':
+          - 'Add/Create a Stack' : 'v2.0-be/stacks/create.md'
+          - 'Create a template from a Stack' : 'v2.0-be/stacks/template.md'
+          - 'Duplicate / Migrate Stacks' : 'v2.0-be/stacks/duplicate_migration.md'
+          - 'Inspect a Stack' : 'v2.0-be/stacks/inspect.md'
+        - 'Webhooks':
+          - 'Configure a Webhook' : 'v2.0-be/webhooks/create.md'
+        - 'Containers':
+          - 'Create New Container' : 'v2.0-be/containers/create.md'
+          - 'Delete/Remove a Container' : 'v2.0-be/containers/delete.md'
+          - 'Inspect a Container' : 'v2.0-be/containers/inspect.md'
+          - 'View logs' : 'v2.0-be/containers/logs.md'
+          - 'View Container stats' : 'v2.0-be/containers/stats.md'
+          - 'Access container console' : 'v2.0-be/containers/console.md'
+          - 'Change Container Ownership' : 'v2.0-be/containers/ownership.md'
+          - 'Duplicated/Edit a Container' : 'v2.0-be/containers/duplicate-edit.md'
+        - 'App Templates':
+          - 'Deploy an Stack' : 'v2.0-be/templates/deploy_stack.md'
+          - 'Deploy an App (Container)' : 'v2.0-be/templates/deploy_container.md'
+        - 'Images':
+          - 'Pull images' : 'v2.0-be/images/pull.md'
+          - 'Import images' : 'v2.0-be/images/import.md'
+          - 'Export images' : 'v2.0-be/images/export.md'
+          - 'Build images' : 'v2.0-be/images/build.md'
+        - 'Networks':
+          - 'Add a Network' : 'v2.0-be/networks/add.md'
+          - 'Delete a Network' : 'v2.0-be/networks/delete.md'
+        - 'Services':
+          - 'Create a New Service' : 'v2.0-be/services/create.md'
+          - 'Scaling a Service' : 'v2.0-be/services/scale.md'
+          - 'View Service Logs' : 'v2.0-be/services/logs.md'
+          - 'Service Task Status' : 'v2.0-be/services/status.md'
+          - 'Configure Service Options' : 'v2.0-be/services/options.md'
+          - 'Rollback a Service' : 'v2.0-be/services/rollback.md'
+        - 'Volumes':
+          - 'Browse a Volume' : 'v2.0-be/volumes/browse.md'
+          - 'Create a Volume' : 'v2.0-be/volumes/create.md'
+          - 'Attach an Existing Volume' : 'v2.0-be/volumes/attaching.md'
+          - 'Delete a Volume' : 'v2.0-be/volumes/delete.md'
+        - 'Configs':
+          - 'Add custom configs' : 'v2.0-be/configs/add.md'
+          - 'Delete configs' : 'v2.0-be/configs/delete.md'
+        - 'Secrets':
+          - 'Add a new secret' : 'v2.0-be/secrets/add.md'
+          - 'Delete secrets' : 'v2.0-be/secrets/delete.md'
+      - Kubernetes:
+        - 'Applications':
+          - 'Deploy a new application' : 'v2.0-be/kubernetes/applications/create.md'
+          - 'Deploy from a Kubernetes Manifest' : 'v2.0-be/kubernetes/applications/manifest.md'
+          - 'Delete an Application' : 'v2.0-be/kubernetes/applications/delete.md'
+          - 'Inspect an Application' : 'v2.0-be/kubernetes/applications/inspect.md'
+        - 'Resource Pools':
+          - 'Create a Resource Pool' : 'v2.0-be/kubernetes/resource_pools/create.md'
+          - 'Manage Access' : 'v2.0-be/kubernetes/resource_pools/access.md'
+          - 'Delete a Resource Pool' : 'v2.0-be/kubernetes/resource_pools/delete.md'
+        - 'Volumes':
+          - 'Inspect a volume' : 'v2.0-be/kubernetes/volumes/inspect.md'
+          - 'Resize a volume' : 'v2.0-be/kubernetes/volumes/resize.md'
+          - 'Remove a volume' : 'v2.0-be/kubernetes/volumes/remove.md'
+        - 'Configurations':
+          - 'Add a configuration' : 'v2.0-be/kubernetes/configurations/create.md'
+          - 'Remove a configuration' : 'v2.0-be/kubernetes/configurations/remove.md'
+        - 'Cluster':
+          - 'Inspect cluster' : 'v2.0-be/kubernetes/cluster/inspect.md'
+      - ACI:
+        - 'About ACI' : 'v2.0-be/aci/aci.md'
+        - 'Add New Container' : 'v2.0-be/aci/add_container.md'
+        - 'Delete a Container' : 'v2.0-be/aci/delete_container.md'
+      - Edge:
+        - 'Add a Stack' : 'v2.0-be/edge/stacks.md'
+        - 'Add a Job' : 'v2.0-be/edge/jobs/add.md'
+        - 'Managing Edge Groups' : 'v2.0-be/edge/groups.md'
+      - Registries:
+        - 'Browse a Registry' : 'v2.0-be/registries/browse.md'
+        - 'Manage a Registry' : 'v2.0-be/registries/manage.md'
+    - FAQs : 'v2.0-be/troubleshooting/troubleshooting.md'
+    - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
+    - Older Releases:
+        - CE 1.23.2:
+            - 'Agent' : 'archive/1.23.2/agent.md'
+            - 'API' : 'archive/1.23.2/API.md'
+            - 'Configuration' : 'archive/1.23.2/configuration.md'
+            - 'Deployment' : 'archive/1.23.2/deployment.md'
+            - 'External Endpoints' : 'archive/1.23.2/external_endpoints.md'
+            - 'Limitations' : 'archive/1.23.2/limitations.md'
+            - 'Templates' : 'archive/1.23.2/templates.md'
+            - 'Troubleshooting' : 'archive/1.23.2/troubleshooting.md'
+            - 'User Guide' : 'archive/1.23.2/userguide.md'
+            - 'FAQ' : 'archive/1.23.2/faq.md'
+    - Contributing to Portainer:
+            - 'Instructions' : 'contributing/instructions.md'
+            - 'Install required tools on Mac OS' : 'contributing/tools-macos.md'
+            - 'Install required tools on Linux' : 'contributing/tools-linux.md'
+
+
+extra_css:
+    - css/extra.css
+extra_javascript:
+    - js/extrajs.js
+theme:
+  font:
+    text: raleway
+  features:
+    - instant
+  logo: assets/logo.png
+  favicon: assets/icon.webp
+  name: material
+  palette:
+    primary: light-blue
+repo_name: portainer/portainer
+repo_url: https://github.com/portainer/portainer-docs
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/portainerio
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/portainer/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/portainerio/
+    - icon: fontawesome/brands/reddit
+      link: https://reddit.com/r/portainer
