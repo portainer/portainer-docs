@@ -45,6 +45,8 @@ If you need authenticate, define your user and password. <b>NOTE</b>: If you hav
 
 Set environment variables if needed and then click <b>Deploy the Stack</b>.
 
+The docker-compose.yml file is only pulled once from GitHub for the creation of you stack. After creation, you cannot (auto-)update the stack based on changes in or commits to the file on GitHub. You can make local changes in the <b>Editor</b> tab like for stacks deployed from the <b>Web editor</b> but this won't affect the GitHub hosted file. See for the current status of a feaure request [Add the ability to update and redeploy a stack created from a git repository #1753](https://github.com/portainer/portainer/issues/1753)
+
 ![create](assets/create-4.png)
 
 ## Notes
