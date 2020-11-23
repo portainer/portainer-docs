@@ -52,7 +52,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
 <pre><code> docker volume create portainer_data</code></pre>
 
-<pre><code> docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</code></pre>
+<pre><code> docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest</code></pre>
 
 ### Docker Swarm in WSL2
 
@@ -87,7 +87,7 @@ Another scenario is running Docker in Windows is running Windows Containers. Thi
 Once this is done, you need to open a PowerShell console and run the following commands:
 
 <pre><code> docker volume create portainer_data</code></pre>
-<pre><code> docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce</code></pre>
+<pre><code> docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ee:latest</code></pre>
 
 Now, you can navigate to http://localhost:9000 and start using Portainer.
 
