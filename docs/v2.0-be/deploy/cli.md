@@ -16,7 +16,7 @@ If your system does not have the mentioned command, you can run a container to r
 
 To specify the admin password from the command line, start Portainer with the <code>--admin-password</code> flag:
 
-<pre><code>docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --admin-password='$2y$05$8oz75U8m5tI/xT4P0NbSHeE7WyRzOWKRBprfGotwDkhBOGP/u802u'</code></pre>
+<pre><code>docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:latest --admin-password='$2y$05$8oz75U8m5tI/xT4P0NbSHeE7WyRzOWKRBprfGotwDkhBOGP/u802u'</code></pre>
 
 ### Inside a file
 You can also store the plaintext password inside a file and use the <code>--admin-password-file</code> flag:
@@ -27,7 +27,7 @@ Add your password to a file running the following command:
 
 Now you can start the Portainer container by running:
 
-<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ce --admin-password-file /tmp/portainer_password</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ee:latest --admin-password-file /tmp/portainer_password</code></pre>
 
 This works well with Docker Swarm and Docker secrets too:
 
@@ -41,7 +41,7 @@ This works well with Docker Swarm and Docker secrets too:
   --replicas=1 \
   --constraint 'node.role == manager' \
   --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
-  portainer/portainer-ce \
+  portainer/portainer-ee:latest \
   --admin-password-file '/run/secrets/portainer-pass' \
   -H unix:///var/run/docker.sock</code></pre>
 
@@ -57,17 +57,17 @@ For example, take a container started with the label owner=acme (note that this 
 
 To hide this container, simply add the -l owner=acme option on the CLI when starting Portainer:
 
-<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce -l owner=acme</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:latest -l owner=acme</code></pre>
 
 Note that the -l flag can be repeated multiple times to specify multiple labels:
 
-<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce -l owner=acme -l service=secret</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:latest -l owner=acme -l service=secret</code></pre>
 
 ## Use your own logo
 
 You do not like our logo? Want to make Portainer more corporate? Don’t worry, you can easily switch for an external logo (it must be exactly 155px by 55px) using the <code>--logo flag</code>:
 
-<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:latest --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"</code></pre>
 This can also be completed via the GUI in the Portaner Settings menu
 
 ## Use your own templates
@@ -80,7 +80,7 @@ Note: at the moment, templates are only loaded once at first Portainer startup. 
 
 Using the <code>--templates</code> flag you can specify an URL where the template file can be accessed via HTTP.
 
-<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --templates http://my-host.my-domain/templates.json</code></pre>
+<pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:latest --templates http://my-host.my-domain/templates.json</code></pre>
 
 Suggestion: You can host your template files in [Github](https://www.github.com)
 

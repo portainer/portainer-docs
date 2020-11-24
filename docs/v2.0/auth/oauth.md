@@ -10,12 +10,12 @@ Once you logged to Portainer, click in <b>Settings</b> and then in <b>authentica
 
 In this screen, you need to configure the data that you OAuth provider give you to configure Portainer. The fields are:
 
-* Automatic User Provisioning: Toggle on this options if you want to create users for each user logged using OAuth. After enable the toggle, you need to define in wich team that users should be created. 
+* Automatic User Provisioning: Toggle on these options if you want to create users for each user logged using OAuth. After enable the toggle, you need to define in wich team that users should be created. 
 
 ![oauth](assets/oauth_2.png)
 
 * Client ID: This is the public identifier of the OAuth application.
-* Client Secret: Here, you need fill with the token access to the OAuth Application.
+* Client Secret: Here, you need to fill with the token access to the OAuth Application.
 * Authorization URL: URL used to authenticate against the OAuth provider. Will redirect the user to the OAuth provider login view.
 * Access Token URL: URL used to authenticate against the OAuth provider. Will redirect the user to the OAuth provider login view.
 * Resource URL: URL used by Portainer to retrieve information about the authenticated user.
@@ -27,7 +27,7 @@ Once that all fields are completed, do a click in <b>Save Settings</b>
 
 ## Manage access to OAuth Team and Users
 
-To understand how to enable access to an OAuth Teams and Users, please, refer to [this article](/v2.0/endpoints/access).
+To understand how to enable access to OAuth Teams and Users, please, refer to [this article](/v2.0/endpoints/access).
 
 ## Examples
 
@@ -35,16 +35,23 @@ Take a look at the following examples for configuration OAuth using Azure, Googl
 
 * The client ID, called application ID in the MSFT world.
 * The tenant ID (grayed information in the screenshot), is a GUID specific for your ID.
-* This is just a custom defined name for the URL of Portainer.
+* This is just a custom-defined name for the URL of Portainer.
+
+### Azure
 
 ![azure](assets/azure.jpg)
 
+### Google
 
 ![google](assets/google.png)
 
+### Github
 
 ![github](assets/github.jpg)
 
+### Keycloak
+
+![keycloack](assets/keycloak.png)
 
 # Notes
 
