@@ -14,7 +14,7 @@ After that, you will see a form to complete according to your needs. The options
 
 * Name: Name of your Container.
 * Image: This is the image you want to use to deploy your container.
-* Resource Pool: This is the namespace where your container is going to live. To add a new resource pool, see this [help article](/v2.0-be-be/docs/kubernetes/resouce_pool/create.md).
+* Resource Pool: This is the namespace where your container is going to live. To add a new resource pool, see this [help article](/v2.0-be/docs/kubernetes/resouce_pool/create.md).
 * Stack: Portainer can automatically bundle multiple applications inside a stack. Enter a name of a new stack or select an existing stack in the list. Leave empty to use the application name.
 * Environment Variables: Fill the environment that your app needs, this is optional and only depends of the configuration supported by your app.
 * Configurations: If you created configuration files before using Portainer, you can select that configuration in this space.
@@ -26,7 +26,7 @@ After that, you will see a form to complete according to your needs. The options
 * Deployment: Select how you want to deploy your application inside the cluster. The options are the following:
   - Replicated: Run one or multiple instances of this container.
   - Global: Deploy an instance of this container on each node of the cluster.
-* Auto Scaling: Select this to enable the auto scaling of your application and define how many instances need to scale and under what conditions.
+* Auto Scaling: Select this to enable the auto-scaling of your application and define how many instances need to scale and under what conditions.
 * Placement rules: Deploy this application on nodes that respect ALL of the following placement rules. Placement rules are based on node labels.
 * Placement Policy: Specify the policy associated to the placement rules. This can be any of two options:
   - Preferred: Schedule this application on nodes that match the rules if possible.

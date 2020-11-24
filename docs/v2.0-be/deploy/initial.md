@@ -33,7 +33,7 @@ If everything work as expected, the next step is connect Portainer to the initia
 
 ## Connect Portainer to the container environment
 
-If you installed [Portainer in Kubernetes](/v2.0-be-be/deploy/linux/#deploy-portainer-in-kubernetes) you would choose Kubernetes, but if you [installed in Docker](/v2.0-be-be/deploy/linux/#deploy-portainer-in-docker), you may want choose manage the local Docker environment. 
+If you installed [Portainer in Kubernetes](/v2.0-be/deploy/linux/#deploy-portainer-in-kubernetes) you would choose Kubernetes, but if you [installed in Docker](/v2.0-be/deploy/linux/#deploy-portainer-in-docker), you may want choose manage the local Docker environment. 
 
 ![kubernetes-initial](assets/initial-3.png)
 

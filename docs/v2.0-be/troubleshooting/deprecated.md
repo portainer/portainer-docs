@@ -8,7 +8,7 @@ The table below provides an overview of deprecated features and capabilities. Th
 
 | Feature | Deprecated | Remove |
 |---------|------------|--------|
-| Disabling analytics via: <code>--no-analytics</code> | v2.0-be-be | TBD |
+| Disabling analytics via: <code>--no-analytics</code> | v2.0 | TBD |
 
 ## Removed features
 
@@ -16,11 +16,11 @@ This section outlines features & capabilities that have been removed from Portai
 
 | Feature | Removed |
 |---------|---------|
-| Specifying external endpoints via JSON via <code>--external-endpoints</code> | v2.0-be-be |
-| Setting time between endpoint synchronization requests via <code>--sync-interval</code> | v2.0-be-be |
-| Disabling Portainer internal authentication via <code>--no-auth</code> | v2.0-be-be |
-| Specifying a templates file to load on first run via <code>--templates-file</code> | v2.0-be-be |
-| Preventing Portainer from running a snapshot of endpoints via <code>--no-snapshot</code> | v2.0-be-be |
+| Specifying external endpoints via JSON via <code>--external-endpoints</code> | v2.0 |
+| Setting time between endpoint synchronization requests via <code>--sync-interval</code> | v2.0 |
+| Disabling Portainer internal authentication via <code>--no-auth</code> | v2.0 |
+| Specifying a templates file to load on first run via <code>--templates-file</code> | v2.0 |
+| Preventing Portainer from running a snapshot of endpoints via <code>--no-snapshot</code> | v2.0 |
 
 ## Notes
 

@@ -1,9 +1,9 @@
 # Add Kubernetes Endpoint
 
-Adding Kubernetes endpoints to Portainer CE 2.0 is very straightforward. As a requirement, you need to define if you are going to deploy the Agents for Kubernetes via NodePort or LoadBalancer. In this guide, you will see how to deploy in both scenarios.
+Adding Kubernetes endpoints to Portainer BE 2.0 is very straightforward. As a requirement, you need to define if you are going to deploy the Agents for Kubernetes via NodePort or LoadBalancer. In this guide, you will see how to deploy in both scenarios.
 
 You can view the supported Kubernetes versions in this [page].
-For more information on supported Kubernetes Versions please view the [Requirements] (/v2.0-be-be/deploy/requirements.md) page.
+For more information on supported Kubernetes Versions please view the [Requirements] (/v2.0-be/deploy/requirements.md) page.
 
 ## Add Kubernetes Endpoint via NodePort.
 

@@ -7,12 +7,12 @@ The edge agent was created as a way to manage an edge compute environment where 
 This scenario only applies when Portainer is running in a Docker or Docker Swarm environment.
 
 Portainer communicates with the edge agent over port 8000; through this port the edge agent can poll the Portainer instance, connect to Portainer, see when it is needed & initiate a tunnel or receive config updates. Without port 8000 exposed on Portainer, you cannot access the edge endpoint. If you already have Portainer deployed, you need to redeploy with port 8000 exposed alongside the port used to access Portainer.
-Using the CLI flag --tunnel-port you are able to set a different port if 8000 is already in use. For more information see [CLI options] (/v2.0/deploy/cli.md).
+Using the CLI flag --tunnel-port you are able to set a different port if 8000 is already in use. For more information see [CLI options](/v2.0/deploy/cli.md).
 
 ## Recommended Portainer deployment methods.
 
 * Portainer with TLS: If your Portainer instance is deployed with TLS, the agent will use HTTPS for the connection it makes back to Portainer. This is the recommended approach.
-* Portainer with self-signed certs: If you are using a self signed Portainer instance, the edge agent must be deployed with the flag: <code>-e EDGE_INSECURE_POLL=1</code>. If you do not deploy Portainer with this flag, then the agent will not be able to communicate with Portainer. This option is less secure than TLS.
+* Portainer with self-signed certs: If you are using a self-signed Portainer instance, the edge agent must be deployed with the flag: <code>-e EDGE_INSECURE_POLL=1</code>. If you do not deploy Portainer with this flag, then the agent will not be able to communicate with Portainer. This option is less secure than TLS.
 * Portainer fallback to HTTP: If Portainer is not configured with either of the above options, it will fallback to using HTTP for the agent polling. This option is no longer recommended, as it is insecure.
 
 ## Deploying Edge agent in Docker Standalone environment.

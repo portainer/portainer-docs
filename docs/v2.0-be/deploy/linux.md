@@ -4,8 +4,6 @@
 
 To deploy Portainer within a Kubernetes cluster, you can either use our HELM chart, or our provided manifests.
 
-Note that Portainer CE 2.0 supports Kubernetes version 1.16, 1.17 and 1.18 only.
-
 ### Pre-Req Note:
 Portainer requires data persistence, and as a result needs at least one storage-class available to use. Portainer will attempt to use the "default" storage class during deployment. If you do NOT have a storage class tagged as "default" the deployment will likely fail.
 
@@ -39,13 +37,13 @@ Then, create the Portainer namespace in your cluster
 
 #### For NodePort
 
-Using the following command, Portainer will run in the port 30777
+Using the following command, Portainer will run at port 30777.
 
 <pre><code> helm install -n portainer portainer portainer/portainer</code></pre>
 
 #### For Load Balancer
 
-Using the following command, Portainer will run in the port 9000.
+Using the following command, Portainer will run at port 9000.
 
 <pre><code> helm install -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
 
@@ -61,7 +59,7 @@ First create the Portainer namespace in your cluster
 
 #### For NodePort
 
-Using the following command, Portainer will run in the port 30777
+Using the following command, Portainer will run at port 30777.
 
 <pre><code> kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml</code></pre>
 
@@ -75,7 +73,7 @@ Portainer is comprised of two elements, the Portainer Server, and the Portainer 
 
 Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
 
-To see the requeriments, please, visit the page of [requirements](/v2.0-be-be/deploy/requeriments.md)
+To see the requeriments, please, visit the page of [requirements](/v2.0-be/deploy/requeriments.md)
 
 ### Docker Standalone
 

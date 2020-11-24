@@ -4,7 +4,7 @@ Edge Groups allows you to create groups of Edge endpoints based on a manual sele
 
 To create a group, 1. go to <b>Edge Groups</b> and then 2. click <b>Add Edge Group</b>.
 
-![edge](https://documentation.portainer.io/v2.0-be-be/settings/assets/edge_3.png)
+![edge](https://documentation.portainer.io/v2.0-be/settings/assets/edge_3.png)
 
 1. Enter a <b>Name</b> and then 2. select either <b>Static</b> or <b>Dynamic</b>.
 
@@ -12,7 +12,7 @@ To create a group, 1. go to <b>Edge Groups</b> and then 2. click <b>Add Edge Gro
 
 3. Select the Endpoints you want to add to that group 4. These should then appear in the table on the right and finally 5. Click <b>Add edge group</b>
 
-![edge](https://documentation.portainer.io/v2.0-be-be/settings/assets/edge_4.png)
+![edge](https://documentation.portainer.io/v2.0-be/settings/assets/edge_4.png)
 
 ## Dynamic
 
@@ -23,7 +23,7 @@ To create a group, 1. go to <b>Edge Groups</b> and then 2. click <b>Add Edge Gro
 
 4. Type the tag and endpoints with that tag will appear in the screen. Finally, click <b>Add edge group</b>
 
-![edge](https://documentation.portainer.io/v2.0-be-be/settings/assets/edge_5.png)
+![edge](https://documentation.portainer.io/v2.0-be/settings/assets/edge_5.png)
 
 # Notes
 

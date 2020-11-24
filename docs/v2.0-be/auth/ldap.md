@@ -52,7 +52,7 @@ Example, to only allow users who are members of a group, which is a group define
 
 <pre><code>(&(objectClass=user)(memberOf=CN=<GROUPNAME>,OU=<MYOU>,DC=<DOMAIN>,DC=<DOMAIN>))</code></pre>
 
-Example below shows that in the domain portainer.local, we have an OU called "Groups" and within that OU is a group called "PortainerDevUsers". This search filter will only allow users to login to Portainer that are members of the PortainerDevUsers LDAP group.
+The example below shows that in the domain portainer.local, we have an OU called "Groups" and within that OU is a group called "PortainerDevUsers". This search filter will only allow users to login to Portainer that are members of the PortainerDevUsers LDAP group.
 
 ![auth](assets/ldap_5.png)
 

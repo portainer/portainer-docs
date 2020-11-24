@@ -4,8 +4,6 @@
 
 To deploy Portainer within a Kubernetes cluster, you can either use our HELM chart, or our provided manifests.
 
-Note that Portainer CE 2.0 supports Kubernetes version 1.16, 1.17 and 1.18 only.
-
 ### Pre-Req Note:
 Portainer requires data persistence, and as a result needs at least one storage-class available to use. Portainer will attempt to use the "default" storage class during deployment. If you do NOT have a storage class tagged as "default" the deployment will likely fail.
 

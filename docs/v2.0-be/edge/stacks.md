@@ -8,7 +8,7 @@ Edge stacks lets you deploy an app to all selected edge endpoints concurrently, 
 
 1. Select <b>Edge Stacks</b> and then 2. Click <b>Add stack</b>.
 
-![edge](https://documentation.portainer.io/v2.0-be-be/settings/assets/edge_6.png)
+![edge](https://documentation.portainer.io/v2.0-be/settings/assets/edge_6.png)
 
 Next 1. <b>Name</b> your stack and 2. select one or more <b>Edge Groups</b>.
 
@@ -21,7 +21,7 @@ Next 1. <b>Name</b> your stack and 2. select one or more <b>Edge Groups</b>.
 
 4. Once complete, click <b>Deploy stack</b>
 
-![edge](https://documentation.portainer.io/v2.0-be-be/settings/assets/edge_7.png)
+![edge](https://documentation.portainer.io/v2.0-be/settings/assets/edge_7.png)
 
 # Notes
 

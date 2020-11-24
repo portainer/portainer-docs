@@ -12,7 +12,7 @@ To add an ACI Endpoint you will need the following information:
 
 * Name: Choose a name to identify this endpoint.
 * Application ID: This value is from the application you created in Azure.
-* Tenant ID: You can get your tenant ID of Azure Subscription page
+* Tenant ID: You can get your tenant ID from Azure Subscription page
 * Authentication ID: This value is from the process of Application creation in Azure.
 
 Once you have these values, you can start to add an ACI Endpoint to Azure. 

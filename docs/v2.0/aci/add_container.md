@@ -15,7 +15,7 @@ Click <b>Container Instances</b> and then <b>Add Container</b>.
 In the next screen, you need to define the container configuration, these options are available:
 
 * Subscription: If you have two or more subscriptions attached, you can choose where you want to deploy your container.
-* Resource Group: If you have two or more Resources groups created, you need to define where you want to deploy your container.
+* Resource Group: If you have two or more resources groups created, you need to define where you want to deploy your container.
 * Location: Here you need to define in which datacenter you want to run your container.
 * Name: Name your container.
 * Image: Type the name of the image you want to deploy.

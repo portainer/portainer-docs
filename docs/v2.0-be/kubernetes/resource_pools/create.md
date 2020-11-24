@@ -1,6 +1,6 @@
 # Create a Resource Pool
 
-The Resource Pools are helpful when multiple teams are using the same cluster and there is potential collision, you can prevent this by using a virtual wall between multiple clusters. In this help article, you will learn how to create a Resource Pool (Namespace) using Portainer.
+The Resource Pools are helpful when multiple teams are using the same cluster and there is an potential collision, you can prevent this by using a virtual wall between multiple clusters. In this help article, you will learn how to create a Resource Pool (Namespace) using Portainer.
 
 ## Creating a Resouce Pool
 
@@ -18,7 +18,7 @@ Name your Resource Pool.
 
 ### Resource Assignment
 
- A resource pool is a logical abstraction of a Kubernetes cluster, to provide for more flexible management of resources. Best practice is to set a quota assignment as this ensures greatest security/stability; alternatively, you can disable assigning a quota for unrestricted access (not recommended).
+ A resource pool is a logical abstraction of a Kubernetes cluster, to provide for more flexible management of resources. The best practice is to set a quota assignment as this ensures the greatest security/stability; alternatively, you can disable assigning a quota for unrestricted access (not recommended).
 
 Here you can define resource limits:
 

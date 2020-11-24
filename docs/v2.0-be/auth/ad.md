@@ -49,7 +49,7 @@ Here, you can define, the following options:
 
 ### Test Login
 
-If you want to know if your configuration is valid, you can run a test login from the configuration of Active Directory settings. Scrolldown to <b>Test Login</b> Section, fill with a valid user and password and do a click in <b>Test</b>. If everything is work as expected, you will see a check beside of the button.
+If you want to know if your configuration is valid, you can run a test login from the configuration of Active Directory settings. Scroll down to <b>Test Login</b> Section, fill with a valid user and password and do a click in <b>Test</b>. If everything is work as expected, you will see a check beside of the button.
 
 ![auth](assets/openldap4.png)
 

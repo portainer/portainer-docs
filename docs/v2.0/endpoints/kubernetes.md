@@ -1,9 +1,9 @@
 # Add Kubernetes Endpoint
 
-Adding Kubernetes endpoints to Portainer CE 2.0 is very straightforward. As requirement you need to define if you  are going to deploy the Agents for Kubernetes via NodePort or Load Balancer. In this guide, you will see how to deploy in both scenarios.
+Adding Kubernetes endpoints to Portainer CE 2.0 is very straightforward. As a requirement you need to define if you are going to deploy the Agents for Kubernetes via NodePort or Load Balancer. In this guide, you will see how to deploy in both scenarios.
 
-You can view the supported Kubernetes versions in this [page].
-For more information on supported Kubernetes Versions please view the [Requirements] (/v2.0/deploy/requirements.md) page.
+You can view the supported Kubernetes versions in this [page](/v2.0/deploy/requirements/#supported-kubernetes-versions).
+For more information on supported Kubernetes Versions please view the [Requirements](/v2.0/deploy/requirements.md) page.
 
 ## Add Kubernetes Endpoint via NodePort.
 
@@ -46,7 +46,7 @@ Now, we're ready to move on to the next step.
 Once the Agent is running in the Kubernetes host, you need to fill the <b>environment details</b>. The following options are available:
 
 * Name: This is a descriptive name for your endpoint. This field is required.
-* Endpoint URL: Define your IP or name to connect to the endpoint (Kubernetes host) and specify the port (30778) if this is needed. This field is requiered.
+* Endpoint URL: Define your IP or name to connect to the endpoint (Kubernetes host) and specify the port (30778) if this is needed. This field is required.
 * Public IP: URL or IP address where exposed containers will be reachable. This field is optional and will default to the endpoint URL.
 
 In the <b>Metadata</b> section, you can define a <b>group</b> and <b>tags</b> for this endpoint.
@@ -59,11 +59,11 @@ Once everything is set click <b>Add Endpoint</b>. You will then see the final co
 
 In this screen, you can set the following options:
 
-* Allow users to use external load balancer: Enabling the load balancer feature will allow users to expose application they deploy over an external IP address assigned by cloud provider.
-* Ingress controller: Adding ingress controllers will allow users to expose application they deploy over a HTTP route.
+* Allow users to use external load balancer: Enabling the load balancer feature will allow users to expose an application they deploy over an external IP address assigned by cloud provider.
+* Ingress controller: Adding ingress controllers will allow users to expose an application they deploy over an HTTP route.
 * Enable features using metrics server: Enabling this feature will allow users to use specific features that leverage the metrics server component.
 * Available storage options: Select which storage options will be available for use when deploying applications. Have a look at your storage driver documentation to figure out which access policy to configure and if the volume expansion capability is supported. The options in the sections are:
-  - Local-path: In this scenario your applications will be storaged in the node.
+  - Local-path: In this scenario your applications will be stored in the node.
   - Shared Access Policy: RWO or RWX
   - Volume Expansion: Enable the option to expand the persistent storage of the pods. 
 

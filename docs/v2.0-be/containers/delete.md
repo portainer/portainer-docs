@@ -8,7 +8,7 @@ To delete a container, click <b>Containers</b>, then check the container you wan
 
 ![delete](assets/delete-1.png)
 
-A pop up will ask for confirmation, and ask you decide if you want to <b>automatically the non-persistent volumes</b>. Once you selection has been made, click <b>Remove</b>
+A pop-up will ask for confirmation, and ask you decide if you want to <b>automatically the non-persistent volumes</b>. Once you selection has been made, click <b>Remove</b>
 
 ![delete](assets/delete-2.png)
 

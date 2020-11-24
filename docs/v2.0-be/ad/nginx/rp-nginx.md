@@ -57,7 +57,7 @@ Once the deployment is complete you can browse <code>portainer.yourdomain.com</c
 
 Deploying Portainer in Docker Swarm behind NGINX has similar steps to the Docker Standalone scenario. 
 
-First, you need to create a few networks. One for the agent and the communication with Portainer Server and other to "expose" the Portainer container to the same network that the Reverse Proxy. 
+First, you need to create a few networks. One for the agent and the communication with Portainer Server, and other to "expose" the Portainer container to the same network that the Reverse Proxy. 
 
 Before deploying, you need to create 2 elements: Networks and volumes. 
 

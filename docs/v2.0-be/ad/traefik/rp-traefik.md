@@ -179,7 +179,7 @@ volumes:
    data:
 </code></pre>
 
-4. Before you can deploy, you need to customize this labels to match with the URL that you want. 
+4. Before you can deploy, you need to customize these labels to match the URL that you want. 
 
 <pre><code>- "traefik.http.routers.frontend.rule=Host(`portainer.yourdomain.com`)"</code></pre>
 
@@ -196,7 +196,7 @@ lt21zrypsll6        portainer_agent       global              1/1               
 m6912ynwdcd7        portainer_portainer   replicated          1/1                 portainer/portainer-ce:2.0.0
 tw2nb4i640e4        portainer_traefik     replicated          1/1                 traefik:latest                 *:80->80/tcp, *:443->443/tcp</code></pre>
 
-Once the services are running, you can browse the url specified (e.g. portainer.yourdomain.com) to access Portainer.
+Once the services are running, you can browse the URL specified (e.g. portainer.yourdomain.com) to access Portainer.
 
 ### Deploying in a Kubernetes scenario
 

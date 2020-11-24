@@ -10,7 +10,7 @@ Once you logged to Portainer, click in <b>Settings</b> and then in <b>authentica
 
 In this screen, you need to configure the data that you OAuth provider give you to configure Portainer. The fields are:
 
-* Automatic User Provisioning: Toggle on these options if you want to create users for each user logged using OAuth. After enable the toggle, you need to define in wich team that users should be created. 
+* Automatic User Provisioning: Toggle on the                       se options if you want to create users for each user logged using OAuth. After enable the toggle, you need to define in wich team that users should be created. 
 
 ![oauth](assets/oauth_2.png)
 

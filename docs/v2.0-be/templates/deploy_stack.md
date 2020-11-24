@@ -1,8 +1,8 @@
 # How to deploy a stack from a template
 
-Portainer allows you to deploy an entire stack from a template from the template list which includes default and custom templates. Also see [creating a template from a Stack](/v2.0-be-be/stacks/template).
+Portainer allows you to deploy an entire stack from a template from the template list which includes default and custom templates. Also see [creating a template from a Stack](/v2.0-be/stacks/template).
 
-## Deploying an Stack
+## Deploying a Stack
 
 To deploy a stack, go to <b>App Templates</b> and choose the template you want to deploy. In this example, I will deploy a CockroachDB cluster.
 

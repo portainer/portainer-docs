@@ -1,6 +1,6 @@
 # OAuth authentication
 
-Portainer Business Edition can be connected to a severals OAuth providers in a easy way without need to understand complex configurations.
+Portainer Business Edition can be connected to several OAuth providers in an easy way without need to understand complex configurations.
 
 ### Microsoft OAuth Provider
 
@@ -48,7 +48,7 @@ To configure a custom OAuth provider, once you logged to Portainer, click in <b>
 
 In this screen, you need to configure the data that you OAuth provider give you to configure Portainer. The fields are:
 
-* Automatic User Provisioning: Toggle on this options if you want to create users for each user logged using OAuth. After enable the toggle, you need to define in wich team that users should be created. 
+* Automatic User Provisioning: Toggle on these options if you want to create users for each user logged using OAuth. After enable the toggle, you need to define in wich team that users should be created. 
 
 ![oauth](assets/custom2.png)
 
@@ -65,7 +65,7 @@ Once that all fields are completed, do a click in <b>Save Settings</b>
 
 ## Manage access to OAuth Team and Users
 
-To understand how to enable access to an OAuth Teams and Users, please, refer to [this article](/v2.0-be-be/endpoints/access).
+To understand how to enable access to OAuth Teams and Users, please, refer to [this article](/v2.0-be/endpoints/access).
 
 ## Notes
 

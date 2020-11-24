@@ -22,9 +22,9 @@ After that, you will see that a few options appear in the side menu.
 
 Take a look to the Edge section in the User Guide to see how to use it. 
 
-* [Deploy an Stack](/v2.0-be-be/edge/stacks/)
-* [Add a Job](/v2.0-be-be/edge/jobs/add/)
-* [Managind Edge Groups](/v2.0-be-be/edge/groups/)
+* [Deploy an Stack](/v2.0-be/edge/stacks/)
+* [Add a Job](/v2.0-be/edge/jobs/add/)
+* [Managind Edge Groups](/v2.0-be/edge/groups/)
 
 
 # Notes

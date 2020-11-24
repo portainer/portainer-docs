@@ -1,12 +1,12 @@
-# Add a Edge Job
+# Add an Edge Job
 
-Adding a Edge Job is a excellent way to schedule jobs in your Edge hosts. This can be used to run any scripts you need, for example, run a backup in a determined period of time. 
+Adding an Edge Job is an excellent way to schedule jobs in your Edge hosts. This can be used to run any scripts you need, for example, run a backup in a determined period of time. 
 
 <b>Note</b>: This is a beta feature.
 
-<b>Note 2</b>: Computing features needs to be enabled. Take a look at this section in our [admin guide](v2.0/settings/edge/#enabling-edge-compute-features).
+<b>Note 2</b>: Computing features needs to be enabled. Take a look at this section in our [admin guide](/v2.0/settings/edge/#enabling-edge-compute-features).
 
-## Adding a Edge Job
+## Adding an Edge Job
 
 To add a job, click <b>Edge Jobs</b> and then <b>Add Edge job</b>.
 
@@ -15,7 +15,7 @@ To add a job, click <b>Edge Jobs</b> and then <b>Add Edge job</b>.
 Then 1. Name your job and 2. Choose between the following two options:
 
 * Basic Configuration: Select a date from a calendar
-* Advanced Configuration: Write your own cron rule.
+* Advanced Configuration: Write your own CRON rule.
 
 * Select if this job is a recurring job and enter the job time.
 

@@ -6,7 +6,7 @@ You can deploy Portainer in a Kubernetes environment in Windows using Docker Des
 
 ### Enable Kubernetes in Docker Desktop
 
-To enable Kubernetes in Docker Desktop, you need to open the dashboard of Docker Desktop. Right click the Docker icon in the system tray and click "dashboard"
+To enable Kubernetes in Docker Desktop, you need to open the dashboard of Docker Desktop. Right-click the Docker icon in the system tray and click "dashboard"
 
 ![dashboard](assets/windows10-1.png)
 
@@ -42,7 +42,7 @@ Portainer is comprised of two elements, the Portainer Server, and the Portainer 
 
 Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
 
-Please see the [requirements](/v2.0-be-be/deploy/requeriments.md) page for further info .
+Please see the [requirements](/v2.0-be/deploy/requeriments.md) page for further info .
 
 ### Docker Standalone in WSL2
 
@@ -93,7 +93,7 @@ Now, you can navigate to http://localhost:9000 and start using Portainer.
 
 ### Docker Swarm using Windows Containers
 
-You can use our YML manifest to run Portainer in Windows using Windows Containers. In a Powershell windows, you must run:
+You can use our YML manifest to run Portainer in Windows using Windows Containers. In a Powershell window, you must run:
 
 <pre><code> curl https://downloads.portainer.io/portainer_windows_stack.yml -o portainer_windows_stack.yml</code></pre>
 <pre><code> docker stack deploy --compose-file=portainer_windows_stack.yml portainer</code></pre>
@@ -121,6 +121,6 @@ To run Portainer Agent in a Windows Container scenario, you need to execute the 
 
 ## Notes
 
-These deployments were tested in Windows 10 Pro 2004 edition. To use Windows Containers, you need to run Windows 10 ver 1803 or newest.
+These deployments were tested in Windows 10 Pro 2004 edition. To use Windows Containers, you need to run Windows 10 ver 1803 or the newest.
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
