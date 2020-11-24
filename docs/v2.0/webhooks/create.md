@@ -12,6 +12,26 @@ After you enable the toggle you will see the URL to configure your webhook in Do
 
 ![webhooks](assets/2.png)
 
+## Examples
+
+Here, you can find a few examples to understand how easy is to trigger the webhook.
+
+### Redeploy
+
+```
+<form action="http://192.168.1.12:9000/api/webhooks/638e6967-ef77-4906-8af8-236800621360" method="post">
+  Redeploy with latest image of same tag <input type="submit" />
+</form>
+```
+
+### Update Service with another tag
+
+```
+<form action="http://192.168.1.12:9000/api/webhooks/638e6967-ef77-4906-8af8-236800621360?tag=latest" method="post">
+  Update Service image with different tag <input type="submit" />
+</form>
+```
+
 ## Configuring the Webhook in Docker Hub
 
 To see how to complete the configuration in Docker Hub, [click here](https://docs.docker.com/docker-hub/webhooks/).
