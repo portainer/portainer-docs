@@ -6,7 +6,7 @@ Portainer allows you to export any Docker image that is stored in any node. This
 
 ## Exporting Images
 
-To export images, click<b>Images</b>, select theimage</b> you want to export and click <b>Export</b>.
+To export images, click <b>Images</b>, select the <b>image</b> you want to export and click <b>Export</b>.
 
 ![export](assets/export-1.png)
 

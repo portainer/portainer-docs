@@ -1,6 +1,6 @@
-# Duplicated and or Edit Containers
+# Duplicate or Edit Containers
 
-In Portainer you have the ability to duplicate and / or edit yours containers.
+In Portainer you have the ability to duplicate and / or edit your containers.
 
 ## Duplicate a running container
 

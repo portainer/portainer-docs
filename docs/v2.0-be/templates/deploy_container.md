@@ -1,4 +1,4 @@
-# Deploy an standalone app (Container)
+# Deploy a standalone app (Container)
 
 From Portainer, you can deploy a standalone app from the default template list.
 

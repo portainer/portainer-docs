@@ -4,7 +4,7 @@ Portainer allows you to import the images that you have created in another Porta
 
 ## Importing Images
 
-To import an image using Portainer, go a <b>Images</b> and then click <b>Import</b>.
+To import an image using Portainer, go to <b>Images</b> and then click <b>Import</b>.
 
 ![import](assets/import-1.png)
 

@@ -1,10 +1,10 @@
 # Migrate a Stack to another Swarm Cluster
 
-From Portainer, you will be capable to do migrations of yours stacks from one cluster to another. In this help article, you will learn how to do it. 
+From Portainer, you can migrate your stacks from one cluster to another. In this help article, you will learn how to do it. 
 
 ## Migrating a Stack to another Swarm Cluster
 
-In this case, we have a local Swarm Cluster and we want to move 'my-awesome-stack' to another cluster. To do this, go to <b>Stacks</b>, and do a click in your Stack.
+In this case, we have a local Swarm Cluster and we want to move 'my-awesome-stack' to another cluster. To do this, go to <b>Stacks</b>, and select your Stack.
 
 ![migrate](assets/migrate-1.png)
 
@@ -12,11 +12,11 @@ From the <b>Duplicate/Migrate</b> section, select the endpoint where you want to
 
 ![migrate](assets/migrate-2.png)
 
-Once you selected the endpoint, do a click in <b>Migrate</b>.
+Once you selected the endpoint, click <b>Migrate</b>.
 
 ![migrate](assets/migrate-3.png)
 
-You will see an pop-up advising about the migration. If you're sure, do a click in <b>Migrate</b>.
+You will see an pop-up advising about the migration. If you're sure, click <b>Migrate</b>.
 
 ![migrate](assets/migrate-4.png)
 

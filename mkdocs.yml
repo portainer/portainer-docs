@@ -63,9 +63,9 @@ nav:
             - 'View Container stats' : 'v2.0/containers/stats.md'
             - 'Access container console' : 'v2.0/containers/console.md'
             - 'Change Container Ownership' : 'v2.0/containers/ownership.md'
-            - 'Duplicated/Edit a Container' : 'v2.0/containers/duplicate-edit.md'
+            - 'Duplicate or Edit a Container' : 'v2.0/containers/duplicate-edit.md'
           - 'App Templates':
-            - 'Deploy an Stack' : 'v2.0/templates/deploy_stack.md'
+            - 'Deploy a Stack' : 'v2.0/templates/deploy_stack.md'
             - 'Deploy an App (Container)' : 'v2.0/templates/deploy_container.md'
           - 'Images':
             - 'Pull images' : 'v2.0/images/pull.md'
@@ -191,9 +191,9 @@ nav:
             - 'View Container stats' : 'v2.0-be/containers/stats.md'
             - 'Access container console' : 'v2.0-be/containers/console.md'
             - 'Change Container Ownership' : 'v2.0-be/containers/ownership.md'
-            - 'Duplicated/Edit a Container' : 'v2.0-be/containers/duplicate-edit.md'
+            - 'Duplicate or Edit a Container' : 'v2.0-be/containers/duplicate-edit.md'
           - 'App Templates':
-            - 'Deploy an Stack' : 'v2.0-be/templates/deploy_stack.md'
+            - 'Deploy a Stack' : 'v2.0-be/templates/deploy_stack.md'
             - 'Deploy an App (Container)' : 'v2.0-be/templates/deploy_container.md'
           - 'Images':
             - 'Pull images' : 'v2.0-be/images/pull.md'

@@ -21,7 +21,7 @@ You can also define <b>Environment Variables</b> if needed.
 
 ![create](assets/create-2.png)
 
-When you set up everything, do a click in <b>Deploy the Stack</b>.
+When everything is set up, click <b>Deploy the Stack</b>.
 
 ### Uploading a stack file
 
