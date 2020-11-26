@@ -149,7 +149,7 @@ nav:
           - 'OAuth' : 'v2.0-be/auth/oauth.md'
           - 'Internal' : 'v2.0-be/auth/internal.md'
         - Managing Users & Teams:
-          - 'Description of RBAC' : 'v2.0-be/users/roles.md'
+          - 'RBAC Overview' : 'v2.0-be/users/roles.md'
           - 'Effective access viewer' : 'v2.0-be/users/viewer.md'
           - 'Create a User' : 'v2.0-be/users/create.md'
           - 'Create a Team' : 'v2.0-be/users/create-team.md'
@@ -158,7 +158,7 @@ nav:
           - 'Reset User Password' : 'v2.0-be/users/reset-user.md'
           - 'Reset Administrator Password' : 'v2.0-be/users/reset-admin.md'
         - Registries:
-          - 'Description of Registry Management' : 'v2.0-be/registries/description.md'
+          - 'Registry Management Overview' : 'v2.0-be/registries/description.md'
           - 'Connect to a Registry' : 'v2.0-be/registries/connect.md'
           - 'Enable Docker Hub Authentication' : 'v2.0-be/registries/auth-docker-hub.md'
         - Configuring Settings:

@@ -117,7 +117,7 @@ Here is an explanation of the above settings:
 * Allowed Groups (optional): You can specify another group and their path to the directory.
 * User Filter: is filled by default according to OpenLDAP configuration. 
 
-To check if everything work as expected, you can do a click in <b>Display Users</b> and you will see a list with the names configured in the directory.
+To check if everything works as expected, click <b>Display Users</b> and you will see a list with the names configured in the directory.
 
 ![auth](assets/openldap2.png)
 
@@ -129,13 +129,13 @@ Portainer optionally allows you to set a Group Search as well as the User Search
 * Group Base DN: Will be used the DN used when you authenticate to the OpenLDAP Server.
 * Group Filter: Is filled default according to OpenLDAP configuration. 
 
-To check if everything work as expected, you can do a click in <b>Display Users</b> and <b>Groups</b> and you will see a list with the names configured in the directory.
+To check if everything works as expected, click <b>Display Users</b> and <b>Groups</b> and you will see a list with the names configured in the directory.
 
 ![auth](assets/openldap3.png)
 
 ### Test Login
 
-If you want to know if your configuration is valid, you can run a test login from the configuration of OpenLDAP settings. Scrolldown to <b>Test Login</b> Section, fill with a valid user and password and do a click in <b>Test</b>. If everything is work as expected, you will see a check beside of the button.
+If you want to know if your configuration is valid, you can run a test login from the configuration of OpenLDAP settings. Scrolldown to <b>Test Login</b> Section, fill with a valid user and password and click <b>Test</b>. If everything works as expected, you will see a check beside of the button.
 
 ![auth](assets/openldap4.png)
 

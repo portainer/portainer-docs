@@ -6,21 +6,21 @@ With Portainer Business Edition, you can use your resources on full where are mo
 
 ## Enabling Over Commitment of Resources
 
-To do this, you need to open Portainer Business Edition, go to <b>Cluster</b> and the to <b>Setup</b>. After that, you need to enable the toggle <b>Allow resource over-commit</b>.
+To do this, you need to open Portainer Business Edition, go to <b>Cluster</b> and then to <b>Setup</b>. After that, you need to enable the toggle <b>Allow resource over-commit</b>.
 
 ![namespace](assets/over.png)
 
-After you enabled the toggle, scroll down and do a click in <b>Save Configuration</b>.
+After you enabled the toggle, scroll down and click <b>Save Configuration</b>.
 
 ![namespace](assets/save_conf.png)
 
 ## Disabling Over Commitment of Resources
 
-When you disable the Over Commitment of resources, you can reserve a system resource reservation percentage. To do this, you need to open Portainer Business Edition, go to <b>Cluster</b> and the to <b>Setup</b>. After that, you need to disable the toggle <b>Allow resource over-commit</b>. After that, you can do a reservation of resources. Insert the percentage of the resources you want to reserve...
+When you disable the Over Commitment of resources, you can reserve a system resource reservation percentage. To do this, you need to open Portainer Business Edition, go to <b>Cluster</b> and then to <b>Setup</b>. After that, you need to disable the toggle <b>Allow resource over-commit</b>, you cam then do a reservation of resources. Insert the percentage of the resources you want to reserve...
 
 ![namespace](assets/reserve.png)
 
-After you disabled the toggle, scroll down and do a click in <b>Save Configuration</b>.
+After you disabled the toggle, scroll down and click <b>Save Configuration</b>.
 
 ![namespace](assets/save_conf.png)
 

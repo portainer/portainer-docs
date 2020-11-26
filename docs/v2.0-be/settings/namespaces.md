@@ -8,7 +8,7 @@ To do this, you need to open Portainer Business Edition, go to <b>Cluster</b> an
 
 ![namespace](assets/namespaces.png)
 
-After you enabled the toggle, scroll down and do a click in <b>Save Configuration</b>.
+After you enabled the toggle, scroll down and click <b>Save Configuration</b>.
 
 ![namespace](assets/save_conf.png)
 
