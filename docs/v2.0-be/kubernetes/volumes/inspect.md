@@ -16,7 +16,7 @@ In the first view, you will see the following data:
 
 ![volumes](assets/inspect-1.png)
 
-After select the volume, you will see three tabs, in the first one, you will information about the volume itself.
+After selecting the volume, you will see three tabs. In the first one, you will information about the volume itself.
 
 ![volumes](assets/inspect-2.png)
 

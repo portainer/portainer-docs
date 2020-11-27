@@ -39,7 +39,7 @@ To enable a Load Balancer quota for this resource pool, enable the toggle <b>Loa
 
  Quotas can be set on each storage option to prevent users from exceeding a specific threshold when deploying applications. You can set a quota to 0 to effectively prevent the usage of a specific storage option inside this resource pool.
 
-To enable Storage Quota for this resource pool, enable the toogle <b>Enable quota<b>, set the <b>Maximum Usage</b> and the unit of storage (MB, GB, TB).
+To enable Storage Quota for this resource pool, enable the toogle <b>Enable quota</b>, set the <b>Maximum Usage</b> and the unit of storage (MB, GB, TB).
 
 When everything is set, click <b>Create resource pool</b>.
 

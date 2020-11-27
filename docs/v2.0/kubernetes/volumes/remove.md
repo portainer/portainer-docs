@@ -12,11 +12,11 @@ Click <b>Edit this application</b>.
 
 ![volumes](assets/remove-2.png)
 
-Scroll down to the section <b>Persisting Data</b> anc click the trash basket icon. 
+Scroll down to the section <b>Persisting Data</b> and click the trash basket icon. 
 
 ![volumes](assets/remove-3.png)
 
-You will see the volume label with a strikethough effect.
+You will see the volume label with a strikethrough effect.
 
 ![volumes](assets/remove-4.png)
 
