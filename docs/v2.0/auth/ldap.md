@@ -27,7 +27,7 @@ Here is an explanation of the above settings:
 
 ### LDAP Security
 
-* Use StartTLS: After initial connection, elevate the insecure connection to secure.
+* Use StartTLS: After the initial connection, elevate the insecure connection to secure.
 * Use TLS: Initiate a connection to LDAP using TLS.
 * Skip Verification of Certificate: If you do not have access to the certificate of the LDAP server, skipping verification enables encrypted communications, but you must manually ensure that you are talking to the intended LDAP server that you gave in your URL. If that gets maliciously redirected then you could be talking to a different server. Use with caution.
 * TLS CA Certificate: Upload your CA Certificate for the secure connection.
@@ -51,7 +51,7 @@ Example, to only allow users who are members of a group, which is a group define
 
 <pre><code>(&(objectClass=user)(memberOf=CN=<GROUPNAME>,OU=<MYOU>,DC=<DOMAIN>,DC=<DOMAIN>))</code></pre>
 
-Example below shows that in the domain portainer.local, we have an OU called "Groups" and within that OU is a group called "PortainerDevUsers". This search filter will only allow users to login to Portainer that are members of the PortainerDevUsers LDAP group.
+The example below shows that in the domain portainer.local, we have an OU called "Groups" and within that OU is a group called "PortainerDevUsers". This search filter will only allow users to login to Portainer that are members of the PortainerDevUsers LDAP group.
 
 ![auth](assets/ldap_5.png)
 
@@ -63,7 +63,7 @@ Portainer optionally allows you to set a Group Search as well as the User Search
 
 ![auth](assets/ldap_6.png)
 
-* Group Membership Attribute: Enter "member" as the attribute that determines if a user is a member of a group. Some LDAP backends also use the attribute "memberof".
+* Group Membership Attribute: Enter "member" as the attribute that determines if a user is a member of a group.
 
 * Group Filter: If you want to filter the list of groups returned, to say, only return groups that contain the string "Portainer" (eg PortainerDev, PortainerProd, PortainerUAT", you can set the filter as follows:
 

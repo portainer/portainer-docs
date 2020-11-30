@@ -46,9 +46,9 @@ Here is an explanation of the above settings:
 
 Note: These entries are case sensitive.
 
-* Filter: Enter a criteria to pre-filter the results returned from LDAP to Portainer.
+* Filter: Enter an criteria to pre-filter the results returned from LDAP to Portainer.
 
-Example, to only allow users who are members of a group, which is a group defined within an OU to login, set the Filter to be: (the brackets are important, so copy the entire string below)..
+Example, to only allow users who are members of a group, which is a group defined within an OU to login, set the Filter to be: (the brackets are important, so copy the entire string below)...
 
 <pre><code>(&(objectClass=user)(memberOf=CN=<GROUPNAME>,OU=<MYOU>,DC=<DOMAIN>,DC=<DOMAIN>))</code></pre>
 
@@ -64,7 +64,7 @@ Portainer optionally allows you to set a Group Search as well as the User Search
 
 ![auth](assets/ldap_6.png)
 
-* Group Membership Attribute: Enter "member" as the attribute that determines if a user is a member of a group. Some LDAP backends also use the attribute "memberof".
+* Group Membership Attribute: Enter "member" as the attribute that determines if a user is a member of a group.
 
 * Group Filter: If you want to filter the list of groups returned, to say, only return groups that contain the string "Portainer" (eg PortainerDev, PortainerProd, PortainerUAT", you can set the filter as follows:
 
@@ -100,7 +100,7 @@ Here is an explanation of the above settings:
 
 ### LDAP Security
 
-* Use StartTLS: After initial connection, elevate the insecure connection to secure.
+* Use StartTLS: After the initial connection, elevate the insecure connection to secure.
 * Use TLS: Initiate a connection to LDAP using TLS.
 * Skip Verification of Certificate: If you do not have access to the certificate of the LDAP server, skipping verification enables encrypted communications, but you must manually ensure that you are talking to the intended LDAP server that you gave in your URL. If that gets maliciously redirected then you could be talking to a different server. Use with caution.
 * TLS CA Certificate: Upload your CA Certificate for the secure connection.
