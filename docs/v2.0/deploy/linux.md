@@ -88,7 +88,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.
 
 <pre><code> curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml</code></pre>
-<pre><code> docker stack deploy -c portainer-agent-stack.yml portainer</code></pre>
+<pre><code>docker stack deploy -c portainer-agent-stack.yml portainer</code></pre>
 
 <b>Note</b>: By default this stack doesn't enable Host Management Features, you need to enable from the UI of Portainer.
 
@@ -103,6 +103,12 @@ Note: <code>--tlsskipverify</code> has to be present when deploy an agent and th
 
 ### Docker Swarm
 Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.
+
+First create the network:
+
+<pre><code>docker network create portainer_agent_network</code></pre>
+
+The following step is deploy the Agent:
 
 <pre><code> docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes --mount type=bind,src=/,dst=/host portainer/agent</code></pre>
 
