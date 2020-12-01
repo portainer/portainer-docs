@@ -14,7 +14,7 @@ In order to enable these features, the agent must be configured properly by:
 * Enabling the host management features via the CAP_HOST_MANAGEMENT environment variable
 * Bind-mounting the root of the host in the agent container (must be bind-mounted in /host)
 
-## Deploy Portainer Agent with CAP_HOST_MANAGEMENT: 1
+## Deploy Portainer Agent
 
 ### Docker Swarm
 
