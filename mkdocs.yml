@@ -40,6 +40,7 @@ nav:
           - 'Security Options' : 'v2.0/settings/security.md'
           - 'Enable Edge Computing' : 'v2.0/settings/edge.md'
           - 'App Templates' : 'v2.0/settings/apps.md'
+          - 'Enable Host Management Features' : 'v2.0/settings/host_management.md'
         - Advanced Deployments:
           - 'Using Portainer with Reverse Proxies':
               - 'Traefik' : 'v2.0/ad/traefik/rp-traefik.md'
@@ -168,6 +169,7 @@ nav:
           - 'Security Options' : 'v2.0-be/settings/security.md'
           - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
           - 'App Templates' : 'v2.0-be/settings/apps.md'
+          - 'Enable Host Management Features' : 'v2.0-be/settings/host_management.md'
         - Advanced Deployments:
           - 'Using Portainer with Reverse Proxies':
               - 'Traefik' : 'v2.0-be/ad/traefik/rp-traefik.md'

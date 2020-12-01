@@ -2,7 +2,7 @@
 
 Portainer can manage endpoint  access. Depending on your needs, this can be broad or granular. Teams and/or users can be added to manage an Endpoint.
 
-Access tagged as inherited relies on the group access rules. They cannot be removed or modified at the endpoint level but they can be overriden.
+Access tagged as inherited relies on the group access rules. They cannot be removed or modified at the endpoint level but they can be overridden.
 
 Access tagged as override are overriding the group access for the related users/teams.
 

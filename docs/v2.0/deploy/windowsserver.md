@@ -50,7 +50,7 @@ To run Portainer Agent in a Windows Container scenario, you need to execute the 
 
 ### Docker Swarm
 
-```curl -L https://downloads.portainer.io/agent-stack-windows.yml -o agent-stack-windows.yml && docker stack deploy --compose-file=agent-stack-windows.yml portainer-agent```
+<pre><code>curl -L https://downloads.portainer.io/agent-stack-windows.yml -o agent-stack-windows.yml && docker stack deploy --compose-file=agent-stack-windows.yml portainer-agent</code></pre>
 
 Then you just connect to one IP of the remote cluster on port 9001.
 
