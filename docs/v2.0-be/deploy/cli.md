@@ -3,7 +3,9 @@
 Portainer can be easily tuned using CLI flags.
 
 ## Admin password
+
 ### From the command line
+
 Portainer allows you to specify a bcrypt encrypted password from the command line for the admin account. You need to generate the bcrypt encrypted password first.
 
 You can generate the encrypted password with the following command if you have installed apache2-utils package:
@@ -19,9 +21,10 @@ To specify the admin password from the command line, start Portainer with the <c
 <pre><code>docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:latest --admin-password='$2y$05$8oz75U8m5tI/xT4P0NbSHeE7WyRzOWKRBprfGotwDkhBOGP/u802u'</code></pre>
 
 ### Inside a file
+
 You can also store the plaintext password inside a file and use the <code>--admin-password-file</code> flag:
 
-Add your password to a file running the following command: 
+Add your password to a file running the following command:
 
 <pre><code> echo -n mypassword > /tmp/portainer_password</code></pre>
 
@@ -68,6 +71,7 @@ Note that the -l flag can be repeated multiple times to specify multiple labels:
 You do not like our logo? Want to make Portainer more corporate? Don’t worry, you can easily switch for an external logo (it must be exactly 155px by 55px) using the <code>--logo flag</code>:
 
 <pre><code> docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:latest --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"</code></pre>
+
 This can also be completed via the GUI in the Portaner Settings menu
 
 ## Use your own templates
@@ -88,24 +92,27 @@ Suggestion: You can host your template files in [Github](https://www.github.com)
 
 The following CLI flags are available:
 
-* <code>--admin-password</code>: Specify a bcrypt hashed password for the admin user
-* <code>--admin-password-file</code>: Path to the file containing the password for the admin user
-* <code>--bind, -p</code>: Address and port to serve Portainer (default: :9000)
-* <code>--data, -d</code>: Directory where Portainer data will be stored (default: /data on Linux, C:\data on Windows)
-* <code>--edge-compute</code>: Automatically enable edge-compute features
-* <code>--hide-label, -l</code>: Hide containers with a specific label in the UI
-* <code>--host, -H</code>: Docker daemon endpoint
-* <code>--logo</code>: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
-* <code>--snapshot-interval</code>: Time interval between two endpoint snapshot jobs expressed as a string, e.g. 30s, 5m, 1h… as supported by the time.ParseDuration method (default: 5m)
-* <code>--ssl</code>: Secure Portainer instance using SSL (default: false)
-* <code>--sslcert</code>: Path to the SSL certificate used to secure the Portainer instance (default: /certs/portainer.crt, C:\certs\portainer.crt on Windows)
-* <code>--sslkey</code>: Path to the SSL key used to secure the Portainer instance (default: /certs/portainer.key, C:\certs\portainer.key on Windows)
-* <code>--templates, -t</code>: URL to templates (apps) definitions
-* <code>--tlscacert</code>: Path to the CA (default: /certs/ca.pem on Linux, C:\certs\ca.pem on Windows)
-* <code>--tlscert</code>: Path to the TLS certificate file (default: /certs/cert.pem, C:\certs\cert.pem on Windows)
-* <code>--tlskey</code>: Path to the TLS key (default: /certs/key.pem, C:\certs\key.pem on Windows)
-* <code>--tlsverify</code>: TLS support (default: false)
-* <code>--tunnel-port</code>: Specify an alternate tunnel port to use with the Edge agent. Use --tunnel-port 8001 with -p 8001:8001 to make the Edge agent communicate on port 8001
+- <code>--assets</code>: Path to the assets
+- <code>--admin-password</code>: Specify a bcrypt hashed password for the admin user
+- <code>--admin-password-file</code>: Path to the file containing the password for the admin user
+- <code>--bind, -p</code>: Address and port to serve Portainer (default: :9000)
+- <code>--data, -d</code>: Directory where Portainer data will be stored (default: /data on Linux, C:\data on Windows)
+- <code>--edge-compute</code>: Automatically enable edge-compute features
+- <code>--hide-label, -l</code>: Hide containers with a specific label in the UI
+- <code>--host, -H</code>: Docker daemon endpoint
+- <code>--logo</code>: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
+- <code>--no-analytics</code>: Disable Analytics in app (deprecated)
+- <code>--rollback-to-ce</code>: Rollback the database store to CE
+- <code>--snapshot-interval</code>: Time interval between two endpoint snapshot jobs expressed as a string, e.g. 30s, 5m, 1h… as supported by the time.ParseDuration method (default: 5m)
+- <code>--ssl</code>: Secure Portainer instance using SSL (default: false)
+- <code>--sslcert</code>: Path to the SSL certificate used to secure the Portainer instance (default: /certs/portainer.crt, C:\certs\portainer.crt on Windows)
+- <code>--sslkey</code>: Path to the SSL key used to secure the Portainer instance (default: /certs/portainer.key, C:\certs\portainer.key on Windows)
+- <code>--templates, -t</code>: URL to templates (apps) definitions
+- <code>--tlscacert</code>: Path to the CA (default: /certs/ca.pem on Linux, C:\certs\ca.pem on Windows)
+- <code>--tlscert</code>: Path to the TLS certificate file (default: /certs/cert.pem, C:\certs\cert.pem on Windows)
+- <code>--tlskey</code>: Path to the TLS key (default: /certs/key.pem, C:\certs\key.pem on Windows)
+- <code>--tlsverify</code>: TLS support (default: false)
+- <code>--tunnel-port</code>: Specify an alternate tunnel port to use with the Edge agent. Use --tunnel-port 8001 with -p 8001:8001 to make the Edge agent communicate on port 8001
 
 ## Notes
 
