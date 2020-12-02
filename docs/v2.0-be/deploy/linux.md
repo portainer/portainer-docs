@@ -39,17 +39,17 @@ Then, create the Portainer namespace in your cluster
 
 Using the following command, Portainer will run at port 30777.
 
-<pre><code> helm install --set entepriseEdition.enabled=true -n portainer portainer portainer/portainer</code></pre>
+<pre><code> helm install --set enterpriseEdition.enabled=true -n portainer portainer portainer/portainer</code></pre>
 
 #### For Load Balancer
 
 Using the following command, Portainer will run at port 9000.
 
-<pre><code> helm install  --set entepriseEdition.enabled=true -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
+<pre><code> helm install  --set enterpriseEdition.enabled=true -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
 
 #### For Ingress
 
-<pre><code> helm install  --set entepriseEdition.enabled=true -n portainer portainer portainer/portainer --set service.type=ClusterIP</code></pre>
+<pre><code> helm install  --set enterpriseEdition.enabled=true -n portainer portainer portainer/portainer --set service.type=ClusterIP</code></pre>
 
 ### Using YAML Manifest
 
