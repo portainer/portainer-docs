@@ -16,13 +16,12 @@ The required Docker version to have full support is 19.01 or the newest. Docker 
 
 ## Supported Docker Swarm
 
-Docker Swarm Standalone (old Swarm binary, deprecated in 2018) isn't supported. 
+Docker Swarm Standalone (old Swarm binary, deprecated in 2018) isn't supported.
 
 ## Supported Kubernetes versions
 
 The following versions of Kubernetes are fully supported:
 
-- 1.16
 - 1.17
 - 1.18
 - 1.19

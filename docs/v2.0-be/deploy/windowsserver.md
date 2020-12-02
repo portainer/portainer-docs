@@ -35,7 +35,7 @@ Now, you can navigate to http://localhost:9000 or the IP of the server and start
 
 You can use our YML manifest to run Portainer in Windows using Windows Containers. In Powershell, run:
 
-<pre><code> curl https://downloads.portainer.io/portainer_windows_stack.yml -o portainer_windows_stack.yml</code></pre>
+<pre><code> curl https://downloads.portainer.io/portainer_ee_windows_stack.yml -o portainer_windows_stack.yml</code></pre>
 <pre><code> docker stack deploy --compose-file=portainer_windows_stack.yml portainer</code></pre>
 
 Now, you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.
@@ -46,11 +46,11 @@ Now, you can navigate to http://localhost:9000 or the IP of the server and start
 
 To run Portainer Agent in a Windows Container scenario, you need to execute the following commands:
 
-<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent</code></pre>
+<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent:2.0.0</code></pre>
 
 ### Docker Swarm
 
-```curl -L https://downloads.portainer.io/agent-stack-windows.yml -o agent-stack-windows.yml && docker stack deploy --compose-file=agent-stack-windows.yml portainer-agent```
+```curl -L https://downloads.portainer.io/agent-ee-stack-windows.yml -o agent-stack-windows.yml && docker stack deploy --compose-file=agent-stack-windows.yml portainer-agent```
 
 Then you just connect to one IP of the remote cluster on port 9001.
 

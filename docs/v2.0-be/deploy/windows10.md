@@ -1,6 +1,6 @@
 # Deploy Portainer in Windows 10
 
-## Deploy Portainer in Kubernetes through Docker Desktop. 
+## Deploy Portainer in Kubernetes through Docker Desktop.
 
 You can deploy Portainer in a Kubernetes environment in Windows using Docker Desktop. Note: This scenario is for testing purpose only.
 
@@ -14,7 +14,7 @@ Click Settings:
 
 ![settings](assets/windows10-2.png)
 
-1. Select Kubernetes 2. Select 'Enable Kubernetes' 3. Click 'Apply and Restart'. 
+1. Select Kubernetes 2. Select 'Enable Kubernetes' 3. Click 'Apply and Restart'.
 
 ![kubernetes](assets/windows10-3.png)
 
@@ -29,12 +29,12 @@ First create the Portainer namespace in your cluster
 <pre><code> kubectl create namespace portainer</code></pre>
 
 #### For NodePort
-<pre><code> kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml</code></pre>
+<pre><code> kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-ee.yaml</code></pre>
 
 If everything work as expected, you can navigate to Portainer from the browser with the address http://localhost:30777
 
 #### For Load Balancer
-<pre><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml</code></pre>
+<pre><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb-ee.yaml</code></pre>
 
 ## Deploy Portainer in Docker
 
@@ -56,7 +56,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
 ### Docker Swarm in WSL2
 
-Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance 
+Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance
 of the Portainer Server, and deploys the Portainer Agent as a global service on every node in your cluster.
 
 Remember to initiate the Docker Swarm mode when you use Docker Desktop. You can do this running the following command:
@@ -75,7 +75,7 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 
 Once this is done, you can continue with the installation running the following command:
 
-<pre><code> curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml</code></pre>
+<pre><code> curl -L https://downloads.portainer.io/portainer-ee-agent-stack.yml -o portainer-agent-stack.yml</code></pre>
 <pre><code> docker stack deploy -c portainer-agent-stack.yml portainer</code></pre>
 
 ### Docker Standalone using Windows Containers
@@ -95,7 +95,7 @@ Now, you can navigate to http://localhost:9000 and start using Portainer.
 
 You can use our YML manifest to run Portainer in Windows using Windows Containers. In a Powershell window, you must run:
 
-<pre><code> curl https://downloads.portainer.io/portainer_windows_stack.yml -o portainer_windows_stack.yml</code></pre>
+<pre><code> curl https://downloads.portainer.io/portainer_ee_windows_stack.yml -o portainer_windows_stack.yml</code></pre>
 <pre><code> docker stack deploy --compose-file=portainer_windows_stack.yml portainer</code></pre>
 
 ## Deploy Portainer Agent in Windows running WSL
@@ -103,13 +103,13 @@ You can use our YML manifest to run Portainer in Windows using Windows Container
 ### Docker Standalone
 Run the following command to deploy the Agent in your Docker host.
 
-<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent</code></pre>
+<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.0.0</code></pre>
 
 ### Docker Swarm
 Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command in a manager node in the remote cluster.
 
 <pre><code> docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind
-src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes –-mount type=bind,src=/,dst=/host portainer/agent</code></pre>
+src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes –-mount type=bind,src=/,dst=/host portainer/agent:2.0.0</code></pre>
 
 ## Deploy Portainer Agent in Windows using Windows Containers.
 
@@ -117,7 +117,7 @@ src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/l
 
 To run Portainer Agent in a Windows Container scenario, you need to execute the following commands:
 
-<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent</code></pre>
+<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent:2.0.0</code></pre>
 
 ## Notes
 

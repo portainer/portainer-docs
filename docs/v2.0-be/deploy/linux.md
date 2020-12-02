@@ -21,7 +21,7 @@ If you want to make a storage class the default, you can type the command:
 
 and replace <storage-class-name> with the name of your storage class (eg: kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 
-Alternatively, if you are using HELM you can use: 
+Alternatively, if you are using HELM you can use:
 <pre><code> --set persistence.storageClass=<storage-class-name> </code></pre>
 
 ### Using Helm
@@ -39,17 +39,17 @@ Then, create the Portainer namespace in your cluster
 
 Using the following command, Portainer will run at port 30777.
 
-<pre><code> helm install -n portainer portainer portainer/portainer</code></pre>
+<pre><code> helm install --set entepriseEdition.enabled=true -n portainer portainer portainer/portainer</code></pre>
 
 #### For Load Balancer
 
 Using the following command, Portainer will run at port 9000.
 
-<pre><code> helm install -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
+<pre><code> helm install  --set entepriseEdition.enabled=true -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
 
 #### For Ingress
 
-<pre><code> helm install -n portainer portainer portainer/portainer --set service.type=ClusterIP</code></pre>
+<pre><code> helm install  --set entepriseEdition.enabled=true -n portainer portainer portainer/portainer --set service.type=ClusterIP</code></pre>
 
 ### Using YAML Manifest
 
@@ -61,11 +61,11 @@ First create the Portainer namespace in your cluster
 
 Using the following command, Portainer will run at port 30777.
 
-<pre><code> kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml</code></pre>
+<pre><code> kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-ee.yaml</code></pre>
 
 #### For Load Balancer
 
-<pre><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml</code></pre>
+<pre><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb-ee.yaml</code></pre>
 
 ## Deploy Portainer in Docker
 
@@ -87,7 +87,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
 Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.
 
-<pre><code> curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml</code></pre>
+<pre><code> curl -L https://downloads.portainer.io/portainer-ee-agent-stack.yml -o portainer-agent-stack.yml</code></pre>
 <pre><code> docker stack deploy -c portainer-agent-stack.yml portainer</code></pre>
 
 <b>Note</b>: By default this stack doesn't enable Host Management Features, you need to enable from the UI of Portainer.
@@ -97,7 +97,7 @@ Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! Y
 ### Docker Standalone
 Run the following command to deploy the Agent in your Docker host.
 
-<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent</code></pre>
+<pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.0.0</code></pre>
 
 Note: <code>--tlsskipverify</code> has to be present when deploy an agent and the certs in the agent is not a supported scenario at this moment.
 
@@ -106,7 +106,7 @@ Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run t
 
 <pre><code>docker network create portainer_agent_network</code></pre>
 
-<pre><code> docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes --mount type=bind,src=/,dst=/host portainer/agent</code></pre>
+<pre><code> docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes --mount type=bind,src=/,dst=/host portainer/agent:2.0.0</code></pre>
 
 Note: <code>--tlsskipverify</code> has to be present when deploy an agent and the certs in the agent is not a supported scenario at this moment.
 

@@ -34,7 +34,7 @@ version: '3.2'
 
 services:
   agent:
-    image: portainer/agent
+    image: portainer/agent:2.0.0
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
