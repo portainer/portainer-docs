@@ -1,7 +1,7 @@
 site_name: Documentation
 nav:
     - Home: index.md
-    - CE 2.0:
+    - Portainer Community 2.0:
       - Admin Guide:
         - Deploying Portainer:
           - 'Requirements' : 'v2.0/deploy/requirements.md'
@@ -121,7 +121,7 @@ nav:
           - 'Add a Stack' : 'v2.0/edge/stacks.md'
           - 'Add a Job' : 'v2.0/edge/jobs/add.md'
           - 'Managing Edge Groups' : 'v2.0/edge/groups.md'
-    - BE 2.0:
+    - Portainer Business 2.0:
       - Admin Guide:
         - Deploying Portainer:
           - 'Requirements' : 'v2.0-be/deploy/requirements.md'
