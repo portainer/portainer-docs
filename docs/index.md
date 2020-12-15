@@ -1,7 +1,7 @@
 # Welcome
 
 Welcome to the official Portainer Documentation. 
-This is an open source documentation project and all community contributions are welcome and encourages.
+This is an open source documentation project and all community contributions are welcome and encouraged.
 For information about contributing to the Portainer documentation, see [Contribution guidelines](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
 
 ## About Portainer
