@@ -6,7 +6,7 @@ In this help article, you will learn how to add the following type of endpoints 
 * Remote endpoint using TCP communication
 * Remote endpoint using TCP communication secured via TLS
 
-The API documentation is available [here](https://app.swaggerhub.com/apis/deviantony/portainer/).
+The API documentation is available [here](https://app.swaggerhub.com/apis/deviantony/Portainer/).
 
 <b>WARNING:</b> This documentation is valid for Portainer >= 1.18.0.
 
