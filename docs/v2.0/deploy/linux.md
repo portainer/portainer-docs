@@ -21,7 +21,7 @@ If you want to make a storage class the default, you can type the command:
 
 and replace <storage-class-name> with the name of your storage class (eg: kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 
-Alternatively, if you are using HELM you can use: 
+Alternatively, if you are using HELM you can use:
 <pre><code> --set persistence.storageClass=<storage-class-name> </code></pre>
 
 ### Using Helm
@@ -73,7 +73,9 @@ Portainer is comprised of two elements, the Portainer Server, and the Portainer 
 
 Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
 
-To see the requirements, please, visit the page of [requirements](/v2.0/deploy/requirements)
+By default, Portainer will expose the UI over the port 9000 and expose a TCP tunnel server over the port 8000. The latest is optional and is only required if you plan to use the Edge compute features with Edge agents.
+
+To see the requirements, please, visit the page of [requirements](/v2.0/deploy/requirements).
 
 ### Docker Standalone
 
