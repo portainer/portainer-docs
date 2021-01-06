@@ -39,7 +39,7 @@ Use the following command to downgrade the Portainer database:
 
 ## Redeploy a Portainer CE instance
 
-After downgrading the database, you can now redeploy Portainer CE and re-use the existing Portainer BE data by following our instructions in [Deploying Portainer](/v2.0/deploy/linux.md).
+After downgrading the database, you can now redeploy Portainer CE and re-use the existing Portainer BE data by following our instructions in [Deploying Portainer](/v2.0/deploy/linux).
 
 # On Kubernetes
 
