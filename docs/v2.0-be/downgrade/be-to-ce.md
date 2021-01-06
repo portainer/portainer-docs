@@ -35,7 +35,7 @@ This will create a backup.tar file in your current folder containing the Portain
 
 Use the following command to downgrade the Portainer database:
 
-<pre><code> docker run -it --name portainer-database-rollback -v portainer_data:/data portainer/portainer-ee:latest --rollback-db</code></pre>
+<pre><code> docker run -it --name portainer-database-rollback -v portainer_data:/data portainer/portainer-ee:latest --rollback-to-ce</code></pre>
 
 ## Redeploy a Portainer CE instance
 
