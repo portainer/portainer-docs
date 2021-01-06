@@ -170,6 +170,8 @@ nav:
           - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
           - 'App Templates' : 'v2.0-be/settings/apps.md'
           - 'Enable Host Management Features' : 'v2.0-be/settings/host_management.md'
+        - Downgrading:
+          - 'Downgrade from BE to CE': 'v2.0-be/downgrade/be-to-ce.md'
         - Advanced Deployments:
           - 'Using Portainer with Reverse Proxies':
               - 'Traefik' : 'v2.0-be/ad/traefik/rp-traefik.md'
