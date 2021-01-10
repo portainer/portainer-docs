@@ -73,7 +73,7 @@ Portainer is comprised of two elements, the Portainer Server, and the Portainer 
 
 Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
 
-By default, Portainer will expose the UI over the port 9000 and expose a TCP tunnel server over the port 8000. The latest is optional and is only required if you plan to use the Edge compute features with Edge agents.
+By default, Portainer will expose the UI over the port 9000 and expose a TCP tunnel server over the port 8000. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 
 To see the requirements, please, visit the page of [requirements](/v2.0/deploy/requirements).
 
