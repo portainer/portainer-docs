@@ -19,7 +19,7 @@ Being a free and opensource product, we have been heavily reliant on our communi
 
 To streamline our operations and allow us to focus on delivering the right support and features in the right areas at the right time we encourage our users to do the following:
 
-* <b>QUESTIONS</b> should be posted to either [Github Issues](https://github.com/portainer/portainer/issues) or the [community Slack channel](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/). While other platforms exist (Reddit, Discord, Stack Overflow) the Portainer team is less active in these. If you are uncomfortable posting your question publicly you can contact us via the Contact Us widget at the bottom of screen, we will respond as soon as we are able to. 
+* <b>QUESTIONS</b> should be posted to either [Github Issues](https://github.com/portainer/portainer/issues) or the [community Slack channel](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/). While other platforms exist (Reddit, Discord, Stack Overflow) the Portainer team is less active in these. If you are uncomfortable posting your question publicly you can raise an issue through our [Github Documentation Channel](https://github.com/portainer/portainer-docs/issues) and we will investigate
 
 *	Suspected <b>BUGS</b> should be posted to Github and will be managed by our support and development teams as appropriate.
 
