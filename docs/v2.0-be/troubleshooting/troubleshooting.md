@@ -1,5 +1,7 @@
 # Portainer Deployment Troubleshooting
 
+The FAQ is updated periodically and designed to answer the questions our users most frequently ask about Portainer
+
 If you are still experiencing issues after reading this FAQ, feel free to contact us via any one of the following channels:
 
 * [Slack](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/) for community support
