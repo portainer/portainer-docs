@@ -80,6 +80,10 @@ These options are no needed, and no make any effect in the configuration of loca
 
 You can view more information about this bug and the progress for your resolution [here](https://github.com/portainer/portainer/issues/4316).
 
+## Can you view Deleted Docker Containers' logs in Portainer?
+
+There is no history of deleted containers kept, so once they are gone the logs will go as well.
+
 ## Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
