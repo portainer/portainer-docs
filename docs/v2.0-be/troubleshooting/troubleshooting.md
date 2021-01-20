@@ -14,6 +14,23 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 
 * Email [support@portainer.io](mailto:support@portainer.io)
 
+## How do I upgrade Portainer
+When upgrading to the latest version of Portainer, use the following commands:
+
+<pre><code> > docker stop portainer </code></pre>
+
+<pre><code> > docker rm portainer </code></pre>
+
+Those 2 commands will stop and remove the container respectively. Doing this will NOT remove your other applications/containers/etc.
+
+Now that you have stopped and removed the old version of Portainer, you can run this command
+
+<pre><code> > docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</code></pre>
+
+That will deploy the newest version of Portainer on your system, using the persistent data and upgrade the DB
+
+Now you can go to http://your-server-address:9000 and login. You should notice that the bottom left corner looks different than it did before. There is no more update nag and the version is no longer shown next to the Portainer logo.
+
 ## How do I reset my Portainer password?
 
 You can ask another Portainer admin to reset the password for you, or alternatively if it is for the default admin account (from when Portainer was initialized), you can try our [password reset helper tool](https://github.com/portainer/helper-reset-password).
@@ -84,7 +101,7 @@ You can view more information about this bug and the progress for your resolutio
 
 There is no history of deleted containers kept, so once they are gone the logs will go as well.
 
-## Why do Custom standalone app templates not show in Custom Templates page when using Swarm 
+## Why do Custom standalone app templates not show when using Swarm 
 
 The underlying principle of Portainer is to enforce best practice across all functions, including Swarm. When using Swarm, you should always use Swarm services and not containers.
 
