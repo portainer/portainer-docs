@@ -84,7 +84,7 @@ You can view more information about this bug and the progress for your resolutio
 
 There is no history of deleted containers kept, so once they are gone the logs will go as well.
 
-## Why do Custom standalone app templates not show in Custom Templates page on Swarm 
+## Why do Custom standalone app templates not show in Custom Templates page when using Swarm 
 
 The underlying principle of Portainer is to enforce best practice across all functions, including Swarm. When using Swarm, you should always use Swarm services and not containers.
 
