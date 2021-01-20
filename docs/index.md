@@ -25,7 +25,7 @@ To streamline our operations and allow us to focus on delivering the right suppo
 
 *	<b>VULNERABILITIES</b> should be emailed to [security@portainer.io](mailto:security@portainer.io) and will be dealt with immediately. 
 
-* <B>ISSUES IN OUR DOCUMENTATION</B> Can be raised through our [Github Documentation Channel](https://github.com/portainer/portainer-docs/issues) and we will address.
+* <B>ISSUES IN OUR DOCUMENTATION</B> can be raised through our [Github Documentation Channel](https://github.com/portainer/portainer-docs/issues) and we will address.
 
 We will not provide support over email. 
 
