@@ -15,7 +15,7 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 * Email [support@portainer.io](mailto:support@portainer.io)
 
 ## How do I upgrade Portainer
-# Portainer running as a container.
+### Portainer running as a container.
 Assuming you've used our recommended deployment scripts, when upgrading to the latest version of Portainer, use the following commands:
 
 <pre><code> > docker stop portainer </code></pre>
@@ -32,7 +32,7 @@ That will deploy the newest version of Portainer on your system, using the persi
 
 Now you can go to http://your-server-address:9000 and login. You should notice that the bottom left corner looks different than it did before. There is no more update nag and the version is no longer shown next to the Portainer logo.
 
-# Instructions for Swarm and Kube coming soon.
+### Instructions for Swarm and Kube coming soon.
 
 ## How do I reset my Portainer password?
 
