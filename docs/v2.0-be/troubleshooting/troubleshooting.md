@@ -32,7 +32,9 @@ That will deploy the newest version of Portainer on your system, using the persi
 
 Now you can go to http://your-server-address:9000 and login. You should notice that the bottom left corner looks different than it did before. There is no more update nag and the version is no longer shown next to the Portainer logo.
 
-### Instructions for Swarm and Kube coming soon.
+### Instructions for Swarm coming soon.
+
+### Instructions for Kubernetes coming soon
 
 ## How do I reset my Portainer password?
 
