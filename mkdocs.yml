@@ -1,4 +1,5 @@
 site_name: Documentation
+google_analytics: ['G-N7CY67ZGSW', 'documentation.portainer.io']
 nav:
     - Home: index.md
     - Portainer Community 2.0:
