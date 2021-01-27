@@ -1,31 +1,18 @@
 # Requirements
 
-In this article, you will find information about the supported platforms and Docker versions.
+Every single release of Portainer goes through an extensive testing process (functional tests, release tests, post release tests) to ensure that what we are creating actually works as expected. Obviously though, we cannot possibly test Portainer against every single configuration variant out there, so we have elected to test against just a subset.
 
-## Supported Platforms
+To try and alleviate confusion as to what we test against, we gave documented these configurations are the only configurations that we personally validate as "functional"; any other variant is not tested (this does not mean it wont work, it just means its not tested). 
 
-Portainer can be deployed on the following platforms:
+## Validated Configurations
 
-- Linux AMD64
-- Linux ARM64
-- Windows AMD64
+<img src="https://www.portainer.io/hs-fs/hubfs/validated_configs-2.png?width=690&name=validated_configs-2.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 
-## Supported Docker Versions
-
-The required Docker version to have full support is 19.01 or the newest. Docker 19 is partially supported. Older versions than indicated here, are not supported.
-
-## Supported Docker Swarm
-
-Docker Swarm Standalone (old Swarm binary, deprecated in 2018) isn't supported.
-
-## Supported Kubernetes versions
-
-The following versions of Kubernetes are fully supported:
-
-- 1.17
-- 1.18
-- 1.19
 
 ## Notes
+
+If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
