@@ -14,6 +14,6 @@ To try and alleviate confusion as to what we test against, we have documented th
 
 If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.
 
-Business Edition Validated Configurations can be found [here](https://documentation.portainer.io/v2.0-be/deploy/requirements/)
+Business Edition Validated Configurations can be found [here](https://documentation.portainer.io/v2.0/deploy/requirements/)
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
