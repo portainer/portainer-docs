@@ -9,6 +9,7 @@ To try and alleviate confusion as to what we test against, we have documented th
 | Portainer Version     | Release Date | Docker Version | Kubernetes Version    | Architectures | Operating Systems                                                                            |
 |-----------------------|--------------|----------------|-----------------------|---------------|----------------------------------------------------------------------------------------------|
 | Business 2.0 (latest) | Dec 3, 2020  | 19.03.13       | 1.17.13 1.18.6 1.19.3 | ARM64, x86_64 | Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 & CentOS7 |
+
 ## Notes
 
 If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.
