@@ -6,15 +6,17 @@ To try and alleviate confusion as to what we test against, we have documented th
 
 ## Validated Configurations
 
-<img src="https://www.portainer.io/hs-fs/hubfs/validated_configs-2.png?width=690&name=validated_configs-2.png"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
-<br>
-<BR>
-<br>
-
+| Portainer Version        | Release Date   | Docker Version | Kubernetes Version           | Architectures        | Operating Systems                                                                                        |
+|--------------------------|----------------|----------------|------------------------------|----------------------|----------------------------------------------------------------------------------------------------------|
+| 1.23.2                   | March 25, 2020 | 19.03.6        | N/A                          | ARM32, ARM64, x86_64 | Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 & CentOS7             |
+| 1.24.0                   | June 2, 2020   | 19.03.10       | N/A                          | ARM32, ARM64, x86_64 | Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 & CentOS7             |
+| 1.24.1 (latest)          | July 23, 2020  | 19.03.12       | N/A                          | ARM32, ARM64, x86_64 | Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 & CentOS 7            |
+| Community 2.0            | Aug 31, 2020   | 19.03.12       | 1.17.13 1.18.6 1.18.9 1.19.3 | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 Release 1809 Ubuntu 18.04 & CentOS 7 |
+| Community 2.0.1 (Latest) | Jan 7, 2020    | 20.10.0        | 1.17.13 1.18.9 1.19.3 1.20.0 | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 release 1809 Ubuntu 18.04 & CentOS 7 |
 ## Notes
 
 If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.
+
+Business Edition Validated Configurations can be found [here](https://documentation.portainer.io/v2.0-be/deploy/requirements/)
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
