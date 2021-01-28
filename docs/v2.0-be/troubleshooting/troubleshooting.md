@@ -50,6 +50,16 @@ Note: You can use Ctrl + Shift + R on most browsers to load the specific page wi
 
 Please also check you have pulled from the latest repo url. 
 
+## I signed up for a licence to BE but can't enter it in to CE, why not?
+
+Because of the difference in versions and features we don't provide the facility for a Business licence to be entered into CE.
+
+You will need to switch images from CE to BE. Once done you'll be able to enter the trial licence provide and get all the functionality of BE.
+
+The steps to install BE are at documentation.portainer.io
+
+You should experience no data loss in switching the images over.
+
 ## Users have access to an endpoint, but they cannot see anything.
 
 By default all resources inside an endpoint are assigned to administrator only for security reasons. To give non-admin users access you can use the access control widget within each resource to assign users ownership, or you can make the resource public to give all users access.
