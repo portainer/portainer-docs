@@ -3,7 +3,7 @@
 </p>
 
 # Portainer Admin Guides and Documentation
-This repository contains the Portainer v1.x, v2.0 and futures versions documentation.
+This repository contains the Portainer v1.x, v2.x and futures versions documentation.
 
 ## Contributing
 We welcome and encourage community contributions.
