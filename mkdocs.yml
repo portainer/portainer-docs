@@ -2,7 +2,7 @@ site_name: Documentation
 google_analytics: ['G-N7CY67ZGSW', 'documentation.portainer.io']
 nav:
     - Home: index.md
-    - Portainer Community 2.0:
+    - Portainer Community 2.1:
       - Admin Guide:
         - Deploying Portainer:
           - 'Requirements' : 'v2.0/deploy/requirements.md'
