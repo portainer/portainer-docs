@@ -10,9 +10,6 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 
 * [Youtube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg) for guided tutorials and updates
 
-* [Portainer.io](https://www.portainer.io) or the contact us tool at the bottom right of screen
-
-* Email [support@portainer.io](mailto:support@portainer.io)
 
 ## How do I upgrade Portainer
 ### Portainer running as a container.
