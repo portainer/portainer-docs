@@ -12,6 +12,11 @@ nav:
           - 'Deploying on Windows 10' : 'v2.0/deploy/windows10.md'
           - 'Using SSL with Portainer' : 'v2.0/deploy/ssl.md'
           - 'Initial Setup' : 'v2.0/deploy/initial.md'
+        - Upgrading Portainer:
+          - 'Upgrade Path': 'v2.0/upgrade/upgrade.md'
+          - 'Upgrading on Docker': 'v2.0/upgrade/upddocker.md'
+          - 'Upgrading on DockerSwarm': 'v2.0/upgrade/updswarm.md'
+          - 'Upgrading on Kubernetes': 'v2.0/upgrade/updk8s.md'
         - Managing Endpoints:
           - 'Add Local Endpoint' : 'v2.0/endpoints/local.md'
           - 'Add Docker Endpoint' : 'v2.0/endpoints/docker.md'
