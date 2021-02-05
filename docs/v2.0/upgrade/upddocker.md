@@ -1,4 +1,4 @@
-# Upgrade a Stanalone Docker Deployment
+# Upgrade a Standalone Docker Deployment
 ### Docker Standalone
 Assuming you've used our recommended deployment scripts: when upgrading to the latest version of Portainer, use the following commands:
 
