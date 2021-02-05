@@ -101,8 +101,6 @@ Run the following command to deploy the Agent in your Docker host.
 
 <pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent</code></pre>
 
-Note: <code>--tlsskipverify</code> has to be present when deploying an agent, since injecting valid, signed certs in the agent is not a supported scenario at present.
-
 ### Docker Swarm
 Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.
 
@@ -114,7 +112,6 @@ The following step is deploy the Agent:
 
 <pre><code> docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes --mount type=bind,src=/,dst=/host portainer/agent</code></pre>
 
-Note: <code>--tlsskipverify</code> has to be present when deploy an agent and the certs in the agent is not a supported scenario at this moment.
 
 ## Notes
 
