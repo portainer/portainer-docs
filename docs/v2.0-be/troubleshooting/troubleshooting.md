@@ -12,26 +12,8 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 
 
 ## How do I upgrade Portainer
-### Portainer running as a container.
-Assuming you've used our recommended deployment scripts, when upgrading to the latest version of Portainer, use the following commands:
+Instructions for upgrading Portainer CE can be found [here](https://documentation.portainer.io/v2.0/upgrade/upgrade/)
 
-<pre><code> > docker stop portainer </code></pre>
-
-<pre><code> > docker rm portainer </code></pre>
-
-Those 2 commands will stop and remove the container respectively. Doing this will NOT remove your other applications/containers/etc.
-
-Now that you have stopped and removed the old version of Portainer, you can run this command
-
-<pre><code> > docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</code></pre>
-
-That will deploy the newest version of Portainer on your system, using the persistent data and upgrade the DB
-
-Now you can go to http://your-server-address:9000 and login. You should notice that the bottom left corner looks different than it did before. There is no more update nag and the version is no longer shown next to the Portainer logo.
-
-### Instructions for Swarm coming soon.
-
-### Instructions for Kubernetes coming soon
 
 ## How do I reset my Portainer password?
 
