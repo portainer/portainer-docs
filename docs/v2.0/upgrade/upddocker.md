@@ -14,7 +14,7 @@ Those 2 commands will stop and remove the container respectively. Doing this wil
 
 Now that you have stopped and removed the old version of Portainer, you can run this command
 
-<pre><code> > docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</code></pre>
+<pre><code> docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</code></pre>
 
 That will deploy the newest version of Portainer on your system, using the persistent data and upgrade the DB
 
