@@ -89,7 +89,7 @@ The nodeSelector can be added in the following ways:
 
 1. Edit your own values.yaml and set the value of nodeSelector like this:
 
-        nodeSelector: kubernetes.io/hostname: \<YOUR NODE NAME>
+        nodeSelector: kubernetes.io/hostname: <YOUR NODE NAME>
 
 2. Explicictly set the target node when deploying/updating the helm chart on the CLI, by including `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>`
    
