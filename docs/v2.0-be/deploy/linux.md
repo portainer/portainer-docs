@@ -26,36 +26,44 @@ Alternatively, if you are using HELM you can use:
 
 ### Using Helm
 
+Ensure you're using at least helm v3.2, which [includes support](https://github.com/helm/helm/pull/7648) for the `--create-namespace` argument.
+
+
 First, add the Portainer helm repo running the following:
 
 <pre><code> helm repo add portainer https://portainer.github.io/k8s/</code></pre>
 <pre><code> helm repo update</code></pre>
 
-Then, create the Portainer namespace in your cluster
+<!-- Then, create the Portainer namespace in your cluster
 
-<pre><code> kubectl create namespace portainer</code></pre>
+<pre><code> kubectl create namespace portainer</code></pre> -->
 
 #### For NodePort
 
 Using the following command, Portainer will run at port 30777.
 
-<pre><code> helm install --set enterpriseEdition.enabled=true -n portainer portainer portainer/portainer</code></pre>
+<pre><code> helm install --create-namespace -n portainer portainer portainer/portainer \
+--set enterpriseEdition.enabled=true</code></pre>
 
 #### For Load Balancer
 
 Using the following command, Portainer will run at port 9000.
 
-<pre><code> helm install  --set enterpriseEdition.enabled=true -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
+<pre><code> helm install --create-namespace -n portainer portainer portainer/portainer \
+--set enterpriseEdition.enabled=true  \
+--set service.type=LoadBalancer</code></pre>
 
 #### For Ingress
 
-<pre><code> helm install  --set enterpriseEdition.enabled=true -n portainer portainer portainer/portainer --set service.type=ClusterIP</code></pre>
+<pre><code> helm install --create-namespace -n portainer portainer portainer/portainer \
+--set enterpriseEdition.enabled=true \
+--set service.type=ClusterIP</code></pre>
 
 ### Using YAML Manifest
 
-First create the Portainer namespace in your cluster
+<!-- First create the Portainer namespace in your cluster
 
-<pre><code> kubectl create namespace portainer</code></pre>
+<pre><code> kubectl create namespace portainer</code></pre> -->
 
 #### For NodePort
 
@@ -66,6 +74,32 @@ Using the following command, Portainer will run at port 30777.
 #### For Load Balancer
 
 <pre><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb-ee.yaml</code></pre>
+
+
+---
+**Note about Persisting Data**
+
+The charts/manifests will create a persistent volume for storing Portainer data, using the default StorageClass.
+
+In some Kubernetes clusters (microk8s), the default Storage Class simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.
+
+While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the portainer pod to a particular node.
+
+The nodeSelector can be added in the following ways:
+
+1. Edit your own values.yaml and set the value of nodeSelector like this:
+
+        nodeSelector: kubernetes.io/hostname: \<YOUR NODE NAME>
+
+2. Explicictly set the target node when deploying/updating the helm chart on the CLI, by including `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>`
+   
+3. If you've deployed Portainer via manifests, without Helm, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
+
+        kubectl patch deployments -n portainer portainer -p '{"spec": {"template": {"spec": {"nodeSelector": {"kubernetes.io/hostname": "'$(kubectl get pods -n portainer -o jsonpath='{ ..nodeName }')'"}}}}}' || (echo Failed to identify current node of portainer pod; exit 1)
+
+---
+<br>
+<br>
 
 ## Deploy Portainer in Docker
 
@@ -99,6 +133,7 @@ Run the following command to deploy the Agent in your Docker host.
 
 <pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.0.0</code></pre>
 
+Note: <code>--tlsskipverify</code> has to be present when deploy an agent and the certs in the agent is not a supported scenario at this moment.
 
 ### Docker Swarm
 Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.
@@ -107,6 +142,7 @@ Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run t
 
 <pre><code> docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes --mount type=bind,src=/,dst=/host portainer/agent:2.0.0</code></pre>
 
+Note: <code>--tlsskipverify</code> has to be present when deploy an agent and the certs in the agent is not a supported scenario at this moment.
 
 ## Notes
 
