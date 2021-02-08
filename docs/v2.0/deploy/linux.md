@@ -26,36 +26,42 @@ Alternatively, if you are using HELM you can use:
 
 ### Using Helm
 
+Ensure you're using at least helm v3.2, which [includes support](https://github.com/helm/helm/pull/7648) for the `--create-namespace` argument.
+
+
 First, add the Portainer helm repo running the following:
 
 <pre><code> helm repo add portainer https://portainer.github.io/k8s/</code></pre>
 <pre><code> helm repo update</code></pre>
 
-Then, create the Portainer namespace in your cluster
 
-<pre><code> kubectl create namespace portainer</code></pre>
+<!-- Then, create the Portainer namespace in your cluster
+
+<pre><code> kubectl create namespace portainer</code></pre> -->
 
 #### For NodePort
 
 Using the following command, Portainer will run in the port 30777
 
-<pre><code> helm install -n portainer portainer portainer/portainer</code></pre>
+<pre><code> helm install --create-namespace -n portainer portainer portainer/portainer</code></pre>
 
 #### For Load Balancer
 
 Using the following command, Portainer will run in the port 9000.
 
-<pre><code> helm install -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
+<pre><code> helm install --create-namespace -n portainer portainer portainer/portainer \
+--set service.type=LoadBalancer</code></pre>
 
 #### For Ingress
 
-<pre><code> helm install -n portainer portainer portainer/portainer --set service.type=ClusterIP</code></pre>
+<pre><code> helm install --create-namespace -n portainer portainer portainer/portainer \
+--set service.type=ClusterIP</code></pre>
 
 ### Using YAML Manifest
 
-First create the Portainer namespace in your cluster
+<!-- First create the Portainer namespace in your cluster
 
-<pre><code> kubectl create namespace portainer</code></pre>
+<pre><code> kubectl create namespace portainer</code></pre> -->
 
 #### For NodePort
 
@@ -101,6 +107,8 @@ Run the following command to deploy the Agent in your Docker host.
 
 <pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent</code></pre>
 
+Note: <code>--tlsskipverify</code> has to be present when deploying an agent, since injecting valid, signed certs in the agent is not a supported scenario at present.
+
 ### Docker Swarm
 Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.
 
@@ -112,6 +120,7 @@ The following step is deploy the Agent:
 
 <pre><code> docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes --mount type=bind,src=/,dst=/host portainer/agent</code></pre>
 
+Note: <code>--tlsskipverify</code> has to be present when deploy an agent and the certs in the agent is not a supported scenario at this moment.
 
 ## Notes
 
