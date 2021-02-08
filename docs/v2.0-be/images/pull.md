@@ -1,6 +1,6 @@
 # Pull Images
 
-You can pull images from any registry already added to Portainer, see how to [add new registries](/v2./registries/connect/) to Portainer for more information. This option is currently only available, when you manage Docker and Docker Swarm environments.
+You can pull images from any registry already added to Portainer, see how to [add new registries](/v2.0-be/registries/connect/) to Portainer for more information. This option is currently only available, when you manage Docker and Docker Swarm environments.
 
 ## Pulling Images
 
