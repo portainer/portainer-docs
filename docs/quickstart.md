@@ -1,6 +1,6 @@
 # :fontawesome-solid-paper-plane: Installation
 
-Portainer comes in two flavours Portainer CE and Portainer BE. Portainer CE is open source, free forever and used by 500,000 developers worldwide. Portainer Business builds on CE and adds business related functionality.
+Portainer comes in two flavours Portainer CE and Portainer BE. Portainer CE is open source, free forever and used by more than 500,000 developers worldwide. Portainer Business builds on CE and adds business related functionality.
 
 You can find a feature comparision [here](https://www.portainer.io/products).
 
