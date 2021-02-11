@@ -146,4 +146,4 @@ Note: <code>--tlsskipverify</code> has to be present when deploy an agent and th
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -44,4 +44,4 @@ Please follow the contribution guidelines on [the repository](https://github.com
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

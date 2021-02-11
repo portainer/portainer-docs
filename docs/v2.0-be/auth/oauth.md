@@ -69,4 +69,4 @@ To understand how to enable access to OAuth Teams and Users, please, refer to [t
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

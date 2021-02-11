@@ -95,4 +95,4 @@ If you are having errors trying to install or use Wget, you can refer to the off
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -48,4 +48,4 @@ Once all the details are entered, click <b>Add Registry</b>. If successful you w
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

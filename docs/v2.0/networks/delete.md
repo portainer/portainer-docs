@@ -10,4 +10,4 @@ To delete a network, click <b>Networks</b>, select the <b>network</b> you want t
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

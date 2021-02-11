@@ -38,4 +38,4 @@ To see how to complete the configuration in Docker Hub, [click here](https://doc
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

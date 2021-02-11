@@ -134,4 +134,4 @@ Retrieve this ID, it will be used to execute queries against the Docker engine f
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

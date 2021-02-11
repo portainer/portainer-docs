@@ -14,4 +14,4 @@ You can view how to add an ACI Endpoint in our [Administrator Guide](/v2.0/endpo
 
 # Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

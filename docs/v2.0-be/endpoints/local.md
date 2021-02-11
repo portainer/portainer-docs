@@ -19,4 +19,4 @@ Adding a local endpoint must be done in the initial setup. To learn more see [in
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -4,4 +4,4 @@ When using internal authentication, Portainer will encrypt user passwords and st
 
 # Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}
