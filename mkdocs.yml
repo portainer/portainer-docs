@@ -54,7 +54,6 @@ nav:
           - 'Using Portainer with Reverse Proxies':
               - 'Traefik' : 'v2.0/ad/traefik/rp-traefik.md'
               - 'Nginx' : 'v2.0/ad/nginx/rp-nginx.md'
-        - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
         - Deprecated and Removed Features : 'v2.0/troubleshooting/deprecated.md'
       - Business Edition:
         - Managing Endpoints:
@@ -102,7 +101,6 @@ nav:
           - 'Using Portainer with Reverse Proxies':
               - 'Traefik' : 'v2.0-be/ad/traefik/rp-traefik.md'
               - 'Nginx' : 'v2.0-be/ad/nginx/rp-nginx.md'
-        - FAQs : 'v2.0-be/troubleshooting/troubleshooting.md'
         - Deprecated and Removed Features : 'v2.0-be/troubleshooting/deprecated.md'
     - User Guide:
       - Community Edition: 
