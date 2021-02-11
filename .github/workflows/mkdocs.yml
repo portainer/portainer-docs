@@ -31,7 +31,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install dependencies
-        run: python3 -m pip install mkdocs mkdocs-material
+        run: python3 -m pip install mkdocs mkdocs-material fontawesome_markdown
 
       - run: mkdocs build
 
