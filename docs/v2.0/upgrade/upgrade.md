@@ -7,11 +7,9 @@ You can find Requirements for different versions of Portainer [here](../../deplo
 
 Upgrade Instructions for different deployments below...
 
-[Docker](../upddocker/)
-
-[DockerSwarm](../updswarm/)
-
-[Kubernetes](../updk8s/)
+[Docker](../upddocker/){: .md-button }
+[DockerSwarm](../updswarm/){: .md-button }
+[Kubernetes](../updk8s/){: .md-button }
 
 
 ## Notes

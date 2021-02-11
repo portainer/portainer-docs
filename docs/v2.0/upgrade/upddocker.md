@@ -1,4 +1,4 @@
-# Upgrade a Standalone Docker Deployment
+# :fontawesome-brands-docker: Upgrade a Standalone Docker Deployment
 
 ### Docker Standalone
 
@@ -82,5 +82,5 @@ docker run -d -p 9001:9001 --name portainer_agent --restart=always --pull=always
 
 ```
 
-## Notes
+## :material-note-text: Notes
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).

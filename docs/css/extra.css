@@ -57,7 +57,7 @@
 
 .md-typeset h2 {
     margin: 1.6em 0 .64em;
-    color: #323c48;
+    color: #13bef9;
     font-weight: 700;
     font-size: 1.7em;
     line-height: 1.4;
@@ -98,12 +98,12 @@
 }
 .md-nav__item {
     
-    border-top: 1px solid darkgray;
+    border-top: 0px solid darkgray;
 }
 
 .md-nav__item--active {
    
-    border-top: 1px solid darkgray;
+    border-top: 0px solid darkgray;
     
 
 }
@@ -145,4 +145,47 @@ color: #e86a25;
 
 }
 }
+.md-grid {
+    max-width: 1440px;
+  }
 
+.tabbed-set {
+display: flex;
+position: relative;
+flex-wrap: wrap;
+}
+
+.tabbed-set .highlight {
+background: #ddd;
+}
+
+.tabbed-set .tabbed-content {
+display: none;
+order: 99;
+width: 100%;
+}
+
+.tabbed-set label {
+width: auto;
+margin: 0 0.5em;
+padding: 0.25em;
+font-size: 120%;
+cursor: pointer;
+}
+
+.tabbed-set input {
+position: absolute;
+opacity: 0;
+}
+
+.tabbed-set input:nth-child(n+1) {
+color: #333333;
+}
+
+.tabbed-set input:nth-child(n+1):checked + label {
+    color: #e86a25;
+}
+
+.tabbed-set input:nth-child(n+1):checked + label + .tabbed-content {
+    display: block;
+}

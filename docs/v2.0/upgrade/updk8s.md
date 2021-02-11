@@ -1,4 +1,4 @@
-# Upgrade Kubernetes Deployment
+# :material-kubernetes: Upgrade Kubernetes Deployment
 
 Steps to upgrade Portainer and or Portainer agent deployed into Kubernetes. Upgrade method depends on the original install method used.
 
@@ -72,5 +72,5 @@ kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/ma
 
 Now you can go to portainer url and login. You should notice that the bottom left corner looks different than it did before. There is no more update nag and the version is no longer shown next to the Portainer logo.
 
-## Notes
+## :material-note-text: Notes
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).

@@ -2,21 +2,24 @@ site_name: Documentation
 google_analytics: ['G-N7CY67ZGSW', 'documentation.portainer.io']
 nav:
     - Home: index.md
-    - Portainer Community 2.1:
-      - Admin Guide:
-        - Deploying Portainer:
+    - Quick Start: quickstart.md
+    - Install Guide:
+      - Community Edition:
           - 'Requirements' : 'v2.0/deploy/requirements.md'
-          - 'CLI Options' : 'v2.0/deploy/cli.md'
-          - 'Deploying on Linux' : 'v2.0/deploy/linux.md'
-          - 'Deploying on Windows Server' : 'v2.0/deploy/windowsserver.md'
-          - 'Deploying on Windows 10' : 'v2.0/deploy/windows10.md'
+          - 'Docker' : 'v2.0/deploy/ceinstalldocker.md'
+          - 'Docker Swarm' : 'v2.0/deploy/ceinstallswarm.md'
+          - 'Kubernetes' : 'v2.0/deploy/ceinstallk8s.md'
           - 'Using SSL with Portainer' : 'v2.0/deploy/ssl.md'
           - 'Initial Setup' : 'v2.0/deploy/initial.md'
-        - Upgrading Portainer:
-          - 'Upgrade Path': 'v2.0/upgrade/upgrade.md'
-          - 'Upgrading on Docker': 'v2.0/upgrade/upddocker.md'
-          - 'Upgrading on DockerSwarm': 'v2.0/upgrade/updswarm.md'
-          - 'Upgrading on Kubernetes': 'v2.0/upgrade/updk8s.md'
+      - Business Edition:
+          - 'Requirements' : 'v2.0-be/deploy/requirements.md'
+          - 'Docker' : 'v2.0-be/deploy/beinstalldocker.md'
+          - 'Docker Swarm' : 'v2.0-be/deploy/beinstallswarm.md'
+          - 'Kubernetes' : 'v2.0-be/deploy/beinstallk8s.md'
+          - 'Using SSL with Portainer' : 'v2.0-be/deploy/ssl.md'
+          - 'Initial Setup' : 'v2.0-be/deploy/initial.md'
+    - Admin Guide:
+      - Community Edition:
         - Managing Endpoints:
           - 'Add Local Endpoint' : 'v2.0/endpoints/local.md'
           - 'Add Docker Endpoint' : 'v2.0/endpoints/docker.md'
@@ -53,7 +56,56 @@ nav:
               - 'Nginx' : 'v2.0/ad/nginx/rp-nginx.md'
         - FAQs : 'v2.0/troubleshooting/troubleshooting.md'
         - Deprecated and Removed Features : 'v2.0/troubleshooting/deprecated.md'
-      - User Guide:
+      - Business Edition:
+        - Managing Endpoints:
+          - 'Add Local Endpoint' : 'v2.0-be/endpoints/local.md'
+          - 'Add Docker Endpoint' : 'v2.0-be/endpoints/docker.md'
+          - 'Add Docker Swarm Endpoint' : 'v2.0-be/endpoints/swarm.md'
+          - 'Add Kubernetes Endpoint' : 'v2.0-be/endpoints/kubernetes.md'
+          - 'Add Edge Endpoint' : 'v2.0-be/endpoints/edge.md'
+          - 'Add ACI Endpoint' : 'v2.0-be/endpoints/aci.md'
+          - 'Creating Endpoints Groups and Endpoint Tags' : 'v2.0-be/endpoints/groupstags.md'
+          - 'Managing Endpoints Access' : 'v2.0-be/endpoints/access.md'
+          - 'Add Endpoint through Portainer API' : 'v2.0-be/endpoints/api.md'
+        - Licensing:
+          - 'Add or remove license key' : 'v2.0-be/licensing/licensing.md'
+        - Authentication Sources:
+          - 'Automatic User Provisioning' : 'v2.0-be/auth/auto.md'
+          - 'LDAP' : 'v2.0-be/auth/ldap.md'
+          - 'Active Directory' : 'v2.0-be/auth/ad.md'
+          - 'OAuth' : 'v2.0-be/auth/oauth.md'
+          - 'Internal' : 'v2.0-be/auth/internal.md'
+        - Managing Users & Teams:
+          - 'RBAC Overview' : 'v2.0-be/users/roles.md'
+          - 'Effective access viewer' : 'v2.0-be/users/viewer.md'
+          - 'Create a User' : 'v2.0-be/users/create.md'
+          - 'Create a Team' : 'v2.0-be/users/create-team.md'
+          - 'Promote a User as Admin' : 'v2.0-be/users/promoting.md'
+          - 'Add a User to a Team' : 'v2.0-be/users/user-team.md'
+          - 'Reset User Password' : 'v2.0-be/users/reset-user.md'
+          - 'Reset Administrator Password' : 'v2.0-be/users/reset-admin.md'
+        - Registries:
+          - 'Registry Management Overview' : 'v2.0-be/registries/description.md'
+          - 'Connect to a Registry' : 'v2.0-be/registries/connect.md'
+          - 'Enable Docker Hub Authentication' : 'v2.0-be/registries/auth-docker-hub.md'
+        - Configuring Settings:
+          - 'Enable use of external load balancer' : 'v2.0-be/settings/lb.md'
+          - 'Allow/Disallow over-commitment of resources' : 'v2.0-be/settings/overcommit.md'
+          - 'Limit usage of default namespace' : 'v2.0-be/settings/namespaces.md'
+          - 'Security Options' : 'v2.0-be/settings/security.md'
+          - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
+          - 'App Templates' : 'v2.0-be/settings/apps.md'
+          - 'Enable Host Management Features' : 'v2.0-be/settings/host_management.md'
+        - Downgrading:
+          - 'Downgrade from BE to CE': 'v2.0-be/downgrade/be-to-ce.md'
+        - Advanced Deployments:
+          - 'Using Portainer with Reverse Proxies':
+              - 'Traefik' : 'v2.0-be/ad/traefik/rp-traefik.md'
+              - 'Nginx' : 'v2.0-be/ad/nginx/rp-nginx.md'
+        - FAQs : 'v2.0-be/troubleshooting/troubleshooting.md'
+        - Deprecated and Removed Features : 'v2.0-be/troubleshooting/deprecated.md'
+    - User Guide:
+      - Community Edition: 
         - Docker & Docker Swarm:
           - 'Stacks':
             - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
@@ -127,64 +179,7 @@ nav:
           - 'Add a Stack' : 'v2.0/edge/stacks.md'
           - 'Add a Job' : 'v2.0/edge/jobs/add.md'
           - 'Managing Edge Groups' : 'v2.0/edge/groups.md'
-    - Portainer Business 2.0:
-      - Admin Guide:
-        - Deploying Portainer:
-          - 'Requirements' : 'v2.0-be/deploy/requirements.md'
-          - 'CLI Options' : 'v2.0-be/deploy/cli.md'
-          - 'Deploying on Linux' : 'v2.0-be/deploy/linux.md'
-          - 'Deploying on Windows Server' : 'v2.0-be/deploy/windowsserver.md'
-          - 'Deploying on Windows 10' : 'v2.0-be/deploy/windows10.md'
-          - 'Using SSL with Portainer' : 'v2.0-be/deploy/ssl.md'
-          - 'Initial Setup' : 'v2.0-be/deploy/initial.md'
-        - Managing Endpoints:
-          - 'Add Local Endpoint' : 'v2.0-be/endpoints/local.md'
-          - 'Add Docker Endpoint' : 'v2.0-be/endpoints/docker.md'
-          - 'Add Docker Swarm Endpoint' : 'v2.0-be/endpoints/swarm.md'
-          - 'Add Kubernetes Endpoint' : 'v2.0-be/endpoints/kubernetes.md'
-          - 'Add Edge Endpoint' : 'v2.0-be/endpoints/edge.md'
-          - 'Add ACI Endpoint' : 'v2.0-be/endpoints/aci.md'
-          - 'Creating Endpoints Groups and Endpoint Tags' : 'v2.0-be/endpoints/groupstags.md'
-          - 'Managing Endpoints Access' : 'v2.0-be/endpoints/access.md'
-          - 'Add Endpoint through Portainer API' : 'v2.0-be/endpoints/api.md'
-        - Licensing:
-          - 'Add or remove license key' : 'v2.0-be/licensing/licensing.md'
-        - Authentication Sources:
-          - 'Automatic User Provisioning' : 'v2.0-be/auth/auto.md'
-          - 'LDAP' : 'v2.0-be/auth/ldap.md'
-          - 'Active Directory' : 'v2.0-be/auth/ad.md'
-          - 'OAuth' : 'v2.0-be/auth/oauth.md'
-          - 'Internal' : 'v2.0-be/auth/internal.md'
-        - Managing Users & Teams:
-          - 'RBAC Overview' : 'v2.0-be/users/roles.md'
-          - 'Effective access viewer' : 'v2.0-be/users/viewer.md'
-          - 'Create a User' : 'v2.0-be/users/create.md'
-          - 'Create a Team' : 'v2.0-be/users/create-team.md'
-          - 'Promote a User as Admin' : 'v2.0-be/users/promoting.md'
-          - 'Add a User to a Team' : 'v2.0-be/users/user-team.md'
-          - 'Reset User Password' : 'v2.0-be/users/reset-user.md'
-          - 'Reset Administrator Password' : 'v2.0-be/users/reset-admin.md'
-        - Registries:
-          - 'Registry Management Overview' : 'v2.0-be/registries/description.md'
-          - 'Connect to a Registry' : 'v2.0-be/registries/connect.md'
-          - 'Enable Docker Hub Authentication' : 'v2.0-be/registries/auth-docker-hub.md'
-        - Configuring Settings:
-          - 'Enable use of external load balancer' : 'v2.0-be/settings/lb.md'
-          - 'Allow/Disallow over-commitment of resources' : 'v2.0-be/settings/overcommit.md'
-          - 'Limit usage of default namespace' : 'v2.0-be/settings/namespaces.md'
-          - 'Security Options' : 'v2.0-be/settings/security.md'
-          - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
-          - 'App Templates' : 'v2.0-be/settings/apps.md'
-          - 'Enable Host Management Features' : 'v2.0-be/settings/host_management.md'
-        - Downgrading:
-          - 'Downgrade from BE to CE': 'v2.0-be/downgrade/be-to-ce.md'
-        - Advanced Deployments:
-          - 'Using Portainer with Reverse Proxies':
-              - 'Traefik' : 'v2.0-be/ad/traefik/rp-traefik.md'
-              - 'Nginx' : 'v2.0-be/ad/nginx/rp-nginx.md'
-        - FAQs : 'v2.0-be/troubleshooting/troubleshooting.md'
-        - Deprecated and Removed Features : 'v2.0-be/troubleshooting/deprecated.md'
-      - User Guide:
+      - Business Edition:
         - Docker & Docker Swarm:
           - 'Stacks':
             - 'Add/Create a Stack' : 'v2.0-be/stacks/create.md'
@@ -260,7 +255,12 @@ nav:
           - 'Managing Edge Groups' : 'v2.0-be/edge/groups.md'
         - Registries:
           - 'Browse a Registry' : 'v2.0-be/registries/browse.md'
-          - 'Manage a Registry' : 'v2.0-be/registries/manage.md'
+          - 'Manage a Registry' : 'v2.0-be/registries/manage.md'        
+    - Upgrading Portainer:
+      - 'Upgrade Path': 'v2.0/upgrade/upgrade.md'
+      - 'Upgrading on Docker': 'v2.0/upgrade/upddocker.md'
+      - 'Upgrading on DockerSwarm': 'v2.0/upgrade/updswarm.md'
+      - 'Upgrading on Kubernetes': 'v2.0/upgrade/updk8s.md'
     - FAQs : 'v2.0-be/troubleshooting/troubleshooting.md'
     - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
     - Older Releases:
@@ -285,7 +285,8 @@ extra_css:
     - css/extra.css
 theme:
   font:
-    text: raleway
+    text: Raleway #Fira Sans
+    #code: Fira Code
   features:
     - instant
   logo: assets/logo.png
@@ -295,6 +296,20 @@ theme:
     primary: light-blue
 repo_name: portainer/portainer
 repo_url: https://github.com/portainer/portainer-docs
+markdown_extensions:
+  - attr_list
+  - admonition
+  - toc:
+      toc_depth: 0
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.details
+  - fontawesome_markdown
+  - meta
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
 extra:
   social:
     - icon: fontawesome/brands/twitter
