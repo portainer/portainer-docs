@@ -99,6 +99,6 @@ There is no history of deleted containers kept, so once they are gone the logs w
 
 The underlying principle of Portainer is to enforce best practice across all functions, including Swarm. When using Swarm, you should always use Swarm services and not containers.
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

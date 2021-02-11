@@ -36,6 +36,6 @@ Here, you can find a few examples to understand how easy is to trigger the webho
 
 To see how to complete the configuration in Docker Hub, [click here](https://docs.docker.com/docker-hub/webhooks/).
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

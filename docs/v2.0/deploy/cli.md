@@ -107,6 +107,6 @@ The following CLI flags are available:
 * <code>--tlsverify</code>: TLS support (default: false)
 * <code>--tunnel-port</code>: Specify an alternate tunnel port to use with the Edge agent. Use --tunnel-port 8001 with -p 8001:8001 to make the Edge agent communicate on port 8001
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

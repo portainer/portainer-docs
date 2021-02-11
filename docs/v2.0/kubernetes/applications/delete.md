@@ -8,6 +8,6 @@ To delete an Application, click <b>Applications</b>, select the Application you 
 
 ![delete](assets/delete-1.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

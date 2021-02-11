@@ -36,6 +36,6 @@ After the deployment has completed, Portainer will exit to the container list an
 
 ![aci](assets/add-5.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

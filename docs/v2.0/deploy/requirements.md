@@ -15,7 +15,7 @@ To try and alleviate confusion as to what we test against, we have documented th
 | Community 2.0.1          | Jan 7, 2021    | 20.10.0        | 1.17.13 1.18.9 1.19.3 1.20.0 | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 release 1809 Ubuntu 18.04 & CentOS 7 |
 | Community 2.1 (latest)   | Feb 2, 2021    | 20.10.2        | 1.20.0                       | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 release 1809 Ubuntu 18.04 & CentOS 7 |
                  
-## Notes
+## :material-note-text: Notes
 
 If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.
 

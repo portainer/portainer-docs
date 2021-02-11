@@ -132,6 +132,6 @@ The response is a JSON object representing the endpoint:
 
 Retrieve this ID, it will be used to execute queries against the Docker engine for that endpoint.
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

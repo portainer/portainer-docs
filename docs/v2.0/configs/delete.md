@@ -8,6 +8,6 @@ To delete a config, go to <b>Configs</b>, select the config you want to delete a
 
 ![configs](assets/config-delete-1.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

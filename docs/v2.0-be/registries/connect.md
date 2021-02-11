@@ -46,6 +46,6 @@ Once all the details are entered, click <b>Add Registry</b>. If successful you w
 
 ![registries](assets/registry4.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

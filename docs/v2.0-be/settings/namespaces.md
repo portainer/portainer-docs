@@ -14,6 +14,6 @@ After you enabled the toggle, scroll down and click <b>Save Configuration</b>.
 
 Starting now, the only user with the power to run applications in the default namespace is the Administrator of Portainer. 
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

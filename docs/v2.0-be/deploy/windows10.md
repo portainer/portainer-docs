@@ -119,7 +119,7 @@ To run Portainer Agent in a Windows Container scenario, you need to execute the 
 
 <pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent:2.0.0</code></pre>
 
-## Notes
+## :material-note-text: Notes
 
 These deployments were tested in Windows 10 Pro 2004 edition. To use Windows Containers, you need to run Windows 10 ver 1803 or the newest.
 

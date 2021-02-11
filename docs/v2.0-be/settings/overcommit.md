@@ -24,6 +24,6 @@ After you disabled the toggle, scroll down and click <b>Save Configuration</b>.
 
 ![namespace](assets/save_conf.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

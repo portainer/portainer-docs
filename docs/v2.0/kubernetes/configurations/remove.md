@@ -8,6 +8,6 @@ Go to <b>Configurations</b>, select the configuration and then, click <b>Remove<
 
 ![remove](assets/remove-1.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

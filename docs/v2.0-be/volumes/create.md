@@ -68,6 +68,6 @@ When this is complete click <b>Create the Volume</b>.
 
 ![volumes](assets/create_5.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

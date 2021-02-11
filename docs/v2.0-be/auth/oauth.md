@@ -67,6 +67,6 @@ Once that all fields are completed, do a click in <b>Save Settings</b>
 
 To understand how to enable access to OAuth Teams and Users, please, refer to [this article](/v2.0-be/endpoints/access).
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

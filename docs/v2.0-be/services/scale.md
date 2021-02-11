@@ -20,6 +20,6 @@ Refreshing this page will show you the replicas (3 in this case) running, depend
 
 ![scale](assets/scale_4.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

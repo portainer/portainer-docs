@@ -54,7 +54,7 @@ To run Portainer Agent in a Windows Container scenario, you need to execute the 
 
 Then you just connect to one IP of the remote cluster on port 9001.
 
-## Notes
+## :material-note-text: Notes
 
 These deployments were tested in Windows Server 2019 2004 edition. To use Windows Containers, you need to run Windows Server 2019 ver 1803 or newest.
 

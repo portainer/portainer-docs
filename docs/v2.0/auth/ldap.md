@@ -78,6 +78,6 @@ Navigate to User Management. Create a username that matches your LDAP source use
 ![auth](assets/ldap_8.webp)
 ![auth](assets/ldap_9.webp)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -203,6 +203,6 @@ Once the services are running, you can browse the url specified (e.g. portainer.
 WIP
 
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

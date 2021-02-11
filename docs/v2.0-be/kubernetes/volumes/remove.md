@@ -44,6 +44,6 @@ If everything works as expected, you will see a pop up confirmating this action:
 
 ![volumes](assets/remove-9.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

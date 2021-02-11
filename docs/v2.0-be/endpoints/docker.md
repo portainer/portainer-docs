@@ -51,6 +51,6 @@ Scroll down to the bottom of the page and click <b>Add Endpoint</b>.
 
 ![docker_endpoint](assets/docker_6.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

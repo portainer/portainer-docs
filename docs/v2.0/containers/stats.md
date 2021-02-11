@@ -22,6 +22,6 @@ Here, you can view a very comprehensive list of consumption stats:
 
 ![stats](assets/stats-2.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

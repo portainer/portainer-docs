@@ -29,6 +29,6 @@ If everything work as expected, you will see the next pop up at the top right of
 
 ![access](assets/role4.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

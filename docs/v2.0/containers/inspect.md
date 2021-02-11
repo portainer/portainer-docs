@@ -14,6 +14,6 @@ Here, you can view all the information of this container. Clicking on a category
 
 ![inspect](assets/inspect-3.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

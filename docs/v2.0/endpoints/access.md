@@ -25,6 +25,6 @@ Once added, you will see the User/Team listed in the access section:
 
 ![access](assets/access_4.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

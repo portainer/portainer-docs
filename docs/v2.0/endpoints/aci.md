@@ -36,6 +36,6 @@ Is everything works as expected, you will the following pop up
 ![aci](assets/aci_3.png)
 
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -114,6 +114,6 @@ In terms of Docker Swarm services, a secret is a blob of data, such as a passwor
 
 ![options](assets/options-15.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}
