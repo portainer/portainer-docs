@@ -16,6 +16,6 @@ After you enabled the toggle, scroll down and do a click in <b>Save Configuratio
 
 Starting now, when you create a resource pool, you can define an external load balancer quota. 
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -93,6 +93,6 @@ Installing Wget on macOS is simple when you use Homebrew. Just run the <code>bre
 
 If you are having errors trying to install or use Wget, you can refer to the official guide [here](https://www.gnu.org/software/wget/manual/).
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

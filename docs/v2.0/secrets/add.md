@@ -20,6 +20,6 @@ In the next screen, you need to set a <b>name</b> for you secret, define the <b>
 
 ![secrets](assets/secret-2.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

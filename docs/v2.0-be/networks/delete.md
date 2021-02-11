@@ -8,6 +8,6 @@ To delete a network, click <b>Networks</b>, select the <b>network</b> you want t
 
 ![delete](assets/delete-1.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -12,6 +12,6 @@ From this screen, you can upload files to this volume and expose it to the conta
 
 ![volumes](assets/browse_2.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

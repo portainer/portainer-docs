@@ -24,6 +24,6 @@ Once the migration is complete, you will see a pop-up confirming the migration.
 
 ![migrate](assets/migrate-5.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

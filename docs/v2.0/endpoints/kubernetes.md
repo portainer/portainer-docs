@@ -146,6 +146,6 @@ See the following screenshot for reference:
 
 Once all is set, you must click in <b>Save Configuration</b> button. Congratulations. You Kubernetes endpoint via Load Balancer was added.
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

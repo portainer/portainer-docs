@@ -20,6 +20,6 @@ When the process is ready you will see a pop up at the top right corner and you 
 
 ![export](assets/export-4.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

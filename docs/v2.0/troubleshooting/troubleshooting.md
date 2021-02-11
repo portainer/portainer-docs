@@ -78,6 +78,6 @@ These options are no needed, and no make any effect in the configuration of loca
 
 You can view more information about this bug and the progress for your resolution [here](https://github.com/portainer/portainer/issues/4316).
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

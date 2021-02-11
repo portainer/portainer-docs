@@ -31,6 +31,6 @@ To confirm the configuration of your container, select it and scroll to the volu
 
 ![volumes](assets/attach_7.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

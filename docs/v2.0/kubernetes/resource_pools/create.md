@@ -18,6 +18,6 @@ If everything works as expected, you will see a pop up confirming the creation o
 
 ![resource_pool](assets/create-3.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

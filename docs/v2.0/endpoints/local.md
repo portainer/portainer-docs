@@ -17,6 +17,6 @@ To learn more go to [Deploying on Windows 10](/v2.0/deploy/windows10) or [Deploy
 
 Adding a local endpoint must be done in the initial setup. To learn more see [initial setup](/v2.0/deploy/initial/)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

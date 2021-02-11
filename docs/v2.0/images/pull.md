@@ -33,6 +33,6 @@ When the image is sucessful downloaded, you will see a pop up at the right top c
 
 ![pull](assets/pull-3.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

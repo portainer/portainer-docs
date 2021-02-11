@@ -40,6 +40,6 @@ When everything was set up, click <b>Deploy application</b>.
 
 ![create](assets/create-3.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

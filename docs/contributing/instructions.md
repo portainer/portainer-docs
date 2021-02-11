@@ -42,6 +42,6 @@ You should now be able to access Portainer at http://localhost:9000
 
 Please follow the contribution guidelines on [the repository](https://github.com/portainer/portainer/blob/develop/CONTRIBUTING.md) when contributing to the Portainer codebase.
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

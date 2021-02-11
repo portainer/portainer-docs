@@ -8,6 +8,6 @@ To enable <b>Automatic Provisiong</b> go to settings > Authentication and when y
 
 ![atmp](assets/atmp.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

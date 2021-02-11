@@ -31,6 +31,6 @@ If successful your container will be shown in the Container List.
 
 ![contaier](assets/create_4.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

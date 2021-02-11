@@ -12,6 +12,6 @@ After removing the container, you will see a pop up confirming that action.
 
 ![delete](assets/delete-2.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

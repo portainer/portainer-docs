@@ -80,6 +80,6 @@ Once the appropriate option is selected, click connect. If everything works as e
 
 ![portainer-initial](assets/initial-5.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

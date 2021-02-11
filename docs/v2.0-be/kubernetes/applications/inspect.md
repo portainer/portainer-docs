@@ -45,6 +45,6 @@ In this section, you can find the YML generated from the deployment of your appl
 
 ![inspect](assets/inspect-5.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

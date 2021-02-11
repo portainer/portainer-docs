@@ -144,6 +144,6 @@ Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run t
 
 Note: <code>--tlsskipverify</code> has to be present when deploy an agent and the certs in the agent is not a supported scenario at this moment.
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -32,6 +32,6 @@ After that, you can view your ownership settings applied in the container:
 
 ![ownership](assets/ownership-6.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

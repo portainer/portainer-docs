@@ -28,6 +28,6 @@ When the building process is complete, you need to click in the tab <b>Output</b
 
 ![build](assets/build-5.png)
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

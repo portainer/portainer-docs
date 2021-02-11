@@ -489,6 +489,6 @@ You can also mount the <code>templates.json</code> file inside the container, so
 
 <pre><code>$ docker run -d -p "8080:80" -v "${PWD}/templates.json:/usr/share/nginx/html/templates.json" portainer-templates<code></pre>
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

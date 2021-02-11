@@ -22,6 +22,6 @@ This section outlines features & capabilities that have been removed from Portai
 | Specifying a templates file to load on first run via <code>--templates-file</code> | v2.0 |
 | Preventing Portainer from running a snapshot of endpoints via <code>--no-snapshot</code> | v2.0 |
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}
