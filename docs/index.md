@@ -1,10 +1,10 @@
-# Welcome
+# :fontawesome-solid-door-open: Welcome
 
 Welcome to the official Portainer Documentation. 
 This is an open source documentation project and all community contributions are welcome and encouraged.
 For information about contributing to the Portainer documentation, see [Contribution guidelines](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
 
-## About Portainer
+## :fontawesome-solid-address-card: About Portainer
 
 Portainer Community Edition 2.0 is the foundation of the Portainer world. With over half a million regular users, it’s a powerful, open-source toolset that allows you to easily build and manage containers in Docker, Swarm, Kubernetes and Azure ACI.
 
@@ -12,7 +12,7 @@ Portainer works by hiding the complexity that makes managing containers hard, be
 
 The Portainer development team is here to assist you on your container journey; you can engage with them any time through our community-based support channels.
 
-## Support Channels
+## :material-comment-account: Support Channels
 
 As the Portainer community continues to grow, we continue to support the community to the best of our ability.  
 Being a free and opensource product, we have been heavily reliant on our community to provide "how to" support to our community, recently we have invested significant time in improving and updating our documentation found on this site and our [YouTube channel](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg). While we endeavour to cover as many scenarios as possible there may be some that our documentation doesn’t cover. 
@@ -29,6 +29,6 @@ To streamline our operations and allow us to focus on delivering the right suppo
 
 We will not provide support over email. 
 
-## Notes
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).

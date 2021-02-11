@@ -1,4 +1,4 @@
-# Upgrade a Docker Swarm Deployment
+# :fontawesome-brands-docker: Upgrade a Docker Swarm Deployment
 ### Docker Swarm
 Steps to upgrade Portainer and or Portainer agent deployed into Dcoker Swarm as a service.
 
@@ -21,5 +21,5 @@ That will deploy the newest version of Portainer on your system, using the persi
 
 Now you can go to http://your-server-address:9000 and login. You should notice that the bottom left corner looks different than it did before. There is no more update nag and the version is no longer shown next to the Portainer logo.
 
-## Notes
+## :material-note-text: Notes
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
