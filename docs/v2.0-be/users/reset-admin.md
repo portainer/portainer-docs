@@ -44,4 +44,4 @@ Start the Portainer service scaling up and try login with the password generated
 
 # Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

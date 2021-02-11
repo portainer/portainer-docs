@@ -11,4 +11,4 @@ You will see confirmation at the top right of screen if successful.
 
 # Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

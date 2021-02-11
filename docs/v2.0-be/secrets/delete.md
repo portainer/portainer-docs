@@ -9,4 +9,4 @@ To delete a secret, go to <b>Secrets</b>, select the secret you want delete and 
 ![secrets](assets/delete-1.png)
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -22,4 +22,4 @@ In the next screen, you need to set a <b>name</b> for you secret, define the <b>
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -1,6 +1,6 @@
 # Add a Docker Swarm Endpoint
 
-Add a Docker Swarm Endpoint is very straighforward in Portainer BE 2.0. 
+Add a Docker Swarm Endpoint is very straighforward in Portainer Business 2.0. 
 
 ## Deploy the Agent.
 
@@ -55,4 +55,4 @@ When everything is set, you can click <b>Add Endpoint</b>. If successful, you wi
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

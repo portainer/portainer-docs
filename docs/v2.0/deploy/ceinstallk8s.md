@@ -249,6 +249,6 @@ Alternatively, if installing using our helm chart you can add the following opti
 <br>
 ## :material-note-text: Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}
 
 <!-- {{ snippet('https://github.com/portainer/k8s.git', 'charts/portainer/README.md', '# Chart Configuration') }} -->

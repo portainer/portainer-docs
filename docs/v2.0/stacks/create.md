@@ -51,4 +51,4 @@ The docker-compose.yml file is only pulled once from GitHub for the creation of 
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

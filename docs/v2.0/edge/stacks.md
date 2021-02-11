@@ -25,4 +25,4 @@ Next 1. <b>Name</b> your stack and 2. select one or more <b>Edge Groups</b>.
 
 # Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

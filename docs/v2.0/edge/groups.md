@@ -27,4 +27,4 @@ To create a group, 1. go to <b>Edge Groups</b> and then 2. click <b>Add Edge Gro
 
 # Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -26,4 +26,4 @@ After you disabled the toggle, scroll down and click <b>Save Configuration</b>.
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

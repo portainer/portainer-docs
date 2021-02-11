@@ -53,4 +53,4 @@ Scroll down to the bottom of the page and click <b>Add Endpoint</b>.
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

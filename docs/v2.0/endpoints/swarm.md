@@ -55,4 +55,4 @@ When everything is set, you can click <b>Add Endpoint</b>. If successful, you wi
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

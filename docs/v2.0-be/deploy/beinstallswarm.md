@@ -2,7 +2,7 @@
 hide: toc
 ---
 
-# :fontawesome-brands-docker: Deploying Portainer BE in Docker Swarm
+# :fontawesome-brands-docker: Deploying Portainer Business in Docker Swarm
 
 Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine or within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
 
@@ -48,7 +48,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
 === "Docker Swarm on Windows WSL"
     !!! Abstract ""    
-        Before you can deploy Portainer in Docker Swarm running in Windows, you need to install WSL. [Read this guide to know more about WSL/WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+        Before you can deploy Portainer in Docker Swarm running in Windows, you need to install WSL. [Read this guide to know more about WSL/WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10){target=_blank}
 
         Use the following Docker Swarmcommands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see portainer and agent scenario below):
         
@@ -158,4 +158,4 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 <br>
 ## :material-note-text: Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

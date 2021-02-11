@@ -10,4 +10,4 @@ To enable <b>Automatic Provisiong</b> go to settings > Authentication and when y
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

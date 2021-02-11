@@ -262,7 +262,7 @@ nav:
       - 'Upgrading on DockerSwarm': 'v2.0/upgrade/updswarm.md'
       - 'Upgrading on Kubernetes': 'v2.0/upgrade/updk8s.md'
     - FAQs : 'v2.0-be/troubleshooting/troubleshooting.md'
-    - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos'
+    - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos/" target="_blank'
     - Older Releases:
         - CE 1.23.2:
             - 'Agent' : 'archive/1.23.2/agent.md'
@@ -285,8 +285,7 @@ extra_css:
     - css/extra.css
 theme:
   font:
-    text: Raleway #Fira Sans
-    #code: Fira Code
+    text: Raleway
   features:
     - instant
   logo: assets/logo.png

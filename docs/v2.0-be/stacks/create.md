@@ -49,4 +49,4 @@ Set environment variables if needed and then click <b>Deploy the Stack</b>.
 
 ## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}
