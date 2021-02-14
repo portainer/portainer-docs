@@ -301,6 +301,7 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.superfences
   - pymdownx.details
+  - pymdownx.inlinehilite
   - fontawesome_markdown
   - meta
   - pymdownx.emoji:
