@@ -308,6 +308,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 plugins:
+  - search
   - redirects:
         redirect_maps:
             'v2.0/deploy/linux.md': 'quickstart.md'
