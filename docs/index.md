@@ -12,7 +12,7 @@ Portainer works by hiding the complexity that makes managing containers hard, be
 
 The Portainer development team is here to assist you on your container journey; you can engage with them any time through our community-based support channels.
 
-## Knowledge Base and FAQs
+## :fontawesome-solid-question-circle: Knowledge Base and FAQs
 
 As the Portainer community continues to grow, we continue to support the community to the best of our ability.
 
