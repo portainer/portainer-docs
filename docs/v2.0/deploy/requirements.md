@@ -17,7 +17,7 @@ To try and alleviate confusion as to what we test against, we have documented th
 | 1.24.1.                  | July 23, 2020  | 19.03.12       | N/A                          | ARM32, ARM64, x86_64 | Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 & CentOS 7            |
 | Community 2.0            | Aug 31, 2020   | 19.03.12       | 1.17.13 1.18.6 1.18.9 1.19.3 | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 Release 1809 Ubuntu 18.04 & CentOS 7 |
 | Community 2.0.1          | Jan 7, 2021    | 20.10.0        | 1.17.13 1.18.9 1.19.3 1.20.0 | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 release 1809 Ubuntu 18.04 & CentOS 7 |
-| Community 2.1 (latest)   | Feb 2, 2021    | 20.10.2        | 1.20.0                       | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 release 1809 Ubuntu 18.04 & CentOS 7 |
+| Community 2.1.x (latest)   | Feb 2, 2021    | 20.10.2        | 1.20.0                       | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 release 1809 Ubuntu 18.04 & CentOS 7 |
                  
 ## :material-note-text: Notes
 
