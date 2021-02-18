@@ -33,7 +33,7 @@ Template type, valid values are: 1 (container), 2 (Swarm stack) or 3 (Compose st
 
 This field is <b>mandatory.</b>
 
-### type
+### title
 
 Title of the template.
 
@@ -327,7 +327,7 @@ A Swarm stack will be deployed using the equivalent of docker stack deploy where
 
 This field is <b>mandatory</b>.
 
-### type
+### title
 
 Title of the template.
 
