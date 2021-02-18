@@ -55,17 +55,17 @@ Once the deployment is complete you can browse <code>portainer.yourdomain.com</c
 
 ### Deploying in a Docker Swarm scenario
 
-Deploying Portainer in Docker Swarm behind NGINX has similar steps to the Docker Standalone scenario. 
+Deploying Portainer in Docker Swarm behind NGINX has similar steps to the Docker Standalone scenario.
 
-First, you need to create a few networks. One for the agent and the communication with Portainer Server and other to "expose" the Portainer container to the same network that the Reverse Proxy. 
+First, you need to create a few networks. One for the agent and the communication with Portainer Server and other to "expose" the Portainer container to the same network that the Reverse Proxy.
 
-Before deploying, you need to create 2 elements: Networks and volumes. 
+Before deploying, you need to create 2 elements: Networks and volumes.
 
 1. First, create 2 networks for the agent to communicate with Portainer Server and other to "expose" the Portainer container to the same network that as the Reverse Proxy
 
 <pre><code> docker network create -d overlay proxy</code></pre>
 
-<pre><code> docker network create -d agent_network</code></pre>
+<pre><code> docker network create -d overlay agent_network</code></pre>
 
 2. Then create the volume:
 
@@ -123,7 +123,6 @@ services:
       placement:
         constraints: [node.role == manager]
 
-
 networks:
   proxy:
     external: true
@@ -131,9 +130,10 @@ networks:
     external: true
 
 volumes:
-   data:</code></pre>
+   data:
+</code></pre>
 
-4. To setup and start working with this recipe, you need to change the VIRTUAL_HOST value. 
+4. To setup and start working with this recipe, you need to change the VIRTUAL_HOST value.
 
 5. You're now ready to deploy Portainer by executing the following:
 
@@ -154,4 +154,4 @@ WIP
 
 ## :material-note-text: Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=\_blank}
