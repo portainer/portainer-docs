@@ -1,4 +1,4 @@
-# Requirements
+# :fontawesome-solid-clipboard-list: Requirements
 Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine.
 
 By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose a TCP tunnel server over the port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
@@ -8,7 +8,7 @@ Every single release of Portainer goes through an extensive testing process (fun
 
 To try and alleviate confusion as to what we test against, we have documented the configurations that we personally validate as "functional"; any other variant is not tested (this does not mean it wont work, it just means its not tested). 
 
-## Validated Configurations
+## :fontawesome-solid-check-double: Validated Configurations
 
 | Portainer Version     | Release Date | Docker Version | Kubernetes Version    | Architectures | Operating Systems                                                                            |
 |-----------------------|--------------|----------------|-----------------------|---------------|----------------------------------------------------------------------------------------------|
