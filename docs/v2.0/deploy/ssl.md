@@ -1,8 +1,8 @@
-# Secure Portainer using SSL
+# :fontawesome-solid-shield-alt: Secure Portainer using SSL
 
 By default, Portainer’s web interface and API is exposed over HTTP. This is not secure, Portainer recommends enabling SSL, particularly in a production environment.
 
-## Securing Portainer using SSL with Docker
+## :fontawesome-solid-lock: Securing Portainer using SSL with Docker
 
 To do so, you can use the following flags <code>--ssl</code>, <code>--sslcert</code> and <code>--sslkey</code>:
 
@@ -10,7 +10,7 @@ To do so, you can use the following flags <code>--ssl</code>, <code>--sslcert</c
 
 Now, you can navigate to https://$ip-docker-host
 
-## Securing Portainer using SSL with Docker Swarm
+## :fontawesome-solid-lock: Securing Portainer using SSL with Docker Swarm
 
 Securing Portainer on Docker Swarm is fairly simple. The following example takes in to asumption that you have an external overlay network and external secrets. If you do not, simply create them:
 
