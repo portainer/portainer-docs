@@ -19,7 +19,7 @@ Read about the new and enhanced features in our latest releases here.
         * Linux ARM64
         * Linux ARM
 
-        **Minor update to the license server mecanism**
+        **Minor update to the license server mechanism**
         
         The license server mechanism has been updated.
     <br>
