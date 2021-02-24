@@ -3,6 +3,7 @@ google_analytics: ['G-N7CY67ZGSW', 'documentation.portainer.io']
 nav:
     - Home: index.md
     - Quick Start: quickstart.md
+    - Release Notes: releasenotes.md
     - Install Guide:
       - Community Edition:
           - 'Requirements' : 'v2.0/deploy/requirements.md'
