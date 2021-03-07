@@ -45,6 +45,21 @@ That will deploy the newest version of Portainer on your system, using the persi
 Now you can go to http://your-server-address:9000 and login. You should notice that the bottom left corner looks different than it did before. There is no more update nag and the version is no longer shown next to the Portainer logo.
 
  
+#### Upgrading from Version <1.24.1
+
+Upgrades from versions prior to version 1.24.1 require an intermediate upgrade to `portainer/portainer:1.24.1` prior to upgrading to the current release. Similar to the steps above, we stop and remove the container and run the 1.24.1 release of portainer.
+
+```shell
+
+docker stop portainer
+
+docker rm portainer
+
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always --pull=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer:1.24.1
+
+```
+At this point, you are running version 1.24.1 which can be verified by to http://your-server-address:9000, logging in and confirming the version number in the lower left. To complete the upgrade, perform the steps defined in the previous section.
+
 
 ### Agent Only Upgrade
 
