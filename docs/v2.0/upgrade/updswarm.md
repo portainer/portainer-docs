@@ -1,6 +1,6 @@
 # :fontawesome-brands-docker: Upgrade a Docker Swarm Deployment
 ### Docker Swarm
-Steps to upgrade Portainer and or Portainer agent deployed into Dcoker Swarm as a service.
+Steps to upgrade Portainer and or Portainer agent deployed into Docker Swarm as a service.
 
 Run the following on manager node of your docker swarm cluster
 
