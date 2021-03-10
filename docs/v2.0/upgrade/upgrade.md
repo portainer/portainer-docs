@@ -1,3 +1,7 @@
+# Upgrade from CE to Portainer Business
+
+Instructions to go from CE to Portainer Business can be found here.
+
 # Portainer Version Upgrade Path
 
 We have tested and validated Portainer Version Upgrades from 1.24.0 to the latest (2.1.1). Although un-tested, it is possible an upgrade path that has not been validated might work. 
