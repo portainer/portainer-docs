@@ -1,6 +1,6 @@
 # Upgrade from CE to Portainer Business
 
-Instructions to go from CE to Portainer Business can be found here.
+Instructions to go from CE to Portainer Business (including Free Trial Accounts) can be found here.
 
 # Portainer Version Upgrade Path
 
