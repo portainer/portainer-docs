@@ -1,6 +1,7 @@
 # Upgrade from CE to Portainer Business
 
-Instructions to go from CE to Portainer Business (including Free Trial Accounts) can be found here.
+Instructions to go from CE to Portainer Business (including Free Trial Accounts) [can be found here.](../updBE/){: .md-button }
+
 
 # Portainer Version Upgrade Path
 
