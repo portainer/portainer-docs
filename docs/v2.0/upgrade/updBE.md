@@ -6,9 +6,9 @@ Full instructions on how to switch your environment from Portainer CE to Portain
 
 Full steps on how to upgrade to Portainer Business coming soon.
 
-### Hor to Downgrade
+### How to Downgrade
 
-Full steps on how to downgrade from Portainer Business to CE [are found here.](https://documentation.portainer.io/v2.0-be/downgrade/be-to-ce/
+Full steps on how to downgrade from Portainer Business to CE [are found here.](https://documentation.portainer.io/v2.0-be/downgrade/be-to-ce/)
 
 
 ## :material-note-text: Notes
