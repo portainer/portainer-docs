@@ -3,7 +3,7 @@
 Instructions to upgrade from CE to Portainer Business (including Free Trial Accounts) [can be found here.](../updBE/)
 
 
-# Portainer Version Upgrade Path
+# Upgrade a Portainer Version
 
 We have tested and validated Portainer Version Upgrades from 1.24.0 to the latest (2.1.1). Although un-tested, it is possible an upgrade path that has not been validated might work. 
 You are recommended to test any upgrade path, validated or non-validated on a non critical system before applying it to your active production systems.
