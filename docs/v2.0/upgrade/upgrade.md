@@ -1,4 +1,4 @@
-# Upgrade from CE to Portainer Business
+# Switch from CE to Portainer Business
 
 Instructions to upgrade from CE to Portainer Business (including Free Trial Accounts) [can be found here.](../updBE/)
 
