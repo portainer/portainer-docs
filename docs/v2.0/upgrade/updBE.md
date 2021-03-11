@@ -37,7 +37,7 @@ You should notice that the bottom left corner now contains the words "Business E
 ### Switching on Kubernetes
 Upgrade method depends on the original install method used.
 
-## For NodePort
+#### For NodePort
 ```shell
 kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-ee.yaml
 ```
