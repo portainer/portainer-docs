@@ -29,7 +29,7 @@ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always --pull
 
 That will deploy the newest version of Portainer Business on your system.
 
-Now you can go return to Portainer and login (you might need to log out first). When you login for the first time you will be prompted to enter your License Key. Copy this from the email you received and paste it into the dialogue box.
+Now you can return to Portainer and login (you might need to log out first). When you login for the first time you will be prompted to enter your License Key. Copy this from the email you received and paste it into the dialogue box.
 
 You should notice that the bottom left corner now contains the words "Business Edition"
 
