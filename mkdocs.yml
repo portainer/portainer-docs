@@ -257,6 +257,7 @@ nav:
           - 'Manage a Registry' : 'v2.0-be/registries/manage.md'        
     - Upgrading Portainer:
       - 'Upgrade Path': 'v2.0/upgrade/upgrade.md'
+      - 'Upgrade CE to Business': 'v2.0/upgrade/updBE.md'
       - 'Upgrading on Docker': 'v2.0/upgrade/upddocker.md'
       - 'Upgrading on DockerSwarm': 'v2.0/upgrade/updswarm.md'
       - 'Upgrading on Kubernetes': 'v2.0/upgrade/updk8s.md'
