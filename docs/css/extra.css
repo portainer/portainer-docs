@@ -17,7 +17,6 @@
 
 .md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
     display: block;
-    width: rem;
     height: 1.9rem;
     fill: currentColor;
     margin-top: -8px;
