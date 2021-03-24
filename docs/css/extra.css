@@ -17,19 +17,12 @@
 
 .md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
     display: block;
-    width: rem;
+    width: 1.2rem;
     height: 1.2rem;
     fill: currentColor;
     margin-top: -8px;
 }
 
-.md-header__button.md-logo img, .md-header__button.md-logo svg {
-    display: block;
-    width: rem;
-    height: 1.2rem;
-    fill: currentColor;
-    margin-top: -8px; 
-}
 
 .md-header-nav__button.md-logo {
     margin: .2rem;
@@ -197,4 +190,4 @@ color: #333333;
 .tabbed-set input:nth-child(n+1):checked + label + .tabbed-content {
     display: block;
 }
-**?
+**/
