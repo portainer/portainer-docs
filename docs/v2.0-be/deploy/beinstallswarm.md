@@ -45,7 +45,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         ```
 
 
-=== "Docker Swarm on Windows WSL"
+=== "Docker Swarm on Windows WSL / Docker Desktop"
     !!! Abstract ""    
         Before you can deploy Portainer in Docker Swarm running in Windows, you need to install WSL. [Read this guide to know more about WSL/WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10){target=_blank}
 

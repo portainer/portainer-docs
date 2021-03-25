@@ -171,7 +171,7 @@ Alternatively, if installing using our helm chart you can add the following opti
             kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
             ```
 
-=== "Deploy on Windows WSL"
+=== "Deploy on Windows WSL / Docker Desktop"
     !!! Abstract ""
         You can deploy Portainer in a Kubernetes environment in Windows using Docker Desktop. 
         
