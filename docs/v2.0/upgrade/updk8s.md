@@ -3,7 +3,7 @@
 Steps to upgrade Portainer and or Portainer agent deployed into Kubernetes. Upgrade method depends on the original install method used.
 
 ## Using Helm
-Add Portianer helm repo running the following, ignore any warning about the repo being there already.
+Add Portainer helm repo running the following, ignore any warning about the repo being there already.
 ```shell
 helm repo add portainer https://portainer.github.io/k8s/
 ```

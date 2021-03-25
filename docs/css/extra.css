@@ -17,10 +17,18 @@
 
 .md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
     display: block;
-    width: rem;
-    height: 1.9rem;
+    width: 4rem;
+    height: 1.6rem;
     fill: currentColor;
     margin-top: -8px;
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    display: block;
+    width: 4rem;
+    height: 1.6rem;
+    fill: currentColor;
+    margin-top: -8px;  
 }
 
 .md-header-nav__button.md-logo {
@@ -148,7 +156,7 @@ color: #e86a25;
 .md-grid {
     max-width: 1440px;
   }
-
+/**
 .tabbed-set {
 display: flex;
 position: relative;
@@ -189,3 +197,4 @@ color: #333333;
 .tabbed-set input:nth-child(n+1):checked + label + .tabbed-content {
     display: block;
 }
+**/

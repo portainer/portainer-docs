@@ -44,7 +44,7 @@ This query will create an endpoint called <b>test-local</b> and will use the Doc
 
 <pre><code> http --form POST :9000/api/endpoints \
 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImV4cCI6MTQ5OTM3NjE1NH0.NJ6vE8FY1WG6jsRQzfMqeatJ4vh2TWAeeYfDhP71YEE" \
-Name="test-local" EndpointType=1</code></pre>
+Name="test-local" EndpointCreationType=1</code></pre>
 
 The response is a JSON object representing the endpoint:
 
@@ -75,7 +75,7 @@ This query will create an endpoint called <b>test-remote</b> and will communicat
 
 <pre><code> http --form POST :9000/api/endpoints \
 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImV4cCI6MTQ5OTM3NjE1NH0.NJ6vE8FY1WG6jsRQzfMqeatJ4vh2TWAeeYfDhP71YEE" \
-Name="test-remote" URL="tcp://10.0.7.10:2375" EndpointType=1</code></pre>
+Name="test-remote" URL="tcp://10.0.7.10:2375" EndpointCreationType=1</code></pre>
 
 The response is a JSON object representing the endpoint:
 
@@ -106,7 +106,7 @@ This query will create an endpoint called <b>test-remote-tls</b> and will commun
 
 <pre><code> http --form POST :9000/api/endpoints \
 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsImV4cCI6MTQ5OTM3NjE1NH0.NJ6vE8FY1WG6jsRQzfMqeatJ4vh2TWAeeYfDhP71YEE" \
-Name="test-remote" URL="tcp://10.0.7.10:2376" EndpointType=1 TLS="true" TLSCACertFile@/path/to/ca.pem TLSCertFile@/path/to/cert.pem TLSKeyFile@/path/to/key.pem</code></pre>
+Name="test-remote" URL="tcp://10.0.7.10:2376" EndpointCreationType=1 TLS="true" TLSCACertFile@/path/to/ca.pem TLSCertFile@/path/to/cert.pem TLSKeyFile@/path/to/key.pem</code></pre>
 
 The response is a JSON object representing the endpoint:
 

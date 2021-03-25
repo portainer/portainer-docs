@@ -31,7 +31,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.0.0
         ```
 
-=== "Docker on Windows WSL"
+=== "Docker on Windows WSL / Docker Desktop"
     !!! Abstract ""    
         Before you can deploy Portainer in Docker Standalone running in Windows, you need to install WSL. [Read this guide to know more about WSL/WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10){target=_blank}
 
