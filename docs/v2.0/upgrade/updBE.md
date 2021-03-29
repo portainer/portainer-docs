@@ -4,7 +4,7 @@ Full instructions on how to switch your environment from Portainer CE to Portain
 
 === ":fontawesome-brands-docker: Switching on Docker"
     !!! Abstract ""
-        Assuming you've used our recommended deployment scripts: when upgrading to the latest version of Portainer, use the following commands:
+        Assuming you've used our recommended deployment scripts: when upgrading to the Business version of Portainer, use the following commands:
 
         ```shell
 
@@ -36,25 +36,47 @@ Full instructions on how to switch your environment from Portainer CE to Portain
 
 === ":fontawesome-brands-docker: Switching on Docker Swarm"
     !!! Abstract ""
-        Assuming you've used our recommended deployment scripts: when upgrading to the latest version of Portainer, use the following commands:
+        Assuming you've used our recommended deployment scripts: when upgrading to the Business version of Portainer, use the following commands:
+        ```shell
+        docker service update --image portainer/portainer-ee --force portainer_portainer
+        ```
 
+        That will deploy the newest version of Portainer Business on your Swarm Cluster.
+
+        Now you can return to Portainer and login (you might need to log out first). When you login for the first time you will be prompted to enter your License Key. Copy this from the email you received and paste it into the dialogue box.
+
+        You should notice that the bottom left corner now contains the words "Business Edition"
 
 === ":material-kubernetes: Switching on Kubernetes"
     !!! Abstract ""
-        Upgrade method depends on the original install method used.
+        Upgrade method depends on the original install method used. Choose the original deployment method tab used for instructions.
 
-        === "NodePort"
+        === "Helm Charts"
+            Run the following command to update helm repo
             ```shell
-            kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-ee.yaml
+            helm repo update
             ```
 
-        === "LoadBalancer"
+            Run the following command to deploy Portainer Business using all the previous settings used in Helm deployment
             ```shell
-            kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml
+            helm upgrade -n portainer portainer portainer/portainer --reuse-values --set enterpriseEdition.enabled=true
             ```
 
+        === "YAML Manifests"
+            Choose the right YML Manifest based on your original deployment
 
-        That will deploy the newest version of Portainer Business on your system.
+            === "NodePort"
+                ```shell
+                kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-ee.yaml
+                ```
+
+            === "LoadBalancer"
+                ```shell
+                kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb-ee.yaml
+                ```
+
+
+        That will deploy the newest version of Portainer Business on your Kubernetes Cluster.
 
         Now you can go return to Portainer and login (you might need to log out first). When you login for the first time you will be prompted to enter your License Key. Copy this from the email you received and paste it into the dialogue box.
 
