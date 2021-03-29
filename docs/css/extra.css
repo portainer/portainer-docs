@@ -156,7 +156,7 @@ color: #e86a25;
 .md-grid {
     max-width: 1440px;
   }
-/**
+
 .tabbed-set {
 display: flex;
 position: relative;
@@ -197,4 +197,3 @@ color: #333333;
 .tabbed-set input:nth-child(n+1):checked + label + .tabbed-content {
     display: block;
 }
-**/
