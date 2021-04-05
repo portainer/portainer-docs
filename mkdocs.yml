@@ -255,6 +255,7 @@ nav:
         - Registries:
           - 'Browse a Registry' : 'v2.0-be/registries/browse.md'
           - 'Manage a Registry' : 'v2.0-be/registries/manage.md'        
+    - API: api.md
     - Upgrading Portainer:
       - 'Upgrade Path': 'v2.0/upgrade/upgrade.md'
       - 'Upgrade CE to Business': 'v2.0/upgrade/updBE.md'
