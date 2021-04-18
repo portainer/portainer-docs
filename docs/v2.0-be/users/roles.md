@@ -1,8 +1,11 @@
 
 # :fontawesome-solid-users-cog: Roles
-<div class="video-wrapper">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/6LjWqlHP2ME" frameborder="0" allowfullscreen></iframe>
+
+<div class="container">
+<iframe src="//www.youtube.com/embed/6LjWqlHP2ME" 
+frameborder="0" allowfullscreen class="video"></iframe>
 </div>
+
 
 ## Description of Roles
 

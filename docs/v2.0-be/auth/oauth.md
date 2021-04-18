@@ -4,6 +4,11 @@ Portainer Business Edition can be connected to several OAuth providers in an eas
 
 ### Microsoft OAuth Provider
 
+<div class="container">
+<iframe src="//www.youtube.com/embed/Wlpnq5SF0dw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
 To start to configure Microsoft OAuth Provider, once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>OAuth</b> option and then, do select <b>Microsoft</b>.
 
 ![oauth](assets/microsoft1.png)
