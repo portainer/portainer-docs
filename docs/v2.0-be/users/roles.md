@@ -1,4 +1,10 @@
-# Description of Roles
+
+# :fontawesome-solid-users-cog: Roles
+<div class="video-wrapper">
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/6LjWqlHP2ME" frameborder="0" allowfullscreen></iframe>
+</div>
+
+## Description of Roles
 
 Portainer Business come with Role-Based Access Control features that refines the access privileges available natively within Portainer. The RBAC feature allows you to create fine-grained access for users across all resources and all endpoints defined within Portainer.
 
@@ -10,7 +16,7 @@ Portainer Business come with Role-Based Access Control features that refines the
 * To assign privileges, you pair a user or team with a role and associate that pairing with an endpoint or endpoint group.
 * A single user or team can have different roles for different endpoints in the Portainer inventory.
 
-## Describing Roles
+## Built-in Roles
 
 There are four types of roles:
 
@@ -24,6 +30,7 @@ There are four types of roles:
 
 * The Administrator role sits outside of these four roles, and effectively acts as a “Global Admin”. A user assigned this role has complete control over Portainer settings, and all resources on every endpoint under Portainer control.
 
-# Notes
+<br>
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}
