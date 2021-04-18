@@ -1,5 +1,16 @@
 # LDAP/AD Authentication
 
+<div class="container">
+<iframe src="//www.youtube.com/embed/Z2N7HnKypmA" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<br>
+<div class="container">
+<iframe src="//www.youtube.com/embed/l2pOP9syo7g" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+<br>
+
 Portainer can be configured to accept Lightweight Directory Access Protocol (LDAP) authentication if your organization has implemented LDAP or Active Directory authentication. When users attempt to log into Portainer, the application will authenticate them against your LDAP directory or Active Directory. If authentication is successful, the user is allowed to log into Portainer.
 
 In order to configure Portainer LDAP authentication, you first need to add a user to your directory service for the purpose of authenticating from Portainer to read the LDAP. The user should be a service account that needs read-only access to LDAP/Active Directory.

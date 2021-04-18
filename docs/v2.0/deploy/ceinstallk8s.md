@@ -1,11 +1,11 @@
----
-hide: toc
----
 
 # :material-kubernetes: Deploying Portainer CE in Kubernetes
-<div class="video-wrapper">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/wxXi_bmX_Zw" frameborder="0" allowfullscreen></iframe>
+
+<div class="container">
+<iframe src="//www.youtube.com/embed/wxXi_bmX_Zw" 
+frameborder="0" allowfullscreen class="video"></iframe>
 </div>
+
 Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
 
 
