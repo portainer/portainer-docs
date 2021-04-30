@@ -5,7 +5,7 @@ Portainer Business can be connected to Github OAuth provider in an easy way with
 
 ## :fontawesome-solid-clipboard-list: Requirements
 
-You will need to have the following info handy before configuring OAuth using Google Provider.
+You will need to have the following info handy before configuring OAuth using Github Provider.
 
 * <b>Client ID</b>: Public identifier of the OAuth Application.
 * <b>Client Secret</b>: The secret of this client.
