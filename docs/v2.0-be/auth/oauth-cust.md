@@ -4,7 +4,7 @@ Portainer Business Edition can be connected to several OAuth providers.
 
 
 ## :fontawesome-solid-clipboard-list: Requirements
-You will need to have the following info handy before configuring OAuth using Google Provider.
+You will need to have the following info handy before configuring OAuth.
 
 * <b>Client ID</b>: This is the public identifier of the OAuth application.
 * <b>Client Secret</b>: Here, you need fill with the token access to the OAuth Application.
@@ -15,7 +15,7 @@ You will need to have the following info handy before configuring OAuth using Go
 * <b>User Identifier</b>: Identifier that will be used by Portainer to create an account for the authenticated user. Retrieved from the resource server specified via the Resource URL field.
 * <b>Scopes</b>: Required by the OAuth provider to retrieve information about the authenticated user. Refer to your OAuth provider documentation for more information about this.
 
-We will use KeyCloak as an example Provider and steps to obtain these:
+We will use <b>KeyCloak</b> as an example Provider and steps to obtain these:
 
 1. Login to KeyCloak Administration Console as an Admin
     ![KeyCloak](assets/oauthkeycl1.png)
