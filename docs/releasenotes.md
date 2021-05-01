@@ -3,8 +3,7 @@
 Read about the new and enhanced features in our latest releases here.
 === "Portainer Business"
     ???+ Tip "Release 2.4"
-        #### Fixes
-        **Fix an issue preventing a user from creating Kuberneres resources if they have a `#!Ruby @` character in their username**
+        #### Kubernetes
 
         * Linux ARM64
         * Linux ARM
