@@ -9,6 +9,62 @@ Read about the new and enhanced features in our latest releases here.
         * Fixed issue of version not being shown correctly after update
         * Support starting Portainer without having to specify any endpoint
 
+        #### User Management
+
+        * Automatically lowercase username when authenticating users
+        * Update the authentication UX to put an emphasis on OAuth when OAuth is enabled
+
+        #### ACI
+
+        * Introduced RBAC to ACI
+        * Introduced UAC to ACI
+
+        #### Activity Logging
+
+        * Introduced user authentication activity logging
+        * Introduced user activity logging
+
+        #### RBAC
+
+        * Introduced new RBAC “Operator” Role
+        * Fixed issue with user in 2 team with mix of helpdesk & endpoint admin resulting in the user having permissions of endpoint admin
+
+        #### Registries
+
+        * Fixed issue causing Portainer to forget the password associated to a registry after an update
+        * Fixed issue preventing the registry manager feature to work properly with a ProGet registry
+        * Improved description for advanced mode usage with private registries
+
+        #### Stacks
+    
+        * Introduced support for creating stacks with the same name across different endpoints
+        * Introduced extra stack information: creation, last update time and user who created the stack
+        * Minor UX change for the start/stop stack action
+        * Fixed issue with ability to use private registries with Standalone stacks
+        * Fixed issue showing editor tab on limited stacks when it should not
+        * Fixed issue when editing a stack, hitting backspace or delete keys with contents of web editor selected hides the entire editor UI element
+        * Fixed issue with stack create via API with a regular user account are incorrectly marked as administrator only
+        * Fixed issue of error being displayed when creating a stack on docker standalone despite the stack is created
+        * Fixed issue of stacks being created via API incorrectly marked private with no owner
+
+        #### Minor Changes
+
+        * Removed the new version check  
+        * Changed the license server errors to be a silent fail for offline environments
+        * Added JS source map for Portainer UI
+
+        #### Docker
+
+        * Introduced support for Compose > v2 when deploying a stack on a Docker standalone environment
+        * Introduced the ability to download log file from Docker container/service views
+        * Display labels in Image Details
+        * Clarify the description of the restrict external access to the network property when creating a network
+
+        #### Swarm
+
+        * Introduced validation to prevent adding a mount with nothing filled to and exiting service
+        * Fixed issue in service creation, switching to bind mode from volume mode with a volume selected fills the host field with {object Object}
+
         #### Kubernetes
 
         * Linux ARM64
