@@ -3,6 +3,12 @@
 Read about the new and enhanced features in our latest releases here.
 === "Portainer Business"
     ???+ Tip "Release 2.4"
+        #### Portainer
+        
+        * Introduced the ability to backup / restore Portainer
+        * Fixed issue of version not being shown correctly after update
+        * Support starting Portainer without having to specify any endpoint
+
         #### Kubernetes
 
         * Linux ARM64
