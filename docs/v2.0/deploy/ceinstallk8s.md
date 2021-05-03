@@ -81,10 +81,11 @@ Alternatively, if installing using our helm chart you can add the following opti
                 
                 ```shell
                 helm install --create-namespace -n portainer portainer portainer/portainer \
-                -- set service.type=ClusterIP \
-                -- set ingress.enabled=true \
-                -- set ingress.annotations='kubernetes.io/ingress.class: nginx' \
-                -- set ingress.hosts.host=portainer.example.io
+                --set service.type=ClusterIP \
+                --set ingress.enabled=true \
+                --set ingress.annotations='kubernetes.io/ingress.class: nginx' \
+                --set ingress.hosts[0].host=portainer.example.io \
+                --set ingress.hosts[0].paths[0].path=/
                 ```
         
         === "LoadBalancer"
