@@ -82,9 +82,11 @@ Alternatively, if installing using our helm chart you can add the following opti
                 helm install --create-namespace -n portainer portainer portainer/portainer \
                 --set enterpriseEdition.enabled=true \
                 --set service.type=ClusterIP \
-                -- set ingress.enabled=true \
-                -- set ingress.annotations='kubernetes.io/ingress.class: nginx' \
-                -- set ingress.hosts.host=portainer.example.io
+                --set ingress.enabled=true \
+                --set ingress.annotations='kubernetes.io/ingress.class: nginx' \
+                --set ingress.hosts[0].host=portainer.example.io \
+                --set ingress.hosts[0].paths[0].path=/
+                ```
         
         === "LoadBalancer"
             Using the following command, Portainer will be available at an assigned LoadBalancer IP @ port 9000.
