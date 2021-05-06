@@ -293,6 +293,8 @@ nav:
 
 extra_css:
     - css/extra.css
+extra_javascript:
+  - javascripts/extra.js
 theme:
   font:
     text: Raleway
