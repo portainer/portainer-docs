@@ -1,5 +1,7 @@
 site_name: Documentation
-google_analytics: ['G-N7CY67ZGSW', 'documentation.portainer.io']
+google_analytics:
+  - UA-84944922-2
+  - auto
 nav:
     - Home: index.md
     - Quick Start: quickstart.md
@@ -293,8 +295,7 @@ nav:
 
 extra_css:
     - css/extra.css
-extra_javascript:
-  - javascripts/extra.js
+    
 theme:
   font:
     text: Raleway
