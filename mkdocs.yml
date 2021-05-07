@@ -1,6 +1,6 @@
 site_name: Documentation
 google_analytics:
-  - UA-84944922-2
+  - UA-84944922-5
   - auto
 nav:
     - Home: index.md
