@@ -157,6 +157,9 @@ nav:
           - 'Secrets':
             - 'Add a new secret' : 'v2.0/secrets/add.md'
             - 'Delete secrets' : 'v2.0/secrets/delete.md'
+          - 'Access Control':
+            - 'Resources Deployed through Portainer': 'v2.0/access/inportainer.md'
+            - 'Resources Deployed outside of Portainer': 'v2.0/access/outofportainer.md'
         - Kubernetes:
           - 'Applications':
             - 'Deploy a new application' : 'v2.0/kubernetes/applications/create.md'
@@ -231,6 +234,9 @@ nav:
           - 'Secrets':
             - 'Add a new secret' : 'v2.0-be/secrets/add.md'
             - 'Delete secrets' : 'v2.0-be/secrets/delete.md'
+          - 'Access Control':
+            - 'Resources Deployed through Portainer': 'v2.0-be/access/inportainer.md'
+            - 'Resources Deployed outside of Portainer': 'v2.0-be/access/outofportainer.md'
         - Kubernetes:
           - 'Applications':
             - 'Deploy a new application' : 'v2.0-be/kubernetes/applications/create.md'
