@@ -53,6 +53,9 @@ nav:
           - 'Enable Edge Computing' : 'v2.0/settings/edge.md'
           - 'App Templates' : 'v2.0/settings/apps.md'
           - 'Enable Host Management Features' : 'v2.0/settings/host_management.md'
+        - Backup and Restore:
+          - 'Backup': 'v2.0/backup/backup.md'
+          - 'Restore': 'v2.0/backup/restore.md'
         - Advanced Deployments:
           - 'Using Portainer with Reverse Proxies':
               - 'Traefik' : 'v2.0/ad/traefik/rp-traefik.md'
@@ -102,6 +105,9 @@ nav:
           - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
           - 'App Templates' : 'v2.0-be/settings/apps.md'
           - 'Enable Host Management Features' : 'v2.0-be/settings/host_management.md'
+        - Backup and Restore:
+          - 'Backup': 'v2.0-be/backup/backup.md'
+          - 'Restore': 'v2.0-be/backup/restore.md'          
         - Downgrading:
           - 'Downgrade from BE to CE': 'v2.0-be/downgrade/be-to-ce.md'
         - Advanced Deployments:
