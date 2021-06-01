@@ -1,5 +1,8 @@
 # :fontawesome-brands-docker: Upgrade a Standalone Docker Deployment
 
+!!! Warning "Agent Versions"
+    Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
+
 ### Docker Standalone
 
 Assuming you've used our recommended deployment scripts: when upgrading to the latest version of Portainer, use the following commands:

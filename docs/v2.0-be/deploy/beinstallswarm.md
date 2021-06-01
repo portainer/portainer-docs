@@ -11,6 +11,10 @@ By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose 
 
 To see the requirements, please, visit the page of [requirements](/v2.0-be/deploy/requirements/).
 
+!!! Warning "Agent Versions"
+    Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
+
+
 ## :fontawesome-solid-paper-plane: Portainer Deployment
 
 Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see Portainer and agent scenario below):
@@ -35,7 +39,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         First create the network:
 
         ```shell
-        docker network create portainer_agent_network
+        docker network create --driver overlay --attachable portainer_agent_network
         ```
 
         The following step to deploy the Agent:
@@ -83,6 +87,12 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         ```
 
         ### Portainer Agent Only Deployment
+        First create the network:
+
+        ```shell
+        docker network create --driver overlay --attachable portainer_agent_network
+        ```
+        
         Deploy Portainer Agent on a Swarm Cluster as a Swarm Service, run this command in a manager node in the cluster.
 
         ```shell

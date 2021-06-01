@@ -11,6 +11,10 @@ By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose 
 
 To see the requirements, please, visit the page of [requirements](/v2.0-be/deploy/requirements/).
 
+!!! Warning "Agent Versions"
+    Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
+
+
 ## :fontawesome-solid-paper-plane: Portainer Deployment
 ---
 ### :material-list-status: Pre-Req Note:
