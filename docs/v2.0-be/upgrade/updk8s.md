@@ -1,5 +1,9 @@
 # :material-kubernetes: Upgrade Kubernetes Deployment
 
+!!! Warning "Agent Versions"
+    Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
+
+
 Steps to upgrade Portainer and or Portainer agent deployed into Kubernetes. Upgrade method depends on the original install method used.
 
 ## Using Helm
