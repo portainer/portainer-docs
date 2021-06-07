@@ -167,14 +167,14 @@ Alternatively, if installing using our helm chart you can add the following opti
             Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on port 30778.
 
             ```shell
-            kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
+            kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport-ee.yaml
             ```
 
         === "LoadBalancer"
             Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on LoadBalancer assigned IP @ port 9001
 
             ```shell
-            kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
+            kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb-ee.yaml
             ```
 
 === "Deploy on Windows WSL / Docker Desktop"
@@ -227,14 +227,14 @@ Alternatively, if installing using our helm chart you can add the following opti
             Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on port 30778.
 
             ```shell
-            kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
+            kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport-ee.yaml
             ```
 
         === "LoadBalancer"
             Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on LoadBalancer assigned IP @ port 9001
 
             ```shell
-            kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
+            kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb-ee.yaml
             ```
 
 

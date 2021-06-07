@@ -21,9 +21,11 @@ Portainer Business come with Role-Based Access Control features that refines the
 
 ## Built-in Roles
 
-There are four types of roles:
+There are several types of roles:
 
 * Endpoint Administrator: has complete control over the resources deployed within a given endpoint, but is not able to make any changes to the infrastructure that underpins an endpoint (i.e. no host management), nor are they able to make any changes to Portainer internal settings.
+
+* Operator: has operational control over the resources deployed within a given endpoint. Operator is able to Update/Re-deploy/Start/Stop Containers/Services, check logs and console into containers but is not able to create any resources.
 
 * Helpdesk: has read-only access over the resources deployed within a given endpoint but is not able to make any changes to any resource, nor open a console to a container, or make changes to a container’s volumes.
 
