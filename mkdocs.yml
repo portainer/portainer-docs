@@ -1,4 +1,6 @@
 site_name: Documentation
+site_url: https://documentation.portainer.io/
+use_directory_urls: true
 google_analytics:
   - UA-84944922-5
   - auto
