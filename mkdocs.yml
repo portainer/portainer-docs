@@ -1,9 +1,9 @@
 site_name: Documentation
 site_url: https://documentation.portainer.io/
 use_directory_urls: true
-google_analytics:
-  - UA-84944922-5
-  - auto
+# google_analytics:
+#   - UA-84944922-5
+#   - auto
 nav:
     - Home: index.md
     - Quick Start: quickstart.md
@@ -348,6 +348,9 @@ plugins:
             'v2.0-be/deploy/windowsserver.md': 'quickstart.md'
 
 extra:
+  analytics:
+    provider: google
+    property: G-PT7RWG2W49
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/portainerio
