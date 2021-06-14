@@ -348,6 +348,9 @@ plugins:
             'v2.0-be/deploy/windowsserver.md': 'quickstart.md'
 
 extra:
+  analytics:
+    provider: google
+    property: G-PT7RWG2W49
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/portainerio
