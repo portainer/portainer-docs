@@ -2,14 +2,7 @@
 
 Portainer exposes an HTTP API that you can use to automate everything you do via the Portainer UI. You may also use Portainer as a gateway (HTTP queries against the Portainer API) to the underlying Docker/Kubernetes API.
 
-!!! Note ":material-api: "
-  The API documentation is available on [Swaggerhub](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.5.1){target=_blank}
-
-
-<!-- and you can also find some examples
-[here](https://gist.github.com/deviantony/77026d402366b4b43fa5918d41bc42f8){target=_blank}. 
-<script src="https://gist.github.com/deviantony/77026d402366b4b43fa5918d41bc42f8.js"></script>
--->
+!!! Note "API documentation is available on [Swaggerhub](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.5.1){target=_blank}"
 
 ## :octicons-code-review-16: Examples
 
