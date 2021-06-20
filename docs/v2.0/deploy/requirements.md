@@ -10,7 +10,7 @@ To try and alleviate confusion as to what we test against, we have documented th
 
 ## :fontawesome-solid-check-double: Validated Configurations
 
-| Portainer Version        | Release Date   | Docker Version | Kubernetes Version           | Architectures       | 
+| Portainer Version        | Release Date   | Docker Version | Kubernetes* Version           | Architectures       | 
 |--------------------|--------------|----------------|--------------------|---------------|
 | Community 2.5.1 (latest) | May 18, 2021   | 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
 | Community 2.5.           | May 18, 2021   | 20.10.5        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
@@ -21,6 +21,8 @@ To try and alleviate confusion as to what we test against, we have documented th
 | 1.24.0                   | June 2, 2020   | 19.03.10       | N/A                          | ARM32, ARM64, x86_64 |
 | 1.23.2                   | March 25, 2020 | 19.03.6        | N/A                          | ARM32, ARM64, x86_64 |
                  
+*RBAC needs to be enabled on Kubernetes for Portainer Access Control
+
 ## :material-note-text: Notes
 
 If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.

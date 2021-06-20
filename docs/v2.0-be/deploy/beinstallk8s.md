@@ -14,6 +14,8 @@ To see the requirements, please, visit the page of [requirements](/v2.0-be/deplo
 !!! Warning "Agent Versions"
     Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
 
+!!! Warning "Access Control & RBAC"
+    Kubernetres RBAC needs to enabled and working for Access Control to work properly in Portainer.
 
 ## :fontawesome-solid-paper-plane: Portainer Deployment
 ---
