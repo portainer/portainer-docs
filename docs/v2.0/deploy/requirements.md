@@ -10,14 +10,16 @@ To try and alleviate confusion as to what we test against, we have documented th
 
 ## :fontawesome-solid-check-double: Validated Configurations
 
-| Portainer Version        | Release Date   | Docker Version | Kubernetes Version           | Architectures        | Operating Systems                                                                                        |
-|--------------------------|----------------|----------------|------------------------------|----------------------|----------------------------------------------------------------------------------------------------------|
-| 1.23.2                   | March 25, 2020 | 19.03.6        | N/A                          | ARM32, ARM64, x86_64 | Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 & CentOS7             |
-| 1.24.0                   | June 2, 2020   | 19.03.10       | N/A                          | ARM32, ARM64, x86_64 | Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 & CentOS7             |
-| 1.24.1.                  | July 23, 2020  | 19.03.12       | N/A                          | ARM32, ARM64, x86_64 | Windows 10 Windows Containers, WSL1 Windows Server 2019, Release 1809 Ubuntu 18.04 & CentOS 7            |
-| Community 2.0            | Aug 31, 2020   | 19.03.12       | 1.17.13 1.18.6 1.18.9 1.19.3 | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 Release 1809 Ubuntu 18.04 |
-| Community 2.0.1          | Jan 7, 2021    | 20.10.0        | 1.17.13 1.18.9 1.19.3 1.20.0 | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 release 1809 Ubuntu 18.04 |
-| Community 2.1.x (latest)   | Feb 2, 2021    | 20.10.2        | 1.20.0                       | ARM64, x86_64        | Windows 10 WSL2 "Docker Desktop Default Distro" Windows Server 2019 release 1809 Ubuntu 18.04 |
+| Portainer Version        | Release Date   | Docker Version | Kubernetes Version           | Architectures       | 
+|--------------------|--------------|----------------|--------------------|---------------|
+| Community 2.5.1 (latest) | May 18, 2021   | 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
+| Community 2.5.           | May 18, 2021   | 20.10.5        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
+| Community 2.1.x          | Feb 2, 2021    | 20.10.2        | 1.20.0                       | ARM64, x86_64        |
+| Community 2.0.1          | Jan 7, 2021    | 20.10.0        | 1.17.13 1.18.9 1.19.3 1.20.0 | ARM64, x86_64        |
+| Community 2.0            | Aug 31, 2020   | 19.03.12       | 1.17.13 1.18.6 1.18.9 1.19.3 | ARM64, x86_64        |
+| 1.24.1.                  | July 23, 2020  | 19.03.12       | N/A                          | ARM32, ARM64, x86_64 |
+| 1.24.0                   | June 2, 2020   | 19.03.10       | N/A                          | ARM32, ARM64, x86_64 |
+| 1.23.2                   | March 25, 2020 | 19.03.6        | N/A                          | ARM32, ARM64, x86_64 |
                  
 ## :material-note-text: Notes
 

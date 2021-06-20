@@ -1,5 +1,9 @@
 site_name: Documentation
-google_analytics: ['G-N7CY67ZGSW', 'documentation.portainer.io']
+site_url: https://documentation.portainer.io/
+use_directory_urls: true
+google_analytics:
+  - UA-84944922-5
+  - auto
 nav:
     - Home: index.md
     - Quick Start: quickstart.md
@@ -51,6 +55,9 @@ nav:
           - 'Enable Edge Computing' : 'v2.0/settings/edge.md'
           - 'App Templates' : 'v2.0/settings/apps.md'
           - 'Enable Host Management Features' : 'v2.0/settings/host_management.md'
+        - Backup and Restore:
+          - 'Backup': 'v2.0/backup/backup.md'
+          - 'Restore': 'v2.0/backup/restore.md'
         - Advanced Deployments:
           - 'Using Portainer with Reverse Proxies':
               - 'Traefik' : 'v2.0/ad/traefik/rp-traefik.md'
@@ -100,6 +107,9 @@ nav:
           - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
           - 'App Templates' : 'v2.0-be/settings/apps.md'
           - 'Enable Host Management Features' : 'v2.0-be/settings/host_management.md'
+        - Backup and Restore:
+          - 'Backup': 'v2.0-be/backup/backup.md'
+          - 'Restore': 'v2.0-be/backup/restore.md'          
         - Downgrading:
           - 'Downgrade from BE to CE': 'v2.0-be/downgrade/be-to-ce.md'
         - Advanced Deployments:
@@ -155,6 +165,9 @@ nav:
           - 'Secrets':
             - 'Add a new secret' : 'v2.0/secrets/add.md'
             - 'Delete secrets' : 'v2.0/secrets/delete.md'
+          - 'Access Control':
+            - 'Resources Deployed through Portainer': 'v2.0/access/inportainer.md'
+            - 'Resources Deployed outside of Portainer': 'v2.0/access/outofportainer.md'
         - Kubernetes:
           - 'Applications':
             - 'Deploy a new application' : 'v2.0/kubernetes/applications/create.md'
@@ -229,6 +242,9 @@ nav:
           - 'Secrets':
             - 'Add a new secret' : 'v2.0-be/secrets/add.md'
             - 'Delete secrets' : 'v2.0-be/secrets/delete.md'
+          - 'Access Control':
+            - 'Resources Deployed through Portainer': 'v2.0-be/access/inportainer.md'
+            - 'Resources Deployed outside of Portainer': 'v2.0-be/access/outofportainer.md'
         - Kubernetes:
           - 'Applications':
             - 'Deploy a new application' : 'v2.0-be/kubernetes/applications/create.md'
@@ -293,6 +309,7 @@ nav:
 
 extra_css:
     - css/extra.css
+    
 theme:
   font:
     text: Raleway
@@ -331,6 +348,9 @@ plugins:
             'v2.0-be/deploy/windowsserver.md': 'quickstart.md'
 
 extra:
+  analytics:
+    provider: google
+    property: G-PT7RWG2W49
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/portainerio

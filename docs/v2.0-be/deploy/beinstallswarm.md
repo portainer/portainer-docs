@@ -11,6 +11,10 @@ By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose 
 
 To see the requirements, please, visit the page of [requirements](/v2.0-be/deploy/requirements/).
 
+!!! Warning "Agent Versions"
+    Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
+
+
 ## :fontawesome-solid-paper-plane: Portainer Deployment
 
 Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see Portainer and agent scenario below):
@@ -35,13 +39,13 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         First create the network:
 
         ```shell
-        docker network create portainer_agent_network
+        docker network create --driver overlay --attachable portainer_agent_network
         ```
 
         The following step to deploy the Agent:
 
         ```shell
-         docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes --mount type=bind,src=/,dst=/host portainer/agent:2.0.0
+         docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes --mount type=bind,src=/,dst=/host portainer/agent:2.4.0
         ```
 
 
@@ -83,11 +87,17 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         ```
 
         ### Portainer Agent Only Deployment
+        First create the network:
+
+        ```shell
+        docker network create --driver overlay --attachable portainer_agent_network
+        ```
+        
         Deploy Portainer Agent on a Swarm Cluster as a Swarm Service, run this command in a manager node in the cluster.
 
         ```shell
          docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind
-        src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes –-mount type=bind,src=/,dst=/host portainer/agent:2.0.0
+        src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes –-mount type=bind,src=/,dst=/host portainer/agent:2.4.0
         ```
 
 === "Docker Swarm on Windows Container Service"

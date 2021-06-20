@@ -8,10 +8,14 @@ Choose a Portainer Edition that you would like to Upgrade
 
 === "Portainer CE"
     !!! Abstract ""
-        We have tested and validated Portainer CE Version Upgrades from 1.24.0 to the latest (2.1.1). Although un-tested, it is possible an upgrade path that has not been validated might work. 
+        We have tested and validated Portainer CE Version Upgrades from 1.24.0 to the latest. Although un-tested, it is possible an upgrade path that has not been validated might work. 
         It is recommended to test any upgrade path, validated or non-validated on a non critical system before applying it to your active production systems.
 
         You can find Requirements for different versions of Portainer [here](/v2.0/deploy/requirements/)
+
+        !!! Tip "Backup"
+            Backup and Restore feature is available since Portainer CE Ver 2.5. It is higly recommended that you have a backup of Portainer before upgrade.
+            Instructions [here](/v2.0/backup/backup/){target=_blank}
 
         Upgrade Instructions for different deployments below...
 
@@ -21,10 +25,14 @@ Choose a Portainer Edition that you would like to Upgrade
 
 === "Portainer Business"
     !!! Abstract ""
-        We have tested and validated Portainer Business Version Upgrades from 2.0.0 to the latest (2.4.0).  
+        We have tested and validated Portainer Business Version Upgrades from 2.0.0 to the latest.  
         It is recommended to test any upgrade path, validated or non-validated on a non critical system before applying it to your active production systems.
 
         You can find Requirements for different versions of Portainer [here](/v2.0-be/deploy/requirements/)
+
+        !!! Tip "Backup"
+            Backup and Restore feature is available since Portainer Business Ver 2.4. It is higly recommended that you have a backup of Portainer before upgrade.
+            Instructions [here](/v2.0-be/backup/backup/){target=_blank}
 
         Upgrade Instructions for different deployments below...
 
