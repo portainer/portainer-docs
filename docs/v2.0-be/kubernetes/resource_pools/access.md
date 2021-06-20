@@ -1,5 +1,8 @@
 # Manage access to a resource pool
 
+!!! Warning "Access Control & RBAC"
+    Kubernetres RBAC needs to enabled and working for Access Control to work properly in Portainer.
+    
 In this help article, you will learn how to manage access to created resource pools.
 
 ## Managing access
