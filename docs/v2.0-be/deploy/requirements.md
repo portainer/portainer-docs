@@ -15,6 +15,7 @@ To try and alleviate confusion as to what we test against, we have documented th
 | Business 2.4 (latest) | May 4, 2021  | 20.10.5      | 1.19 1.20.2 1.21 | ARM64, x86_64 |
 | Business 2.0 | Dec 3, 2020  | 19.03.13       | 1.17.13 1.18.6 1.19.3 | ARM64, x86_64 |
 
+
 *For Docker and K8s on ARM64.
 
 ## :material-note-text: Notes
