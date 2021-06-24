@@ -1,6 +1,6 @@
 # Security Options
 
-Portainer allows various configuration options to add secuirty to your environment. In this help article, we going to review the security options that you can find under <b>Settings</b>.
+Portainer allows various configuration options to add secuirty to your environment. In this help article, we going to review the security options that you can find under <b>Host/Cluster</b> --> <b>Setup</b>.
 
 ## Docker Endpoint Security Options
 
@@ -17,6 +17,8 @@ Portainer allows various configuration options to add secuirty to your environme
 * <b>Disable device mappings for non-administrators</b>: This blocks the ability for users to map host devices into containers. Whilst the ability to map devices is generally used for good (eg mapping a GPU into a container), it can equally be used by non-trustworthy authorized users to map a physical storage device into a container. It is possible to mount /dev/sda1 into a container, and then from a console of that container, the user would have complete access to the sda1 device without restriction.  By enabling this feature, Portainer blocks the ability for non-admins to map ANY devices into containers.
 
 * <b>Disable container capabilities for non-administrators</b>: Enabling the setting will hide the container capabilities tab for non-administrators when they are creating a container.
+
+* <b>Disable sysctl settings for non-administrators</b>: Enabling this setting will remove ability for non-admin users to use sysctl options. Non-admin users will not be able to recreate/duplicate/edit any containers when this setting is toggled on.
 
 ## :material-note-text: Notes
 
