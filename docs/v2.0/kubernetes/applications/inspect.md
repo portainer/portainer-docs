@@ -11,7 +11,7 @@ In the tab <b>Application</b>, you can find the following information:
 
 * Name: Name of the application.
 * Stack: Name of the stack that this container belongs.
-* Resource Pool: In what resouce pool / Namespace this application in running.
+* Namespace/Resource Pool: In what resouce pool / Namespace this application in running.
 * Application Type.
 * Status: See if the application is running.
 * Creation: Information about who and when the application was created.
