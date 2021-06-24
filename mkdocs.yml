@@ -339,6 +339,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 plugins:
+  - render_swagger
   - search
   - redirects:
         redirect_maps:
@@ -348,7 +349,7 @@ plugins:
             'v2.0-be/deploy/linux.md': 'quickstart.md'
             'v2.0-be/deploy/windows10.md': 'quickstart.md'
             'v2.0-be/deploy/windowsserver.md': 'quickstart.md'
-            'api.md': 'api/api-examples.md'
+            'api.md': 'api/api-schema.md'
 
 extra:
   analytics:
