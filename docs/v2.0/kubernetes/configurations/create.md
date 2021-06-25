@@ -11,7 +11,7 @@ To create a configuration, click <b>Configurations</b> and then click <b>Add con
 In the next screen, you need to define the following:
 
 * Name: Name your configuration.
-* Resource Pool: Where the configuration is going to be saved.
+* Namespace/Resource Pool: Where the configuration is going to be saved.
 * Configuration Type:
   - Non-sensitive: This configuration holds non-sensitive information.
   - Sensitive: This configuration holds sensitive information like passwords or certificates

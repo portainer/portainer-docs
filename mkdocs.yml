@@ -175,9 +175,9 @@ nav:
             - 'Delete an Application' : 'v2.0/kubernetes/applications/delete.md'
             - 'Inspect an Application' : 'v2.0/kubernetes/applications/inspect.md'
           - 'Resource Pools':
-            - 'Create a Resource Pool' : 'v2.0/kubernetes/resource_pools/create.md'
+            - 'Create a Namespace/Resource Pool' : 'v2.0/kubernetes/resource_pools/create.md'
             - 'Manage Access' : 'v2.0/kubernetes/resource_pools/access.md'
-            - 'Delete a Resource Pool' : 'v2.0/kubernetes/resource_pools/delete.md'
+            - 'Delete a Namespace/Resource Pool' : 'v2.0/kubernetes/resource_pools/delete.md'
           - 'Volumes':
             - 'Inspect a volume' : 'v2.0/kubernetes/volumes/inspect.md'
             - 'Resize a volume' : 'v2.0/kubernetes/volumes/resize.md'
@@ -275,7 +275,9 @@ nav:
         - Registries:
           - 'Browse a Registry' : 'v2.0-be/registries/browse.md'
           - 'Manage a Registry' : 'v2.0-be/registries/manage.md'        
-    - API: api.md
+    - API: 
+      - 'Documentation': 'api/api-schema.md'
+      - 'Examples': 'api/api-examples.md'
     - Upgrading Portainer:
       - 'Upgrade Path': 'upgrade.md'
       - 'Upgrade CE to Business': 'v2.0/upgrade/updBE.md'
@@ -337,6 +339,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 plugins:
+  - render_swagger
   - search
   - redirects:
         redirect_maps:
@@ -346,6 +349,7 @@ plugins:
             'v2.0-be/deploy/linux.md': 'quickstart.md'
             'v2.0-be/deploy/windows10.md': 'quickstart.md'
             'v2.0-be/deploy/windowsserver.md': 'quickstart.md'
+            'api.md': 'api/api-schema.md'
 
 extra:
   analytics:

@@ -16,7 +16,7 @@ After that, you will see a form to complete according to your needs. The options
 
 * Name: Name of your Container.
 * Image: This is the image you want to use to deploy your container.
-* Resource Pool: This is the namespace where your container is going to live. To add a new resource pool, see this [help article](/v2.0/docs/kubernetes/resouce_pool/create.md).
+* Namespace/Resource Pool: This is the namespace where your container is going to live. To add a new Namespace/Resource Pool, see this [help article](/v2.0/docs/kubernetes/resouce_pool/create.md).
 * Stack: Portainer can automatically bundle multiple applications inside a stack. Enter a name of a new stack or select an existing stack in the list. Leave empty to use the application name.
 * Environment Variables: Fill the environment that your app needs, this is optional and only depends of the configuration supported by your app.
 * Configurations: If you created configuration files before using Portainer, you can select that configuration in this space.

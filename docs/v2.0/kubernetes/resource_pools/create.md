@@ -1,14 +1,17 @@
-# Create a Resource Pool
+???+ Hint ""
+    From Portainer CE 2.6 on, `Resource Pool(s)` has been renamed to `Namespace(s)` to be aligned with Kubernetes lingo.
 
-The Resource Pools are helpful when multiple teams are using the same cluster and there is potential collision, you can prevent this by using a virtual wall between multiple clusters. In this help article, you will learn how to create a Resource Pool (Namespace) using Portainer.
+# Create a Namespace/Resource Pool
 
-## Creating a Resouce Pool
+The Namespaces/Resource Pools are helpful when multiple teams are using the same cluster and there is potential collision, you can prevent this by using a virtual wall between multiple clusters. In this help article, you will learn how to create a Namespace/Resource Pool using Portainer.
 
-Go to <b>Resouce Pools</b> and then click <b>Add resource pool</b>.
+## Creating a Namespace/Resource Pool
+
+Go to <b>Namespaces/Resource Pools</b> and then click <b>Add Namespace/Resource pool</b>.
 
 ![resource_pool](assets/create-1.png)
 
-In the next screen, you need to <b>name</b> your resource pool, assign a <b>quota<b> (Optional), set the <b>resource limits</b> of that quota indicating how much memory and CPU is assigned to this Resource Pool.
+In the next screen, you need to <b>name</b> your resource pool, assign a <b>quota<b> (Optional), set the <b>resource limits</b> of that quota indicating how much memory and CPU is assigned to this Namespace/Resource Pool.
 
 When everything is set, click <b>Create resource pool</b>.
 
