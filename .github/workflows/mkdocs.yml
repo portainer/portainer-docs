@@ -31,7 +31,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install dependencies
-        run: python3 -m pip install mkdocs mkdocs-material fontawesome_markdown mkdocs-redirects mkdocs-render-swagger-plugin
+        run: python3 -m pip install mkdocs==1.2.1 mkdocs-material==7.1.9 fontawesome_markdown mkdocs-redirects mkdocs-render-swagger-plugin
 
       - run: mkdocs build
 
