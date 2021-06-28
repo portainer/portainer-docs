@@ -323,7 +323,7 @@ theme:
   custom_dir: overrides
   palette:
     primary: light-blue
-repo_name: portainer/portainer
+repo_name: portainer/portainer-docs
 repo_url: https://github.com/portainer/portainer-docs
 markdown_extensions:
   - attr_list
