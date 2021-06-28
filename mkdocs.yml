@@ -320,6 +320,7 @@ theme:
   logo: assets/logo.png
   favicon: assets/icon.webp
   name: material
+  custom_dir: overrides
   palette:
     primary: light-blue
 repo_name: portainer/portainer
@@ -354,7 +355,7 @@ plugins:
 extra:
   analytics:
     provider: google
-    property: G-PT7RWG2W49
+    property: GTM-TTJQ5VG
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/portainerio
