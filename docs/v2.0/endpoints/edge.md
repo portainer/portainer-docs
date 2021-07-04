@@ -7,7 +7,7 @@ The edge agent was created as a way to manage an edge compute environment where 
 This scenario only applies when Portainer is running in a Docker or Docker Swarm environment.
 
 Portainer communicates with the edge agent over port 8000; through this port the edge agent can poll the Portainer instance, connect to Portainer, see when it is needed & initiate a tunnel or receive config updates. Without port 8000 exposed on Portainer, you cannot access the edge endpoint. If you already have Portainer deployed, you need to redeploy with port 8000 exposed alongside the port used to access Portainer.
-Using the CLI flag --tunnel-port you are able to set a different port if 8000 is already in use. For more information see [CLI options](/v2.0/deploy/cli.md).
+Using the CLI flag --tunnel-port you are able to set a different port if 8000 is already in use. For more information see [CLI options](/v2.0/deploy/cli/).
 
 ## Recommended Portainer deployment methods.
 
