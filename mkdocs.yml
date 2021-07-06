@@ -14,6 +14,7 @@ nav:
           - 'Docker' : 'v2.0/deploy/ceinstalldocker.md'
           - 'Docker Swarm' : 'v2.0/deploy/ceinstallswarm.md'
           - 'Kubernetes' : 'v2.0/deploy/ceinstallk8s.md'
+          - 'Edge Agent': 'v2.0/deploy/edgeagent.md'
           - 'Using SSL with Portainer' : 'v2.0/deploy/ssl.md'
           - 'Initial Setup' : 'v2.0/deploy/initial.md'
       - Business Edition:
@@ -21,6 +22,7 @@ nav:
           - 'Docker' : 'v2.0-be/deploy/beinstalldocker.md'
           - 'Docker Swarm' : 'v2.0-be/deploy/beinstallswarm.md'
           - 'Kubernetes' : 'v2.0-be/deploy/beinstallk8s.md'
+          - 'Edge Agent': 'v2.0/deploy/edgeagent.md'
           - 'Using SSL with Portainer' : 'v2.0-be/deploy/ssl.md'
           - 'Initial Setup' : 'v2.0-be/deploy/initial.md'
     - Admin Guide:
