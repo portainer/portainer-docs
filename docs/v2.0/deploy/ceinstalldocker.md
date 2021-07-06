@@ -4,7 +4,7 @@ hide:
 ---
 
 # :fontawesome-brands-docker: Deploying Portainer CE in Docker
-Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine or within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
+Portainer comprises two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine or within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
 
 Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
 
