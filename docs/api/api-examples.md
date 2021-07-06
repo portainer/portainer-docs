@@ -104,6 +104,7 @@ The response is a JSON object representing the endpoint:
 }
 ```
 <br>
+<br>
 #### Remote endpoint secured using TLS
 
 This query will create an endpoint called test-remote-tls and will communicate with this environment over TCP (secured with TLS) using the IP address 10.0.7.10 and port 2376 (these are example values, ensure that you're using the correct IP & port).
