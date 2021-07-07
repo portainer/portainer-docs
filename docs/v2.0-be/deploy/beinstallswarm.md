@@ -23,12 +23,12 @@ To learn more about the requirements please visit the [requirements](/v2.0-be/de
 
 ## :fontawesome-solid-paper-plane: Portainer Deployment
 
-Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see Portainer and agent scenario below):
+Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:
 
 === "Docker Swarm on Linux"
     !!! Abstract ""        
         ### Portainer Server Deployment
-        Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.
+        Portainer can be directly deployed as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.
 
         ```shell
         curl -L https://downloads.portainer.io/portainer-ee-agent-stack.yml -o portainer-agent-stack.yml
@@ -59,10 +59,10 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
     !!! Abstract ""    
         Before you can deploy Portainer in Docker Swarm running in Windows, you need to install WSL. [Read this guide to know more about WSL/WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10){target=_blank}
 
-        Use the following Docker Swarm commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see portainer and agent scenario below):
+        Use the following Docker Swarm commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:
         
         ### Portainer Server Deployment
-        Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance 
+        Portainer can be directly deployed as a service in your Docker cluster. Note that this method will automatically deploy a single instance 
         of the Portainer Server, and deploys the Portainer Agent as a global service on every node in your cluster.
 
         Remember to initiate the Docker Swarm mode when you use Docker Desktop. You can do this running the following command:
@@ -76,14 +76,14 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         ```shell
         Swarm initialized: current node (15gbf4d66mvzk3die00sgirpf) is now a manager.
 
-        To add a worker to this swarm, run the following command:
+        To add a worker to this swarm, run the <code>swarm join</code> command that is provided when initializing the swarm (it will look similar to the following):
 
             docker swarm join --token SWMTKN-1-096qbnf2b9yywagu5ht3731zlpkeqazgctffolntsiljfp0m34-c4snnxplgwq2bd1ohta8k48b9 192.168.65.3:2377
 
         To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
         ```
 
-        Once this is done, you can continue with the installation running the following command:
+        Once this is done, you can continue with the installation by running the following command:
 
         ```shell
          curl -L https://downloads.portainer.io/portainer-ee-agent-stack.yml -o portainer-agent-stack.yml
@@ -99,7 +99,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         docker network create --driver overlay --attachable portainer_agent_network
         ```
         
-        Deploy Portainer Agent on a Swarm Cluster as a Swarm Service, run this command in a manager node in the cluster.
+        To deploy Portainer Agent on a Swarm Cluster as a Swarm Service, run this command in a manager node in the cluster:
 
         ```shell
          docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent --mode global --mount type=bind
@@ -108,7 +108,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
 === "Docker Swarm on Windows Container Service"
     !!! Abstract ""
-        To run Portainer in a Windows Server/Desktop Environment, you need to create exceptions in the firewall. These, can be easy added through PowerShell, running the following commands:
+        To run Portainer in a Windows Server/Desktop Environment, you need to create exceptions in the firewall. These can be easily added through PowerShell by running the following commands:
 
         ```shell
         netsh advfirewall firewall add rule name="cluster_management" dir=in action=allow protocol=TCP localport=2377
@@ -134,7 +134,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         netsh advfirewall firewall add rule name="swarm_dns_udp" dir=in action=allow protocol=UDP localport=53
         ```
 
-        You also need to install Windows Container Host Service and Install Docker.
+        You also need to install Windows Container Host Service and install Docker.
 
         ```shell
         Enable-WindowsOptionalFeature -Online -FeatureName containers -All

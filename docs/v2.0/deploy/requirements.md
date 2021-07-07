@@ -6,7 +6,7 @@ By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose 
 
 Every single release of Portainer goes through an extensive testing process (functional tests, release tests, post release tests) to ensure that what we are creating actually works as expected. Obviously though, we cannot possibly test Portainer against every single configuration variant out there, so we have elected to test against just a subset.
 
-To try and alleviate confusion as to what we test against, we have documented the configurations that we personally validate as "functional"; any other variant is not tested (this does not mean it wont work, it just means its not tested). 
+To try and alleviate confusion as to what we test against, we have documented the configurations that we personally validate as "functional"; any other variant is not tested (this does not mean it won't work, it just means its not tested). 
 
 ## :fontawesome-solid-check-double: Validated Configurations
 
@@ -14,7 +14,7 @@ To try and alleviate confusion as to what we test against, we have documented th
 |--------------------|--------------|----------------|--------------------|---------------|
 | Community 2.6.0 (latest) | June 25, 2021   | 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
 | Community 2.5.1          | May 18, 2021   | 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
-| Community 2.5.           | May 18, 2021   | 20.10.5        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
+| Community 2.5.0          | May 18, 2021   | 20.10.5        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
 | Community 2.1.x          | Feb 2, 2021    | 20.10.2        | 1.20.0                       | ARM64, x86_64        |
 | Community 2.0.1          | Jan 7, 2021    | 20.10.0        | 1.17.13 1.18.9 1.19.3 1.20.0 | ARM64, x86_64        |
 | Community 2.0            | Aug 31, 2020   | 19.03.12       | 1.17.13 1.18.6 1.18.9 1.19.3 | ARM64, x86_64        |
