@@ -216,7 +216,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
     ```shell
     docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
     ```
-    This can also be completed via the GUI in the Portaner Settings menu
+    This can also be updated via the GUI in the Portainer Settings menu.
 
     ## Use your own templates
 
@@ -224,7 +224,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
     By default Portainer templates will be used but you can also define your own templates.
 
-    Note: at the moment, templates are only loaded once at first Portainer startup. If you already deployed a Portainer instance and want to use your own templates after this, you’ll need to clear any existing templates (default templates) via the HTTP API.
+    Note: at the moment, templates are only loaded once at first Portainer startup. If you already deployed a Portainer instance and want to use your own templates after this, you’ll need to clear any existing templates (default templates) via the user interface or the HTTP API.
 
     Using the <code>--templates</code> flag you can specify an URL where the template file can be accessed via HTTP.
 
@@ -232,7 +232,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
     docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --templates http://my-host.my-domain/templates.json
     ```
 
-    Suggestion: You can host your template files in [Github](https://www.github.com)
+    The template file must be accessible from Portainer without authentication. We suggest hosting the template files on [Github](https://www.github.com).
 
     ## Available flags
 
