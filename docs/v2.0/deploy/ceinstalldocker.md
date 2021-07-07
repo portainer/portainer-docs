@@ -116,7 +116,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce
         ```
 
-        Now, you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.
+        Now you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.
 
         
         ### :fontawesome-solid-laptop: Portainer Agent Only Deployment
