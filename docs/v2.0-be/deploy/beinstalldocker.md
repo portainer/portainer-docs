@@ -13,9 +13,9 @@ Regardless of your configuration, you will need:
 * Administrator or sudo access on the machine that will host your Portainer instance.
 * If you are using Docker Desktop on Windows you need to enable WSL2 if you need to run Linux containers.
 
-By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose a TCP tunnel server over the port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
+By default, Portainer will expose the UI over port `#!Ruby 9000` and expose a TCP tunnel server over port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 
-To see the requirements, please, visit the page of [requirements](/v2.0-be/deploy/requirements/).
+To learn more about the requirements please visit the [requirements](/v2.0-be/deploy/requirements/) page.
 
 !!! Warning "Agent Versions"
     Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
