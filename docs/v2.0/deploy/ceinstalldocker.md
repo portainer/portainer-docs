@@ -67,7 +67,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
 === "Docker on Windows Container Service"
     !!! Abstract ""
-        To run Portainer in a Windows Server/Desktop Environment you need to create exceptions in the firewall. These can be easily be added through PowerShell by running the following commands:
+        To run Portainer in a Windows Server/Desktop Environment you need to create exceptions in the firewall. These can easily be added through PowerShell by running the following commands:
 
         ```shell
         netsh advfirewall firewall add rule name="cluster_management" dir=in action=allow protocol=TCP localport=2377
