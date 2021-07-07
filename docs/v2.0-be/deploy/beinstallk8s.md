@@ -3,19 +3,26 @@ hide: toc
 ---
 
 # :material-kubernetes: Deploying Portainer Business in Kubernetes
-Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
+Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight containers on Kubernetes. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
+
+Regardless of your configuration, you will need:
+
+* A working and up to date Kubernetes cluster
+* Access to run Helm or kubectl commands on your cluster
+* Cluster Admin rights on your Kubernetes cluster. This is so Portainer can create the necessary `#!Ruby ServiceAccount` and `#!Ruby ClusterRoleBinding` for it to access the Kubernetes cluster.
+* A default StorageClass configured (see below)
 
 
-By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose a TCP tunnel server over the port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
+By default, Portainer will expose the UI over port `#!Ruby 9000` and expose a TCP tunnel server over port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 
 
-To see the requirements, please, visit the page of [requirements](/v2.0-be/deploy/requirements/).
+To learn more about the requirements please visit the [requirements](/v2.0-be/deploy/requirements/) page.
 
 !!! Warning "Agent Versions"
     Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
 
 !!! Warning "Access Control & RBAC"
-    Kubernetres RBAC needs to enabled and working for Access Control to work properly in Portainer.
+    Kubernetes RBAC needs to enabled and working for Access Control to work properly in Portainer.
 
 ## :fontawesome-solid-paper-plane: Portainer Deployment
 ---

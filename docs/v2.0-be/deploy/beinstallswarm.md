@@ -3,13 +3,19 @@ hide: toc
 ---
 
 # :fontawesome-brands-docker: Deploying Portainer Business in Docker Swarm
-Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine or within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
+Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
 
-Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
+<!-- **Note:** The recommended deployment mode when using Swarm is using the Portainer Agent. -->
 
-By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose a TCP tunnel server over the port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
+Regardless of your configuration, you will need:
 
-To see the requirements, please, visit the page of [requirements](/v2.0-be/deploy/requirements/).
+* The latest version of Docker installed and working, with swarm mode enabled and your nodes added. You can refer to [the Docker documentation](https://docs.docker.com/get-docker/) for platform-specific instructions.
+* Administrator or sudo access on the machine that will host the Portainer Server service.
+* Administrator or sudo access on the machines where you will deploy the Portainer Agent if you need to add more endpoints to your Portainer instance.
+
+By default, Portainer will expose the UI over port `#!Ruby 9000` and expose a TCP tunnel server over port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
+
+To learn more about the requirements please visit the [requirements](/v2.0-be/deploy/requirements/) page.
 
 !!! Warning "Agent Versions"
     Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
@@ -53,7 +59,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
     !!! Abstract ""    
         Before you can deploy Portainer in Docker Swarm running in Windows, you need to install WSL. [Read this guide to know more about WSL/WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10){target=_blank}
 
-        Use the following Docker Swarmcommands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see portainer and agent scenario below):
+        Use the following Docker Swarm commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see portainer and agent scenario below):
         
         ### Portainer Server Deployment
         Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance 
