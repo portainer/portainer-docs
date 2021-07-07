@@ -5,7 +5,7 @@ hide: toc
 # :fontawesome-brands-docker: Deploying Portainer Business in Docker
 Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
 
-If you are using Docker Swarm, please refer to the Swarm-specific installation [instructions](/v2.0/deploy/ceinstallswarm/).
+If you are using Docker Swarm, please refer to the Swarm-specific installation [instructions](/v2.0/deploy/beinstallswarm/).
 
 Regardless of your configuration, you will need:
 
