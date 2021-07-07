@@ -3,9 +3,15 @@ hide: toc
 ---
 
 # :fontawesome-brands-docker: Deploying Portainer Business in Docker Swarm
-Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine or within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
+Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
 
-Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
+<!-- **Note:** The recommended deployment mode when using Swarm is using the Portainer Agent. -->
+
+Regardless of your configuration, you will need:
+
+* The latest version of Docker installed and working, with swarm mode enabled and your nodes added. You can refer to [the Docker documentation](https://docs.docker.com/get-docker/) for platform-specific instructions.
+* Administrator or sudo access on the machine that will host the Portainer Server service.
+* Administrator or sudo access on the machines where you will deploy the Portainer Agent if you need to add more endpoints to your Portainer instance.
 
 By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose a TCP tunnel server over the port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 
