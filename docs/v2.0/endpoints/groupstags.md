@@ -4,7 +4,7 @@ In Portainer, you will able to set up Groups and Tags to organize your endpoints
 
 ## Add a Endpoint Group
 
-Adding an Endpoint is very easy in Portainer. Once logged in 1. Click <b>Endpoints</b> and then 2. <b>Groups</b>
+Adding an Endpoint Group is very easy in Portainer. Once logged in 1. Click <b>Endpoints</b> and then 2. <b>Groups</b>
 
 ![groups](assets/groups_1.png)
 
