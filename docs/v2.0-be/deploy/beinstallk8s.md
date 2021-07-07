@@ -213,7 +213,7 @@ Alternatively, if installing using our helm chart you can add the following opti
 
         ### :fontawesome-solid-server: Portainer Server Deployment
 
-        Based on how you would like expose Portainer Service, Select an option below
+        Based on how you would like expose the Portainer Service, select an option below:
 
         === "NodePort"
             Using the following command, Portainer will be available on port 30777.
@@ -254,15 +254,15 @@ Alternatively, if installing using our helm chart you can add the following opti
 
     In some Kubernetes clusters (microk8s), the default Storage Class simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.
 
-    While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the portainer pod to a particular node.
+    While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the Portainer pod to a particular node.
 
     The nodeSelector can be added in the following ways:
 
-    1. Edit your own values.yaml and set the value of nodeSelector like this:
+    1. Edit your own values.yaml and set the value of nodeSelector:
 
             nodeSelector: kubernetes.io/hostname: \<YOUR NODE NAME>
 
-    2. Explicictly set the target node when deploying/updating the helm chart on the CLI, by including `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>`
+    2. Explicitly set the target node when deploying/updating the helm chart on the CLI, by including `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>`
     
     3. If you've deployed Portainer via manifests, without Helm, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
 

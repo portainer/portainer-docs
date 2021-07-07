@@ -48,7 +48,7 @@ kubectl patch storageclass <storage-class-name> -p '{"metadata": {"annotations":
 and replace <storage-class-name> with the name of your storage class        
 Example: `kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'`
 
-Alternatively, if installing using our helm chart you can add the following option with helm install:
+Alternatively, if installing using our Helm chart you can add the following option with helm install:
 ```shell
 --set persistence.storageClass=<storage-class-name>
 ```
@@ -60,10 +60,10 @@ Alternatively, if installing using our helm chart you can add the following opti
 === "Deploy using Helm"
     !!! Abstract ""
         ### :fontawesome-solid-server: Portainer Server Deployment
-        Ensure you're using at least helm v3.2, which [includes support](https://github.com/helm/helm/pull/7648) for the `--create-namespace` argument.
+        Ensure you're using at least Helm v3.2, which [includes support](https://github.com/helm/helm/pull/7648) for the `--create-namespace` argument.
 
 
-        First, add the Portainer helm repo running the following:
+        First, add the Portainer helm repo by running the following:
         
         ```shell
         helm repo add portainer https://portainer.github.io/k8s/
@@ -73,7 +73,7 @@ Alternatively, if installing using our helm chart you can add the following opti
         helm repo update
         ```
         
-        Based on how you would like expose Portainer Service, Select an option below
+        Based on how you would like expose the Portainer Service, select an option below:
     
         === "NodePort"
             Using the following command, Portainer will be available on port 30777.
@@ -147,7 +147,7 @@ Alternatively, if installing using our helm chart you can add the following opti
         ### :fontawesome-solid-laptop: Portainer Agent Only Deployment
 
         Helm chart for Agent Only Deployments will be available soon.
-        In the mean time please head over to YAML Manifests tab.
+        In the meantime please head over to YAML Manifests tab.
 
 === "Deploy using YAML Manifests"
     !!! Abstract ""
@@ -212,7 +212,7 @@ Alternatively, if installing using our helm chart you can add the following opti
 
         ### :fontawesome-solid-server: Portainer Server Deployment
 
-        Based on how you would like expose Portainer Service, Select an option below
+        Based on how you would like expose the Portainer Service, select an option below:
 
         === "NodePort"
             Using the following command, Portainer will be available on port 30777.
@@ -229,7 +229,7 @@ Alternatively, if installing using our helm chart you can add the following opti
             ```
 
         ### :fontawesome-solid-laptop: Portainer Agent Only Deployment
-        Choose one of the tabs below based on how you would like to expose the agent.
+        Choose one of the tabs below based on how you would like to expose the agent:
 
         === "NodePort"
             Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on port 30778.
