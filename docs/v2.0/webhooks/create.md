@@ -1,20 +1,20 @@
 # Webhooks
 
-You can use webhooks to cause an action in a service in response to a push event in a repository. Webhooks are POST requests sent to a URL you define in Docker Hub or another registry.
+You can use webhooks to trigger an action in a service in response to a push event in a repository. Webhooks are POST requests sent to a URL you define in Docker Hub or another registry.
 
 ## Enable Service Webhook
 
-To enable a webhook for a service, go to <b>Services</b>, click in the service you want to set up the Weebhook, and enable the toogle <b>Service Webhook</b>.
+To enable a webhook for a service, go to <b>Services</b>, click on the service you want to set up the Webhook for, and enable the toggle <b>Service Webhook</b>.
 
 ![webhooks](assets/1.png)
 
-After you enable the toggle you will see the URL to configure your webhook in Docker Hub or another repository. do a click in copy to get the full URL.
+After you enable the toggle you will see the URL to configure your webhook in Docker Hub or another repository. Click the copy button to get the full URL.
 
 ![webhooks](assets/2.png)
 
 ## Examples
 
-Here, you can find a few examples to understand how easy is to trigger the webhook.
+Here, you can find a few examples to understand how easy it is to trigger the webhook.
 
 ### Redeploy
 
