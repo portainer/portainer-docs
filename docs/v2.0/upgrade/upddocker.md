@@ -35,7 +35,7 @@ Now that you have stopped and removed the old version of Portainer, you can run 
 
 ```shell
 
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always --pull=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 
 ```
 
@@ -58,7 +58,7 @@ docker stop portainer
 
 docker rm portainer
 
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always --pull=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer:1.24.1
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer:1.24.1
 
 ```
 At this point, you are running version 1.24.1 which can be verified by to http://your-server-address:9000, logging in and confirming the version number in the lower left. To complete the upgrade, perform the steps defined in the previous section.
@@ -96,7 +96,7 @@ Now that you have stopped and removed the old version of Portainer Agent, you ca
 
 ```shell
 
-docker run -d -p 9001:9001 --name portainer_agent --restart=always --pull=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
+docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
 
 ```
 

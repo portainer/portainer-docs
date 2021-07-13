@@ -35,7 +35,7 @@ Now that you have stopped and removed the old version of Portainer, you can run 
 
 ```shell
 
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always --pull=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee
 
 ```
 
@@ -82,7 +82,7 @@ Now that you have stopped and removed the old version of Portainer Agent, you ca
 
 ```shell
 
-docker run -d -p 9001:9001 --name portainer_agent --restart=always --pull=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
+docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
 
 ```
 
