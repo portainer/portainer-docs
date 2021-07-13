@@ -69,7 +69,7 @@ Alternatively, if installing using our helm chart you can add the following opti
         helm repo update
         ```
         
-        Based on how you would like to expose the Portainer service, Select an option below:
+        Based on how you would like to expose the Portainer service, select an option below:
     
         === "NodePort"
             Using the following command, Portainer will be available on port 30777.
