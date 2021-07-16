@@ -19,7 +19,7 @@ To see the requirements, please, visit the page of [requirements](/v2.0/deploy/r
     
     ### :fontawesome-solid-server: Portainer Server Deployment
 
-    Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see Portainer and agent scenario below):
+    Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see Portainer and agent scenario below). (Note: If you are running rootless Docker, replace `-v /var/run/docker.sock:/var/run/docker/sock` with `-v ${XDG_RUNTIME_DIR}/docker.sock:/var/run/docker.sock` where it appears below): 
 
     ```shell
     docker volume create portainer_data
