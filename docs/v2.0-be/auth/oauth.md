@@ -2,75 +2,36 @@
 
 Portainer Business Edition can be connected to several OAuth providers in an easy way without need to understand complex configurations.
 
-### Microsoft OAuth Provider
+To configure OAuth as the external authentication source for Portainer, go to <b>Settings</b> > <b>Authentication</b> and select <b>OAuth</b>.
 
-<div class="container">
-<iframe src="//www.youtube.com/embed/Wlpnq5SF0dw" 
-frameborder="0" allowfullscreen class="video"></iframe>
-</div>
+![oauth](assets/oauthgeneral.png)
 
-To start to configure Microsoft OAuth Provider, once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>OAuth</b> option and then, do select <b>Microsoft</b>.
+In this screen, you have the following options:
 
-![oauth](assets/microsoft1.png)
+* Use SSO: Using SSO, the OAuth provider is not forced to prompt for credentials when the user has a currently logged in session.
+* Hide internal authentication prompt: With this toggle on, Portainer will bypass the Portainer Login screen and use SSO to login a user with an existing OAuth session or takes the user straight to OAuth provider login.
 
-Here, you only need to define the following information: 
+&nbsp;   &nbsp;  &nbsp;   &nbsp;  &nbsp;   &nbsp;  <b>Note:</b> Use ```<portainer url>/#!/internal-auth``` to login as Portainer internal admin
 
-* Tenant ID: ID of the Azure Directory you wish to authenticate against. Also known as the Directory ID.
-* Application ID: Public identifier of the OAuth application.
-* Application key: The secret of this Application.
+* Automatic User Provisioning: Toggle on the Automatic User Provisioning to see the options. You can use this option if you want a user added to Portainer for each OAuth user on first login. After enabling the toggle, you may choose a team for these Auto Populated Users.
+* Automatic Team membership: You may choose to auto add OAuth users to certain Portainer teams based on the Claim Name. Claim names with be matched with Teams or you can manually link a claim name (regex) with Portainer Teams.
 
-Do a click in save and you're done.
 
-![oauth](assets/microsoft2.png)
+<b>Provider</b>
 
-### Google OAuth Provider
+You may choose any of the following providers or use Custom Provider.
 
-To start to configure Google OAuth Provider, once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>OAuth</b> option and then, do select <b>Google</b>.
+Click on the name for provider specific instructions
 
-Define the following information and do a click in <b>Save settings</b>.
-
-* Client ID: Public identifier of the OAuth Application.
-* Client Secret: The secret of this client.
-
-![oauth](assets/google1.png)
-
-### Github
-
-To start to configure Github OAuth Provider, once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>OAuth</b> option and then, do select <b>Github</b>.
-
-Define the following information and do a click in <b>Save settings</b>.
-
-* Client ID: Public identifier of the OAuth Application.
-* Client Secret: The secret of this client.
-
-![oauth](assets/github.png)
-
-### Custom OAuth Provider
-
-To configure a custom OAuth provider, once you logged to Portainer, click in <b>Settings</b> and then in <b>authentication</b>. After that, select <b>custom</b> option.
-
-![oauth](assets/custom.png)
-
-In this screen, you need to configure the data that you OAuth provider give you to configure Portainer. The fields are:
-
-* Automatic User Provisioning: Toggle on these options if you want to create users for each user logged using OAuth. After enable the toggle, you need to define in wich team that users should be created. 
-
-![oauth](assets/custom2.png)
-
-* Client ID: This is the public identifier of the OAuth application.
-* Client Secret: Here, you need fill with the token access to the OAuth Application.
-* Authorization URL: URL used to authenticate against the OAuth provider. Will redirect the user to the OAuth provider login view.
-* Access Token URL: URL used to authenticate against the OAuth provider. Will redirect the user to the OAuth provider login view.
-* Resource URL: URL used by Portainer to retrieve information about the authenticated user.
-* Redirect URL: URL used by the OAuth provider to redirect the user after successful authentication. Should be set to your Portainer instance URL.
-* User Identifier: Identifier that will be used by Portainer to create an account for the authenticated user. Retrieved from the resource server specified via the Resource URL field.
-* Scopes: Required by the OAuth provider to retrieve information about the authenticated user. Refer to your OAuth provider documentation for more information about this.
-
-Once that all fields are completed, do a click in <b>Save Settings</b>
+* [Microsoft](/v2.0-be/auth/oauth-ms/)
+* [Google](/v2.0-be/auth/oauth-google/)
+* [Github](/v2.0-be/auth/oauth-github/)
+* [Custom](/v2.0-be/auth/oauth-cust/)
 
 ## Manage access to OAuth Team and Users
 
-To understand how to enable access to OAuth Teams and Users, please, refer to [this article](/v2.0-be/endpoints/access).
+To understand how to enable access to OAuth Teams and Users, please, refer to [this article](/v2.0-be/endpoints/access/).
+</br>
 
 ## :material-note-text: Notes
 

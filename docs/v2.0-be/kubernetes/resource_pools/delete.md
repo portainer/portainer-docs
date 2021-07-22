@@ -1,10 +1,10 @@
-# Delete/Remove a Resource Pool
+# Delete/Remove a Namespace/Resource Pool
 
-When you have finished your project, you can delete resource pools to free up resources.
+When you have finished your project, you can delete Namespaces/resource pools to free up resources.
 
 ## Removing a Resouce Pool
 
-Click <b>Resouce Pools</b>, select the resource pool and click <b>Remove</b>.
+Click <b>Namespaces/Resouce Pools</b>, select the Namespacesresource pool and click <b>Remove</b>.
 
 ![resource](assets/delete-1.png)
 

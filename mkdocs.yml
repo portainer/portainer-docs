@@ -83,6 +83,7 @@ nav:
           - 'LDAP' : 'v2.0-be/auth/ldap.md'
           - 'Active Directory' : 'v2.0-be/auth/ad.md'
           - 'OAuth' : 
+            - 'OAuth': 'v2.0-be/auth/oauth.md'
             - 'Microsoft': 'v2.0-be/auth/oauth-ms.md'
             - 'Google': 'v2.0-be/auth/oauth-google.md'
             - 'Github': 'v2.0-be/auth/oauth-github.md'
@@ -176,7 +177,7 @@ nav:
             - 'Deploy from a Kubernetes Manifest' : 'v2.0/kubernetes/applications/manifest.md'
             - 'Delete an Application' : 'v2.0/kubernetes/applications/delete.md'
             - 'Inspect an Application' : 'v2.0/kubernetes/applications/inspect.md'
-          - 'Resource Pools':
+          - 'Namespace/Resource Pools':
             - 'Create a Namespace/Resource Pool' : 'v2.0/kubernetes/resource_pools/create.md'
             - 'Manage Access' : 'v2.0/kubernetes/resource_pools/access.md'
             - 'Delete a Namespace/Resource Pool' : 'v2.0/kubernetes/resource_pools/delete.md'
@@ -253,10 +254,10 @@ nav:
             - 'Deploy from a Kubernetes Manifest' : 'v2.0-be/kubernetes/applications/manifest.md'
             - 'Delete an Application' : 'v2.0-be/kubernetes/applications/delete.md'
             - 'Inspect an Application' : 'v2.0-be/kubernetes/applications/inspect.md'
-          - 'Resource Pools':
-            - 'Create a Resource Pool' : 'v2.0-be/kubernetes/resource_pools/create.md'
+          - 'Namespace/Resource Pools':
+            - 'Create a Namespace/Resource Pools' : 'v2.0-be/kubernetes/resource_pools/create.md'
             - 'Manage Access' : 'v2.0-be/kubernetes/resource_pools/access.md'
-            - 'Delete a Resource Pool' : 'v2.0-be/kubernetes/resource_pools/delete.md'
+            - 'Delete a Namespace/Resource Pools' : 'v2.0-be/kubernetes/resource_pools/delete.md'
           - 'Volumes':
             - 'Inspect a volume' : 'v2.0-be/kubernetes/volumes/inspect.md'
             - 'Resize a volume' : 'v2.0-be/kubernetes/volumes/resize.md'
