@@ -1,8 +1,11 @@
-# Security Options
+# Security Settings
 
-Portainer allows various configuration options to add secuirty to your environment. In this help article, we going to review the security options that you can find under <b>Settings</b>.
+Portainer allows various configuration options to add security to your environment. In this help article, we going to review the security options that you can find under <b>Host</b>, <b>Setup</b> (or <b>Swarm</b>, <b>Setup</b> when using Docker Swarm).
 
-## Docker Endpoint Security Options
+!!! note
+    These settings were previously available under the <b>Settings</b> menu but have now moved to their own section, and are set individually for each endpoint. 
+
+## Docker Security Settings
 
 ![security](assets/security1.png)
 
@@ -18,6 +21,7 @@ Portainer allows various configuration options to add secuirty to your environme
 
 * <b>Disable container capabilities for non-administrators</b>: Enabling the setting will hide the container capabilities tab for non-administrators when they are creating a container.
 
+* <b>Disable sysctl settings for non-administrators</b>: Enabling the setting will hide the opntion to add sysctl settings for non-administrators when they are creating a container.
 ## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

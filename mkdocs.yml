@@ -102,13 +102,13 @@ nav:
           - 'Connect to a Registry' : 'v2.0-be/registries/connect.md'
           - 'Enable Docker Hub Authentication' : 'v2.0-be/registries/auth-docker-hub.md'
         - Configuring Settings:
-          - 'Enable use of external load balancer' : 'v2.0-be/settings/lb.md'
-          - 'Allow/Disallow over-commitment of resources' : 'v2.0-be/settings/overcommit.md'
-          - 'Limit usage of default namespace' : 'v2.0-be/settings/namespaces.md'
-          - 'Security Options' : 'v2.0-be/settings/security.md'
-          - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
           - 'App Templates' : 'v2.0-be/settings/apps.md'
+          - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
+          - 'K8s: Enable use of external load balancer' : 'v2.0-be/settings/lb.md'
+          - 'K8s: Limit usage of default namespace' : 'v2.0-be/settings/namespaces.md'
+          - 'K8s: Allow/Disallow over-commitment of resources' : 'v2.0-be/settings/overcommit.md'
           - 'Enable Host Management Features' : 'v2.0-be/settings/host_management.md'
+          - 'Security Settings' : 'v2.0-be/settings/security.md'
         - Backup and Restore:
           - 'Backup': 'v2.0-be/backup/backup.md'
           - 'Restore': 'v2.0-be/backup/restore.md'          
