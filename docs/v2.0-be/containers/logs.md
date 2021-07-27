@@ -6,11 +6,11 @@ Viewing container logs is one of the most important features for troubleshooting
 
 To view a container logs, click <b>Containers</b> and then select your container. 
 
-![logs](assets/inspect-1.png)
+![logs](assets/logs-1.png)
 
 Then click <b>Logs</b>
 
-![logs](assets/logs-1.png)
+![logs](assets/logs-2.png)
 
 In the following screen, you will see a few options:
 
@@ -22,7 +22,7 @@ In the following screen, you will see a few options:
 * Lines: Specify how many lines you want to the see in the logs; default is 100. 
 * Actions: You can copy all the logs displayed or a select number of lines.
 
-![logs](assets/logs-2.png)
+![logs](assets/logs-3.png)
 
 ## :material-note-text: Notes
 
