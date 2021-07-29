@@ -356,7 +356,7 @@ plugins:
             'v2.0-be/deploy/linux.md': 'quickstart.md'
             'v2.0-be/deploy/windows10.md': 'quickstart.md'
             'v2.0-be/deploy/windowsserver.md': 'quickstart.md'
-            'api.md': 'api/api-schema.md'
+            'api.md': 'api/api-schema-ce.md'
             'api/api-schema.md': 'api/api-schema-ce.md'
 
 extra:
