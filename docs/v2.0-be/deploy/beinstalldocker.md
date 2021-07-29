@@ -32,13 +32,13 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         docker volume create portainer_data
         ```
         ```shell
-         docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
+         docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:2.7.0
         ```
         
         ### Portainer Agent Only Deployment
         Run the following command to deploy the Agent in your Docker host.
         ```shell
-        docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.0.0
+        docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.7.0
         ```
 
 === "Docker on Windows WSL / Docker Desktop"
@@ -53,14 +53,14 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         ```
 
         ```shell
-         docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
+         docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:2.7.0
         ```
 
         ### Portainer Agent Only Deployment
         Run the following command to deploy the Agent in your Docker host.
 
         ```shell
-        docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.0.0
+        docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.7.0
         ```
 
 === "Docker on Windows Container Service"
@@ -111,7 +111,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         docker volume create portainer_data
         ```
         ```PowerShell
-         docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ee:latest
+         docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ee:2.7.0
         ```
 
         Now you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.
@@ -122,7 +122,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         To run Portainer Agent in a Windows Container scenario, you need to execute the following commands:
 
         ```PowerShell
-        docker run -d -p 9001:9001 --name portainer_agent --restart=always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent:2.0.0
+        docker run -d -p 9001:9001 --name portainer_agent --restart=always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent:2.7.0
         ```
 
 
@@ -180,7 +180,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         --replicas=1 \
         --constraint 'node.role == manager' \
         --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
-        portainer/portainer-ce \
+        portainer/portainer-ee:2.7.0 \
         --admin-password-file '/run/secrets/portainer-pass' \
         -H unix:///var/run/docker.sock
     ```

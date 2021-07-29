@@ -279,8 +279,11 @@ nav:
           - 'Browse a Registry' : 'v2.0-be/registries/browse.md'
           - 'Manage a Registry' : 'v2.0-be/registries/manage.md'        
     - API: 
-      - 'Documentation': 'api/api-schema.md'
       - 'Examples': 'api/api-examples.md'
+      - Community Edition:
+        - 'Documentation': 'api/api-schema-ce.md'
+      - Business Edition:
+        - 'Documentation': 'api/api-schema-be.md'
     - Upgrading Portainer:
       - 'Upgrade Path': 'upgrade.md'
       - 'Upgrade CE to Business': 'v2.0/upgrade/updBE.md'
@@ -354,6 +357,7 @@ plugins:
             'v2.0-be/deploy/windows10.md': 'quickstart.md'
             'v2.0-be/deploy/windowsserver.md': 'quickstart.md'
             'api.md': 'api/api-schema.md'
+            'api/api-schema.md': 'api/api-schema-ce.md'
 
 extra:
   analytics:
