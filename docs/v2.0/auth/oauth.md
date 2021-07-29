@@ -11,7 +11,7 @@ Once you logged to Portainer, click in <b>Settings</b> and then in <b>authentica
 In this screen, you need to fill in the details using the details provided by your OAuth provider. The fields are:
 
 * Use SSO: Using SSO, the OAuth provider is not forced to prompt for credentials when the user has a currently logged in session.
-* Automatic User Provisioning: Toggle on the Automatic User Provisioning to see the options. You can use this option if you want a user added to Portainer for each OAuth useron first login. After enabling the toggle, you may choose a team for these Auto Populated Users. 
+* Automatic User Provisioning: Toggle on the Automatic User Provisioning to see the options. You can use this option if you want a user added to Portainer for each OAuth user on first login. After enabling the toggle, you may choose a team for these Auto Populated Users. 
 
 ![oauth](assets/oauth_2.png)
 
@@ -29,7 +29,7 @@ Once that all fields are completed, do a click in <b>Save Settings</b>
 
 ## Manage access to OAuth Team and Users
 
-To understand how to enable access to OAuth Teams and Users, please, refer to [this article](/v2.0/endpoints/access).
+To understand how to enable access to OAuth Teams and Users, please, refer to [this article](/v2.0/endpoints/access/).
 
 ## Examples
 

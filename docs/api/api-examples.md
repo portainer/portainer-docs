@@ -2,7 +2,7 @@
 
 Portainer exposes an HTTP API that you can use to automate everything you do via the Portainer UI. You may also use Portainer as a gateway (HTTP queries against the Portainer API) to the underlying Docker/Kubernetes API.
 
-!!! Note "API documentation is available [here](../api-schema/)"
+
 
 ## :octicons-code-review-16: Examples
 

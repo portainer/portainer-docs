@@ -62,7 +62,7 @@ Once that all fields are completed, click <b>Save Settings</b>
 
 ## Manage access to OAuth Team and Users
 
-To understand how to enable access to OAuth Teams and Users, please, refer to [this article](/v2.0-be/endpoints/access).
+To understand how to enable access to OAuth Teams and Users, please, refer to [this article](/v2.0-be/endpoints/access/).
 
 ## :material-note-text: Notes
 
