@@ -12,7 +12,7 @@ Edge stacks lets you deploy an app to all selected edge endpoints concurrently, 
 
 Next 1. <b>Name</b> your stack and 2. select one or more <b>Edge Groups</b>.
 
-3. In the <b>Build Methond</b> you need to define how to deploy your app from one of these options:
+3. In the <b>Build Method</b> you need to define how to deploy your app from one of these options:
 
 * Web Editor: You can use our web editor to write or paste a docker-compose file. 
 * Upload: Upload a docker-compose.yml file from your computer

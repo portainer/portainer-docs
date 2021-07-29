@@ -1,6 +1,9 @@
 # Enable Host Management features
 
-From Portainer, you can enable Host Management Features. The benefit of enabling this setting is to do Host system browsing, understand what PCI devices, and physical disk are present in the node.
+From Portainer, you can enable Host Management Features. The benefit of enabling this setting is to enable host system browsing and the ability to interact directly with PCI devices and physical disks on the node.
+
+!!! warning
+    This is a powerful and therefore dangerous feature. Please consider whether you need this functionality before enabling it.
 
 To get access to this data from Portainer, you need to run the agent with the following environment variable <code>CAP_HOST_MANAGEMENT: 1</code>.
 
@@ -11,14 +14,14 @@ The following features are disabled by default for security reasons:
 
 In order to enable these features, the agent must be configured properly by:
 
-* Enabling the host management features via the CAP_HOST_MANAGEMENT environment variable
-* Bind-mounting the root of the host in the agent container (must be bind-mounted in /host)
+* Enabling the host management features via the `CAP_HOST_MANAGEMENT` environment variable
+* Bind-mounting the root of the host in the agent container (must be bind-mounted in `/host`)
 
 ## Deploy Portainer Agent
 
 ### Docker Swarm
 
-To deploy a new agent with this setting enable, you must run the following:
+To deploy a new agent with this setting enabled, you can run the following:
 
 <pre><code>docker service create --name portainer_agent --network portainer_agent_network --publish mode=host,target=9001,published=9001 -e AGENT_CLUSTER_ADDR=tasks.portainer_agent -e CAP_HOST_MANAGEMENT=1 --mode global --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes --mount type=bind,src=/,dst=/host portainer/agent</code></pre>
 
@@ -53,6 +56,12 @@ networks:
     driver: overlay
     attachable: true
 </code></pre>.
+
+## Enable Host Management in Portainer
+
+Once the agent has been deployed with the necessary settings to enable host management, you can enable this functionality within Portainer under <b>Host</b>, <b>Setup</b> (or <b>Swarm</b>, <b>Setup</b> if you are using Docker Swarm):
+
+![security](assets/host_management.png)
 
 ## :material-note-text: Notes
 
