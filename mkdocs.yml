@@ -103,13 +103,13 @@ nav:
           - 'Connect to a Registry' : 'v2.0-be/registries/connect.md'
           - 'Enable Docker Hub Authentication' : 'v2.0-be/registries/auth-docker-hub.md'
         - Configuring Settings:
-          - 'Enable use of external load balancer' : 'v2.0-be/settings/lb.md'
-          - 'Allow/Disallow over-commitment of resources' : 'v2.0-be/settings/overcommit.md'
-          - 'Limit usage of default namespace' : 'v2.0-be/settings/namespaces.md'
-          - 'Security Options' : 'v2.0-be/settings/security.md'
-          - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
           - 'App Templates' : 'v2.0-be/settings/apps.md'
+          - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
+          - 'K8s: Enable use of external load balancer' : 'v2.0-be/settings/lb.md'
+          - 'K8s: Limit usage of default namespace' : 'v2.0-be/settings/namespaces.md'
+          - 'K8s: Allow/Disallow over-commitment of resources' : 'v2.0-be/settings/overcommit.md'
           - 'Enable Host Management Features' : 'v2.0-be/settings/host_management.md'
+          - 'Security Settings' : 'v2.0-be/settings/security.md'
         - Backup and Restore:
           - 'Backup': 'v2.0-be/backup/backup.md'
           - 'Restore': 'v2.0-be/backup/restore.md'          
@@ -127,7 +127,7 @@ nav:
             - 'Add/Create a Stack' : 'v2.0/stacks/create.md'
             - 'Create a template from a Stack' : 'v2.0/stacks/template.md'
             - 'Duplicate / Migrate Stacks' : 'v2.0/stacks/duplicate_migration.md'
-            - 'Inspect a Stack' : 'v2.0/stacks/inspect.md'
+            - 'Edit/Inspect a Stack' : 'v2.0/stacks/inspect.md'
           - 'Webhooks':
             - 'Configure a Webhook' : 'v2.0/webhooks/create.md'
           - 'Containers':
@@ -202,9 +202,9 @@ nav:
         - Docker & Docker Swarm:
           - 'Stacks':
             - 'Add/Create a Stack' : 'v2.0-be/stacks/create.md'
+            - 'Edit/Inspect a Stack' : 'v2.0-be/stacks/inspect.md'
             - 'Create a template from a Stack' : 'v2.0-be/stacks/template.md'
             - 'Duplicate / Migrate Stacks' : 'v2.0-be/stacks/duplicate_migration.md'
-            - 'Inspect a Stack' : 'v2.0-be/stacks/inspect.md'
           - 'Webhooks':
             - 'Configure a Webhook' : 'v2.0-be/webhooks/create.md'
           - 'Containers':

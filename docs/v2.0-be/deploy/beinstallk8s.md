@@ -57,8 +57,7 @@ Alternatively, if installing using our helm chart you can add the following opti
 === "Deploy using Helm"
     !!! Abstract ""
         ### :fontawesome-solid-server: Portainer Server Deployment
-        Ensure you're using at least helm v3.2, which [includes support](https://github.com/helm/helm/pull/7648) for the `--create-namespace` argument.
-
+        Ensure you're using at least Helm v3.2, which [includes support](https://github.com/helm/helm/pull/7648) for the `--create-namespace` argument.
 
         First, add the Portainer helm repo running the following:
         
@@ -70,7 +69,7 @@ Alternatively, if installing using our helm chart you can add the following opti
         helm repo update
         ```
         
-        Based on how you would like expose Portainer Service, Select an option below
+        Based on how you would like to expose the Portainer service, select an option below:
     
         === "NodePort"
             Using the following command, Portainer will be available on port 30777.
@@ -81,7 +80,7 @@ Alternatively, if installing using our helm chart you can add the following opti
             ```
 
         === "Ingress"
-            Using the following command, Poratainer service will be assigned a Cluster IP. You should use this with an Ingress, see Chart Configuration Options for Ingress related options. 
+            Using the following command, the Portainer service will be assigned a Cluster IP. You should use this with an Ingress, see Chart Configuration Options for Ingress related options. 
 
             ```shell
             helm install --create-namespace -n portainer portainer portainer/portainer \
@@ -147,13 +146,13 @@ Alternatively, if installing using our helm chart you can add the following opti
         
         ### :fontawesome-solid-laptop: Portainer Agent Only Deployment
 
-        Helm chart for Agent Only Deployments will be available soon.
-        In the mean time please head over to YAML Manifests tab.
+        Helm charts for Agent Only Deployments will be available soon.
+        In the meantime please head over to YAML Manifests tab.
 
 === "Deploy using YAML Manifests"
     !!! Abstract ""
         ### :fontawesome-solid-server: Portainer Server Deployment
-        Based on how you would like expose Portainer Service, Select an option below
+        Based on how you would like to expose the Portainer Service, select an option below:
 
         === "NodePort"
             Using the following command, Portainer will be available on port 30777.
@@ -252,7 +251,7 @@ Alternatively, if installing using our helm chart you can add the following opti
 ???+ Tip "Regarding Persisting Data"
     The charts/manifests will create a persistent volume for storing Portainer data, using the default StorageClass.
 
-    In some Kubernetes clusters (microk8s), the default Storage Class simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.
+    In some Kubernetes clusters (for example microk8s), the default StorageClass simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.
 
     While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the Portainer pod to a particular node.
 
@@ -262,7 +261,7 @@ Alternatively, if installing using our helm chart you can add the following opti
 
             nodeSelector: kubernetes.io/hostname: \<YOUR NODE NAME>
 
-    2. Explicitly set the target node when deploying/updating the helm chart on the CLI, by including `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>`
+    2. Explicitly set the target node when deploying/updating the Helm chart on the CLI, by including `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>`
     
     3. If you've deployed Portainer via manifests, without Helm, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
 

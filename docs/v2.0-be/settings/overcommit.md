@@ -1,26 +1,27 @@
 # Over Commitment of Resources (Kubernetes Only)
 
-With Portainer Business Edition, you can use your resources on full where are most needed. You can configure more resources to namespaces than is physically available in the cluster.
+With Portainer you can use your resources to the fullest extent and where they are most needed. You can allocate more resources to namespaces than are physically available in the cluster.
 
-<b>Important</b>: By ENABLING resource over-commit, you are able to assign more resources to namespaces than is physically available in the cluster. This may lead to unexpected deployment failures if there is insufficient resources to service demand. By DISABLING resource over-commit (highly recommended), you are only able to assign resources to namespaces that are less (in aggregate) than the cluster total minus any system resource reservation.
+!!! warning
+    By <b>enabling</b> resource over-commit, you are able to assign more resources to namespaces than are physically available in the cluster. This may lead to unexpected deployment failures if there are insufficient resources to service demand. By <b>disabling</b> resource over-commit (highly recommended), you are only able to assign resources to namespaces that are less (in aggregate) than the cluster total minus any system resource reservation.
 
 ## Enabling Over Commitment of Resources
 
-To do this, you need to open Portainer Business Edition, go to <b>Cluster</b> and then to <b>Setup</b>. After that, you need to enable the toggle <b>Allow resource over-commit</b>.
+To enable resource over-commit, go to <b>Cluster</b> and then to <b>Setup</b>. Then enable the toggle <b>Allow resource over-commit</b>.
 
 ![namespace](assets/over.png)
 
-After you enabled the toggle, scroll down and click <b>Save Configuration</b>.
+Then scroll down and click <b>Save Configuration</b>.
 
 ![namespace](assets/save_conf.png)
 
 ## Disabling Over Commitment of Resources
 
-When you disable the Over Commitment of resources, you can reserve a system resource reservation percentage. To do this, you need to open Portainer Business Edition, go to <b>Cluster</b> and then to <b>Setup</b>. After that, you need to disable the toggle <b>Allow resource over-commit</b>, you cam then do a reservation of resources. Insert the percentage of the resources you want to reserve...
+When you disable the over commitment of resources, you can set a system resource reservation percentage. To do this, go to <b>Cluster</b> and then to <b>Setup</b>, then disable the toggle <b>Allow resource over-commit</b>. Once this is done you will be able to define a reservation of resources:
 
 ![namespace](assets/reserve.png)
 
-After you disabled the toggle, scroll down and click <b>Save Configuration</b>.
+Once you've made the necessary changes, scroll down and click <b>Save Configuration</b>.
 
 ![namespace](assets/save_conf.png)
 

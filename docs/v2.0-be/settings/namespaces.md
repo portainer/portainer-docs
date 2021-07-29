@@ -1,18 +1,18 @@
 # Limit usage of "default" Kubernetes Namespace (Kubernetes Only)
 
-By default, a Kubernetes cluster will instantiate a default namespace when provisioning the cluster to hold the default set of Pods, Services, and Deployments used by the cluster but for an any reason, you want to limitate the usage of that namespace, with Portainer Business Edition, you can do it. 
+By default, a Kubernetes cluster will instantiate a default namespace when provisioning the cluster to hold the default set of Pods, Services, and Deployments used by the cluster. If you would like to limit the usage of that namespace, you can do so with Portainer. 
 
 ## Limiting the usage of "default" namespace
 
-To do this, you need to open Portainer Business Edition, go to <b>Cluster</b> and the to <b>Setup</b>. After that, you need to enable the toggle <b>Restrict access to the default namespace</b>.
+To do this, go to <b>Cluster</b> and then to <b>Setup</b>, then enable the toggle <b>Restrict access to the default namespace</b>.
 
 ![namespace](assets/namespaces.png)
 
-After you enabled the toggle, scroll down and click <b>Save Configuration</b>.
+Then scroll down and click <b>Save Configuration</b>.
 
 ![namespace](assets/save_conf.png)
 
-Starting now, the only user with the power to run applications in the default namespace is the Administrator of Portainer. 
+With this enabled, the only users with the power to run applications in the default namespace are Portainer Administrator users. 
 
 ## :material-note-text: Notes
 

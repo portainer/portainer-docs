@@ -1,6 +1,6 @@
 # Add / Connect a new registry
 
-Portainer can connect to many of the well-known registries including Quay.io, Azure Container Registry, Gitlab Container Registry, and a Custom Registry.
+Portainer can connect to many of the well-known registries including Quay.io, ProGet, Azure Container Registry, Gitlab Container Registry, and a Custom Registry.
 ## Quay.io
 
 To connect to a Quay registry, go to <b>Registries</b> and then <b>Add Registry</b>
@@ -11,6 +11,15 @@ In the next screen, choose <b>Quay.io</b> and enter your <b>Username</b> and <b>
 
 ![registries](assets/quay.png)
 
+## ProGet
+
+To connect to a ProGet registry, go to <b>Registries</b> and then <b>Add Registry</b>
+
+![registries](assets/registry1.png)
+
+In the next screen, choose <b>ProGet</b> and enter the registry <b>Name</b>, <b>Registry URL</b>, the <b>Base URL</b> of the ProGet registry, your <b>Username</b> and <b>Password</b>, then click <b>Add registry</b>.
+
+![registries](assets/proget.png)
 
 ## Azure Container Registry
 

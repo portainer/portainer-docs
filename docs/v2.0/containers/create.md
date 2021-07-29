@@ -11,15 +11,16 @@ First select the <b>Endpoint</b> you want to add a container to, then select <b>
 
 Add details to your container:
 
-* Name: Friendly name for your container
+* <b>Name</b>: Friendly name for your container
 
-* Registry: Where your image is hosted
+* <b>Registry</b>: Where your image is hosted  
+  Note: when using DockerHub you can use the Search button to search for the image you have entered to ensure you have the correct name and tag. Portainer also displays the number of pulls remaining for your DockerHub account when using an anonymous account.
 
-* Image: The name of the image you want to deploy
+* <b>Image</b>: The name of the image you want to deploy
 
-* Ports: Expose the desired ports
+* <b>Ports</b>: Expose the desired ports
 
-* Advanced Settings: Many options available here to customise the deploymeny from volume and environment configuration to capabilities
+* <b>Advanced Settings</b>: Many options available here to customise the deployment from volume and environment configuration to capabilities
 
 Once complete, click <b>Deploy the Container<b/>. 
 ![container](assets/create_2.png)
