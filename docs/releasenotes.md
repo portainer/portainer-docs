@@ -103,6 +103,11 @@ Read about the new and enhanced features in our latest releases here.
         * Fixed issue where webpack complains about chardet source maps
         * Fixed issue where babel complains about missing core-js dependency
 
+        #### Known Issues
+        * Logging into Portainer as a Standard User fails to load home page when using 'microk8s v1.21.3-3+6343a564e351b0'
+        * Host Management features do not work on Windows Hosts [#4450](https://github.com/portainer/portainer/issues/4450)
+        * Host Browser function does not work for Non-Admin users.
+
     ???- Note "Release 2.4"
         #### Kubernetes​
         * Pods without workloads are now displayed as applications
