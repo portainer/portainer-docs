@@ -98,6 +98,7 @@ nav:
           - 'Add a User to a Team' : 'v2.0-be/users/user-team.md'
           - 'Reset User Password' : 'v2.0-be/users/reset-user.md'
           - 'Reset Administrator Password' : 'v2.0-be/users/reset-admin.md'
+          - 'K8s: Roles and Bindings' : 'v2.0-be/users/k8s-roles.md'
         - Registries:
           - 'Registry Management Overview' : 'v2.0-be/registries/description.md'
           - 'Connect to a Registry' : 'v2.0-be/registries/connect.md'

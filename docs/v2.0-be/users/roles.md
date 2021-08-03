@@ -23,17 +23,23 @@ Portainer Business come with Role-Based Access Control features that refines the
 
 There are several types of roles:
 
-* Endpoint Administrator: has complete control over the resources deployed within a given endpoint, but is not able to make any changes to the infrastructure that underpins an endpoint (i.e. no host management), nor are they able to make any changes to Portainer internal settings.
+* <b>Endpoint Administrator</b> has complete control over the resources deployed within a given endpoint, but is not able to make any changes to the infrastructure that underpins an endpoint (i.e. no host management), nor are they able to make any changes to Portainer internal settings.
 
-* Operator: has operational control over the resources deployed within a given endpoint. Operator is able to Update/Re-deploy/Start/Stop Containers/Services, check logs and console into containers but is not able to create any resources.
+* <b>Operator</b> has operational control over the resources deployed within a given endpoint. Operator is able to Update/Re-deploy/Start/Stop Containers/Services, check logs and console into containers but is not able to create any resources.
 
-* Helpdesk: has read-only access over the resources deployed within a given endpoint but is not able to make any changes to any resource, nor open a console to a container, or make changes to a container’s volumes.
+* <b>Helpdesk</b> has read-only access over the resources deployed within a given endpoint but is not able to make any changes to any resource, nor open a console to a container, or make changes to a container’s volumes.
 
-* Standard User: has complete control over the resources that a user deploys, or if the user is a member of a team, complete control over the resources that users of that team deploy.
+* <b>Standard User</b> has complete control over the resources that a user deploys, or if the user is a member of a team, complete control over the resources that users of that team deploy.
 
-* Read-Only User: has read-only access over the resources they are entitled to see (resources created by members of their team, and public resources).
+* <b>Read-Only User</b> has read-only access over the resources they are entitled to see (resources created by members of their team, and public resources).
 
-* The Administrator role sits outside of these four roles, and effectively acts as a “Global Admin”. A user assigned this role has complete control over Portainer settings, and all resources on every endpoint under Portainer control.
+The <b>Administrator</b> role sits outside of these four roles, and effectively acts as a “Global Admin”. A user assigned this role has complete control over Portainer settings, and all resources on every endpoint under Portainer control.
+
+## Docker vs Kubernetes
+
+As Docker does not natively provide role-based access control, Portainer implements our own role management to provide this functionality. On a Kubernetes environment, we leverage the RBAC functionality built into Kubernetes alongside our own role management to provide security and flexibility to roles and access.
+
+For more advanced details on how we map Portainer roles to Kubernetes roles, refer to our [Roles and Bindings](/v2.0-be/users/k8s-roles/) documentation.
 
 <br>
 ## :material-note-text: Notes
