@@ -33,7 +33,7 @@ Template type, valid values are: 1 (container), 2 (Swarm stack) or 3 (Compose st
 
 This field is <b>mandatory.</b>
 
-### type
+### title
 
 Title of the template.
 
