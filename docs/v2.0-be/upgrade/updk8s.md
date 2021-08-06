@@ -17,7 +17,7 @@ helm repo update
 
 Run the command below to upgrade to latest version of Portainer
 ```shell
-helm upgrade -n portainer portainer portainer/portainer --reuse-values
+helm upgrade -n portainer portainer portainer/portainer
 ```
 
 ## Using YAML Manifest
