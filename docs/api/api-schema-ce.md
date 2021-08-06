@@ -4,7 +4,7 @@ Portainer exposes an HTTP API that you can use to automate everything you do via
 
 !!! Note "API examples are [here](../api-examples/)"
 
-!!swagger api-2.6.json!!
+!!swagger api-2.6.2.json!!
 
 <br>
 
