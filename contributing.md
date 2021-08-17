@@ -1,6 +1,6 @@
 # Contributing to Portainer Documentation
 
-We aspire to have all Portainer documentation in one easily accessible location, for past and current releases. To see the live version of these docs, please visit our [documentation site] (https://documentation.portainer.io).
+We aspire to have all Portainer documentation in one easily accessible location, for past and current releases. To see the live version of these docs, please visit our [documentation site](https://documentation.portainer.io).
 
 ## To Suggest Updates
 
@@ -48,7 +48,7 @@ Screenshots are welcome. Make sure that you're using the version of Portainer of
 
 ### Doubts and questions.
 
-We're thankful for your contributions; if you have any questions or concerns please feel free to open an issue, contact us via our [slack channel] (https://portainer.slack.com). 
+We're thankful for your contributions; if you have any questions or concerns please feel free to open an issue, contact us via our [slack channel](https://portainer.slack.com). 
 
 #### Doc Contributions
 
