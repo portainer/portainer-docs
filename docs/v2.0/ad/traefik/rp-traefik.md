@@ -176,7 +176,7 @@ networks:
     external: true
 
 volumes:
-   data:
+   portainer_data:
 </code></pre>
 
 4. Before you can deploy, you need to customize this labels to match with the URL that you want. 
