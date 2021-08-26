@@ -6,6 +6,8 @@ Portainer allows you to create/build new images from a friendly UI. You can defi
 * Upload: If you already have a dockerfile, you can upload to Portainer to build that image.
 * URL: If the dockerfile is hosted in Internet, you can download directly to Portainer and build the image.
 
+!!! note
+    On a multi-node environment, the image you build will only be available on the node you choose under Deployment. If you wish to make the image available to all nodes, consider [adding a registry](/v2.0/registries/connect/) to Portainer.
 ## Building an Image using our web editor
 
 Go to <b>Images</b> and click <b>Build a new image</b>.
