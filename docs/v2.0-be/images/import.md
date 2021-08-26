@@ -2,6 +2,8 @@
 
 Portainer allows you to import the images that you have created in another Portainer instance or in the CLI of Docker and Docker Swarm.
 
+!!! note
+    On a multi-node environment, the image you import will only be available on the node you choose under Deployment. If you wish to make the image available to all nodes, consider [adding a registry](/v2.0-be/registries/connect/) to Portainer.
 ## Importing Images
 
 To import an image using Portainer, go to <b>Images</b> and then click <b>Import</b>.

@@ -2,6 +2,8 @@
 
 You can pull images from any registry already added to Portainer, see how to [add new registries](/v2.0/registries/connect/) to Portainer for more information. This option is currently only available, when you manage Docker and Docker Swarm environments.
 
+!!! note
+    On a multi-node environment, the image you pull will only be available on the node you choose under Deployment. If you wish to make the image available to all nodes, consider [adding a registry](/v2.0/registries/connect/) to Portainer.
 ## Pulling Images
 
 ### Pulling in Simple Mode
