@@ -3,7 +3,12 @@
 Volumes are used to make persistent storage that you can manage from Portainer. 
 Note: Creating a standalone volume is only supported in a Docker Swarm and Docker Standalone endpoints.
 
-## Creating a LOCAL volume
+* [Creating a local volume](#creating-a-local-volume)
+* [Creating an NFS volume](#creating-an-nfs-volume)
+* [Creating a CIFS volume](#creating-a-cifs-volume)
+* [Creating a tmpfs volume](#creating-a-tmpfs-volume)
+
+## Creating a local volume
 
 Click <b>Volumes</b> from the side menu and then click <b>Create Volume</b>.
 
@@ -67,6 +72,40 @@ In CIFS Settings section. You will find:
 When this is complete click <b>Create the Volume</b>.
 
 ![volumes](assets/create_5.png)
+
+## Creating a tmpfs volume
+
+To create a tmpfs volume within Portainer, go to <b>Volumes</b> and then click on <b>Create volume</b>.
+
+![volumes](assets/create_1.png)
+
+Complete the detail fields for this volume:
+
+* Name: Give your volume a descriptive name.
+* Driver configuration: 
+    * Driver: local
+    * Driver options: Click <b>add driver option</b> and add the following name/value combinations:
+        * name: <code>type</code>  
+          value: <code>tmpfs</code>
+        * name: <code>device</code>  
+          value: <code>tmpfs</code>
+        * name: <code>o</code>  
+          value: <code>size=100m,uid=1000</code>  (customize these values to suit your needs)
+
+![volumes](assets/create_tmpfs_1.png)
+
+* NFS: Leave this toggle off
+* CIFS: Leave this toggle off
+
+Once complete, click <b>Create the Volume</b>.
+
+This volume can now be attached to a container in the same way as any other volume:
+
+![volumes](assets/create_tmpfs_2.png)
+
+Once attached, you can confirm the tmpfs volume has been mounted correctly within the container:
+
+![volumes](assets/create_tmpfs_3.png)
 
 ## :material-note-text: Notes
 
