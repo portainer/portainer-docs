@@ -12,7 +12,8 @@ To try and alleviate confusion as to what we test against, we have documented th
 
 | Portainer Version        | Release Date   | Docker Version | Kubernetes* Version           | Architectures       | 
 |--------------------|--------------|----------------|--------------------|---------------|
-| Community 2.6.2 (latest) | August 02, 2021| 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
+| Community 2.6.3 (latest) | August 27, 2021| 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21 1.22        | ARM64, x86_64        |
+| Community 2.6.2          | August 02, 2021| 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
 | Community 2.6.1          | July 12, 2021  | 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
 | Community 2.6.0          | June 25, 2021  | 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
 | Community 2.5.1          | May 18, 2021   | 20.10.5 / 20.10.6        | 1.19 1.20.2 1.21             | ARM64, x86_64        |
