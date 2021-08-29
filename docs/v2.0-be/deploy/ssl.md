@@ -4,9 +4,32 @@ By default, Portainer’s web interface and API is exposed over HTTP. This is no
 
 ## :fontawesome-solid-lock: Securing Portainer using SSL with Docker
 
-To do so, you can use the <code>--ssl</code>, <code>--sslcert</code> and <code>--sslkey</code> flags. Portainer expects certificates in PEM format.
+To do so, you can use the <code>--ssl</code>, <code>--sslcert</code> and <code>--sslkey</code> flags. Portainer expects certificates in PEM format. 
 
-<pre><code>$ docker run -d -p 443:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v ~/local-certs:/certs -v portainer_data:/data portainer/portainer-ee:latest --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key</code></pre>
+To generate and use a self-signed certificate you can use the following command on your server:
+
+<pre><code>openssl req -x509 -newkey rsa:4096 -keyout ~/local-certs/portainer.key -out ~/local-certs/portainer.crt -days 365</code></pre>
+
+Then start Portainer referencing the certificate and key file you just created:
+
+<pre><code>docker run -d -p 443:9000 -p 8000:8000 \
+    --name portainer --restart always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer_data:/data \
+    -v ~/local-certs:/certs \
+    portainer/portainer-ee --ssl --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+</code></pre>
+
+Note that Certbot could be used as well to generate a certificate and a key. However, because Docker has issues with symlinks, if you use Certbot, you will need to pass both the "live" and "archive" directories as volumes (shown below).
+
+<pre><code>docker run -d -p 443:9000 -p 8000:8000 \
+    --name portainer --restart always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer-data:/data \
+    -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
+    -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
+    portainer/portainer-ee --ssl --sslcert /certs/live/yourdomain/cert.pem --sslkey /certs/live/yourdomain/privkey.pem
+</code></pre>
 
 Now, you can navigate to https://$ip-docker-host
 
