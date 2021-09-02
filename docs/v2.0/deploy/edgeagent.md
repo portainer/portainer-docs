@@ -5,6 +5,9 @@ With the new edge agent, we altered the architecture, so that rather than Portai
 
 For Edge Agent, Portainer now requires two tcp ports to be exposed; 9000, and 8000. 9000 has historically been the port we served the UI from as well as the Portainer API, but now we have extended the API so that the remote agents can poll for instructions. Port 8000 is a tls tunnel server and is used to create a secure tunnel between the agent and the Portainer instance.
 
+!!! warning
+    If your Portainer instance is deployed with TLS, the agent will use HTTPS for the connection it makes back to Portainer. However if your Portainer instance uses a self-signed certificate, the edge agent must be deployed with the `-e EDGE_INSECURE_POLL=1` flag. If you do not deploy the edge agent with this flag, then the agent will not be able to communicate with the Portainer instance.
+
 When you create an edge agent in Portainer, two things happen. First, you are prompted for the endpoint name (for us humans to use in the UI), and you are asked to confirm the FQDN:PORT of your Portainer instance. Be sure this is correct as its what your agents will use to connect (so make sure dns resolves etc).Second, we also dynamically generate an edge ID, which is a random UUID assigned to each endpoint. You can see this in the command syntax we provide for your convenience. Note the edge ID and the join token are unique per endpoint.
 
 ![EdgeAgent](assets/edge1.png)
