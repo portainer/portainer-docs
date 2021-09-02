@@ -8,7 +8,7 @@ To do so, you can use the <code>--ssl</code>, <code>--sslcert</code> and <code>-
 
 To generate and use a self-signed certificate you can use the following command on your server:
 
-<pre><code>openssl req -x509 -newkey rsa:4096 -keyout ~/local-certs/portainer.key -out ~/local-certs/portainer.crt -days 365</code></pre>
+<pre><code>openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -keyout ~/local-certs/portainer.key -out ~/local-certs/portainer.crt</code></pre>
 
 Then start Portainer referencing the certificate and key file you just created:
 
