@@ -6,6 +6,9 @@ By default, Portainer’s web interface and API is exposed over HTTP. This is no
 
 To do so, you can use the <code>--ssl</code>, <code>--sslcert</code> and <code>--sslkey</code> flags. Portainer expects certificates in PEM format. 
 
+!!! note
+    When using your own externally-issued certificate, ensure you include the full certificate chain (including any intermediate certificates) in the file you provide via `--sslcert`. Without this you may face certificate validation issues. Your certificate chain can be obtained from your certificate issuer or via the [What's My Chain Cert?](https://whatsmychaincert.com/) website.
+
 To generate and use a self-signed certificate you can use the following command on your server:
 
 <pre><code>openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -keyout ~/local-certs/portainer.key -out ~/local-certs/portainer.crt</code></pre>
