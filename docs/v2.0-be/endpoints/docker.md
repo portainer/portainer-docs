@@ -36,7 +36,7 @@ To connect directly to a Docker host API TLS: 1. Go to <b>Endpoints</b> and 2. C
 The next step is <b>choose the environment</b> type and select <b>Docker</b>. In the following section (Environment Details), you need to specify the following information:
 
 * Name: This is a descriptive name that will help you to identify this endpoint in the future.
-* Endpoint URL: Is the name or IP address to connect to the Docker Host. Don't forget to specify the port.
+* Endpoint URL: Is the name or IP address to connect to the Docker Host. Don't forget to specify the port. 
 * Public IP: URL or IP address where exposed containers will be reachable. This field is optional and will default to the endpoint URL.
 * TLS: Enable this option if you need to connect to the Docker endpoint with TLS.
 * TLS CA Certificate: Define your CA Cerficate.
