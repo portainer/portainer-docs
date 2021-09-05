@@ -1,6 +1,9 @@
 FAQ
 ===
 
+!!! warning
+    This documentation is for an older release of Portainer (1.23.2) and may be out of date. For up to date information please refer to the [most recent documentation](https://support.portainer.io).
+
 How do I reset my Portainer password?
 -------------------------------------
 

@@ -1,6 +1,10 @@
 Deployment
 ==========
 
+!!! warning
+    This documentation is for an older release of Portainer (1.23.2) and may be out of date. For up to date information please refer to the [most recent documentation](/v2.0/deploy/ceinstalldocker/).
+
+
 Portainer is built to run on Docker and is really simple to deploy.
 Portainer deployment scenarios can be executed on any platform unless
 specified.
