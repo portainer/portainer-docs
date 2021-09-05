@@ -1,6 +1,9 @@
 Configuration
 =============
 
+!!! warning
+    This documentation is for an older release of Portainer (1.23.2) and may be out of date. For up to date information please refer to the [most recent documentation](/v2.0/deploy/initial/).
+
 Portainer can be easily tuned using CLI flags.
 
 Admin password
@@ -14,7 +17,7 @@ encrypted password first.
 
 You can generate the encrypted password with the following command:
 
-<pre><code>$ htpasswd -nb -B admin <password> | cut -d ":" -f 2</code></pre>
+<pre><code>$ htpasswd -nbB admin "password" | cut -d ":" -f 2</code></pre>
 
 or if your system does not provide htpasswd you can use a docker
 container with the command:

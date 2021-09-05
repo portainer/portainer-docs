@@ -1,6 +1,6 @@
 # How to deploy a stack from a template
 
-Portainer allows you to deploy an entire stack from a template from the template list which includes default and custom templates. Also see [creating a template from a Stack](/v2.0/stacks/template).
+Portainer allows you to deploy an entire stack from a template from the template list which includes default and custom templates. Also see [creating a template from a Stack](/v2.0/stacks/template/).
 
 ## Deploying an Stack
 
