@@ -471,7 +471,7 @@ This field is <b>optional</b>.
 
 ## Build and host your own templates
 
-The simplest way to use your own templates is to bind mount your own template file directly into the Portainer container, see Configuration.
+The simplest way to specify an URL where the template file can be accessed, see [Use your own templates](../deploy/ceinstalldocker.md#use-your-own-templates).
 
 You can also build your own container that will use Nginx to serve the templates definitions.
 
