@@ -19,14 +19,15 @@ The [issues](https://github.com/portainer/portainer-docs/issues) of this repo is
 
    The Portainer Documentation uses [MkDocs](https://www.mkdocs.org/). MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file. Install MkDocs using the following [installation guide](https://www.mkdocs.org/#installation)
 
-3. **Install Material Theme**
+3. **Install Extensions and Plugins**
 
-   <code>pip install mkdocs-material</code>
+   * <code>pip install fontawesome-markdown</code>
+   * <code>pip install mkdocs-material</code>
+   * <code>pip install mkdocs-render-swagger-plugin</code>
+   * <code>pip install mkdocs-redirects</code>
 
 4. **Start MkDocs Server**
 
    Multiple sites are hosted in this repository, if you are contributing for v2.0, navigate to the folder `v2.0` and start MkDocs Server running:
 
    <code>mkdocs serve</code>
-
-
