@@ -2,7 +2,7 @@
 
 ### Deploying in a Docker Standalone scenario
 
-To deploy Portainer behind NGINX Proxy in a Docker standalone scenario we will use a Docker Compose file. In the following docker-compose.yml you will find the configuration of the Portainer Server and NGINX Proxy.
+To deploy Portainer behind NGINX Proxy in a Docker standalone scenario we will use a Docker Compose file. In the following docker-compose.yml you will find the configuration of the Portainer Server and [nginx-proxy](https://hub.docker.com/r/jwilder/nginx-proxy).
 
 <pre><code>
 version: "2"
@@ -11,20 +11,15 @@ services:
   nginx-proxy:
     image: jwilder/nginx-proxy
     restart: always
-    networks:
-      - proxy
     ports:
       - "80:80"
     volumes:
       - "/var/run/docker.sock:/tmp/docker.sock:ro"
-      - "./vhost.d:/etc/nginx/vhost.d:ro"
 
   portainer:
-    image: portainer/portainer-ce:2.0.0
+    image: portainer/portainer-ce
     command: -H unix:///var/run/docker.sock
     restart: always
-    networks:
-      - proxy
     environment:
       - VIRTUAL_HOST=portainer.yourdomain.com
       - VIRTUAL_PORT=9000
@@ -33,9 +28,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-
-networks:
-  proxy:
 
 volumes:
   portainer_data:
@@ -48,8 +40,8 @@ To setup and start working with this recipe, you need to change the VIRTUAL_HOST
 Once complete, you will able to run <code> docker ps</code> and you will see an output similar to this:
 
 <pre><code>CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                              NAMES
-088da047e931        portainer/portainer-ce:2.0.0   "/portainer -H unix:…"   32 minutes ago       Up 22 minutes        0.0.0.0:8000->8000/tcp, 9000/tcp   nginx-port_portainer_1
-1ec0594f8a01        jwilder/nginx-proxy            "/app/docker-entrypo…"   32 minutes ago      Up 22 minutes       0.0.0.0:80->80/tcp                 nginx-port_nginx-proxy_1</code></pre>
+088da047e931        portainer/portainer-ce         "/portainer -H unix:…"   32 minutes ago      Up 22 minutes       0.0.0.0:8000->8000/tcp, 9000/tcp   portainer_portainer_1
+1ec0594f8a01        jwilder/nginx-proxy            "/app/docker-entrypo…"   32 minutes ago      Up 22 minutes       0.0.0.0:80->80/tcp                 portainer_nginx-proxy_1</code></pre>
 
 Once the deployment is complete you can browse <code>portainer.yourdomain.com</code>.
 
@@ -105,7 +97,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ce:2.0.0
+    image: portainer/portainer-ce
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data
@@ -144,7 +136,7 @@ volumes:
 <pre><code>ID                  NAME                    MODE                REPLICAS            IMAGE                          PORTS
 gy2bjxid0g4p        portainer_agent         global              1/1                 portainer/agent:latest
 jwvjp5bux4sz        portainer_nginx-proxy   replicated          1/1                 jwilder/nginx-proxy:latest     *:80->80/tcp
-5nflcvoxl3c7        portainer_portainer     replicated          1/1                 portainer/portainer-ce:2.0.0   *:8000->8000/tcp</code></pre>
+5nflcvoxl3c7        portainer_portainer     replicated          1/1                 portainer/portainer-ce         *:8000->8000/tcp</code></pre>
 
 Once the services are running, you can browse the url specified (e.g. portainer.yourdomain.com) to access Portainer.
 
