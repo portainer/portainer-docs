@@ -6,8 +6,6 @@ If you want to add another environment to your existing Portainer installation, 
 
 {% page-ref page="swarm/" %}
 
-{% page-ref page="kubernetes/" %}
-
 {% page-ref page="aci.md" %}
 
 {% page-ref page="edge.md" %}

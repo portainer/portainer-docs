@@ -6,5 +6,3 @@ Installation instructions can differ between platforms. Please choose your platf
 
 {% page-ref page="wsl.md" %}
 
-
-
