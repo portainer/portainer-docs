@@ -1,7 +1,7 @@
 # Welcome
 
 {% hint style="warning" %}
-Welcome to **Release 2.9.0** of Portainer Community Edition. This is part one of a two part release, with the second part \(2.9.1\) coming in mid-October. You are welcome to install 2.9.0, however please be aware a number of the new features, particularly those relating to Kubernetes, are not complete. If you choose to download, we would like to know what you think - please get in touch via the [Portainer Slack channel](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/). You will get an in-app notification when 2.9.1 is released.
+Welcome to **Release 2.9.0** of Portainer Community Edition. This is part one of a two part release, with the second part \(2.9.1\) coming in mid-October. You are welcome to install 2.9.0, however please be aware a number of the new features, particularly those relating to Kubernetes, are not complete. If you choose to download, we would like to know what you think - please get in touch via the [Portainer Slack channel](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/). You will get an in-app notification when version 2.9.1 is released.
 {% endhint %}
 
 Welcome to Portainer's official documentation site. Ours is an open source project and all community contributions are welcome and encouraged. If you're thinking about contributing to Portainer documentation, first read our [contribution guidelines](contribute/contribute.md).
