@@ -195,6 +195,7 @@
   * [Why can't I find images in my private registry on Kubernetes?](faq/troubleshooting/why-cant-i-find-images-in-my-private-registry-on-kubernetes.md)
   * [Can you view deleted container logs in Portainer?](faq/troubleshooting/can-you-view-deleted-container-logs-in-portainer.md)
   * [Exposed ports in the container view redirect me to 0.0.0.0. What can I do?](faq/troubleshooting/exposed-ports-in-the-container-view-redirect-me-to-0.0.0.0-what-can-i-do.md)
+  * [How can I get the logs for Portainer itself?](faq/troubleshooting/how-can-i-get-the-logs-for-portainer-itself.md)
   * [How do I reset my Portainer password?](faq/troubleshooting/how-do-i-reset-my-portainer-password.md)
 * [Contributing](faq/contributing/README.md)
   * [How do I report a bug?](faq/contributing/how-do-i-report-a-bug.md)
