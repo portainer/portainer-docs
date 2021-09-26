@@ -54,8 +54,8 @@ docker network create --driver overlay portainer
 To create the secrets:
 
 ```text
-docker secret create portainer.example.cer portainer.example.cert
-docker secret create portainer.example.key portainer.example.key
+docker secret create portainer.example.com.cer portainer.example.com.cert
+docker secret create portainer.example.com.key portainer.example.com.key
 ```
 
 See Docker's own official documentation for more information about [networks](https://docs.docker.com/engine/reference/commandline/network_create/) and [secrets](https://docs.docker.com/compose/compose-file/#secrets).
