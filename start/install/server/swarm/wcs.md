@@ -50,7 +50,7 @@ Portainer can be directly deployed as a service in your Docker cluster. Note tha
 You can use our YML manifest to run Portainer in Windows using Windows Containers. In PowerShell, run:
 
 ```bash
-curl https://downloads.portainer.io/CE2.9/portainer-windows-stack.yml `
+curl https://downloads.portainer.io/portainer_windows_stack.yml `
     -o portainer-windows-stack.yml
 ```
 

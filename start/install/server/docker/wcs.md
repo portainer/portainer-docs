@@ -52,7 +52,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer `
     --restart always `
     -v \.\pipe\docker_engine:\.\pipe\docker_engine `
     -v portainer_data:C:\data `
-    portainer/portainer-ce:2.9.0
+    portainer/portainer-ce:latest
 ```
 
 {% hint style="info" %}

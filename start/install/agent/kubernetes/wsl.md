@@ -31,7 +31,7 @@ Based on how you would like expose the Portainer Agent, select an option below:
 Using the following command, the Portainer Agent will be available on port `30778`.
 
 ```text
-kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-agent-k8s-nodeport.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
 ```
 {% endtab %}
 
@@ -39,7 +39,7 @@ kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-age
 Using the following command, the Portainer Agent will be available at an assigned Load Balancer IP at port `9001`.
 
 ```text
-kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-agent-k8s-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
 ```
 {% endtab %}
 {% endtabs %}

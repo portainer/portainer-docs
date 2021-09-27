@@ -38,7 +38,7 @@ The Portainer Server requires persistent storage in order to maintain the databa
 
 ## Ports
 
-In order to access the UI and API, and for the Portainer Server instance and the Portainer Agents to communicate, certain ports need to be accessible. The Portainer Server listens on port `9000` for the UI and API \(or on `30777` for Kubernetes with NodePort\) and exposes a TCP tunnel server on port `8000` \(this second port is optional and only required if using Edge Compute features with Edge Agents\). The Portainer Agents listen on port `9001` \(or `30778` for Kubernetes with NodePort\).
+In order to access the UI and API, and for the Portainer Server instance and the Portainer Agents to communicate, certain ports need to be accessible. The Portainer Server listens on port `9443` for the UI and API \(or on `30779` for Kubernetes with NodePort\) and exposes a TCP tunnel server on port `8000` \(this second port is optional and only required if using Edge Compute features with Edge Agents\). The Portainer Agents listen on port `9001` \(or `30778` for Kubernetes with NodePort\).
 
 {% hint style="info" %}
 All ports can be changed during installation.

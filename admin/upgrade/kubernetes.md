@@ -5,14 +5,29 @@ Always match the agent version to the Portainer Server version. In other words, 
 {% endhint %}
 
 {% hint style="warning" %}
-Starting from Portainer CE 2.9, HTTPS is enabled by default on port `9443.` These instructions will configure Portainer to use both 9443 for HTTPS and 9000 for HTTP. You can choose to [completely disable HTTP](../settings/#force-https-only) after the upgrade. 
+Starting from Portainer CE 2.9, HTTPS is enabled by default on port `9443.` These instructions will configure Portainer to use both `9443` for HTTPS and `9000` for HTTP. You can choose to [completely disable HTTP](../settings/#force-https-only) after the upgrade. 
 
 Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS. 
 {% endhint %}
 
 Select the Portainer upgrade method which matches the original installation method used.
 
-## Method 1: Upgrading using YAML Manifest
+## Method 1: Upgrading using Helm
+
+Add the Portainer Helm repository by running the following commands. Ignore any warnings about the repo already being there:
+
+```text
+helm repo add portainer https://portainer.github.io/k8s/
+helm repo update
+```
+
+Next, run the following command to upgrade to the latest version of Portainer:
+
+```text
+helm upgrade -n portainer portainer portainer/portainer
+```
+
+## Method 2: Upgrading using YAML Manifest
 
 ### Option 1: Via the Portainer UI
 
@@ -90,7 +105,7 @@ kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-age
 
 When the deployment is finished you will be able to log into Portainer. You should notice the new version number at the bottom-left of the Portainer UI.
 
-## Method 2: Force an update
+## Method 3: Force an update
 
 If Portainer does not update after running the above commands, you can force a download of the latest image by running the following command:
 

@@ -22,7 +22,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /path/to/your/certs:/certs \
-    portainer/portainer-ce:2.9.0 --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+    portainer/portainer-ce:latest --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
 ```
 
 Alternatively, Certbot can be used to generate a certificate and a key. Because Docker has issues with symlinks, if you use Certbot you will need to pass both the 'live' and 'archive' directories as volumes. For example:
@@ -34,7 +34,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v portainer-data:/data \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
-    portainer/portainer-ce:2.9.0 --sslcert /certs/live/yourdomain/cert.pem --sslkey /certs/live/yourdomain/privkey.pem
+    portainer/portainer-ce:latest --sslcert /certs/live/yourdomain/cert.pem --sslkey /certs/live/yourdomain/privkey.pem
 ```
 
 When you're finished, you can navigate to `https://$ip-docker-host:9443`.
@@ -74,7 +74,38 @@ docker stack deploy -c portainer-agent-stack.yml portainer
 
 For more information about secrets, read [Docker's own documentation](https://docs.docker.com/compose/compose-file/#secrets).
 
-## Using your own SSL certificate on Kubernetes
+## Using your own SSL certificate on Kubernetes \(via Helm\)
 
-We recommend installing using the self-signed certificate then replacing the certificate post-installation with your own [via the Portainer UI](../admin/settings/#ssl-certificate).
+If it doesn't already exist, create the `portainer` namespace:
+
+```text
+kubectl create namespace portainer
+```
+
+Next, create a TLS secret containing the full certificate chain and matching private key:
+
+```text
+kubectl create secret tls portainer-tls-secret \
+    --cert=/path/to/cert/file \
+    --key=/path/to/key/file
+```
+
+Install via helm with the `tls.existingSecret` parameter set to the name of the secret you just created:
+
+{% tabs %}
+{% tab title="NodePort" %}
+```text
+helm install -n portainer portainer portainer/portainer \
+    -- set tls.existingSecret=portainer-tls-secret
+```
+{% endtab %}
+
+{% tab title="Load Balancer" %}
+```text
+helm install -n portainer portainer portainer/portainer \
+    -- set tls.existingSecret=portainer-tls-secret \
+    --set service.type=LoadBalancer
+```
+{% endtab %}
+{% endtabs %}
 

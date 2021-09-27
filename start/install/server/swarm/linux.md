@@ -32,7 +32,7 @@ Portainer can be directly deployed as a service in your Docker cluster. Note tha
 First, retrieve the stack YML manifest:
 
 ```text
-curl -L https://downloads.portainer.io/CE2.9/portainer-agent-stack.yml \
+curl -L https://downloads.portainer.io/portainer-agent-stack.yml \
     -o portainer-agent-stack.yml
 ```
 

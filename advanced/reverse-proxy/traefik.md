@@ -39,7 +39,7 @@ services:
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
 
   portainer:
-    image: portainer/portainer-ce:2.9.0
+    image: portainer/portainer-ce:latest
     command: -H unix:///var/run/docker.sock
     restart: always
     volumes:
@@ -150,7 +150,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
   agent:
-    image: portainer/agent:2.9.0
+    image: portainer/agent:latest
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -168,7 +168,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ce:2.9.0
+    image: portainer/portainer-ce:latest
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data

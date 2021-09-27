@@ -32,17 +32,13 @@ From the menu select **Environments** then click **Add environment**. Ensure **A
 
 ![](../../../../.gitbook/assets/2.9-install-agent-swarm-1.gif)
 
-Run the following commands on the control node of your Kubernetes cluster:
-
-```text
-curl -L https://downloads.portainer.io/CE2.9/portainer-agent-k8s-nodeport.yaml \
-    -o portainer-agent-k8s.yaml
-kubectl apply -f portainer-agent-k8s.yaml
-```
+In the **Information** section select the correct operating system for the new environment then select the **Kubernetes via node port** tab. Copy the command, then run it on the control node of your Kubernetes cluster.
 
 {% hint style="info" %}
 Make sure you run this command on your Kubernetes node before continuing.
 {% endhint %}
+
+![](../../../../.gitbook/assets/endpoints-add-k8s-2.png)
 
 The deployment command will return something similar to this:
 
@@ -74,17 +70,13 @@ From the menu select **Environments** then click **Add environment**. Ensure **A
 
 ![](../../../../.gitbook/assets/2.9-install-agent-swarm-1.gif)
 
-Run the following commands on the control node of your Kubernetes cluster:
-
-```text
-curl -L https://downloads.portainer.io/CE2.9/portainer-agent-k8s-lb.yaml \
-    -o portainer-agent-k8s.yaml
-kubectl apply -f portainer-agent-k8s.yaml
-```
+In the **Information section** select the correct operating system for the new environment then select the **Kubernetes via load balancer** tab. Copy the command, then run it on the control node of your Kubernetes cluster.
 
 {% hint style="info" %}
 Make sure you run this command on your Kubernetes node before continuing.
 {% endhint %}
+
+![](../../../../.gitbook/assets/endpoints-add-k8s-3.png)
 
 The deployment command will return something similar to this:
 

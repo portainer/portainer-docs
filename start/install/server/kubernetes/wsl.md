@@ -24,7 +24,69 @@ After a few minutes, you will see that Kubernetes is running in the bottom left 
 
 ## Deployment
 
-To deploy Portainer within a Kubernetes cluster you can use our provided YAML manifests.
+To deploy Portainer within a Kubernetes cluster you can use our provided Helm charts or YAML manifests.
+
+### Deploy using Helm
+
+{% hint style="info" %}
+Ensure you're using at least Helm v3.2, which includes support for the `--create-namespace` argument.
+{% endhint %}
+
+First add the Portainer Helm repository by running the following commands:
+
+```text
+helm repo add portainer https://portainer.github.io/k8s/
+helm repo update
+```
+
+Once the update completes, you're ready to begin the installation. Which method you choose will depend on how you wish to expose the Portainer service:
+
+{% tabs %}
+{% tab title="Expose via NodePort" %}
+Using the following command, Portainer will be available on port `30777` for HTTP and `30779` for HTTPS:
+
+```text
+helm install --create-namespace -n portainer portainer portainer/portainer
+```
+
+{% hint style="info" %}
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](/advanced/ssl#kubernetes) or [via the Portainer UI](/admin/settings#ssl-certificate) after installation is complete.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Expose via Ingress" %}
+In this example, Portainer will be deployed to your cluster and assigned a Cluster IP, with an nginx Ingress Controller at the defined hostname. For more on Ingress options, refer to the list of [Chart Configuration Options](../../../../advanced/helm-chart-configuration-options.md).
+
+```text
+helm install --create-namespace -n portainer portainer portainer/portainer \
+  --set service.type=ClusterIP \
+  --set ingress.enabled=true \
+  --set ingress.annotations.'kubernetes\.io/ingress\.class'=nginx \
+  --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
+  --set ingress.hosts[0].host=portainer.example.io \
+  --set ingress.hosts[0].paths[0].path="/"
+```
+{% endtab %}
+
+{% tab title="Expose via Load Balancer" %}
+Using the following command, Portainer will be available at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
+
+```text
+helm install --create-namespace -n portainer portainer portainer/portainer \
+    --set service.type=LoadBalancer
+```
+
+{% hint style="info" %}
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](/advanced/ssl#kubernetes) or [via the Portainer UI](/admin/settings#ssl-certificate) after installation is complete.
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+To explicitly set the target node when deploying the Helm chart on the CLI, include `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>` in your `helm install` command.
+{% endhint %}
+
+### Deploy using YAML manifests
 
 Our YAML manifests support exposing Portainer via either NodePort or Load Balancer.
 
@@ -33,7 +95,7 @@ Our YAML manifests support exposing Portainer via either NodePort or Load Balanc
 To expose via NodePort, you can use the following command \(Portainer will be available on port `30777`  for HTTP and `30779` for  HTTPS\):
 
 ```text
-kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-2.9.yaml
+kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml
 ```
 
 {% hint style="info" %}
@@ -45,7 +107,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 To expose via Load Balancer, this command will provision Portainer at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
 
 ```text
-kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-lb-2.9.yaml
+kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml
 ```
 
 {% hint style="info" %}
