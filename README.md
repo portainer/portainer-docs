@@ -10,6 +10,10 @@ You're currently reading the documentation for **Portainer Business Edition \(BE
 
 Portainer Business Edition \(BE\) is our commercial offering. With features geared towards businesses and larger organizations such as [Role-Based Access Control](admin/users/roles.md), [registry management](admin/registries/browse.md), and [dedicated support](./#getting-support), Portainer BE is a powerful toolset that allows you to easily build and manage containers in Docker, Docker Swarm, Kubernetes and Azure ACI.
 
+{% hint style="info" %}
+Portainer Business Edition requires a license key to install and use. If you don't currently have a license key, you can [request a free trial](https://www.portainer.io/free-trial) of Portainer Business Edition or purchase Portainer Business Edition for your organization by [contacting our Success team](mailto:success@portainer.io).
+{% endhint %}
+
 Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
 
 Our team is here to help you on your journey. Engage with them any time through our [support channels](./#getting-support).
