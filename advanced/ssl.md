@@ -1,6 +1,6 @@
 # Using SSL with Portainer
 
-By default, Portainer’s web interface and API are exposed over HTTP.  Because this is not secure, we recommend enabling SSL, particularly in a production environment.
+By default, Portainer’s web interface and API are exposed over HTTP. Because this is not secure, we recommend enabling SSL, particularly in a production environment.
 
 ## On Docker Standalone
 

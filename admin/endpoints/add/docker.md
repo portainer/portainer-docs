@@ -71,7 +71,7 @@ When you're ready click **Add endpoint**.
 
 ## Method 2: Connecting via the Portainer Agent
 
-First, install the Portainer Agent on your Docker Standalone instance using our [platform-specific instructions](../../../start/install/agent/docker/). When this is done, you will be able to add the endpoint to Portainer.
+First, install the Portainer Agent on your Docker Standalone instance using our [platform-specific instructions](). When this is done, you will be able to add the endpoint to Portainer.
 
 From the menu select **Endpoints** then click **Add endpoint**.
 
