@@ -37,7 +37,7 @@ docker swarm init
 To begin the installation, first retrieve the stack YML manifest:
 
 ```bash
-curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml
+curl -L https://downloads.portainer.io/ce2.6.3/portainer-agent-stack.yml -o portainer-agent-stack.yml
 ```
 
 Then, use the downloaded YML manifest to deploy your stack:

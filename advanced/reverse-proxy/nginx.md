@@ -21,7 +21,7 @@ services:
       - "/var/run/docker.sock:/tmp/docker.sock:ro"
 
   portainer:
-    image: portainer/portainer-ce
+    image: portainer/portainer-ce:2.6.3
     command: -H unix:///var/run/docker.sock
     restart: always
     environment:
@@ -93,7 +93,7 @@ services:
       - "./vhost.d:/etc/nginx/vhost.d:ro"
 
   agent:
-    image: portainer/agent
+    image: portainer/agent:2.6.3
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -111,7 +111,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ce
+    image: portainer/portainer-ce:2.6.3
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data

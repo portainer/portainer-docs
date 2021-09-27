@@ -25,13 +25,13 @@ docker rm portainer
 Now that you have stopped and removed the old version of Portainer, you must ensure that you have the latest version of the image locally. You can do this with a `docker pull` command:
 
 ```text
-docker pull portainer/portainer-ce
+docker pull portainer/portainer-ce:2.6.3
 ```
 
 Finally, deploy the updated version of Portainer:
 
 ```text
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.6.3
 ```
 
 The newest version of Portainer will now be deployed on your system, using the persistent data from the previous version, and will also upgrade the Portainer database to the new version.
@@ -95,12 +95,12 @@ docker rm portainer_agent
 Next, pull the updated version of the image:
 
 ```text
-docker pull portainer/agent
+docker pull portainer/agent:2.6.3
 ```
 
 Finally, start the agent with the updated image:
 
 ```text
-docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
+docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.6.3
 ```
 

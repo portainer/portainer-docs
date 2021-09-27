@@ -32,7 +32,7 @@ docker volume create portainer_data
 Then, download and install the Portainer Server container:
 
 ```bash
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always  -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always  -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.6.3
 ```
 
 Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `docker ps`:

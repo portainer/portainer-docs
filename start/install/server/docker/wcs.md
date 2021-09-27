@@ -48,7 +48,7 @@ docker volume create portainer_data
 Then, download and install the Portainer Server container:
 
 ```text
-docker run -d -p 9000:9000 --name portainer --restart always -v \.\pipe\docker_engine:\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce
+docker run -d -p 9000:9000 --name portainer --restart always -v \.\pipe\docker_engine:\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce:2.6.3
 ```
 
 ## Logging In
