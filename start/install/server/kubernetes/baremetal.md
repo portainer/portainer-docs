@@ -89,7 +89,7 @@ helm install --create-namespace -n portainer portainer portainer/portainer
 ```
 
 {% hint style="info" %}
-By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](/advanced/ssl#kubernetes) or [via the Portainer UI](/admin/settings#ssl-certificate) after installation is complete.
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `30779`. Alternatively you can provide your own SSL certificate [during installation](/advanced/ssl#kubernetes) or [via the Portainer UI](/admin/settings#ssl-certificate) after installation is complete.
 {% endhint %}
 {% endtab %}
 
