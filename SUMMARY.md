@@ -195,6 +195,7 @@
   * [How do I change the port that Portainer uses?](faq/installing/how-do-i-change-the-port-that-portainer-uses.md)
   * [My host is using SELinux. Can I use Portainer?](faq/installing/my-host-is-using-selinux-can-i-use-portainer.md)
   * [Does Portainer support WSL1?](faq/installing/does-portainer-support-wsl1.md)
+  * [How can I ensure Portainer's configuration is retained?](faq/installing/how-can-i-ensure-portainers-configuration-is-retained.md)
   * [How do I enter my Portainer Business license into Portainer CE?](faq/installing/how-do-i-enter-my-portainer-business-license-into-portainer-ce.md)
 * [Upgrading](faq/upgrading/README.md)
   * [How do I upgrade Portainer CE to the latest version?](faq/upgrading/how-do-i-upgrade-portainer-ce-to-the-latest-version.md)
