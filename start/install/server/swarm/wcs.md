@@ -16,8 +16,9 @@ To get started, you will need:
 * By default, Portainer will expose the UI over port `9443` and expose a TCP tunnel server over port `8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 * The manager and worker nodes must be able to communicate with each other over port `9001`.
 
-The installation instructions also make the following assumption about your environment:
+The installation instructions also make the following assumptions about your environment:
 
+* You are running a single manager node in your swarm. If you have more than one, please [read this FAQ entry](../../../../faq/installing/how-can-i-ensure-portainers-configuration-is-retained.md#docker-swarm) before proceeding.
 * If your nodes are using DNS records to communicate, that all records are resolvable across the cluster.
 
 ## Preparation
