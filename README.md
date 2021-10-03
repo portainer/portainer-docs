@@ -4,7 +4,7 @@ Welcome to Portainer's official documentation site. Please choose the edition be
 
 |  |  |
 | :---: | :---: |
-| \*\*\*\*[**Portainer Community Edition**](https://docs.portainer.io/v/ce-2.9/)\*\*\*\* | \*\*\*\*[**Portainer Business Edition**](https://docs.portainer.io/v/be-2.7/)\*\*\*\* |
+| \*\*\*\*[**Portainer Community Edition**](/v/ce-2.9/)\*\*\*\* | \*\*\*\*[**Portainer Business Edition**](/v/be-2.7/)\*\*\*\* |
 
  
 
