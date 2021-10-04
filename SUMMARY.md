@@ -209,6 +209,7 @@
   * [Why can't my users see anything in the environment they have access to?](faq/troubleshooting/why-cant-my-users-see-anything-in-the-environment-they-have-access-to.md)
   * [Why don't custom standalone app templates show when using Docker Swarm?](faq/troubleshooting/why-dont-custom-standalone-app-templates-show-when-using-docker-swarm.md)
   * [Why can't I find images in my private registry on Kubernetes?](faq/troubleshooting/why-cant-i-find-images-in-my-private-registry-on-kubernetes.md)
+  * [Running with VMware](faq/troubleshooting/running-with-vmware.md)
   * [Can you view deleted container logs in Portainer?](faq/troubleshooting/can-you-view-deleted-container-logs-in-portainer.md)
   * [Exposed ports in the container view redirect me to 0.0.0.0. What can I do?](faq/troubleshooting/exposed-ports-in-the-container-view-redirect-me-to-0.0.0.0-what-can-i-do.md)
   * [How can I get the logs for Portainer itself?](faq/troubleshooting/how-can-i-get-the-logs-for-portainer-itself.md)
