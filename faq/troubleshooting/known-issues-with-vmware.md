@@ -1,4 +1,4 @@
-# Running with VMware
+# Known issues with VMware
 
 When running a containerized environment on a VMware system there are a few caveats to be aware of before you start. We've outlined those we've run into below. If you do find anything else or think we should expand on what we have below, please [let us know](../../contribute/contribute.md).
 
