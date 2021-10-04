@@ -18,7 +18,7 @@ Alternatively you can \(depending on your setup\) reconfigure NSX to use a diffe
 
 ### VMware and RedHat/CentOS
 
-When running Docker Swarm on RedHat VMs under VMware you may run into issues with communication over the swarm node routing mesh. We have traced this back to UDP packets being dropped by the source node. Disabling checksum offloading appears to resolve this issue.
+When running Docker Swarm on RedHat or CentOS VMs under VMware you may run into issues with communication over the swarm node routing mesh. We have traced this back to UDP packets being dropped by the source node. Disabling checksum offloading appears to resolve this issue.
 
 Run the following on your VMs:
 
