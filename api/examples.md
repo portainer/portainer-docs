@@ -40,9 +40,9 @@ This token is valid for 8 hours. Once it expires, you will need to generate anot
 
 ## Adding a new environment
 
-When Portainer starts, it is waiting for the initial Admin to connect it to an environment.
+On a fresh install, Portainer has no environments configured. You will first need to add an environment for Portainer to manage.
 
-You can [add an environment via the Portainer API](../admin/environments/add/api.md), or use the Web interface.
+You can add an environment to manage [via the Portainer API](../admin/environments/add/api.md), or via the web interface both during the initial setup and after setup is complete.
 
 ## Execute Docker queries against a specific environment
 
