@@ -40,7 +40,9 @@ This token is valid for 8 hours. Once it expires, you will need to generate anot
 
 ## Adding a new environment
 
-See [Add an environment via the Portainer API](../admin/environments/add/api.md).
+When Portainer starts, it is waiting for the initial Admin to connect it to an environment.
+
+You can [add an environment via the Portainer API](../admin/environments/add/api.md), or use the Web interface.
 
 ## Execute Docker queries against a specific environment
 
