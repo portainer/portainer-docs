@@ -4,25 +4,28 @@ A cluster is a collection of nodes that runs containerized workloads. Portainer 
 
 From the menu select **Cluster**. 
 
-![](../../../.gitbook/assets/2.9-cluster-1.gif)
+![](../../../.gitbook/assets/2.9.1-cluster-1.gif)
 
 The following information is provided in the first screen:
 
-| Attribute | Overview |
-| :--- | :--- |
-| Memory reservation | This is the amount of memory used by and available to the cluster. |
-| CPU reservation | This is the amount of reserved CPU that has been used. |
-| Cluster status | Displays the status of each component of the cluster. |
+| **Attribute**      | **Overview**                                             |
+| ------------------ | -------------------------------------------------------- |
+| Memory reservation | The amount of memory available to the cluster.           |
+| Memory used        | The amount of memory used by the cluster.                |
+| CPU reservation    | The amount of CPU that has been reserved in the cluster. |
+| CPU used           | The amount of CPU used by the cluster.                   |
 
 You can also inspect individual nodes of your cluster.
 
-{% page-ref page="node.md" %}
+{% content-ref url="node.md" %}
+[node.md](node.md)
+{% endcontent-ref %}
 
 If you need to adjust elements of your Kubernetes configuration you can do so here as well.
 
-{% page-ref page="setup.md" %}
-
-
+{% content-ref url="setup.md" %}
+[setup.md](setup.md)
+{% endcontent-ref %}
 
 
 

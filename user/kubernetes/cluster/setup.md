@@ -45,7 +45,7 @@ Enabling this feature lets you allocate more resources to namespaces than are ph
 {% hint style="warning" %}
  **Enable** resource over-commit if you need to assign more resources to namespaces than are physically available in the cluster. This may lead to unexpected deployment failures if there are insufficient resources to meet the demand.
 
-**Disable** resource over-commit \(highly recommended\) if you are only able to assign resources to namespaces that are less \(in aggregate\) than the cluster total, minus any system-resource reservation.
+**Disable** resource over-commit (highly recommended) if you are only able to assign resources to namespaces that are less (in aggregate) than the cluster total, minus any system-resource reservation.
 {% endhint %}
 
 ### Enable features using metrics server
@@ -56,11 +56,10 @@ Enabling this feature lets you allocate more resources to namespaces than are ph
 
 Enabling this feature will allow users to use specific features that leverage the metrics server component.
 
-![](../../../.gitbook/assets/cluster-setup-4.png)
+![](../../../.gitbook/assets/2.9.1-cluster-setup-4.png)
 
 ## Available storage options
 
 Select which storage options will be available for use when deploying applications. Take a look at your storage driver documentation to figure out which access policy to configure, and whether or not the volume-expansion capability is supported.
 
 ![](../../../.gitbook/assets/cluster-setup-5.png)
-
