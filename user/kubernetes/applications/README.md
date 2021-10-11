@@ -2,23 +2,32 @@
 
 In Kubernetes, an application is a collection of configuration settings and variables required to run your app. This may consist of a single container or multiple containers with complex interoperability.
 
-![The Applications interface](../../../.gitbook/assets/2.9-applications-splash.png)
+![](../../../.gitbook/assets/2.9.1-applications-splash.png)
 
 Portainer lets you add applications either manually or through a manifest:
 
-{% page-ref page="add.md" %}
+{% content-ref url="add.md" %}
+[add.md](add.md)
+{% endcontent-ref %}
 
-{% page-ref page="manifest.md" %}
+{% content-ref url="manifest.md" %}
+[manifest.md](manifest.md)
+{% endcontent-ref %}
 
 You can also inspect a running application:
 
-{% page-ref page="inspect.md" %}
+{% content-ref url="inspect.md" %}
+[inspect.md](inspect.md)
+{% endcontent-ref %}
 
 Version 2.9 has added support for deploying applications via [Helm](../helm/) charts:
 
-{% page-ref page="../helm/deploy.md" %}
+{% content-ref url="../helm/deploy.md" %}
+[deploy.md](../helm/deploy.md)
+{% endcontent-ref %}
 
 If you no longer require an application, it can be removed:
 
-{% page-ref page="remove.md" %}
-
+{% content-ref url="remove.md" %}
+[remove.md](remove.md)
+{% endcontent-ref %}

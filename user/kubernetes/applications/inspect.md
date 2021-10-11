@@ -10,15 +10,15 @@ The **Application details** screen is organized into four sections. The followin
 
 ### General information
 
-| Attribute | Overview |
-| :--- | :--- |
-| Name | The name of the application. |
-| Stack | The stack that the application belongs to \(if any\). |
-| Namespace | The namespace that the application is running in. |
-| Application Type | The type of application \(Pod, Deployment, StatefulSet, DaemonSet, etc\). |
-| Status | Indicates whether or not the application is running. Where applicable, this also shows the replication state and number of replicas. |
-| Creation | Shows when the application was created and by whom, as well as how the application was deployed. |
-| Note | Add a note about the application or edit an existing note. |
+| **Attribute**    | **Overview**                                                                                                                         |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Name             | The name of the application.                                                                                                         |
+| Stack            | The stack that the application belongs to (if any).                                                                                  |
+| Namespace        | The namespace that the application is running in.                                                                                    |
+| Application Type | The type of application (Pod, Deployment, StatefulSet, DaemonSet, etc).                                                              |
+| Status           | Indicates whether or not the application is running. Where applicable, this also shows the replication state and number of replicas. |
+| Creation         | Shows when the application was created and by whom, as well as how the application was deployed.                                     |
+| Note             | Add a note about the application or edit an existing note.                                                                           |
 
 ![](../../../.gitbook/assets/2.9-applications-inspect-2.png)
 
@@ -34,20 +34,20 @@ Depending on how the application was deployed, a number of actions can be perfor
 
 ### Configuration details
 
-| Configuration | Overview |
-| :--- | :--- |
-| Accessing the application | Shows which ports \(if any\) are published from the container. |
-| Auto-scaling | Indicates the application's auto-scaling policy. |
-| Configuration | A list of any environment variables and configurations that have been defined for the application. |
-| Data persistence | A list of the persistent folders and their details. |
+| **Configuration**         | **Overview**                                                                                       |
+| ------------------------- | -------------------------------------------------------------------------------------------------- |
+| Accessing the application | Shows which ports (if any) are published from the container.                                       |
+| Auto-scaling              | Indicates the application's auto-scaling policy.                                                   |
+| Configuration             | A list of any environment variables and configurations that have been defined for the application. |
+| Data persistence          | A list of the persistent folders and their details.                                                |
 
 ![](../../../.gitbook/assets/applications-inspect-3.png)
 
 ### Pod details
 
-See which pods run your application, which image is being used, the status and node, and when each pod was created. You can also access the pod console and logs from here.
+See which pods run your application, which image is being used, the status, node, and IP address of the pod, and when each pod was created. You can also access the pod stats, console and logs from here.
 
-![](../../../.gitbook/assets/applications-inspect-4.png)
+![](../../../.gitbook/assets/2.9.1-applications-inspect-5.png)
 
 ## Placement section
 
@@ -66,4 +66,3 @@ Shows information about application-related events.
 This displays the YAML generated from the application deployment. Use it to create backups of the configuration.
 
 ![](../../../.gitbook/assets/applications-inspect-7.png)
-
