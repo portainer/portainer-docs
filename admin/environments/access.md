@@ -10,5 +10,12 @@ From the menu select **Environments**. Locate the environment you want to give u
 
 ![](../../.gitbook/assets/2.-9-environments-access-1.gif)
 
-Next, select the users or teams you want to add using the dropdown. Once all have been selected, click **Create access**.
+Next, select the users or teams you want to add using the dropdown. 
 
+{% hint style="info" %}
+Setting roles for users or teams is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=rbac-roles).
+{% endhint %}
+
+![](../../.gitbook/assets/2.9.1-environments-access-2.png)
+
+Once all have been selected, click **Create access**.
