@@ -14,7 +14,7 @@ Before you start, you must make sure that Kubernetes is enabled and running with
 
 ![](../../../../.gitbook/assets/kube-wsl-1.png)
 
-Click **Settings**, then select **Kubernetes**, tick **Enable Kubernetes**, then click **Apply and Restart** \(clicking **Install** in the dialog to install Kubernetes\):
+Click **Settings**, then select **Kubernetes**, tick **Enable Kubernetes**, then click **Apply and Restart** (clicking **Install** in the dialog to install Kubernetes):
 
 ![](../../../../.gitbook/assets/kube-wsl-2.gif)
 
@@ -34,7 +34,7 @@ Ensure you're using at least Helm v3.2, which includes support for the `--create
 
 First add the Portainer Helm repository by running the following commands:
 
-```text
+```
 helm repo add portainer https://portainer.github.io/k8s/
 helm repo update
 ```
@@ -45,19 +45,19 @@ Once the update completes, you're ready to begin the installation. Which method 
 {% tab title="Expose via NodePort" %}
 Using the following command, Portainer will be available on port `30777` for HTTP and `30779` for HTTPS:
 
-```text
+```
 helm install --create-namespace -n portainer portainer portainer/portainer
 ```
 
 {% hint style="info" %}
-By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](/advanced/ssl#kubernetes) or [via the Portainer UI](/admin/settings#ssl-certificate) after installation is complete.
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](https://app.gitbook.com/advanced/ssl#kubernetes) or [via the Portainer UI](https://app.gitbook.com/admin/settings#ssl-certificate) after installation is complete.
 {% endhint %}
 {% endtab %}
 
 {% tab title="Expose via Ingress" %}
 In this example, Portainer will be deployed to your cluster and assigned a Cluster IP, with an nginx Ingress Controller at the defined hostname. For more on Ingress options, refer to the list of [Chart Configuration Options](../../../../advanced/helm-chart-configuration-options.md).
 
-```text
+```
 helm install --create-namespace -n portainer portainer portainer/portainer \
   --set service.type=ClusterIP \
   --set ingress.enabled=true \
@@ -71,13 +71,13 @@ helm install --create-namespace -n portainer portainer portainer/portainer \
 {% tab title="Expose via Load Balancer" %}
 Using the following command, Portainer will be available at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
 
-```text
+```
 helm install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=LoadBalancer
 ```
 
 {% hint style="info" %}
-By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](/advanced/ssl#kubernetes) or [via the Portainer UI](/admin/settings#ssl-certificate) after installation is complete.
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](https://app.gitbook.com/advanced/ssl#kubernetes) or [via the Portainer UI](https://app.gitbook.com/admin/settings#ssl-certificate) after installation is complete.
 {% endhint %}
 {% endtab %}
 {% endtabs %}
@@ -92,9 +92,9 @@ Our YAML manifests support exposing Portainer via either NodePort or Load Balanc
 
 {% tabs %}
 {% tab title="Expose via NodePort" %}
-To expose via NodePort, you can use the following command \(Portainer will be available on port `30777`  for HTTP and `30779` for  HTTPS\):
+To expose via NodePort, you can use the following command (Portainer will be available on port `30777`  for HTTP and `30779` for  HTTPS):
 
-```text
+```
 kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml
 ```
 
@@ -106,7 +106,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% tab title="Expose via Load Balancer" %}
 To expose via Load Balancer, this command will provision Portainer at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
 
-```text
+```
 kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml
 ```
 
@@ -120,7 +120,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 To explicitly set the target node when deploying using YAML manifests, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
 {% endhint %}
 
-```text
+```
 kubectl patch deployments -n portainer portainer -p '{"spec": {"template": {"spec": {"nodeSelector": {"kubernetes.io/hostname": "'$(kubectl get pods -n portainer -o jsonpath='{ ..nodeName }')'"}}}}}' || (echo Failed to identify current node of portainer pod; exit 1)
 ```
 
@@ -156,7 +156,8 @@ Replace `<loadbalancer IP>` with the IP address or FQDN of the load balancer, an
 
 You will be presented with the initial setup page for Portainer Server.
 
-## 
+##
 
-{% page-ref page="../setup.md" %}
-
+{% content-ref url="../setup.md" %}
+[setup.md](../setup.md)
+{% endcontent-ref %}

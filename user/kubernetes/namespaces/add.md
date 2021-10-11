@@ -1,6 +1,6 @@
 # Add a new namespace
 
-From the menu select **Namespaces** then click **Add namespace with form**.
+From the menu select **Namespaces **then click **Add namespace with form**.
 
 {% hint style="info" %}
 Namespaces can also be added [using a manifest](../applications/manifest.md) by clicking **Create from manifest**.
@@ -17,4 +17,3 @@ Load balancer quota and storage quota functionality is only available in Portain
 {% endhint %}
 
 When you're finished, click **Create namespace**.
-

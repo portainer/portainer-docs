@@ -2,12 +2,14 @@
 
 The **Container Instances** page allows you to interact with containers in your Azure application, letting you add and remove containers as needed.
 
-{% page-ref page="add.md" %}
+{% content-ref url="add.md" %}
+[add.md](add.md)
+{% endcontent-ref %}
 
-{% page-ref page="remove.md" %}
+{% content-ref url="remove.md" %}
+[remove.md](remove.md)
+{% endcontent-ref %}
 
 
 
-  
-
-
+\

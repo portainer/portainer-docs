@@ -1,20 +1,29 @@
 # Add a new registry
 
-From the menu select **Registries** then click **Add registry**.
+From the menu select **Registries **then click **Add registry**.
 
 ![](../../../.gitbook/assets/2.9-registries-add-1.gif)
 
 From the **Registry provider** section select the type of registry you want to add. Portainer provides configuration support for a number of popular registry providers:
 
-{% page-ref page="dockerhub.md" %}
+{% content-ref url="dockerhub.md" %}
+[dockerhub.md](dockerhub.md)
+{% endcontent-ref %}
 
-{% page-ref page="quay.md" %}
+{% content-ref url="quay.md" %}
+[quay.md](quay.md)
+{% endcontent-ref %}
 
-{% page-ref page="azure.md" %}
+{% content-ref url="azure.md" %}
+[azure.md](azure.md)
+{% endcontent-ref %}
 
-{% page-ref page="gitlab.md" %}
+{% content-ref url="gitlab.md" %}
+[gitlab.md](gitlab.md)
+{% endcontent-ref %}
 
 You can also add your own custom registry:
 
-{% page-ref page="custom.md" %}
-
+{% content-ref url="custom.md" %}
+[custom.md](custom.md)
+{% endcontent-ref %}
