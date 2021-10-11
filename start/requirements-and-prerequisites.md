@@ -12,7 +12,7 @@ The following tables list all of the configurations that we have tested, validat
 
 ### Portainer Community Edition (CE)
 
-| **Portainer Version**    | **Release Date** | **Docker Version** | **Kubernetes Version**       | Architectures         |
+| **Portainer Version**    | **Release Date** | **Docker Version** | **Kubernetes Version**       | **Architectures**     |
 | ------------------------ | ---------------- | ------------------ | ---------------------------- | --------------------- |
 | Community 2.9.0 (latest) | Sep 23, 2021     | 20.10.5 20.10.6    | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
 | Community 2.6.3          | Aug 27, 2021     | 20.10.5 20.10.6    | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
