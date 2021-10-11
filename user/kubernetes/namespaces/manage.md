@@ -15,7 +15,7 @@ Toggle on **Resource assignment** to enable quotas for this namespace, then defi
 ## Load balancers
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=k8s-resourcepool-lbquota).
 {% endhint %}
 
 With this setting you can configure the amount of external load balancers that can be created in this namespace. 
@@ -25,7 +25,7 @@ With this setting you can configure the amount of external load balancers that c
 ## Storage
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=k8s-resourcepool-storagequota).
 {% endhint %}
 
 For each storage option available in the cluster, you can configure quotas for this namespace to limit usage.

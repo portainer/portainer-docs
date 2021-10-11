@@ -37,7 +37,7 @@ By default, a Kubernetes cluster will instantiate a default namespace when provi
 ### Allow resource over-commit
 
 {% hint style="info" %}
-This option is only available in Portainer Business Edition.
+This option is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=k8s-setup-default).
 {% endhint %}
 
 Enabling this feature lets you allocate more resources to namespaces than are physically available in the cluster.
