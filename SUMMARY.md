@@ -3,7 +3,7 @@
 * [Welcome](README.md)
 * [Release Notes](release-notes.md)
 
-## Getting Started <a id="start"></a>
+## Getting Started <a href="start" id="start"></a>
 
 * [Introduction](start/intro.md)
 * [Portainer architecture](start/architecture.md)
@@ -37,7 +37,7 @@
     * [Azure ACI](start/install/agent/aci.md)
     * [Edge Agent](start/install/agent/edge.md)
 
-## Using Portainer <a id="user"></a>
+## Using Portainer <a href="user" id="user"></a>
 
 * [Home](user/home.md)
 * [Docker/Swarm](user/docker/README.md)
@@ -119,7 +119,7 @@
     * [Edit an application](user/kubernetes/applications/edit.md)
     * [Detach a volume from an application](user/kubernetes/applications/detach-volume.md)
     * [Remove an application](user/kubernetes/applications/remove.md)
-  * [Configurations](user/kubernetes/configurations/README.md)
+  * [ConfigMaps & Secrets](user/kubernetes/configurations/README.md)
     * [Add a new configuration](user/kubernetes/configurations/add.md)
     * [Remove a configuration](user/kubernetes/configurations/remove.md)
   * [Volumes](user/kubernetes/volumes/README.md)
@@ -140,7 +140,7 @@
   * [Edge Jobs](user/edge/jobs.md)
 * [Account settings](user/account-settings.md)
 
-## Administering Portainer <a id="admin"></a>
+## Administering Portainer <a href="admin" id="admin"></a>
 
 * [Users](admin/users/README.md)
   * [Teams](admin/users/teams/README.md)
@@ -183,7 +183,7 @@
     * [Docker Swarm](admin/upgrade/tobe/swarm.md)
     * [Kubernetes](admin/upgrade/tobe/kubernetes.md)
 
-## Frequently Asked Questions <a id="faq"></a>
+## Frequently Asked Questions <a href="faq" id="faq"></a>
 
 * [Portainer Concepts](faq/concepts/README.md)
   * [What is Portainer's architecture?](faq/concepts/what-is-portainers-architecture.md)
@@ -220,7 +220,7 @@
   * [How do you decide which bugs and features to work on first?](faq/contributing/how-do-you-decide-which-bugs-and-features-to-work-on-first.md)
   * [How do I log a support ticket?](faq/contributing/how-do-i-log-a-support-ticket.md)
 
-## Advanced Topics <a id="advanced"></a>
+## Advanced Topics <a href="advanced" id="advanced"></a>
 
 * [CLI configuration options](advanced/cli.md)
 * [App templates](advanced/app-templates/README.md)
@@ -248,10 +248,9 @@
 * [Slack](https://join.slack.com/t/portainer/shared_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA)
 * [Discord](https://discord.com/invite/j8fVken)
 
-## Contribute to Portainer <a id="contribute"></a>
+## Contribute to Portainer <a href="contribute" id="contribute"></a>
 
 * [Contribute](contribute/contribute.md)
 * [Build instructions](contribute/build/README.md)
   * [Set up a macOS build environment](contribute/build/mac.md)
   * [Set up a Linux build environment](contribute/build/linux.md)
-
