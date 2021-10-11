@@ -170,6 +170,8 @@
     * [Add an Azure registry](admin/registries/add/azure.md)
     * [Add a Gitlab registry](admin/registries/add/gitlab.md)
     * [Add a custom registry](admin/registries/add/custom.md)
+* [Authentication logs](admin/logs/README.md)
+  * [Activity logs](admin/logs/activity.md)
 * [Settings](admin/settings/README.md)
   * [Authentication](admin/settings/authentication/README.md)
     * [Authenticate via LDAP](admin/settings/authentication/ldap.md)
