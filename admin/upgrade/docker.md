@@ -1,7 +1,7 @@
 # Upgrading on Docker
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or upgrading to Portainer 2.9.0 make sure all of the agents are also on version 2.9.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or upgrading to Portainer 2.9.1 make sure all of the agents are also on version 2.9.1.
 {% endhint %}
 
 ## Upgrading your Portainer Server
@@ -20,23 +20,23 @@ This article assumes that you used our recommended deployment scripts.
 
 To upgrade to the latest version of Portainer Server, use the following commands to stop then remove the old version. Your other applications/containers will not be removed.
 
-```text
+```
 docker stop portainer
 ```
 
-```text
+```
 docker rm portainer
 ```
 
 Now that you have stopped and removed the old version of Portainer, you must ensure that you have the latest version of the image locally. You can do this with a `docker pull` command:
 
-```text
+```
 docker pull portainer/portainer-ce:latest
 ```
 
 Finally, deploy the updated version of Portainer:
 
-```text
+```
 docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \
     --name=portainer --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
@@ -47,7 +47,7 @@ docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \
 {% hint style="info" %}
 To provide your own SSL certs you may use `--sslcert` and `--sslkey` flags as below to provide the certificate and key files. The certificate file needs to be the full chain and in PEM format.
 
-```text
+```
 docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \
     --name=portainer --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
@@ -66,23 +66,23 @@ When the deployment is finished, go to `https://your-server-address:9443` or `ht
 
 If you are running a version prior to 1.24.1 and want to upgrade to the latest Portainer release, you must first upgrade to `portainer/portainer-ce:2.0.0`, use the following commands to stop then remove the old version. Your other applications/containers will not be removed.
 
-```text
+```
 docker stop portainer
 ```
 
-```text
+```
 docker rm portainer
 ```
 
 Now that you have stopped and removed the old version of Portainer, you must ensure that you have the latest version of the image locally. You can do this with a `docker pull` command:
 
-```text
+```
 docker pull portainer/portainer-ce:2.0.0
 ```
 
 Finally, deploy the updated version of Portainer:
 
-```text
+```
 docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.0.0
 ```
 
@@ -94,12 +94,12 @@ When the deployment is finished, go to `http://your-server-address:9000` and log
 
 If you are running a version prior to 1.24.2 and want to upgrade to the latest Portainer release, you must first upgrade to `portainer/portainer:1.24.2`. Use the following commands to stop then remove the old version, then run Portainer release 1.24.2:
 
-```text
+```
 docker stop portainer
 
 docker rm portainer
 
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer:1.24.1
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer:1.24.2
 ```
 
 Verify that you are running version 1.24.2 by logging into Portainer and reading the version number on the bottom-left of the UI. To complete the upgrade, perform the steps from option 2 above.
@@ -108,23 +108,22 @@ Verify that you are running version 1.24.2 by logging into Portainer and reading
 
 To upgrade to the latest version of Portainer Agent, use the following commands to stop then remove the old version. Your other applications/containers will not be removed.
 
-```text
+```
 docker stop portainer_agent
 ```
 
-```text
+```
 docker rm portainer_agent
 ```
 
 Next, pull the updated version of the image:
 
-```text
+```
 docker pull portainer/agent:latest
 ```
 
 Finally, start the agent with the updated image:
 
-```text
+```
 docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:latest
 ```
-
