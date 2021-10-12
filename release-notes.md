@@ -11,9 +11,9 @@
 * Show the number of Swarm nodes for the endpoint on the Home page
 * Show how many Docker pulls are remaining for DockerHub to avoid exceeding the quota
 * Introduced support for compose version 3.8 on docker swarm environments
-* Display the container IP address\(es\) in the list of containers
+* Display the container IP address(es) in the list of containers
 * Improved layout of the toggles on the create container setting tab
-* For Docker Standalone, prevent a stack from being created if the Compose has a container\_name that already exists
+* For Docker Standalone, prevent a stack from being created if the Compose has a container_name that already exists
 * Creating a container from a DockerHub image will show a search button in the UI
 * Fixed issue where deploying a stack from Git did not work for Azure DevOps
 * Fixed issue where stacks with a status of 0 are hidden in the UI
@@ -114,7 +114,7 @@
 ### **Known Issues**
 
 * Logging into Portainer as a Standard User fails to load home page when using 'microk8s v1.21.3-3+6343a564e351b0'
-* Host Management features do not work on Windows Hosts [\#4450](https://github.com/portainer/portainer/issues/4450)
+* Host Management features do not work on Windows Hosts [#4450](https://github.com/portainer/portainer/issues/4450)
 * Host Browser function does not work for Non-Admin users.
 
 ## Release 2.4
@@ -186,7 +186,7 @@
 
 ### **Docker ​**
 
-* Introduced support for Compose &gt; v2 when deploying a stack on a Docker standalone environment
+* Introduced support for Compose > v2 when deploying a stack on a Docker standalone environment
 * Introduced the ability to download log file from Docker container/service views
 * Display labels in Image Details
 * Clarify the description of the restrict external access to the network property when creating a network​
@@ -217,16 +217,18 @@
 
 ### **Fixes**
 
-* **Fix an issue preventing a user from creating Kuberneres resources if they have a `@` character in their username** Users with a `@` character in their username were not able to create the following Kubernetes resources:
+* **Fix an issue preventing a user from creating Kuberneres resources if they have a `@` character in their username**\
+  ****Users with a `@` character in their username were not able to create the following Kubernetes resources:
   * Resource pool
   * Application
   * Configuration
-* **Fix platform issues with the Docker image for Portainer Business** The Docker image can now be successfully deployed on the following platforms:
+* **Fix platform issues with the Docker image for Portainer Business**\
+  ****The Docker image can now be successfully deployed on the following platforms:
   * Linux ARM64
   * Linux ARM
-* **Minor update to the license server mechanism** The license server mechanism has been updated.
+* **Minor update to the license server mechanism**\
+  ****The license server mechanism has been updated.
 
 ## Release 2.0.0
 
 Initial release of Portainer Business
-

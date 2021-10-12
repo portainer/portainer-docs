@@ -14,6 +14,4 @@ When the warning message appears, click **Continue**.
 
 ![](../../../.gitbook/assets/images-export-2.png)
 
-When the image has downloaded, a success message will appear, and your browser should automatically download the resulting tar file.  
-
-
+When the image has downloaded, a success message will appear, and your browser should automatically download the resulting tar file.\

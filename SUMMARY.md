@@ -3,7 +3,7 @@
 * [Welcome](README.md)
 * [Release Notes](release-notes.md)
 
-## Getting Started <a id="start"></a>
+## Getting Started <a href="start" id="start"></a>
 
 * [Introduction](start/intro.md)
 * [Portainer architecture](start/architecture.md)
@@ -37,7 +37,7 @@
     * [Azure ACI](start/install/agent/aci.md)
     * [Edge Agent](start/install/agent/edge.md)
 
-## Using Portainer <a id="user"></a>
+## Using Portainer <a href="user" id="user"></a>
 
 * [Docker/Swarm](user/docker/README.md)
   * [Dashboard](user/docker/dashboard.md)
@@ -125,7 +125,7 @@
   * [Edge Stacks](user/edge/stacks.md)
   * [Edge Jobs](user/edge/jobs.md)
 
-## Administering Portainer <a id="admin"></a>
+## Administering Portainer <a href="admin" id="admin"></a>
 
 * [Users](admin/users/README.md)
   * [Teams](admin/users/teams/README.md)
@@ -171,10 +171,11 @@
   * [Upgrading on Docker Swarm](admin/upgrade/swarm.md)
   * [Upgrading on Kubernetes](admin/upgrade/kubernetes.md)
 
-## Frequently Asked Questions <a id="faq"></a>
+## Frequently Asked Questions <a href="faq" id="faq"></a>
 
 * [Portainer Concepts](faq/concepts/README.md)
   * [What is Portainer's architecture?](faq/concepts/what-is-portainers-architecture.md)
+  * [What is a "node" for licensing purposes?](faq/concepts/what-is-a-node-for-licensing-purposes.md)
   * [What information does Portainer collect?](faq/concepts/what-information-does-portainer-collect.md)
 * [Installing](faq/installing/README.md)
   * [How do I install Portainer BE?](faq/installing/how-do-i-install-portainer-ce.md)
@@ -204,7 +205,7 @@
   * [How do you decide which bugs and features to work on first?](faq/contributing/how-do-you-decide-which-bugs-and-features-to-work-on-first.md)
   * [How do I log a support ticket?](faq/contributing/how-do-i-log-a-support-ticket.md)
 
-## Advanced Topics <a id="advanced"></a>
+## Advanced Topics <a href="advanced" id="advanced"></a>
 
 * [CLI configuration options](advanced/cli.md)
 * [App templates](advanced/app-templates/README.md)
@@ -232,7 +233,6 @@
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
 * [Open a support request](https://support.portainer.io/?login=1)
 
-## Contribute to Portainer <a id="contribute"></a>
+## Contribute to Portainer <a href="contribute" id="contribute"></a>
 
 * [Contribute](contribute/contribute.md)
-
