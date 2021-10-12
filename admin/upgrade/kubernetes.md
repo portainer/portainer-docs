@@ -38,13 +38,13 @@ The easiest way to upgrade is to use the Portainer UI along with our manifest fi
 Copy the contents of our NodePort manifest file at:
 
 ```
-https://downloads.portainer.io/CE2.9/portainer-2.9.yaml
+https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml
 ```
 
 For an agent-only deployment, use the following manifest instead:
 
 ```
-https://downloads.portainer.io/CE2.9/portainer-agent-k8s-nodeport.yaml
+https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
 ```
 {% endtab %}
 
@@ -52,13 +52,13 @@ https://downloads.portainer.io/CE2.9/portainer-agent-k8s-nodeport.yaml
 Copy the contents of our Load Balancer manifest file at:
 
 ```
-https://downloads.portainer.io/CE2.9/portainer-lb-2.9.yaml
+https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml
 ```
 
 For an agent-only deployment, use the following manifest:
 
 ```
-https://downloads.portainer.io/CE2.9/portainer-agent-k8s-lb.yaml
+https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
 ```
 {% endtab %}
 {% endtabs %}
@@ -78,13 +78,13 @@ If you prefer to use the command line to upgrade, you can do so using `kubectl` 
 Log into the control node of your Kubernetes cluster and run the following command:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-2.9.yaml
+kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml
 ```
 
 For an agent-only deployment, use the following command instead:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-agent-k8s-nodeport.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
 ```
 {% endtab %}
 
@@ -92,13 +92,13 @@ kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-age
 Log into the control node of your Kubernetes cluster and run the following:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-lb-2.9.yaml
+kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml
 ```
 
 For an agent-only deployment, use the following command:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/CE2.9/portainer-agent-k8s-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
 ```
 {% endtab %}
 {% endtabs %}
