@@ -6,6 +6,10 @@ With Portainer Business Edition, pricing is on a "per-node" basis. But what cons
 
 For Docker, we consider anything that runs Portainer, whether that be Portainer Server or Portainer Agent, as a node. This is important to remember as on clustered environments like Docker Swarm the Portainer Agent will be running on each server in the cluster and therefore count towards your number of licenses.
 
+{% hint style="info" %}
+If you are managing a Swarm cluster without using the Portainer Agent, those nodes will still count toward the number of licensed nodes. If it runs Docker-CE, is a Kubelet, or is a serverless endpoint and you manage it with Portainer, it counts as a node.
+{% endhint %}
+
 Let's look at a few examples. Say you are running a small setup consisting of three Docker Standalone servers. One of these servers is hosting the Portainer Server container, and the other two are managed from the Portainer Server container using the Portainer Agent:
 
 ![](../../.gitbook/assets/licensing-docker-standalone.png)
