@@ -2,16 +2,16 @@
 
 If you want to add another environment to your existing Portainer installation, first select the type of environment you would like to add:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="docker/" %}
+[docker](docker/)
 {% endcontent-ref %}
 
 {% content-ref url="swarm/" %}
 [swarm](swarm/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="kubernetes/" %}
+[kubernetes](kubernetes/)
 {% endcontent-ref %}
 
 {% content-ref url="aci.md" %}
