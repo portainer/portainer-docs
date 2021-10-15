@@ -12,13 +12,13 @@ These instructions are for Portainer Business Edition. For Community Edition, pl
 
 ## Create the initial administrator user
 
-The first thing to do is create your first user, which will be an administrator. This password needs to be at least eight characters long. You can also change the username of the user if you prefer \(it defaults to `admin`\).
+The first thing to do is create your first user, which will be an administrator. This password needs to be at least eight characters long. You can also change the username of the user if you prefer (it defaults to `admin`).
 
 ![](../../../.gitbook/assets/be-server-setup-1.png)
 
 ## Collection of statistics
 
-We anonymously collect information about how Portainer is used via a tool called [Matomo](https://matomo.org/). You can disable this option, but we recommend leaving it activated. This will help us understand how our users use Portainer and improve it.
+We anonymously collect information about how Portainer is used via a tool called [Matomo](https://matomo.org). You can disable this option, but we recommend leaving it activated. This will help us understand how our users use Portainer and improve it.
 
 You can find more about what we do with your information in our [privacy policy](https://www.portainer.io/privacy-policy).
 
@@ -42,7 +42,7 @@ If you installed Portainer in Kubernetes you would choose Kubernetes, but if you
 
 ![Connect to the local environment, which might be Kubernetes...](../../../.gitbook/assets/initial-3.png)
 
-![... or Docker](../../../.gitbook/assets/initial-4%20%281%29.png)
+![... or Docker](../../../.gitbook/assets/initial-4.png)
 
 Once you've selected the appropriate option, click **Connect**. If all goes well, you'll be logged into the Portainer interface.
 
@@ -54,5 +54,6 @@ Congratulations, you've completed the Portainer setup! From here, your installat
 
 If you need to add additional endpoints to your Portainer installation, you can find instructions for doing so under the Existing Installation guide.
 
-{% page-ref page="../agent/" %}
-
+{% content-ref url="../agent/" %}
+[agent](../agent/)
+{% endcontent-ref %}
