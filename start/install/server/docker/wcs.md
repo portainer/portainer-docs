@@ -18,7 +18,7 @@ To get started, you will need:
 
 To run Portainer Server in a Windows Server/Desktop Environment you need to create exceptions in the firewall. These can easily be added through PowerShell by running the following commands:
 
-```text
+```
 netsh advfirewall firewall add rule name="cluster_management" dir=in action=allow protocol=TCP localport=2377
 netsh advfirewall firewall add rule name="node_communication_tcp" dir=in action=allow protocol=TCP localport=7946
 netsh advfirewall firewall add rule name="node_communication_udp" dir=in action=allow protocol=UDP localport=7946
@@ -29,7 +29,7 @@ netsh advfirewall firewall add rule name="swarm_dns_udp" dir=in action=allow pro
 
 You will also need to install the Windows Container Host Service and install Docker:
 
-```text
+```
 Enable-WindowsOptionalFeature -Online -FeatureName containers -All
 Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
 Install-Package -Name docker -ProviderName DockerMsftProvider
@@ -41,18 +41,14 @@ Once this is complete you will need to restart your Windows server. After the re
 
 First, create the volume that Portainer Server will use to store its database. Using PowerShell:
 
-```text
+```
 docker volume create portainer_data
 ```
 
 Then, download and install the Portainer Server container:
 
 ```aspnet
-docker run -d -p 8000:8000 -p 9443:9443 --name portainer `
-    --restart always `
-    -v \.\pipe\docker_engine:\.\pipe\docker_engine `
-    -v portainer_data:C:\data `
-    portainer/portainer-ce:latest
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce:latest
 ```
 
 {% hint style="info" %}
@@ -77,5 +73,6 @@ Replace `localhost` with the relevant IP address or FQDN if needed, and adjust t
 
 You will be presented with the initial setup page for Portainer Server.
 
-{% page-ref page="../setup.md" %}
-
+{% content-ref url="../setup.md" %}
+[setup.md](../setup.md)
+{% endcontent-ref %}
