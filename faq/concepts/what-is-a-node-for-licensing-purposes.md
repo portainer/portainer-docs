@@ -14,11 +14,11 @@ Let's look at a few examples. Say you are running a small setup consisting of th
 
 ![](../../.gitbook/assets/licensing-docker-standalone.png)
 
-
-
 In this scenario, Portainer is running in three places (one Server and two Agents) so would need a 3 node license. 
 
 Now, for Docker Swarm let's imagine a setup with one manager node (`manager01`) and two worker nodes (`swarm01` and `swarm02`):
+
+![](<../../.gitbook/assets/licensing-docker-swarm (1).png>)
 
 Portainer Server is running on the manager node, and the agent is runs on all three nodes across the swarm. Therefore, this would also require a 3 node license.
 
@@ -30,7 +30,7 @@ If a node is running both the Portainer Server and the Portainer Agent, this is 
 
 Kubernetes by nature works differently to Docker, so licensing does too. Let's consider a Kubernetes cluster with one master node and two worker nodes:
 
-![](../../.gitbook/assets/licensing-kubernetes.png)
+
 
 With Kubernetes, the Portainer Agent has the ability to access the Kubernetes API in order to manage the entire cluster. This access is used to determine the number of nodes in the cluster (three in this case) which then gives you the required number of licenses (three).
 
