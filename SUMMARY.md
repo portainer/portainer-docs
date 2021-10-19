@@ -18,7 +18,7 @@
       * [Install Portainer with Docker Swarm on Linux](start/install/server/swarm/linux.md)
       * [Install Portainer with Docker Swarm on WSL / Docker Desktop](start/install/server/swarm/wsl.md)
       * [Install Portainer with Docker Swarm on Windows Container Service](start/install/server/swarm/wcs.md)
-    * [Kubernetes](start/install/server/kubernetes/README.md)
+    * [Kubernetes](start/install/agent/kubernetes/README.md)
       * [Install Portainer with Kubernetes on your Self-Managed Infrastructure](start/install/server/kubernetes/baremetal.md)
       * [Install Portainer with Kubernetes on WSL / Docker Desktop](start/install/server/kubernetes/wsl.md)
     * [Initial Setup](start/install/server/setup.md)
@@ -31,11 +31,15 @@
       * [Install Portainer Agent with Docker Swarm on Linux](start/install/agent/swarm/linux.md)
       * [Install Portainer Agent with Docker Swarm on WSL / Docker Desktop](start/install/agent/swarm/wsl.md)
       * [Install Portainer Agent with Docker Swarm on Windows Container Service](start/install/agent/swarm/wcs.md)
-    * [Kubernetes](start/install/agent/kubernetes/README.md)
+    * [Kubernetes](start/install/server/kubernetes/README.md)
       * [Install Portainer Agent with Kubernetes on your Self-Managed Infrastructure](start/install/agent/kubernetes/baremetal.md)
       * [Install Portainer Agent with Kubernetes on WSL / Docker Desktop](start/install/agent/kubernetes/wsl.md)
     * [Azure ACI](start/install/agent/aci.md)
     * [Edge Agent](start/install/agent/edge.md)
+* [Upgrading Portainer](start/upgrade/README.md)
+  * [Upgrading on Docker](start/upgrade/docker.md)
+  * [Upgrading on Docker Swarm](start/upgrade/swarm.md)
+  * [Upgrading on Kubernetes](start/upgrade/kubernetes.md)
 
 ## Using Portainer <a href="user" id="user"></a>
 
@@ -166,10 +170,6 @@
     * [Authenticate via LDAP](admin/settings/authentication/ldap.md)
     * [Authenticate via Active Directory](admin/settings/authentication/active-directory.md)
     * [Authenticate via OAuth](admin/settings/authentication/oauth.md)
-* [Upgrading Portainer](admin/upgrade/README.md)
-  * [Upgrading on Docker](admin/upgrade/docker.md)
-  * [Upgrading on Docker Swarm](admin/upgrade/swarm.md)
-  * [Upgrading on Kubernetes](admin/upgrade/kubernetes.md)
 
 ## Frequently Asked Questions <a href="faq" id="faq"></a>
 
