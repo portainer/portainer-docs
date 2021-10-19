@@ -40,6 +40,10 @@
   * [Upgrading on Docker](start/upgrade/docker.md)
   * [Upgrading on Docker Swarm](start/upgrade/swarm.md)
   * [Upgrading on Kubernetes](start/upgrade/kubernetes.md)
+  * [Switching to Portainer Business Edition](start/upgrade/tobe/README.md)
+    * [Docker Standalone](start/upgrade/tobe/docker.md)
+    * [Docker Swarm](start/upgrade/tobe/swarm.md)
+    * [Kubernetes](start/upgrade/tobe/kubernetes.md)
 
 ## Using Portainer <a href="user" id="user"></a>
 

@@ -1,16 +1,25 @@
 # My Portainer Extensions license has expired. What can I do?
 
-In December 2020, Portainer stopped the extensions program as part of the release of Portainer 2.0. The RBAC capability offered with extensions was replaced with the dedicated Business Edition. As a Portainer Extensions user, you have two options:
+In December 2020, Portainer stopped the extensions program as part of the release of Portainer 2.0. The RBAC, External Authentication and Registry Management capabilities offered with extensions was replaced with the dedicated Business Edition. The 1.24.x code base will reach the end of it’s End of Life process on December 31, 2021.&#x20;
 
-### Option 1: Upgrade to Portainer Business 2.0
+#### **What does End of Life for 1.24.x and Extensions products mean?**
 
-A free upgrade for previous Portainer Extensions customers is available but comes with no support agreement. Click [here](mailto:info@portainer.io?subject=Request%20to%20upgrade%20from%20Extensions%20to%20Portainer%20Business) to request a license or [reach out to our team](https://www.portainer.io/contact) for more information on upgrading to Portainer Business with full support.
+* The 1.24.x image will be permanently removed from Docker Hub therefore if the original image is required (ever), it will need to have been locally stored by the user prior to that date.
+* Any and all effort to update or maintain the 1.24.x codebase by the Portainer Team will cease. This includes the addressing of any new security vulnerabilities identified by the community.
+* The source code will be archived in GitHub.
 
-### Option 2: Remain on version 1.24.x
+As a Portainer Extensions user, you have two options:
 
-If you wish to remain on the 1.24.x version, click [here](mailto:support@portainer.io?subject=Extensions%20License) to request a 10-year license key. You will need to tell us which extensions you require licenses for. Please be aware that version 1.24.x is no longer receiving updates.
+## Option 1: 5 Nodes Free
 
+If you have 5 nodes or less in your environment, we can send you a license for 5 Portainer Business nodes free. Please [complete the form](https://www.portainer.io/pb5-free-node-program-early-access-invite) and our team will be in touch.
 
+## Option 2: Purchase a license for more than 5 nodes
 
+If you have more than 5 nodes, please complete our [additional pricing request form](https://www.portainer.io/portainer-business-buy-more) and we'll get in touch as soon as possible with a quote.
 
+## Upgrade Instructions
 
+We have [complete guides](../../start/upgrade/tobe/) on how to upgrade from 1.24.x to Portainer Business Edition for your platform.
+
+For more on why you should transition to Portainer Business Edition, [we have a blog post](https://www.portainer.io/blog/why-transition-to-portainer-business-from-portainer-extensions) that goes into detail as to the benefits of doing so.

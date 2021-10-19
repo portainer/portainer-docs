@@ -21,3 +21,9 @@ To upgrade Portainer, choose your platform then follow the instructions:
 {% content-ref url="kubernetes.md" %}
 [kubernetes.md](kubernetes.md)
 {% endcontent-ref %}
+
+If you are coming from Portainer CE or the 1.24.x branch, we have guides for you as well.
+
+{% content-ref url="tobe/" %}
+[tobe](tobe/)
+{% endcontent-ref %}
