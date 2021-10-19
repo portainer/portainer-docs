@@ -36,6 +36,14 @@
       * [Install Portainer Agent with Kubernetes on WSL / Docker Desktop](start/install/agent/kubernetes/wsl.md)
     * [Azure ACI](start/install/agent/aci.md)
     * [Edge Agent](start/install/agent/edge.md)
+* [Upgrading Portainer](start/upgrade/README.md)
+  * [Upgrading on Docker](start/upgrade/docker.md)
+  * [Upgrading on Docker Swarm](start/upgrade/swarm.md)
+  * [Upgrading on Kubernetes](start/upgrade/kubernetes.md)
+  * [Switching from CE to Portainer Business](start/upgrade/tobe/README.md)
+    * [Docker Standalone](start/upgrade/tobe/docker.md)
+    * [Docker Swarm](start/upgrade/tobe/swarm.md)
+    * [Kubernetes](start/upgrade/tobe/kubernetes.md)
 
 ## Using Portainer <a href="user" id="user"></a>
 
@@ -176,14 +184,6 @@
   * [Authentication](admin/settings/authentication/README.md)
     * [Authenticate via LDAP](admin/settings/authentication/ldap.md)
     * [Authenticate via OAuth](admin/settings/authentication/oauth.md)
-* [Upgrading Portainer](admin/upgrade/README.md)
-  * [Upgrading on Docker](admin/upgrade/docker.md)
-  * [Upgrading on Docker Swarm](admin/upgrade/swarm.md)
-  * [Upgrading on Kubernetes](admin/upgrade/kubernetes.md)
-  * [Switching from CE to Portainer Business](admin/upgrade/tobe/README.md)
-    * [Docker Standalone](admin/upgrade/tobe/docker.md)
-    * [Docker Swarm](admin/upgrade/tobe/swarm.md)
-    * [Kubernetes](admin/upgrade/tobe/kubernetes.md)
 
 ## Frequently Asked Questions <a href="faq" id="faq"></a>
 
@@ -247,7 +247,7 @@
 ## Get More Help
 
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
-* [Slack](https://join.slack.com/t/portainer/shared_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA)
+* [Slack](https://join.slack.com/t/portainer/shared\_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA)
 * [Discord](https://discord.com/invite/j8fVken)
 
 ## Contribute to Portainer <a href="contribute" id="contribute"></a>
