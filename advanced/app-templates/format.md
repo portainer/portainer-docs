@@ -6,7 +6,7 @@ App template definitions are written in JSON. Valid templates consist of an arra
 
 A container template element must be a valid JSON object, composed of both mandatory and optional data fields. Here's an example of the format:
 
-```text
+```
 {
   "version": "2",
   "templates": [
@@ -27,7 +27,7 @@ A container template element must be a valid JSON object, composed of both manda
 * **Format:** String
 * **Valid values:** `"1"` = container; `"2"` = Swarm stack; `"3"` = Compose stack
 * **Required/Optional:** Required
-* **Other information:** Type `"3"` is limited to using the version `"2"` stack format \(this is a docker/libcompose limitation\).
+* **Other information:** Type `"3"` is limited to using the version `"2"` stack format (this is a docker/libcompose limitation).
 
 ### title
 
@@ -58,7 +58,7 @@ A container template element must be a valid JSON object, composed of both manda
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "administrator_only": true
 }
@@ -66,7 +66,7 @@ A container template element must be a valid JSON object, composed of both manda
 
 ### name
 
-* **Description:** The default name of a template \(shows in the Portainer UI\).
+* **Description:** The default name of a template (shows in the Portainer UI).
 * **Format:** String
 * **Valid values:** Any valid string.
 * **Required/Optional:** Optional
@@ -93,7 +93,7 @@ A container template element must be a valid JSON object, composed of both manda
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "command": "/bin/bash -c \"echo hello\" && exit 777"
 }
@@ -101,13 +101,13 @@ A container template element must be a valid JSON object, composed of both manda
 
 ### env
 
-* **Description:** A JSON array describing the environment variables required by a template. Each element in the array must be a valid JSON object. An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of inputs can be generated \(text input, select\).
+* **Description:** A JSON array describing the environment variables required by a template. Each element in the array must be a valid JSON object. An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of inputs can be generated (text input, select).
 * **Format:** Array
 * **Required/Optional:** Optional
 
 Array format:
 
-```text
+```
 {
   "name": "the name of the environment variable, as supported in the container image (mandatory)",
   "label": "label for the input in the UI (mandatory unless set is present)",
@@ -120,7 +120,7 @@ Array format:
 
 Example:
 
-```text
+```
 {
   "env": [
     {
@@ -166,7 +166,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "network": "host"
 }
@@ -179,7 +179,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "volumes": [
     {
@@ -196,12 +196,12 @@ Example:
 
 ### ports
 
-* **Description:** A JSON array describing the ports exposed by a template. Each element in the array must be a valid JSON string specifying the port number in the container, as well as the protocol. Can be optionally prefixed with a port number and colon \(for example `8080:`\) to define the port to be mapped on the host. If the host port is not specified, the Docker host will automatically assign it when starting the container.
+* **Description:** A JSON array describing the ports exposed by a template. Each element in the array must be a valid JSON string specifying the port number in the container, as well as the protocol. Can be optionally prefixed with a port number and colon (for example `8080:`) to define the port to be mapped on the host. If the host port is not specified, the Docker host will automatically assign it when starting the container.
 * **Format:** Array
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "ports": ["8080:80/tcp", "443/tcp"]
 }
@@ -209,12 +209,12 @@ Example:
 
 ### labels
 
-* **Description:** A JSON array describing the labels associated with a template. Each element in the array must be a valid JSON object with two properties \(`name:` and `"<value>"`\).
+* **Description:** A JSON array describing the labels associated with a template. Each element in the array must be a valid JSON object with two properties (`name:` and `"<value>"`).
 * **Format:** Array
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "labels": [
     { "name": "com.example.vendor", "value": "Acme" },
@@ -232,7 +232,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "privileged": true
 }
@@ -246,7 +246,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "interactive": true
 }
@@ -260,11 +260,11 @@ Example:
   * `"always"` Always restart the container regardless of the exit status.
   * `"no"` Never automatically restart the container.
   * `"on-failure"` Restart the container only if it exits with a non-zero status.
-  * `"unless-stopped"` Always restart the container regardless of the exit status \(unless the container was manually stopped\).
+  * `"unless-stopped"` Always restart the container regardless of the exit status (unless the container was manually stopped).
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "restart_policy": "unless-stopped"
 }
@@ -278,7 +278,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "hostname": "mycontainername"
 }
@@ -292,7 +292,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "note": "You can use this field to record extra information about a template."
 }
@@ -306,7 +306,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "platform": "linux"
 }
@@ -319,7 +319,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "categories": ["webserver", "open-source"]
 }
@@ -329,7 +329,7 @@ Example:
 
 A stack template element must be a valid JSON object, composed of mandatory and optional data fields. Here's an example of the format:
 
-```text
+```
 {
   "type": 2,
   "title": "CockroachDB",
@@ -351,7 +351,7 @@ A stack template element must be a valid JSON object, composed of mandatory and 
 * **Format:** String
 * **Valid values:** `"1"` = container; `"2"` = Swarm stack; `"3"` = Compose stack
 * **Required/Optional:** Required
-* **Other information:** Type `"3"` is limited to using the version `"2"` stack format \(this is a docker/libcompose limitation\).
+* **Other information:** Type `"3"` is limited to using the version `"2"` stack format (this is a docker/libcompose limitation).
 
 ### title
 
@@ -374,9 +374,13 @@ A stack template element must be a valid JSON object, composed of mandatory and 
 * **Valid values:** See the example below.
 * **Required/Optional:** Required
 
+{% hint style="warning" %}
+This value **must** reference a Git repository.
+{% endhint %}
+
 Object format:
 
-```text
+```
 {
   "url": "URL of the public git repository (mandatory)",
   "stackfile": "Path to the Compose file inside the repository (mandatory)",
@@ -385,7 +389,7 @@ Object format:
 
 Example:
 
-```text
+```
 {
   "url": "https://github.com/portainer/templates",
   "stackfile": "stacks/cockroachdb/docker-stack.yml"
@@ -400,7 +404,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "administrator_only": true
 }
@@ -408,7 +412,7 @@ Example:
 
 ### name
 
-* **Description:** The default name of a template \(shows in the Portainer UI\).
+* **Description:** The default name of a template (shows in the Portainer UI).
 * **Format:** String
 * **Valid values:** Any valid string.
 * **Required/Optional:** Optional
@@ -422,15 +426,15 @@ Example:
 
 ### env
 
-* **Description:** A JSON array describing the environment variables required by a template. Each element in the array must be a valid JSON object. An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of inputs can be generated \(text input, select\).
+* **Description:** A JSON array describing the environment variables required by a template. Each element in the array must be a valid JSON object. An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of inputs can be generated (text input, select).
 * **Format:** Array
 * **Required/Optional:** Optional
 
-An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of inputs can be generated \(text input, select\).
+An input will be generated in the templates view for each element in the array. Depending on the object properties, different types of inputs can be generated (text input, select).
 
 Array format:
 
-```text
+```
 {
   "name": "the name of the environment variable, as supported in the container image (mandatory)",
   "label": "label for the input in the UI (mandatory unless set is present)",
@@ -443,7 +447,7 @@ Array format:
 
 Example:
 
-```text
+```
 {
   "env": [
     {
@@ -489,7 +493,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "note": "You can use this field to record extra information about a template."
 }
@@ -503,7 +507,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 { "platform": "linux" }
 ```
 
@@ -514,8 +518,7 @@ Example:
 * **Required/Optional:** Optional
 * **Example:** See below.
 
-```text
+```
 {
   "categories": ["webserver", "open-source"]
 ```
-
