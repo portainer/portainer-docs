@@ -1,6 +1,6 @@
 # Add a new namespace
 
-From the menu select **Namespaces** then click **Add namespace**.
+From the menu select **Namespaces **then click **Add namespace**.
 
 ![](../../../.gitbook/assets/namespaces-add-1.gif)
 
@@ -13,4 +13,3 @@ Load balancer quota and storage quota functionality is only available in Portain
 {% endhint %}
 
 When you're finished, click **Create namespace**.
-

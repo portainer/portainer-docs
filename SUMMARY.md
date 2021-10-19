@@ -3,7 +3,7 @@
 * [Welcome](README.md)
 * [Release Notes](release-notes.md)
 
-## Getting Started <a id="start"></a>
+## Getting Started <a href="start" id="start"></a>
 
 * [Introduction](start/intro.md)
 * [Portainer architecture](start/architecture.md)
@@ -36,8 +36,16 @@
       * [Install Portainer Agent with Kubernetes on WSL / Docker Desktop](start/install/agent/kubernetes/wsl.md)
     * [Azure ACI](start/install/agent/aci.md)
     * [Edge Agent](start/install/agent/edge.md)
+* [Upgrading Portainer](start/upgrade/README.md)
+  * [Upgrading on Docker](start/upgrade/docker.md)
+  * [Upgrading on Docker Swarm](start/upgrade/swarm.md)
+  * [Upgrading on Kubernetes](start/upgrade/kubernetes.md)
+  * [Switching from CE to Portainer Business](start/upgrade/tobe/README.md)
+    * [Docker Standalone](start/upgrade/tobe/docker.md)
+    * [Docker Swarm](start/upgrade/tobe/swarm.md)
+    * [Kubernetes](start/upgrade/tobe/kubernetes.md)
 
-## Using Portainer <a id="user"></a>
+## Using Portainer <a href="user" id="user"></a>
 
 * [Docker/Swarm](user/docker/README.md)
   * [Dashboard](user/docker/dashboard.md)
@@ -125,7 +133,7 @@
   * [Edge Stacks](user/edge/stacks.md)
   * [Edge Jobs](user/edge/jobs.md)
 
-## Administering Portainer <a id="admin"></a>
+## Administering Portainer <a href="admin" id="admin"></a>
 
 * [Users](admin/users/README.md)
   * [Teams](admin/users/teams/README.md)
@@ -159,16 +167,8 @@
   * [Authentication](admin/settings/authentication/README.md)
     * [Authenticate via LDAP](admin/settings/authentication/ldap.md)
     * [Authenticate via OAuth](admin/settings/authentication/oauth.md)
-* [Upgrading Portainer](admin/upgrade/README.md)
-  * [Upgrading on Docker](admin/upgrade/docker.md)
-  * [Upgrading on Docker Swarm](admin/upgrade/swarm.md)
-  * [Upgrading on Kubernetes](admin/upgrade/kubernetes.md)
-  * [Switching from CE to Portainer Business](admin/upgrade/tobe/README.md)
-    * [Docker Standalone](admin/upgrade/tobe/docker.md)
-    * [Docker Swarm](admin/upgrade/tobe/swarm.md)
-    * [Kubernetes](admin/upgrade/tobe/kubernetes.md)
 
-## Frequently Asked Questions <a id="faq"></a>
+## Frequently Asked Questions <a href="faq" id="faq"></a>
 
 * [Portainer Concepts](faq/concepts/README.md)
   * [What is Portainer's architecture?](faq/concepts/what-is-portainers-architecture.md)
@@ -203,7 +203,7 @@
   * [How do you decide which bugs and features to work on first?](faq/contributing/how-do-you-decide-which-bugs-and-features-to-work-on-first.md)
   * [How do I log a support ticket?](faq/contributing/how-do-i-log-a-support-ticket.md)
 
-## Advanced Topics <a id="advanced"></a>
+## Advanced Topics <a href="advanced" id="advanced"></a>
 
 * [CLI configuration options](advanced/cli.md)
 * [App templates](advanced/app-templates/README.md)
@@ -228,13 +228,12 @@
 ## Get More Help
 
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
-* [Slack](https://join.slack.com/t/portainer/shared_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA)
+* [Slack](https://join.slack.com/t/portainer/shared\_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA)
 * [Discord](https://discord.com/invite/j8fVken)
 
-## Contribute to Portainer <a id="contribute"></a>
+## Contribute to Portainer <a href="contribute" id="contribute"></a>
 
 * [Contribute](contribute/contribute.md)
 * [Build instructions](contribute/build/README.md)
   * [Set up a macOS build environment](contribute/build/mac.md)
   * [Set up a Linux build environment](contribute/build/linux.md)
-

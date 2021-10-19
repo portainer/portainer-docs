@@ -8,12 +8,12 @@ Configure the container settings as required.
 
 ## Image configuration section
 
-| Field/Option | Overview |
-| :--- | :--- |
-| Name | Give the container a descriptive name. |
-| Registry | Select the registry that contains the image that you want to use for your container. |
-| Image | Enter the name of the image you want to use. |
-| Always pull the image | Toggle on to enforce pulling the image from the registry instead of using the locally cached copy \(if you have used the image previously\). |
+| Field/Option          | Overview                                                                                                                                   |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Name                  | Give the container a descriptive name.                                                                                                     |
+| Registry              | Select the registry that contains the image that you want to use for your container.                                                       |
+| Image                 | Enter the name of the image you want to use.                                                                                               |
+| Always pull the image | Toggle on to enforce pulling the image from the registry instead of using the locally cached copy (if you have used the image previously). |
 
 ![](../../../.gitbook/assets/containers-create-2.png)
 
@@ -27,28 +27,26 @@ Alternatively you can switch to advanced mode to manually enter registry and ima
 
 ## Actions section
 
-| Field/Option | Overview |
-| :--- | :--- |
-| Auto remove | Toggle this option on to automatically remove the container once it exits. This is useful if you want to run a container only once. |
+| Field/Option | Overview                                                                                                                            |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Auto remove  | Toggle this option on to automatically remove the container once it exits. This is useful if you want to run a container only once. |
 
 ![](../../../.gitbook/assets/containers-create-6.png)
 
 ## Network ports configuration section
 
-| Field/Option | Overview |
-| :--- | :--- |
+| Field/Option                                           | Overview                                                                                                 |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
 | Publish all exposed network ports to random host ports | Toggle on to allow Portainer to randomly assign ports on the host to the exposed ports in the container. |
-| Manual network port publishing | Click **publish a new network port** to create manual port mappings for the container. |
+| Manual network port publishing                         | Click **publish a new network port** to create manual port mappings for the container.                   |
 
 ![](../../../.gitbook/assets/containers-create-5.png)
 
-Once complete, set any advanced options \(see below\) then click **Deploy the container.** If successful your container will be shown in the container list.
+Once complete, set any advanced options (see below) then click **Deploy the container. **If successful your container will be shown in the container list.
 
 ## Advanced container settings
 
 Choose from a range of options to customize the deployment.
 
 ![](../../../.gitbook/assets/containers-create-4.png)
-
-
 

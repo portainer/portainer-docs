@@ -24,7 +24,7 @@ From the menu select **Endpoints** then click **Add endpoint**. Ensure **Agent**
 
 ![](../../../../.gitbook/assets/install-agent-swarm-linux-1.gif)
 
-In the **Information** tab click the **Linux** button and select the **Docker Swarm** tab. Copy the command, then run the command on the manager node of your Docker Swarm cluster. 
+In the **Information** tab click the **Linux** button and select the **Docker Swarm** tab. Copy the command, then run the command on the manager node of your Docker Swarm cluster.&#x20;
 
 {% hint style="info" %}
 You must run the command on the Docker Swarm cluster before you proceed to entering the environment details.
@@ -34,33 +34,33 @@ You must run the command on the Docker Swarm cluster before you proceed to enter
 
 The deployment command will return something similar to:
 
-```text
+```
 Creating network portainer-agent_portainer_agent
 Creating service portainer-agent_agent
 ```
 
 To validate the Agent is running, you can run the following command:
 
-```text
+```
  docker service ls
 ```
 
 the result of which should look something like this:
 
-```text
+```
 ID                  NAME                    MODE                REPLICAS            IMAGE                    PORTS
 tshb6ee2710s        portainer-agent_agent   global              1/1                 portainer/agent:latest
 ```
 
 ## Finishing the configuration
 
-Once the Agent is running on the Docker Swarm cluster, enter the **environment details** using the table below as a guide:
+Once the Agent is running on the Docker Swarm cluster, enter the **environment details **using the table below as a guide:
 
-| Field | Overview |
-| :--- | :--- |
-| Name | Give the endpoint a descriptive name. This is a required field. |
-| Endpoint URL | Enter the IP or DNS name at which the Portainer Server instance can reach the endpoint along with the port \(`9001`\) if required. This is a required field. |
-| Public IP | URL or IP address where exposed containers will be reachable. This is an optional field and will default to the endpoint URL. This can be changed at a later date. |
+| Field        | Overview                                                                                                                                                           |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Name         | Give the endpoint a descriptive name. This is a required field.                                                                                                    |
+| Endpoint URL | Enter the IP or DNS name at which the Portainer Server instance can reach the endpoint along with the port (`9001`) if required. This is a required field.         |
+| Public IP    | URL or IP address where exposed containers will be reachable. This is an optional field and will default to the endpoint URL. This can be changed at a later date. |
 
 ![](../../../../.gitbook/assets/install-agent-swarm-linux-3.png)
 
@@ -69,6 +69,4 @@ In the **Metadata** section, as an optional step you can categorize the endpoint
 ![](../../../../.gitbook/assets/install-agent-swarm-linux-4.png)
 
 When everything is set, you can click **Add Endpoint**.
-
-
 
