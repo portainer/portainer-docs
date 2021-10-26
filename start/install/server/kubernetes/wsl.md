@@ -8,6 +8,10 @@ The following instructions will guide you in setting up _Portainer Server_ with 
 This scenario is for testing purposes only.
 {% endhint %}
 
+{% hint style="warning" %}
+We are aware of an issue where namespace and application access privileges are not fully implemented when running Kubernetes via Docker Desktop. We are looking into the root cause and hope to have a resolution soon.
+{% endhint %}
+
 ## Preparation
 
 Before you start, you must make sure that Kubernetes is enabled and running within your Docker Desktop installation. To enable Kubernetes in Docker Desktop, you need to open the dashboard of Docker Desktop. Right click the Docker icon in the system tray and click **Dashboard**:
