@@ -14,7 +14,8 @@ The following tables list all of the configurations that we have tested, validat
 
 | **Portainer Version**    | **Release Date** | **Docker Version** | **Kubernetes Version**       | **Architectures**     |
 | ------------------------ | ---------------- | ------------------ | ---------------------------- | --------------------- |
-| Community 2.9.1 (latest) | Oct 11, 2021     | 20.10.5 20.10.6    | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
+| Community 2.9.2 (latest) | Oct 26, 2021     | 20.10.5 20.10.6    | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
+| Community 2.9.1          | Oct 11, 2021     | 20.10.5 20.10.6    | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
 | Community 2.9.0          | Sep 23, 2021     | 20.10.5 20.10.6    | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
 | Community 2.6.3          | Aug 27, 2021     | 20.10.5 20.10.6    | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
 | Community 2.6.2          | Aug 2, 2021      | 20.10.5 20.10.6    | 1.19 1.20.2 1.21             | ARM64, x86\_64        |
