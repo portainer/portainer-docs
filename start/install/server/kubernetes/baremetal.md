@@ -122,7 +122,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endtabs %}
 
 {% hint style="info" %}
-To explicitly set the target node when deploying the Helm chart on the CLI, include `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>` in your `helm install` command.
+To explicitly set the target node when deploying the Helm chart on the CLI, include `--set nodeSelector.kubernetes\.io/hostname=<YOUR NODE NAME>` in your `helm install` command.
 {% endhint %}
 
 ### Deploy using YAML manifests
