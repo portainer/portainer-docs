@@ -17,7 +17,7 @@ From the menu select **Stacks**, click **Add stack**, give the stack a descripti
 
 ![](../../../.gitbook/assets/2.9-stacks-add-1.gif)
 
-As an optional step, you can also use the web editor to define environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc). 
+As an optional step, you can also use the web editor to define environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).&#x20;
 
 {% hint style="info" %}
 Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
@@ -33,7 +33,7 @@ In Portainer you can create stacks from Compose YML files. To do this, from the 
 
 ![](../../../.gitbook/assets/2.9-stacks-add-1.gif)
 
-Select **Upload** then select the Compose file from your computer. As an optional step, enter any environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc). 
+Select **Upload** then select the Compose file from your computer. As an optional step, enter any environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).&#x20;
 
 {% hint style="info" %}
 Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself which would take it out of sync with your local copy. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
@@ -73,6 +73,10 @@ If you have 2FA configured in GitHub, your passcode is your password.
 ### Automatic updates
 
 New in version 2.9 is the ability to automatically update your stack deployed from Git. To enable this, toggle on **Automatic updates** and configure your settings.
+
+{% hint style="info" %}
+For more detail on how automatic updates function under the hood, have a look at [this FAQ entry](../../../faq/troubleshooting/how-do-automatic-updates-for-stacks-applications-work.md).
+{% endhint %}
 
 | **Field/Option** | **Overview**                                                                                                                                                                                                                                                                        |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -39,13 +39,16 @@ Portainer uses Kompose to convert a Compose manifest to a Kubernetes-compliant m
 
 Enabling Automatic updates gives Portainer the ability to update your application automatically, either by polling the repository at a defined interval for changes or by using a webhook to trigger an update.
 
+{% hint style="info" %}
+For more detail on how automatic updates function under the hood, have a look at [this FAQ entry](../../../faq/troubleshooting/how-do-automatic-updates-for-stacks-applications-work.md).
+{% endhint %}
+
 {% hint style="warning" %}
 If your application is configured for automatic updates and you make changes locally, these changes will be overridden by the application definition in the Git repository. Bear this in mind when making configuration changes.
 {% endhint %}
 
-|                  |                                                                                                                                     |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Field/Option** | **Overview**                                                                                                                        |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Mechanism        | Choose from **Polling** or **Webhook**.                                                                                             |
 | Fetch interval   | When using the **Polling** method, choose how often you wish to check the Git repository for updates to your application.           |
 | Webhook          | When using the **Webhook** method, this displays the webhook URL to use. Click **Copy link** to copy the webhook to your clipboard. |
@@ -58,7 +61,7 @@ When you're ready, click **Deploy**.
 
 ## Option 2: Web editor
 
-From **Deployment type** select either **Kubernetes** or **Compose** (depending on the format of the manifest) then write or paste in your Kubernetes manifest. 
+From **Deployment type** select either **Kubernetes** or **Compose** (depending on the format of the manifest) then write or paste in your Kubernetes manifest.&#x20;
 
 {% hint style="info" %}
 Portainer uses Kompose to convert a Compose manifest to a Kubernetes-compliant manifest. Be aware that currently not all Compose format options are supported by Kompose.
@@ -66,7 +69,7 @@ Portainer uses Kompose to convert a Compose manifest to a Kubernetes-compliant m
 
 ![](../../../.gitbook/assets/applications-manifest-4.png)
 
-When you're ready, click **Deploy**.  
+When you're ready, click **Deploy**. &#x20;
 
 ## Option 3: URL
 
