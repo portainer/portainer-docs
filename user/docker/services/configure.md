@@ -1,6 +1,6 @@
 # Configure service options
 
-From the menu select **Services** then select the service you want to configure. 
+From the menu select **Services** then select the service you want to configure.&#x20;
 
 ![](../../../.gitbook/assets/2.9-services-configure-1.gif)
 
@@ -88,7 +88,7 @@ Use placement constraints to control which nodes a service can be assigned to.
 
 ### Placement preferences
 
-While placement constraints limit the nodes a service can run on, placement preferences attempt to place tasks on appropriate nodes in an algorithmic way \(by default they are spread evenly\).
+While placement constraints limit the nodes a service can run on, placement preferences attempt to place tasks on appropriate nodes in an algorithmic way (by default they are spread evenly).
 
 ![](../../../.gitbook/assets/services-configure-12.png)
 
@@ -96,7 +96,7 @@ While placement constraints limit the nodes a service can run on, placement pref
 
 Docker's restart policies ensure that linked containers are restarted in the correct order, and control the conditions under which they are restarted:
 
-* **Any**: Restart the container under any conditions \(restarted host or Docker daemon\).
+* **Any**: Restart the container under any conditions (restarted host or Docker daemon).
 * **On Failure**: Restart the container if it exits due to an error which manifests as a non-zero exit code.
 * **None**: Do not automatically restart the container.
 
@@ -106,7 +106,7 @@ You can also adjust the restart delay, maximum attempts and restart window.
 
 ### Update configuration
 
-Updates a service according to the parameters you specify. The parameters specified here are the same as `docker service create` \(see [Docker's own documentation](https://docs.docker.com/engine/reference/commandline/service_create/) for more information\).
+Updates a service according to the parameters you specify. The parameters specified here are the same as `docker service create` (see [Docker's own documentation](https://docs.docker.com/engine/reference/commandline/service\_create/) for more information).
 
 Normally, updating a service will only cause the service’s tasks to be replaced with new ones if a change to the service requires recreating the tasks for it to take effect.
 
@@ -126,13 +126,12 @@ Lets you add metadata to containers using Docker labels either via an array or a
 
 ### Configs
 
-Docker 17.06 introduced Swarm service configs. These allow you to store non-sensitive information such as configuration files outside a service’s image or running containers. This keeps images as generic as possible and removes the need to bind-mount configuration files into containers or use environment variables.
+Docker 17.06 introduced Swarm service [configs](configure.md#configs). These allow you to store non-sensitive information such as configuration files outside a service’s image or running containers. This keeps images as generic as possible and removes the need to bind-mount configuration files into containers or use environment variables.
 
 ![](../../../.gitbook/assets/services-configure-17.png)
 
 ### Secrets
 
-In the context of Docker Swarm services, a secret is a blob of data such as a password, SSH private key, SSL certificate, or another piece of data that should not be transmitted over a network or stored unencrypted in a Dockerfile or in your application’s source code.
+In the context of Docker Swarm services, a [secret](../secrets/) is a blob of data such as a password, SSH private key, SSL certificate, or another piece of data that should not be transmitted over a network or stored unencrypted in a Dockerfile or in your application’s source code.
 
 ![](../../../.gitbook/assets/services-configure-18.png)
-

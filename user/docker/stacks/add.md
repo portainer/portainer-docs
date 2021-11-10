@@ -4,7 +4,7 @@
 
 There are four ways to deploy a new stack from Portainer:
 
-| **Option**      | **Overview**                                                                                             |
+| Option          | Overview                                                                                                 |
 | --------------- | -------------------------------------------------------------------------------------------------------- |
 | Web editor      | Use our web editor to define the services for the stack using a docker-compose format.                   |
 | Upload          | If you have a `stack.yml` file, you can upload it from your computer and use it to deploy the stack.     |
@@ -55,7 +55,7 @@ Select **Git Repository **then enter information about your Git repo.
 Any Git-compatible repository should work here. Substitute the details as required.
 {% endhint %}
 
-| **Field/Option**      | **Overview**                                                                                                                                                                                    |
+| Field/Option          | Overview                                                                                                                                                                                        |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Repository URL        | Enter the repository URL.                                                                                                                                                                       |
 | Repository Reference  | Enter the branch.                                                                                                                                                                               |
@@ -78,12 +78,12 @@ New in version 2.9 is the ability to automatically update your stack deployed fr
 For more detail on how automatic updates function under the hood, have a look at [this FAQ entry](../../../faq/troubleshooting/how-do-automatic-updates-for-stacks-applications-work.md).
 {% endhint %}
 
-| **Field/Option** | **Overview**                                                                                                                                                                                                                                                                        |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mechanism        | Select the method to use when checking for updates:                                                                                                                                                                                                                                 |
-|                  | <p><strong>Polling:</strong> Periodically poll the Git repository from Portainer to check for updates to the repository.</p><p><strong>Webhook:</strong> Generate a webhook URL to add to your Git repository to trigger the update on demand (for example via GitHub actions).</p> |
-| Fetch interval   | If **Polling** is selected, how often Portainer will check the Git repository for updates.                                                                                                                                                                                          |
-| Webhook          | When **Webhook** is selected, displays the webhook URL to use in your integration. Click **Copy link** to copy the webhook URL to the clipboard.                                                                                                                                    |
+| Field/Option   | Overview                                                                                                                                                                                                                                                                            |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mechanism      | Select the method to use when checking for updates:                                                                                                                                                                                                                                 |
+|                | <p><strong>Polling:</strong> Periodically poll the Git repository from Portainer to check for updates to the repository.</p><p><strong>Webhook:</strong> Generate a webhook URL to add to your Git repository to trigger the update on demand (for example via GitHub actions).</p> |
+| Fetch interval | If **Polling** is selected, how often Portainer will check the Git repository for updates.                                                                                                                                                                                          |
+| Webhook        | When **Webhook** is selected, displays the webhook URL to use in your integration. Click **Copy link** to copy the webhook URL to the clipboard.                                                                                                                                    |
 
 ![Automatic updates when using polling](../../../.gitbook/assets/2.9-stacks-add-github-2.png)
 
