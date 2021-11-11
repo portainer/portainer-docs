@@ -12,7 +12,7 @@ To get started, you will need:
 
 * The latest version of Docker Desktop installed and working.
 * Administrator access on the machine that will host your Portainer Server instance.
-* Windows Subsystem for Linux \(WSL\) installed and a Linux distribution selected. For a new installation we recommend WSL2.
+* Windows Subsystem for Linux (WSL) installed and a Linux distribution selected. For a new installation we recommend WSL2.
 * By default, Portainer Server will expose the UI over port `9443` and expose a TCP tunnel server over port `8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 
 The installation instructions also make the following assumptions about your environment:
@@ -53,6 +53,20 @@ CONTAINER ID   IMAGE                                              COMMAND       
 f4ab79732007   portainer/portainer-ce:latest                      "/portainer"             2 weeks ago    Up 29 hours   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9000/tcp, :::9443->9443/tcp   portainer
 ```
 
+### Optional: Adding the Portainer Agent
+
+With Docker Standalone, you have the optional step of installing the Portainer Agent alongside your Portainer Server installation. Doing so provides additional functionality such as volume browsing from within Portainer.&#x20;
+
+Once you have completed the above installation process, you can run the following command to install the Portainer Agent:
+
+```
+docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:latest
+```
+
+{% hint style="info" %}
+You may also want to [enable host management features](../../../../user/docker/host/setup.md#enable-host-management-features) to provide the ability to browse the local filesystem from within Portainer.
+{% endhint %}
+
 ## Logging In
 
 Now that the installation is complete, you can log into your Portainer Server instance by opening a web browser and going to:
@@ -65,5 +79,6 @@ Replace `localhost` with the relevant IP address or FQDN if needed, and adjust t
 
 You will be presented with the initial setup page for Portainer Server.
 
-{% page-ref page="../setup.md" %}
-
+{% content-ref url="../setup.md" %}
+[setup.md](../setup.md)
+{% endcontent-ref %}
