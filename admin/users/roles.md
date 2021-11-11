@@ -15,7 +15,7 @@ Portainer Business Edition comes with Role-Based Access Control (RBAC) features 
 There are several types of roles:
 
 * **Endpoint administrator** has full access within a given endpoint, but cannot make any changes to the infrastructure that underpins an endpoint (i.e. no host management), nor are they able to make changes to Portainer internal settings. Endpoint administrators are also unable to change ownership of resources.
-* **Operator** has operational control over the resources deployed within a given endpoint. Operator can update, re-deploy, start and stop containers/services, check logs and console into containers, but cannot create any resources.
+* **Operator** has operational control over the resources deployed within a given endpoint. Operator can update, re-deploy, start and stop containers/services, check logs and console into containers, but cannot create or delete any resources.
 * **Helpdesk** has read-only access to the resources deployed within a given endpoint but cannot make changes to any resource, nor can they open a console to a container or make changes to a container’s volumes.
 * **Standard User** has complete control over the resources that a user deploys, or if the user is a member of a team, has complete control over the resources that users of that team deploy.
 * **Read-Only User** has read-only access to the resources they are entitled to see (resources created by members of their team, and public resources).
