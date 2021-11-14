@@ -53,15 +53,13 @@ Next, retrieve the stack YML manifest:
 {% tabs %}
 {% tab title="Linux and Windows with Docker Desktop" %}
 ```
-curl -L https://downloads.portainer.io/BE2.10/portainer-agent-stack-ssl.yml \
-    -o portainer-agent-stack.yml
+curl -L https://downloads.portainer.io/portainer-ee-agent-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 {% endtab %}
 
 {% tab title="Windows Container Services" %}
 ```
-curl https://downloads.portainer.io/BE2.10/portainer-windows-stack-ssl.yml `
-    -o portainer-agent-stack.yml
+curl https://downloads.portainer.io/portainer-ee-windows-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 {% endtab %}
 {% endtabs %}
