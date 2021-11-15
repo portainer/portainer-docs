@@ -15,10 +15,11 @@ You will need:
 To run Portainer Agent in a Windows Container scenario, you need to execute the following commands:
 
 ```bash
-docker run -d -p 9001:9001 -e CAP_HOST_MANAGEMENT=1 --name portainer_agent --restart=always -v C:\:C:\host -v C:\ProgramData\docker\volumes:C:\ProgramData\docker\volumes -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent:latest
+docker run -d -p 9001:9001 -e CAP_HOST_MANAGEMENT=1 --name portainer_agent --restart=always -v C:\:C:\host -v C:\ProgramData\docker\volumes:C:\ProgramData\docker\volumes -v \\.\pipe\docker_engine:\\.\pipe\docker_engine portainer/agent:2.9.2
 ```
 
-Once the agent has been installed you are ready to add the environment to your Portainer Server installation. 
+Once the agent has been installed you are ready to add the environment to your Portainer Server installation.&#x20;
 
-{% page-ref page="../../../../admin/environments/add/docker.md" %}
-
+{% content-ref url="../../../../admin/environments/add/docker.md" %}
+[docker.md](../../../../admin/environments/add/docker.md)
+{% endcontent-ref %}

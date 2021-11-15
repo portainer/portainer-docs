@@ -24,7 +24,7 @@ From the menu select **Environments** then click **Add environment**. Ensure **A
 
 ![](../../../../.gitbook/assets/2.9-install-agent-swarm-1.gif)
 
-In the **Information** tab click the **Linux** button and select the **Docker Swarm** tab. Copy the command, then run the command on the manager node of your Docker Swarm cluster. 
+In the **Information** tab click the **Linux** button and select the **Docker Swarm** tab. Copy the command, then run the command on the manager node of your Docker Swarm cluster.&#x20;
 
 {% hint style="info" %}
 You must run the command on the Docker Swarm cluster before you proceed to entering the environment details.
@@ -49,7 +49,7 @@ the result of which should look something like this:
 
 ```
 ID                  NAME                    MODE                REPLICAS            IMAGE                    PORTS
-tshb6ee2710s        portainer-agent_agent   global              1/1                 portainer/agent:latest
+tshb6ee2710s        portainer-agent_agent   global              1/1                 portainer/agent:2.9.2
 ```
 
 ## Finishing the configuration

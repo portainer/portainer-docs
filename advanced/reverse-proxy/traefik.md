@@ -10,7 +10,7 @@ To deploy Portainer behind Traefik Proxy in a Docker standalone scenario you mus
 This file also exists in [our GitHub repository](https://github.com/portainer/portainer-compose/tree/master/traefik).
 {% endhint %}
 
-```text
+```
 version: "3.3"
 
 services:
@@ -70,33 +70,33 @@ Before you run this file in Docker, you will need to create the `acme.json` file
 
 In the volumes and command section of the Traefik Proxy container:
 
-```text
+```
 - "./acme.json:/acme.json"
 ```
 
-```text
+```
 - --certificatesresolvers.leresolver.acme.storage=./acme.json
 ```
 
 You also need to enter your email address for Let's Encrypt registration.
 
-```text
+```
 - --certificatesresolvers.leresolver.acme.email=your-email
 ```
 
 Next, customize some labels in the Traefik container. The following labels need to be updated with the URL that you want use to access Portainer:
 
-```text
+```
 - "traefik.http.routers.frontend.rule=Host(`portainer.yourdomain.com`)"
 ```
 
-```text
+```
 - "traefik.http.routers.edge.rule=Host(`edge.yourdomain.com`)"
 ```
 
 Once this is done, you're ready to deploy Portainer:
 
-```text
+```
 docker-compose up -d
 ```
 
@@ -114,23 +114,23 @@ Before deploying the Docker Compose file, you need to create two elements: netwo
 
 First, create two overlay networks:
 
-```text
+```
  docker network create -d overlay agent_network
 ```
 
-```text
+```
  docker network create -d overlay public
 ```
 
 Then create the volume:
 
-```text
+```
  docker volume create portainer_data
 ```
 
 Save this recipe as `portainer.yml`:
 
-```text
+```
 version: '3.2'
 
 services:
@@ -154,7 +154,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
   agent:
-    image: portainer/agent:latest
+    image: portainer/agent:2.9.2
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -208,28 +208,27 @@ volumes:
 
 Finally, customize these labels to match the URL that you want to use to access Portainer:
 
-```text
+```
 - "traefik.http.routers.frontend.rule=Host(`portainer.yourdomain.com`)"
 ```
 
-```text
+```
 - "traefik.http.routers.edge.rule=Host(`edge.yourdomain.com`)"
 ```
 
 You can now deploy Portainer by executing the following:
 
-```text
+```
  docker stack deploy portainer -c portainer.yml
 ```
 
 To check the deployment, run `docker service ls`. You should see an output similar to the following:
 
-```text
+```
 ID                  NAME                  MODE                REPLICAS            IMAGE                          PORTS
-lt21zrypsll6        portainer_agent       global              1/1                 portainer/agent:latest
+lt21zrypsll6        portainer_agent       global              1/1                 portainer/agent:2.9.2
 m6912ynwdcd7        portainer_portainer   replicated          1/1                 portainer/portainer-ce
 tw2nb4i640e4        portainer_traefik     replicated          1/1                 traefik:latest                 *:80->80/tcp, *:443->443/tcp
 ```
 
 Once the services are running, you will able to access Portainer from the URL you defined earlier, for example: `portainer.yourdomain.com`.
-

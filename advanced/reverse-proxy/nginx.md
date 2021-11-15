@@ -8,7 +8,7 @@ To deploy Portainer behind an nginx proxy in a Docker standalone scenario you mu
 This example uses the excellent [jwilder/nginx-proxy](https://hub.docker.com/r/jwilder/nginx-proxy) image as the proxy container, which requires no additional configuration beyond the two environment variables added to the `portainer` container's definition.
 {% endhint %}
 
-```text
+```
 version: "2"
 
 services:
@@ -39,13 +39,13 @@ volumes:
 
 To start working with this recipe, change the `VIRTUAL_HOST` value then deploy Portainer by running the following:
 
-```text
+```
 docker-compose up -d
 ```
 
 When this has finished, run `docker ps` . You should  see an output similar to this:
 
-```text
+```
 CONTAINER ID   IMAGE                           COMMAND                  CREATED         STATUS         PORTS                                                           NAMES
 8c8f2eac7c9a   portainer/portainer:latest      "/portainer -H unix:…"   4 minutes ago   Up 4 minutes   9000/tcp, 0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 9443/tcp   portainer_portainer_1
 3e7c8b5d71d7   jwilder/nginx-proxy             "/app/docker-entrypo…"   4 minutes ago   Up 4 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp                               portainer_nginx-proxy_1
@@ -66,23 +66,23 @@ First, create two networks:
 * One for the agent and the communication with the Portainer Server.
 * One to 'expose' the Portainer container to the same network as the reverse proxy.
 
-```text
+```
  docker network create -d overlay proxy
 ```
 
-```text
+```
  docker network create -d agent_network
 ```
 
 Next, create the volume:
 
-```text
+```
  docker volume create portainer_data
 ```
 
 And finally, save the following recipe as `portainer.yml`:
 
-```text
+```
 version: '3.2'
 
 services:
@@ -97,7 +97,7 @@ services:
       - "./vhost.d:/etc/nginx/vhost.d:ro"
 
   agent:
-    image: portainer/agent:latest
+    image: portainer/agent:2.9.2
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -146,18 +146,17 @@ volumes:
 
 To start working with this recipe, change the `VIRTUAL_HOST` value then deploy Portainer by running the following:
 
-```text
+```
  docker stack deploy portainer -c portainer.yml
 ```
 
 To check the deployment, run `docker service ls`. You should see an output similar to the following:
 
-```text
+```
 ID                  NAME                    MODE                REPLICAS            IMAGE                          PORTS
-gy2bjxid0g4p        portainer_agent         global              1/1                 portainer/agent:latest
+gy2bjxid0g4p        portainer_agent         global              1/1                 portainer/agent:2.9.2
 jwvjp5bux4sz        portainer_nginx-proxy   replicated          1/1                 jwilder/nginx-proxy:latest     *:80->80/tcp
 5nflcvoxl3c7        portainer_portainer     replicated          1/1                 portainer/portainer-ce:latest  *:8000->8000/tcp
 ```
 
 Once the services are running, you will be able to access Portainer from the URL you defined earlier, for example: `portainer.yourdomain.com`.
-
