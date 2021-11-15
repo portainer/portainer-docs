@@ -235,7 +235,7 @@
 ## Get More Help
 
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
-* [Open a support request](https://support.portainer.io/?login=1)
+* [Open a support request](https://www.portainer.io/portainer-business-support)
 
 ## Contribute to Portainer <a href="contribute" id="contribute"></a>
 
