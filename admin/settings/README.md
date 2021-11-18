@@ -12,7 +12,7 @@ Replaces our logo with your own. Toggle on and enter the URL to the logo. The re
 
 ### Allow the collection of anonymous statistics
 
-We collect anonymized information about your Portainer installation to help with our product development. You can opt out during installation, or toggle this setting off at any time. 
+We collect anonymized information about your Portainer installation to help with our product development. You can opt out during installation, or toggle this setting off at any time.&#x20;
 
 ![](../../.gitbook/assets/settings-4.png)
 
@@ -61,6 +61,10 @@ We recommend including the full chain in the certificate to ensure compatibility
 ### Force HTTPS only
 
 If you have configured your Portainer Server instance to listen on `9443` (HTTPS) and `9000` (HTTP) you can toggle **Force HTTPS only** on to disable listening on port `9000`.
+
+{% hint style="danger" %}
+Make sure that your HTTPS configuration is working correctly **before** enabling this option. Failure to do so may result in you being locked out of your Portainer installation.
+{% endhint %}
 
 {% hint style="warning" %}
 Ensure that any Edge agents have been correctly configured for HTTPS communication before enabling this.
