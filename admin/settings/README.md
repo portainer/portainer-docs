@@ -62,6 +62,10 @@ We recommend including the full chain in the certificate to ensure compatibility
 
 If you have configured your Portainer Server instance to listen on `9443` (HTTPS) and `9000` (HTTP) you can toggle **Force HTTPS only** on to disable listening on port `9000`.
 
+{% hint style="danger" %}
+Make sure that your HTTPS configuration is working correctly **before** enabling this option. Failure to do so may result in you being locked out of your Portainer installation.
+{% endhint %}
+
 {% hint style="warning" %}
 Ensure that any Edge agents have been correctly configured for HTTPS communication before enabling this.
 {% endhint %}
