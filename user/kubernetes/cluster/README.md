@@ -2,13 +2,13 @@
 
 A cluster is a collection of nodes that runs containerized workloads. Portainer lets you keep track of your cluster and its individual nodes, including resource usage and configuration.
 
-From the menu select **Cluster**. 
+From the menu select **Cluster**.&#x20;
 
 ![](../../../.gitbook/assets/2.9.1-cluster-1.gif)
 
 The following information is provided in the first screen:
 
-| **Attribute**      | **Overview**                                             |
+| Attribute          | Overview                                                 |
 | ------------------ | -------------------------------------------------------- |
 | Memory reservation | The amount of memory available to the cluster.           |
 | Memory used        | The amount of memory used by the cluster.                |

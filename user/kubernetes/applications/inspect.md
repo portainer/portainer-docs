@@ -10,7 +10,7 @@ The **Application details** screen is organized into four sections. The followin
 
 ### General information
 
-| **Attribute**    | **Overview**                                                                                                                         |
+| Attribute        | Overview                                                                                                                             |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Name             | The name of the application.                                                                                                         |
 | Stack            | The stack that the application belongs to (if any).                                                                                  |
@@ -34,7 +34,7 @@ Depending on how the application was deployed, a number of actions can be perfor
 
 ### Configuration details
 
-| **Configuration**         | **Overview**                                                                                       |
+| Configuration             | Overview                                                                                           |
 | ------------------------- | -------------------------------------------------------------------------------------------------- |
 | Accessing the application | Shows which ports (if any) are published from the container.                                       |
 | Auto-scaling              | Indicates the application's auto-scaling policy.                                                   |

@@ -8,7 +8,7 @@ From the menu select **Settings** then select **Authentication**. Under the **Au
 
 In the next screen, enter the credentials provided by your OAuth provider, using the table below as a guide.
 
-| **Field/Option**                    | **Overview**                                                                                                                                                                                                                                                                  |
+| Field/Option                        | Overview                                                                                                                                                                                                                                                                      |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Use SSO                             | Enable SSO so that the OAuth provider won't be forced to ask for credentials when users are in a current logged-in session.                                                                                                                                                   |
 | Hide internal authentication prompt | Hide the ability to log in through internal authentication. This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=hide-internal-auth).                                                                                 |
@@ -27,7 +27,7 @@ Pre-filled templates for Microsoft, Google and Github are available in [Portaine
 
 Complete the **OAuth Configuration** section based on the table below.
 
-| **Field/Option**  | **Overview**                                                                                                                                                         |
+| Field/Option      | Overview                                                                                                                                                             |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Client ID         | Enter the public identifier of the OAuth application.                                                                                                                |
 | Client secret     | Enter the token access to the OAuth application.                                                                                                                     |

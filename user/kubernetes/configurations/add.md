@@ -1,6 +1,6 @@
 # Add a new configuration
 
-From the menu select **ConfigMaps & Secrets** then click **Add with form**. 
+From the menu select **ConfigMaps & Secrets** then click **Add with form**.&#x20;
 
 {% hint style="info" %}
 Configurations can also be added [using a manifest](../applications/manifest.md) by clicking **Create from manifest**.
@@ -10,7 +10,7 @@ Configurations can also be added [using a manifest](../applications/manifest.md)
 
 Define the configuration, using the table below as a guide.
 
-| **Field/Option**   | **Overview**                                                                                                                                                                                                                                                            |
+| Field/Option       | Overview                                                                                                                                                                                                                                                                |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name               | Give the configuration a descriptive name.                                                                                                                                                                                                                              |
 | Namespace          | Select the namespace where the configuration will be saved to.                                                                                                                                                                                                          |

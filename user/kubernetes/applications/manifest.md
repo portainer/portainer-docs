@@ -22,7 +22,7 @@ From **Deployment type** select either **Kubernetes** or **Compose** (depending 
 Portainer uses Kompose to convert a Compose manifest to a Kubernetes-compliant manifest. Be aware that currently not all Compose format options are supported by Kompose.
 {% endhint %}
 
-| **Field/Option**      | **Overview**                                                                                                                          |
+| Field/Option          | Overview                                                                                                                              |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Repository URL        | Enter the URL to your Git repository.                                                                                                 |
 | Repository reference  | Enter the reference to use when pulling from your repository. If this is left blank, Portainer will use the default `HEAD` reference. |
@@ -47,11 +47,11 @@ For more detail on how automatic updates function under the hood, have a look at
 If your application is configured for automatic updates and you make changes locally, these changes will be overridden by the application definition in the Git repository. Bear this in mind when making configuration changes.
 {% endhint %}
 
-| **Field/Option** | **Overview**                                                                                                                        |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Mechanism        | Choose from **Polling** or **Webhook**.                                                                                             |
-| Fetch interval   | When using the **Polling** method, choose how often you wish to check the Git repository for updates to your application.           |
-| Webhook          | When using the **Webhook** method, this displays the webhook URL to use. Click **Copy link** to copy the webhook to your clipboard. |
+| Field/Option   | Overview                                                                                                                            |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Mechanism      | Choose from **Polling** or **Webhook**.                                                                                             |
+| Fetch interval | When using the **Polling** method, choose how often you wish to check the Git repository for updates to your application.           |
+| Webhook        | When using the **Webhook** method, this displays the webhook URL to use. Click **Copy link** to copy the webhook to your clipboard. |
 
 ![Automatic updates using the Polling mechanism](../../../.gitbook/assets/2.9.1-applications-manifest-4.png)
 

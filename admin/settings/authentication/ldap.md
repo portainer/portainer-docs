@@ -54,7 +54,7 @@ Support for multiple LDAP servers is available in [Portainer Business Edition](h
 
 Configure the remaining LDAP settings, using the table below as a guide:
 
-| **Field/Option**                        | **Overview**                                                                                                                                                                                                                                                                                                                               |
+| Field/Option                            | Overview                                                                                                                                                                                                                                                                                                                                   |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Use StartTLS                            | Changes the insecure connection to secure after the initial connection.                                                                                                                                                                                                                                                                    |
 | Use TLS                                 | Initiates a connection to LDAP using TLS.                                                                                                                                                                                                                                                                                                  |
@@ -62,7 +62,7 @@ Configure the remaining LDAP settings, using the table below as a guide:
 
 ![](../../../.gitbook/assets/authentication-ldap-3.png)
 
-| **Field/Option**   | **Overview**                                                   |
+| Field/Option       | Overview                                                       |
 | ------------------ | -------------------------------------------------------------- |
 | TLS CA certificate | Lets you upload your CA certificate for the secure connection. |
 
@@ -83,7 +83,7 @@ If you have a large number of users in your domain, narrow the scope Portainer s
 For Native LDAP, enter `uid`. For Active Directory, enter either:
 
 * `userPrincipalName` if your usernames will be in the format of `user@mydomain.com`.
-* `SAMAccountName` if your usernames will be in the format `username`. 
+* `SAMAccountName` if your usernames will be in the format `username`.&#x20;
 
 Do not use `uid` with Active Directory. It will not work.
 

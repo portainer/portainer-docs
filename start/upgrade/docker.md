@@ -1,7 +1,11 @@
 # Upgrading on Docker
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or upgrading to Portainer 2.9.2 make sure all of the agents are also on version 2.9.2.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or upgrading to Portainer 2.9.3 make sure all of the agents are also on version 2.9.3.
+{% endhint %}
+
+{% hint style="danger" %}
+Before beginning any upgrade, we highly recommend [taking a backup](../../admin/settings/#backup-portainer) of your current Portainer configuration.
 {% endhint %}
 
 ## Upgrading your Portainer Server
@@ -31,7 +35,7 @@ docker rm portainer
 Now that you have stopped and removed the old version of Portainer, you must ensure that you have the latest version of the image locally. You can do this with a `docker pull` command:
 
 ```
-docker pull portainer/portainer-ce:latest
+docker pull cr.portainer.io/portainer/portainer-ce:2.9.3
 ```
 
 Finally, deploy the updated version of Portainer:
@@ -41,7 +45,7 @@ docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \
     --name=portainer --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
-    portainer/portainer-ce:latest
+    cr.portainer.io/portainer/portainer-ce:2.9.3
 ```
 
 {% hint style="info" %}
@@ -52,7 +56,7 @@ docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \
     --name=portainer --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
-    portainer/portainer-ce:latest \
+    cr.portainer.io/portainer/portainer-ce:2.9.3 \
     --sslcert /path/to/cert/portainer.crt \
     --sslkey /path/to/cert/portainer.key
 ```
@@ -77,13 +81,13 @@ docker rm portainer
 Now that you have stopped and removed the old version of Portainer, you must ensure that you have the latest version of the image locally. You can do this with a `docker pull` command:
 
 ```
-docker pull portainer/portainer-ce:2.0.0
+docker pull cr.portainer.io/portainer/portainer-ce:2.0.0
 ```
 
 Finally, deploy the updated version of Portainer:
 
 ```
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.0.0
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data cr.portainer.io/portainer/portainer-ce:2.0.0
 ```
 
 Portainer CE 2.0.0 will now be deployed on your system, using the persistent data from the previous version, and will also upgrade the Portainer database to the new version.
@@ -99,7 +103,7 @@ docker stop portainer
 
 docker rm portainer
 
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer:1.24.2
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data cr.portainer.io/portainer/portainer:1.24.2
 ```
 
 Verify that you are running version 1.24.2 by logging into Portainer and reading the version number on the bottom-left of the UI. To complete the upgrade, perform the steps from option 2 above.
@@ -122,8 +126,16 @@ Next, pull the updated version of the image:
 docker pull portainer/agent:2.9.2
 ```
 
+```
+docker pull cr.portainer.io/portainer/agent:2.9.3
+```
+
 Finally, start the agent with the updated image:
 
 ```
 docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.9.2
+```
+
+```
+docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes cr.portainer.io/portainer/agent:2.9.3
 ```

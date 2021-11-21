@@ -15,12 +15,19 @@ From the menu select **Environments** then click **Add environment** and select 
 
 Enter the details, using the table below as a guide.
 
-| Field/Option | Overview |
-| :--- | :--- |
-| Name | Give the environment a descriptive name. |
-| Application ID | Take this value from the application you created in Azure. |
-| Tenant ID | Use the same tenant ID as appears on the Azure subscription page. |
-| Authentication ID | Take this value from the application creation process in Azure. |
+| Field/Option      | Overview                                                          |
+| ----------------- | ----------------------------------------------------------------- |
+| Name              | Give the environment a descriptive name.                          |
+| Application ID    | Take this value from the application you created in Azure.        |
+| Tenant ID         | Use the same tenant ID as appears on the Azure subscription page. |
+| Authentication ID | Take this value from the application creation process in Azure.   |
+
+| Field/Option      | Overview                                                          |
+| ----------------- | ----------------------------------------------------------------- |
+| Name              | Give the environment a descriptive name.                          |
+| Application ID    | Take this value from the application you created in Azure.        |
+| Tenant ID         | Use the same tenant ID as appears on the Azure subscription page. |
+| Authentication ID | Take this value from the application creation process in Azure.   |
 
 ![](../../../.gitbook/assets/endpoints-add-aci-2.png)
 
@@ -29,4 +36,3 @@ In the **Metadata** section, as an optional step you can categorize the environm
 ![](../../../.gitbook/assets/install-agent-swarm-linux-4.png)
 
 When you're ready, click **Add environment**.
-
