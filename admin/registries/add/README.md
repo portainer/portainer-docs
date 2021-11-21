@@ -4,7 +4,13 @@ From the menu select **Registries **then click **Add registry**.
 
 ![](../../../.gitbook/assets/2.9-registries-add-1.gif)
 
-From the **Registry provider** section select the type of registry you want to add. Portainer provides configuration support for a number of popular registry providers:
+From the **Registry provider** section select the type of registry you want to add.
+
+{% hint style="warning" %}
+Simply adding a registry will not make that registry available to non-administrator users. Once you have added the registry to Portainer, you will need to add access to the registry within [Host](../../../user/docker/host/registries.md) / [Swarm](../../../user/docker/swarm/registries.md) / [Cluster](../../../user/kubernetes/cluster/registries.md) for each environment that needs access.
+{% endhint %}
+
+Portainer provides configuration support for a number of popular registry providers:
 
 {% content-ref url="dockerhub.md" %}
 [dockerhub.md](dockerhub.md)
