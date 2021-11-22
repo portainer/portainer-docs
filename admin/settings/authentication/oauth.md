@@ -49,7 +49,7 @@ See [Managing user access to endpoints](../../environments/access.md).
 
 ## Examples
 
-These examples show OAuth configuration for Azure, Google, GitHub and Keycloak.
+These examples show OAuth configuration for Azure, Google, GitHub, Gitlab and Keycloak.
 
 * The client ID is known as 'application ID' in the MSFT world.
 * The tenant ID (grayed information in the screenshot), is a GUID specific to your ID.
@@ -65,6 +65,12 @@ These examples show OAuth configuration for Azure, Google, GitHub and Keycloak.
 ### GitHub
 
 ![](../../../.gitbook/assets/authentication-oauth-github.png)
+
+### Gitlab
+
+Create an application in the admin area of Gitlab. Select `read_user` as the scope, make it trusted and make sure the call-back URL is the full Portainer URL.
+
+![](../../../.gitbook/assets/authentication-oauth-gitlab.png)
 
 ### Keycloak
 
