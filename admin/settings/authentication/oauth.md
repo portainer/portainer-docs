@@ -48,7 +48,7 @@ You can find these details using the following steps:
 
     ![](../../../.gitbook/assets/authentication-oauth-ms-3.png)
 
-    Enter a friendly name for the Portainer instance. Keep the **Application type** as `Web App / API`. In the **Sign-on URL** field, enter the FQDN or IP address that your Portainer instance listens on.
+    Enter a friendly name for the Portainer instance. Keep the **Application type** as `Web App / API`. In the **Sign-on URL** field, enter the FQDN or IP address that your Portainer instance listens on. Then click **Create**.
 
     ![](../../../.gitbook/assets/authentication-oauth-ms-4.png)
 4.  After creating the app, the screen below is displayed. Use the provided **Application ID** in the respective field in Portainer.
