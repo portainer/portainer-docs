@@ -30,11 +30,37 @@ Portainer provides pre-configured OAuth provider options or you can set up your 
 
 Configure your OAuth provider using the table below as a guide.
 
-| Field/Option    | Overview                                                                                                      |
-| --------------- | ------------------------------------------------------------------------------------------------------------- |
-| Tenant ID       | Enter the ID of the Azure Directory you wish to authenticate against. This is also known as the Directory ID. |
-| Application ID  | Enter the public identifier of the OAuth application.                                                         |
-| Application key | Enter the secret key for the OAuth application.                                                               |
+| Field/Option    | Overview                                                                                                          |
+| --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Tenant ID       | Enter the ID of the Azure Directory you wish to authenticate against. This is also known as the **Directory ID**. |
+| Application ID  | Enter the public identifier of the OAuth application.                                                             |
+| Application key | Enter the secret key for the OAuth application.                                                                   |
+
+You can find these details using the following steps:
+
+1.  Log in to your Azure Portal as an administrator.
+
+    ![](../../../.gitbook/assets/authentication-oauth-ms-1.png)
+2.  Click on **Azure Active Directory** and then click on **Properties**. Your **Directory ID** can be found in the right pane. Use this as the **Tenant ID** in Portainer.
+
+    ![](../../../.gitbook/assets/authentication-oauth-ms-2.png)
+3.  Still in Azure Active Directory, click on **App Registrations** then click **New Application Registration**.
+
+    ![](../../../.gitbook/assets/authentication-oauth-ms-3.png)
+
+    Enter a friendly name for the Portainer instance. Keep the **Application type** as `Web App / API`. In the **Sign-on URL** field, enter the FQDN or IP address that your Portainer instance listens on.
+
+    ![](../../../.gitbook/assets/authentication-oauth-ms-4.png)
+4.  After creating the app, the screen below is displayed. Use the provided **Application ID** in the respective field in Portainer.
+
+    ![](../../../.gitbook/assets/authentication-oauth-ms-5.png)
+5.  Click on **Settings** then click **Keys**.
+
+    ![](../../../.gitbook/assets/authentication-oauth-ms-6.png)
+
+    Under the **Passwords** section create a new key called `login`. Set the **Duration** to `never expires` and then click **Save**. The key will then be generated for you. Use this key as the **Application key** in the respective field in Portainer.
+
+    ![](../../../.gitbook/assets/authentication-oauth-ms-7.png)
 
 ![](../../../.gitbook/assets/be-authentication-oauth-microsoft.png)
 
