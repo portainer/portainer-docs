@@ -20,12 +20,6 @@ The Edge Agent communicates with the Portainer Server instance over port `8000`.
 | Portainer with Self-Signed Certs | If you are using a self-signed Portainer instance, the Edge Agent must be deployed with the flag `-e EDGE_INSECURE_POLL=1`. If you do not deploy Portainer with this flag, the agent cannot communicate with Portainer. This option is less secure than TLS. |
 | Portainer Fallback to HTTP       | If Portainer is not configured with either of the above options, it will use HTTP for agent polling as a fallback. We do not recommend this option because it is not secure.                                                                                 |
 
-| Method                           | Overview                                                                                                                                                                                                                                                     |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Portainer with TLS               | If your Portainer instance is deployed with TLS, the agent will use HTTPS for the connection it makes back to Portainer. This is the recommended approach.                                                                                                   |
-| Portainer with Self-Signed Certs | If you are using a self-signed Portainer instance, the Edge Agent must be deployed with the flag `-e EDGE_INSECURE_POLL=1`. If you do not deploy Portainer with this flag, the agent cannot communicate with Portainer. This option is less secure than TLS. |
-| Portainer Fallback to HTTP       | If Portainer is not configured with either of the above options, it will use HTTP for agent polling as a fallback. We do not recommend this option because it is not secure.                                                                                 |
-
 ## Adding an Edge endpoint to Portainer
 
 From the menu select **Environments** then click **Add environment** and select **Edge Agent** as the environment type.
@@ -33,12 +27,6 @@ From the menu select **Environments** then click **Add environment** and select 
 ![](../../../.gitbook/assets/2.9-environments-add-edge-1.gif)
 
 Enter the environment details, using the table below as a guide.&#x20;
-
-| Field/Option         | Overview                                                                             |
-| -------------------- | ------------------------------------------------------------------------------------ |
-| Name                 | Give the environment a descriptive name.                                             |
-| Portainer server URL | The public IP or DNS of your Portainer Server instance and the port.                 |
-| Poll frequency       | How often the Edge Agent polls the Portainer Server instance. Defaults to 5 seconds. |
 
 | Field/Option         | Overview                                                                             |
 | -------------------- | ------------------------------------------------------------------------------------ |

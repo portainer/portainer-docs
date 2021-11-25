@@ -22,14 +22,6 @@ Next, select **Docker** as the **environment type** then enter the environment d
 | Public IP          | Enter the URL or IP address where exposed containers will be reachable. This is an optional field (defaults to the environment URL).         |
 | TLS                | Leave this option toggled off.                                                                                                               |
 
-| Field/Option       | Overview                                                                                                                                     |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name               | Give the environment a descriptive name.                                                                                                     |
-| Connect via socket | Leave this option toggled off.                                                                                                               |
-| Environment URL    | Enter the DNS name or IP address to connect to the Docker host along with the port. When connecting without TLS, the default port is `2375`. |
-| Public IP          | Enter the URL or IP address where exposed containers will be reachable. This is an optional field (defaults to the environment URL).         |
-| TLS                | Leave this option toggled off.                                                                                                               |
-
 ![](../../../.gitbook/assets/2.9-environments-add-docker-2.png)
 
 In the **Metadata** section, as an optional step you can categorize the environment by adding it to a [group](../groups.md) or  [tagging](../tags.md) it for better searchability.
@@ -56,22 +48,7 @@ From the **Environment type** section select **Docker**, then enter the environm
 | Public IP          | Enter the URL or IP address where exposed containers will be reachable. This is an optional field (defaults to the environment URL).      |
 | TLS                | Toggle this option on then select the TLS mode.                                                                                           |
 
-| Field/Option       | Overview                                                                                                                                  |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Name               | Give the environment a descriptive name.                                                                                                  |
-| Connect via socket | Leave this option toggled off.                                                                                                            |
-| Environment URL    | Enter the DNS name or IP address to connect to the Docker host along with the port. When connecting with TLS, the default port is `2376`. |
-| Public IP          | Enter the URL or IP address where exposed containers will be reachable. This is an optional field (defaults to the environment URL).      |
-| TLS                | Toggle this option on then select the TLS mode.                                                                                           |
-
 ![](../../../.gitbook/assets/2.9-environments-add-docker-4.png)
-
-| Field/Option       | Overview                                                                                                                                                                                                   |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TLS mode           | Select the mode that best fits your configuration. In most cases, this will be the default **TLS with server and client verification** option. The next options change, depending on what you select here. |
-| TLS CA certificate | Select your CA certificate.                                                                                                                                                                                |
-| TLS certificate    | Select your certificate.                                                                                                                                                                                   |
-| TLS key            | Select the key that matches the certificate.                                                                                                                                                               |
 
 | Field/Option       | Overview                                                                                                                                                                                                   |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -101,12 +78,6 @@ From the menu select **Environments** then click **Add environment**.
 ![](../../../.gitbook/assets/2.9-environments-add-1.gif)
 
 From the **Environment type** section, select **Agent**. Since we have already installed the agent you can ignore the sample commands in the **Information** section. Enter the environment details, using the table below as a guide:
-
-| Field/Option | Overview                                                                                                                             |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Name         | Give the environment a descriptive name.                                                                                             |
-| Endpoint URL | Enter the DNS name or IP address to connect to the Portainer Agent along with the port (the default port is `9001`).                 |
-| Public IP    | Enter the URL or IP address where exposed containers will be reachable. This is an optional field (defaults to the environment URL). |
 
 | Field/Option | Overview                                                                                                                             |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------ |

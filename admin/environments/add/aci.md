@@ -22,13 +22,6 @@ Enter the details, using the table below as a guide.
 | Tenant ID         | Use the same tenant ID as appears on the Azure subscription page. |
 | Authentication ID | Take this value from the application creation process in Azure.   |
 
-| Field/Option      | Overview                                                          |
-| ----------------- | ----------------------------------------------------------------- |
-| Name              | Give the environment a descriptive name.                          |
-| Application ID    | Take this value from the application you created in Azure.        |
-| Tenant ID         | Use the same tenant ID as appears on the Azure subscription page. |
-| Authentication ID | Take this value from the application creation process in Azure.   |
-
 ![](../../../.gitbook/assets/endpoints-add-aci-2.png)
 
 In the **Metadata** section, as an optional step you can categorize the environment by adding it to a [group](../groups.md) or  [tagging](../tags.md) it for better searchability.

@@ -63,12 +63,6 @@ Once the Agent is running on the Docker Swarm cluster, enter the **environment d
 | Endpoint URL | Enter the IP or DNS name at which the Portainer Server instance can reach the environment along with the port (`9001`). This is a required field.                     |
 | Public IP    | URL or IP address where exposed containers will be reachable. This is an optional field and will default to the environment URL. This can be changed at a later date. |
 
-| Field        | Overview                                                                                                                                                              |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name         | Give the environment a descriptive name. This is a required field.                                                                                                    |
-| Endpoint URL | Enter the IP or DNS name at which the Portainer Server instance can reach the environment along with the port (`9001`). This is a required field.                     |
-| Public IP    | URL or IP address where exposed containers will be reachable. This is an optional field and will default to the environment URL. This can be changed at a later date. |
-
 ![](../../../../.gitbook/assets/install-agent-swarm-linux-3.png)
 
 In the **Metadata** section, as an optional step you can categorize the environment by adding it to a [group](../../../../admin/environments/groups.md) or  [tagging](../../../../admin/environments/tags.md) it for better searchability.

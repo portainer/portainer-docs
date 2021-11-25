@@ -35,10 +35,6 @@ docker service update --image cr.portainer.io/portainer/portainer-ce:2.9.3 --pub
 To upgrade the Portainer Agent to the latest version, run the command below (replace the `portainer_agent` service name if your setup differs):
 
 ```
-docker service update --image portainer/agent:2.9.2 --force portainer_agent 
-```
-
-```
 docker service update --image cr.portainer.io/portainer/agent:2.9.3 --force portainer_agent 
 ```
 

@@ -23,7 +23,7 @@ docker stop portainer
 
 docker rm portainer
 
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data cr.portainer.io/portainer/portainer:1.24.2
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer:1.24.2
 ```
 
 Verify that you are running version 1.24.2 by logging into Portainer and reading the version number on the bottom-left of the UI. You should now proceed to [upgrade to version 2.0.0](docker.md#upgrading-from-1.24.1-and-1.24.2).

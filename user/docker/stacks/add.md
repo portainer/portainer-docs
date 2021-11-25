@@ -11,13 +11,6 @@ There are four ways to deploy a new stack from Portainer:
 | Git Repository  | You can use a docker-compose format file hosted in a Git repository.                                     |
 | Custom template | If you have created a [custom stack template](../templates/custom.md), you can deploy using this option. |
 
-| Option          | Overview                                                                                                 |
-| --------------- | -------------------------------------------------------------------------------------------------------- |
-| Web editor      | Use our web editor to define the services for the stack using a docker-compose format.                   |
-| Upload          | If you have a `stack.yml` file, you can upload it from your computer and use it to deploy the stack.     |
-| Git Repository  | You can use a docker-compose format file hosted in a Git repository.                                     |
-| Custom template | If you have created a [custom stack template](../templates/custom.md), you can deploy using this option. |
-
 ## Option 1: Web editor
 
 From the menu select **Stacks**, click **Add stack**, give the stack a descriptive name then select **Web editor**. Use the web editor to define the services.
@@ -71,15 +64,6 @@ Any Git-compatible repository should work here. Substitute the details as requir
 | Username              | Enter your Git username.                                                                                                                                                                        |
 | Personal Access Token | Enter your personal access token or password.                                                                                                                                                   |
 
-| Field/Option          | Overview                                                                                                                                                                                        |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Repository URL        | Enter the repository URL.                                                                                                                                                                       |
-| Repository Reference  | Enter the branch.                                                                                                                                                                               |
-| Compose Path          | This is the path to the Compose file from the root of the repository. Click **add file** to add additional files to be parsed by the build (for example, an environment-specific compose file). |
-| Authentication        | Toggle this on if your Git repository requires authentication.                                                                                                                                  |
-| Username              | Enter your Git username.                                                                                                                                                                        |
-| Personal Access Token | Enter your personal access token or password.                                                                                                                                                   |
-
 {% hint style="info" %}
 If you have 2FA configured in GitHub, your passcode is your password.
 {% endhint %}
@@ -93,13 +77,6 @@ New in version 2.9 is the ability to automatically update your stack deployed fr
 {% hint style="info" %}
 For more detail on how automatic updates function under the hood, have a look at [this FAQ entry](../../../faq/troubleshooting/how-do-automatic-updates-for-stacks-applications-work.md).
 {% endhint %}
-
-| Field/Option   | Overview                                                                                                                                                                                                                                                                            |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mechanism      | Select the method to use when checking for updates:                                                                                                                                                                                                                                 |
-|                | <p><strong>Polling:</strong> Periodically poll the Git repository from Portainer to check for updates to the repository.</p><p><strong>Webhook:</strong> Generate a webhook URL to add to your Git repository to trigger the update on demand (for example via GitHub actions).</p> |
-| Fetch interval | If **Polling** is selected, how often Portainer will check the Git repository for updates.                                                                                                                                                                                          |
-| Webhook        | When **Webhook** is selected, displays the webhook URL to use in your integration. Click **Copy link** to copy the webhook URL to the clipboard.                                                                                                                                    |
 
 | Field/Option   | Overview                                                                                                                                                                                                                                                                            |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
