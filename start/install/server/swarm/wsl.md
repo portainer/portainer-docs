@@ -13,12 +13,13 @@ To get started, you will need:
 * The latest version of Docker Desktop installed and working.
 * Swarm mode enabled and working, including the overlay network for the swarm service communication.
 * Administrator access on the manager node of your Swarm cluster.
-* Windows Subsystem for Linux \(WSL\) installed and a Linux distribution selected. For a new installation we recommend WSL2.
+* Windows Subsystem for Linux (WSL) installed and a Linux distribution selected. For a new installation we recommend WSL2.
 * By default, Portainer will expose the UI over port `9443` and expose a TCP tunnel server over port `8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 * The manager and worker nodes must be able to communicate with each other over port `9001`.
 
 The installation instructions also make the following assumptions about your environment:
 
+* Your environment meets [our requirements](../../../requirements-and-prerequisites.md). While Portainer may work with other configurations, it may require configuration changes or have limited functionality.
 * You are accessing Docker via Unix sockets. Alternatively, you can also connect via TCP.
 * SELinux is disabled within the Linux distribution used by WSL. If you require SELinux, you will need to pass the `--privileged` flag to Docker when deploying Portainer.
 * Docker is running as root. Portainer with rootless Docker has some limitations, and requires additional configuration.
@@ -57,5 +58,6 @@ Replace `localhost` with the relevant IP address or FQDN if needed, and adjust t
 
 You will be presented with the initial setup page for Portainer Server.
 
-{% page-ref page="../setup.md" %}
-
+{% content-ref url="../setup.md" %}
+[setup.md](../setup.md)
+{% endcontent-ref %}

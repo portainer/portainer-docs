@@ -17,6 +17,7 @@ To get started, you will need:
 
 The installation instructions also make the following assumptions about your environment:
 
+* Your environment meets [our requirements](../../../requirements-and-prerequisites.md). While Portainer may work with other configurations, it may require configuration changes or have limited functionality.
 * Kubernetes RBAC is enabled and working (this is required for the access control functionality in Portainer).
 * You will be using the `portainer` namespace for Portainer.
 * Kubernetes' metrics server is installed and working (if you wish to use the metrics within Portainer).
