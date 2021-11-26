@@ -17,6 +17,13 @@ To get started, you will need:
 The installation instructions also make the following assumption about your environment:
 
 * You will be using the `portainer` namespace for Portainer.
+*   You have not set a custom `AGENT_SECRET` on your Portainer Server instance. If you have, you will need to provide that secret to your agent by adding it to the YAML file within the agent deployment definition:
+
+    `env:`
+
+    `  - name: AGENT_SECRET`
+
+    `    value: yoursecret`
 
 ## Deployment
 

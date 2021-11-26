@@ -14,6 +14,11 @@ To get started, you will need:
 The installation instructions also make the following assumption about your environment:
 
 * If your nodes are using DNS records to communicate, that all records are resolvable across the cluster.
+*   You have not set a custom `AGENT_SECRET` on your Portainer Server instance. If you have, you will need to provide that secret to your agent by adding it to the stack file:
+
+    `environment:`
+
+    `  - AGENT_SECRET: yoursecret`
 
 ## Deploying the Agent
 
