@@ -2,6 +2,10 @@
 
 If you have recently updated Portainer and have found your Agents or Edge Agents are no longer communicating, you may need to check to confirm whether you have set a custom `AGENT_SECRET` value. If this has been defined on the Portainer Server it will need to be set on the agents as well. This applies to both the standard Portainer Agent and the Portainer Edge Agent in BE 2.10.
 
+{% hint style="info" %}
+The default installation methods for Portainer Server do not set a custom AGENT\_SECRET value. If you are not sure whether you have a custom value set, [please get in touch](https://www.portainer.io/portainer-business-support) and our team can help you confirm.
+{% endhint %}
+
 For information on how to define the `AGENT_SECRET` on each platform, please refer to the respective upgrade instructions:
 
 ## Docker Standalone
