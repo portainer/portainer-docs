@@ -17,13 +17,6 @@ To get started, you will need:
 The installation instructions also make the following assumption about your environment:
 
 * You will be using the `portainer` namespace for Portainer.
-*   You have not set a custom `AGENT_SECRET` on your Portainer Server instance. If you have, you will need to provide that secret to your agent by adding it to the YAML file within the agent deployment definition:
-
-    `env:`
-
-    `  - name: AGENT_SECRET`
-
-    `    value: yoursecret`
 
 ## Deployment
 
@@ -120,7 +113,7 @@ Regardless of the method used, once the agent is running on the Kubernetes host,
 
 ![](../../../../.gitbook/assets/install-agent-swarm-linux-3.png)
 
-In the **Metadata** section, as an optional step you can categorize the environment by adding it to a [group](../../../../admin/environments/groups.md) or [tagging](../../../../admin/environments/tags.md) it for better searchability.
+In the **Metadata** section, as an optional step you can categorize the environment by adding it to a [group](../../../../admin/environments/groups.md) or  [tagging](../../../../admin/environments/tags.md) it for better searchability.
 
 ![](../../../../.gitbook/assets/install-agent-swarm-linux-4.png)
 
@@ -134,11 +127,11 @@ When you're ready, click **Add environment**. You will then be taken to the Kube
 
 ![](../../../../.gitbook/assets/install-agent-k8s-6.png)
 
-| Field/Option                         | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Allow resource over-commit           | This allows you to toggle the over-commit feature, letting you assign more resources to namespaces than are physically available within your cluster. This feature is only available in Portainer Business Edition.                                                                                                                                                                                                                                                                                           |
-| Enable features using metrics server | If enabled, users can use specific features that leverage the metrics server component. The metrics server must be installed on your Kubernetes cluster to use this.                                                                                                                                                                                                                                                                                                                                          |
-| Available storage options            | <p>Select which options will be available to users when they deploy applications. First, take a look at your storage driver documentation to figure out which access policy to configure, and if volume expansion capability is supported. Options are:</p><ul><li><strong>Local-path:</strong> Applications will be stored in the node.</li><li><strong>Shared Access Policy:</strong> RWO or RWX.</li><li><strong>Volume Expansion:</strong> Enable to expand the persistent storage of the pods.</li></ul> |
+| Field/Option                         | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Allow resource over-commit           | This allows you to toggle the over-commit feature, letting you assign more resources to namespaces than are physically available within your cluster. This feature is only available in Portainer Business Edition.                                                                                                                                                                                                                                                                                                  |
+| Enable features using metrics server | If enabled, users can use specific features that leverage the metrics server component. The metrics server must be installed on your Kubernetes cluster to use this.                                                                                                                                                                                                                                                                                                                                                 |
+| Available storage options            | <p>Select which options will be available to users when they deploy applications. First, take a look at your storage driver documentation to figure out which access policy to configure, and if volume expansion capability is supported. Options are:</p><p></p><ul><li><strong>Local-path:</strong> Applications will be stored in the node.</li><li><strong>Shared Access Policy:</strong> RWO or RWX.</li><li><strong>Volume Expansion:</strong> Enable to expand the persistent storage of the pods.</li></ul> |
 
 ![](../../../../.gitbook/assets/install-agent-k8s-7.png)
 
@@ -146,4 +139,4 @@ When you're ready, click **Add environment**. You will then be taken to the Kube
 Find more information about access modes in [Kubernetes' own documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes).
 {% endhint %}
 
-When the setup is complete, click **Save configuration**.
+When the setup is complete, click **Save configuration**.&#x20;

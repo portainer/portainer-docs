@@ -16,9 +16,6 @@ The installation instructions also make the following assumptions about your env
 * You are accessing Docker via Unix sockets. Alternatively, you can also connect via TCP.
 * SELinux is disabled within the Linux distribution used by WSL. If you require SELinux, you will need to pass the `--privileged` flag to Docker when deploying Portainer.
 * Docker is running as root. Portainer with rootless Docker has some limitations, and requires additional configuration.
-*   You have not set a custom `AGENT_SECRET` on your Portainer Server instance. If you have, you will need to provide that secret to your agent when deploying with:
-
-    `-e AGENT_SECRET=yoursecret`
 
 ## Deployment
 
@@ -30,7 +27,7 @@ docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/d
 
 ## Adding your new environment
 
-Once the agent has been installed you are ready to add the environment to your Portainer Server installation.
+Once the agent has been installed you are ready to add the environment to your Portainer Server installation.&#x20;
 
 {% content-ref url="../../../../admin/environments/add/docker.md" %}
 [docker.md](../../../../admin/environments/add/docker.md)

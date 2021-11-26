@@ -18,11 +18,6 @@ The installation instructions also make the following assumptions about your env
 * SELinux is disabled within the Linux distribution used by WSL. If you require SELinux, you will need to pass the `--privileged` flag to Docker when deploying Portainer.
 * Docker is running as root. Portainer with rootless Docker has some limitations, and requires additional configuration.
 * If your nodes are using DNS records to communicate, that all records are resolvable across the cluster.
-*   You have not set a custom `AGENT_SECRET` on your Portainer Server instance. If you have, you will need to provide that secret to your agent by adding it to the stack file:
-
-    `environment:`
-
-    `  - AGENT_SECRET: yoursecret`
 
 ## Deploying the Agent
 
@@ -60,7 +55,7 @@ tshb6ee2710s        portainer-agent_agent   global              1/1             
 
 ## Finishing the configuration
 
-Once the Agent is running on the Docker Swarm cluster, enter the \*\*environment details \*\*using the table below as a guide:
+Once the Agent is running on the Docker Swarm cluster, enter the **environment details **using the table below as a guide:
 
 | Field        | Overview                                                                                                                                                              |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +65,7 @@ Once the Agent is running on the Docker Swarm cluster, enter the \*\*environment
 
 ![](../../../../.gitbook/assets/install-agent-swarm-linux-3.png)
 
-In the **Metadata** section, as an optional step you can categorize the environment by adding it to a [group](../../../../admin/environments/groups.md) or [tagging](../../../../admin/environments/tags.md) it for better searchability.
+In the **Metadata** section, as an optional step you can categorize the environment by adding it to a [group](../../../../admin/environments/groups.md) or  [tagging](../../../../admin/environments/tags.md) it for better searchability.
 
 ![](../../../../.gitbook/assets/install-agent-swarm-linux-4.png)
 

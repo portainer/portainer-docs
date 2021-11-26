@@ -50,14 +50,6 @@ For an agent-only deployment, use the following manifest instead:
 ```
 https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
 ```
-
-{% hint style="warning" %}
-If you have set a custom `AGENT_SECRET` on your Portainer Server instance you must remember to explicitly provide this in the YAML when updating your agent:
-
-`environment:`
-
-`  - AGENT_SECRET: yoursecret`
-{% endhint %}
 {% endtab %}
 
 {% tab title="Load Balancer" %}
@@ -72,14 +64,6 @@ For an agent-only deployment, use the following manifest:
 ```
 https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
 ```
-
-{% hint style="warning" %}
-If you have set a custom `AGENT_SECRET` on your Portainer Server instance you must remember to explicitly provide this in the YAML when updating your agent:
-
-`environment:`
-
-`  - AGENT_SECRET: yoursecret`
-{% endhint %}
 {% endtab %}
 {% endtabs %}
 
@@ -87,9 +71,7 @@ Log into Portainer and connect to the Kubernetes environment where Portainer is 
 
 ![](../../.gitbook/assets/upgrade-k8s-1.gif)
 
-Paste the contents of the YAML file then click **Deploy**.
-
-Portainer will process the manifest and should return you to the login page once the upgrade is complete.
+Paste the contents of the YAML file then click **Deploy**. Portainer will process the manifest and should return you to the login page once the upgrade is complete.
 
 ### Option 2: Via the command line
 
@@ -108,14 +90,6 @@ For an agent-only deployment, use the following command instead:
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
 ```
-
-{% hint style="warning" %}
-If you have set a custom `AGENT_SECRET` on your Portainer Server instance you must remember to explicitly provide this in the YAML when updating your agent:
-
-`environment:`
-
-`  - AGENT_SECRET: yoursecret`
-{% endhint %}
 {% endtab %}
 
 {% tab title="Load Balancer" %}
@@ -130,14 +104,6 @@ For an agent-only deployment, use the following command:
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
 ```
-
-{% hint style="warning" %}
-If you have set a custom `AGENT_SECRET` on your Portainer Server instance you must remember to explicitly provide this in the YAML when updating your agent:
-
-`environment:`
-
-`  - AGENT_SECRET: yoursecret`
-{% endhint %}
 {% endtab %}
 {% endtabs %}
 
