@@ -10,6 +10,13 @@ You will need:
 * Administrator access on the machine that will host your Portainer Server instance.
 * Port `9001` accessible on this machine from the Portainer Server instance. If this is not available, we recommend using the [Edge Agent](../edge.md) instead.
 
+The installation instructions also make the following assumptions about your environment:
+
+* Your environment meets [our requirements](../../../requirements-and-prerequisites.md). While Portainer may work with other configurations, it may require configuration changes or have limited functionality.
+*   You have not set a custom `AGENT_SECRET` on your Portainer Server instance. If you have, you will need to provide that secret to your agent when deploying with:
+
+    `-e AGENT_SECRET=yoursecret`
+
 ## Deployment
 
 To run Portainer Agent in a Windows Container scenario, you need to execute the following commands:

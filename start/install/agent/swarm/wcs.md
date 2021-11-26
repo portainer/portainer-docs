@@ -13,7 +13,13 @@ To get started, you will need:
 
 The installation instructions also make the following assumption about your environment:
 
+* Your environment meets [our requirements](../../../requirements-and-prerequisites.md). While Portainer may work with other configurations, it may require configuration changes or have limited functionality.
 * If your nodes are using DNS records to communicate, that all records are resolvable across the cluster.
+*   You have not set a custom `AGENT_SECRET` on your Portainer Server instance. If you have, you will need to provide that secret to your agent by adding it to the stack file:
+
+    `environment:`
+
+    `  - AGENT_SECRET: yoursecret`
 
 ## Deploying the Agent
 

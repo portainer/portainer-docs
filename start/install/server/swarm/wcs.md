@@ -19,6 +19,7 @@ To get started, you will need:
 
 The installation instructions also make the following assumptions about your environment:
 
+* Your environment meets [our requirements](../../../requirements-and-prerequisites.md). While Portainer may work with other configurations, it may require configuration changes or have limited functionality.
 * You are running a single manager node in your swarm. If you have more than one, please [read this FAQ entry](../../../../faq/installing/how-can-i-ensure-portainers-configuration-is-retained.md#docker-swarm) before proceeding.
 * If your nodes are using DNS records to communicate, that all records are resolvable across the cluster.
 
