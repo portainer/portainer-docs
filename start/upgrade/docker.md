@@ -79,9 +79,3 @@ Finally, start the agent with the updated image:
 ```
 docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.10.0
 ```
-
-{% hint style="warning" %}
-If you have set a custom `AGENT_SECRET` on your Portainer Server instance you must remember to explicitly provide this when updating your agent:
-
-`-e AGENT_SECRET=yoursecret`
-{% endhint %}

@@ -210,6 +210,7 @@
   * [Can I upgrade Portainer CE to Portainer Business?](faq/upgrading/can-i-upgrade-portainer-ce-to-portainer-business.md)
   * [After an update, why doesn’t my version number match the latest version?](faq/upgrading/after-an-update-why-doesnt-my-version-number-match-the-latest-version.md)
   * [Why does Portainer keep prompting me to upgrade?](faq/upgrading/why-does-portainer-keep-prompting-me-to-upgrade.md)
+  * [Why have my agents stopped working after upgrading Portainer?](faq/upgrading/why-have-my-agents-stopped-working-after-upgrading-portainer.md)
   * [Can I upgrade an environment from Docker Standalone to Docker Swarm?](faq/upgrading/can-i-upgrade-an-environment-from-docker-standalone-to-docker-swarm.md)
   * [How do I upgrade my license?](faq/upgrading/how-do-i-upgrade-my-license.md)
   * [Can I downgrade from Portainer Business to Portainer CE?](faq/upgrading/can-i-roll-back-from-portainer-business-to-portainer-ce.md)

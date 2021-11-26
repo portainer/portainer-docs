@@ -32,8 +32,4 @@ When you have completed the form, click the **Add endpoint** button. This will c
 
 Your next step will now be to deploy the Edge Agent in your cluster. Choose your platform and environment in the first section and you'll be provided with the relevant installation commands. Run this on your remote endpoint to complete the installation. Alternatively if you are prestaging your Edge Agent, you can retrieve the join token here. You can also adjust the endpoint configuration from this page.&#x20;
 
-{% hint style="warning" %}
-If you have set a custom `AGENT_SECRET` on your Portainer Server instance you **must** remember to explicitly provide this when deploying your Edge Agent.
-{% endhint %}
-
 Once the Edge Agent has been deployed on the remote cluster and the cluster has checked in with your Portainer Server instance, you're ready to go.
