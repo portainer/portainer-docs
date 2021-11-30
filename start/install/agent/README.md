@@ -2,16 +2,16 @@
 
 If you want to add another endpoint to your existing Portainer installation, first select the environment of the endpoint you would like to add:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="docker/" %}
+[docker](docker/)
 {% endcontent-ref %}
 
 {% content-ref url="swarm/" %}
 [swarm](swarm/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="kubernetes/" %}
+[kubernetes](kubernetes/)
 {% endcontent-ref %}
 
 {% content-ref url="aci.md" %}
@@ -21,4 +21,3 @@ If you want to add another endpoint to your existing Portainer installation, fir
 {% content-ref url="edge.md" %}
 [edge.md](edge.md)
 {% endcontent-ref %}
-
