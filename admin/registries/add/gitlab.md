@@ -6,11 +6,11 @@ From the menu select **Registries** then click **Add registry** and select **Git
 
 Complete the form, using the table below as a guide.
 
-| Field/Option                   | Overview                                                                              |
-| ------------------------------ | ------------------------------------------------------------------------------------- |
-| Username                       | Enter the username you use to log into your Gitlab registry.                          |
-| Personal Access Token          | Enter the personal access token that corresponds to the username above.               |
-| Override default configuration | If you need to make changes to the Portainer defaults for Gitlab, you can do so here. |
+| Field/Option                   | Overview                                                                                   |
+| ------------------------------ | ------------------------------------------------------------------------------------------ |
+| Username                       | Enter the username you use to log into your Gitlab registry.                               |
+| Personal Access Token          | Enter the personal access token that corresponds to the username above. Your personal access token will need the `read_api` and `read_registry` scopes assigned. |
+| Override default configuration | If you need to make changes to the Portainer defaults for Gitlab, you can do so here.      |
 
 {% hint style="info" %}
 For more information about creating a personal access token, see [Gitlab's own documentation](https://docs.gitlab.com/ee/user/profile/personal\_access\_tokens.html).
