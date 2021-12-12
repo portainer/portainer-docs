@@ -9,7 +9,7 @@ Complete the form, using the table below as a guide.
 | Field/Option                   | Overview                                                                                   |
 | ------------------------------ | ------------------------------------------------------------------------------------------ |
 | Username                       | Enter the username you use to log into your Gitlab registry.                               |
-| Personal Access Token          | Enter the personal access token (scope: `read_api`) that corresponds to the username above. |
+| Personal Access Token          | Enter the personal access token that corresponds to the username above. Your personal access token will need the `read_api` and `read_registry` scopes assigned. |
 | Override default configuration | If you need to make changes to the Portainer defaults for Gitlab, you can do so here.      |
 
 {% hint style="info" %}
