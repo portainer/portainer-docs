@@ -1,8 +1,8 @@
 # Switching to Portainer Business Edition
 
-You can upgrade Portainer CE (both the current version and the 1.24.x branch) to Portainer Business without any data loss.
+It’s easy and quick to upgrade from Portainer CE (both 1.x and 2.x branches) to Portainer Business Edition without losing your data.
 
-The following procedures apply if you are running a free trial or you bought the product outright. Choose the environment that is running on the Portainer Server then following the instructions:
+The following instructions apply whether you’re using a 5 node free license or you’ve purchased a license for Portainer Business. First, select the environment you are using to run the Portainer Server:
 
 {% content-ref url="docker.md" %}
 [docker.md](docker.md)
