@@ -86,7 +86,8 @@ Once the update completes, you're ready to begin the installation. Which method 
 Using the following command, Portainer will be available on port `30777` for HTTP and `30779` for HTTPS:
 
 ```
-helm install --create-namespace -n portainer portainer portainer/portainer
+helm install --create-namespace -n portainer portainer portainer/portainer \
+    --set tls.force=true
 ```
 
 {% hint style="info" %}
@@ -99,12 +100,12 @@ In this example, Portainer will be deployed to your cluster and assigned a Clust
 
 ```
 helm install --create-namespace -n portainer portainer portainer/portainer \
-  --set service.type=ClusterIP \
-  --set ingress.enabled=true \
-  --set ingress.annotations.'kubernetes\.io/ingress\.class'=nginx \
-  --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
-  --set ingress.hosts[0].host=portainer.example.io \
-  --set ingress.hosts[0].paths[0].path="/"
+    --set service.type=ClusterIP \
+    --set ingress.enabled=true \
+    --set ingress.annotations.'kubernetes\.io/ingress\.class'=nginx \
+    --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
+    --set ingress.hosts[0].host=portainer.example.io \
+    --set ingress.hosts[0].paths[0].path="/"
 ```
 {% endtab %}
 
@@ -113,7 +114,8 @@ Using the following command, Portainer will be available at an assigned Load Bal
 
 ```
 helm install --create-namespace -n portainer portainer portainer/portainer \
-    --set service.type=LoadBalancer
+    --set service.type=LoadBalancer \
+    --set tls.force=true
 ```
 
 {% hint style="info" %}
