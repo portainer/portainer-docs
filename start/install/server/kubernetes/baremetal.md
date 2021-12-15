@@ -87,7 +87,8 @@ Once the update completes, you're ready to begin the installation. Which method 
 Using the following command, Portainer will be available on port `30777` for HTTP and `30779` for HTTPS:
 
 ```
-helm install --create-namespace -n portainer portainer portainer/portainer --set enterpriseEdition.enabled=true
+helm install --create-namespace -n portainer portainer portainer/portainer --set enterpriseEdition.enabled=true \
+    --set tls.force=true
 ```
 
 {% hint style="info" %}
@@ -100,13 +101,13 @@ In this example, Portainer will be deployed to your cluster and assigned a Clust
 
 ```
 helm install --create-namespace -n portainer portainer portainer/portainer \
-  --set enterpriseEdition.enabled=true \
-  --set service.type=ClusterIP \
-  --set ingress.enabled=true \
-  --set ingress.annotations.'kubernetes\.io/ingress\.class'=nginx \
-  --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
-  --set ingress.hosts[0].host=portainer.example.io \
-  --set ingress.hosts[0].paths[0].path="/"
+    --set enterpriseEdition.enabled=true \
+    --set service.type=ClusterIP \
+    --set ingress.enabled=true \
+    --set ingress.annotations.'kubernetes\.io/ingress\.class'=nginx \
+    --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
+    --set ingress.hosts[0].host=portainer.example.io \
+    --set ingress.hosts[0].paths[0].path="/"
 ```
 {% endtab %}
 
@@ -114,7 +115,10 @@ helm install --create-namespace -n portainer portainer portainer/portainer \
 Using the following command, Portainer will be available at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
 
 ```
-helm install --create-namespace -n portainer portainer portainer/portainer --set service.type=LoadBalancer --set enterpriseEdition.enabled=true
+helm install --create-namespace -n portainer portainer portainer/portainer \
+    --set service.type=LoadBalancer \
+    --set enterpriseEdition.enabled=true \
+    --set tls.force=true
 ```
 
 {% hint style="info" %}
