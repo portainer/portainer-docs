@@ -84,7 +84,7 @@ Once the update completes, you're ready to begin the installation. Which method 
 
 {% tabs %}
 {% tab title="Expose via NodePort" %}
-Using the following command, Portainer will be available on port `30777` for HTTP and `30779` for HTTPS:
+Using the following command, Portainer will be available on port `30779` for HTTPS:
 
 ```
 helm install --create-namespace -n portainer portainer portainer/portainer --set enterpriseEdition.enabled=true \
@@ -93,6 +93,10 @@ helm install --create-namespace -n portainer portainer portainer/portainer --set
 
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `30779`. Alternatively you can provide your own SSL certificate [during installation](https://app.gitbook.com/advanced/ssl#kubernetes) or [via the Portainer UI](https://app.gitbook.com/admin/settings#ssl-certificate) after installation is complete.
+{% endhint %}
+
+{% hint style="info" %}
+If you need to access Portainer via HTTP on port `30777`, remove the `--set tls.force=true` option.
 {% endhint %}
 {% endtab %}
 
@@ -112,7 +116,7 @@ helm install --create-namespace -n portainer portainer portainer/portainer \
 {% endtab %}
 
 {% tab title="Expose via Load Balancer" %}
-Using the following command, Portainer will be available at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
+Using the following command, Portainer will be available at an assigned Load Balancer IP on port `9443` for HTTPS:
 
 ```
 helm install --create-namespace -n portainer portainer portainer/portainer \
@@ -123,6 +127,10 @@ helm install --create-namespace -n portainer portainer portainer/portainer \
 
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](https://app.gitbook.com/advanced/ssl#kubernetes) or [via the Portainer UI](https://app.gitbook.com/admin/settings#ssl-certificate) after installation is complete.
+{% endhint %}
+
+{% hint style="info" %}
+If you need to access Portainer via HTTP on port `9000`, remove the `--set tls.force=true` option.
 {% endhint %}
 {% endtab %}
 {% endtabs %}
