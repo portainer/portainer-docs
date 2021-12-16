@@ -6,7 +6,7 @@ Portainer consists of two elements: the Portainer Server and the Portainer Agent
 
 A single Portainer Server will accept connections from any number of Portainer Agents, providing the ability to manage multiple clusters from one centralized interface. To do this, the Portainer Server container requires data persistence. The Portainer Agents are stateless, with data being shipped back to the Portainer Server container.
 
-![The Portainer Architecture](../.gitbook/assets/ArchDiagrams.png)
+![The Portainer architecture](../.gitbook/assets/portainer-architecture-detailed.png)
 
 {% hint style="info" %}
 We don't currently support running multiple instances of the Portainer Server container to manage the same clusters. We recommend running the Portainer Server on a specific management node, with Portainer Agents deployed across the remaining nodes.
