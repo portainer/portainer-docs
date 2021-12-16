@@ -24,6 +24,10 @@ There are several types of roles:
 
 The **Administrator** role sits outside of the other roles and effectively acts as a 'Global Admin'. A user assigned to this role has complete control over Portainer settings, and all resources on every environment under Portainer's control.
 
+{% hint style="info" %}
+The **Team Leader** role (which can be defined when [adding a new team](teams/add.md)) is designed for setups that are using internal authentication only, and in a future version the role will be disabled when external authentication is enabled.
+{% endhint %}
+
 ## Viewing user access
 
 Portainer's **Effective access viewer** lets you see what access a user has. From the menu select **Users** then select **Roles**.
