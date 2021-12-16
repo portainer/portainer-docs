@@ -5,7 +5,7 @@ Always match the agent version to the Portainer Server version. In other words, 
 {% endhint %}
 
 {% hint style="warning" %}
-Starting from Portainer BE 2.10, HTTPS is enabled by default on port `9443.` These instructions will configure Portainer to use both `9443 `for HTTPS and `9000` for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the upgrade.&#x20;
+Starting from Portainer BE 2.10, HTTPS is enabled by default on port `9443.` These instructions will configure Portainer to use both `9443` for HTTPS and `9000` for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the upgrade.&#x20;
 
 Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.&#x20;
 {% endhint %}
@@ -46,6 +46,14 @@ For an agent-only deployment, use the following manifest instead:
 ```
 https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
 ```
+
+{% hint style="warning" %}
+If you have set a custom `AGENT_SECRET` on your Portainer Server instance you must remember to explicitly provide this in the YAML when updating your agent:
+
+`environment:`
+
+&#x20; `- AGENT_SECRET: yoursecret`
+{% endhint %}
 {% endtab %}
 
 {% tab title="Load Balancer" %}
@@ -60,6 +68,14 @@ For an agent-only deployment, use the following manifest:
 ```
 https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
 ```
+
+{% hint style="warning" %}
+If you have set a custom `AGENT_SECRET` on your Portainer Server instance you must remember to explicitly provide this in the YAML when updating your agent:
+
+`environment:`
+
+&#x20; `- AGENT_SECRET: yoursecret`
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
@@ -86,6 +102,14 @@ For an agent-only deployment, use the following command instead:
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
 ```
+
+{% hint style="warning" %}
+If you have set a custom `AGENT_SECRET` on your Portainer Server instance you must remember to explicitly provide this in the YAML when updating your agent:
+
+`environment:`
+
+&#x20; `- AGENT_SECRET: yoursecret`
+{% endhint %}
 {% endtab %}
 
 {% tab title="Load Balancer" %}
@@ -100,6 +124,14 @@ For an agent-only deployment, use the following command:
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
 ```
+
+{% hint style="warning" %}
+If you have set a custom `AGENT_SECRET` on your Portainer Server instance you must remember to explicitly provide this in the YAML when updating your agent:
+
+`environment:`
+
+&#x20; `- AGENT_SECRET: yoursecret`
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 

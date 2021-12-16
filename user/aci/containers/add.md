@@ -1,6 +1,6 @@
 # Add a new container
 
-From the menu select **Container instances **then click **Add container**.
+From the menu select **Container instances** then click **Add container**.
 
 ![](../../../.gitbook/assets/aci-containers-add-1.gif)
 

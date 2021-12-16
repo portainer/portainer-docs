@@ -49,7 +49,7 @@ If your Compose file is hosted in a Git repository, you can deploy from there. F
 
 ![](../../../.gitbook/assets/be-stacks-add-1.gif)
 
-Select **Git Repository **then enter information about your Git repo.
+Select **Git Repository** then enter information about your Git repo.
 
 {% hint style="info" %}
 Any Git-compatible repository should work here. Substitute the details as required.

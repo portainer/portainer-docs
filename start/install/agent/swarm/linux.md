@@ -22,7 +22,7 @@ The installation instructions also make the following assumptions about your env
 
     `environment:`
 
-    `  - AGENT_SECRET: yoursecret`
+    &#x20; `- AGENT_SECRET: yoursecret`
 
 ## Deploying the Agent
 
@@ -60,7 +60,7 @@ tshb6ee2710s        portainer-agent_agent   global              1/1             
 
 ## Finishing the configuration
 
-Once the Agent is running on the Docker Swarm cluster, enter the **environment details **using the table below as a guide:
+Once the Agent is running on the Docker Swarm cluster, enter the **environment details** using the table below as a guide:
 
 | Field        | Overview                                                                                                                                                              |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

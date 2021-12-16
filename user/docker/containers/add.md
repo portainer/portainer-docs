@@ -42,7 +42,7 @@ Alternatively you can switch to advanced mode to manually enter registry and ima
 
 ![](../../../.gitbook/assets/containers-create-6.png)
 
-Once complete, set any advanced options (see below) then click **Deploy the container. **If successful your container will be shown in the container list.
+Once complete, set any advanced options (see below) then click **Deploy the container.** If successful your container will be shown in the container list.
 
 ## Advanced container settings
 

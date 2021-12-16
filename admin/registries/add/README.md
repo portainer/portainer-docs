@@ -1,6 +1,6 @@
 # Add a new registry
 
-From the menu select **Registries **then click **Add registry**.
+From the menu select **Registries** then click **Add registry**.
 
 ![](../../../.gitbook/assets/2.9-registries-add-1.gif)
 
