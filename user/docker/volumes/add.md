@@ -44,12 +44,12 @@ Complete the information in the **Create volume** screen, using the table below 
 
 Under the **NFS Settings** section, complete the following.
 
-| Field/Option | Overview                                                              |
-| ------------ | --------------------------------------------------------------------- |
-| Address      | Enter the hostname or IP address of your NFS server.                  |
-| NFS Version  | Select the NFS version that your NFS server uses.                     |
-| Mount point  | Enter the path where the volume is mounted, for example `/mnt/nfs01`. |
-| Options      | Leave the default values.                                             |
+| Field/Option | Overview                                                                                 |
+| ------------ | ---------------------------------------------------------------------------------------- |
+| Address      | Enter the hostname or IP address of your NFS server.                                     |
+| NFS Version  | Select the NFS version that your NFS server uses.                                        |
+| Mount point  | Enter the path where the volume is mounted (the remote share), for example `/mnt/nfs01`. |
+| Options      | Leave the default values.                                                                |
 
 ![](../../../.gitbook/assets/volumes-add-4.png)
 
