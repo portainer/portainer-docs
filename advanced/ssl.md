@@ -85,7 +85,7 @@ kubectl create namespace portainer
 Next, create a TLS secret containing the full certificate chain and matching private key:
 
 ```
-kubectl create secret tls portainer-tls-secret \
+kubectl create secret tls portainer-tls-secret -n portainer \
     --cert=/path/to/cert/file \
     --key=/path/to/key/file
 ```
