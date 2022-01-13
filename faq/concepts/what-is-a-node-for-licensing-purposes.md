@@ -14,13 +14,13 @@ Let's look at a few examples. Say you are running a small setup consisting of th
 
 ![](../../.gitbook/assets/licensing-docker-standalone.png)
 
-In this scenario, Portainer is running in three places (one Server and two Agents) so would need a 3 node license. 
+In this scenario, Portainer is running in three places (one Server and two Agents) so would need a 3 node license.
 
 Now, for Docker Swarm let's imagine a setup with one manager node (`manager01`) and two worker nodes (`swarm01` and `swarm02`):
 
 ![](<../../.gitbook/assets/licensing-docker-swarm (1).png>)
 
-Portainer Server is running on the manager node, and the agent is runs on all three nodes across the swarm. Therefore, this would also require a 3 node license.
+Portainer Server is running on the manager node, and the agent is running on all three nodes across the swarm. Therefore, this would also require a 3 node license.
 
 {% hint style="info" %}
 If a node is running both the Portainer Server and the Portainer Agent, this is only counted as one node for licensing purposes.
