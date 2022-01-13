@@ -61,7 +61,11 @@ tshb6ee2710s        portainer-agent_agent   global              1/1             
 
 ## Finishing the configuration
 
-Once the Agent is running on the Docker Swarm cluster, enter the \*\*environment details \*\*using the table below as a guide:
+Once the Agent is running on the Docker Swarm cluster, enter the \*\*environment details \*\*using the table below as a guide.
+
+{% hint style="warning" %}
+Only do this **once** for your environment, regardless of how many nodes are in the cluster. You do **not** need to add each node as an individual environment in Portainer. Adding just one node (we recommend the manager node) will allow Portainer to manage the entire cluster.
+{% endhint %}
 
 | Field        | Overview                                                                                                                                                              |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
