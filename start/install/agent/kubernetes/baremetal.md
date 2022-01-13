@@ -22,9 +22,9 @@ The installation instructions also make the following assumption about your envi
 
     `env:`
 
-    `  - name: AGENT_SECRET`
+    &#x20; `- name: AGENT_SECRET`
 
-    `    value: yoursecret`
+    &#x20;   `value: yoursecret`
 
 ## Deployment
 
@@ -112,6 +112,10 @@ svclb-portainer-agent-52xrp        1/1     Running   0          2m26s
 ## Completing the configuration
 
 Regardless of the method used, once the agent is running on the Kubernetes host, you must complete the appropriate environmental details.
+
+{% hint style="warning" %}
+Only do this **once** for your environment, regardless of how many nodes are in the cluster. You do **not** need to add each node as an individual environment in Portainer. Adding just one node will allow Portainer to manage the entire cluster.
+{% endhint %}
 
 | Field/Option | Overview                                                                                                                                                                                                          |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

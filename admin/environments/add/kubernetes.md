@@ -93,10 +93,6 @@ svclb-portainer-agent-52xrp        1/1     Running   0          2m26s
 
 Regardless of the method used, once the agent is running on the Kubernetes host, you must complete the appropriate environmental details.
 
-{% hint style="warning" %}
-Only do this **once** for your environment, regardless of how many nodes are in the cluster. You do **not** need to add each node as an individual environment in Portainer. Adding just one node will allow Portainer to manage the entire cluster.
-{% endhint %}
-
 | Field/Option | Overview                                                                                                                                                                                                          |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name         | Give the environment a descriptive name. This is a required field.                                                                                                                                                |
