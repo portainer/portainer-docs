@@ -20,7 +20,7 @@ Now, for Docker Swarm let's imagine a setup with one manager node (`manager01`) 
 
 ![](../../.gitbook/assets/licensing-docker-swarm.png)
 
-Portainer Server is running on the manager node, and the agent is runs on all three nodes across the swarm. Therefore, this would also require a 3 node license.
+Portainer Server is running on the manager node, and the agent is running on all three nodes across the swarm. Therefore, this would also require a 3 node license.
 
 {% hint style="info" %}
 If a node is running both the Portainer Server and the Portainer Agent, this is only counted as one node for licensing purposes.
