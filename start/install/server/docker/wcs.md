@@ -10,7 +10,6 @@ Portainer consists of two elements, the _Portainer Server_, and the _Portainer A
 
 To get started, you will need:
 
-* The latest version of Docker installed and working
 * Administrator access on the machine that will host your Portainer Server instance
 * By default, Portainer Server will expose the UI over port `9443` and expose a TCP tunnel server over port `8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 * A license key for Portainer Business Edition.
