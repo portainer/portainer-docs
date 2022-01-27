@@ -63,12 +63,13 @@ In this example, Portainer will be deployed to your cluster and assigned a Clust
 
 ```
 helm install --create-namespace -n portainer portainer portainer/portainer \
-  --set service.type=ClusterIP \
-  --set ingress.enabled=true \
-  --set ingress.annotations.'kubernetes\.io/ingress\.class'=nginx \
-  --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
-  --set ingress.hosts[0].host=portainer.example.io \
-  --set ingress.hosts[0].paths[0].path="/"
+    --set service.type=ClusterIP \
+    --set tls.force=true \
+    --set ingress.enabled=true \
+    --set ingress.ingressClassName=<ingressClassName (eg: nginx)> \
+    --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
+    --set ingress.hosts[0].host=<fqdn (eg: portainer.example.io)> \
+    --set ingress.hosts[0].paths[0].path="/"
 ```
 {% endtab %}
 
