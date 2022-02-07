@@ -1,9 +1,11 @@
 # Authentication
 
-Portainer provides its own internal authentication mechanism, encrypting user passwords and storing them in the local Portainer database. Alternatively, external authentication providers are available. In this section, we explain how to authenticate via LDAP and via OAuth.
+Portainer provides its own internal authentication mechanism, encrypting user passwords and storing them in the local Portainer database. Alternatively, external authentication providers are available.
+
+For all authentication types you can adjust the **session lifetime** (the time before users are forced to reauthenticate). The default is 8 hours.
 
 {% hint style="info" %}
-For all authentication types you can adjust the session lifetime (the time before users are forced to reauthenticate). The default is 8 hours.
+When external authentication is enabled, users will no longer be able to log in using any users set up with within Portainer. The exception to this is the initial administrative user created during the Portainer installation.
 {% endhint %}
 
 ![](../../../.gitbook/assets/2.9.1-settings-authentication-splash.png)

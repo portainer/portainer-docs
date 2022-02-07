@@ -41,3 +41,7 @@ If you have set a custom `AGENT_SECRET` on your Portainer Server instance you **
 {% endhint %}
 
 Once the Edge Agent has been deployed on the remote cluster and the cluster has checked in with your Portainer Server instance, you're ready to go.
+
+{% hint style="info" %}
+For security, if an agent does _not_ have a custom `AGENT_SECRET` defined and has been running for longer than 72 hours _without_ being associated with a Portainer Server installation, the agent will stop accepting connections until it is restarted.
+{% endhint %}

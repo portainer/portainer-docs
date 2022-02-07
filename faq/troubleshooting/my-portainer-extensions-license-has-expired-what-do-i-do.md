@@ -1,6 +1,6 @@
 # My Portainer Extensions license has expired. What can I do?
 
-In December 2020, Portainer stopped the extensions program as part of the release of Portainer 2.0. The RBAC, External Authentication and Registry Management capabilities offered with extensions was replaced with the dedicated Business Edition. The 1.24.x code base will reach the end of it’s End of Life process on December 31, 2021.&#x20;
+In December 2020, Portainer stopped the extensions program as part of the release of Portainer 2.0. The RBAC, External Authentication and Registry Management capabilities offered with extensions was replaced with the dedicated Business Edition. The 1.24.x code base reached the end of it’s End of Life process on December 31, 2021.&#x20;
 
 #### **What does End of Life for 1.24.x and Extensions products mean?**
 

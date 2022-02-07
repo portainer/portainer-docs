@@ -8,9 +8,9 @@ From the menu select **Stacks** then select the stack you want to inspect.
 
 ![](../../../.gitbook/assets/2.9-stacks-edit-1.gif)
 
-From here you can stop, delete or [create a template from the stack](template.md).
+From here you can stop, delete or [create a template from the stack](template.md), and if deployed from Git you can [detach the stack from the Git repository](edit.md#detach-from-git).
 
-![](../../../.gitbook/assets/2.9-stacks-edit-stackdetails.png)
+![](../../../.gitbook/assets/2.11.1-stacks-edit-actions.png)
 
 If the stack was deployed from a Git repository, you can:
 
@@ -63,3 +63,14 @@ The Editor tab is only available for stacks that were deployed using the [Web Ed
 Here, you can edit the Compose file for the stack to suit your needs. With Docker Swarm, you can also make changes to environment variables for the stack, as well as prune services if you have made changes that remove some services from the stack.
 
 When you have finished making changes, click **Update the stack**.
+
+## Detach from Git
+
+If your stack was created from a Git repository, you have the option to detach the stack from the repository. This means you can [edit the stack directly within Portainer](edit.md#editing-a-stack), but it does mean that the stack can't be updated from Git anymore. This action also cannot be reversed.
+
+{% hint style="info" %}
+Detaching downloads the main compose file for the stack and stores it in Portainer. It does not download any additional compose files or `.env` files that may be contained within the repository.
+{% endhint %}
+
+Click **Detach from Git** to detach. You will be asked to confirm the action - click **Detach** to do so.
+

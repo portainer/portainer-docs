@@ -26,12 +26,16 @@ The installation instructions also make the following assumptions about your env
 Run the following command to deploy the Portainer Agent:
 
 ```bash
-docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.11.0
+docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.11.1
 ```
 
 ## Adding your new environment
 
 Once the agent has been installed you are ready to add the environment to your Portainer Server installation.
+
+{% hint style="info" %}
+For security, if an agent does _not_ have a custom `AGENT_SECRET` defined and has been running for longer than 72 hours _without_ being associated with a Portainer Server installation, the agent will stop accepting connections until it is restarted.
+{% endhint %}
 
 {% content-ref url="../../../../admin/environments/add/docker.md" %}
 [docker.md](../../../../admin/environments/add/docker.md)

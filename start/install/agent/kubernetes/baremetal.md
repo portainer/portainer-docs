@@ -152,3 +152,7 @@ Find more information about access modes in [Kubernetes' own documentation](http
 {% endhint %}
 
 When the setup is complete, click **Save configuration**.
+
+{% hint style="info" %}
+For security, if an agent does _not_ have a custom `AGENT_SECRET` defined and has been running for longer than 72 hours _without_ being associated with a Portainer Server installation, the agent will stop accepting connections until it is restarted.
+{% endhint %}

@@ -48,6 +48,10 @@ kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s
 
 Once the agent has been installed you are ready to add the environment to your Portainer Server installation.&#x20;
 
+{% hint style="info" %}
+For security, if an agent does _not_ have a custom `AGENT_SECRET` defined and has been running for longer than 72 hours _without_ being associated with a Portainer Server installation, the agent will stop accepting connections until it is restarted.
+{% endhint %}
+
 {% content-ref url="../../../../admin/environments/add/kubernetes.md" %}
 [kubernetes.md](../../../../admin/environments/add/kubernetes.md)
 {% endcontent-ref %}

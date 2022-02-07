@@ -92,3 +92,7 @@ In the **Metadata** section, as an optional step you can categorize the environm
 ![](../../../.gitbook/assets/install-agent-swarm-linux-4.png)
 
 When you're ready, click **Add environment**.
+
+{% hint style="info" %}
+For security, if an agent does _not_ have a custom `AGENT_SECRET` defined and has been running for longer than 72 hours _without_ being associated with a Portainer Server installation, the agent will stop accepting connections until it is restarted.
+{% endhint %}

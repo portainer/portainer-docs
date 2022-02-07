@@ -3,7 +3,7 @@
 Edge Stacks is a feature that lets you deploy multiple applications to multiple environments from a single page and multiple sources, regardless of their current state (online, disconnected, new).
 
 {% hint style="info" %}
-This functionality requires you to [enable edge compute](../../admin/settings/#edge-compute) features.
+This functionality requires you to [enable Edge Compute](../../admin/settings/edge.md) features.
 {% endhint %}
 
 From the menu select **Edge Stacks** then click **Add stack**.

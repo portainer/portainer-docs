@@ -143,6 +143,9 @@
     * [Add a new container](user/aci/containers/add.md)
     * [Remove a container](user/aci/containers/remove.md)
 * [Edge Compute](user/edge/README.md)
+  * [Edge Devices](user/edge/devices/README.md)
+    * [FDO](user/edge/devices/fdo.md)
+    * [OpenAMT](user/edge/devices/openamt.md)
   * [Edge Groups](user/edge/groups.md)
   * [Edge Stacks](user/edge/stacks.md)
   * [Edge Jobs](user/edge/jobs.md)
@@ -186,6 +189,7 @@
   * [Authentication](admin/settings/authentication/README.md)
     * [Authenticate via LDAP](admin/settings/authentication/ldap.md)
     * [Authenticate via OAuth](admin/settings/authentication/oauth.md)
+  * [Edge Compute](admin/settings/edge.md)
 
 ## Frequently Asked Questions <a href="#faq" id="faq"></a>
 
@@ -219,6 +223,7 @@
   * [Why can't I find images in my private registry on Kubernetes?](faq/troubleshooting/why-cant-i-find-images-in-my-private-registry-on-kubernetes.md)
   * [Known issues with VMware](faq/troubleshooting/known-issues-with-vmware.md)
   * [Can you view deleted container logs in Portainer?](faq/troubleshooting/can-you-view-deleted-container-logs-in-portainer.md)
+  * [I enabled "Force HTTPS only" and now I'm locked out of Portainer. How do I get back in?](faq/troubleshooting/i-enabled-force-https-only-and-now-im-locked-out-of-portainer.-how-do-i-get-back-in.md)
   * [Exposed ports in the container view redirect me to 0.0.0.0. What can I do?](faq/troubleshooting/exposed-ports-in-the-container-view-redirect-me-to-0.0.0.0-what-can-i-do.md)
   * [How can I get the logs for Portainer itself?](faq/troubleshooting/how-can-i-get-the-logs-for-portainer-itself.md)
   * [How can I switch back to internal authentication?](faq/troubleshooting/how-can-i-switch-back-to-internal-authentication.md)

@@ -6,6 +6,10 @@ The following sections describe how to manage Edge Compute environments using me
 This functionality requires you to [enable Edge Compute](../../admin/settings/#edge-compute) features.
 {% endhint %}
 
+{% content-ref url="devices/" %}
+[devices](devices/)
+{% endcontent-ref %}
+
 {% content-ref url="groups.md" %}
 [groups.md](groups.md)
 {% endcontent-ref %}

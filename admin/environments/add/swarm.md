@@ -31,7 +31,7 @@ The result of which should look something like this:
 
 ```
 ID                  NAME                    MODE                REPLICAS            IMAGE                    PORTS
-tshb6ee2710s        portainer-agent_agent   global              1/1                 portainer/agent:2.9.2
+tshb6ee2710s        portainer-agent_agent   global              1/1                 portainer/agent:2.11.1
 ```
 
 ## Finishing the configuration
@@ -54,4 +54,8 @@ In the **Metadata** section, as an optional step you can categorize the environm
 
 ![](../../../.gitbook/assets/install-agent-swarm-linux-4.png)
 
-When you're ready click **Add environment**.\\
+When you're ready click **Add environment**.
+
+{% hint style="info" %}
+For security, if an agent does _not_ have a custom `AGENT_SECRET` defined and has been running for longer than 72 hours _without_ being associated with a Portainer Server installation, the agent will stop accepting connections until it is restarted.
+{% endhint %}

@@ -20,7 +20,7 @@ The Edge Agent communicates with the Portainer Server instance over port `8000`.
 | Portainer with Self-Signed Certs | If you are using a self-signed Portainer instance, the Edge Agent must be deployed with the flag `-e EDGE_INSECURE_POLL=1`. If you do not deploy Portainer with this flag, the agent cannot communicate with Portainer. This option is less secure than TLS. |
 | Portainer Fallback to HTTP       | If Portainer is not configured with either of the above options, it will use HTTP for agent polling as a fallback. We do not recommend this option because it is not secure.                                                                                 |
 
-## Adding an Edge endpoint to Portainer
+## Adding an Edge environment to Portainer
 
 From the menu select **Environments** then click **Add environment** and select **Edge Agent** as the environment type.
 
@@ -55,3 +55,7 @@ In the **Metadata** section, as an optional step you can categorize the environm
 ![](../../../.gitbook/assets/install-agent-swarm-linux-4.png)
 
 When you're ready, click **Update environment** to complete the configuration.
+
+{% hint style="info" %}
+For security, if an agent does _not_ have a custom `AGENT_SECRET` defined and has been running for longer than 72 hours _without_ being associated with a Portainer Server installation, the agent will stop accepting connections until it is restarted.
+{% endhint %}

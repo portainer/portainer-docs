@@ -11,7 +11,7 @@ We tested these instructions on Ubuntu 18.04.2 LTS. For instructions that relate
 * [Docker CE](https://docs.docker.com/install/) is the Docker application that runs on your machine to enable the use of Docker features. The latest version is not a requirement for this development stack, however we recommend staying up to date with the latest improvements and security fixes.
 * ​[Yarn](https://yarnpkg.com/en/docs/install#mac-stable) is a package manager for installing new software packages on your system, and is used to run the Portainer development environment.
 * [Node.JS](https://nodejs.org/en/download/) is a JavaScript package used when building applications that leverage networking, such as Portainer. Version 12 or later is required.
-* [Golang](https://golang.org/dl/) is the open source language that we use to build the majority of Portainer software. Version 1.15 of Golang is required.
+* [Golang](https://golang.org/dl/) is the open source language that we use to build the majority of Portainer software. Version 1.17 of Golang is required.
 * Wget is a package used to retrieve files using common internet protocols such as HTTP and FTP.
 
 ## Part 1: Installing Docker
@@ -157,7 +157,7 @@ The latest version of Node.JS should now print out.
 ## Part 4: Installing Golang using a Linux tar file
 
 {% hint style="info" %}
-Go version 1.15 must be installed. If you're upgrading from an older version, you must [remove the existing version](https://golang.org/doc/install#uninstall) first before installing version 1.15. For the most up-to-date installation instructions, read [Go's own documentation](https://golang.org/doc/install#install).
+Go version 1.17 must be installed. If you're upgrading from an older version, you must [remove the existing version](https://golang.org/doc/install#uninstall) first before installing version 1.17. For the most up-to-date installation instructions, read [Go's own documentation](https://golang.org/doc/install#install).
 {% endhint %}
 
 {% hint style="info" %}
@@ -167,7 +167,7 @@ If you have issues installing or using Go, read the _Getting help_ section in th
 First, [download](https://golang.org/dl/) the appropriate version of Go for your system. Navigate to where it was downloaded then extract it to the `/usr/local` directory using this command:
 
 ```
-sudo tar -C /usr/local -xzf go1.15.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
 ```
 
 Next, add `/usr/local/go/bin` to the PATH environment variable inside your shell profile. Here's an example using bash:

@@ -11,7 +11,7 @@ We tested these instructions on macOS 10.14.3 (Mojave).
 * [Docker for Mac](https://www.docker.com/products/docker-desktop) installs the Docker application and other Docker tools. The latest version is not a requirement for this development stack, however we recommend staying up to date with the latest improvements and security fixes.
 * [Yarn](https://yarnpkg.com/en/docs/install#mac-stable) is a package manager for installing new software packages on your system, and is used to run the Portainer development environment.
 * [Node.JS](https://nodejs.org/en/download/) is a JavaScript package used when building applications that leverage networking, such as Portainer. Version 12 or later is required.
-* ​[Golang](https://golang.org/dl/) is the open source language that we use to build the majority of Portainer software. Version 1.15 of Golang is required.
+* ​[Golang](https://golang.org/dl/) is the open source language that we use to build the majority of Portainer software. Version 1.17 of Golang is required.
 * Wget is a package used to retrieve files using common internet protocols such as HTTP and FTP.
 
 ## Part 1: Installing Docker for macOS
@@ -71,7 +71,7 @@ If Homebrew was installed at the same time as Yarn (using Homebrew), follow thes
 ## Part 4: Installing Golang
 
 {% hint style="info" %}
-Go version 1.15 must be installed. If you're upgrading from an older version, you must [remove the existing version](https://golang.org/doc/install#uninstall) first before installing version 1.15.
+Go version 1.17 must be installed. If you're upgrading from an older version, you must [remove the existing version](https://golang.org/doc/install#uninstall) first before installing version 1.17.
 {% endhint %}
 
 There are two ways to install Go on a macOS system: using a tar and a using a package file. We use the package installer.
