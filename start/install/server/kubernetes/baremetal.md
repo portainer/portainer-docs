@@ -112,6 +112,10 @@ helm install --create-namespace -n portainer portainer portainer/portainer \
     --set ingress.hosts[0].host=<fqdn (eg: portainer.example.io)> \
     --set ingress.hosts[0].paths[0].path="/"
 ```
+
+{% hint style="info" %}
+If you need to access Portainer via HTTP, remove the `--set tls.force=true` option.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Expose via Load Balancer" %}
@@ -134,7 +138,7 @@ If you need to access Portainer via HTTP on port `9000`, remove the `--set tls.f
 {% endtabs %}
 
 {% hint style="info" %}
-To explicitly set the target node when deploying the Helm chart on the CLI, include `--set nodeSelector.kubernetes\.io/hostname=<YOUR NODE NAME>` in your `helm install` command.
+If you need to explicitly set the target node when deploying the Helm chart on the CLI, include `--set nodeSelector.kubernetes\.io/hostname=<YOUR NODE NAME>` in your `helm install` command.
 {% endhint %}
 
 ### Deploy using YAML manifests
