@@ -4,7 +4,7 @@
 * [What's new in version 2.10](whats-new.md)
 * [Release Notes](release-notes.md)
 
-## Getting Started <a href="start" id="start"></a>
+## Getting Started <a href="#start" id="start"></a>
 
 * [Introduction](start/intro.md)
 * [Portainer architecture](start/architecture.md)
@@ -20,7 +20,7 @@
       * [Install Portainer with Docker Swarm on WSL / Docker Desktop](start/install/server/swarm/wsl.md)
       * [Install Portainer with Docker Swarm on Windows Container Service](start/install/server/swarm/wcs.md)
     * [Kubernetes](start/install/server/kubernetes/README.md)
-      * [Install Portainer with Kubernetes on your Self-Managed Infrastructure](start/install/server/kubernetes/baremetal.md)
+      * [Install Portainer on your Kubernetes environment](start/install/server/kubernetes/baremetal.md)
       * [Install Portainer with Kubernetes on WSL / Docker Desktop](start/install/server/kubernetes/wsl.md)
     * [Initial setup](start/install/server/setup.md)
   * [Add an environment to an existing installation](start/install/agent/README.md)
@@ -33,7 +33,7 @@
       * [Install Portainer Agent with Docker Swarm on WSL / Docker Desktop](start/install/agent/swarm/wsl.md)
       * [Install Portainer Agent with Docker Swarm on Windows Container Service](start/install/agent/swarm/wcs.md)
     * [Kubernetes](start/install/agent/kubernetes/README.md)
-      * [Install Portainer Agent with Kubernetes on your Self-Managed Infrastructure](start/install/agent/kubernetes/baremetal.md)
+      * [Install Portainer Agent on your Kubernetes environment](start/install/agent/kubernetes/baremetal.md)
       * [Install Portainer Agent with Kubernetes on WSL / Docker Desktop](start/install/agent/kubernetes/wsl.md)
     * [Azure ACI](start/install/agent/aci.md)
     * [Edge Agent](start/install/agent/edge.md)
@@ -46,7 +46,7 @@
     * [Docker Swarm](start/upgrade/tobe/swarm.md)
     * [Kubernetes](start/upgrade/tobe/kubernetes.md)
 
-## Using Portainer <a href="user" id="user"></a>
+## Using Portainer <a href="#user" id="user"></a>
 
 * [Home](user/home.md)
 * [Docker/Swarm](user/docker/README.md)
@@ -149,7 +149,7 @@
   * [Edge Jobs](user/edge/jobs.md)
 * [Account settings](user/account-settings.md)
 
-## Administering Portainer <a href="admin" id="admin"></a>
+## Administering Portainer <a href="#admin" id="admin"></a>
 
 * [Users](admin/users/README.md)
   * [Teams](admin/users/teams/README.md)
@@ -191,7 +191,7 @@
     * [Authenticate via Active Directory](admin/settings/authentication/active-directory.md)
     * [Authenticate via OAuth](admin/settings/authentication/oauth.md)
 
-## Frequently Asked Questions <a href="faq" id="faq"></a>
+## Frequently Asked Questions <a href="#faq" id="faq"></a>
 
 * [Portainer Concepts](faq/concepts/README.md)
   * [What is Portainer's architecture?](faq/concepts/what-is-portainers-architecture.md)
@@ -233,7 +233,7 @@
   * [How do you decide which bugs and features to work on first?](faq/contributing/how-do-you-decide-which-bugs-and-features-to-work-on-first.md)
   * [How do I log a support ticket?](faq/contributing/how-do-i-log-a-support-ticket.md)
 
-## Advanced Topics <a href="advanced" id="advanced"></a>
+## Advanced Topics <a href="#advanced" id="advanced"></a>
 
 * [CLI configuration options](advanced/cli.md)
 * [App templates](advanced/app-templates/README.md)
@@ -261,6 +261,6 @@
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
 * [Open a support request](https://www.portainer.io/portainer-business-support)
 
-## Contribute to Portainer <a href="contribute" id="contribute"></a>
+## Contribute to Portainer <a href="#contribute" id="contribute"></a>
 
 * [Contribute](contribute/contribute.md)

@@ -1,4 +1,4 @@
-# Install Portainer with Kubernetes on your Self-Managed Infrastructure
+# Install Portainer on your Kubernetes environment
 
 {% hint style="info" %}
 These instructions are for Portainer Business Edition. For Community Edition, please refer to the [Community Edition documentation](https://docs.portainer.io/v/ce-2.9/).
@@ -114,6 +114,10 @@ helm install --create-namespace -n portainer portainer portainer/portainer \
     --set ingress.hosts[0].host=<fqdn (eg: portainer.example.io)> \
     --set ingress.hosts[0].paths[0].path="/"
 ```
+
+{% hint style="info" %}
+If you need to access Portainer via HTTP, remove the `--set tls.force=true` option.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Expose via Load Balancer" %}
@@ -137,7 +141,7 @@ If you need to access Portainer via HTTP on port `9000`, remove the `--set tls.f
 {% endtabs %}
 
 {% hint style="info" %}
-To explicitly set the target node when deploying the Helm chart on the CLI, include `--set nodeSelector.kubernetes\.io/hostname=<YOUR NODE NAME>` in your `helm install` command.
+If you want to explicitly set the target node when deploying the Helm chart on the CLI, include `--set nodeSelector.kubernetes\.io/hostname=<YOUR NODE NAME>` in your `helm install` command.
 {% endhint %}
 
 ### Deploy using YAML manifests
@@ -171,7 +175,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endtabs %}
 
 {% hint style="info" %}
-To explicitly set the target node when deploying using YAML manifests, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
+If you want to explicitly set the target node when deploying using YAML manifests, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
 {% endhint %}
 
 ```
