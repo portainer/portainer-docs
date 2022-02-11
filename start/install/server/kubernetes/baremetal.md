@@ -1,4 +1,4 @@
-# Install Portainer with Kubernetes on your Self-Managed Infrastructure
+# Install Portainer on your Kubernetes environment
 
 {% hint style="info" %}
 These instructions are for Portainer Community Edition. For Business Edition, please refer to the [Business Edition documentation](https://docs.portainer.io/v/be-2.7/).
@@ -172,7 +172,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endtabs %}
 
 {% hint style="info" %}
-To explicitly set the target node when deploying using YAML manifests, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
+If you need to explicitly set the target node when deploying using YAML manifests, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
 {% endhint %}
 
 ```
