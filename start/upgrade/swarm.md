@@ -10,6 +10,10 @@ Starting from Portainer BE 2.10, HTTPS is enabled by default on port `9443.` The
 Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.&#x20;
 {% endhint %}
 
+{% hint style="danger" %}
+Before beginning any upgrade, we highly recommend [taking a backup](../../admin/settings/#backup-portainer) of your current Portainer configuration.
+{% endhint %}
+
 To upgrade the Portainer Server and the agents on Docker Swarm, first run the following command on the manager node of your Docker Swarm cluster:
 
 ```
