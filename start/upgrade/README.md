@@ -22,6 +22,12 @@ To upgrade Portainer, choose your platform then follow the instructions:
 [kubernetes.md](kubernetes.md)
 {% endcontent-ref %}
 
+If you are using the Portainer Edge Agent, we have specific upgrade instructions for you:
+
+{% content-ref url="edge.md" %}
+[edge.md](edge.md)
+{% endcontent-ref %}
+
 If you want to upgrade from CE to Business Edition, we have instructions for that too:
 
 {% content-ref url="tobe/" %}
