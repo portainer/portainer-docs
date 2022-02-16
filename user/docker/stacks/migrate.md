@@ -1,6 +1,6 @@
 # Migrate or duplicate a stack
 
-## Migrating a stack to another swarm cluster
+## Migrating a stack
 
 From the menu select **Stacks** then select the stack you want to migrate.
 
