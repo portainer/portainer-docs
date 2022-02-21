@@ -17,7 +17,21 @@ From the menu select **Stacks**, click **Add stack**, give the stack a descripti
 
 ![](../../../.gitbook/assets/be-stacks-add-1.gif)
 
-As an optional step, you can also use the web editor to define environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).&#x20;
+As an optional step, you can also use the web editor to define environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
+
+Environment variables can be set individually within Portainer or you can use **Load variables from .env file** to upload a file containing your environment variables. Environment variables you define (either individually or via a .env file) will be available to use in your compose file using an `environment` definition:
+
+```
+environment:
+  - MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
+```
+
+Alternatively, you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
+
+```
+env_file:
+  - stack.env
+```
 
 {% hint style="info" %}
 Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
@@ -33,7 +47,21 @@ In Portainer you can create stacks from Compose YML files. To do this, from the 
 
 ![](../../../.gitbook/assets/be-stacks-add-1.gif)
 
-Select **Upload** then select the Compose file from your computer. As an optional step, enter any environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).&#x20;
+Select **Upload** then select the Compose file from your computer. As an optional step, enter any environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
+
+Environment variables can be set individually within Portainer or you can use **Load variables from .env file** to upload a file containing your environment variables. Environment variables you define (either individually or via a .env file) will be available to use in your compose file using an `environment` definition:
+
+```
+environment:
+  - MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
+```
+
+Alternatively, you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
+
+```
+env_file:
+  - stack.env
+```
 
 {% hint style="info" %}
 Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself which would take it out of sync with your local copy. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
@@ -96,6 +124,20 @@ For more detail on how automatic updates function under the hood, have a look at
 ![](../../../.gitbook/assets/2.10-k8s-applications-manifest-force-redeployment.png)
 
 As an optional step, you can also set environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
+
+Environment variables can be set individually within Portainer or you can use **Load variables from .env file** to upload a file containing your environment variables. Environment variables you define (either individually or via a .env file) will be available to use in your compose file using an `environment` definition:
+
+```
+environment:
+  - MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
+```
+
+Alternatively, you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
+
+```
+env_file:
+  - stack.env
+```
 
 {% hint style="info" %}
 Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself which would take it out of sync with the Git repository. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
