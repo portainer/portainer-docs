@@ -27,17 +27,17 @@ Pre-filled templates for Microsoft, Google and Github are available in [Portaine
 
 Complete the **OAuth Configuration** section based on the table below.
 
-| Field/Option      | Overview                                                                                                                                                             |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client ID         | Enter the public identifier of the OAuth application.                                                                                                                |
-| Client secret     | Enter the token access to the OAuth application.                                                                                                                     |
-| Authorization URL | Enter the URL used to authenticate against the OAuth provider (will redirect users to the OAuth provider login screen).                                              |
-| Access token URL  | Enter the URL used to exchange a valid OAuth authentication code for an access token.                                                                                |
-| Resource URL      | Enter the URL used by Portainer to retrieve information about authenticated users.                                                                                   |
-| Redirect URL      | Enter the URL used by the OAuth provider to redirect users after they are successfully authenticated. You should set this to your Portainer instance URL.            |
-| Logout URL        | Enter the URL used by the OAuth provider to log users out.                                                                                                           |
-| User identifier   | Enter the identifier that Portainer will use to create accounts for authenticated users. Retrieved from the resource server specified in the **Resource URL** field. |
-| Scopes            | Required by the OAuth provider to retrieve information about authenticated users. See your provider's own documentation for more information.                        |
+| Field/Option      | Overview                                                                                                                                                                                         |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Client ID         | Enter the public identifier of the OAuth application.                                                                                                                                            |
+| Client secret     | Enter the token access to the OAuth application.                                                                                                                                                 |
+| Authorization URL | Enter the URL used to authenticate against the OAuth provider (will redirect users to the OAuth provider login screen).                                                                          |
+| Access token URL  | Enter the URL used to exchange a valid OAuth authentication code for an access token.                                                                                                            |
+| Resource URL      | Enter the URL used by Portainer to retrieve information about authenticated users.                                                                                                               |
+| Redirect URL      | Enter the URL used by the OAuth provider to redirect users after they are successfully authenticated (also referred to as the callback URL). You should set this to your Portainer instance URL. |
+| Logout URL        | Enter the URL used by the OAuth provider to log users out.                                                                                                                                       |
+| User identifier   | Enter the identifier that Portainer will use to create accounts for authenticated users. Retrieved from the resource server specified in the **Resource URL** field.                             |
+| Scopes            | Required by the OAuth provider to retrieve information about authenticated users. See your provider's own documentation for more information.                                                    |
 
 ![](../../../.gitbook/assets/authentication-oauth-3.png)
 
