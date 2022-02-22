@@ -24,7 +24,7 @@ As an open source product we rely on users in our community to support one anoth
 
 ## Community and support channels
 
-* **Ask questions** either in [GitHub Issues](https://github.com/portainer/portainer/issues) or the [community Slack channel](https://portainer.slack.com/join/shared\_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/). Other platforms exist (Reddit, Discord, Stack Overflow) but we are less active in those spaces.
+* **Ask questions** either in [GitHub Issues](https://github.com/portainer/portainer/issues) or the [community Slack channel](https://join.slack.com/t/portainer/shared\_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA). Other platforms exist (Reddit, Discord, Stack Overflow) but we are less active in those spaces.
 * **Log bugs** in [GitHub Issues](https://github.com/portainer/portainer/issues) so they can be properly managed.
 * **Flag vulnerabilities** by emailing [security@portainer.io](mailto:security@portainer.io) so we can deal with them immediately.
 * **Flag documentation issues** via our [GitHub documentation channel](https://github.com/portainer/portainer-docs/issues) (or start [contributing](contribute/contribute.md) and make our documentation better!).
