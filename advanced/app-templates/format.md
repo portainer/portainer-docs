@@ -50,7 +50,7 @@ A container template element must be a valid JSON object, composed of both manda
 * **Valid values:** Any valid URL.
 * **Required/Optional:** Required
 
-### administrator_only
+### administrator\_only
 
 * **Description:** Indicates whether or not a template should be available just to admin users.
 * **Format:** Boolean
