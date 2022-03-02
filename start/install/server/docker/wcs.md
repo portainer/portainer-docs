@@ -52,7 +52,7 @@ docker volume create portainer_data
 Then, download and install the Portainer Server container:
 
 ```aspnet
-docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data cr.portainer.io/portainer/portainer-ce:2.9.3
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce:2.9.3
 ```
 
 {% hint style="info" %}

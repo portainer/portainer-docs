@@ -43,13 +43,13 @@ docker rm portainer
 Now that you have stopped and removed the old version of Portainer, you must ensure that you have the latest version of the image locally. You can do this with a `docker pull` command:
 
 ```
-docker pull cr.portainer.io/portainer/portainer-ce:2.0.0
+docker pull portainer/portainer-ce:2.0.0
 ```
 
 Finally, deploy the updated version of Portainer:
 
 ```
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data cr.portainer.io/portainer/portainer-ce:2.0.0
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.0.0
 ```
 
 Portainer CE 2.0.0 will now be deployed on your system, using the persistent data from the previous version, and will also upgrade the Portainer database to the new version.
@@ -68,7 +68,7 @@ docker rm portainer
 Now that you have stopped and removed the old version of Portainer, run this command to deploy the latest version of Portainer Business:
 
 ```
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always --pull=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data cr.portainer.io/portainer/portainer-ee:2.10.0
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always --pull=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:2.10.0
 ```
 
 Log out of Portainer (if currently logged in) then log back in. When you log in for the first time, you'll be asked to enter your license key. Paste this in from the email we sent you.
