@@ -229,6 +229,7 @@
   * [How can I get the logs for Portainer itself?](faq/troubleshooting/how-can-i-get-the-logs-for-portainer-itself.md)
   * [How can I switch back to internal authentication?](faq/troubleshooting/how-can-i-switch-back-to-internal-authentication.md)
   * [How do I reset my Portainer password?](faq/troubleshooting/how-do-i-reset-my-portainer-password.md)
+  * [Slow Overlay Network?](faq/troubleshooting/slow-overlay-network.md)
 * [Contributing](faq/contributing/README.md)
   * [How do I report a bug?](faq/contributing/how-do-i-report-a-bug.md)
   * [How do I raise a feature request?](faq/contributing/how-do-i-raise-a-feature-request.md)
