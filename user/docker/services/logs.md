@@ -2,7 +2,7 @@
 
 From the menu select **Services**, select the service whose logs you want to view then click **Service logs**.
 
-![](../../../.gitbook/assets/2.9-services-logs-1.gif)
+![](../../../.gitbook/assets/2.12-services-logs-1.gif)
 
 The following options are available in each log:
 

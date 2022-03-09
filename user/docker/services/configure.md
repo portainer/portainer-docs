@@ -2,7 +2,7 @@
 
 From the menu select **Services** then select the service you want to configure.&#x20;
 
-![](../../../.gitbook/assets/2.9-services-configure-1.gif)
+![](../../../.gitbook/assets/2.12-services-configure-1.gif)
 
 ## Service details
 

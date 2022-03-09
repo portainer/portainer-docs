@@ -2,7 +2,7 @@
 
 From the menu select **Services** then select **scale** next to the service you want to scale (in the **Scheduling Mode** column).
 
-![](../../../.gitbook/assets/2.9-services-scale-1.gif)
+![](../../../.gitbook/assets/2.12-services-scale-1.gif)
 
 Select the number of replicas you want to create for the service then click the tick icon to apply. If scaling is successful, a success message will appear at the top-right of the screen. Refresh the page until the running replicas appear.
 

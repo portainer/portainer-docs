@@ -2,7 +2,7 @@
 
 From the menu click **Services** then click **Add service**.
 
-![](../../../.gitbook/assets/2.9-services-add-1.gif)
+![](../../../.gitbook/assets/2.12-services-add-1.gif)
 
 Complete the fields, using the table below as a guide.
 

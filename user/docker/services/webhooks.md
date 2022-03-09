@@ -6,7 +6,7 @@ A webhook is a POST request sent to a URL that you define in Docker Hub or anoth
 
 From the menu select **Services** then select the service that you want to configure the webhook for.
 
-![](../../../.gitbook/assets/2.9-services-configure-1.gif)
+![](../../../.gitbook/assets/2.12-services-configure-1.gif)
 
 In the **Service details** screen toggle the **Service webhook** option on. When the URL appears, click **Copy link**. This URL will be used to configure the webhook in your chosen registry.
 

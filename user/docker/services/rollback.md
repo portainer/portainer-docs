@@ -4,7 +4,7 @@ If you make a change to a service in Docker Swarm and your applications are no l
 
 From the menu select **Services**, select the service to roll back then click **Rollback the service**.
 
-![](../../../.gitbook/assets/2.9-services-rollback-1.gif)
+![](../../../.gitbook/assets/2.12-services-rollback-1.gif)
 
 When the confirmation message appears, click **Yes**.
 
