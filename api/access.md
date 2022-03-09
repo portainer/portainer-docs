@@ -28,7 +28,7 @@ Once logged in as the user, click on **my account** in the top right.
 
 Scroll down to the **Access tokens** section. Here you can see any access tokens that exist for the user.&#x20;
 
-![](../.gitbook/assets/2.11-account-settings-accesstokens.png)
+![](<../.gitbook/assets/2.11-account-settings-accesstokens (1).png>)
 
 To add a new access token, click the **Add access token** button. You will be taken to a new page where you can set a Description for your access token. We recommend making this something recognizable for future reference.&#x20;
 

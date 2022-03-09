@@ -43,7 +43,7 @@ Next, use the following command to backup the Portainer Business instance data, 
 Use the following command to downgrade the Portainer database:
 
 ```
- docker run -it --name portainer-database-rollback -v portainer_data:/data portainer/portainer-ee:2.12.0 --rollback-to-ce
+ docker run -it --name portainer-database-rollback -v portainer_data:/data portainer/portainer-ee:2.12.1 --rollback-to-ce
 ```
 
 ### Step 4: Redeploy a Portainer CE instance <a href="#redeploy-a-portainer-ce-instance" id="redeploy-a-portainer-ce-instance"></a>

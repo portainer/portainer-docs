@@ -22,7 +22,9 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /path/to/your/certs:/certs \
-    portainer/portainer-ee:2.12.0 --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+    portainer/portainer-ee:2.12.1 \
+    --sslcert /certs/portainer.crt \
+    --sslkey /certs/portainer.key
 ```
 
 Alternatively, Certbot can be used to generate a certificate and a key. Because Docker has issues with symlinks, if you use Certbot you will need to pass both the 'live' and 'archive' directories as volumes. For example:
@@ -34,7 +36,9 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v portainer-data:/data \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
-    portainer/portainer-ee:2.12.0 --sslcert /certs/live/yourdomain/cert.pem --sslkey /certs/live/yourdomain/privkey.pem
+    portainer/portainer-ee:2.12.1 \
+    --sslcert /certs/live/yourdomain/cert.pem \
+    --sslkey /certs/live/yourdomain/privkey.pem
 ```
 
 When you're finished, you can navigate to `https://$ip-docker-host:9443`.

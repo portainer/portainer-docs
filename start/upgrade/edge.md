@@ -3,7 +3,7 @@
 To upgrade the Portainer Edge Agent to the latest version, follow the below instructions for your Edge environment.
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or upgrading to Portainer 2.12.0 make sure all of the agents are also on version 2.12.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or upgrading to Portainer 2.12.1 make sure all of the agents are also on version 2.12.1.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -28,7 +28,7 @@ docker rm portainer_edge_agent
 We also want to ensure we have the updated version of the container image locally:
 
 ```
-docker pull portainer/agent:2.12.0
+docker pull portainer/agent:2.12.1
 ```
 
 To deploy the updated Edge Agent, replace the `your-edge-identifier-here` and `your-edge-key-here` values in the following command with those you retrieved earlier, then run the command:
@@ -43,10 +43,9 @@ docker run -d \
     -e EDGE=1 \
     -e EDGE_ID=your-edge-identifier-here \
     -e EDGE_KEY=your-edge-key-here \
-    -e CAP_HOST_MANAGEMENT=1 \
     -e EDGE_INSECURE_POLL=1 \
     --name portainer_edge_agent \
-    portainer/agent:2.12.0
+    portainer/agent:2.12.1
 ```
 
 ## Docker Swarm
@@ -56,13 +55,13 @@ To upgrade the Portainer Edge Agent on a Docker Swarm environment, run the follo
 First, to ensure you have the updated container image locally, pull the image:
 
 ```
-docker pull portainer/agent:2.12.0
+docker pull portainer/agent:2.12.1
 ```
 
 Then, update the service to use the new image version:
 
 ```
-docker service update --image portainer/agent:2.12.0 --force portainer_edge_agent 
+docker service update --image portainer/agent:2.12.1 --force portainer_edge_agent 
 ```
 
 ## Kubernetes

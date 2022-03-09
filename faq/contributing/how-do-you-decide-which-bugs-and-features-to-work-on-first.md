@@ -1,6 +1,6 @@
 # How do you decide which bugs and features to work on first?
 
-Here at Portainer, we encourage feedback from our customers, and we truly value our user community. That being said, our [features](https://github.com/portainer/portainer/labels/kind%2Fenhancement) and [bugs](https://github.com/portainer/portainer/labels/kind%2bug) lists are long and at times seem neverending. Our decision-making process aims to balance user needs with the reality of Portainer's limited time and resources. Despite our best intentions, we know that at times we will disappoint some of you.
+Here at Portainer, we encourage feedback from our customers, and we truly value our user community. That being said, our [features](https://github.com/portainer/portainer/labels/kind%2Fenhancement) and [bugs](https://github.com/portainer/portainer/labels/kind%2Fbug) lists are long and at times seem neverending. Our decision-making process aims to balance user needs with the reality of Portainer's limited time and resources. Despite our best intentions, we know that at times we will disappoint some of you.
 
 ## Our process
 

@@ -12,7 +12,7 @@ This will list the containers on your environment, and will look something like 
 
 ```
 CONTAINER ID   IMAGE                          COMMAND                  CREATED      STATUS                  PORTS                                                                                            NAMES
-2c9085c1d664   portainer/portainer-ee:2.12.0  "/portainer"             3 days ago   Up 3 days               0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp, 9000/tcp   portainer
+2c9085c1d664   portainer/portainer-ee:2.12.1  "/portainer"             3 days ago   Up 3 days               0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp, 9000/tcp   portainer
 be84ee30270e   mysql:8.0                      "docker-entrypoint.s…"   4 days ago   Exited (1) 4 days ago                                                                                                    mysql
 4604a2f5108e   nginx:latest                   "/docker-entrypoint.…"   4 days ago   Up 4 days               0.0.0.0:80->80/tcp, :::80->80/tcp                                                                nginx
 ```

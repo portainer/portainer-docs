@@ -56,7 +56,7 @@ the result of which should look something like this:
 
 ```
 ID                  NAME                    MODE                REPLICAS            IMAGE                    PORTS
-tshb6ee2710s        portainer-agent_agent   global              1/1                 portainer/agent:2.12.0
+tshb6ee2710s        portainer-agent_agent   global              1/1                 portainer/agent:2.12.1
 ```
 
 ## Finishing the configuration

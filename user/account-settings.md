@@ -20,7 +20,7 @@ Enter the following details, using the table below as a guide. When you're finis
 
 This section allows you to manage your API access tokens. You can see a list of the access tokens that exist for your user as well as add and remove tokens as required.
 
-![](<../.gitbook/assets/2.11-account-settings-accesstokens (1).png>)
+![](../.gitbook/assets/2.11-account-settings-accesstokens.png)
 
 For more information on access tokens, refer to our API access documentation.
 

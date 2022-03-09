@@ -1,5 +1,12 @@
 # Release Notes
 
+## Release 2.12.1
+
+### Portainer
+
+* Fixed bug where redeploying a stack causes an error and success message at the same time.
+* Fixed bug that was preventing ability to edit application with persisted folder on Kubernetes.
+
 ## Release 2.12.0
 
 ### Breaking changes
