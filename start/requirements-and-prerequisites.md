@@ -12,26 +12,26 @@ The following tables list all of the configurations that we have tested, validat
 
 ### Portainer Community Edition (CE)
 
-| Portainer Version         | Release Date | Docker Version            | Kubernetes Version           | Architectures         |
-| ------------------------- | ------------ | ------------------------- | ---------------------------- | --------------------- |
-| Community 2.11.1 (latest) | Feb 8, 2022  | 20.10.8 20.10.11 20.10.12 | 1.20.13 1.21.7 1.22.4        | ARM64, x86\_64        |
-| Community 2.11.0          | Dec 9, 2021  | 20.10.6 20.10.8 20.10.11  | 1.19.11 1.20.7 1.21 1.22     | ARM64, x86\_64        |
-| Community 2.9.3           | Nov 22, 2021 | 20.10.5 20.10.6           | 1.19.11 1.20.7 1.21 1.22     | ARM64, x86\_64        |
-| Community 2.9.2           | Oct 26, 2021 | 20.10.5 20.10.6           | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
-| Community 2.9.1           | Oct 11, 2021 | 20.10.5 20.10.6           | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
-| Community 2.9.0           | Sep 23, 2021 | 20.10.5 20.10.6           | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
-| Community 2.6.3           | Aug 27, 2021 | 20.10.5 20.10.6           | 1.19 1.20 1.21 1.22          | ARM64, x86\_64        |
-| Community 2.6.2           | Aug 2, 2021  | 20.10.5 20.10.6           | 1.19 1.20.2 1.21             | ARM64, x86\_64        |
-| Community 2.6.1           | Jul 12, 2021 | 20.10.5  20.10.6          | 1.19 1.20.2 1.21             | ARM64, x86\_64        |
-| Community 2.6.0           | Jun 25, 2021 | 20.10.5  20.10.6          | 1.19 1.20.2 1.21             | ARM64, x86\_64        |
-| Community 2.5.1           | May 18, 2021 | 20.10.5  20.10.6          | 1.19 1.20.2 1.21             | ARM64, x86\_64        |
-| Community 2.5.0           | May 18, 2021 | 20.10.5                   | 1.19 1.20.2 1.21             | ARM64, x86\_64        |
-| Community 2.1.x           | Feb 2, 2021  | 20.10.2                   | 1.20.0                       | ARM64, x86\_64        |
-| Community 2.0.1           | Jan 7, 2021  | 20.10.0                   | 1.17.13 1.18.9 1.19.3 1.20.0 | ARM64, x86\_64        |
-| Community 2.0             | Aug 31, 2020 | 19.03.12                  | 1.17.13 1.18.6 1.18.9 1.19.3 | ARM64, x86\_64        |
-| 1.24.1                    | Jul 23, 2020 | 19.03.12                  | N/A                          | ARM32, ARM64, x86\_64 |
-| 1.24.0                    | Jun 2, 2020  | 19.03.10                  | N/A                          | ARM32, ARM64, x86\_64 |
-| 1.23.2                    | Mar 25, 2020 | 19.03.6                   | N/A                          | ARM32, ARM64, x86\_64 |
+| Portainer Version         | Release Date | Docker Version            | Kubernetes Version           | Architectures                                                                                                                                                       |
+| ------------------------- | ------------ | ------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Community 2.11.1 (latest) | Feb 8, 2022  | 20.10.8 20.10.11 20.10.12 | 1.20.13 1.21.7 1.22.4        | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.11.0          | Dec 9, 2021  | 20.10.6 20.10.8 20.10.11  | 1.19.11 1.20.7 1.21 1.22     | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.9.3           | Nov 22, 2021 | 20.10.5 20.10.6           | 1.19.11 1.20.7 1.21 1.22     | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.9.2           | Oct 26, 2021 | 20.10.5 20.10.6           | 1.19 1.20 1.21 1.22          | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.9.1           | Oct 11, 2021 | 20.10.5 20.10.6           | 1.19 1.20 1.21 1.22          | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.9.0           | Sep 23, 2021 | 20.10.5 20.10.6           | 1.19 1.20 1.21 1.22          | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.6.3           | Aug 27, 2021 | 20.10.5 20.10.6           | 1.19 1.20 1.21 1.22          | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.6.2           | Aug 2, 2021  | 20.10.5 20.10.6           | 1.19 1.20.2 1.21             | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.6.1           | Jul 12, 2021 | 20.10.5  20.10.6          | 1.19 1.20.2 1.21             | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.6.0           | Jun 25, 2021 | 20.10.5  20.10.6          | 1.19 1.20.2 1.21             | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.5.1           | May 18, 2021 | 20.10.5  20.10.6          | 1.19 1.20.2 1.21             | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.5.0           | May 18, 2021 | 20.10.5                   | 1.19 1.20.2 1.21             | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.1.x           | Feb 2, 2021  | 20.10.2                   | 1.20.0                       | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.0.1           | Jan 7, 2021  | 20.10.0                   | 1.17.13 1.18.9 1.19.3 1.20.0 | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| Community 2.0             | Aug 31, 2020 | 19.03.12                  | 1.17.13 1.18.6 1.18.9 1.19.3 | [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64                                                                               |
+| 1.24.1                    | Jul 23, 2020 | 19.03.12                  | N/A                          | [ARM32](../faq/installing/which-arm-architectures-does-portainer-support.md), [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64 |
+| 1.24.0                    | Jun 2, 2020  | 19.03.10                  | N/A                          | [ARM32](../faq/installing/which-arm-architectures-does-portainer-support.md), [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64 |
+| 1.23.2                    | Mar 25, 2020 | 19.03.6                   | N/A                          | [ARM32](../faq/installing/which-arm-architectures-does-portainer-support.md), [ARM64](../faq/installing/which-arm-architectures-does-portainer-support.md), x86\_64 |
 
 {% hint style="info" %}
 If you find an issue with an unlisted configuration, before reporting a bug, update your environment to a valid configuration and try to replicate the issue.
