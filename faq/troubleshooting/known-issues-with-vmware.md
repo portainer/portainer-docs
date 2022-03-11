@@ -26,7 +26,7 @@ Run the following on _all_ the VMs in your cluster:
 ethtool -K [network] tx-checksum-ip-generic off
 ```
 
-Replace `[network]` with the name of your network adapter.
+Replace `[network]` with the name of your network adapter. You will likely need to restart the services on your cluster that communicate with each other (such as the Portainer Agent) for this change to be picked up.
 
 We have seen this issue occur on RedHat-based distributions including CentOS and Photon OS, but also occasionally on Ubuntu so it is worth checking if you are experiencing issues.
 

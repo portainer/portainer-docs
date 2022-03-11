@@ -222,7 +222,6 @@
   * [Can I build an image while deploying a stack/application from Git?](faq/troubleshooting/can-i-build-an-image-while-deploying-a-stack-application-from-git.md)
   * [Why don't custom standalone app templates show when using Docker Swarm?](faq/troubleshooting/why-dont-custom-standalone-app-templates-show-when-using-docker-swarm.md)
   * [Why can't my agents communicate with Portainer on Swarm?](faq/troubleshooting/why-cant-my-agents-communicate-with-portainer-on-swarm.md)
-  * [Why can't I find images in my private registry on Kubernetes?](faq/troubleshooting/why-cant-i-find-images-in-my-private-registry-on-kubernetes.md)
   * [Known issues with VMware](faq/troubleshooting/known-issues-with-vmware.md)
   * [Can you view deleted container logs in Portainer?](faq/troubleshooting/can-you-view-deleted-container-logs-in-portainer.md)
   * [I enabled "Force HTTPS only" and now I'm locked out of Portainer. How do I get back in?](faq/troubleshooting/i-enabled-force-https-only-and-now-im-locked-out-of-portainer.-how-do-i-get-back-in.md)
