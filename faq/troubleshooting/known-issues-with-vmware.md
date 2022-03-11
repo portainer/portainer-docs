@@ -20,13 +20,13 @@ Alternatively you can (depending on your setup) reconfigure NSX to use a differe
 
 When running Docker Swarm under VMware you may run into issues with communication over the swarm node routing mesh. We have traced this back to UDP packets being dropped by the source node. Disabling checksum offloading appears to resolve this issue.
 
-Run the following on your VMs:
+Run the following on _all_ the VMs in your cluster:
 
 ```
 ethtool -K [network] tx-checksum-ip-generic off
 ```
 
-Replace `[network]` with the name of your network adapter.
+Replace `[network]` with the name of your network adapter. You will likely need to restart the services on your cluster that communicate with each other (such as the Portainer Agent) for this change to be picked up.
 
 We have seen this issue occur on RedHat-based distributions including CentOS and Photon OS, but also occasionally on Ubuntu so it is worth checking if you are experiencing issues.
 
