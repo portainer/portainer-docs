@@ -1,5 +1,9 @@
 # Why can't my agents communicate with Portainer on Swarm?
 
+{% hint style="info" %}
+If you are running on a VMware environment, have a look at [this FAQ entry](known-issues-with-vmware.md) as well.
+{% endhint %}
+
 You have set up a multi-node Swarm cluster and have deployed the Portainer Agent across the cluster successfully, but the Agent is failing to communicate with the Portainer Server. You may see log messages similar to the following:
 
 `[err: Cannot connect to the Docker daemon at tcp://tasks.portainer_agent:9001. Is the docker daemon running?]`
