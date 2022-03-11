@@ -16,9 +16,9 @@ docker swarm init --data-path-port=9789
 
 Alternatively you can (depending on your setup) reconfigure NSX to use a different VXLAN port. You'll find instructions on how to do this [in the VMware documentation](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-3D18DE9B-79DE-418B-B87F-50342D372C86.html).
 
-### VMware and RedHat/CentOS
+### VMware and Swarm routing
 
-When running Docker Swarm on RedHat or CentOS VMs under VMware you may run into issues with communication over the swarm node routing mesh. We have traced this back to UDP packets being dropped by the source node. Disabling checksum offloading appears to resolve this issue.
+When running Docker Swarm under VMware you may run into issues with communication over the swarm node routing mesh. We have traced this back to UDP packets being dropped by the source node. Disabling checksum offloading appears to resolve this issue.
 
 Run the following on your VMs:
 
@@ -27,6 +27,8 @@ ethtool -K [network] tx-checksum-ip-generic off
 ```
 
 Replace `[network]` with the name of your network adapter.
+
+We have seen this issue occur on RedHat-based distributions including CentOS and Photon OS, but also occasionally on Ubuntu so it is worth checking if you are experiencing issues.
 
 ### Large packets are being dropped
 
