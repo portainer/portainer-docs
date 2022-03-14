@@ -2,8 +2,8 @@
 
 Installation instructions can differ between platforms. Please choose your platform below:
 
-{% content-ref url="../../server/swarm/linux.md" %}
-[linux.md](../../server/swarm/linux.md)
+{% content-ref url="linux.md" %}
+[linux.md](linux.md)
 {% endcontent-ref %}
 
 {% content-ref url="wsl.md" %}
