@@ -1,4 +1,4 @@
-# Upgrading on Docker
+# Upgrading on Docker Standalone
 
 {% hint style="info" %}
 Always match the agent version to the Portainer Server version. In other words, when you're installing or upgrading to Portainer 2.11.1 make sure all of the agents are also on version 2.11.1.
@@ -41,24 +41,14 @@ docker pull portainer/portainer-ce:2.11.1
 Finally, deploy the updated version of Portainer:
 
 ```
-docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \
-    --name=portainer --restart=always \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v portainer_data:/data \
-    portainer/portainer-ce:2.11.1
+docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.11.1
 ```
 
 {% hint style="info" %}
 To provide your own SSL certs you may use `--sslcert` and `--sslkey` flags as below to provide the certificate and key files. The certificate file needs to be the full chain and in PEM format.
 
 ```
-docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \
-    --name=portainer --restart=always \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v portainer_data:/data \
-    portainer/portainer-ce:2.11.1 \
-    --sslcert /path/to/cert/portainer.crt \
-    --sslkey /path/to/cert/portainer.key
+docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.11.1 --sslcert /path/to/cert/portainer.crt --sslkey /path/to/cert/portainer.key
 ```
 {% endhint %}
 

@@ -11,7 +11,7 @@ Before you begin, copy the license key from the email we sent you.
 To upgrade to Portainer Business Edition for Docker Swarm, use the following commands to deploy the newest version of Portainer Business on your Swarm Cluster:
 
 ```
-docker service update --image portainer/portainer-ee:2.12.1 --force portainer_portainer
+docker service update --image portainer/portainer-ee:2.10.0 --force portainer_portainer
 ```
 
 Log out of Portainer (if currently logged in) then log back in. When you log in for the first time, you'll be asked to enter your license key. Paste this in from the email we sent you.
