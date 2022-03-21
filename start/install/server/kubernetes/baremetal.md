@@ -86,8 +86,7 @@ Once the update completes, you're ready to begin the installation. Which method 
 Using the following command, Portainer will be available on port `30779` for HTTPS:
 
 ```
-helm install --create-namespace -n portainer portainer portainer/portainer \
-    --set tls.force=true
+helm install --create-namespace -n portainer portainer portainer/portainer --set tls.force=true
 ```
 
 {% hint style="info" %}

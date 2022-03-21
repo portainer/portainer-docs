@@ -36,8 +36,7 @@ Portainer can be directly deployed as a service in your Docker cluster. Note tha
 First, retrieve the stack YML manifest:
 
 ```
-curl -L https://downloads.portainer.io/portainer-agent-stack.yml \
-    -o portainer-agent-stack.yml
+curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml
 ```
 
 Then use the downloaded YML manifest to deploy your stack:
