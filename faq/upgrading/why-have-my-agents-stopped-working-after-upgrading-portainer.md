@@ -23,7 +23,7 @@ docker run -d -p 9001:9001 --name portainer_agent --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /var/lib/docker/volumes:/var/lib/docker/volumes \
     -e AGENT_SECRET=yoursecret
-    portainer/agent:2.12.1
+    portainer/agent:latest
 ```
 
 ## Docker Swarm

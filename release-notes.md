@@ -1,5 +1,34 @@
 # Release Notes
 
+## Release 2.12.2
+
+### Nomad
+
+* Introduced Nomad integration
+* Allows Nomad to be added as an environment in Portainer by using the Edge Agent
+* Allows Edge Stacks to be deployed on Nomad as Nomad Jobs
+* Allows Nomad Jobs and Tasks to be listed
+* Allows Nomad logs and events to be viewed for Tasks
+
+### Kubernetes
+
+* Fixed issue where changing Portainer to HTTPS crashed Portainer
+* Fixed issue around deploying in default namespace via manifest using the portainer namespace instead
+* Fixed bug causing domain names to not displaying correctly under publish application options
+* Fixed issue with first service naming having a suffix attached.
+* Improved error message being displayed when deploying a malformed Kubernetes manifest from GitOps
+
+### Portainer
+
+* Fixed issue with GitOps automatic update
+* Fixed issues around migration path for CE to BE
+* Fixed missing operator role when migrating from 1.x
+* Improved concurrency in edge code to prevent race conditions: [portainer/portainer#6677](https://github.com/portainer/portainer/issues/6677)
+
+### Edge
+
+* Resolved some race conditions with the Edge Agent
+
 ## Release 2.12.1
 
 ### Portainer

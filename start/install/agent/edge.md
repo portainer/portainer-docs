@@ -22,7 +22,7 @@ In addition, our instructions assume your environment meets [our requirements](.
 
 Log into your Portainer Server UI as an administrator and click on **Environments** in the left hand menu, then under **Environment type** select **Edge Agent**.
 
-![](../../../.gitbook/assets/2.11-edge-agent-add-1.png)
+![](../../../.gitbook/assets/2.12.2-edge-agent-add-1.png)
 
 The **Name** should be a human-recognizable name for the environment and is how it will appear in the Portainer UI. The **Portainer server URL** is the URL the Edge Agent will connect to, so this must be resolvable from the Edge Agent. If using a FQDN, ensure that DNS is properly configured to provide this.
 
@@ -30,11 +30,17 @@ You can adjust the **Poll frequency** to suit your requirements - this defines h
 
 When you have completed the form, click the **Add environment** button. This will create the environment within your Portainer Server instance and you will be taken to the Environment Details page for the environment.
 
-![](../../../.gitbook/assets/2.10-edge-agent-deploy-1.png)
+![](../../../.gitbook/assets/2.12.2-edge-agent-add-2.png)
 
 ![](../../../.gitbook/assets/2.10-edge-agent-deploy-2.png)
 
-Your next step will now be to deploy the Edge Agent in your cluster. Choose your platform and environment in the first section and you'll be provided with the relevant installation commands. Run this on your remote environment to complete the installation. Alternatively if you are prestaging your Edge Agent, you can retrieve the join token here. You can also adjust the environment configuration from this page.&#x20;
+Your next step will now be to deploy the Edge Agent in your cluster. Choose your platform and environment in the first section and you'll be provided with the relevant installation commands.&#x20;
+
+For **Nomad** environments, if you are using Nomad Authentication via ACLs (recommended) be sure to enter your **Secret ID** in the **Nomad Token** box to ensure the installation command is generated to include it. You can also define **environment variables** to pull through from the host if required.
+
+![](../../../.gitbook/assets/2.12.2-edge-agent-add-nomad.png)
+
+Run the installation command on your remote environment to complete the installation. Alternatively if you are prestaging your Edge Agent, you can retrieve the join token here. You can also adjust the environment configuration from this page.&#x20;
 
 {% hint style="warning" %}
 If you have set a custom `AGENT_SECRET` on your Portainer Server instance you **must** remember to explicitly provide this when deploying your Edge Agent.

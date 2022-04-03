@@ -16,15 +16,19 @@ Give the stack a descriptive name then select one or more [Edge groups](groups.m
 
 In **Deployment type**, select the type of deployment you are performing.
 
-![](../../.gitbook/assets/2.9-edge-stacks-add-3.png)
+{% hint style="info" %}
+This may be auto-selected by your choice of **Edge Groups**.
+{% endhint %}
+
+![](../../.gitbook/assets/2.12.2-edge-stacks-add-deploytype.png)
 
 In the **Build Method**, define how to deploy your app from one of the following options:
 
 | Option     | Overview                                                                        |
 | ---------- | ------------------------------------------------------------------------------- |
-| Web Editor | Use the Portainer web editor to write or paste in a `docker-compose` file.      |
-| Upload     | Upload a `docker-compose.yml` file from your computer.                          |
-| Repository | Use a GitHub repo where the compose file is stored.                             |
+| Web Editor | Use the Portainer web editor to write or paste in your build file.              |
+| Upload     | Upload a build file from your computer.                                         |
+| Repository | Use a GitHub repo where the build file is stored.                               |
 | Template   | Use an Edge stack template. Only available for the **Compose** deployment type. |
 
 Once the configuration is completed, click **Deploy stack**.
