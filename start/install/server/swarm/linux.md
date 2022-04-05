@@ -51,8 +51,8 @@ Portainer Server and the Agents have now been installed. You can check to see wh
 ```
 root@manager01:~# docker ps
 CONTAINER ID   IMAGE                           COMMAND                  CREATED              STATUS              PORTS                NAMES
-59ee466f6b15   portainer/agent:2.12.1          "./agent"                About a minute ago   Up About a minute                        portainer_agent.xbb8k6r7j1tk9gozjku7e43wr.5sa6b3e8cl6hyu0snlt387sgv
-2db7dd4bfba0   portainer/portainer-ee:2.12.1   "/portainer -H tcp:/…"   About a minute ago   Up About a minute   8000/tcp, 9443/tcp   portainer_portainer.1.gpuvu3pqmt1m19zxfo44v7izx
+59ee466f6b15   portainer/agent:latest          "./agent"                About a minute ago   Up About a minute                        portainer_agent.xbb8k6r7j1tk9gozjku7e43wr.5sa6b3e8cl6hyu0snlt387sgv
+2db7dd4bfba0   portainer/portainer-ee:latest   "/portainer -H tcp:/…"   About a minute ago   Up About a minute   8000/tcp, 9443/tcp   portainer_portainer.1.gpuvu3pqmt1m19zxfo44v7izx
 ```
 
 ## Logging In <a href="#logging-in" id="logging-in"></a>
