@@ -60,7 +60,7 @@ To upgrade the Portainer Edge Agent on a Kubernetes environment, you will need t
 To download the manifest, you can use the following command:
 
 ```
-curl -L https://portainer.github.io/k8s/deploy/manifests/agent/portainer-ce211-agent-edge-k8s.yaml -o portainer-agent-edge-k8s.yaml
+curl -L https://downloads.portainer.io/portainer-agent-ce211-edge-k8s.yaml labels -o portainer-agent-edge-k8s.yaml
 ```
 
 To apply this manifest to your environment, run the following command:
