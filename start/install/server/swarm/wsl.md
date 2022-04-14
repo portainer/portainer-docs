@@ -31,6 +31,10 @@ The installation instructions also make the following assumptions about your env
 
 Portainer can be directly deployed as a service in your Docker Swarm cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.
 
+{% hint style="danger" %}
+Only do this **once** for your environment, regardless of how many nodes are in the cluster. You **do not** need to add each node in your cluster as a separate environment in Portainer. Deploying the manifest to your swarm will include every node in the cluster automatically. Adding each node as a separate environment will also consume more of your licensed node count than you may expect.
+{% endhint %}
+
 To begin the installation, first retrieve the stack YML manifest:
 
 ```bash

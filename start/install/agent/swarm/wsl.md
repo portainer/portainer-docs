@@ -27,6 +27,10 @@ The installation instructions also make the following assumptions about your env
 
 ## Deploying the Agent
 
+{% hint style="danger" %}
+Only do this **once** for your environment, regardless of how many nodes are in the cluster. You do **not** need to add each node as an individual environment in Portainer. Adding just one node (we recommend the manager node) will allow Portainer to manage the entire cluster. Adding each node as a separate environment will also consume more of your licensed node count than you may expect.
+{% endhint %}
+
 From the menu select **Environments** then click **Add environment**. Ensure **Agent** is selected in **Environment type**.
 
 ![](../../../../.gitbook/assets/2.9-install-agent-swarm-1.gif)
@@ -63,8 +67,8 @@ tshb6ee2710s        portainer-agent_agent   global              1/1             
 
 Once the Agent is running on the Docker Swarm cluster, enter the **environment details** using the table below as a guide.
 
-{% hint style="warning" %}
-Only do this **once** for your environment, regardless of how many nodes are in the cluster. You do **not** need to add each node as an individual environment in Portainer. Adding just one node (we recommend the manager node) will allow Portainer to manage the entire cluster.
+{% hint style="danger" %}
+Only do this **once** for your environment, regardless of how many nodes are in the cluster. You do **not** need to add each node as an individual environment in Portainer. Adding just one node (we recommend the manager node) will allow Portainer to manage the entire cluster. Adding each node as a separate environment will also consume more of your licensed node count than you may expect.
 {% endhint %}
 
 | Field        | Overview                                                                                                                                                              |
