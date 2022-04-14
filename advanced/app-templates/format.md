@@ -60,7 +60,7 @@ A container template element must be a valid JSON object, composed of both manda
 
 ```
 {
-  "administrator_only": true
+  "administrator-only": true
 }
 ```
 

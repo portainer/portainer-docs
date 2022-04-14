@@ -22,7 +22,7 @@ This section allows you to manage your API access tokens. You can see a list of 
 
 ![](../.gitbook/assets/2.11-account-settings-accesstokens.png)
 
-For more information on access tokens, refer to our API access documentation.
+For more information on access tokens, refer to our [API access documentation](../api/access.md#creating-an-access-token).
 
 ## Changing the theme
 
