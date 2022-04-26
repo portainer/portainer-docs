@@ -24,10 +24,10 @@ A container template element must be a valid JSON object, composed of both manda
 ### type
 
 * **Description:** The template type.
-* **Format:** String
-* **Valid values:** `"1"` = container; `"2"` = Swarm stack; `"3"` = Compose stack
+* **Format:** Integer
+* **Valid values:** `1` = container; `2` = Swarm stack; `3` = Compose stack
 * **Required/Optional:** Required
-* **Other information:** Type `"3"` is limited to using the version `"2"` stack format (this is a docker/libcompose limitation).
+* **Other information:** Type `3` is limited to using the version `"2"` stack format (this is a docker/libcompose limitation).
 
 ### title
 
@@ -348,10 +348,10 @@ A stack template element must be a valid JSON object, composed of mandatory and 
 ### type
 
 * **Description:** The template type. A Swarm stack will be deployed using the equivalent of `docker stack deploy`. A Compose stack will be deployed using the equivalent of `docker-compose.`
-* **Format:** String
-* **Valid values:** `"1"` = container; `"2"` = Swarm stack; `"3"` = Compose stack
+* **Format:** Integer
+* **Valid values:** `1` = container; `2` = Swarm stack; `3` = Compose stack
 * **Required/Optional:** Required
-* **Other information:** Type `"3"` is limited to using the version `"2"` stack format (this is a docker/libcompose limitation).
+* **Other information:** Type `3` is limited to using the version `"2"` stack format (this is a docker/libcompose limitation).
 
 ### title
 
