@@ -202,10 +202,7 @@
 
 ## Frequently Asked Questions <a href="#faq" id="faq"></a>
 
-* [Portainer Concepts](faq/concepts/README.md)
-  * [What is Portainer's architecture?](faq/concepts/what-is-portainers-architecture.md)
-  * [What is a "node" for licensing purposes?](faq/concepts/what-is-a-node-for-licensing-purposes.md)
-  * [What information does Portainer collect?](faq/concepts/what-information-does-portainer-collect.md)
+* [Portainer Concepts](faq/concepts.md)
 * [Installing](faq/installing/README.md)
   * [How do I install Portainer BE?](faq/installing/how-do-i-install-portainer.md)
   * [Can I run Portainer on my configuration?](faq/installing/can-i-run-portainer-on-my-configuration.md)

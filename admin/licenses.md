@@ -1,6 +1,6 @@
 # Licenses
 
-Licensing in Portainer Business Edition is based on the [number of nodes](../faq/concepts/what-is-a-node-for-licensing-purposes.md) you are managing.
+Licensing in Portainer Business Edition is based on the [number of nodes](../faq/concepts.md#what-is-a-node-for-licensing-purposes) you are managing.
 
 From the menu select **Licenses**. The **License Information** section summarizes information about your license including how many nodes it covers and how many nodes are currently being used, as well as the license expiry date.
 
