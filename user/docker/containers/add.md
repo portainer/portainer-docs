@@ -25,6 +25,12 @@ Alternatively you can switch to advanced mode to manually enter registry and ima
 
 ![](../../../.gitbook/assets/containers-create-3.png)
 
+## Webhooks
+
+Toggle **Create a container webhook** on to create a [webhook](webhooks.md) for the container. You can send a POST request to this endpoint to automate pulling the most up-to-date image and re-deploy your container.
+
+![](../../../.gitbook/assets/2.12.2-containers-add-webhooks.png)
+
 ## Network ports configuration section
 
 | Field/Option                                           | Overview                                                                                                 |

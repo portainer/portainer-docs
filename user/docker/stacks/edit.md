@@ -56,9 +56,9 @@ Editing a stack allows you to make changes to the configuration and redeploy tho
 The Editor tab is only available for stacks that were deployed using the [Web Editor](add.md#option-1-web-editor). For stacks deployed from a Git repository, the docker-compose file must be edited in the repository itself.
 {% endhint %}
 
-![](../../../.gitbook/assets/stacks-edit-5.png)
+![](../../../.gitbook/assets/2.12.2-stacks-edit-editor-webhook.png)
 
-Here, you can edit the Compose file for the stack to suit your needs. With Docker Swarm, you can also make changes to environment variables for the stack, as well as prune services if you have made changes that remove some services from the stack.
+Here, you can edit the Compose file for the stack to suit your needs, as well as toggle the stack [webhook](webhooks.md) and retrieve the webhook URL. You can also make changes to environment variables for the stack, and on Docker Swarm environments you can prune services if you have made changes that remove some services from the stack.
 
 When you have finished making changes, click **Update the stack**.
 

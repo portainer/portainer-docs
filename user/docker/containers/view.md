@@ -8,9 +8,9 @@ Here you can view the container's status and details, including port configurati
 
 ![](../../../.gitbook/assets/containers-view-2.png)
 
-You can also view the [container logs](logs.md), [inspect](inspect.md) the container's configuration, view container [stats](stats.md), access the [console](console.md), and (if the container is running in interactive mode) attach to the running container.
+You can also toggle the container [webhook](webhooks.md), view the [container logs](logs.md), [inspect](inspect.md) the container's configuration, view container [stats](stats.md), access the [console](console.md), and (if the container is running in interactive mode) attach to the running container.
 
-![](../../../.gitbook/assets/containers-view-3.png)
+![](../../../.gitbook/assets/2.12.2-containers-view-status.png)
 
 You can create an image from a deployed container to use when creating other containers.
 

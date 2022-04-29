@@ -17,6 +17,10 @@ From the menu select **Stacks**, click **Add stack**, give the stack a descripti
 
 ![](../../../.gitbook/assets/be-stacks-add-1.gif)
 
+As part of the stack creation you can enable a stack webhook, allowing you to remotely trigger redeployments of the stack from your repository, for example. You can read more on this in our documentation on [stack webhooks](webhooks.md).
+
+![](../../../.gitbook/assets/2.12.2-stacks-add-webhook.png)
+
 As an optional step, you can also use the web editor to define environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
 
 Environment variables can be set individually within Portainer or you can use **Load variables from .env file** to upload a file containing your environment variables. Environment variables you define (either individually or via a .env file) will be available to use in your compose file using an `environment` definition:
@@ -47,7 +51,13 @@ In Portainer you can create stacks from Compose YML files. To do this, from the 
 
 ![](../../../.gitbook/assets/be-stacks-add-1.gif)
 
-Select **Upload** then select the Compose file from your computer. As an optional step, enter any environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
+Select **Upload** then select the Compose file from your computer.&#x20;
+
+As part of the stack creation you can enable a stack webhook, allowing you to remotely trigger redeployments of the stack from your repository, for example. You can read more on this in our documentation on [stack webhooks](webhooks.md).
+
+![](../../../.gitbook/assets/2.12.2-stacks-add-webhook.png)
+
+As an optional step, enter any environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
 
 Environment variables can be set individually within Portainer or you can use **Load variables from .env file** to upload a file containing your environment variables. Environment variables you define (either individually or via a .env file) will be available to use in your compose file using an `environment` definition:
 

@@ -8,7 +8,7 @@ Put simply, a container is a runnable instance of an image. Containers do not ho
 [add.md](add.md)
 {% endcontent-ref %}
 
-Once a container has been created you can inspect it, edit or duplicate it, attach volumes, view logs and statistics, edit ownership, and access its console.
+Once a container has been created you can inspect it, edit or duplicate it, toggle a container webhook, attach volumes, view logs and statistics, edit ownership, and access its console.
 
 {% content-ref url="view.md" %}
 [view.md](view.md)
@@ -20,6 +20,10 @@ Once a container has been created you can inspect it, edit or duplicate it, atta
 
 {% content-ref url="edit.md" %}
 [edit.md](edit.md)
+{% endcontent-ref %}
+
+{% content-ref url="webhooks.md" %}
+[webhooks.md](webhooks.md)
 {% endcontent-ref %}
 
 {% content-ref url="attach-volume.md" %}

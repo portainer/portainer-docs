@@ -16,6 +16,10 @@ A stack is a collection of services, usually related to one application or usage
 [template.md](template.md)
 {% endcontent-ref %}
 
+{% content-ref url="webhooks.md" %}
+[webhooks.md](webhooks.md)
+{% endcontent-ref %}
+
 {% content-ref url="migrate.md" %}
 [migrate.md](migrate.md)
 {% endcontent-ref %}
