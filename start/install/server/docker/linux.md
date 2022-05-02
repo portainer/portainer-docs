@@ -36,8 +36,22 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
+    portainer/portainer-ce:latest
+```
+
+{% hint style="info" %}
+portainer/portainer-ce:latest in the last line represents the Docker image. If you want to use a different version instead of the latest, replace the latest after : with the version number. If you want to use Portainer version 2.9.3 as an example, the command would be:
+
+```bash
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
+    --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer_data:/data \
     portainer/portainer-ce:2.9.3
 ```
+
+You can find out which versions exist [here](https://hub.docker.com/r/portainer/portainer-ce/tags).
+{% endhint %}
 
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#docker-standalone) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
