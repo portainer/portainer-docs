@@ -30,12 +30,14 @@ environment:
   - MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
 ```
 
-Alternatively, you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
+Alternatively, on Docker Standalone environments you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
 
 ```
 env_file:
   - stack.env
 ```
+
+**Note:** Using `env_file` to define a file does not work in Docker Swarm due to the lack of `env_file` support in `docker stack deploy` (used on Swarm environments to deploy your stack). On Docker Swarm, you will need to define each environment variable manually.&#x20;
 
 {% hint style="info" %}
 Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
