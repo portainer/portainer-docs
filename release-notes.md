@@ -12,7 +12,7 @@
 * Introduced the ability for non admin users to browse image registries
 * Added strong password policy for all Portainer internal users. When using a weak password and logging in you will be required to update your password.
 
-#### Kubernetes
+### Kubernetes
 
 * Improve how Portainer helps you set up ingresses (especially Nginx ones), including support of regular expressions in paths - by assisting with required annotations and correcting a rewrite issue: [portainer/portainer#6854](https://github.com/portainer/portainer/issues/6854)
 * Introduce support for provisioning of a Kubernetes cluster on a cloud provider's KaaS offering from within Portainer, alleviating the need to do so in the provider's own portal. Initial supported providers are Civo, DigitalOcean and Linode.
