@@ -183,13 +183,13 @@ To expose via NodePort, you can use one of the following commands (Portainer wil
 **Business Edition:**
 
 ```
-kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-ee.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee2-13/portainer.yaml
 ```
 
 **Community Edition:**
 
 ```
-kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ce2-13/portainer.yaml
 ```
 
 {% hint style="info" %}
@@ -203,13 +203,13 @@ To expose via Load Balancer, use one of the following commands to provision Port
 **Business Edition:**
 
 ```
-kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb-ee.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee2-13/portainer-lb.yaml
 ```
 
 **Community Edition:**
 
 ```
-kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ce2-13/portainer-lb.yaml
 ```
 
 {% hint style="info" %}
