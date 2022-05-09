@@ -8,7 +8,7 @@
 
 ### Breaking changes
 
-* The minimum TLS version of Portainer was changed from 1.2 to 1.3. If you are running a proxy in front of Portainer you will need to ensure it is configured to support TLS 1.3.
+* The minimum TLS version of Portainer was changed from 1.2 to 1.3. If you are running a proxy in front of Portainer with HTTPS you will need to ensure it is configured to support TLS 1.3.
 * Standard users can browse registries including edit and delete
 * Introduced the ability for non admin users to browse image registries
 * Added strong password policy for all Portainer internal users. When using a weak password and logging in you will be required to update your password.
