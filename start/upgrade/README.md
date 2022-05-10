@@ -1,6 +1,6 @@
 # Upgrading Portainer
 
-Portainer releases contain new features and bug fixes so it's important to keep your installation up to date. We have [tested and validated](../requirements-and-prerequisites.md#validated-configurations) all Portainer BE version upgrades from 2.0.0 up to the latest release.
+Portainer releases contain new features and bug fixes so it's important to keep your installation up to date. We have [tested and validated](../requirements-and-prerequisites.md#validated-configurations) all Portainer version upgrades from 2.0.0 up to the latest release.
 
 While it's possible that an untested unvalidated upgrade path might work, we recommend that all upgrade paths are tested and validated on a non-critical system before applying them to your production systems.
 
@@ -9,8 +9,14 @@ We added a [backup and restore feature](../../admin/settings/#backup-portainer) 
 {% endhint %}
 
 {% hint style="info" %}
-Starting with 2.10 Portainer is HTTPS enabled by default and uses port `9443` to serve the UI. HTTP can still be enabled on port `9000` if required.
+Starting with CE 2.9 and BE 2.10 Portainer is HTTPS enabled by default and uses port `9443` to serve the UI. HTTP can still be enabled on port `9000` if required.
 {% endhint %}
+
+### Upgrade order
+
+In general, we recommend upgrading your Portainer Agent deployments _before_ you upgrade the Portainer Server instance. This ensures that your agents remain able to communicate with the Portainer Server as well as identify any configuration tweaks that need to be made to the Agent deployments. It also means if you do run into an issue with the communication between the agents and the server, it will only impact one of your agent deployments at a time, instead of all at once if the server is upgraded first.
+
+### Upgrading Portainer
 
 To upgrade Portainer, choose your platform then follow the instructions:
 
