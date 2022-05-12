@@ -1,7 +1,7 @@
 # Upgrading on Docker Standalone
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or upgrading to Portainer 2.3 make sure all of the agents are also on version 2.13.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or upgrading to Portainer 2.13.1 make sure all of the agents are also on version 2.13.1.
 {% endhint %}
 
 {% hint style="danger" %}
