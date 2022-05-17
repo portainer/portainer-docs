@@ -4,6 +4,8 @@ A volume is a data storage area that can be mounted into a container to provide 
 
 ![The Volumes interface](../../../.gitbook/assets/2.9-volumes-splash.png)
 
+A volume with the **external** flag was created outside of Portainer, which means Portainer has limited knowledge on it compared to one created within Portainer. A label of **unused** means that Portainer cannot see any applications that are using this volume. This label may also appear on **external** resources because of the limited information available.
+
 In Portainer you can view a list of the volumes on your environment, add new volumes and remove existing volumes.
 
 {% content-ref url="add.md" %}
