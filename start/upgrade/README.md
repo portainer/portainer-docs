@@ -14,7 +14,7 @@ Starting with CE 2.9 and BE 2.10 Portainer is HTTPS enabled by default and uses 
 
 ### Upgrade order
 
-In general, we recommend upgrading your Portainer Agent deployments _before_ you upgrade the Portainer Server instance. This ensures that your agents remain able to communicate with the Portainer Server as well as identify any configuration tweaks that need to be made to the Agent deployments. It also means if you do run into an issue with the communication between the agents and the server, it will only impact one of your agent deployments at a time, instead of all at once if the server is upgraded first.
+In general, we recommend upgrading your Portainer Server deployment _before_ you upgrade the Portainer Agents. When we release new versions of Portainer we ensure that Portainer Server is able to talk to older versions of the Agent, and in most cases the reverse is true, but in some instances we make changes to the Agent that are not fully backward compatible with older versions of Portainer Server.
 
 ### Upgrading Portainer
 
