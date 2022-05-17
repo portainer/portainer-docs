@@ -4,7 +4,7 @@
 
 ### Snapshot interval
 
-Defines how often a data snapshot of environments is taken.
+Defines how often a data snapshot of environments is taken. A data snapshot consists of the information displayed on the home page for the environment as well as other basic information. The default is every 5 minutes.
 
 ### Use custom logo
 
@@ -53,7 +53,7 @@ Tokens used in `kubeconfig` files become invalid when Portainer restarts — irr
 During installation, Portainer by default creates a self-signed SSL certificate to encrypt traffic between the Portainer Server and the end user, as well as between the Portainer Server and the Portainer Agent. This certificate can be replaced with your own certificate.
 
 {% hint style="info" %}
-We recommend including the full chain in the certificate to ensure compatibility. If you do not have the full chain for your certificate, ask your certificate provider or use [What's My Chain Cert?](https://whatsmychaincert.com) to generate it.
+We recommend including the full chain in the certificate to ensure compatibility. If you do not have the full chain for your certificate, ask your certificate provider or use [What's My Chain Cert?](https://whatsmychaincert.com/) to generate it.
 {% endhint %}
 
 ![](../../.gitbook/assets/2.9-settings-ssl-1.png)

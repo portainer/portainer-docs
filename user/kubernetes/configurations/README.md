@@ -8,6 +8,8 @@ This section was previously known as **Configurations**.
 
 ![](../../../.gitbook/assets/2.9.1-configmaps-1.png)
 
+A ConfigMap or Secret with the **external** flag was created outside of Portainer, which means Portainer has limited knowledge on it compared to one created within Portainer. A label of **unused** means that Portainer cannot see any applications that are using this ConfigMap or Secret. This label may also appear on **external** resources because of the limited information available.
+
 {% content-ref url="add.md" %}
 [add.md](add.md)
 {% endcontent-ref %}
