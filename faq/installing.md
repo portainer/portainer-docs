@@ -50,6 +50,18 @@ We build our ARM images to support the ARM64 architecture primarily (as indicate
 
 As architectures evolve and the world moves more toward 64-bit as the default, there is less and less support for 32-bit architectures available. In the case of Portainer, some of the binaries we embed are no longer available for ARMv6 and below, preventing us from being able to provide a fully functioning Portainer environment on these older systems.
 
+## Portainer isn't starting on my Windows server -help!
+
+When running Portainer Server or the Portainer Agent on a Windows server, you may be presented with an error similar to the following:
+
+```
+failure in a Windows system call: The system cannot find the file specified.
+```
+
+In some instances we have seen antimalware software (in particular, Trend Micro Deep Security) silently removing the Portainer and Agent executables from container images when they are pulled. As a result, when the container attempts to start it is missing the executable it needs, and returns the above error.
+
+In this instance, you can restore the removed executables to the image from within your antimalware software (for Trend Micro Deep Security, [this documentation may help](https://help.deepsecurity.trendmicro.com/20\_0/on-premise/anti-malware-restore-files.html)). We would also advise adding exceptions for `portainer.exe` and `agent.exe` in your antimalware configuration to prevent this in the future.
+
 ## How can I ensure Portainer's configuration is retained?
 
 ### Docker Standalone
