@@ -171,6 +171,42 @@ In certain configurations, packets being sent on overlay networks can be silentl
 
 No. Portainer does not keep a history of deleted containers or their logs.
 
+## I enabled "Force HTTPS only" and now I'm locked out of Portainer. How do I get back in?
+
+Enabling the **Force HTTPS only** option (either via the toggle in [Settings](../admin/settings/#force-https-only) or via the `--http-disabled` command line option) disables logging into Portainer via HTTP. If your HTTPS setup is misconfigured (for example a malformed or missing certificate chain) this can result in you being locked out of Portainer.
+
+To resolve this, you can re-enable HTTP access by using the `--http-enabled` command line option in your docker run command, for example:
+
+{% tabs %}
+{% tab title="Business Edition" %}
+```
+docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 --name portainer \
+    --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer_data:/data \
+    portainer/portainer-ee:latest \
+    --http-enabled
+```
+{% endtab %}
+
+{% tab title="Community Edition" %}
+```
+docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 --name portainer \
+    --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer_data:/data \
+    portainer/portainer-ce:latest \
+    --http-enabled
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+Make sure to remove the `--http-disabled` option from your command if you are using it, as this will override the `--http-enabled` flag.
+{% endhint %}
+
+When started with the `--http-enabled flag`, you will be able to access Portainer over HTTP once more.
+
 ## Exposed ports in the container view redirect me to 0.0.0.0. What can I do?
 
 There are two ways you can fix this.
