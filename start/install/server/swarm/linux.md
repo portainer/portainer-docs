@@ -19,7 +19,7 @@ The installation instructions also make the following assumptions about your env
 * You are accessing Docker via Unix sockets. Connecting via TCP is not supported in Docker Swarm.
 * SELinux is disabled on the machine running Docker. If you require SELinux, you will need to pass the `--privileged` flag to Docker when deploying Portainer.
 * Docker is running as root. Portainer with rootless Docker has some limitations, and requires additional configuration.
-* You are running a single manager node in your swarm. If you have more than one, please [read this FAQ entry](broken-reference) before proceeding.
+* You are running a single manager node in your swarm. If you have more than one, please [read this FAQ entry](../../../../faq/installing.md#how-can-i-ensure-portainers-configuration-is-retained) before proceeding.
 * If your nodes are using DNS records to communicate, that all records are resolvable across the cluster.
 
 ## Deployment <a href="#deployment" id="deployment"></a>
