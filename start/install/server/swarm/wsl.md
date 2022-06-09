@@ -1,7 +1,7 @@
 # Install Portainer with Docker Swarm on WSL / Docker Desktop
 
-{% hint style="info" %}
-These instructions are for Portainer Community Edition. For Business Edition, please refer to the [Business Edition documentation](https://docs.portainer.io/v/be-2.7/).
+{% hint style="danger" %}
+You are viewing documentation for an **older version** of Portainer. We highly recommend using the [latest version](https://docs.portainer.io/start/install/server/swarm/wsl) of our documentation for install instructions.
 {% endhint %}
 
 ## Introduction

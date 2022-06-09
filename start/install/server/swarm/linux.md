@@ -1,14 +1,14 @@
 # Install Portainer with Docker Swarm on Linux
 
-{% hint style="info" %}
-These instructions are for Portainer Community Edition. For Business Edition, please refer to the [Business Edition documentation](https://docs.portainer.io/v/be-2.7/).
+{% hint style="danger" %}
+You are viewing documentation for an **older version** of Portainer. We highly recommend using the [latest version](https://docs.portainer.io/start/install/server/swarm/linux) of our documentation for install instructions.
 {% endhint %}
 
 {% embed url="https://youtu.be/L80QDuix5RE" %}
 Prefer a video guide?
 {% endembed %}
 
-## Introduction <a href="introduction" id="introduction"></a>
+## Introduction <a href="#introduction" id="introduction"></a>
 
 Portainer consists of two elements, the _Portainer Server_ and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you deploy the Portainer Server and Agent containers on your Linux environment. To add a new Linux Swarm environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../agent/swarm/linux.md).
 
@@ -29,7 +29,7 @@ The installation instructions also make the following assumptions about your env
 * You are running a single manager node in your swarm. If you have more than one, please [read this FAQ entry](../../../../faq/installing/how-can-i-ensure-portainers-configuration-is-retained.md#docker-swarm) before proceeding.
 * If your nodes are using DNS records to communicate, that all records are resolvable across the cluster.
 
-## Deployment <a href="deployment" id="deployment"></a>
+## Deployment <a href="#deployment" id="deployment"></a>
 
 Portainer can be directly deployed as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.
 
@@ -59,7 +59,7 @@ CONTAINER ID   IMAGE                           COMMAND                  CREATED 
 2db7dd4bfba0   portainer/portainer-ce:2.9.3    "/portainer -H tcp:/…"   About a minute ago   Up About a minute   8000/tcp, 9443/tcp   portainer_portainer.1.gpuvu3pqmt1m19zxfo44v7izx
 ```
 
-## Logging In <a href="logging-in" id="logging-in"></a>
+## Logging In <a href="#logging-in" id="logging-in"></a>
 
 Now that the installation is complete, you can log into your Portainer Server instance by opening a web browser and going to:
 

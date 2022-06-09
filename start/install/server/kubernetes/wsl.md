@@ -1,5 +1,9 @@
 # Install Portainer with Kubernetes on WSL / Docker Desktop
 
+{% hint style="danger" %}
+You are viewing documentation for an **older version** of Portainer. We highly recommend using the [latest version](https://docs.portainer.io/start/install/server/kubernetes/wsl) of our documentation for install instructions.
+{% endhint %}
+
 ## Introduction
 
 The following instructions will guide you in setting up _Portainer Server_ with Kubernetes running on Docker Desktop with WSL.
