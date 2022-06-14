@@ -1,6 +1,6 @@
 # Helm
 
-Portainer BE 2.10 introduced support for [Helm](https://helm.sh), the most popular packaging system for Kubernetes applications. With Helm you can deploy applications based on pre-prepared charts, either self-made or supplied by third-party repositories.
+Portainer BE 2.10 introduced support for [Helm](https://helm.sh/), the most popular packaging system for Kubernetes applications. With Helm you can deploy applications based on pre-prepared charts, either self-made or supplied by third-party repositories.
 
 {% hint style="info" %}
 Helm support in Portainer is still in its early stages, and more functionality will be added soon. If there is specific functionality you'd like to see in a future release, [let us know](../../../contribute/contribute.md).

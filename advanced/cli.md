@@ -195,7 +195,7 @@ You can also update the logo in the Portainer UI (**Settings** menu).
 ## Defining your own app templates
 
 {% hint style="info" %}
-We suggest hosting template files on [GitHub](https://www.github.com) so Portainer can access them without authentication.
+We suggest hosting template files on [GitHub](https://www.github.com/) so Portainer can access them without authentication.
 {% endhint %}
 
 Portainer allows you to rapidly [deploy containers using app templates](../user/docker/templates/deploy-container.md). By default, Portainer templates will be used but you can also define your own.

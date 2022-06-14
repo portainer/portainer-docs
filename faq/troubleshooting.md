@@ -271,3 +271,26 @@ If you don't have the password for the initial administrator user, you can use o
 If you know your current password and can log into Portainer, you can [set a new password](../user/account-settings.md#changing-your-password) via the Portainer UI.&#x20;
 
 If you have forgotten your password or are unable to log in, either ask another Portainer admin to [reset the password](../admin/users/password.md) for you, or use our [password reset helper](../advanced/reset-admin.md) to reset the default admin account password (from when Portainer was initialized).
+
+## Groups info issue with OAuth using Microsoft AD
+
+If you have configured OAuth using Microsoft AD in Portainer and trying to use Automatic Team membership: You may run into an issue where group membership info is not returned correctly and users are not populated into correct Teams in Portainer.\
+\
+While we are working on a fix (due to be released soon), we have a workaround.\
+\
+In OAuth Config, use the following url for Resource URL (replace the existing graph.windows.net url)
+
+```
+https://login.microsoftonline.com/<tenant ID>/openid/userinfo
+```
+
+User Identifier: `unique_name`
+
+Scopes: `openid profile`
+
+``
+
+You will also need to have following permissions on your App Registration in Azure\
+
+
+![](<../.gitbook/assets/image (5).png>)

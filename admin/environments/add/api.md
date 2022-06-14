@@ -7,7 +7,7 @@ Portainer's [API](../../../api/docs.md) lets you perform the same actions as via
 * A remote environment using TCP communication secured via TLS.
 
 {% hint style="info" %}
-The examples in this article use [httpie](https://httpie.io) to make HTTP calls from the command line to the Portainer API. Feel free to replace httpie with your preferred method.
+The examples in this article use [httpie](https://httpie.io/) to make HTTP calls from the command line to the Portainer API. Feel free to replace httpie with your preferred method.
 {% endhint %}
 
 ## Preparation

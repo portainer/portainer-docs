@@ -37,7 +37,7 @@ Click the Docker icon in the status bar then select **About Docker Desktop** fro
 ## Part 2: Installing Yarn
 
 {% hint style="info" %}
-This procedure uses the Homebrew package manager. Go [here](https://brew.sh) to learn how install it. If you don't want to use Homebrew, Yarn provides [some alternatives](https://yarnpkg.com/en/docs/install#mac-stable).
+This procedure uses the Homebrew package manager. Go [here](https://brew.sh/) to learn how install it. If you don't want to use Homebrew, Yarn provides [some alternatives](https://yarnpkg.com/en/docs/install#mac-stable).
 {% endhint %}
 
 {% hint style="info" %}

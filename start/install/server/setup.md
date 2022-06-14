@@ -10,7 +10,7 @@ Your first user will be an administrator. The username defaults to `admin` but y
 
 ## Enabling or disabling the collection of statistics
 
-We use a tool called [Matomo](https://matomo.org) to collect anonymous information about how Portainer is used. We recommend enabling this option so we can make improvements based on usage. For more about what we do with the information we collect, read our [privacy policy](https://www.portainer.io/privacy-policy).
+We use a tool called [Matomo](https://matomo.org/) to collect anonymous information about how Portainer is used. We recommend enabling this option so we can make improvements based on usage. For more about what we do with the information we collect, read our [privacy policy](https://www.portainer.io/privacy-policy).
 
 During installation, you can enable or disable connection statistics using the checkbox. If you change your mind later, you can easily update this option under [Settings](../../../admin/settings/) in the Portainer UI.
 
