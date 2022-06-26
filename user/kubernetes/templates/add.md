@@ -1,0 +1,52 @@
+# Add a new custom template
+
+## Creating the template
+
+From the menu select **Custom Templates** then click **Add Custom Template**.
+
+![](../../../.gitbook/assets/k8s-templates-add-1.gif)
+
+Complete the form, using the table below as a guide.
+
+| Field/Option | Overview                                                                                         |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| Title        | Enter a title for your custom template. This is how the template will appear when it's deployed. |
+| Description  | Enter a description of the template.                                                             |
+| Note         | As an optional step, record some extra information about the template.                           |
+| Icon URL     | Optionally, enter the URL to an image to use as an icon for the template.                        |
+
+![](../../../.gitbook/assets/k8s-templates-add-2.png)
+
+Next, select the **Build method**.
+
+## Selecting the build method
+
+### Method 1: Web editor
+
+Define or paste the contents of your manifest file into the web editor. When deploying an application using a custom template you will be given an opportunity to edit the manifest before deployment.
+
+![](../../../.gitbook/assets/k8s-templates-add-3.png)
+
+When you're ready, click **Create custom template**.
+
+### Method 2: Upload
+
+If you have a manifest file locally, you can upload it directly to Portainer. Click **Select file** to browse to the file.
+
+![](../../../.gitbook/assets/k8s-templates-add-4.png)
+
+When you're ready, click **Create custom template**.
+
+## Variables in templates
+
+Custom templates support the use of variables to provide further customization of the deployed stack. A stack can define a variable that can then be adjusted by the user at deployment.
+
+Variables are identified in stacks with `{{ }}`. For example, the following stack provides a `REPLICA_COUNT` variable:
+
+![](../../../.gitbook/assets/2.14-templates-custom-variables-k8s.png)
+
+When a variable is defined, options appear to customize how the variable appears when deploying the stack. You can set the **label**, **description** and **default value**.
+
+When a template is deployed, any variables that have a default value have been populated:
+
+![](../../../.gitbook/assets/2.14-templates-custom-variables-k8s-deploy.png)
