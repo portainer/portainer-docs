@@ -12,7 +12,7 @@ The following tables list all of the configurations that we have tested, validat
 
 | Portainer Version        | Release Date  | Docker Version            | Kubernetes Version       | Architectures                                                                         |
 | ------------------------ | ------------- | ------------------------- | ------------------------ | ------------------------------------------------------------------------------------- |
-| Business 2.14.0 (latest) | June 27, 2022 | 20.10.9 20.10.12 20.10.13 | 1.21.7 1.22 1.23         | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64 |
+| Business 2.14.0 (latest) | June 28, 2022 | 20.10.9 20.10.12 20.10.13 | 1.21.7 1.22 1.23         | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64 |
 | Business 2.13.1          | May 12, 2022  | 20.10.9 20.10.12 20.10.13 | 1.21.7 1.22 1.23         | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64 |
 | Business 2.13.0          | May 9, 2022   | 20.10.9 20.10.12 20.10.13 | 1.21.7 1.22 1.23         | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64 |
 | Business 2.12.2          | Apr 4, 2022   | 20.10.7 20.10.11 20.10.12 | 1.21.7 1.22 1.23         | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64 |
@@ -27,7 +27,7 @@ The following tables list all of the configurations that we have tested, validat
 
 | Portainer Version         | Release Date  | Docker Version            | Kubernetes Version           | Architectures                                                                                                                                                       |
 | ------------------------- | ------------- | ------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Community 2.14.0 (latest) | June 27, 2022 | 20.10.9 20.10.12 20.10.13 | 1.21.7 1.22 1.23             | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64                                                                               |
+| Community 2.14.0 (latest) | June 28, 2022 | 20.10.9 20.10.12 20.10.13 | 1.21.7 1.22 1.23             | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64                                                                               |
 | Community 2.13.1          | May 12, 2022  | 20.10.9 20.10.12 20.10.13 | 1.21.7 1.22 1.23             | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64                                                                               |
 | Community 2.13.0          | May 9, 2022   | 20.10.9 20.10.12 20.10.13 | 1.21.7 1.22 1.23             | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64                                                                               |
 | Community 2.11.1          | Feb 8, 2022   | 20.10.8 20.10.11 20.10.12 | 1.20.13 1.21.7 1.22.4        | [ARM64](../faq/installing.md#which-arm-architectures-does-portainer-support), x86\_64                                                                               |

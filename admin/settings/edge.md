@@ -26,13 +26,13 @@ When you are done, click **Save Settings**.
 
 This section defines options that apply how Edge Agents sync with the Portainer Server instance.
 
-| Field/Option                          | Overview                                                                                                                                |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Use Async mode by default             | Toggle this on to allow the definition of different ping, snapshot and command frequencies for Edge Agents.                             |
-| Edge agent default poll frequency     | When Async mode is disabled, use this option to set how often Edge Agents check in with the Portainer Server instance.                  |
-| Edge agent default ping frequency     | When Async mode is enabled, use this option to set how often Edge Agents ping back to the Portainer Server instance.                    |
-| Edge agent default snapshot frequency | When Async mode is enabled, use this option to set how often Edge Agents updates the snapshot with the Portainer Server instance.       |
-| Edge agent default command frequency  | When Async mode is enabled, use this option to set how often Edge Agents check with the Portainer Server instance for pending commands. |
+| Field/Option                          | Overview                                                                                                                                                                                                                                                               |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Use Async mode by default             | Toggle this on to enable Async mode for Edge Devices. Async mode disables the tunnel between the Edge Device and the Portainer server instance. When Async mode is enabled, individual values can be set for the poll, ping and snapshot frequencies for Edge Devices. |
+| Edge agent default poll frequency     | When Async mode is disabled, use this option to set how often Edge Agents check in with the Portainer Server instance.                                                                                                                                                 |
+| Edge agent default ping frequency     | When Async mode is enabled, use this option to set how often Edge Agents ping back to the Portainer Server instance.                                                                                                                                                   |
+| Edge agent default snapshot frequency | When Async mode is enabled, use this option to set how often Edge Agents updates the snapshot with the Portainer Server instance.                                                                                                                                      |
+| Edge agent default command frequency  | When Async mode is enabled, use this option to set how often Edge Agents check with the Portainer Server instance for pending commands.                                                                                                                                |
 
 ![](../../.gitbook/assets/2.14-settings-edge-deploymentsync.png)
 
