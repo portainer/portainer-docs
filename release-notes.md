@@ -2,6 +2,10 @@
 
 ## Release 2.14.0
 
+### Known issues
+
+* Known issue with manually adding an Edge Device environment through the Edge Device page when using Async mode, does not retain Async settings and needs to be manually added through the environment details page.
+
 ### Kubernetes
 
 * Introduced ability to set up a new Kubernetes environment in Portainer via upload of a kubeconfig file for an existing on premises or on-cloud cluster.
