@@ -72,7 +72,7 @@
 
 ## Release 2.13.1
 
-### Portainer:
+### Portainer
 
 * Changed the minimum TLS version of Portainer from 1.3 to 1.2 to avoid issues with nginx reverse proxies: [portainer/portainer#6902](https://github.com/portainer/portainer/issues/6902)
 * Fixed issue with the Portainer authentication settings page not being able to save: [portainer/portainer#6899](https://github.com/portainer/portainer/issues/6899)
