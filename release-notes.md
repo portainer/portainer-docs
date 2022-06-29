@@ -5,6 +5,7 @@
 ### Known issues
 
 * Known issue with manually adding an Edge Device environment through the Edge Device page when using Async mode, does not retain Async settings and needs to be manually added through the environment details page.
+* Image update notifications are currently not supported for private registries and private images in DockerHub. This is due to be fixed in our next version.
 
 ### Kubernetes
 
