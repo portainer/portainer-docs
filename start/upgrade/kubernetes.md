@@ -115,11 +115,13 @@ If you have set a custom `AGENT_SECRET` on your Portainer Server instance you mu
 {% endtab %}
 {% endtabs %}
 
-Log into Portainer and connect to the Kubernetes environment where Portainer is installed. From the menu select **Applications** then select **Advanced Deployment**. Select the `portainer` namespace then select **Web Editor**:
+Log into Portainer and connect to the Kubernetes environment where Portainer is installed. From the menu select **Applications** then select **Create from manifest**. Toggle **Use namespace(s) specified from manifest** to on, then enter `portainer` in the **Name** field.&#x20;
 
-![](../../.gitbook/assets/upgrade-k8s-1.gif)
+{% hint style="warning" %}
+If you used a different name for your Portainer deployment, use that instead.
+{% endhint %}
 
-Paste the contents of the YAML file then click **Deploy**. Portainer will process the manifest and should return you to the login page once the upgrade is complete.
+From the **Build method** selection choose **Web Editor** and ensure **Kubernetes** is selected as the **Deploy type**. Paste the contents of the YAML file then click **Deploy**. Portainer will process the manifest and should return you to the login page once the upgrade is complete.
 
 ### Option 2: Via the command line
 

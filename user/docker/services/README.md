@@ -8,6 +8,12 @@ A service consists of an image definition and container configuration as well as
 
 ![](../../../.gitbook/assets/2.14-services-splash.png)
 
+The circle next to the image name indicates whether the local image is up to date, with a green circle indicating it is up to date and a red circle indicating that there is a newer version of the image available. A grey circle indicates Portainer was unable to determine whether there is an update available for the image.
+
+{% hint style="info" %}
+Image update notifications are currently not supported for private registries and private DockerHub accounts. This is due to be fixed in our next version.
+{% endhint %}
+
 {% content-ref url="add.md" %}
 [add.md](add.md)
 {% endcontent-ref %}
