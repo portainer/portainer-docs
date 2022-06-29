@@ -4,7 +4,7 @@ A stack is a collection of services, usually related to one application or usage
 
 ![](../../../.gitbook/assets/2.14-stacks-splash.png)
 
-The **Images up to date** column indicates whether the local images in the stack are up to date, with a green circle indicating they are up to date and a red circle indicating that there is a newer version of an image available. A grey circle indicates Portainer was unable to determine whether there is an update available for the images.
+The **Images up to date** column indicates whether the local images in the stack are up to date, with a green circle indicating they are up to date and a red circle indicating that there is a newer version of an image available at the remote registry. A grey circle indicates Portainer was unable to determine whether there is an update available for the images.
 
 {% hint style="info" %}
 Image update notifications are currently not supported for private registries and private DockerHub accounts. This is due to be fixed in our next version.
