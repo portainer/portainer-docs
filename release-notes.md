@@ -1,5 +1,7 @@
 # Release Notes
 
+The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
+
 ## Release 2.14.0
 
 ### Known issues
