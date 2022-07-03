@@ -9,6 +9,10 @@ The following release notes are for the **Business Edition** of Portainer. For *
 * Known issue with manually adding an Edge Device environment through the Edge Device page when using Async mode, does not retain Async settings and needs to be manually added through the environment details page.
 * Image update notifications are currently not supported for private registries and private images in DockerHub. This is due to be fixed in our next version.
 
+### Breaking changes
+
+* With the upgrade to Docker Compose V2, container names now use hyphens as separators instead of underscores. This may affect you if you are generating container names instead of explicitly defining them, then using them as references.
+
 ### Kubernetes
 
 * Introduced ability to set up a new Kubernetes environment in Portainer via upload of a kubeconfig file for an existing on premises or on-cloud cluster.
