@@ -36,7 +36,7 @@ When you're ready, click **Connect**. If you have other environments to configur
 
 ## Connecting via the Portainer Agent
 
-First, install the Portainer Agent on your Docker Standalone instance using our [platform-specific instructions](broken-reference). When this is done, you will be able to add the environment to Portainer.
+First, install the Portainer Agent on your Docker Standalone instance using our [platform-specific instructions](../../../start/install/agent/docker/). When this is done, you will be able to add the environment to Portainer.
 
 From the menu select **Environments** then click **Add environment**.
 
