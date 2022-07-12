@@ -47,6 +47,6 @@ Variables are identified in stacks with `{{ }}`. For example, the following stac
 
 When a variable is defined, options appear to customize how the variable appears when deploying the stack. You can set the **label**, **description** and **default value**.
 
-When a template is deployed, any variables that have a default value have been populated:
+When a template is deployed, any variables that have been configured are editable:
 
-![](../../../.gitbook/assets/2.14-templates-custom-variables-k8s-deploy.png)
+![](../../../.gitbook/assets/2.14-templates-custom-variables-deploy.png)

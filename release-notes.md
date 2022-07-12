@@ -2,12 +2,41 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.14.1
+
+### Known issues
+
+* Known issue with manually adding an Edge Device environment through the Edge Device page when using Async mode, does not retain Async settings and needs to be manually added through the environment details page.
+* Image update notifications are currently not supported for private registries and private images in DockerHub. This is due to be fixed in our next major version.
+* When using a Mustache variable (e.g. `{{ service }}`) multiple times in the YAML, the UI also prompts for it multiple times, rather than prompting for it a single time and then reusing it.
+
+### Kubernetes
+
+* Improved KaaS cluster provisioning's cluster name validation to enforce restrictions that Google GKE expects.
+* Fixed issue of variable inputs not showing on deployment view when using custom templates.
+* Improved Portainer logging to better record the output from eksctl, the CLI tool used for Amazon EKS (KaaS) cluster provisioning.
+* Fixed an issue where, upon initiating AWS KaaS cluster/environment provisioning and subsequently restarting Portainer in a short space of time, the requested environment would become stuck and unusable in Portainer, and couldn't be deleted.
+
+### Docker
+
+* Resolved an issue where users running Portainer with non-root access were receiving a 'Permission denied on docker-compose' error since the recent update to Docker Compose V2. [portainer/portainer#6906](https://github.com/portainer/portainer/issues/6906)
+
+### Portainer
+
+* Fix to improve LDAP, etc. authentication/login speed when there are many thousands of users.
+* Resolved an issue where users upgrading a Portainer install, where the portainer\_data volume is stored on a network volume, receive a 'Permission denied' error when the upgrade attempts a backup of the database. [portainer/portainer#7144](https://github.com/portainer/portainer/issues/7144)
+* Fixed "Create user" button in disabled stage when external Auth enabled. [portainer/portainer#7214](https://github.com/portainer/portainer/issues/7214)
+
+### Edge
+
+* Fixed issue where the edge agent could not connect when running Portainer behind a reverse proxy only supporting TLS v1.2. [portainer/portainer#7167](https://github.com/portainer/portainer/issues/7167)
+
 ## Release 2.14.0
 
 ### Known issues
 
 * Known issue with manually adding an Edge Device environment through the Edge Device page when using Async mode, does not retain Async settings and needs to be manually added through the environment details page.
-* Image update notifications are currently not supported for private registries and private images in DockerHub. This is due to be fixed in our next version.
+* Image update notifications are currently not supported for private registries and private images in DockerHub. This is due to be fixed in our next major version.
 
 ### Breaking changes
 
