@@ -4,6 +4,10 @@ Portainer can act as a proxy for other Kubernetes management tools, providing ac
 \
 To generate and download your `kubeconfig` file, from the Home page click the **kubeconfig** button.
 
+{% hint style="info" %}
+You must be accessing Portainer via HTTPS for the kubeconfig button to appear. If you are logged in with HTTP, you will not see the option.
+{% endhint %}
+
 ![](../../.gitbook/assets/2.12-kubeconfig-1.gif)
 
 You will be asked to select the Kubernetes environments that you would like in your `kubeconfig` file. If you have configured a [kubeconfig expiry](../../admin/settings/#kubeconfig-expiry) value, this will also be shown.&#x20;
