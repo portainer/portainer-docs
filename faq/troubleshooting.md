@@ -173,6 +173,10 @@ Replace `[network]` with the name of your network adapter. You will likely need 
 
 We have seen this issue occur on RedHat-based distributions including CentOS and Photon OS, but also occasionally on Ubuntu so it is worth checking if you are experiencing issues.
 
+{% hint style="warning" %}
+Note that changes via `ethtool` only apply until your server is rebooted, at which point they will be lost. If you find this change is required, we recommend adding it to your network startup scripts.
+{% endhint %}
+
 #### Large packets are being dropped
 
 In certain configurations, packets being sent on overlay networks can be silently dropped, in particular when `vmw_conn_notifyd` is being used. There is an [open issue with VMware](https://github.com/vmware/guest-introspection-nsx/issues/25) discussing the behavior which we are following, and is worth reading for potential workarounds until this is patched.
