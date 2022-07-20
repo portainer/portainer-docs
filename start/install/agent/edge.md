@@ -10,7 +10,7 @@ For a technical summary of how the Edge Agent works, refer to our [advanced docu
 
 ## Preparation
 
-The Edge Agent requires two ports be open on the Portainer Server instance: `9443` (which is used by the Portainer UI and in most cases is open) and `8000`. Port `8000` is used to provide a secure TLS tunnel between the Portainer Edge Agent and the Portainer Server instance. Our [installation instructions](../server/) configure Portainer Server to listen on both ports by default, and you will need to ensure your firewalling provides external access to these ports in order to proceed.
+The Edge Agent requires two ports be open on the Portainer Server instance: the UI port (usually `9443` or `30779` on Kubernetes with NodePort) and the tunnel port ( `8000` or `30776` when using Kubernetes with NodePort). The tunnel port is used to provide a secure TLS tunnel between the Portainer Edge Agent and the Portainer Server instance. Our [installation instructions](../server/) configure Portainer Server to listen on both ports by default, and you will need to ensure your firewalling provides external access to these ports in order to proceed.
 
 {% hint style="warning" %}
 If your Portainer Server instance is deployed with TLS, the agent will use HTTPS for the connection it makes back to Portainer. However if your Portainer instance uses a self-signed certificate, the Edge Agent must be deployed with the `-e EDGE_INSECURE_POLL=1` flag. If you do not deploy the Edge Agent with this flag, then the agent will not be able to communicate with the Portainer Server instance.
