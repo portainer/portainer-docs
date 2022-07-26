@@ -2,6 +2,36 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.14.2
+
+### Known issues
+
+* Known issue with manually adding an Edge Device environment through the Edge Device page when using Async mode, does not retain Async settings and needs to be manually added through the environment details page.
+* Image update notifications are currently not supported for private registries and private images in DockerHub. This is due to be fixed in our next major version.
+
+### Kubernetes
+
+* Fixed an issue where the kubeconfig downloadable from Portainer always had port 9443 in its URLs, even though the actual Portainer instance was being accessed via another port. [portainer/portainer#7059](https://github.com/portainer/portainer/issues/7059)
+
+### Docker
+
+* Fixed certificate file validation for .pem files [portainer/portainer#7183](https://github.com/portainer/portainer/issues/7183)
+* Fixed an issue when using a Mustache variable (e.g. \{{service\}}) multiple times in the YAML, where the UI should prompt for it only once and then reuse it (rather than prompting for it multiple times).
+* Fixed an issue when using a Mustache variable (e.g. \{{path\}}) with special characters in the value, where the resulting value would end up being HTML encoded.
+* Fixed issue around access control labels being ignored.
+
+### Portainer
+
+* Fixed an issue where the original admin user was unable to change their password when external authentication is enabled. [portainer/portainer#7291](https://github.com/portainer/portainer/issues/7291)
+* Fixed toggle state reset issue for custom logo and anonymous statistics. [portainer/portainer#7278](https://github.com/portainer/portainer/issues/7278)
+* Fixed issue with not being able to add users to teams while LDAP authentication is enabled without auto teams population. [portainer/portainer#7252](https://github.com/portainer/portainer/issues/7252)
+* Fixed an issue where auto populate team admins LDAP feature didn't work on upgrade from CE to BE.
+* Resolved an issue where new installs of recent Portainer releases had an extraneous (although innocuous) db version update on restart.
+
+### Edge&#x20;
+
+* Fixed pagination issue on Add edge jobs page for listed environments. [portainer/portainer#7312](https://github.com/portainer/portainer/issues/7312)
+
 ## Release 2.14.1
 
 ### Known issues
