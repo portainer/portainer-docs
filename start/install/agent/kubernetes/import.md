@@ -10,9 +10,10 @@ This feature is only available in [Portainer Business Edition](https://www.porta
 
 While we have tried to support as many configurations as possible, there are a few requirements in order to fully support the import process:
 
-* Your cluster must have a load balancer configured and enabled
-* Your kubeconfig file must specify `current-context`
-* Your kubeconfig file must be self-contained, and include any required access credentials
+* Your cluster must have a load balancer configured and enabled.
+* Your kubeconfig file must specify `current-context`.
+* Your kubeconfig file must be self-contained (i.e., consist of only the one file with no external references).
+* Your kubeconfig file must provide cluster admin level credentials, in order for Portainer to deploy the agent on your cluster.
 
 ## Generating a kubeconfig file for import
 
