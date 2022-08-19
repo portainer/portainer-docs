@@ -28,25 +28,28 @@ tb9gtxc647fw   portainer-agent_agent   global       3/3        portainer/agent:l
 m3a3mtuy55ed   portainer_portainer     replicated   1/1        portainer/portainer-ee:latest  *:8000->8000/tcp, *:9000->9000/tcp
 ```
 
-To upgrade Portainer Server to the latest version, run one of the commands below (replace the `portainer_portainer` service name if your setup differs):
+To upgrade Portainer Server to the latest version, run one of the sets of commands below depending on your edition of Portainer (replace the `portainer_portainer` service name if your setup differs):
 
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
+docker pull portainer/portainer-ee:latest
 docker service update --image portainer/portainer-ee:latest --publish-add 9443:9443 --force portainer_portainer
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
+docker pull portainer/portainer-ce:latest
 docker service update --image portainer/portainer-ce:latest --publish-add 9443:9443 --force portainer_portainer
 ```
 {% endtab %}
 {% endtabs %}
 
-To upgrade the Portainer Agent to the latest version, run the command below (replace the `portainer_agent` service name if your setup differs):
+To upgrade the Portainer Agent to the latest version, run the commands below (replace the `portainer_agent` service name if your setup differs):
 
 ```
+docker pull portainer/agent:latest
 docker service update --image portainer/agent:latest --force portainer_agent 
 ```
 
