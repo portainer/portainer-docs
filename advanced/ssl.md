@@ -94,13 +94,13 @@ Next, retrieve the stack YML manifest:
 **Business Edition:**
 
 ```
-curl -L https://downloads.portainer.io/ee2-13/portainer-agent-stack-ssl.yml -o portainer-agent-stack.yml
+curl -L https://downloads.portainer.io/ee2-14/portainer-agent-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 
 **Community Edition:**
 
 ```
-curl -L https://downloads.portainer.io/ce2-13/portainer-agent-stack-ssl.yml -o portainer-agent-stack.yml
+curl -L https://downloads.portainer.io/ce2-14/portainer-agent-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 {% endtab %}
 
@@ -108,13 +108,13 @@ curl -L https://downloads.portainer.io/ce2-13/portainer-agent-stack-ssl.yml -o p
 **Business Edition:**
 
 ```
-curl https://downloads.portainer.io/ee2-13/portainer-windows-stack-ssl.yml -o portainer-agent-stack.yml
+curl https://downloads.portainer.io/ee2-14/portainer-windows-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 
 **Community Edition:**
 
 ```
-curl https://downloads.portainer.io/ce2-13/portainer-windows-stack-ssl.yml -o portainer-agent-stack.yml
+curl https://downloads.portainer.io/ce2-14/portainer-windows-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 {% endtab %}
 {% endtabs %}
