@@ -44,7 +44,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
 {% endtab %}
 {% endtabs %}
 
-Alternatively, Certbot can be used to generate a certificate and a key. Because Docker has issues with symlinks, if you use Certbot you will need to pass both the 'live' and 'archive' directories as volumes. For example:
+Alternatively, Certbot can be used to generate a certificate and a key. Because Docker has issues with symlinks, if you use Certbot you will need to pass both the 'live' and 'archive' directories as volumes, as well as use the full chain certificate. For example:
 
 {% tabs %}
 {% tab title="Business Edition" %}
@@ -56,7 +56,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
     portainer/portainer-ee:latest \
-    --sslcert /certs/live/yourdomain/cert.pem \
+    --sslcert /certs/live/yourdomain/fullchain.pem \
     --sslkey /certs/live/yourdomain/privkey.pem
 ```
 {% endtab %}
@@ -70,7 +70,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
     portainer/portainer-ce:latest \
-    --sslcert /certs/live/yourdomain/cert.pem \
+    --sslcert /certs/live/yourdomain/fullchain.pem \
     --sslkey /certs/live/yourdomain/privkey.pem
 ```
 {% endtab %}

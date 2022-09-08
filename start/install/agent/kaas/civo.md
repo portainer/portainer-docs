@@ -6,7 +6,7 @@ Select the **Civo** option from the list of providers. If you haven't already pr
 You can find more details on [setting up access to your Civo account](../../../../admin/settings/cloud/civo.md) in the [cloud credentials documentation](../../../../admin/settings/cloud/).
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/2.15-kaas-civo-creds.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.15-kaas-civo-creds (1).png" alt=""><figcaption></figcaption></figure>
 
 Once you have added your credentials (or if you already had them set up) select your cluster options from the fields below.
 

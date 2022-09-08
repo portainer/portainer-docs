@@ -191,7 +191,7 @@
     * [Add a Kubernetes environment](admin/environments/add/kubernetes.md)
     * [Add an ACI environment](admin/environments/add/aci.md)
     * [Add a Nomad environment](admin/environments/add/nomad.md)
-    * [KaaS](start/install/agent/kaas/README.md)
+    *
     * [Add an Edge environment](admin/environments/add/edge.md)
     * [Add an environment via the Portainer API](admin/environments/add/api.md)
   * [Manage access to environments](admin/environments/access.md)

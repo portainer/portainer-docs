@@ -6,8 +6,8 @@ Select the environment for your new Portainer installation:
 [docker](docker/)
 {% endcontent-ref %}
 
-{% content-ref url="swarm/" %}
-[swarm](swarm/)
+{% content-ref url="../agent/swarm/" %}
+[swarm](../agent/swarm/)
 {% endcontent-ref %}
 
 {% content-ref url="kubernetes/" %}
