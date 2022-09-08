@@ -52,7 +52,7 @@ Alternatively, Certbot can be used to generate a certificate and a key. Because 
 docker run -d -p 9443:9443 -p 8000:8000 \
     --name portainer --restart always \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    -v portainer-data:/data \
+    -v portainer_data:/data \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
     portainer/portainer-ee:latest \
@@ -66,7 +66,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
 docker run -d -p 9443:9443 -p 8000:8000 \
     --name portainer --restart always \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    -v portainer-data:/data \
+    -v portainer_data:/data \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
     portainer/portainer-ce:latest \
