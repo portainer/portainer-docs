@@ -37,7 +37,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
     portainer/portainer-ce:2.9.3 \
-    --sslcert /certs/live/yourdomain/cert.pem \
+    --sslcert /certs/live/yourdomain/fullchain.pem \
     --sslkey /certs/live/yourdomain/privkey.pem
 ```
 
