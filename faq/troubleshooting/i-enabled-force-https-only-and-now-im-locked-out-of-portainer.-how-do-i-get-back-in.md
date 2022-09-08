@@ -18,3 +18,12 @@ Make sure to remove the `--http-disabled` option from your command if you are us
 {% endhint %}
 
 When started with the `--http-enabled flag`, you will be able to access Portainer over HTTP once more.
+
+## Alternative
+
+The Portainer database is a BoltDB database called `portainer.db` in the portainer_data volume.
+Stop the container to release any locks from the database.
+You can open the file in a BoltDB editor (e.g. https://github.com/br0xen/boltbrowser) and make the necessary changes. 
+In this case, you want to change the httpEnabled option to true under the ssl path.
+
+(Source: https://github.com/portainer/portainer/issues/6126#issuecomment-981156642)
