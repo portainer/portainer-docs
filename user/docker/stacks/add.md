@@ -31,7 +31,7 @@ Environment variables can be set individually within Portainer or you can use **
 
 ```
 environment:
-  - MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
+  MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
 ```
 
 Alternatively, on Docker Standalone environments you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
@@ -69,7 +69,7 @@ Environment variables can be set individually within Portainer or you can use **
 
 ```
 environment:
-  - MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
+  MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
 ```
 
 Alternatively, you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
@@ -146,7 +146,7 @@ Environment variables can be set individually within Portainer or you can use **
 
 ```
 environment:
-  - MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
+  MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
 ```
 
 Alternatively, you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
