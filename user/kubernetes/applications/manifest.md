@@ -37,7 +37,7 @@ Portainer uses Kompose to convert a Compose manifest to a Kubernetes-compliant m
 | Username              | When using authentication, enter the username for your Git repository.                                                                |
 | Personal Access Token | When using authentication, enter the personal access token or password for your Git repository.                                       |
 
-<figure><img src="../../../.gitbook/assets/2.15-kubernetes_applications_add_manifest_gh_k8s_deploy (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-kubernetes_applications_add_manifest_gh_k8s_deploy.png" alt=""><figcaption></figcaption></figure>
 
 ### Automatic updates
 

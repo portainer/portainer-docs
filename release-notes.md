@@ -2,6 +2,18 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.15.1
+
+### Docker
+
+* Fixed an issue with connecting to the local Docker environment when using Windows Container Services. [portainer/portainer#7618](https://github.com/portainer/portainer/issues/7618)
+* Fixed an issue where the build image button would stay inactive when using a tar file. [portainer/portainer#7624](https://github.com/portainer/portainer/issues/7624)
+
+### Portainer
+
+* Fixed an issue where some colors in dark mode appeared too brown. [portainer/portainer#7616](https://github.com/portainer/portainer/issues/7616)
+* Fixed an issue when using leading or trailing spaces in a password would break the login process. [portainer/portainer#7621](https://github.com/portainer/portainer/issues/7621)
+
 ## Release 2.15.0
 
 ### Deprecation notice
