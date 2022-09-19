@@ -14,6 +14,10 @@ Portainer expects certificates in PEM format.
 
 Use the `--sslcert` and `--sslkey` flags during installation.
 
+{% hint style="info" %}
+If you are using certificates signed by your own CA, you may need to supply your CA certificate as well with the `--sslcacert` flag.
+{% endhint %}
+
 Upload your certificate (including the chain) and key to the server running Portainer, then start Portainer referencing them. The following command assumes your certificates are stored in `/path/to/your/certs` with the filenames `portainer.crt` and `portainer.key`, and bind-mounts the directory to `/certs` in the Portainer container:
 
 {% tabs %}
@@ -86,6 +90,10 @@ To provide your own SSL certificate for Docker Swarm, simply define the `portain
 docker secret create portainer.sslcert /path/to/your/certificate.crt
 docker secret create portainer.sslkey /path/to/your/certificate.key
 ```
+
+{% hint style="info" %}
+If you are using certificates signed by your own CA, you may need to supply your CA certificate as well via a `portainer.sslcacert` secret and modifying the below YAML files to include the `--sslcacert` flag.
+{% endhint %}
 
 Next, retrieve the stack YML manifest:
 
