@@ -4,7 +4,7 @@ This table lists deprecated and removed features and functionality that are no l
 
 | Feature                                                                          | Deprecated | Remove |
 | -------------------------------------------------------------------------------- | ---------- | ------ |
-| Kompose deployments                                                              | 2.15.0     | 2.16.0 |
+| Kompose deployments                                                              | 2.15.0     | TBD    |
 | Enabling SSL via `--ssl` (now enabled by default)                                | 2.9.0      | TBD    |
 | Disabling analytics via `--no-analytics`                                         | 2.0        | TBD    |
 | Specifying external environments in JSON via `--external-endpoints`              |            | 2.0    |
