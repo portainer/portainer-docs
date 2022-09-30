@@ -1,6 +1,6 @@
 # Reset the admin user's password
 
-If your Portainer admin forgets their password, follow these steps to reset it. There are two methods depending on your Portainer environment.
+If your Portainer admin forgets their password, follow these steps to reset it. There are three methods depending on your Portainer environment.
 
 ## Method 1: Resetting the admin password if Portainer runs as a container
 
