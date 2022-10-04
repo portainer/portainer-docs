@@ -34,6 +34,10 @@ This example shows how to trigger the webhook to update the stack to use a diffe
 
 ## Using environment variables with webhooks
 
+{% hint style="info" %}
+This feature is only available in Portainer Business Edition
+{% endhint %}
+
 When triggering a webhook, environment variables can be passed through the endpoint and referenced within stacks' compose files.
 
 To specify an environment variable on a webhook, add it as a variable to the URL. For example, to pass a `SERVICE_TAG` variable with the value `development`:
