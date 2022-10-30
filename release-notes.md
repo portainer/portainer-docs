@@ -35,20 +35,20 @@ The following release notes are for the **Business Edition** of Portainer. For *
 ### Docker
 
 * Updated the Compose version to 2.10.2. [portainer/portainer#7838](https://github.com/portainer/portainer/issues/7838)
-* Added support for shared memory when creating or editing a container by allowing setting of --shm-size from Portainer. [portainer/portainer#4992](https://github.com/portainer/portainer/issues/4992)
+* Added support for shared memory when creating or editing a container by allowing to set --shm-size from portainer. [portainer/portainer#4992](https://github.com/portainer/portainer/issues/4992)
 * Introduced support for uploading of local files to be included in a Docker image when using Portainer to build an image. [portainer/portainer#7796](https://github.com/portainer/portainer/issues/7796)
-* Default the Docker host setup option to show out-of-date image indicators for Docker environments to off now (except for those users coming from EE-2.14 or EE-2.15).
+* Set notification of new image for docker default to off.
 * Introduced a setting to turn on/off per host showing of out-of-date image indicators. [portainer/portainer#7219](https://github.com/portainer/portainer/issues/7219)
 * Resolved an issue in Docker Services, Containers, and Stacks, where loading of the recently added out-of-date image indicator delayed showing of a row's action icons.
-* Added information in Create stack about enabling rebuilding of an images on Docker standalone environments. [portainer/portainer#7829](https://github.com/portainer/portainer/issues/7829)
-* Improved the information in the Build image screen's URL option, including a link to additional documentation. [portainer/portainer#7771](https://github.com/portainer/portainer/issues/7771)
+* Added information for rebuilding images from stacks on docker standalone environments. [portainer/portainer#7829](https://github.com/portainer/portainer/issues/7829)
+* Added information to the build image from the URL page, including a link to additional documentation. [portainer/portainer#7771](https://github.com/portainer/portainer/issues/7771)
 * Fixed an issue where environment variables for stacks could not be set to empty. [portainer/portainer#7780](https://github.com/portainer/portainer/issues/7780)
-* Fixed an issue where the assigning of user access to a stack showed users that don't have access to the Environment. [portainer/portainer#7695](https://github.com/portainer/portainer/issues/7695)
-* Added missing agent deployment command text for Docker standalone in the Add environment function. [portainer/portainer#7757](https://github.com/portainer/portainer/issues/7757)
-* Fixed the issue of a misconfigured stack being able to be saved and subsequently not being able to be deleted. [portainer/portainer#7798](https://github.com/portainer/portainer/issues/7798)
-* Fixed an issue where Docker Swarm secret values were being trimmed on entry, even though leading and trailing whitespace can be part of a secret. [portainer/portainer#7772](https://github.com/portainer/portainer/issues/7772)
+* Fixed an issue where assigning user access to a stack, showed users that don't have access to the Environment. [portainer/portainer#7695](https://github.com/portainer/portainer/issues/7695)
+* Fixed the issue of missing agent deployment script for the docker standalone environment. [portainer/portainer#7757](https://github.com/portainer/portainer/issues/7757)
+* Fixed the issue of the misconfigured stack being saved and subsequently can not be deleted. [portainer/portainer#7798](https://github.com/portainer/portainer/issues/7798)
+* Fixed an issue where the Swarm secret values incorrectly were being trimmed. [portainer/portainer#7772](https://github.com/portainer/portainer/issues/7772)
 * Fixed the issue where the container webhook toggle was not being saved.
-* Fixed an issue where the Docker API section in the Add environment function was incorrectly showing the docker.sock code block. [portainer/portainer#7650](https://github.com/portainer/portainer/issues/7650)
+* Fixed an issue where the Docker API section in the add environment wizard incorrectly was showing the docker.sock code block. [portainer/portainer#7650](https://github.com/portainer/portainer/issues/7650)
 * Fixed an issue where a console error was showing for GPU when using Swarm because GPU is not supported on Swarm.
 * Fixed an issue where renaming a deployed container resulted in an error. [portainer/portainer#7778](https://github.com/portainer/portainer/issues/7778)
 * Fixed an issue where the image pull limits weren't being shown for standard users.
@@ -63,9 +63,9 @@ The following release notes are for the **Business Edition** of Portainer. For *
 ### Portainer
 
 * Introduced a new section that shows past toaster notifications, which are stored in the browser's local storage. [portainer/portainer#7756](https://github.com/portainer/portainer/issues/7756)
-* Introduced a context-sensitive help button that links to the relevant documentation based on the current page. [portainer/portainer#7744](https://github.com/portainer/portainer/issues/7744)
+* Introduced a context sensitive help button that links to the relevant documentation based on the current page. [portainer/portainer#7744](https://github.com/portainer/portainer/issues/7744)
 * Introduced login screen banner to the login page.
-* Introduced "new version available" banner in Portainer Business Edition.
+* Added banner for "new version available" in portainer business edition.
 * Updated dependencies of PCIDB/GHW for the portainer agent. [portainer/portainer#7705](https://github.com/portainer/portainer/issues/7705)
 * Updated version of chart.js to 2.9.4 and moment to 2.29.4. [portainer/portainer#7681](https://github.com/portainer/portainer/issues/7681)
 * Update golang and image dependencies for API and portainer binary ( EE ).
@@ -74,13 +74,13 @@ The following release notes are for the **Business Edition** of Portainer. For *
 * Fixed an issue where the Microsoft OAuth information was not being retrieved correctly when editing the settings.
 * Fixed select all behavior in environments page.
 * Fixed the issue of handling images built by buildx or buildkit in the registry browser.
-* Fixed an issue where the browser tab title did not update with the actual selected environment. [portainer/portainer#7651](https://github.com/portainer/portainer/issues/7651)
+* Fixed an issue where the browser tab title did not update with the actually selected environment. [portainer/portainer#7651](https://github.com/portainer/portainer/issues/7651)
 * Fixed issue with text color and text background color on auto-filled text.
 * Fixed issue where the dropdown menu has incorrect background color in dark mode. [portainer/portainer#7678](https://github.com/portainer/portainer/issues/7678)
 * Fixed styling issues in the Runtime & Resources tab. [portainer/portainer#7779](https://github.com/portainer/portainer/issues/7779)
 * Fixed an issue where the new styling wasn't being applied to links. [portainer/portainer#7740](https://github.com/portainer/portainer/issues/7740)
 * Adjusted the warning text color as per the UI guidelines that were introduced in the 2.15 release. [portainer/portainer#7667](https://github.com/portainer/portainer/issues/7667)
-* Introduced UI info components while browsing snapshots
+* Introduced UI info components while browsing snapshots.
 
 ### Edge
 
@@ -91,7 +91,7 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 * Fixed issue around Home page loading time when you have Nomad environments connected.
 * Removed extension validation from compose path field. [portainer/portainer#7652](https://github.com/portainer/portainer/issues/7652)
-* Fixed an issue where Group and Tag values could not be set for Nomad environments when using the Add environment function. [portainer/portainer#7703](https://github.com/portainer/portainer/issues/7703)
+* Fixed an issue where the Group and Tag could not be set for Nomad environments when adding it via the wizard. [portainer/portainer#7703](https://github.com/portainer/portainer/issues/7703)
 * Fixed an issue where Nomad system jobs would prevent other jobs from being shown. [portainer/portainer#7229](https://github.com/portainer/portainer/issues/7229)
 
 ### Development
