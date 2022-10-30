@@ -1,0 +1,37 @@
+# Security constraints
+
+Pod security policies can be used to define under what conditions workloads can run. With Portainer we achieve this by leveraging [Open Policy Agent](https://www.openpolicyagent.org/) via [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper).&#x20;
+
+Policies are configured on a per-environment basis. To enable and configure security policies, from the menu select a Kubernetes environment, then expand **Cluster** and click **Security constraints**.
+
+{% hint style="danger" %}
+This is advanced functionality and should be applied with caution. If a deployment attempts to create a pod that does not meet defined security constraints it may not be immediately obvious that the constraint is the reason for provision failure.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/2.15-k8s-cluster-securitypolicies.gif" alt=""><figcaption></figcaption></figure>
+
+Toggle on **Enable pod security constraints** to enable the functionality, then toggle on the features you require and configure them as needed.
+
+{% hint style="info" %}
+Policies are based on the [Kubernetes security policy reference](https://v1-21.docs.kubernetes.io/docs/concepts/policy/pod-security-policy/#policy-reference) - for more detail on each option check the Kubernetes documentation.
+{% endhint %}
+
+| Field/Option                           | Overview                                                                                                                                                                                                                                                                                                             |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Restrict running privileged containers | Set whether any container in a pod can enable privileged mode.                                                                                                                                                                                                                                                       |
+| Restrict host namespace                | Controls whether the pod containers can share the process ID namespace and host IPC namespace.                                                                                                                                                                                                                       |
+| Restrict host networking ports         | Define a range of ports that can be used by pods, on a per-network basis.                                                                                                                                                                                                                                            |
+| Restrict volume types                  | Define the types of volumes that may be used. Examples of volume types are `configMap`, `downwardAPI`, `emptyDir`, `persistentVolumeClaim`, `secret`, `projected`, `hostPath`, `flexVolume`.                                                                                                                         |
+| Restrict host filesystem paths         | Define the host paths that are allowed when using hostPath volumes.                                                                                                                                                                                                                                                  |
+| Restrict drivers                       | Define the FlexVolume drivers that can be used.                                                                                                                                                                                                                                                                      |
+| Require read-only root filesystem      | Specify that containers must run with a read-only root filesystem.                                                                                                                                                                                                                                                   |
+| Restrict User and group ids            | Controls which user ID or group ID the containers are run with or which group IDs get added. For users, specify `MustRunAs` to define specific user ID ranges, `MustRunAsNonRoot` to require non-root users, or `RunAsAny` to permit running as any user. For groups, specify `MustRunAs`, `MayRunAs` or `RunAsAny`. |
+| Restrict escalation to root privileges | Controls the user privileges and prevents files from enabling extra capabilities.                                                                                                                                                                                                                                    |
+| Restrict Linux capabilities            | Define the capabilities available to the pod. Set allowed capabilities to specify those capabilities that a container can use, and set Required drop capabilities to specify which privileges must be dropped from containers.                                                                                       |
+| Restrict SELinux security context      | Controls the SELinux context of the container. You can specify the level, role, type and user.                                                                                                                                                                                                                       |
+| Restrict Proc Mount types              | Defines the type of `/proc` mount to use for containers. Select either `Default` or `Unmasked`.                                                                                                                                                                                                                      |
+| Restrict AppArmor profiles             | Controls the AppArmor profile used by containers. Refer to the [AppArmor documentation](https://v1-21.docs.kubernetes.io/docs/tutorials/clusters/apparmor/#podsecuritypolicy-annotations) for more details.                                                                                                          |
+| Restrict seccomp profiles              | Controls the seccomp profile used by containers or pods.                                                                                                                                                                                                                                                             |
+| Restrict sysctl profiles               | Controls the sysctl profile used by containers. Specify the sysctls to forbid from use by pods.                                                                                                                                                                                                                      |
+
+&#x20;Once you have completed your configuration, click **Save settings** to apply your changes.
