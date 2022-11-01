@@ -3,6 +3,10 @@
 A webhook is a POST request sent to a URL that you define in Docker Hub or another registry. Use webhooks to trigger an action in response to an event such as a repository push.
 
 {% hint style="info" %}
+This functionality is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=stack-webhook).
+{% endhint %}
+
+{% hint style="info" %}
 Webhooks are only available on non-Edge environments (environments running Portainer Server or Portainer Agent, not the Portainer Edge Agent). This is because the tunnel to the Portainer Edge Agent is only opened on-demand, and therefore would mean there is no way to expose a webhook permanently.
 {% endhint %}
 
@@ -35,10 +39,6 @@ This example shows how to trigger the webhook to update the stack to use a diffe
 ## Using environment variables with webhooks
 
 When triggering a webhook, environment variables can be passed through the endpoint and referenced within stacks' compose files.
-
-{% hint style="info" %}
-This functionality is only available in Portainer Business Edition.
-{% endhint %}
 
 To specify an environment variable on a webhook, add it as a variable to the URL. For example, to pass a `SERVICE_TAG` variable with the value `development`:
 

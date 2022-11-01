@@ -3,6 +3,10 @@
 A webhook is a POST request sent to a URL that you define in Docker Hub or another registry. Use webhooks to trigger an action in response to an event such as a repository push.
 
 {% hint style="info" %}
+This functionality is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=container-webhook).
+{% endhint %}
+
+{% hint style="info" %}
 Webhooks are only available on non-Edge environments (environments running Portainer Server or Portainer Agent, not the Portainer Edge Agent). This is because the tunnel to the Portainer Edge Agent is only opened on-demand, and therefore would mean there is no way to expose a webhook permanently.
 {% endhint %}
 
