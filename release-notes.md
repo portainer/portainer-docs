@@ -2,6 +2,22 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.16.1
+
+### Kubernetes:
+
+* Fixed an issue with view/edit of an external application (i.e. one originally added to the cluster outside of Portainer) where a 'cannot read properties' error was shown.
+* Fixed an issue with view/edit of Kubernetes namespaces where memory and CPU resource limit sliders were positioned incorrectly and erroneous warnings were shown.
+
+### Docker:
+
+* Fixed issue of update stack button being disabled when updating an existing stack.
+
+### Portainer:
+
+* Fixed license key issue where node counts were not updated when environments are deleted.
+* Fixed issue with JSON formatted logs failing in 2.16.0.
+
 ## Release 2.16.0
 
 ### Deprecation notice
