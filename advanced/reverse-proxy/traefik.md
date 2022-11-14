@@ -124,7 +124,7 @@ volumes:
 {% endtab %}
 {% endtabs %}
 
-Before you run this file in Docker, you will need to create the `acme.json` file that will store the SSL certificates. Once it has been created, you can define the file path in the following sections in the Docker Compose file:
+Before you run this file in Docker, you will need to create the `acme.json` file with permission `600` that will store the SSL certificates. Once it has been created, you can define the file path in the following sections in the Docker Compose file:
 
 In the volumes and command section of the Traefik Proxy container:
 
