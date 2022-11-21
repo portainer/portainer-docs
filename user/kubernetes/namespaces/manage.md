@@ -10,7 +10,7 @@ Here you can view details about the namespace and configure options specific to 
 
 Toggle on **Resource assignment** to enable quotas for this namespace, then define the memory and CPU limits.
 
-<figure><img src="../../../.gitbook/assets/2.15-kubernetes_namespaces_create_namespace_resource_assignment (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-kubernetes_namespaces_create_namespace_resource_assignment.png" alt=""><figcaption></figcaption></figure>
 
 ## Load balancers
 

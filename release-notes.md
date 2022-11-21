@@ -2,6 +2,16 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.16.2
+
+### Edge
+
+* Fixed issue where the Git repository section is missing when creating an Edge Stack via the Git repository option. [portainer/portainer#8072](https://github.com/portainer/portainer/issues/8072)
+
+### Portainer
+
+* Fixed issue where the effective viewer is not showing the correct user access role of environments they have access to. [portainer/portainer#8070](https://github.com/portainer/portainer/issues/8070)
+
 ## Release 2.16.1
 
 ### Kubernetes:

@@ -10,7 +10,7 @@ To manage an environment, click to select it.
 
 You can view the build information for your Portainer installation by clicking on the Portainer version number in the bottom left of the UI. This may be helpful when troubleshooting issues with the Portainer support team.
 
-<figure><img src="../.gitbook/assets/2.15-home-buildinfo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 In the box that appears you can see the server version, database version, build number and image tag, as well as the versions of the compilation tools used to build Portainer.&#x20;
 

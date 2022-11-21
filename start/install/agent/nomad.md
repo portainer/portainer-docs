@@ -4,7 +4,7 @@ Nomad support in Portainer is provided through the use of the [Portainer Edge Ag
 
 To add a Nomad environment, click on **Environments** then click the **Add environment** button.
 
-<figure><img src="../../../.gitbook/assets/2.16-environments-add (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.16-environments-add.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Nomad** as your environment type and click **Start Wizard**. Enter the **environment details** using the table below as a guide.
 
@@ -13,7 +13,7 @@ Select **Nomad** as your environment type and click **Start Wizard**. Enter the 
 | Name                 | Enter a name for your environment.                                                                                                                                                |
 | Portainer server URL | Enter the URL and port of your Portainer Server instance as it will be seen from your Nomad environment. If using a FQDN, ensure that DNS is properly configured to provide this. |
 
-<figure><img src="../../../.gitbook/assets/2.15-nomad_env (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-nomad_env.png" alt=""><figcaption></figcaption></figure>
 
 As an optional step you can expand the **More settings** section and adjust the Poll frequency for the environment - this defines how often this Edge Agent will check the Portainer Server for new jobs. The default is every 5 seconds. You can also categorize the environment by adding it to a [group](../../../admin/environments/groups.md) or [tagging](../../../admin/environments/tags.md) it for better searchability.
 
