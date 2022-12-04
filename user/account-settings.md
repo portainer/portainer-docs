@@ -30,6 +30,10 @@ For more information on access tokens, refer to our [API access documentation](.
 
 This section lets you manage your saved Git credentials for use in deployments. These credentials are available only to your user.
 
+{% hint style="info" %}
+This feature is only available in Portainer Business Edition.
+{% endhint %}
+
 <figure><img src="../.gitbook/assets/2.16-account-gitcreds.png" alt=""><figcaption></figcaption></figure>
 
 To add a new credential, click the **Add git credential** button and fill out the fields using the table below as a guide:
