@@ -30,7 +30,7 @@ Portainer expects TLS certificates and keys to be in PEM format.
 
 As an optional step you can expand the **More settings** section to add GPUs to your environment, and to categorize the environment by adding it to a [group](../groups.md) or [tagging](../tags.md) it for better searchability.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_api_more_settings (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-docker_api_more_settings (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Connect**. If you have other environments to configure click **Next** to proceed, otherwise click **Close** to return to the list of environments.
 
@@ -53,6 +53,6 @@ Once the Agent has been deployed, enter the environment details using the table 
 
 As an optional step you can expand the **More settings** section to add GPUs to your environment, and to categorize the environment by adding it to a [group](../groups.md) or [tagging](../tags.md) it for better searchability.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_api_more_settings (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-docker_api_more_settings (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Connect**. If you have other environments to configure click **Next** to proceed, otherwise click **Close** to return to the list of environments.

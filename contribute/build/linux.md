@@ -10,8 +10,8 @@ We tested these instructions on Ubuntu 18.04.2 LTS. For instructions that relate
 
 * [Docker CE](https://docs.docker.com/install/) is the Docker application that runs on your machine to enable the use of Docker features. The latest version is not a requirement for this development stack, however we recommend staying up to date with the latest improvements and security fixes.
 * ​[Yarn](https://yarnpkg.com/en/docs/install#mac-stable) is a package manager for installing new software packages on your system, and is used to run the Portainer development environment.
-* [Node.JS](https://nodejs.org/en/download/) is a JavaScript package used when building applications that leverage networking, such as Portainer. Version 12 or later is required.
-* [Golang](https://golang.org/dl/) is the open source language that we use to build the majority of Portainer software. Version 1.17 of Golang is required.
+* [Node.JS](https://nodejs.org/en/download/) is a JavaScript package used when building applications that leverage networking, such as Portainer. Version 14 or later is required.
+* [Golang](https://golang.org/dl/) is the open source language that we use to build the majority of Portainer software. Version 1.18 of Golang is required.
 * Wget is a package used to retrieve files using common internet protocols such as HTTP and FTP.
 
 ## Part 1: Installing Docker
