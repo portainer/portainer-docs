@@ -28,7 +28,7 @@ Here you can define any environment variables you wish to be available to your a
 
 ### Configurations
 
-Select any configuration files you have previously created to make them available to the application. Portainer will automatically expose all the keys of a configuration as environment variables. This behavior can be overridden to filesystem mounts for each key via the **override** button.
+Select any ConfigMaps or secrets you have previously created to make them available to the application. Portainer will automatically expose all the keys of a ConfigMap or secret as environment variables. This behavior can be overridden to filesystem mounts for each key via the **override** button.
 
 <figure><img src="../../../.gitbook/assets/2.15-kubernetes_applications_add_form_configurations.png" alt=""><figcaption></figcaption></figure>
 
