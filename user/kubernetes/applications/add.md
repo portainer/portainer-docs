@@ -85,8 +85,8 @@ You can also define the placement policy for the rules you have set. Options are
 
 ### Publishing the application
 
-Here you can create the necessary services to expose your application. Select the type of service (ClusterIP, NodePort, LoadBalancer or Ingress) from the dropdown and click **Create service**. You can then configure each service as required.
+Here you can create the necessary services to expose your application. Select the type of service (ClusterIP, NodePort, or LoadBalancer) from the dropdown and click **Create service**. You can then configure each service as required.
 
-<figure><img src="../../../.gitbook/assets/2.15-kubernetes_applications_publish_app.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.16-kubernetes-applications-add-publish.png" alt=""><figcaption></figcaption></figure>
 
 When you have finished, click **Deploy application**.
