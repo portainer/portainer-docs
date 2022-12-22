@@ -4,6 +4,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.16.2
 
+November 21, 2022
+
 ### Edge
 
 * Fixed issue where the Git repository section is missing when creating an Edge Stack via the Git repository option. [portainer/portainer#8072](https://github.com/portainer/portainer/issues/8072)
@@ -13,6 +15,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 * Fixed issue where the effective viewer is not showing the correct user access role of environments they have access to. [portainer/portainer#8070](https://github.com/portainer/portainer/issues/8070)
 
 ## Release 2.16.1
+
+November 9, 2022
 
 ### Kubernetes:
 
@@ -29,6 +33,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 * Fixed issue with JSON formatted logs failing in 2.16.0.
 
 ## Release 2.16.0
+
+October 31, 2022
 
 ### Deprecation notice
 
@@ -128,6 +134,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.15.1
 
+September 16, 2022
+
 ### Docker
 
 * Fixed an issue with connecting to the local Docker environment when using Windows Container Services. [portainer/portainer#7618](https://github.com/portainer/portainer/issues/7618)
@@ -139,6 +147,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 * Fixed an issue when using leading or trailing spaces in a password would break the login process. [portainer/portainer#7621](https://github.com/portainer/portainer/issues/7621)
 
 ## Release 2.15.0
+
+September 6, 2022
 
 ### Deprecation notice
 
@@ -230,6 +240,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.14.2
 
+July 26, 2022
+
 ### Known issues
 
 * Known issue with manually adding an Edge Device environment through the Edge Device page when using Async mode, does not retain Async settings and needs to be manually added through the environment details page.
@@ -260,6 +272,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.14.1
 
+July 12, 2022
+
 ### Known issues
 
 * Known issue with manually adding an Edge Device environment through the Edge Device page when using Async mode, does not retain Async settings and needs to be manually added through the environment details page.
@@ -288,6 +302,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 * Fixed issue where the edge agent could not connect when running Portainer behind a reverse proxy only supporting TLS v1.2. [portainer/portainer#7167](https://github.com/portainer/portainer/issues/7167)
 
 ## Release 2.14.0
+
+June 28, 2022
 
 ### Known issues
 
@@ -364,13 +380,17 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.13.1
 
+May 12, 2022
+
 ### Portainer
 
 * Changed the minimum TLS version of Portainer from 1.3 to 1.2 to avoid issues with nginx reverse proxies: [portainer/portainer#6902](https://github.com/portainer/portainer/issues/6902)
 * Fixed issue with the Portainer authentication settings page not being able to save: [portainer/portainer#6899](https://github.com/portainer/portainer/issues/6899)
 * Changed the password policy to require 12 characters for all Portainer internal users: [portainer/portainer#6904](https://github.com/portainer/portainer/issues/6904)
 
-## Release 2.13
+## Release 2.13.0
+
+May 9. 2022
 
 ### Known issues
 
@@ -465,6 +485,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.12.2
 
+April 4, 2022
+
 ### Nomad
 
 * Introduced Nomad integration
@@ -494,12 +516,16 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.12.1
 
+March 9, 2022
+
 ### Portainer
 
 * Fixed bug where redeploying a stack causes an error and success message at the same time.
 * Fixed bug that was preventing ability to edit application with persisted folder on Kubernetes.
 
 ## Release 2.12.0
+
+March 8, 2022
 
 ### Breaking changes
 
@@ -626,6 +652,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 * Added logging to migrations: [portainer/portainer#6183](https://github.com/portainer/portainer/issues/6183)
 
 ## Release 2.10.0
+
+November 15, 2021
 
 ### Known issues
 
@@ -783,7 +811,9 @@ The following release notes are for the **Business Edition** of Portainer. For *
 * Fixed inconsistencies in the Portainer API documentation: [portainer/portainer#5527](https://github.com/portainer/portainer/issues/5527)
 * Updated the Swagger documentation: [portainer/portainer#5338](https://github.com/portainer/portainer/issues/5338)
 
-## Release 2.7
+## Release 2.7.0
+
+July 29, 2021
 
 ### **Docker**
 
@@ -900,7 +930,9 @@ The following release notes are for the **Business Edition** of Portainer. For *
 * Host Management features do not work on Windows Hosts [#4450](https://github.com/portainer/portainer/issues/4450)
 * Host Browser function does not work for Non-Admin users.
 
-## Release 2.4
+## Release 2.4.0
+
+May 4, 2021
 
 ### **Kubernetes​**
 
@@ -998,6 +1030,8 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.0.1
 
+February 22, 2021
+
 ### **Fixes**
 
 * **Fix an issue preventing a user from creating Kubernetes resources if they have a `@` character in their username**\
@@ -1013,5 +1047,7 @@ The following release notes are for the **Business Edition** of Portainer. For *
   The license server mechanism has been updated.
 
 ## Release 2.0.0
+
+December 3, 2020
 
 Initial release of Portainer Business
