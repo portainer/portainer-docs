@@ -18,16 +18,16 @@ November 21, 2022
 
 November 9, 2022
 
-### Kubernetes:
+### Kubernetes
 
 * Fixed an issue with view/edit of an external application (i.e. one originally added to the cluster outside of Portainer) where a 'cannot read properties' error was shown.
 * Fixed an issue with view/edit of Kubernetes namespaces where memory and CPU resource limit sliders were positioned incorrectly and erroneous warnings were shown.
 
-### Docker:
+### Docker
 
 * Fixed issue of update stack button being disabled when updating an existing stack.
 
-### Portainer:
+### Portainer
 
 * Fixed license key issue where node counts were not updated when environments are deleted.
 * Fixed issue with JSON formatted logs failing in 2.16.0.

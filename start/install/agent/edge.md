@@ -22,7 +22,7 @@ In addition, our instructions assume your environment meets [our requirements](.
 
 To add an Edge Agent, click on **Environments** then **Add environment**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.16-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.16-environments-add (1).gif" alt=""><figcaption></figcaption></figure>
 
 Select either **Docker Standalone**, **Docker Swarm** or **Kubernetes** depending on your environment type, then click **Start Wizard**. Then select the **Edge Agent** option. Enter the environment details **** using the table below as a guide.
 

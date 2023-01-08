@@ -12,7 +12,7 @@ This method lets you pull images from Docker Hub or from another registry that y
 
 From the menu select **Images**. Select the registry to use then enter the name of the image. On a multi-node environment, select the node to deploy to.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_images_pull_images.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-docker_images_pull_images (1).png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Pull the image**.
 

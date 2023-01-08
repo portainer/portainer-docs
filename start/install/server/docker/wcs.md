@@ -64,9 +64,14 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always -v \\.
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
 {% endhint %}
-If you see an error message " "\\\\.\\pipe\\dockerDesktopEngine" includes invalid characters for a local volume name", then you may not have Windows containers properly enabled. If you are using Docker Desktop, right click the icon in your tray and select "Switch to Windows Containers".
-{% hint style="info" %}
 
+{% hint style="warning" %}
+If you see an error message similar to:&#x20;
+
+`"\\.\pipe\dockerDesktopEngine" includes invalid characters for a local volume name`
+
+then you may not have Windows containers properly enabled. If you are using Docker Desktop, right click the icon in your tray and select **Switch to Windows Containers**.
+{% endhint %}
 
 {% hint style="info" %}
 If you require HTTP port `9000` open for legacy reasons, add the following to your `docker run` command:

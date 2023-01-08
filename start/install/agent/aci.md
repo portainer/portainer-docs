@@ -11,7 +11,7 @@ The following ACI features are not currently supported:
 
 To add an ACI environment, click on **Environments** then click the **Add environment** button.
 
-<figure><img src="../../../.gitbook/assets/2.16-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.16-environments-add (1).gif" alt=""><figcaption></figcaption></figure>
 
 Select **ACI** as your environment type and click **Start Wizard**. Enter the **environment details** using the table below as a guide.
 

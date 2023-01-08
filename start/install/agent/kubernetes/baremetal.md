@@ -32,7 +32,7 @@ Helm charts for agent-only deployments will be available soon.
 
 From the menu select **Environments** then click **Add environment**.
 
-<figure><img src="../../../../.gitbook/assets/2.16-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.16-environments-add (1).gif" alt=""><figcaption></figcaption></figure>
 
 Select the **Kubernetes** option and click **Start Wizard**. Select the **Agent** option and choose the tab that matches your configuration (**Kubernetes via load balancer** or **Kubernetes via node port**). Copy the command, then run it on the control node of your Kubernetes cluster.
 
