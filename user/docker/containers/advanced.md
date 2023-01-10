@@ -110,6 +110,10 @@ Here you can configure runtime options for the container.
 
 Here you can enable GPU access for the container and configure the GPU settings as required.
 
+{% hint style="info" %}
+GPU support is currently only available on Docker Standalone environments.
+{% endhint %}
+
 | Field/Option | Overview                                                                                                                                                            |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Enable GPU   | Toggle this option on to enable GPU access for the container.                                                                                                       |
