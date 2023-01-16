@@ -66,6 +66,10 @@ docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /va
 {% endtab %}
 {% endtabs %}
 
+{% hint style="warning" %}
+These `docker run` commands include opening port `8000` which is used for Edge Agent communication as included in our [installation instructions](../install/server/docker/linux.md). If you do not need this port open, you can remove it from the command.
+{% endhint %}
+
 {% hint style="info" %}
 To provide your own SSL certs you may use `--sslcert` and `--sslkey` flags as below to provide the certificate and key files. The certificate file needs to be the full chain and in PEM format. For example, for Business Edition:
 
