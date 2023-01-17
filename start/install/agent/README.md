@@ -6,8 +6,8 @@ If you want to add another environment to your existing Portainer installation, 
 [docker](docker/)
 {% endcontent-ref %}
 
-{% content-ref url="../server/swarm/" %}
-[swarm](../server/swarm/)
+{% content-ref url="swarm/" %}
+[swarm](swarm/)
 {% endcontent-ref %}
 
 {% content-ref url="kubernetes/" %}
