@@ -153,6 +153,10 @@ For more detail on how automatic updates function under the hood, have a look at
 When you toggle **Enable relative path volumes** to on, you are able to specify relative path references in your compose files. Portainer will create the required directory structure and populate the directories with the relevant files from your Git repository.
 
 {% hint style="info" %}
+This feature is only available in Portainer Business Edition.
+{% endhint %}
+
+{% hint style="info" %}
 This functionality is currently not available on Edge Agent environments.
 {% endhint %}
 
