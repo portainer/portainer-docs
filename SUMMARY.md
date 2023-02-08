@@ -209,7 +209,7 @@
     * [Add a ProGet registry](admin/registries/add/proget.md)
     * [Add an Azure registry](admin/registries/add/azure.md)
     * [Add a Gitlab registry](admin/registries/add/gitlab.md)
-    * [Add a Github registry](admin/registries/add/ghcr.md)
+    * [Add a GitHub registry](admin/registries/add/ghcr.md)
     * [Add a custom registry](admin/registries/add/custom.md)
   * [Browse a registry](admin/registries/browse.md)
   * [Manage a registry](admin/registries/manage.md)
