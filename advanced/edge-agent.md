@@ -6,7 +6,7 @@
 
 Then we changed the Edge agent architecture so only the environments need to access Portainer. There is now no need to expose the Portainer agents to the Internet.
 
-Portainer now requires that only the `9000` and `8000` TCP ports are exposed. We used to serve the UI and the Portainer API from port `9000`, but we extended the API to allow the remote agents to poll for instructions. Port `8000` is a TLS tunnel server used to create a secure tunnel between the agent and the Portainer instance. More about that soon.
+Portainer now requires that only the `9443` and `8000` TCP ports are exposed. We used to serve the UI and the Portainer API from port `9000`, but we extended the API to allow the remote agents to poll for instructions. Port `8000` is a TLS tunnel server used to create a secure tunnel between the agent and the Portainer instance. More about that soon.
 
 {% hint style="warning" %}
 If your Portainer instance is deployed with TLS, the agent will use HTTPS for the connection it makes back to Portainer. However, if your Portainer instance uses a self-signed certificate, the Edge Agent must be deployed with the `-e EDGE_INSECURE_POLL=1` flag. If you do not deploy the Edge Agent with this flag, the agent won't be able to communicate with the Portainer instance.

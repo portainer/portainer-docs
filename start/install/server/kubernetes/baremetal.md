@@ -1,4 +1,8 @@
-# Install Portainer on your Kubernetes environment
+# Install Portainer BE on your Kubernetes environment
+
+{% hint style="info" %}
+These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/kubernetes/baremetal.md).
+{% endhint %}
 
 ## Introduction
 
@@ -80,18 +84,10 @@ Once the update completes, you're ready to begin the installation. Which method 
 
 {% tabs %}
 {% tab title="Expose via NodePort" %}
-Using one of the following commands, Portainer will be available on port `30779` for HTTPS:
-
-**Business Edition:**
+Using the following command, Portainer will be available on port `30779` for HTTPS:
 
 ```
 helm install --create-namespace -n portainer portainer portainer/portainer --set enterpriseEdition.enabled=true --set tls.force=true
-```
-
-**Community Edition:**
-
-```
-helm install --create-namespace -n portainer portainer portainer/portainer --set tls.force=true
 ```
 
 {% hint style="info" %}
@@ -104,26 +100,11 @@ If you need to access Portainer via HTTP on port `30777`, remove the `--set tls.
 {% endtab %}
 
 {% tab title="Expose via Ingress" %}
-In these examples, Portainer will be deployed to your cluster and assigned a Cluster IP, with an nginx Ingress Controller at the defined hostname. For more on Ingress options, refer to the list of [Chart Configuration Options](../../../../advanced/helm-chart-configuration-options.md).
-
-**Business Edition:**
+In this example, Portainer will be deployed to your cluster and assigned a Cluster IP, with an nginx Ingress Controller at the defined hostname. For more on Ingress options, refer to the list of [Chart Configuration Options](../../../../advanced/helm-chart-configuration-options.md).
 
 ```
 helm install --create-namespace -n portainer portainer portainer/portainer \
     --set enterpriseEdition.enabled=true \
-    --set service.type=ClusterIP \
-    --set tls.force=true \
-    --set ingress.enabled=true \
-    --set ingress.ingressClassName=<ingressClassName (eg: nginx)> \
-    --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
-    --set ingress.hosts[0].host=<fqdn (eg: portainer.example.io)> \
-    --set ingress.hosts[0].paths[0].path="/"
-```
-
-**Community Edition:**
-
-```
-helm install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=ClusterIP \
     --set tls.force=true \
     --set ingress.enabled=true \
@@ -139,22 +120,12 @@ If you need to access Portainer via HTTP, remove the `--set tls.force=true` opti
 {% endtab %}
 
 {% tab title="Expose via Load Balancer" %}
-Using one of the following commands, Portainer will be available at an assigned Load Balancer IP on port `9443` for HTTPS:
-
-**Business Edition:**
+Using the following command, Portainer will be available at an assigned Load Balancer IP on port `9443` for HTTPS:
 
 ```
 helm install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=LoadBalancer \
     --set enterpriseEdition.enabled=true \
-    --set tls.force=true
-```
-
-**Community Edition:**
-
-```
-helm install --create-namespace -n portainer portainer portainer/portainer \
-    --set service.type=LoadBalancer \
     --set tls.force=true
 ```
 
@@ -178,18 +149,10 @@ Our YAML manifests support exposing Portainer via either NodePort or Load Balanc
 
 {% tabs %}
 {% tab title="Expose via NodePort" %}
-To expose via NodePort, you can use one of the following commands (Portainer will be available on port `30777`  for HTTP and `30779` for  HTTPS):
-
-**Business Edition:**
+To expose via NodePort, you can use the following command (Portainer will be available on port `30777`  for HTTP and `30779` for  HTTPS):
 
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/ee2-17/portainer.yaml
-```
-
-**Community Edition:**
-
-```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce2-17/portainer.yaml
 ```
 
 {% hint style="info" %}
@@ -198,18 +161,10 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endtab %}
 
 {% tab title="Expose via Load Balancer" %}
-To expose via Load Balancer, use one of the following commands to provision Portainer at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
-
-**Business Edition:**
+To expose via Load Balancer, use the following command to provision Portainer at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
 
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/ee2-17/portainer-lb.yaml
-```
-
-**Community Edition:**
-
-```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce2-17/portainer-lb.yaml
 ```
 
 {% hint style="info" %}

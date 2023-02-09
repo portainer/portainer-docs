@@ -1,8 +1,12 @@
-# Install Portainer with Docker Swarm on Linux
+# Install Portainer BE with Docker Swarm on Linux
+
+{% hint style="info" %}
+These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/swarm/linux.md).
+{% endhint %}
 
 ## Introduction <a href="#introduction" id="introduction"></a>
 
-Portainer consists of two elements, the _Portainer Server_ and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you deploy the Portainer Server and Agent containers on your Linux environment. To add a new Linux Swarm environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../agent/swarm/linux.md).
+Portainer consists of two elements, the _Portainer Server_ and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you deploy the Portainer Server and Agent containers on your Linux environment. To add a new Linux Swarm environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../../agent/swarm/linux.md).
 
 To get started, you will need:
 
@@ -32,19 +36,9 @@ Only do this **once** for your environment, regardless of how many nodes are in 
 
 First, retrieve the stack YML manifest:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 curl -L https://downloads.portainer.io/ee2-17/portainer-agent-stack.yml -o portainer-agent-stack.yml
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-curl -L https://downloads.portainer.io/ce2-17/portainer-agent-stack.yml -o portainer-agent-stack.yml
-```
-{% endtab %}
-{% endtabs %}
 
 Then use the downloaded YML manifest to deploy your stack:
 

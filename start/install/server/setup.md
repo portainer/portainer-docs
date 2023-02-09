@@ -16,9 +16,9 @@ During installation, you can enable or disable connection statistics using the c
 
 <figure><img src="../../../.gitbook/assets/2.15-install-server-setup-matomo.png" alt=""><figcaption></figcaption></figure>
 
-## Add your license key ![](../../../.gitbook/assets/button\_be.png)
+## Add your license key
 
-If you have installed Portainer Business Edition, you will now be asked to provide your license key. You will have been provided this when signing up for Business Edition or the free trial. If you don't have a license key, you can either click the **Don't have a license?** link or [get in touch with our team](mailto:success@portainer.io).
+You will now be asked to provide your license key. You will have been provided this when signing up for Business Edition or the free trial. If you don't have a license key, you can either click the **Don't have a license?** link or [get in touch with our team](mailto:success@portainer.io).
 
 Paste the license key you were provided into the box and click **Submit**.
 

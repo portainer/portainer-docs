@@ -1,8 +1,12 @@
-# Install Portainer with Docker Swarm on WSL / Docker Desktop
+# Install Portainer BE with Docker Swarm on WSL / Docker Desktop
+
+{% hint style="info" %}
+These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/swarm/wsl.md).
+{% endhint %}
 
 ## Introduction
 
-Portainer consists of two elements, the _Portainer Server_, and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you install the Portainer Server container on your Windows environment with WSL and Docker Desktop. To add a new WSL / Docker Desktop Swarm environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../agent/swarm/wsl.md).
+Portainer consists of two elements, the _Portainer Server_, and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you install the Portainer Server container on your Windows environment with WSL and Docker Desktop. To add a new WSL / Docker Desktop Swarm environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../../agent/swarm/wsl.md).
 
 To get started, you will need:
 
@@ -33,19 +37,9 @@ Only do this **once** for your environment, regardless of how many nodes are in 
 
 To begin the installation, first retrieve the stack YML manifest:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 curl -L https://downloads.portainer.io/ee2-17/portainer-agent-stack.yml -o portainer-agent-stack.yml
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-curl -L https://downloads.portainer.io/ce2-17/portainer-agent-stack.yml -o portainer-agent-stack.yml
-```
-{% endtab %}
-{% endtabs %}
 
 Then use the downloaded YML manifest to deploy your stack:
 

@@ -136,4 +136,4 @@ To add credentials for an AWS account, from the [Cloud settings](./) page click 
 
 <figure><img src="../../../.gitbook/assets/2.15-settings-cloud-aws-add.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on AWS](../../../start/install/agent/kaas/eks.md).
+When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on AWS](broken-reference).

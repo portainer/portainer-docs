@@ -1,8 +1,12 @@
-# Install Portainer with Docker on Windows Container Service
+# Install Portainer BE with Docker on Windows Container Service
+
+{% hint style="info" %}
+These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/docker/wcs.md).
+{% endhint %}
 
 ## Introduction
 
-Portainer consists of two elements, the _Portainer Server_, and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you install the Portainer Server container on your Windows server with Windows Containers. To add a new WCS environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../agent/docker/wcs.md).
+Portainer consists of two elements, the _Portainer Server_, and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you install the Portainer Server container on your Windows server with Windows Containers. To add a new WCS environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../../agent/docker/wcs.md).
 
 To get started, you will need:
 
@@ -47,19 +51,9 @@ docker volume create portainer_data
 
 Then, download and install the Portainer Server container:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ee:latest
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce:latest
-```
-{% endtab %}
-{% endtabs %}
 
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.

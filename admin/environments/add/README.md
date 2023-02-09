@@ -22,8 +22,8 @@ Portainer can manage multiple environments in addition to the local environment 
 [nomad.md](nomad.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../start/install/agent/kaas/" %}
-[kaas](../../../start/install/agent/kaas/)
+{% content-ref url="../../../start/agent/kaas/" %}
+[kaas](../../../start/agent/kaas/)
 {% endcontent-ref %}
 
 {% content-ref url="edge.md" %}

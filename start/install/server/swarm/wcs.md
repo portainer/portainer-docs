@@ -1,8 +1,14 @@
-# Install Portainer with Docker Swarm on Windows Container Service
+# Install Portainer BE with Docker Swarm on Windows Container Service
+
+{% hint style="info" %}
+These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/swarm/wcs.md).
+{% endhint %}
+
+
 
 ## Introduction
 
-Portainer consists of two elements, the _Portainer Server_, and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you install the Portainer Server container on your Windows server with Windows Containers. To add a new WCS environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../agent/swarm/wcs.md).
+Portainer consists of two elements, the _Portainer Server_, and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you install the Portainer Server container on your Windows server with Windows Containers. To add a new WCS environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../../agent/docker/wcs.md).
 
 To get started, you will need:
 
@@ -52,19 +58,9 @@ Only do this **once** for your environment, regardless of how many nodes are in 
 
 You can use our YML manifest to run Portainer in Windows using Windows Containers. In PowerShell, run:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 curl https://downloads.portainer.io/ee2-17/portainer_windows_stack.yml -o portainer-windows-stack.yml
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-curl https://downloads.portainer.io/ce2-17/portainer_windows_stack.yml -o portainer-windows-stack.yml
-```
-{% endtab %}
-{% endtabs %}
 
 Then use the downloaded YML manifest to deploy your stack:
 

@@ -98,3 +98,7 @@ All ports can be changed during installation.
 {% content-ref url="install/" %}
 [install](install/)
 {% endcontent-ref %}
+
+{% content-ref url="install-ce/" %}
+[install-ce](install-ce/)
+{% endcontent-ref %}
