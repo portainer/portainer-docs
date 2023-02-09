@@ -66,6 +66,6 @@ This section contains other assorted environment-specific settings.
 
 <figure><img src="../../../.gitbook/assets/2.16-docker-host-setup-other.png" alt=""><figcaption></figcaption></figure>
 
-| Option                                                                     | Overview                                                                                                                          |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Show a notification to indicate out-of-date images for Docker environments | Toggle on to enable the [new image notification](../containers/) feature for this environment. Toggle off to disable the feature. |
+| Option                                                                     | Overview                                                                                                                                                                                                                 |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Show a notification to indicate out-of-date images for Docker environments | <p>Toggle on to enable the <a href="../containers/">new image notification</a> feature for this environment. Toggle off to disable the feature.<br><br>This feature is only available in Portainer Business Edition.</p> |

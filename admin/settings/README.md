@@ -125,7 +125,7 @@ Select **Store in S3** and fill in the options, using the below as a guide.
 | Secret Access Key          | Enter the secret key for your S3 bucket.                                                                                                                                                                                                                                                                      |
 | Region                     | Enter the region where your bucket is located (for example, `us-west-1`).                                                                                                                                                                                                                                     |
 | Bucket name                | Enter the name of your S3 bucket.                                                                                                                                                                                                                                                                             |
-| S3 compatible host         | If you are using a non-AWS S3-compatible provider (such as MinIO), enter the hostname here. If you're using AWS S3, leave this blank.                                                                                                                                                                         |
+| S3 compatible host         | If you are using a non-AWS S3-compatible provider (such as MinIO), enter the URL (including the protocol and port if necessary) here. If you're using AWS S3, leave this blank.                                                                                                                               |
 | Password protect           | Enable this to protect your backups with a password.                                                                                                                                                                                                                                                          |
 | Password                   | Enter the password to set on your backups.                                                                                                                                                                                                                                                                    |
 
@@ -149,15 +149,15 @@ This feature is only available in Portainer Business Edition.
 
 Restoring a configuration is only possible on a fresh instance of Portainer during the initial installation. When you need to restore Portainer, deploy a fresh instance of Portainer with an empty data volume and choose the **Restore Portainer from backup** option during setup, making sure to select **Retrieve from S3**. Complete the fields using the table below as a guide.
 
-| Field/Option       | Overview                                                                                                                              |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Access key ID      | Enter the access key ID for your S3 bucket.                                                                                           |
-| Secret access key  | Enter the secret key for your S3 bucket.                                                                                              |
-| Region             | Enter the region where your bucket is located (for example, `us-west-1`).                                                             |
-| Bucket name        | Enter the name of your S3 bucket.                                                                                                     |
-| S3 Compatible Host | If you are using a non-AWS S3-compatible provider (such as MinIO), enter the hostname here. If you're using AWS S3, leave this blank. |
-| Filename           | Enter the filename of the backup you want to restore.                                                                                 |
-| Password           | Enter the password set on your backup (if any).                                                                                       |
+| Field/Option       | Overview                                                                                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Access key ID      | Enter the access key ID for your S3 bucket.                                                                                                                                     |
+| Secret access key  | Enter the secret key for your S3 bucket.                                                                                                                                        |
+| Region             | Enter the region where your bucket is located (for example, `us-west-1`).                                                                                                       |
+| Bucket name        | Enter the name of your S3 bucket.                                                                                                                                               |
+| S3 Compatible Host | If you are using a non-AWS S3-compatible provider (such as MinIO), enter the URL (including the protocol and port if necessary) here. If you're using AWS S3, leave this blank. |
+| Filename           | Enter the filename of the backup you want to restore.                                                                                                                           |
+| Password           | Enter the password set on your backup (if any).                                                                                                                                 |
 
 <figure><img src="../../.gitbook/assets/2.17-admin-settings-backup-s3-restore.png" alt=""><figcaption></figcaption></figure>
 
