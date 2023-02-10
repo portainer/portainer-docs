@@ -16,6 +16,10 @@ Here you will see a list of your pending and completed updates and rollbacks.
 
 To add a new update schedule, click the **Add update & rollback schedule** button, then fill out the form.
 
+{% hint style="info" %}
+To schedule an update, Portainer must have a snapshot of all the environments you wish to upgrade.
+{% endhint %}
+
 | Field/Option         | Overview                                                                                                                                                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name                 | Enter a name for the scheduled update.                                                                                                                                                                        |
@@ -32,6 +36,10 @@ When you're ready, click **Create Schedule** to schedule the update. You will be
 ## Schedule a rollback
 
 To schedule the rollback of an update, click the **Add update & rollback schedule** button, then fill out the form.
+
+{% hint style="info" %}
+To schedule a rollback, Portainer must have a snapshot of all the environments you wish to roll back.
+{% endhint %}
 
 | Field/Option         | Overview                                                                                                                                                                                                           |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
