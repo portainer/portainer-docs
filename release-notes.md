@@ -6,6 +6,10 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 February 7, 2023
 
+### Known issues
+
+* Running Portainer with Docker Engine <= 19.03 (Docker API <= 1.40) will cause a fatal error similar to `failed initializing upgrade service | error="failed to determine container platform: failed to retrieve docker info: Error response from daemon: client version 1.41 is too new. Maximum supported API version is 1.40"`
+
 ### Breaking changes
 
 * For breaking changes in the API, please see the [REST API changes](release-notes.md#rest-api-changes) section
