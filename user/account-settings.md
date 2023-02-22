@@ -56,3 +56,8 @@ Select a theme from the options. The change will be automatically applied.
 
 <figure><img src="../.gitbook/assets/2.15-accountsettings-theme.png" alt=""><figcaption></figcaption></figure>
 
+### Subtle upgrade button
+
+In Portainer Community Edition, a banner is displayed in the top left of the Portainer window that allows an in-place upgrade from CE to BE. This setting will change the display of this banner to a more subtle version.
+
+<figure><img src="../.gitbook/assets/2.17.1-account-subtle-upgrade.png" alt=""><figcaption></figcaption></figure>

@@ -2,6 +2,27 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.17.1
+
+February 22, 2023
+
+### Resolved CVEs
+
+* Resolved the false positive report of Portainer binaries from VirusTotal. [portainer/portainer#8519](https://github.com/portainer/portainer/issues/8519)
+
+### Docker
+
+* Fixed issue with recreating containers in the Portainer UI if they have been originally created via the CLI. [portainer/portainer#8507](https://github.com/portainer/portainer/issues/8507)
+
+### Portainer
+
+* Fixed an issue where upgrading to Business Edition leaves behind limited stack. [portainer/portainer#8516](https://github.com/portainer/portainer/issues/8516)
+* Fixed an issue where Edge Agent updater leaves behind limited stack.
+* Fixed grammar of placeholder for region field in S3 backup configuration. [portainer/portainer#8515](https://github.com/portainer/portainer/issues/8515)
+* Fixed an issue where an error occurred for upgrading Portainer to 2.17.0 version when Docker engine version is 19.03. [portainer/portainer#8514](https://github.com/portainer/portainer/issues/8514)
+* Fixed an issue where node enforcement message displayed incorrectly for trial license users.
+* Fixed an issue where git credentials are not selected when editing stack deployed from git repository.
+
 ## Release 2.17.0
 
 February 7, 2023
