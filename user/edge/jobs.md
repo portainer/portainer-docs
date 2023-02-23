@@ -7,7 +7,7 @@ This is a beta feature.
 Adding an Edge job is a great way to schedule jobs in your Edge hosts. Jobs can be used to run any scripts you need, for example running a backup in a specified period of time.
 
 {% hint style="info" %}
-This functionality requires you to [enable Edge Compute](../../admin/settings/edge/) features.
+This functionality requires you to [enable Edge Compute](../../admin/settings/edge/) features, and is currently only available for Docker Standalone environments that use `/etc/cron.d` for job scheduling.
 {% endhint %}
 
 {% hint style="danger" %}
