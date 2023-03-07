@@ -10,8 +10,8 @@ Portainer Community Edition is straightforward to install. There are two options
 If you haven't already, please check that your environments meet [our requirements](../requirements-and-prerequisites.md) before proceeding.
 {% endhint %}
 
-{% content-ref url="../install/server/" %}
-[server](../install/server/)
+{% content-ref url="../install-ce/server/" %}
+[server](../install-ce/server/)
 {% endcontent-ref %}
 
 {% content-ref url="../agent/" %}
