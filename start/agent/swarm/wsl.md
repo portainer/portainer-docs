@@ -33,7 +33,7 @@ Only do this **once** for your environment, regardless of how many nodes are in 
 
 From the menu select **Environments** then click **Add environment**.
 
-<figure><img src="../../../.gitbook/assets/2.16-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.16-environments-add (1).gif" alt=""><figcaption></figcaption></figure>
 
 Next, select **Docker Swarm** as the environment type then click **Start Wizard**. Select the **Agent** option and the **Linux & Windows WSL** tab. Copy the command, then run it on the manager node of your Docker Swarm cluster.
 

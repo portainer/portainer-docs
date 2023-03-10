@@ -54,7 +54,7 @@ Once the update completes, you're ready to begin the installation. Which method 
 Using the following command, Portainer will be available on port `30777` for HTTP and `30779` for HTTPS:
 
 ```
-helm install --create-namespace -n portainer portainer portainer/portainer --set enterpriseEdition.enabled=true
+helm upgrade --install --create-namespace -n portainer portainer portainer/portainer --set enterpriseEdition.enabled=true
 ```
 
 {% hint style="info" %}
@@ -66,7 +66,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 In this example, Portainer will be deployed to your cluster and assigned a Cluster IP, with an nginx Ingress Controller at the defined hostname. For more on Ingress options, refer to the list of [Chart Configuration Options](../../../../advanced/helm-chart-configuration-options.md).
 
 ```
-helm install --create-namespace -n portainer portainer portainer/portainer \
+helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set enterpriseEdition.enabled=true \
     --set service.type=ClusterIP \
     --set tls.force=true \
@@ -82,7 +82,7 @@ helm install --create-namespace -n portainer portainer portainer/portainer \
 Using the following command, Portainer will be available at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
 
 ```
-helm install --create-namespace -n portainer portainer portainer/portainer --set service.type=LoadBalancer --set enterpriseEdition.enabled=true
+helm upgrade --install --create-namespace -n portainer portainer portainer/portainer --set service.type=LoadBalancer --set enterpriseEdition.enabled=true
 ```
 
 {% hint style="info" %}

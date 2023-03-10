@@ -4,7 +4,7 @@
 
 From the menu select **Environments** then click **Add environment**.
 
-<figure><img src="../../../.gitbook/assets/2.16-environments-add (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.16-environments-add.gif" alt=""><figcaption></figcaption></figure>
 
 Next, select **Docker Swarm** as the environment type then click **Start Wizard**. Select the **Agent** option and your platform. Copy the command, then run it on the manager node of your Docker Swarm cluster.
 
@@ -53,6 +53,6 @@ Only do this **once** for your environment, regardless of how many nodes are in 
 
 As an optional step you can expand the **More settings** section and categorize the environment by adding it to a [group](../groups.md) or [tagging](../tags.md) it for better searchability.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_api_more_settings (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-docker_api_more_settings (2).png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Connect**. If you have other environments to configure click **Next** to proceed, otherwise click **Close** to return to the list of environments.\
