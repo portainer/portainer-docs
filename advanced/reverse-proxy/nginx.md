@@ -106,7 +106,7 @@ First, create two networks:
 ```
 
 ```
- docker network create -d agent_network
+ docker network create -d overlay agent_network
 ```
 
 Next, create the volume:
