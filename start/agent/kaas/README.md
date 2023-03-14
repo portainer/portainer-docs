@@ -8,7 +8,7 @@ This feature is only available in [Portainer Business Edition](https://www.porta
 
 To get started, select **Environments** from the left hand menu then click **Add Environment**.
 
-<figure><img src="../../../.gitbook/assets/2.16-environments-add (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.16-environments-add.gif" alt=""><figcaption></figcaption></figure>
 
 From the wizard select the **KaaS** option and click **Start Wizard**. Then, select your provider. We currently support the following providers:
 

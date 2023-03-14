@@ -29,7 +29,7 @@ This setting allows you to specify a window within which [automatic updates](../
 If this setting is enabled and an update is made to an application outside of this window, it will not be applied.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_hosts_change_windows_settings (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-docker_hosts_change_windows_settings.png" alt=""><figcaption></figcaption></figure>
 
 ## Docker Security Settings
 

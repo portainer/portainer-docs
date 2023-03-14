@@ -6,7 +6,7 @@ The **Services** menu is only available to Docker Swarm endpoints.
 
 A service consists of an image definition and container configuration as well as instructions on how those containers will be deployed across a Swarm cluster.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_services_list (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-docker_services_list (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 When the [new image notification](../swarm/setup.md#other) feature is enabled, the circle next to the image name indicates whether the local image is up to date, with a green circle indicating it is up to date and a red circle indicating that there is a newer version of the image available at the remote registry. A grey circle indicates Portainer was unable to determine whether there is an update available for the image.
 
