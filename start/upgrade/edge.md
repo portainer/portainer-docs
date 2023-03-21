@@ -66,13 +66,13 @@ To download the manifest, you can use one of the following commands:
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-curl -L https://downloads.portainer.io/ee2-15/portainer-agent-edge-k8s.yaml  -o portainer-agent-edge-k8s.yaml
+curl -L https://downloads.portainer.io/ee2-17/portainer-agent-edge-k8s.yaml  -o portainer-agent-edge-k8s.yaml
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-curl -L https://downloads.portainer.io/ce2-15/portainer-agent-edge-k8s.yaml -o portainer-agent-edge-k8s.yaml  
+curl -L https://downloads.portainer.io/ce2-17/portainer-agent-edge-k8s.yaml -o portainer-agent-edge-k8s.yaml  
 ```
 {% endtab %}
 {% endtabs %}

@@ -88,7 +88,7 @@ https://downloads.portainer.io/ee2-17/portainer-lb.yaml
 **Community Edition:**
 
 ```
-https://downloads.portainer.io/ce2-16/portainer-lb.yaml
+https://downloads.portainer.io/ce2-17/portainer-lb.yaml
 ```
 
 For an agent-only deployment, use one of the following manifests instead:

@@ -12,26 +12,26 @@ To get started, select **Environments** from the left hand menu then click **Add
 
 From the wizard select the **KaaS** option and click **Start Wizard**. Then, select your provider. We currently support the following providers:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="civo.md" %}
+[civo.md](civo.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="linode.md" %}
+[linode.md](linode.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="digitalocean.md" %}
+[digitalocean.md](digitalocean.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="gke.md" %}
+[gke.md](gke.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="eks.md" %}
+[eks.md](eks.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="aks.md" %}
+[aks.md](aks.md)
 {% endcontent-ref %}
