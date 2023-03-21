@@ -6,7 +6,7 @@ OpenAMT allows you to remotely manage your compatible Edge devices from Portaine
 
 To associate an Edge device with OpenAMT you must first add a compatible device. To do this, click **Add Device**. If you have Intel FDO enabled you will be asked to select between Provision bare-metal using Intel FDO and Deploy agent manually - make sure you select **Deploy agent manually** and click **Confirm**.
 
-Next, enter the details for your Edge Agent deployment. This is the same process as setting up a regular Edge Agent, so refer to the [Edge Agent instructions](broken-reference) for more detail.
+Next, enter the details for your Edge Agent deployment. This is the same process as setting up a regular Edge Agent, so refer to the [Edge Agent instructions](../../../../start/agent/edge.md) for more detail.
 
 Once the Edge Agent has been set up and deployed on the remote device, you will see it appear in the list of Edge Devices with a green heartbeat icon.
 

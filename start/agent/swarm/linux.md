@@ -9,7 +9,7 @@ To get started, you will need:
 * The latest version of Docker installed and working.
 * Swarm mode enabled and working, including the overlay network for the swarm service communication.
 * `sudo` access on the manager node of your swarm cluster.
-* The manager and worker nodes must be able to communicate with each other over port `9001`. In addition, the Portainer Server installation must be able to reach the nodes on port `9001`. If this is not possible, we advise looking at the [Edge Agent](broken-reference) instead.
+* The manager and worker nodes must be able to communicate with each other over port `9001`. In addition, the Portainer Server installation must be able to reach the nodes on port `9001`. If this is not possible, we advise looking at the [Edge Agent](../edge.md) instead.
 
 The installation instructions also make the following assumptions about your environment:
 

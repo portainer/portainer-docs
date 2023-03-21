@@ -21,7 +21,3 @@ A ConfigMap or Secret with the **external** flag was created outside of Portaine
 {% content-ref url="remove.md" %}
 [remove.md](remove.md)
 {% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}

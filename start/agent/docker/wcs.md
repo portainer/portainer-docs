@@ -8,7 +8,7 @@ You will need:
 
 * The latest version of Docker installed and working.
 * Administrator access on the machine that will host your Portainer Server instance.
-* Port `9001` accessible on this machine from the Portainer Server instance. If this is not available, we recommend using the [Edge Agent](broken-reference) instead.
+* Port `9001` accessible on this machine from the Portainer Server instance. If this is not available, we recommend using the [Edge Agent](../edge.md) instead.
 
 The installation instructions also make the following assumptions about your environment:
 

@@ -9,7 +9,7 @@ You will need:
 * The latest version of Docker Desktop installed and working.
 * Administrator access on the machine that will host the Portainer Agent.
 * Windows Subsystem for Linux (WSL) installed and a Linux distribution selected. For a new installation we recommend WSL2.
-* Port `9001` accessible on this machine from the Portainer Server instance. If this is not available, we recommend using the [Edge Agent](broken-reference) instead.
+* Port `9001` accessible on this machine from the Portainer Server instance. If this is not available, we recommend using the [Edge Agent](../edge.md) instead.
 
 The installation instructions also make the following assumptions about your environment:
 
