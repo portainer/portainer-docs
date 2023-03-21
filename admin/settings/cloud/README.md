@@ -1,6 +1,6 @@
 # Cloud
 
-In this section you can manage the credentials used with our [KaaS provisioning functionality](broken-reference).
+In this section you can manage the credentials used with our [KaaS provisioning functionality](../../../start/agent/kaas/).
 
 <figure><img src="../../../.gitbook/assets/2.15-settings-cloud-list.png" alt=""><figcaption></figcaption></figure>
 
