@@ -1,7 +1,7 @@
 # Setup
 
 {% hint style="info" %}
-The **Setup** section is only available to Docker Swarm environments.
+The **Swarm Setup** section is only available to Docker Swarm environments.
 {% endhint %}
 
 Under **Setup**, you can make changes to your environment, enabling and disabling features and security settings.
