@@ -1,0 +1,24 @@
+root: ./
+
+redirects:
+    start/agent/docker: admin/environments/add/docker/README.md
+    start/agent/docker/linux: admin/environments/add/docker/README.md
+    start/agent/docker/wsl: admin/environments/add/docker/README.md
+    start/agent/docker/wcs: admin/environments/add/docker/README.md
+    start/agent/swarm: admin/environments/add/swarm/README.md
+    start/agent/swarm/linux: admin/environments/add/swarm/README.md
+    start/agent/swarm/wsl: admin/environments/add/swarm/README.md
+    start/agent/swarm/wcs: admin/environments/add/swarm/README.md    
+    start/agent/kubernetes: admin/environments/add/kubernetes/README.md
+    start/agent/kubernetes/import: admin/environments/add/kubernetes/import.md
+    start/agent/kubernetes/baremetal: admin/environments/add/kubernetes/agent.md
+    start/agent/aci: admin/environments/add/aci.md
+    start/agent/nomad: admin/environments/add/nomad.md
+    start/agent/kaas: admin/environments/add/kaas/README.md
+    start/agent/kaas/civo: admin/environments/add/kaas/civo.md
+    start/agent/kaas/linode: admin/environments/add/kaas/linode.md
+    start/agent/kaas/digitalocean: admin/environments/add/kaas/digitalocean.md
+    start/agent/kaas/gke: admin/environments/add/kaas/gke.md
+    start/agent/kaas/eks: admin/environments/add/kaas/eks.md
+    start/agent/kaas/aks: admin/environments/add/kaas/aks.md
+    start/agent/edge: admin/environments/add/README.md
