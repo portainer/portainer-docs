@@ -79,8 +79,9 @@ Modify your Portainer YAML file to attach the secrets and add the `--mtlscacert`
       placement:
         constraints: [node.role == manager]
     secrets:
-        - portainer.sslcert
-        - portainer.sslkey
+        - portainer.mtlscacert
+        - portainer.mtlsscert
+        - portainer.mtlskey
 ```
 
 and to add the `secrets` definitions to include the secrets we just created:
@@ -103,21 +104,24 @@ If it doesn't already exist, create the `portainer` namespace:
 kubectl create namespace portainer
 ```
 
-Next, create a mTLS secret containing the full certificate chain and matching private key:
+Next, create a secret containing the CA, certificate and matching private key:
 
 ```
-kubectl create secret mtls portainer-mtls-secret -n portainer \
-    --cert=/path/to/cert/file \
-    --key=/path/to/key/file
+kubectl create secret generic portainer-mtls-certs-secret -n portainer \
+    --from-file=mtlsca.crt=ca.crt \
+    --from-file=mtlscert.crt=server.crt \
+    --from-file=mtlskey.key=server.key
 ```
 
-Install via helm with the `mtls.existingSecret` parameter set to the name of the secret you just created:
+Replace `ca.crt`, `server.crt` and `server.key` in the above command with the paths to your CA certificate, certificate and matching key respectively.
+
+Install Portainer via Helm with the `mtls.existingSecret` parameter set to the name of the secret you just created:
 
 {% tabs %}
 {% tab title="NodePort" %}
 ```
 helm install -n portainer portainer portainer/portainer \
-    --set mtls.existingSecret=portainer-mtls-secret \
+    --set mtls.existingSecret=portainer-mtls-certs-secret \
     --set enterpriseEdition.enabled=true
 ```
 {% endtab %}
