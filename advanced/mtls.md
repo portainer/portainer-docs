@@ -16,7 +16,7 @@ In order to configure Portainer with mTLS support, you will need the following:
 * A certificate authority (CA). You can use your own corporate CA or a CA for which you completely control the certificate issuance policy.
 * The CA certificate for your certificate authority, in PEM format (`mtlsca.crt`).
 * A domain (or subdomain) you can point to your Portainer Server instance to be specifically used for mTLS. This will be the domain the server certificate is issued for.
-* A server certificate (`mtlserver.crt`) and corresponding key (`mtlserver.key`) issued by your CA for the Portainer Server, in PEM format. Ensure these are issued with `serverAuth` selected for `extendedKeyUsage`. This certificate should have the domain (or subdomain) that will be used for mTLS as the Subject Alternative Name (SAN).
+* A server certificate (`mtlsserver.crt`) and corresponding key (`mtlsserver.key`) issued by your CA for the Portainer Server, in PEM format. Ensure these are issued with `serverAuth` selected for `extendedKeyUsage`. This certificate should have the domain (or subdomain) that will be used for mTLS as the Subject Alternative Name (SAN).
 * A client certificate (`client.crt`) and corresponding key (`client.key`) issued by your CA for the Edge Agent, in PEM format. Ensure these are issued with `clientAuth` selected for `extendedKeyUsage`.
 
 ## Configuring the Portainer Server
@@ -29,7 +29,7 @@ When deploying your Portainer Server, you will need to make the CA certificate, 
 
 #### Docker Standalone
 
-On your Docker host, upload your CA certificate (`mtlsca.crt`), server certificate (`mtlsserver.crt`) and server key (`mtlserver.key`) into a directory that will be bind mounted into the Portainer container. In this example we assume your certificates are located at `/root/certs`.
+On your Docker host, upload your CA certificate (`mtlsca.crt`), server certificate (`mtlsserver.crt`) and server key (`mtlsserver.key`) into a directory that will be bind mounted into the Portainer container. In this example we assume your certificates are located at `/root/certs`.
 
 Modify your `docker run` command to mount the `/root/certs` directory to `/certs` and add the `--mtlscacert`, `--mtlscert`, and `--mtlskey` options:
 
@@ -51,7 +51,7 @@ This will start Portainer using your provided CA and certificates.
 
 To add mTLS certificates to Portainer Server on Docker Swarm during installation, we recommend adding the necessary files as secrets and then referencing those secrets within the YAML used to deploy Portainer.&#x20;
 
-First, upload your CA certificate (`mtlsca.crt`), server certificate (`mtlserver.crt`) and server key (`mtlserver.key`) into a directory that will be referenced by the secret creation. In this example we assume your certificates are located at `/root/certs`. Once you have uploaded the files, create your secrets as follows:
+First, upload your CA certificate (`mtlsca.crt`), server certificate (`mtlsserver.crt`) and server key (`mtlsserver.key`) into a directory that will be referenced by the secret creation. In this example we assume your certificates are located at `/root/certs`. Once you have uploaded the files, create your secrets as follows:
 
 ```
 docker secret create portainer.mtlscacert /root/certs/mtlsca.crt
