@@ -2,6 +2,33 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.18.2
+
+April ??, 2023
+
+### Upgrade notice
+
+* Users upgrading from 2.16.x should note that a bug was introduced then which prevented enforcing of TLS verifications. This has now been fixed but, in circumstances where certificates were not set up correctly and appeared to work due to the bug, you may now need to resolve the certificate issue or deliberately set the new ‘Skip verification’ toggle.
+
+### Edge
+
+* Fixed issue where users were unable to update their Edge Agent to the latest version because the corresponding option was not available when creating a scheduled update
+
+### Kubernetes
+
+* Increased potential success rate of updating Portainer with larger databases by changing Kubernetes manifest and Helm chart for Portainer to have `initialDelaySeconds` of 45 (sec) and `failureThreshold` of 3. [portainer/portainer#8860](https://github.com/portainer/portainer/issues/8860)
+
+### Docker
+
+* Fixed issue where users were unable to pull the latest image from the image details page [portainer/portainer#8847](https://github.com/portainer/portainer/issues/8847)
+
+### Portainer
+
+* Fixed issue where the option to skip TLS verification was missing when editing a stack created from git. Additionally, to adhere to security best practices, the option’s default value has been corrected to be set to off during migration [portainer/portainer#8853](https://github.com/portainer/portainer/issues/8853)
+* Fixed issue where TLS verification was being skipped when creating / editing stacks created from git in version 2.16.x [portainer/portainer#8853](https://github.com/portainer/portainer/issues/8853)
+* Fixed issue where the port number in the displayed webhook link was incorrect when Portainer was running behind a reverse proxy
+* Resolved an issue with the updated web editor component, where it was not loading long YAML files correctly [portainer/portainer#8848](https://github.com/portainer/portainer/issues/8848)
+
 ## Release 2.18.1
 
 April 18, 2023
@@ -45,7 +72,7 @@ Please note 2.18.0 is not publicly available. This release is 2.18.1 and is our 
 
 </details>
 
-## Upgrade notice
+### Upgrade notice
 
 * Since release 2.17.x we have added the ability to upgrade Edge Agents from Portainer when running on Docker Standalone / Docker Swarm / Nomad. Before using this feature we strongly advise to test this on a non-production environment first and have an alternative method available to connect to the Edge Device.
 * Any clusters connected to Portainer of version 1.23 Kubernetes and above will have their Pod Security Policies (if they have any and are using the pod security constraints feature) updated to the Pod Security Standards
