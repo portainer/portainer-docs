@@ -4,7 +4,7 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.18.2
 
-April ??, 2023
+May 1, 2023
 
 ### Upgrade notice
 
