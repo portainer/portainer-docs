@@ -8,7 +8,7 @@ redirects:
     start/agent/swarm: admin/environments/add/swarm/README.md
     start/agent/swarm/linux: admin/environments/add/swarm/README.md
     start/agent/swarm/wsl: admin/environments/add/swarm/README.md
-    start/agent/swarm/wcs: admin/environments/add/swarm/README.md    
+    start/agent/swarm/wcs: admin/environments/add/swarm/README.md
     start/agent/kubernetes: admin/environments/add/kubernetes/README.md
     start/agent/kubernetes/import: admin/environments/add/kubernetes/import.md
     start/agent/kubernetes/baremetal: admin/environments/add/kubernetes/agent.md
@@ -22,3 +22,24 @@ redirects:
     start/agent/kaas/eks: admin/environments/add/kaas/eks.md
     start/agent/kaas/aks: admin/environments/add/kaas/aks.md
     start/agent/edge: admin/environments/add/README.md
+    start/install/agent/docker: admin/environments/add/docker/README.md
+    start/install/agent/docker/linux: admin/environments/add/docker/README.md
+    start/install/agent/docker/wsl: admin/environments/add/docker/README.md
+    start/install/agent/docker/wcs: admin/environments/add/docker/README.md
+    start/install/agent/swarm: admin/environments/add/swarm/README.md
+    start/install/agent/swarm/linux: admin/environments/add/swarm/README.md
+    start/install/agent/swarm/wsl: admin/environments/add/swarm/README.md
+    start/install/agent/swarm/wcs: admin/environments/add/swarm/README.md
+    start/install/agent/kubernetes: admin/environments/add/kubernetes/README.md
+    start/install/agent/kubernetes/import: admin/environments/add/kubernetes/import.md
+    start/install/agent/kubernetes/baremetal: admin/environments/add/kubernetes/agent.md
+    start/install/agent/aci: admin/environments/add/aci.md
+    start/install/agent/nomad: admin/environments/add/nomad.md
+    start/install/agent/kaas: admin/environments/add/kaas/README.md
+    start/install/agent/kaas/civo: admin/environments/add/kaas/civo.md
+    start/install/agent/kaas/linode: admin/environments/add/kaas/linode.md
+    start/install/agent/kaas/digitalocean: admin/environments/add/kaas/digitalocean.md
+    start/install/agent/kaas/gke: admin/environments/add/kaas/gke.md
+    start/install/agent/kaas/eks: admin/environments/add/kaas/eks.md
+    start/install/agent/kaas/aks: admin/environments/add/kaas/aks.md
+    start/install/agent/edge: admin/environments/add/README.md
