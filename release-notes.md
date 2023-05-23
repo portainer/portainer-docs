@@ -6,34 +6,34 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 May 22, 2023
 
-We're introducing an experimental ChatGPT integration in this release. While this feature opens up exciting possibilities, it is currently in its early stages. We recommend using it for testing and development, but caution should be exercised in production environments. We value your feedback and understanding during this development phase.
+In this release, we introduce an experimental ChatGPT integration. Although it promises exciting possibilities, it's in the early stages of development. We recommend its use for testing and development, and urge caution in production environments. We greatly appreciate your feedback and understanding during this phase.
 
 ### Edge
 
-* Fixed issue where Portainer authentication settings could not be configured when an alternative mTLS certificate was being used
-* Fixed issue where Edge Agent async skipped command processing when resending full snapshot
+* Fixed issue preventing configuration of Portainer authentication settings with an alternative mTLS certificate
+* Resolved issue causing edge agent to skip command processing during full snapshot resend
 
 ### Kubernetes
 
-* Fixed some Kubernetes Advanced deployment screen's Automatic updates section regression of options and their wording from the improved changes made there in 2.17. [portainer/portainer#8950](https://github.com/portainer/portainer/issues/8950)
+* Restored options and wording in the Kubernetes Advanced deployment screen's Automatic updates section, following regression from changes in 2.17. ([portainer/portainer#8950](https://github.com/portainer/portainer/issues/8950))
 
 ### Docker
 
-* Fixed issue where network details were not showing correctly when containers were running on an unexpected Docker Swarm node [portainer/portainer#8981](https://github.com/portainer/portainer/issues/8981)
+* Resolved issue preventing correct display of network details when containers are running on an unexpected Docker swarm node. ([portainer/portainer#8981](https://github.com/portainer/portainer/issues/8981))
 
 ### Portainer
 
-* Introduced ChatGPT integration as an experimental feature which is not recommended for use in production environments
-* Fixed issue where LDAP server failed to create connection when using TLS 1.2 [portainer/portainer#8980](https://github.com/portainer/portainer/issues/8980)
-* Small UI changes to clarify existing experimental and beta features, ensuring they show the right icon and wording. [portainer/portainer#8951](https://github.com/portainer/portainer/issues/8951)
-* Fixed issue where polling indicator was floating incorrectly in UI when pulling git repo list in stack creation page [portainer/portainer#8982](https://github.com/portainer/portainer/issues/8982)
-* Fixed issue where syntax styling was showing incorrectly in web editor [portainer/portainer#8984](https://github.com/portainer/portainer/issues/8984)
-* Improved button color contrast for web editor [portainer/portainer#8985](https://github.com/portainer/portainer/issues/8985)
-* Fixed behavior of web editor selection visual hierarchy [portainer/portainer#8986](https://github.com/portainer/portainer/issues/8986)
+* Introduced ChatGPT integration as an experimental feature, currently not recommended for production environment use
+* Fixed issue preventing LDAP server from creating a connection when using TLS 1.2. ([portainer/portainer#8980](https://github.com/portainer/portainer/issues/8980))
+* Implemented minor UI changes to clarify existing experimental and beta features, ensuring accurate icon and wording display. ([portainer/portainer#8951](https://github.com/portainer/portainer/issues/8951))
+* Corrected an issue causing the polling indicator to float incorrectly in UI when pulling Git repo list on the stack creation page. ([portainer/portainer#8982](https://github.com/portainer/portainer/issues/8982))
+* Resolved syntax styling display issue in web editor. ([portainer/portainer#8984](https://github.com/portainer/portainer/issues/8984))
+* Improved button color contrast in web editor. ([portainer/portainer#8985](https://github.com/portainer/portainer/issues/8985))
+* Fixed visual hierarchy in web editor selection behavior. ([portainer/portainer#8986](https://github.com/portainer/portainer/issues/8986))
 
 ### REST API Changes
 
-* Fixed issue where 'team' was used for swagger API docs and this has been corrected as 'teams' [portainer/portainer#8983](https://github.com/portainer/portainer/issues/8983)
+* Corrected 'team' to 'teams' in Swagger API docs. ([portainer/portainer#8983](https://github.com/portainer/portainer/issues/8983))
 
 ## Release 2.18.2
 
