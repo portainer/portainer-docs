@@ -105,6 +105,20 @@ Stops a container from appearing in the Portainer UI through the container label
 
 <figure><img src="../../.gitbook/assets/2.15-settings-settings-hiddencontainers.png" alt=""><figcaption></figcaption></figure>
 
+## Experimental features
+
+This section allows you to enable experimental Portainer features for use in your deployment. These features are in early development and have gone through a limited set of testing, and are provided to users in order to gather feedback on the feature at an earlier stage of development.
+
+{% hint style="danger" %}
+Enabling experimental features on production deployments should be done cautiously and at your own risk.
+{% endhint %}
+
+| Field/Option              | Overview                                                                                                                                                                                     |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable OpenAI integration | Toggle this on to enable the OpenAI integration. When this is enabled, individual users will need to add their OpenAI key in their account settings for the feature to be available to them. |
+
+<figure><img src="../../.gitbook/assets/2.18.3-settings-experimental.png" alt=""><figcaption></figcaption></figure>
+
 ## Backup Portainer
 
 This setting contains all of the information that Portainer stores on the `/data` volume, archived in a `tar.gz` file, and is optionally encrypted with a password. This archive is all you need to restore Portainer.

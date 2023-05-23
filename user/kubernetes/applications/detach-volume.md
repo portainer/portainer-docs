@@ -2,7 +2,7 @@
 
 From the menu select **Applications**, select the application then click **Edit this application**.
 
-<figure><img src="../../../.gitbook/assets/2.15-k8s_kubernetes_applications_edit_app.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-k8s_kubernetes_applications_edit_app (1).gif" alt=""><figcaption></figcaption></figure>
 
 Scroll down to the **Persisting data** section and click the trash can icon to the right of the volume. Scroll down and click **Update application**. When the confirmation message appears, click **Update**.
 

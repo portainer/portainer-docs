@@ -53,7 +53,11 @@ Once confirmation is received, the Edge Agent decrypts the credentials and opens
 
 Sometimes Portainer will ask the agent to establish a tunnel. This happens when an admin selects an Edge environment for interactive management via the Portainer UI or the API. Once selected, the 'you are required' flag triggers the connection process. If default settings are in use, it takes about 10 seconds for the agent to poll and establish a tunnel. That’s about 5 seconds wait time until polling then a few seconds for the tunnel to open. The admin is shown this message while this happens:
 
-![](../.gitbook/assets/edge-advanced-2.png)
+<div align="center">
+
+<img src="../.gitbook/assets/edge-advanced-2.png" alt="">
+
+</div>
 
 ### Terminating the connection
 
