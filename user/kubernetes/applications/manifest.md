@@ -32,14 +32,16 @@ Use the provided fields to enter the details of your Git repository containing y
 
 <figure><img src="../../../.gitbook/assets/2.16-stacks-add-gitcreds.png" alt=""><figcaption></figcaption></figure>
 
-| Field/Option         | Overview                                                                                                                                                                                          |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Repository URL       | Enter the repository URL. If you have enabled Authentication above the credentials will be used to access the repository. The below options will be populated by what is found in the repository. |
-| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                   |
-| Manifest path        | Enter the path to your manifest file relative to the root of your repository.                                                                                                                     |
-| Additional paths     | Click **add file** to define additional manifests or compose files to process as part of the deployment.                                                                                          |
+| Field/Option          | Overview                                                                                                                                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Repository URL        | Enter the repository URL. If you have enabled Authentication above the credentials will be used to access the repository. The below options will be populated by what is found in the repository. |
+| Repository reference  | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                   |
+| Manifest path         | Enter the path to your manifest file relative to the root of your repository.                                                                                                                     |
+| Additional paths      | Click **Add file** to define additional manifests or compose files to process as part of the deployment.                                                                                          |
+| Automatic updates     | Toggle this on to enable automatic updates (see below).                                                                                                                                           |
+| Skip TLS Verification | Toggle this on to skip the verification of TLS certificates used by your repository. This is useful if your repo uses a self-signed certificate.                                                  |
 
-<figure><img src="../../../.gitbook/assets/2.16-applications-manifest-gitdetails.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.18.3-k8s-applications-manifest-git-settings.png" alt=""><figcaption></figcaption></figure>
 
 ### Automatic updates
 

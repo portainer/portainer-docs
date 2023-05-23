@@ -113,14 +113,16 @@ If you have 2FA configured in GitHub, your passcode is your password.
 
 <figure><img src="../../../.gitbook/assets/2.16-stacks-add-gitcreds.png" alt=""><figcaption></figcaption></figure>
 
-| Field/Option         | Overview                                                                                                                                                                                          |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Repository URL       | Enter the repository URL. If you have enabled Authentication above the credentials will be used to access the repository. The below options will be populated by what is found in the repository. |
-| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                   |
-| Compose path         | Enter the path to the Compose file from the root of the repository.                                                                                                                               |
-| Additional paths     | Click **add file** to add additional files to be parsed by the build (for example, an environment-specific compose file).                                                                         |
+| Field/Option          | Overview                                                                                                                                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Repository URL        | Enter the repository URL. If you have enabled Authentication above the credentials will be used to access the repository. The below options will be populated by what is found in the repository. |
+| Repository reference  | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                   |
+| Compose path          | Enter the path to the Compose file from the root of the repository.                                                                                                                               |
+| Additional paths      | Click **Add file** to add additional files to be parsed by the build (for example, an environment-specific compose file).                                                                         |
+| Automatic updates     | Toggle this on to enable automatic updates (see below).                                                                                                                                           |
+| Skip TLS verification | Toggle this on to skip the verification of TLS certificates used by your repository. This is useful if your repo uses a self-signed certificate.                                                  |
 
-<figure><img src="../../../.gitbook/assets/2.16-stacks-add-gitdetails.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.18.3-stacks-add-git-settings.png" alt=""><figcaption></figcaption></figure>
 
 ### Automatic updates
 
