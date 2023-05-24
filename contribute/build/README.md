@@ -29,19 +29,21 @@ cd portainer
 Install the development dependencies:
 
 ```
-yarn
+make deps-all
 ```
 
 And finally, build and run the project:
 
 ```
-yarn start
+make dev
 ```
 
-You should now be able to access Portainer at `https://localhost:9443`.
+You should now be able to access Portainer at `https://localhost:9443` and UI dev server runs on `http://localhost:8999`.
+
+For additional commands, run `make help`.
 
 {% hint style="info" %}
-The frontend application will update when you save your changes to any of the sources. Just refresh the browser to see the changes
+The frontend application will update and refresh when you save your changes to any of the sources.
 {% endhint %}
 
 ## Contribution Guidelines
