@@ -29,7 +29,7 @@ cd portainer
 Install the development dependencies:
 
 ```
-make deps-all
+make deps
 ```
 
 And finally, build and run the project:
