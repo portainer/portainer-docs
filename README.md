@@ -14,7 +14,7 @@ Portainer Business Edition requires a license key to install and use. If you don
 
 Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
 
-Our team is here to help you on your journey. Community and five nodes free users can get assistance through our [community support channels](./#community-edition), and paid Business customers through our [business support channels](./#business-edition).
+Our team is here to help you on your journey. Community and three nodes free users can get assistance through our [community support channels](./#community-edition), and paid Business customers through our [business support channels](./#business-edition).
 
 ## Documentation
 
