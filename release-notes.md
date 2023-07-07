@@ -2,6 +2,48 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.18.4
+
+July 7, 2023
+
+This release includes an experimental ChatGPT integration. Although it promises exciting possibilities, it's in the early stages of development. We recommend its use for testing and development, and urge caution in production environments. We greatly appreciate your feedback and understanding during this phase. [portainer/portainer#9116](https://github.com/portainer/portainer/issues/9116)
+
+### Resolved CVEs
+
+<details>
+
+<summary>Portainer dependencies</summary>
+
+* CVE-2023-28840 [portainer/portainer#9058](https://github.com/portainer/portainer/issues/9058)
+
+</details>
+
+### Docker
+
+* Upgraded Docker Compose version to v2.17.2 for Portainer Agent. [portainer/portainer#9095](https://github.com/portainer/portainer/issues/9095)
+* Resolve a problem building Portainer due to an issue with v1.53.0 of golangci-lint. [portainer/portainer#9057](https://github.com/portainer/portainer/issues/9057)
+
+### Swarm
+
+* Resolved an issue where users were unable to migrate or duplicate their swarm stack. [portainer/portainer#9097](https://github.com/portainer/portainer/issues/9097)
+
+### Portainer
+
+* Resolved an issue where the static IP addresses in a macvlan were unexpectedly changed. [portainer/portainer#9101](https://github.com/portainer/portainer/issues/9101)
+* Enhanced the user experience of the 'Skip TLS Verification' feature by adding a confirmation modal. [portainer/portainer#9098](https://github.com/portainer/portainer/issues/9098)
+* Resolved an issue where recreate containers fail when it has a shared and external volumes. [portainer/portainer#9102](https://github.com/portainer/portainer/issues/9102)
+* Fixed issue where registry credential does not sync between registry configuration page and registry details page.
+* Fixed an issue around prompting for a new license.
+* Improved the way node count shows for trial licenses.
+* Resolved an issue where update or rollback was only executed when connection was re-established.
+* Introduced a change to allow removal of all Portainer licenses.
+* Fixed an issue where a warning banner was not always showing in the Homepage or Licenses page when licenses were close to expiring.
+
+### REST API Changes
+
+* Resolved an issue where the response from the API was inconsistent when querying all endpoints and a specific endpoint. [portainer/portainer#9096](https://github.com/portainer/portainer/issues/9096)
+* Corrected 'container' to 'containers' in Swagger API docs (Business Edition).
+
 ## Release 2.18.3
 
 May 22, 2023

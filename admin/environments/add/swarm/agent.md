@@ -61,10 +61,7 @@ Once the agent is running on the Docker Swarm cluster, enter the environment det
 Only do this **once** for your environment, regardless of how many nodes are in the cluster. You do **not** need to add each node as an individual environment in Portainer. Adding just one node (we recommend the manager node) will allow Portainer to manage the entire cluster.
 {% endhint %}
 
-| Field               | Overview                                                                                                                |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Name                | Give the environment a descriptive name.                                                                                |
-| Environment address | Enter the IP or DNS name at which the Portainer Server instance can reach the environment along with the port (`9001`). |
+<table><thead><tr><th width="238">Field</th><th>Overview</th></tr></thead><tbody><tr><td>Name</td><td>Give the environment a descriptive name.</td></tr><tr><td>Environment address</td><td>Enter the IP or DNS name at which the Portainer Server instance can reach the environment along with the port (<code>9001</code>).</td></tr></tbody></table>
 
 <figure><img src="../../../../.gitbook/assets/2.15-environments-add-swarm-agent-config.png" alt=""><figcaption></figcaption></figure>
 

@@ -83,7 +83,7 @@ env_file:
 Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself which would take it out of sync with your local copy. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_add_stack_upload_env_var (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-docker_add_stack_upload_env_var.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready click **Deploy the stack**.
 

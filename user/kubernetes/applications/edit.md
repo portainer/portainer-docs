@@ -2,7 +2,7 @@
 
 From the menu select **Applications**, select the application you want to edit, then click **Edit this application**.
 
-<figure><img src="../../../.gitbook/assets/2.15-k8s_kubernetes_applications_edit_app.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-k8s_kubernetes_applications_edit_app (1).gif" alt=""><figcaption></figcaption></figure>
 
 Your editing options will depend on how the application was deployed initially.
 

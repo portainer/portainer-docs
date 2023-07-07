@@ -44,14 +44,14 @@ This section allows you to override any global deployment options set for Kubern
 This section only appears if the **Allow per environment override** option is enabled in [Settings](../../../admin/settings/#deployment-options).
 {% endhint %}
 
-| Field/Option                       | Overview                                                                                                                                                                       |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Override global deployment options | Enable this option to override the global deployment options for this environment.                                                                                             |
-| Enforce code-based deployment      | When override is enabled, enable this option to hide the Add with form button when deploying applications and prevent the adding or editing of Kubernetes resources via forms. |
-| Allow web editor use               | When code-based deployment is enforced, enable this to allow the use of the web editor when deploying an application.                                                          |
-| Allow file upload                  | When code-based deployment is enforced, enable this allow the use of the URL option when deploying an application.                                                             |
+| Field/Option                             | Overview                                                                                                                                                                       |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Override global deployment options       | Enable this option to override the global deployment options for this environment.                                                                                             |
+| Enforce code-based deployment            | When override is enabled, enable this option to hide the Add with form button when deploying applications and prevent the adding or editing of Kubernetes resources via forms. |
+| Allow web editor and custom template use | When code-based deployment is enforced, enable this to allow the use of the web editor and custom templates when deploying an application.                                     |
+| Allow specifying of a manifest via a URL | When code-based deployment is enforced, enable this allow the use of the URL option when deploying an application.                                                             |
 
-<figure><img src="../../../.gitbook/assets/2.17-k8s-cluster-setup-deployment.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.18.3-k8s-cluster-setup-deploymentoptions.png" alt=""><figcaption></figcaption></figure>
 
 ## Security
 

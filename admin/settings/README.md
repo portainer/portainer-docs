@@ -54,14 +54,14 @@ Tokens used in `kubeconfig` files become invalid when Portainer restarts — irr
 
 In this section you can configure various Kubernetes-specific deployment options.
 
-| Field/Option                   | Overview                                                                                                                                             |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enforce code-based deployment  | Enable this option to hide the Add with form button when deploying applications and prevent the adding or editing of Kubernetes resources via forms. |
-| Allow web editor use           | When code-based deployment is enforced, enable this to allow the use of the web editor when deploying an application.                                |
-| Allow file upload              | When code-based deployment is enforced, enable this allow the use of the URL option when deploying an application.                                   |
-| Allow per-environment override | Enable this to allow the above enforcement options to be overridden on a per-environment basis.                                                      |
+| Field/Option                             | Overview                                                                                                                                             |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enforce code-based deployment            | Enable this option to hide the Add with form button when deploying applications and prevent the adding or editing of Kubernetes resources via forms. |
+| Allow web editor and custom template use | When code-based deployment is enforced, enable this to allow the use of the web editor and custom templates when deploying an application.           |
+| Allow specifying of a manifest via a URL | When code-based deployment is enforced, enable this allow the use of the URL option when deploying an application.                                   |
+| Allow per-environment override           | Enable this to allow the above enforcement options to be overridden on a per-environment basis.                                                      |
 
-<figure><img src="../../.gitbook/assets/2.17-admin-settings-kubernetes-deploymentoptions.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.18.3-settings-deploymentoptions.png" alt=""><figcaption></figcaption></figure>
 
 ## Certificate Authority file for Kubernetes Helm repositories
 

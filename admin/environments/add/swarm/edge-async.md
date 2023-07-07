@@ -37,7 +37,7 @@ Select **Docker Swarm** then click **Start Wizard**. Then select the **Edge Agen
 | Name                     | Enter a name for your environment.                                                                                                                                               |
 | Portainer API server URL | Enter the URL and port of your Portainer Server instance as it will be seen from your Edge environment. If using a FQDN, ensure that DNS is properly configured to provide this. |
 
-<figure><img src="../../../../.gitbook/assets/2.18-environments-add-docker-edge-async-name.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.18-environments-add-docker-edge-async-name (1).png" alt=""><figcaption></figcaption></figure>
 
 As an optional step you can expand the **More settings** section and adjust the **Ping**, **Snapshot** and **Command** intervals for the environment - this defines how often this Edge Agent will check in with the Portainer Server for status updates, snapshot updates and to see if there are new pending commands to run, respectively. The default for each is once a minute, but the defaults can be adjusted in the [Edge Compute settings](../../../settings/edge.md#async-check-in-intervals).&#x20;
 

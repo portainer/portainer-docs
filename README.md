@@ -9,7 +9,7 @@ Welcome to Portainer's official documentation site.
 **Portainer Business Edition (BE)** is our commercial offering. With features geared towards businesses and larger organizations such as [Role-Based Access Control](admin/users/roles.md), [registry management](admin/registries/browse.md), and [dedicated support](./#getting-support), Portainer BE is a powerful toolset that allows you to easily build and manage containers in Docker, Docker Swarm, Kubernetes and Azure ACI.
 
 {% hint style="info" %}
-Portainer Business Edition requires a license key to install and use. If you don't currently have a license key, you can [request five nodes free](https://www.portainer.io/pricing/take5) of Portainer Business Edition or [purchase a license](https://www.portainer.io/pricing).
+Portainer Business Edition requires a license key to install and use. If you don't currently have a license key, you can [request three nodes free](https://www.portainer.io/get-a-license) of Portainer Business Edition or [purchase a license](https://www.portainer.io/pricing).
 {% endhint %}
 
 Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
@@ -26,9 +26,9 @@ As an open source product we rely on users in our community to support one anoth
 
 ## Getting support
 
-### Community Edition, Five Node Free and Home & Student Users
+### Community Edition, Three Node Free and Home & Student Users
 
-Community Edition, five nodes free and Home & Student users can get support through the following channels:
+Community Edition, three nodes free and Home & Student users can get support through the following channels:
 
 * **Ask questions** either in [GitHub Issues](https://github.com/portainer/portainer/issues) or the [community Slack channel](https://join.slack.com/t/portainer/shared\_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA). Other platforms exist (Reddit, Discord, Stack Overflow) but we are less active in those spaces.
 * **Log bugs** in [GitHub Issues](https://github.com/portainer/portainer/issues) so they can be properly managed.

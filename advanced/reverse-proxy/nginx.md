@@ -140,7 +140,7 @@ services:
       # deployed inside an overlay network
       AGENT_CLUSTER_ADDR: tasks.agent
       # AGENT_PORT: 9001
-      # LOG_LEVEL: debug
+      # LOG_LEVEL: DEBUG
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
@@ -204,7 +204,7 @@ services:
       # deployed inside an overlay network
       AGENT_CLUSTER_ADDR: tasks.agent
       # AGENT_PORT: 9001
-      # LOG_LEVEL: debug
+      # LOG_LEVEL: DEBUG
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
