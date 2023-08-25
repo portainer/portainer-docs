@@ -289,7 +289,7 @@
 
 * [Knowledge Base](https://portal.portainer.io/knowledge)
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
-* [Slack](https://join.slack.com/t/portainer/shared\_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA)
+* [Slack](https://join.slack.com/t/portainer/shared\_invite/zt-190q9nm5v-uT0p0WFkn\~K1yv2QlnHJNQ)
 * [Discord](https://discord.com/invite/j8fVken)
 * [Open a support request](https://www.portainer.io/portainer-business-support)
 
