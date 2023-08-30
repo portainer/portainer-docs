@@ -1,8 +1,8 @@
 # Build and host your own app templates
 
-The best way to do this is to [bind-mount your own template file](../cli.md#defining-your-own-app-templates) directly into the Portainer container. You can also build your own container that will use Nginx to serve the template definitions.
+To provide your own template files, you will need to host your files somewhere accessible by the Portainer Server instance. This could be somewhere like GitHub, a web server, or perhaps a container running nginx.
 
-First, clone the [Portainer templates repository](https://github.com/portainer/templates), edit the templates file, then build and run the container:
+As an example, the Portainer templates repository includes a `Dockerfile` that lets you start it as a container to serve the JSON file. To set this up, first clone the [Portainer templates repository](https://github.com/portainer/templates), edit the templates file, then build and run the container:
 
 ```
 git clone https://github.com/portainer/templates.git portainer-templates
