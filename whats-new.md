@@ -56,7 +56,7 @@ In version 2.18 we added provisioning of MicroK8s directly on to fresh machines 
 
 You can also now specify which nodes should be control planes when provisioning, and we've refreshed the provisioning workflow to take advantage of the new functionality.
 
-### Annotation support for services
+### Annotation support for services ![](.gitbook/assets/button\_be.png)
 
 Portainer now supports [configuring annotations for Kubernetes services](user/kubernetes/applications/add.md#publishing-the-application) from the UI, alongside the other areas that already supported annotations in previous versions.
 
