@@ -75,7 +75,7 @@ August 31, 2023
 
 ### Kubernetes
 
-* Resolved an issue around Operator role users not being able to perform rolling restart, redeploy and rollback to previous version for Deployment, DaemonSet and StatefulSet resources. [portainer/portainer#10105](https://github.com/portainer/portainer/issues/10105)
+* Resolved an issue around Operator role users not being able to perform rolling restart, redeploy and rollback to previous version for Deployment, DaemonSet and StatefulSet resources.
 * Resolved an issue introduced in 2.18 that prevented the use of Amazon EKS provisioning of a Kubernetes as a Service (KaaS) cluster.
 * Fixed a Kubernetes environment issue when restricting access to the default namespace, where any other namespace with a resource quota may have the resource reservations of its apps incorrectly calculated, preventing standard users from editing the apps.
 * Amended the path for the eksctl binary (used by Amazon EKS KaaS cluster provisioning functionality) to a new expected location.
@@ -83,8 +83,8 @@ August 31, 2023
 * Resolved an issue with Kubernetes ECR image pull where the secret token was not updating on manifest deployment. [portainer/portainer#10119](https://github.com/portainer/portainer/issues/10119)
 * Resolved an issue on use of the 'Restrict Proc Mount Types' Kubernetes pod security constraint where the restriction was not being applied.
 * Resolved an issue in the Kubernetes Advanced deployment screen, where a backend panic could occur when deploying some invalid YAML manifests.
-* Updated the link to Portainer documentation (following docs reorganization) for Kubernetes Add Environment via kubeconfig Import. [portainer/portainer#9999](https://github.com/portainer/portainer/issues/9999)
-* Resolved an issue where Node stats for a Google Kubernetes Engine (GKE) cluster gave an error 'unable to retrieve node metrics'. [portainer/portainer#10114](https://github.com/portainer/portainer/issues/10114)
+* Updated the link to Portainer documentation (following docs reorganization) for Kubernetes Add Environment via kubeconfig Import.
+* Resolved an issue where Node stats for a Google Kubernetes Engine (GKE) cluster gave an error 'unable to retrieve node metrics'.
 * Migrated the Kubernetes Add/Edit Application screen's Services section from Angular to React. [portainer/portainer#9235](https://github.com/portainer/portainer/issues/9235)
 * Reintroduced the ability to specify and use (via Add/Edit Application) ingress defaults (hostname and annotations). [portainer/portainer#10030](https://github.com/portainer/portainer/issues/10030)
 * Reintroduced the ability to publish via ingress from the Add/Edit Application screen. [portainer/portainer#10103](https://github.com/portainer/portainer/issues/10103)
@@ -157,7 +157,7 @@ August 31, 2023
 * Fixed a security issue where usernames and passwords were displayed in responses. [portainer/portainer#10140](https://github.com/portainer/portainer/issues/10140)
 * Improved error logging in libhttp to provide more useful context. [portainer/portainer#10142](https://github.com/portainer/portainer/issues/10142)
 * Addressed an issue where TLS handshake error messages were being logged, which should only occur when using the DEBUG log level. [portainer/portainer#10144](https://github.com/portainer/portainer/issues/10144)
-* Fixed an issue where using spaces in an Organizational Unit (OU) or Common Name (CN) name caused incorrect data to be displayed in the Active Directory configuration. [portainer/portainer#10145](https://github.com/portainer/portainer/issues/10145)
+* Fixed an issue where using spaces in an Organizational Unit (OU) or Common Name (CN) name caused incorrect data to be displayed in the Active Directory configuration.
 * Fixed an issue where Git deployment did not synchronize authentication status.
 * Resolved an issue where unnecessary snapshots were being loaded on the home page, leading to improved loading times and a smoother user experience [portainer/portainer#10147](https://github.com/portainer/portainer/issues/10147)
 * Resolved an issue where users were not being notified about the proper referencing of their uploaded .env files, requiring them to now utilize "stack.env" for appropriate referencing [portainer/portainer#10148](https://github.com/portainer/portainer/issues/10148)
