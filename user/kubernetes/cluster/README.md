@@ -27,7 +27,7 @@ This section only appears when the environment was provisioned via the [Create a
 In this section you can see and make changes to the configuration of your MicroK8s cluster provisioned by Portainer.
 
 {% hint style="warning" %}
-This functionality is in beta and only tested with some configurations. Refer to our known issues knowledge base article for caveats when using this feature.
+This functionality is in beta and only tested with some configurations. Refer to our [known issues knowledge base article](https://portal.portainer.io/knowledge/microk8s-known-issues) for caveats when using this feature.
 {% endhint %}
 
 | Field/Option                        | Overview                                                                                                                                                                                                                                                                                                                    |
