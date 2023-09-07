@@ -9,7 +9,7 @@ Portainer consists of two elements, the _Portainer Server_ and the _Portainer Ag
 In order to connect to and deploy MicroK8s and the Portainer Agent on your existing infrastructure, you will need:
 
 * One or more Linux-based machines on which MicroK8s will be deployed. We have primarily tested on Ubuntu 20.04 LTS but most comparable Linux distributions should work. These machines can be bare metal servers or virtual machines.
-* Root or sudo-level SSH access to the above machines on port `22`. This is needed in order to install MicroK8s. Portainer supports both password-based and key-based authentication.
+* Root or passwordless sudo SSH access to the above machines on port `22`. This is needed in order to install MicroK8s. Portainer supports both password-based and key-based authentication.
 * The `snap` tool installed on the above machines. You can find installation instructions for most Linux distributions [at the Snapcraft website](https://snapcraft.io/docs/installing-snapd). The `snap` tool is used to install MicroK8s and any selected addons.
 * Communication between the Portainer Server and the above machines, as well as communication between the individual machines in the cluster. This is to ensure the Portainer Server can reach the machines both for the initial installation and for communication with the Portainer Agent once the cluster is up and running, and so that the cluster nodes can communicate with each other.
 

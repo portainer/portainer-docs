@@ -13,6 +13,11 @@ August 31, 2023
 * Helm, eksctl, and docker-compose have been updated to newer versions.
 * Internal versioning on stacks feature has introduced file structure changes in 2.19.
 * We have addressed an API issue in which an incorrect parameter was being used for API endpoint /edge\_groups. Users relying on the HasEdgeGroup parameter should now use HasEdgeJob to achieve the intended functionality.
+* Four API endpoints are broken and will be restored in the next release:
+  * POST `/custom_templates`
+  * POST `/edge_jobs`
+  * POST `/edge_stacks`
+  * POST `/stacks`
 
 ### Resolved CVEs
 
@@ -208,6 +213,140 @@ August 31, 2023
 * Corrected 'ResourceId' and 'endpointId' as required instead of optional in Swagger API documentation for webhooks [portainer/portainer#9121](https://github.com/portainer/portainer/issues/9121)
 * Fixed the Swagger API documentation to require 'endpointId' when updating a stack [portainer/portainer#10161](https://github.com/portainer/portainer/issues/10161)
 * Corrected 'Endpoints' to be listed in alphabetical order in Swagger API docs [portainer/portainer#10158](https://github.com/portainer/portainer/issues/10158)
+
+<details>
+
+<summary>Broken endpoints: 4</summary>
+
+* POST `/custom_templates`
+* POST `/edge_jobs`
+* POST `/edge_stacks`
+* POST `/stacks`
+
+</details>
+
+<details>
+
+<summary>New endpoints: 44</summary>
+
+* POST `/custom_templates/file`
+* POST `/custom_templates/repository`
+* POST `/custom_templates/string`
+* PUT `/custom_templates/{id}/git_fetch`
+* POST `/edge_jobs/create/file`
+* POST `/edge_jobs/create/string`
+* POST `/edge_stacks/create/file`
+* POST `/edge_stacks/create/repository`
+* POST `/edge_stacks/create/string`
+* PUT `/endpoints/relations`
+* POST `/gitops/repo/file/preview`
+* GET `/kubernetes/{id}/ingresscontrollers`
+* PUT `/kubernetes/{id}/ingresscontrollers`
+* POST `/kubernetes/{id}/ingresses/delete`
+* GET `/kubernetes/{id}/metrics/nodes`
+* GET `/kubernetes/{id}/metrics/nodes/{name}`
+* GET `/kubernetes/{id}/metrics/pods/{namespace}`
+* GET `/kubernetes/{id}/metrics/pods/{namespace}/{name}`
+* GET `/kubernetes/{id}/namespaces`
+* DELETE `/kubernetes/{id}/namespaces/{namespace}`
+* GET `/kubernetes/{id}/namespaces/{namespace}`
+* POST `/kubernetes/{id}/namespaces/{namespace}`
+* PUT `/kubernetes/{id}/namespaces/{namespace}`
+* GET `/kubernetes/{id}/namespaces/{namespace}/ingresscontrollers`
+* PUT `/kubernetes/{id}/namespaces/{namespace}/ingresscontrollers`
+* GET `/kubernetes/{id}/namespaces/{namespace}/ingresses`
+* POST `/kubernetes/{id}/namespaces/{namespace}/ingresses`
+* PUT `/kubernetes/{id}/namespaces/{namespace}/ingresses`
+* GET `/kubernetes/{id}/namespaces/{namespace}/services`
+* POST `/kubernetes/{id}/namespaces/{namespace}/services`
+* PUT `/kubernetes/{id}/namespaces/{namespace}/services`
+* POST `/kubernetes/{id}/services/delete`
+* POST `/stacks/create/kubernetes/repository`
+* POST `/stacks/create/kubernetes/string`
+* POST `/stacks/create/kubernetes/url`
+* POST `/stacks/create/standalone/file`
+* POST `/stacks/create/standalone/repository`
+* POST `/stacks/create/standalone/string`
+* POST `/stacks/create/swarm/file`
+* POST `/stacks/create/swarm/repository`
+* POST `/stacks/create/swarm/string`
+* POST `/webhooks/{id}`
+* DELETE `/webhooks/{token}`
+* PUT `/webhooks/{token}`
+
+</details>
+
+<details>
+
+<summary>Modified endpoints: 28</summary>
+
+* PUT `/custom_templates/{id}`
+* PUT `/edge_stacks/{id}`
+* PUT `/edge_stacks/{id}/status`
+* DELETE `/edge_stacks/{id}/status/{endpoint_id}`
+  * New path param: environmentId
+  * Deprecated changed from false to true
+* GET `/endpoints`
+  * New query param: edgeCheckInPassedSeconds
+  * New query param: edgeStackStatus
+  * New query param: excludeSnapshots
+* POST `/endpoints`
+* DELETE `/endpoints/{id}`
+  * Responses changed
+    * New response: 403
+* POST `/fdo/configure/{guid}`
+  * New path param: guid
+* DELETE `/fdo/profiles/{id}`
+  * New path param: id
+* GET `/fdo/profiles/{id}`
+  * New path param: id
+* PUT `/fdo/profiles/{id}`
+  * New path param: id
+* POST `/fdo/profiles/{id}/duplicate`
+  * New path param: id
+* GET `/kubernetes/config`
+  * Description changed from 'Generates kubeconfig file enabling client communication with k8s api server
+  * **Access policy**: authenticated' to 'Generate a kubeconfig file enabling client communication with k8s api server
+  * **Access policy**: authenticated'
+* POST `/open_amt/{id}/activate`
+  * Modified path param: id
+    * Description changed from 'Environment(Endpoint) identifier' to 'Environment identifier'
+* POST `/open_amt/{id}/devices/{deviceId}/action`
+  * New path param: deviceId
+  * New path param: id
+* POST `/open_amt/{id}/devices_features/{deviceId}`
+  * New path param: deviceId
+  * New path param: id
+* GET `/open_amt/{id}/info`
+  * New path param: id
+* PUT `/ssl`
+* DELETE `/stacks/{id}`
+  * Modified query param: endpointId
+    * Description changed from 'Environment(Endpoint) identifier used to remove an external stack (required when external is set to true)' to 'Environment identifier'
+    * Required changed from false to true
+* PUT `/stacks/{id}`
+  * Modified query param: endpointId
+    * Description changed from 'Stacks created before version 1.18.0 might not have an associated environment(endpoint) identifier. Use this optional parameter to set the environment(endpoint) identifier used by the stack.' to 'Environment identifier'
+    * Required changed from false to true
+* PUT `/stacks/{id}/associate`
+  * Modified query param: endpointId
+    * Description changed from 'Stacks created before version 1.18.0 might not have an associated environment(endpoint) identifier. Use this optional parameter to set the environment(endpoint) identifier used by the stack.' to 'Environment identifier'
+* POST `/stacks/{id}/start`
+  * New query param: endpointId
+* POST `/stacks/{id}/stop`
+  * New query param: endpointId
+* POST `/system/upgrade`
+  * Responses changed
+    * New response: 204
+    * Deleted response: 200
+* POST `/tags`
+* POST `/webhooks`
+* PUT `/webhooks/{id}`
+  * New path param: id
+* POST `/webhooks/{token}`
+  * Modified path param: token
+
+</details>
 
 ## Release 2.18.4
 
