@@ -13,11 +13,7 @@ August 31, 2023
 * Helm, eksctl, and docker-compose have been updated to newer versions.
 * Internal versioning on stacks feature has introduced file structure changes in 2.19.
 * We have addressed an API issue in which an incorrect parameter was being used for API endpoint /edge\_groups. Users relying on the HasEdgeGroup parameter should now use HasEdgeJob to achieve the intended functionality.
-* Four API endpoints are broken and will be restored in the next release:
-  * POST `/custom_templates`
-  * POST `/edge_jobs`
-  * POST `/edge_stacks`
-  * POST `/stacks`
+* Select API endpoints are broken and will be restored in the next release:- see [REST API changes](release-notes.md#rest-api-changes) for specific details.
 
 ### Resolved CVEs
 
@@ -216,30 +212,59 @@ August 31, 2023
 
 <details>
 
-<summary>Broken endpoints: 4</summary>
+<summary>Broken endpoints: 10</summary>
 
+* GET `/cloud/microk8s/addons`
+* POST `/cloud/{provider}`
+* GET `/cloudcredentials`
+* POST `/cloudcredentials`
+* PUT `/cloudcredentials`
 * POST `/custom_templates`
 * POST `/edge_jobs`
 * POST `/edge_stacks`
+* GET `/endpoints/{id}/edge/generate-key`
 * POST `/stacks`
 
 </details>
 
 <details>
 
-<summary>New endpoints: 44</summary>
+<summary>New endpoints: 70</summary>
 
+* GET `/cloud/credentials`
+* POST `/cloud/credentials`
+* PUT `/cloud/credentials`
+* GET `/cloud/endpoints/{endpointid}/nodes/nodestatus`
+* GET `/cloud/endpoints/{environmentid}/addons`
+* POST `/cloud/endpoints/{environmentid}/addons`
+* POST `/cloud/endpoints/{environmentid}/nodes/add`
+* POST `/cloud/endpoints/{environmentid}/nodes/remove`
+* POST `/cloud/endpoints/{environmentid}/upgrade`
+* GET `/cloud/endpoints/{environmentid}/version`
+* POST `/cloud/testssh`
 * POST `/custom_templates/file`
 * POST `/custom_templates/repository`
 * POST `/custom_templates/string`
 * PUT `/custom_templates/{id}/git_fetch`
+* GET `/edge_configurations`
+* POST `/edge_configurations`
+* PUT `/edge_configurations`
+* DELETE `/edge_configurations/{id}`
+* GET `/edge_configurations/{id}`
+* GET `/edge_configurations/{id}/files`
+* PUT `/edge_configurations/{id}/{state}`
 * POST `/edge_jobs/create/file`
 * POST `/edge_jobs/create/string`
 * POST `/edge_stacks/create/file`
 * POST `/edge_stacks/create/repository`
 * POST `/edge_stacks/create/string`
+* POST `/edge_stacks/webhooks/{webhookID}`
+* PUT `/edge_stacks/{id}/git`
+* GET `/edge_stacks/{id}/stagger/status`
+* POST `/endpoints/edge/generate-key`
 * PUT `/endpoints/relations`
 * POST `/gitops/repo/file/preview`
+* GET `/kubernetes/{endpointId}/opa`
 * GET `/kubernetes/{id}/ingresscontrollers`
 * PUT `/kubernetes/{id}/ingresscontrollers`
 * POST `/kubernetes/{id}/ingresses/delete`
@@ -260,6 +285,7 @@ August 31, 2023
 * GET `/kubernetes/{id}/namespaces/{namespace}/services`
 * POST `/kubernetes/{id}/namespaces/{namespace}/services`
 * PUT `/kubernetes/{id}/namespaces/{namespace}/services`
+* PUT `/kubernetes/{id}/opa`
 * POST `/kubernetes/{id}/services/delete`
 * POST `/stacks/create/kubernetes/repository`
 * POST `/stacks/create/kubernetes/string`
@@ -270,30 +296,62 @@ August 31, 2023
 * POST `/stacks/create/swarm/file`
 * POST `/stacks/create/swarm/repository`
 * POST `/stacks/create/swarm/string`
+* POST `/system/update`
 * POST `/webhooks/{id}`
 * DELETE `/webhooks/{token}`
 * PUT `/webhooks/{token}`
+* GET `/websocket/microk8s-shell`
 
 </details>
 
 <details>
 
-<summary>Modified endpoints: 28</summary>
+<summary>Modified endpoints: 56</summary>
 
+* GET `/cloud/{provider}/info`
+  * New path param: provider
+  * Deleted query param: credentialId
 * PUT `/custom_templates/{id}`
+* GET `/docker/{environmentId}/containers/{containerID}/image_status`
+  * New path param: containerId
+  * New path param: environmentId
+* GET `/docker/{environmentId}/services/{serviceID}/image_status`
+  * New path param: environmentId
+  * New path param: serviceId
+* GET `/docker/{environmentId}/snapshot/containers/{containerId}`
+  * New path param: containerId
+* GET `/docker/{environmentId}/stacks/{id}/images_status`
+  * New path param: environmentId
+  * New path param: id
 * PUT `/edge_stacks/{id}`
+* GET `/edge_stacks/{id}/file`
+  * New query param: commitHash
+  * New query param: version
 * PUT `/edge_stacks/{id}/status`
 * DELETE `/edge_stacks/{id}/status/{endpoint_id}`
   * New path param: environmentId
   * Deprecated changed from false to true
+* GET `/edge_update_schedules/previous_versions`
+  * New query param: skipScheduleID
+* DELETE `/edge_update_schedules/{id}`
+  * New path param: id
+* GET `/edge_update_schedules/{id}`
+  * New path param: id
 * GET `/endpoints`
   * New query param: edgeCheckInPassedSeconds
   * New query param: edgeStackStatus
   * New query param: excludeSnapshots
 * POST `/endpoints`
+* POST `/endpoints/edge/async`
+  * Deleted path param: id
 * DELETE `/endpoints/{id}`
   * Responses changed
     * New response: 403
+* PUT `/endpoints/{id}`
+* GET `/endpoints/{id}/edge/stacks/{stackId}`
+  * New query param: version
+* PUT `/endpoints/{id}/pools/{rpn}/access`
+  * Description changed from 'update the access on the resource pool in the current environment **Access policy**: restricted' to 'update the access on the namespace in the current environment **Access policy**: restricted'
 * POST `/fdo/configure/{guid}`
   * New path param: guid
 * DELETE `/fdo/profiles/{id}`
@@ -304,10 +362,33 @@ August 31, 2023
   * New path param: id
 * POST `/fdo/profiles/{id}/duplicate`
   * New path param: id
+* POST `/gitops/repo/files/search`
 * GET `/kubernetes/config`
-  * Description changed from 'Generates kubeconfig file enabling client communication with k8s api server
-  * **Access policy**: authenticated' to 'Generate a kubeconfig file enabling client communication with k8s api server
-  * **Access policy**: authenticated'
+  * Description changed from 'Generates kubeconfig file enabling client communication with k8s api server **Access policy**: authenticated' to 'Generate a kubeconfig file enabling client communication with k8s api server **Access policy**: authenticated'
+* PUT `/kubernetes/{endpointId}/opa`
+  * New path param: environmentId
+  * Deleted path param: id
+* GET `/kubernetes/{id}/namespaces/{namespace}/applications`
+  * New path param: namespace
+  * Deleted query param: namespace
+* GET `/kubernetes/{id}/opa`
+  * Modified path param: id
+    * Description changed from 'Environment(Endpoint) identifier' to 'Environment identifier'
+* GET `/nomad/endpoints/{endpointID}/allocation/{id}/events`
+  * New path param: environmentId
+  * New path param: id
+* GET `/nomad/endpoints/{endpointID}/allocation/{id}/logs`
+  * New path param: environmentId
+  * New path param: id
+* GET `/nomad/endpoints/{endpointID}/dashboard`
+  * New path param: environmentId
+* GET `/nomad/endpoints/{endpointID}/jobs`
+  * New path param: environmentId
+* DELETE `/nomad/endpoints/{endpointID}/jobs/{id}`
+  * New path param: environmentId
+  * New path param: id
+* GET `/nomad/endpoints/{endpointID}/leader`
+  * New path param: environmentId
 * POST `/open_amt/{id}/activate`
   * Modified path param: id
     * Description changed from 'Environment(Endpoint) identifier' to 'Environment identifier'
@@ -319,7 +400,11 @@ August 31, 2023
   * New path param: id
 * GET `/open_amt/{id}/info`
   * New path param: id
+* DELETE `/registries/{id}/ecr/repositories/{repositoryName}/tags`
+  * New path param: repositoryName
+* PUT `/settings`
 * PUT `/ssl`
+* POST `/stacks/webhooks/{webhookID}`
 * DELETE `/stacks/{id}`
   * Modified query param: endpointId
     * Description changed from 'Environment(Endpoint) identifier used to remove an external stack (required when external is set to true)' to 'Environment identifier'
@@ -331,17 +416,23 @@ August 31, 2023
 * PUT `/stacks/{id}/associate`
   * Modified query param: endpointId
     * Description changed from 'Stacks created before version 1.18.0 might not have an associated environment(endpoint) identifier. Use this optional parameter to set the environment(endpoint) identifier used by the stack.' to 'Environment identifier'
+* GET `/stacks/{id}/file`
+  * New query param: commitHash
+  * New query param: version
 * POST `/stacks/{id}/start`
   * New query param: endpointId
 * POST `/stacks/{id}/stop`
   * New query param: endpointId
-* POST `/system/upgrade`
-  * Responses changed
-    * New response: 204
-    * Deleted response: 200
 * POST `/tags`
+* GET `/webhooks`
+  * Modified query param: EndpointID
+    * Required changed from false to true
+  * Modified query param: ResourceID
+    * Required changed from false to true
 * POST `/webhooks`
 * PUT `/webhooks/{id}`
+  * New path param: id
+* PUT `/webhooks/{id}/reassign`
   * New path param: id
 * POST `/webhooks/{token}`
   * Modified path param: token
