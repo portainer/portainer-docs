@@ -33,6 +33,14 @@ Next, select **Docker Swarm** as the environment type then click **Start Wizard*
 You must run the command on the Docker Swarm cluster before entering the environment details.
 {% endhint %}
 
+{% hint style="info" %}
+If you want to use the [host management features](../../../../user/docker/swarm/setup.md#host-and-filesystem) of the Portainer Agent, you should add the necessary volume mount to the command that Portainer provides:
+
+```
+--mount type=bind,src=//,dst=/host
+```
+{% endhint %}
+
 <figure><img src="../../../../.gitbook/assets/2.16-environments-add-swarm-agent.png" alt=""><figcaption></figcaption></figure>
 
 The deployment command will return something similar to this:

@@ -23,6 +23,14 @@ From the menu select **Environments** then click **Add environment**.
 
 Next, select **Docker Standalone** as the environment type then click **Start Wizard**. Select the **Agent** option, then your environment type. Copy the command for your environment type and run it on your Docker Standalone instance. For example, if you are deploying on a Linux machine or a Windows machine with WSL installed, use the **Linux & Windows WSL** command. If you are deploying on a Windows machine with WCS, use the **Windows WCS** command.
 
+{% hint style="info" %}
+If you want to use the [host management features](../../../../user/docker/host/setup.md#enable-host-management-features) of the Portainer Agent, you should add the necessary volume mount to the command that Portainer provides:
+
+```
+-v /:/host
+```
+{% endhint %}
+
 Once the Agent has been deployed, enter the environment details using the table below as a guide:
 
 | Field/Option        | Overview                                                                                                             |
