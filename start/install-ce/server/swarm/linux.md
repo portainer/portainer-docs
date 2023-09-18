@@ -27,6 +27,8 @@ The installation instructions also make the following assumptions about your env
 
 ## Deployment <a href="#deployment" id="deployment"></a>
 
+{% embed url="https://www.youtube.com/watch?v=S2VuHKxrT3s" %}
+
 Portainer can be directly deployed as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.
 
 {% hint style="danger" %}
