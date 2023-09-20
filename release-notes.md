@@ -2,6 +2,52 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.19.1
+
+September 20, 2023
+
+### Breaking changes
+
+* Changes to API format and checking of some requests - See [REST API Changes](release-notes.md#rest-api-changes) below for more details.
+
+### Edge
+
+* Resolved an issue with snapshots between Edge Agent versions 2.18.2 and Portainer Server 2.19.0, which caused dropping of remote commands in async mode due to mismatches.
+* Database migration for edge URLs now includes a check to verify if the edge feature is enabled. This fix ensures a more accurate and controlled upgrade process.
+* Fixed an issue where the migration of Edge Tunnel URLs was broken when the Portainer API URL did not contain a port.
+* We've improved the transparency of Edge Agent update scheduler and rollback statuses. Now, you'll have clear explanations for each status, simplifying monitoring and management.
+* We've added a info notice to clarify that the option to update edge agent from a private registry is exclusively available in Edge Agent version 2.18.1 or newer.
+* Fixed an issue where edge devices in the waiting room were incorrectly counted as part of the dynamic edge group.
+
+### Kubernetes
+
+* Fixed an issue introduced in 2.19.0 where standard and read-only users could no longer view node stats on a Kubernetes cluster.
+* Fixed an issue introduced in 2.19.0 where the Kubernetes Create Application screen no longer showed in the bottom of page summary when a Deployment would be created.
+
+### MicroK8s
+
+* Fixed an issue introduced in 2.19.0 where MicroK8s cluster creation would fail if the SSH access used a passworded login and sudo access required the password.
+
+### Portainer
+
+* Fixed an issue where backup files were missing the Chisel private key. This could have disrupted communication between the Portainer server and agent after a restoration from backup. [portainer/portainer#10335](https://github.com/portainer/portainer/issues/10335)
+* Improved the upgrade process for the Portainer server, upgrade process now halts on database migration errors, preventing database version mismatches for a more stable environment. [portainer/portainer#10336](https://github.com/portainer/portainer/issues/10336)
+* Fixed an issue when chatbot integration was enabled globally, where a user who then set a chatbot key could not subsequently clear out their key to turn off the feature for themselves.
+* Fixed an issue introduced in 2.19.0 when the chatbot integration feature was enabled for a user, where container logs did not display in the log viewer unless in full-screen mode.
+* Fixed an issue where webhooks were failing when updating a stack deployed from a private Git repository.
+* We've added a backup reminder for in-app updates, ensuring data safety during the update process.
+* Resolved issue where failed stack status persists after incorrect compose from Git. Now auto-recovers with the next successful update.
+* Fixed an issue where usernames and passwords were being stored along with Git stack configurations when Git credentials were used.
+* Fixed an issue where using spaces in an Organizational Unit (OU) or Common Name (CN) name caused incorrect data to be displayed in the Active Directory configuration.
+* Fixed an issue where toggles could be activated outside of their intended component area, potentially leading to inadvertent toggling. [portainer/portainer#10324](https://github.com/portainer/portainer/issues/10324)
+
+### REST API Changes
+
+* Fixed API endpoints that were broken in the 2.19.0 release, ensuring that they retain their previous functionality. [portainer/portainer#10337](https://github.com/portainer/portainer/issues/10337)
+* Fixed an issue introduced in 2.19.0 when Kubernetes environment metrics API features were enabled, where these features would return an 'Unable to reach metrics API' error.
+* Introduced new format around the change of a user's password via API. [portainer/portainer#10326](https://github.com/portainer/portainer/issues/10326)
+* Updated the checking around change of a user via API. [portainer/portainer#10326](https://github.com/portainer/portainer/issues/10326)
+
 ## Release 2.19.0
 
 August 31, 2023
@@ -12,7 +58,7 @@ August 31, 2023
 * A number of components/views have been migrated from Angular to React.
 * Helm, eksctl, and docker-compose have been updated to newer versions.
 * Internal versioning on stacks feature has introduced file structure changes in 2.19.
-* We have addressed an API issue in which an incorrect parameter was being used for API endpoint /edge\_groups. Users relying on the HasEdgeGroup parameter should now use HasEdgeJob to achieve the intended functionality.
+* We have addressed an API issue in which an incorrect parameter was being used for API endpoint `/edge_groups`. Users relying on the HasEdgeGroup parameter should now use HasEdgeJob to achieve the intended functionality.
 * Select API endpoints are broken and will be restored in the next release:- see [REST API changes](release-notes.md#rest-api-changes) for specific details.
 
 ### Resolved CVEs
