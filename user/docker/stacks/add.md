@@ -1,5 +1,7 @@
 # Add a new stack
 
+{% embed url="https://www.youtube.com/watch?v=gRk9rOMX598" %}
+
 ## Options when deploying a new stack
 
 There are four ways to deploy a new stack from Portainer:
