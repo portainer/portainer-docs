@@ -117,6 +117,7 @@ spec:
       volumeMounts:
         - mountPath: "/data"
           name: data
+  restartPolicy: Never
 EOF
 ```
 
