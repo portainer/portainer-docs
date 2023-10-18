@@ -31,6 +31,18 @@ If you want to use the [host management features](../../../../user/docker/host/s
 ```
 {% endhint %}
 
+{% hint style="info" %}
+If Docker on the environment you're deploying the Agent to has the Docker volume path at a non-standard location (instead of `/var/lib/docker/volumes`) you will need to adjust the volume mount in the deployment command to suit.&#x20;
+
+For example, if your volume path was `/srv/data/docker`, you would change the line in the command to:
+
+```
+- v /srv/data/docker:/var/lib/docker/volumes \
+```
+
+The right side of the mount should remain as `/var/lib/docker/volumes`, as that is what the Agent expects.
+{% endhint %}
+
 Once the Agent has been deployed, enter the environment details using the table below as a guide:
 
 | Field/Option        | Overview                                                                                                             |

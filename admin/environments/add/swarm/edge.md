@@ -55,6 +55,18 @@ Choose your platform (**Linux** or **Windows**), copy the generated command and 
 If you have set a custom `AGENT_SECRET` on your Portainer Server instance you **must** remember to explicitly provide this when deploying your Edge Agent.
 {% endhint %}
 
+{% hint style="info" %}
+If Docker on the environment you're deploying the Edge Agent to has the Docker volume path at a non-standard location (instead of `/var/lib/docker/volumes`) you will need to adjust the volume mount in the deployment command to suit.&#x20;
+
+For example, if your volume path was `/srv/data/docker`, you would change the line in the command to:
+
+```
+--mount type=bind,src=//srv/data/docker,dst=/var/lib/docker/volumes \
+```
+
+The `dst` value of the mount should remain as `/var/lib/docker/volumes`, as that is what the Edge Agent expects.
+{% endhint %}
+
 <figure><img src="../../../../.gitbook/assets/2.18-environments-add-swarm-edge-command.png" alt=""><figcaption></figcaption></figure>
 
 If you have another Edge standard environment of the same type to deploy you can click **Add another environment** to do so. Otherwise if you have any other environments to configure click **Next** to proceed, or click **Close** to return to the list of environments.
