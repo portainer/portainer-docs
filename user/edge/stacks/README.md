@@ -1,6 +1,6 @@
 # Edge Stacks
 
-Edge Stacks is a feature that lets you deploy multiple applications to multiple environments from a single page and multiple sources, regardless of their current state.&#x20;
+Edge Stacks is a feature that lets you deploy applications to multiple environments from a single page, regardless of their current state.&#x20;
 
 {% hint style="info" %}
 This functionality requires you to [enable Edge Compute](../../../admin/settings/edge.md) features.
