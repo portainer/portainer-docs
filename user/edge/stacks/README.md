@@ -51,20 +51,6 @@ You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F
 
 <figure><img src="../../../.gitbook/assets/2.15-edge-stacks-add-buildmethod.png" alt=""><figcaption></figcaption></figure>
 
-### Web editor
-
-
-
-### Upload
-
-
-
-### Repository
-
-
-
-### Template
-
 ### Registry
 
 If your stack requires access to images in private registries, you can specify which registry to use as part of the deployment.
