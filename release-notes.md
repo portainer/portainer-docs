@@ -244,7 +244,7 @@ August 31, 2023
 * Documented webhook types in Swagger API docs [portainer/portainer#9121](https://github.com/portainer/portainer/issues/9121)
 * Resolved a 2.0 validation error in our Swagger API documentation [portainer/portainer#10135](https://github.com/portainer/portainer/issues/10135)
 * Corrected an error in our Swagger API documentation where 'EdgeTunnelServerAddress' was marked as required. It is now correctly marked as optional
-* Corrected 'EdgeCheckinInterval' to 'CheckinInterval' in Swagger API docs [portainer/portainer#10139](https://github.com/portainer/portainer/issues/10139)
+* We have updated the response for /endpoint to correctly reference 'EdgeCheckinInterval' in line with the accurate API Swagger documentation [portainer/portainer#10139](https://github.com/portainer/portainer/issues/10139)
 * Corrected missing type and 'file' to 'File' in Swagger API documentation for custom templates [portainer/portainer#10141](https://github.com/portainer/portainer/issues/10141)
 * Added descriptions to the Swagger API documentation for Kubernetes API endpoints that were previously missing from the docs. [portainer/portainer#10106](https://github.com/portainer/portainer/issues/10106)
 * Fixed an API issue where requests to create edge stacks with invalid deployment types were erroneously accepted [portainer/portainer#10168](https://github.com/portainer/portainer/issues/10168)
