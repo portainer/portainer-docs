@@ -2,6 +2,75 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.19.2
+
+November 13, 2023
+
+### Breaking changes
+
+* Deprecation notice of Nomad support in next minor release.
+
+### Edge
+
+* Fixed bug around Update and Rollback menu showing when Edge Compute feature is disabled.
+* Resolved an issue where edge group details were missing from the update and rollback table.
+* Resolved an issue where searching on the Update & Rollback page caused the screen to go blank
+* Resolved an issue where users were unable to delete any failed remote update scheduler entries.
+* Resolved an issue where edge stack rollback and pause updates remained stuck in the pending state
+* Resolved an issue where the update scheduler would stay in a "pending" state indefinitely, even when some edge agents were already running the latest version in the target edge group.
+* Added a deprecation notice to inform users about the upcoming removal of Nomad support in next minor release.
+
+### Swarm
+
+* Resolved an issue where the Docker service page could not load correctly when the deployment was created using the GMSA credential spec parameter. [portainer/portainer#10571](https://github.com/portainer/portainer/issues/10571)
+
+### Kubernetes
+
+* Introduced the ability for Helm chart repository searching and registry browsing to operate behind a forward proxy. [portainer/portainer#10432](https://github.com/portainer/portainer/issues/10432)
+
+### Portainer
+
+* Improved security around non-admin user environment information access. [portainer/portainer#10434](https://github.com/portainer/portainer/issues/10434)
+* Fixed 'unable to upgrade' error that could potentially occur when upgrading from CE to BE.
+* Resolved an issue where stacks that were initially deployed from a template could not be modified. [portainer/portainer#10563](https://github.com/portainer/portainer/issues/10563)
+* Resolved an issue where users couldn't define a proxy for the agent and edge agent when their network relied on a proxy for internet access. [portainer/portainer#10564](https://github.com/portainer/portainer/issues/10564)
+* Resolved an issue where pulling and redeploying Git stacks took longer than expected. [portainer/portainer#10565](https://github.com/portainer/portainer/issues/10565)
+* Resolved an issue where stacks triggered from webhooks were marked as inactive status, even though they were running as expected [portainer/portainer#10567](https://github.com/portainer/portainer/issues/10567)
+* Improved storage efficiency by retaining only one copy of Git repositories for versioning, preventing excessive disk usage.
+* Fixed an issue where authentication failures occurred when editing stacks deployed from Git repositories created with version 2.19.0 or 2.19.1.
+* Fixed an issue introduced in 2.19.0 when deploying from a custom template that was set up via API, where defined mustache variables are not always being prompted for.
+* Resolved an issue where users could interact with a console even after logging out from another tab in the browser [portainer/portainer#10568](https://github.com/portainer/portainer/issues/10568)
+* Resolved an issue where there was no warning for version mismatch between the server and edge agent, now UI clearly indicates matching server and edge agent versions are required for feature availability. [portainer/portainer#10569](https://github.com/portainer/portainer/issues/10569)
+* Resolved an issue where containers were not deleted when users removed them from asynchronous environments by browsing snapshots.
+
+### Rest API Changes
+
+* Improved security around non-admin users and their permissions. [portainer/portainer#10434](https://github.com/portainer/portainer/issues/10434)
+
+<details>
+
+<summary>New Endpoints: 1</summary>
+
+* POST `/edge_update_schedules/{id}`
+
+</details>
+
+<details>
+
+<summary>Modified Endpoints: 3</summary>
+
+* POST `/auth/logout`
+  * Description changed from '**Access policy**: authenticated' to '**Access policy**: public'
+* POST `/edge_update_schedules`
+  * Responses changed
+    * New response: `200`
+    * Deleted response: `204`
+* GET `/edge_update_schedules/previous_versions`
+  * New query param: `environmentIds`
+  * Deleted query param: `skipScheduleID`
+
+</details>
+
 ## Release 2.19.1
 
 September 20, 2023
