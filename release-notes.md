@@ -2,6 +2,14 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.19.3
+
+November 22, 2023
+
+### Portainer
+
+* Resolved an issue where polling and webhook methods failed to update the Stack [portainer/portainer#10673](https://github.com/portainer/portainer/issues/10673)
+
 ## Release 2.19.2
 
 November 13, 2023

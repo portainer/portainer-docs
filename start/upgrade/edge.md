@@ -3,7 +3,7 @@
 To update the Portainer Edge Agent to the latest version, follow the below instructions for your Edge environment.
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.19.2 make sure all of the agents are also on version 2.19.2.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.19.3 make sure all of the agents are also on version 2.19.3.
 {% endhint %}
 
 {% hint style="danger" %}
