@@ -22,6 +22,10 @@ If you want to use namespaces defined in your manifest defines the namespace(s) 
 
 Use the provided fields to enter the details of your Git repository containing your Kubernetes manifests.
 
+{% hint style="warning" %}
+When an application is deployed from Git, Portainer will clone the entire Git repository as part of the deployment process. Ensure you have enough free space to accommodate this.
+{% endhint %}
+
 | Field/Option          | Overview                                                                                                                                                                  |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Authentication        | Toggle this on if your repository requires authentication.                                                                                                                |

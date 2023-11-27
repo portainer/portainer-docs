@@ -93,6 +93,10 @@ When you're ready click **Deploy the stack**.
 
 If your Compose file is hosted in a Git repository, you can deploy from there. From the menu select **Stacks**, click **Add stack**, then give the stack a descriptive name.
 
+{% hint style="warning" %}
+When a stack is deployed from Git, Portainer will clone the entire Git repository as part of the deployment process. Ensure you have enough free space to accommodate this.
+{% endhint %}
+
 <figure><img src="../../../.gitbook/assets/2.15-docker_add_stack_git.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Git Repository** then enter information about your Git repo.
