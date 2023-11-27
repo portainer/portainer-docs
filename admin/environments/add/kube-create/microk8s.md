@@ -12,7 +12,7 @@ In order to connect to and deploy MicroK8s and the Portainer Agent on your exist
 * Root or sudo SSH access to the above machines on port `22`. This is needed in order to install MicroK8s. Portainer supports both password-based and key-based authentication.
 * The `snap` tool installed on the above machines. You can find installation instructions for most Linux distributions [at the Snapcraft website](https://snapcraft.io/docs/installing-snapd). The `snap` tool is used to install MicroK8s and any selected addons.
 * Communication between the Portainer Server and the above machines, as well as communication between the individual machines in the cluster. This is to ensure the Portainer Server can reach the machines both for the initial installation and for communication with the Portainer Agent once the cluster is up and running, and so that the cluster nodes can communicate with each other.
-* For the installation, internet access (specifically to Docker Hub and registry.k8s.io) from the machines where MicroK8s will be deployed. This is a requirement at present in order for the setup to complete successfully. Once setup has completed, internet access can be disabled.
+* For the installation, internet access (specifically to Docker Hub and registry.k8s.io) from the machines where MicroK8s will be deployed. This is a requirement at present in order for the setup to complete successfully. Once setup is complete, internet access can be disabled. However, this may affect enabling of some addons.
 
 ## What to expect
 
