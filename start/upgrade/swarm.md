@@ -1,7 +1,7 @@
 # Updating on Docker Swarm
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.19.3 make sure all of the agents are also on version 2.19.3.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.19.4 make sure all of the agents are also on version 2.19.4.
 {% endhint %}
 
 {% hint style="warning" %}
