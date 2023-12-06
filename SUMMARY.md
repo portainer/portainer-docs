@@ -45,7 +45,7 @@
   * [Updating on Nomad](start/upgrade/nomad.md)
   * [Updating the Edge Agent](start/upgrade/edge.md)
   * [Switching to Portainer Business Edition](start/upgrade/tobe/README.md)
-    * [Upgrade to Business Edition from Portainer](start/upgrade/tobe/inapp.md)
+    * [Upgrade to Business Edition from within Portainer Community Edition](start/upgrade/tobe/inapp.md)
     * [Docker Standalone](start/upgrade/tobe/docker.md)
     * [Docker Swarm](start/upgrade/tobe/swarm.md)
     * [Kubernetes](start/upgrade/tobe/kubernetes.md)
