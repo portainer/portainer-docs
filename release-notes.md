@@ -6,10 +6,6 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 December 6, 2023
 
-### Portainer
-
-* Resolved an issue with the upgrade and --rollback process where the database was being backed up to a name that the rollback was not expecting. [portainer/portainer#10751](https://github.com/portainer/portainer/issues/10751)
-
 ### Swarm
 
 * Resolved the inability to change the replica set for a swarm service, addressing errors related to invalid CredentialSpec (A refresh of your browser cache may be required) [portainer/portainer#10702](https://github.com/portainer/portainer/issues/10702)
