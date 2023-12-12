@@ -14,6 +14,10 @@ In async mode, this tunnel connectivity is not available. Instead, we provide th
 
 Async mode has been developed to use very small amounts of data and as such is suitable for environments that have limited or intermittent connectivity as well as connections with limited data caps, for example mobile networks.&#x20;
 
+{% hint style="info" %}
+Edge Agent Async mode is only available in Portainer Business Edition.
+{% endhint %}
+
 ## Preparation
 
 In async mode, the Edge Agent requires only the UI port (usually `9443` or `30779` on Kubernetes with NodePort) to be open on the Portainer server instance. The tunnel port is not required for async mode. Our installation instructions configure Portainer Server to listen on both ports by default, and you will need to ensure your firewalling provides external access to the UI port in order to proceed.
