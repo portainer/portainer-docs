@@ -24,8 +24,8 @@ During the creation process, an Edge ID is dynamically generated. This is a rand
 
 * The Portainer instance API URL. This is how the Edge Agent knows how to ‘call home’ to your Portainer instance.
 * The Portainer instance reverse tunnel server address. This is identical to the API URL (unless [changed during deployment](../admin/environments/add/docker/edge.md#deploying) or in [Edge Compute settings](../admin/settings/edge.md#edge-compute-settings)) but with the tunnel server port (`8000` is the default).
-* The environment identifier key (endpoint ID).
 * The Portainer instance reverse-tunnel server fingerprint (prevents MITM when creating a tunnel).
+* The environment identifier key (endpoint / environment ID).
 
 Use the command syntax to deploy an Edge Agent across your remote node or remote swarm cluster.
 
