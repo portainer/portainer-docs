@@ -292,7 +292,7 @@
 * [Portainer Academy](https://academy.portainer.io)
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
 * [GitHub](https://github.com/orgs/portainer/discussions)
-* [Slack](https://join.slack.com/t/portainer/shared\_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA)
+* [Slack](https://join.slack.com/t/portainer/shared\_invite/zt-21zpww5ab-mG\_lA7UXbWL3HW3sPqjqEA)
 * [Discord](https://discord.com/invite/j8fVken)
 * [Open a support request](https://www.portainer.io/portainer-business-support)
 

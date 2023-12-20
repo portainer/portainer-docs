@@ -32,7 +32,7 @@ As an open source product we rely on users in our community to support one anoth
 
 Community Edition, five/three nodes free and Home & Student users can get support through the following channels:
 
-* **Ask questions** either in our [GitHub Discussions](https://github.com/orgs/portainer/discussions/categories/help) forum or the [community Slack channel](https://join.slack.com/t/portainer/shared\_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA). Other platforms exist (Reddit, Discord, Stack Overflow) but we are less active in those spaces.
+* **Ask questions** either in our [GitHub Discussions](https://github.com/orgs/portainer/discussions/categories/help) forum or the [community Slack channel](https://join.slack.com/t/portainer/shared\_invite/zt-21zpww5ab-mG\_lA7UXbWL3HW3sPqjqEA). Other platforms exist (Reddit, Discord, Stack Overflow) but we are less active in those spaces.
 * **Log bugs** in [GitHub Issues](https://github.com/portainer/portainer/issues) so they can be properly managed.
 * **Flag vulnerabilities** by emailing [security@portainer.io](mailto:security@portainer.io) so we can deal with them immediately.
 * **Flag documentation issues** via our [GitHub documentation channel](https://github.com/portainer/portainer-docs/issues) (or start [contributing](contribute/contribute.md) and make our documentation better!).
