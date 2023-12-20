@@ -97,6 +97,10 @@ If your Compose file is hosted in a Git repository, you can deploy from there. F
 When a stack is deployed from Git, Portainer will clone the entire Git repository as part of the deployment process. Ensure you have enough free space to accommodate this.
 {% endhint %}
 
+{% hint style="warning" %}
+Portainer's Git deployment functionality does not currently support the use of Git submodules. If your repository includes submodules, they will not be pulled as part of the deployment. We [hope to add support](https://github.com/orgs/portainer/discussions/9767) for submodules in a future release.
+{% endhint %}
+
 <figure><img src="../../../.gitbook/assets/2.15-docker_add_stack_git.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Git Repository** then enter information about your Git repo.

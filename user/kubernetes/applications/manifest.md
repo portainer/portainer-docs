@@ -26,6 +26,10 @@ Use the provided fields to enter the details of your Git repository containing y
 When an application is deployed from Git, Portainer will clone the entire Git repository as part of the deployment process. Ensure you have enough free space to accommodate this.
 {% endhint %}
 
+{% hint style="warning" %}
+Portainer's Git deployment functionality does not currently support the use of Git submodules. If your repository includes submodules, they will not be pulled as part of the deployment. We [hope to add support](https://github.com/orgs/portainer/discussions/9767) for submodules in a future release.
+{% endhint %}
+
 | Field/Option          | Overview                                                                                                                                                                  |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Authentication        | Toggle this on if your repository requires authentication.                                                                                                                |

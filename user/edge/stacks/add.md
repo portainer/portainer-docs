@@ -47,6 +47,10 @@ Click **Select a file** to upload a file from your computer containing your stac
 
 Enter the information about your Git repository to deploy your Edge Stack from Git.
 
+{% hint style="warning" %}
+Portainer's Git deployment functionality does not currently support the use of Git submodules. If your repository includes submodules, they will not be pulled as part of the deployment. We [hope to add support](https://github.com/orgs/portainer/discussions/9767) for submodules in a future release.
+{% endhint %}
+
 | Field/Option          | Overview                                                                                                                         |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Authentication        | Toggle this on if your Git repository requires authentication.                                                                   |
