@@ -18,7 +18,7 @@ For security, these features are disabled by default. Be sure that you understan
 
 ### Enable host management features
 
-Enabling host management features allows you to see the available devices and storage on the physical node as well as browse the node's filesystem. The environment must be [running the Portainer Agent](../../../start/agent.md) to use this functionality, and for filesystem browsing, the root of the host must be bind-mounted to`/host` in the agent deployment:
+Enabling host management features allows you to see the available devices and storage on the physical node as well as browse the node's filesystem. The environment must be [running the Portainer Agent](../../../start/agent.md) to use this functionality, and the root of the host must be bind-mounted to`/host` in the agent deployment:
 
 ```
 -v /:/host
