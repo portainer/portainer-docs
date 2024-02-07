@@ -126,6 +126,10 @@ Ensure that this path is available on all of your Docker Swarm nodes and is writ
 
 <figure><img src="../../../.gitbook/assets/2.17-stacks-add-relativepath-swarm.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+For more detail on how this feature works, have a look at [this article](../../../advanced/relative-paths.md).
+{% endhint %}
+
 ### GitOps Edge configurations
 
 When relative path volumes are enabled, you can also choose to deploy device-specific configurations from your Git repository to the devices your Edge stack will be deployed to. To use this, enable the **GitOps Edge configurations** toggle, enter the **Directory** (relative to the root of your Git repository) and select the **Matching rule** that corresponds to your configuration.

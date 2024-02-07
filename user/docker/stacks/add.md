@@ -184,6 +184,10 @@ Ensure that this path is available on all of your Docker Swarm nodes and is writ
 
 <figure><img src="../../../.gitbook/assets/2.17-stacks-add-relativepath-swarm.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+For more detail on how this feature works, have a look at [this article](../../../advanced/relative-paths.md).
+{% endhint %}
+
 ### Environment variables
 
 As an optional step, you can also set environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).

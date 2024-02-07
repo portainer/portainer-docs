@@ -275,6 +275,7 @@
 * [Using Portainer with reverse proxies](advanced/reverse-proxy/README.md)
   * [Deploying Portainer behind Traefik Proxy](advanced/reverse-proxy/traefik.md)
   * [Deploying Portainer behind nginx reverse proxy](advanced/reverse-proxy/nginx.md)
+* [How Relative Path Support Works in Portainer](advanced/relative-paths.md)
 * [Helm chart configuration options](advanced/helm-chart-configuration-options.md)
 * [Docker roles and permissions](advanced/docker-roles-and-permissions.md)
 * [Kubernetes roles and bindings](advanced/kubernetes-roles-and-bindings.md)
