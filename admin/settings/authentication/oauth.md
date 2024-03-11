@@ -20,6 +20,8 @@ If you toggle **Automatic team membership** on, you can choose to automatically 
 
 In addition, you can enable the automatic assignment of admin rights to specified groups if desired.
 
+{% hint style="info" %} When configuring Microsoft Entra (Azure AD) as the OAuth provider, you will need to [use the group's Object Id value](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups#edit-group-settings) for the claim value regex instead of the group name.{% endhint%}
+
 <figure><img src="../../../.gitbook/assets/2.15-settings-authentication-oauth-team.png" alt=""><figcaption></figcaption></figure>
 
 ## OAuth providers
