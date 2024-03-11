@@ -8,7 +8,7 @@ To view, edit or create ingresses in your environment, select **Ingresses** from
 
 All the Ingresses that a user has access to are listed on this page.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 New Ingress objects can be created either manually or through a manifest:
 

@@ -20,9 +20,15 @@ If you toggle **Automatic team membership** on, you can choose to automatically 
 
 In addition, you can enable the automatic assignment of admin rights to specified groups if desired.
 
-{% hint style="info" %} When configuring Microsoft Entra (Azure AD) as the OAuth provider, you will need to [use the group's Object Id value](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups#edit-group-settings) for the claim value regex instead of the group name.{% endhint%}
-
 <figure><img src="../../../.gitbook/assets/2.15-settings-authentication-oauth-team.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+When configuring Microsoft Entra (Azure AD) as the OAuth provider, you will need to use the [group's Object Id value](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups#edit-group-settings) for the claim value regex instead of the group name.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+##
 
 ## OAuth providers
 
@@ -42,37 +48,23 @@ You can find these details using the following steps:
 
 1.  Log in to your Azure Portal as an administrator.
 
-
-
     <figure><img src="../../../.gitbook/assets/authentication-oauth-ms-1.png" alt=""><figcaption></figcaption></figure>
 2.  Click on **Azure Active Directory** and then click on **Overview**. Your **Tenant ID** can be found in the right pane. Use this as the **Tenant ID** in Portainer.
-
-
 
     <figure><img src="../../../.gitbook/assets/2.17-AzureOauth-AD.png" alt=""><figcaption></figcaption></figure>
 3.  Still in Azure Active Directory, click on **App Registrations** then click **New registration**.
 
-
-
     Enter a friendly name for the Portainer instance. Choose appropriate option for Supported account types, Choose `Web` type for **Redirect URI** and enter the FQDN or IP address that your Portainer instance listens on `eg: https://portainer.example.com:9443`. Then click **Register**.
-
-
 
     <figure><img src="../../../.gitbook/assets/2.17-AzureOauth-NewReg-S1.png" alt=""><figcaption></figcaption></figure>
 
     <figure><img src="../../../.gitbook/assets/2.17-AzureOauth-NewReg.png" alt=""><figcaption></figcaption></figure>
 4.  After creating the Registration, the screen below is displayed. Use the provided **Application ID** in the respective field in Portainer.
 
-
-
     <figure><img src="../../../.gitbook/assets/2.17-AzureOauth-NewReg-S2.png" alt=""><figcaption></figcaption></figure>
 5.  Click on **Certificates & secrets** then click **Client secrets**, Click on **New client secret**. Add **Description** and choose Expiry date, then Click **Add.**
 
-
-
     The secret will then be generated for you. Use the Value as the **Application key** in the respective field in Portainer.
-
-
 
     <figure><img src="../../../.gitbook/assets/2.17-AzureOauth-NewReg-S4.png" alt=""><figcaption></figcaption></figure>
 
