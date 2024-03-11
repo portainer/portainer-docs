@@ -23,7 +23,7 @@ In addition, you can enable the automatic assignment of admin rights to specifie
 <figure><img src="../../../.gitbook/assets/2.15-settings-authentication-oauth-team.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-When configuring Microsoft Entra (Azure AD) as the OAuth provider, you will need to use the [group's Object Id value](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups#edit-group-settings) for the claim value regex instead of the group name.
+When configuring Microsoft Entra ID (Azure AD) as the OAuth provider, you will need to use the [group's Object Id value](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups#edit-group-settings) for the claim value regex instead of the group name.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
@@ -72,7 +72,11 @@ You can find these details using the following steps:
 6.  Click on **API Permissions** and **Add a permission**. Select **Microsoft Graph** in the **Request API permissions screen**. Select **Delegated permissions** and add `email, openid, profile` permissions.
 
     <figure><img src="../../../.gitbook/assets/2.17-AzureOauth-NewReg-S5.gif" alt=""><figcaption></figcaption></figure>
-7.  Optionally, to use **Automatic Team Membership** ability in Portainer, you need create groups claim. Click on **Token Configuration** and **Add groups claim**. Select **Security Groups** and click **Add**.
+7.  Make sure you Grant admin consent for Directory.\
+
+
+    <figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+8.  Optionally, to use **Automatic Team Membership** ability in Portainer, you need create groups claim. Click on **Token Configuration** and **Add groups claim**. Select **Security Groups** and click **Add**.
 
     <figure><img src="../../../.gitbook/assets/2.17-AzureOauth-NewReg-S6.gif" alt=""><figcaption></figcaption></figure>
 
