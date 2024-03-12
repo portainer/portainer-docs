@@ -10,7 +10,7 @@ You can also view a list of each license applied to your Portainer installation.
 
 <figure><img src="../.gitbook/assets/2.15-licenses-list.png" alt=""><figcaption></figcaption></figure>
 
-If you want to add more nodes to your environment than your license allows, first [upgrade your license](https://portal.portainer.io/knowledge/how-do-i-upgrade-my-license).
+If you want to add more nodes to your environment than your license allows, first [upgrade your license](https://portal.portainer.io/knowledge/how-do-i-add-more-nodes-to-my-license).
 
 ## Add a new license
 
