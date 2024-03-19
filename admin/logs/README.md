@@ -1,19 +1,11 @@
 # Logs
 
-Within the Portainer Business Edition UI you can view a log of all authentication actions. The log is read-only and cannot be edited.
+Within the Portainer Business Edition UI you can view authentication and activity logs for your Portainer installation.
 
-{% hint style="info" %}
-Portainer also provides the ability to view [detailed activity logs](activity.md).
-{% endhint %}
+{% content-ref url="authentication.md" %}
+[authentication.md](authentication.md)
+{% endcontent-ref %}
 
-From the menu select **Authentication logs**.
-
-<figure><img src="../../.gitbook/assets/2.15-settings-authlogs.gif" alt=""><figcaption></figcaption></figure>
-
-If you want to export logs, filter by date range then click **Export to CSV**.
-
-<figure><img src="../../.gitbook/assets/2.15-settings-authlogs-export.png" alt=""><figcaption></figcaption></figure>
-
-Authentication events are searchable and filterable, and the date and time, origin IP address, context, user and result are provided for each.
-
-<figure><img src="../../.gitbook/assets/2.15-settings-authlogs-list.png" alt=""><figcaption></figcaption></figure>
+{% content-ref url="activity.md" %}
+[activity.md](activity.md)
+{% endcontent-ref %}

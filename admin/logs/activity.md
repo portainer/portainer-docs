@@ -1,10 +1,10 @@
-# Activity logs
+# Activity
 
 Within the Portainer Business Edition UI you can view a log of all actions taken. The log is read-only and cannot be edited.
 
-From the menu select **Authentication logs** then select **Activity Logs**.
+From the menu expand **Logs** then select **Activity**.
 
-<figure><img src="../../.gitbook/assets/2.15-settings-authlogs-activity.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.20-logs-activity.gif" alt=""><figcaption></figcaption></figure>
 
 If you want to export logs, filter by date range then click **Export to CSV**.
 
