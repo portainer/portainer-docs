@@ -14,7 +14,7 @@ As part of this we're also changing the way we tag our images. The `:latest` tag
 
 ### How do I deploy 2.20 STS on my environment?
 
-To deploy 2.20, you will need to use the version-specific `:2.20.0` tag. As above. `:latest` will remain pointing to 2.19.4 so you'll want to adjust your commands accordingly. For specific instructions on installing or upgrading Portainer on your environments, refer to our documentation.
+To deploy 2.20, you will need to use the version-specific `:2.20.0` tag. As above. `:latest` will remain pointing to 2.19.4 so you'll want to adjust your commands accordingly. For specific instructions on installing or upgrading Portainer on your environments, refer to our documentation. You can also use the new `:sts` tag to use 2.20.0 and upcoming STS releases.
 
 When you do upgrade to 2.20 however, make sure you take a backup first! If you run into issues and need to drop back to 2.19.4, you'll need this to restore your installation, so note any changes you make to your setup if rolling back.
 
