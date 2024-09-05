@@ -5,7 +5,7 @@ Always match the agent version to the Portainer Server version. In other words, 
 {% endhint %}
 
 {% hint style="danger" %}
-Before beginning any update, we highly recommend [taking a backup](../../admin/settings/#backup-portainer) of your current Portainer configuration.
+Before beginning any update, we highly recommend [taking a backup](../../admin/settings/general#back-up-portainer) of your current Portainer configuration.
 {% endhint %}
 
 ## Updating your Portainer Server
@@ -17,7 +17,7 @@ Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port 
 
 to your command.&#x20;
 
-You can also choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update. Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.&#x20;
+You can also choose to [completely disable HTTP](../../admin/settings/general#force-https-only) after the update. Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.&#x20;
 {% endhint %}
 
 {% hint style="info" %}
