@@ -6,7 +6,7 @@ Select the **AWS** option from the list of providers. If you haven't already con
 You can find more details on [setting up access to your AWS account](../../../settings/credentials/eks.md) in the [shared credentials documentation](../../../settings/credentials/).
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/2.15-kaas-creds-eks.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.21.2-kaas-create-aws-creds.png" alt=""><figcaption></figcaption></figure>
 
 Once you have added your credentials (or if you already had them set up) select your cluster options from the fields below.
 

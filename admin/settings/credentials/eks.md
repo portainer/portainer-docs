@@ -134,6 +134,6 @@ Copy the **Access key ID** and the **Secret access key** that are generated.
 
 To add credentials for an AWS account, from the [Shared credentials](./) page click **Add credentials**, then select the **Amazon Web Services (AWS)** option. Enter a **name** for your credentials, then paste your **access key ID** and and **secret access key** from AWS into the fields.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-cloud-aws-add.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.21.2-settings-cloud-credentials-aws.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on AWS](../../environments/add/kaas/eks.md).

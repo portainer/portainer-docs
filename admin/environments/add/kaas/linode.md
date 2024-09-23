@@ -1,12 +1,12 @@
-# Linode
+# Akamai Connected Cloud
 
-Select the **Linode** option from the list of providers. If you haven't already provided your Linode API token you'll be asked to provide credentials. Provide a **name** for your credentials and paste your Linode API token into the **API key** field and click **Add credentials**.
+Select the **Akamai Connected Cloud** option from the list of providers. If you haven't already provided your API token you'll be asked to provide credentials. Provide a **name** for your credentials and paste your API token into the **API key** field and click **Add credentials**.
 
 {% hint style="info" %}
-You can find more details on [setting up access to your Linode account](../../../settings/credentials/linode.md) in the [shared credentials documentation](../../../settings/credentials/).
+You can find more details on [setting up access to your Akamai account](../../../settings/credentials/linode.md) in the [shared credentials documentation](../../../settings/credentials/).
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/2.15-kaas-creds-linode.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.21.2-kaas-create-akamai-creds.png" alt=""><figcaption></figcaption></figure>
 
 Once you have added your credentials (or if you already had them set up) select your cluster options from the fields below.
 
@@ -20,10 +20,10 @@ Once you have added your credentials (or if you already had them set up) select 
 | Kubernetes version | Select the version of Kubernetes you want to deploy on your cluster. |
 
 {% hint style="info" %}
-You can manually refresh the options available from Linode by clicking **Reload cluster details** under the **Actions** section.
+You can manually refresh the options available from Akamai by clicking **Reload cluster details** under the **Actions** section.
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/2.15-kaas-provision-linode.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.21.2-kaas-create-akamai-cluster.png" alt=""><figcaption></figcaption></figure>
 
 You can also expand the **More settings** section and set groups and tags for your environment now or you can do this later.
 

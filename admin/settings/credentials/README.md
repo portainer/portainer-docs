@@ -7,7 +7,7 @@ In this section you can manage the credentials used with our [KaaS provisioning 
 To add a new set of credentials, click the **Add credentials** button. Portainer currently supports the following credential types:
 
 * [Civo](civo.md)
-* [Linode](linode.md)
+* [Akamai Connected Cloud](linode.md)
 * [DigitalOcean](digitalocean.md)
 * [Google Cloud](gke.md)
 * [Amazon Web Services (AWS)](eks.md)

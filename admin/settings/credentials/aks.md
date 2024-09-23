@@ -32,6 +32,6 @@ Once you've chosen your permissions, click **Next**. Click **Select members** th
 
 To add credentials for an Azure account, from the [Cloud settings](./) page click **Add credentials**, then select the **Microsoft Azure** option. Enter a **name** for your credentials, then paste your **Subscription ID**, **Tenant ID**, **Client ID** and **Client Secret** into the fields.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-cloud-azure-add.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.21.2-settings-cloud-credentials-azure.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on Azure](../../environments/add/kaas/aks.md).

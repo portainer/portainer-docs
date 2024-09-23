@@ -31,9 +31,9 @@ kubectl config view --flatten=true --minify=true > kubeconfig.yml
 
 To create a kubeconfig file from a Civo cluster, log into the Civo dashboard and go to **Kubernetes**. Select the cluster to import and click on **Click to Download** next to the **Kubeconfig** label.
 
-### Linode
+### Akamai Connected Cloud
 
-To create a kubeconfig file from a Linode cluster, log into the Linode dashboard and click on **Kubernetes** in the left hand menu. Select the cluster to import, and in the top right of the page select **Actions** then **Download Config**.
+To create a kubeconfig file from an Akamai Connected Cloud LKE cluster, log into the Akamai dashboard and click on **Kubernetes** in the left hand menu. Select the cluster to import, and in the top right of the page select **Actions** then **Download Config**.
 
 ### DigitalOcean
 

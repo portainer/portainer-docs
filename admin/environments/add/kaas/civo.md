@@ -6,7 +6,7 @@ Select the **Civo** option from the list of providers. If you haven't already pr
 You can find more details on [setting up access to your Civo account](../../../settings/credentials/civo.md) in the [shared credentials documentation](../../../settings/credentials/).
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/2.15-kaas-civo-creds.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.21.2-kaas-create-civo-creds.png" alt=""><figcaption></figcaption></figure>
 
 Once you have added your credentials (or if you already had them set up) select your cluster options from the fields below.
 
@@ -28,7 +28,7 @@ You can manually refresh the options available from Civo by clicking **Reload cl
 
 Civo clusters using Kubernetes version 1.27 or above on a node size of Extra Small may fail to complete provisioning as the compute resources are too limited for required workloads. Versions prior to 1.27 do not have this resource requirement, so can be used with the Extra Small node size.
 
-<figure><img src="../../../../.gitbook/assets/2.15-kaas-provision-civo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.21.2-kaas-create-civo-cluster.png" alt=""><figcaption></figcaption></figure>
 
 You can also expand the **More settings** section and set groups and tags for your environment now or you can do this later.
 

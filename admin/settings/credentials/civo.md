@@ -12,6 +12,6 @@ At the top of the page you should see your API key listed.
 
 To add credentials for a Civo account, from the [Shared credentials](./) page click **Add credentials**, then select the **Civo** option. Give your credential set a **name** and paste your **API key** into the box.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-cloud-civo-add.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.21.2-settings-cloud-credentials-civo.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on Civo](../../environments/add/kaas/civo.md).

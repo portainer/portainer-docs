@@ -6,7 +6,7 @@ Select the **Google Cloud** option from the list of providers. If you haven't al
 You can find more details on [setting up access to your Google Cloud account ](../../../settings/credentials/gke.md)in the [shared credentials documentation](../../../settings/credentials/).
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/2.15-kaas-creds-gke.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.21.2-kaas-create-googlecloud-creds.png" alt=""><figcaption></figcaption></figure>
 
 Once you have added your credentials (or if you already had them set up) select your cluster options from the fields below.
 
@@ -25,7 +25,7 @@ Once you have added your credentials (or if you already had them set up) select 
 You can manually refresh the options available from Google Cloud by clicking **Reload cluster details** under the **Actions** section.
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/2.15-kaas-provision-gke.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.21.2-kaas-create-googlecloud-cluster.png" alt=""><figcaption></figcaption></figure>
 
 You can also expand the **More settings** section and set groups and tags for your environment now or you can do this later.
 

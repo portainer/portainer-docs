@@ -24,7 +24,7 @@ To add your SSH credentials, from the [Shared credentials](./) page click **Add 
 | SSH private key passphrase | If your SSH private key is encrypted, provide the passphrase here.                                                   |
 | SSH private key            | Paste your SSH private key in this field.                                                                            |
 
-<figure><img src="../../../.gitbook/assets/2.18-settings-credentials-ssh.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.21.2-settings-cloud-credentials-ssh.png" alt=""><figcaption></figcaption></figure>
 
 You can also choose to upload your private key by clicking **Upload SSH private key** and selecting the file to upload. This will replace anything in the SSH private key field with the contents of the uploaded file.
 

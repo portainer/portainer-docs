@@ -2,6 +2,26 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.21.2
+
+September 24, 2024
+
+### Changes
+
+* Updated Linode branding to align with the new “Akamai Connected Cloud”.
+* Fixed an issue with stack deployment on Docker when using a .env file from a Git Repository and referencing it in the Compose file.
+
+## Release 2.21.1
+
+September 10, 2024
+
+### Changes
+
+* Fixed an issue where Portainer would crash when cloning a large Git repository
+* Introduced a JWT revocation mechanism to revoke JWTs after logout
+* Fixed an issue when re-creating a container on Docker 24
+* Fixed an issue with stack deployment on Docker when using environment variables in the volumes section of the Compose file
+
 ## Release 2.21.0
 
 August 27, 2024
@@ -166,6 +186,14 @@ This is an STS (Short-Term Support) release. Read more in our ["Portainer 2.20 S
     * Added: `rawAPIKey`
 
 </details>
+
+## Release 2.19.5
+
+April 22, 2024
+
+### Portainer
+
+* Resolved CVE-2024-29296 by creating uniform response time for login attempts
 
 ## Release 2.20.1
 

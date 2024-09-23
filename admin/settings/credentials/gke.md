@@ -14,6 +14,6 @@ Finally, we need to retrieve the private key for the service account. Click on t
 
 To add credentials for a Google Cloud account, from the [Shared credentials](./) page click **Add credentials**, then select the **Google Cloud** option. Give your credential set a **name** and upload the JSON private key for your service account.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-cloud-googlecloud-add.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.21.2-settings-cloud-credentials-googlecloud.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on Google Cloud](../../environments/add/kaas/gke.md).
