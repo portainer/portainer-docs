@@ -24,7 +24,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /path/to/your/certs:/certs \
-    portainer/portainer-ee:2.21.2 \
+    portainer/portainer-ee:2.21.3 \
     --sslcert /certs/portainer.crt \
     --sslkey /certs/portainer.key
 ```
@@ -37,7 +37,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /path/to/your/certs:/certs \
-    portainer/portainer-ce:2.21.2 \
+    portainer/portainer-ce:2.21.3 \
     --sslcert /certs/portainer.crt \
     --sslkey /certs/portainer.key
 ```
@@ -55,7 +55,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v portainer_data:/data \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
-    portainer/portainer-ee:2.21.2 \
+    portainer/portainer-ee:2.21.3 \
     --sslcert /certs/live/yourdomain/fullchain.pem \
     --sslkey /certs/live/yourdomain/privkey.pem
 ```
@@ -69,7 +69,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v portainer_data:/data \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
-    portainer/portainer-ce:2.21.2 \
+    portainer/portainer-ce:2.21.3 \
     --sslcert /certs/live/yourdomain/fullchain.pem \
     --sslkey /certs/live/yourdomain/privkey.pem
 ```

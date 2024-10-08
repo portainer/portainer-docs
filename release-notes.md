@@ -2,6 +2,16 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.21.3
+
+October 8, 2024
+
+### Changes
+
+* Improved home page search performance, addressing slow response times in certain environments.
+* Fixed an issue where the Edge admin role would be removed after login when authenticating via OAuth.
+* Fixed an issue where the CRL (Certificate Revocation List) request timeout may be too short, causing potential connection issues.
+
 ## Release 2.21.2
 
 September 24, 2024
