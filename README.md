@@ -2,6 +2,10 @@
 
 Welcome to Portainer's official documentation site.
 
+{% hint style="info" %}
+You are currently viewing the documentation for the most recent Long Term Support (LTS) release of Portainer, which is our recommended release for production environments. For documentation on our newest Short Term Support (STS) release, [click this link](https://docs.portainer.io/2.22/).
+{% endhint %}
+
 ## About Portainer
 
 **Portainer Community Edition (CE)** is our foundation. With over half a million regular users, CE is a powerful, open source toolset that allows you to easily build and manage containers in Docker, Docker Swarm, Kubernetes and Azure ACI.

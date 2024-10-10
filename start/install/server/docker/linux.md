@@ -4,6 +4,10 @@
 These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/docker/linux.md).
 {% endhint %}
 
+{% hint style="info" %}
+You are currently reading installation instructions for the most recent Long Term Support (LTS) release of Portainer. For installation instructions for our newest Short Term Support (STS) release, [click this link](https://docs.portainer.io/2.22/start/install/server/docker/linux).
+{% endhint %}
+
 ## Introduction
 
 Portainer consists of two elements, the _Portainer Server_, and the _Portainer Agent_. Both elements run as lightweight Docker containers on a Docker engine. This document will help you install the Portainer Server container on your Linux environment. To add a new Linux environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../../../admin/environments/add/docker/agent.md).
