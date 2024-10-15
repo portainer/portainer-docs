@@ -5,7 +5,7 @@ These installation instructions are for Portainer Business Edition (BE). For Por
 {% endhint %}
 
 {% hint style="info" %}
-You are currently reading installation instructions for the most recent Long Term Support (LTS) release of Portainer. For installation instructions for our newest Short Term Support (STS) release, [click this link](https://docs.portainer.io/2.22/start/install/server/docker/linux).
+You are currently reading installation instructions for the most recent Long Term Support (LTS) release of Portainer. For installation instructions for our newest Short Term Support (STS) release, [click this link](https://docs.portainer.io/2.23/start/install/server/docker/linux).
 {% endhint %}
 
 ## Introduction

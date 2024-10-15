@@ -3,7 +3,7 @@
 Welcome to Portainer's official documentation site.
 
 {% hint style="info" %}
-You are currently viewing the documentation for the most recent Long Term Support (LTS) release of Portainer, which is our recommended release for production environments. For documentation on our newest Short Term Support (STS) release, [click this link](https://docs.portainer.io/2.22/).
+You are currently viewing the documentation for the most recent Long Term Support (LTS) release of Portainer, which is our recommended release for production environments. For documentation on our newest Short Term Support (STS) release, [click this link](https://docs.portainer.io/2.23/).
 {% endhint %}
 
 ## About Portainer
