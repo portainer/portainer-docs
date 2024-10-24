@@ -8,7 +8,7 @@ This is advanced functionality and assumes working knowledge of the Linux comman
 
 ## Preparation
 
-As with a standard MicroK8s provision, Portainer requires SSH access to the servers that are being provisioned. Within this SSH user's home directory, create a directory named `microk8s`, and within that a subdirectory named `images`. This is where Portainer expects the MicroK8s files to be for an offline installation. For example:
+As with a standard MicroK8s provision, Portainer requires root or passwordless sudo SSH access to the servers that are being provisioned. Within this SSH user's home directory, create a directory named `microk8s`, and within that a subdirectory named `images`. This is where Portainer expects the MicroK8s files to be for an offline installation. For example:
 
 ```
 mkdir -p $HOME/microk8s
