@@ -1,7 +1,7 @@
 # Updating on Docker Standalone
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.21.3 make sure all of the agents are also on version 2.21.3.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.21.4 make sure all of the agents are also on version 2.21.4.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -39,13 +39,13 @@ Now that you have stopped and removed the old version of Portainer, you must ens
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker pull portainer/portainer-ee:2.21.3
+docker pull portainer/portainer-ee:2.21.4
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker pull portainer/portainer-ce:2.21.3
+docker pull portainer/portainer-ce:2.21.4
 ```
 {% endtab %}
 {% endtabs %}
@@ -55,13 +55,13 @@ Finally, deploy the updated version of Portainer:
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:2.21.3
+docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:2.21.4
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.21.3
+docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.21.4
 ```
 {% endtab %}
 {% endtabs %}
@@ -74,7 +74,7 @@ These `docker run` commands include opening port `8000` which is used for Edge A
 To provide your own SSL certs you may use `--sslcert` and `--sslkey` flags as below to provide the certificate and key files. The certificate file needs to be the full chain and in PEM format. For example, for Business Edition:
 
 ```
-docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:2.21.3 --sslcert /path/to/cert/portainer.crt --sslkey /path/to/cert/portainer.key
+docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:2.21.4 --sslcert /path/to/cert/portainer.crt --sslkey /path/to/cert/portainer.key
 ```
 {% endhint %}
 
@@ -97,13 +97,13 @@ docker rm portainer_agent
 Next, pull the updated version of the image:
 
 ```
-docker pull portainer/agent:2.21.3
+docker pull portainer/agent:2.21.4
 ```
 
 Finally, start the agent with the updated image:
 
 ```
-docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.21.3
+docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.21.4
 ```
 
 {% hint style="warning" %}

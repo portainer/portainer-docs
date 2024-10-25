@@ -38,7 +38,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /root/certs:/certs
-    portainer/portainer-ee:2.21.3 \
+    portainer/portainer-ee:2.21.4 \
     --mtlscacert /certs/mtlsca.crt \    
     --mtlscert /certs/mtlsserver.crt \
     --mtlskey /certs/mtlsserver.key
@@ -63,7 +63,7 @@ Modify your Portainer YAML file to attach the secrets and add the `--mtlscacert`
 
 ```yaml
   portainer:
-    image: portainer/portainer-ee:2.21.3
+    image: portainer/portainer-ee:2.21.4
     command: -H tcp://tasks.agent:9001 --tlsskipverify --mtlscacert /run/secrets/portainer.mtlscacert --mtlscert /run/secrets/portainer.mtlscert --mtlskey /run/secrets/portainer.mtlskey
     ports:
       - "9443:9443"
@@ -177,7 +177,7 @@ docker run -d \
   -e EDGE_KEY=your-edge-key \
   -e EDGE_INSECURE_POLL=0 \
   --name portainer_edge_agent \
-  portainer/agent:2.21.3 \
+  portainer/agent:2.21.4 \
   --mtlscacert /certs/mtlsca.crt \
   --mtlscert /certs/client.crt \
   --mtlskey /certs/client.key
@@ -224,7 +224,7 @@ docker service create \
   --mount type=bind,src=//var/lib/docker/volumes,dst=/var/lib/docker/volumes \
   --mount type=bind,src=//,dst=/host \
   --mount type=volume,src=portainer_agent_data,dst=/data \
-  portainer/agent:2.21.3 \
+  portainer/agent:2.21.4 \
   --mtlscacert /run/secrets/portainer.mtlscacert \
   --mtlscert /run/secrets/portainer.mtlscert \
   --mtlskey /run/secrets/portainer.mtlskey

@@ -1,7 +1,7 @@
 # Updating on Kubernetes
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.21.3 make sure all of the agents are also on version 2.21.3.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.21.4 make sure all of the agents are also on version 2.21.4.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -31,14 +31,14 @@ Next, run one of the following commands to update to version 2.21 of Portainer:
 {% tab title="Business Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set enterpriseEdition.image.tag=2.21.3
+    --set enterpriseEdition.image.tag=2.21.4
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set image.tag=2.21.3
+    --set image.tag=2.21.4
 ```
 {% endtab %}
 {% endtabs %}

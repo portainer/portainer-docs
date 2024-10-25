@@ -2,6 +2,18 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.21.4
+
+October 25, 2024
+
+### Changes
+
+* Ported client API negotiation changes to ensure LTS can be compatible with future Docker versions.
+* Improved the Edge-related API error response by including environment ID and name.
+* Added the display of the missing Edge stack deployment errors on the Edge stack environment status page.
+* Fixed an issue that prevented the removal of older files when updating an Edge configuration.
+* Fixed an issue that prevented consecutive updates of Swarm services from reloading the page.
+
 ## Release 2.21.3
 
 October 8, 2024

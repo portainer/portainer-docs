@@ -37,7 +37,7 @@ services:
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
 
   portainer:
-    image: portainer/portainer-ee:2.21.3
+    image: portainer/portainer-ee:2.21.4
     command: -H unix:///var/run/docker.sock
     restart: always
     volumes:
@@ -95,7 +95,7 @@ services:
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
 
   portainer:
-    image: portainer/portainer-ce:2.21.3
+    image: portainer/portainer-ce:2.21.4
     command: -H unix:///var/run/docker.sock
     restart: always
     volumes:
@@ -214,7 +214,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
   agent:
-    image: portainer/agent:2.21.3
+    image: portainer/agent:2.21.4
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -232,7 +232,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ee:2.21.3
+    image: portainer/portainer-ee:2.21.4
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data
@@ -292,7 +292,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
   agent:
-    image: portainer/agent:2.21.3
+    image: portainer/agent:2.21.4
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -310,7 +310,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ce:2.21.3
+    image: portainer/portainer-ce:2.21.4
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data
@@ -366,8 +366,8 @@ To check the deployment, run `docker service ls`. You should see an output simil
 
 ```
 ID                  NAME                  MODE                REPLICAS            IMAGE                          PORTS
-lt21zrypsll6        portainer_agent       global              1/1                 portainer/agent:2.21.3
-m6912ynwdcd7        portainer_portainer   replicated          1/1                 portainer/portainer-ee:2.21.3
+lt21zrypsll6        portainer_agent       global              1/1                 portainer/agent:2.21.4
+m6912ynwdcd7        portainer_portainer   replicated          1/1                 portainer/portainer-ee:2.21.4
 tw2nb4i640e4        portainer_traefik     replicated          1/1                 traefik:latest                 *:80->80/tcp, *:443->443/tcp
 ```
 
