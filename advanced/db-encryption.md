@@ -152,7 +152,7 @@ To enable encryption on Kubernetes you will first need to create a secret. You w
 From the command line on your Kubernetes cluster, you can run the following command to create your secret:
 
 ```
-kubectl create secret generic portainer-key --from-literal=secret=IAmASecretKey
+kubectl create secret generic portainer-key --from-literal=secret=IAmASecretKey --namespace portainer
 ```
 
 Replace `IAmASecretKey` with your secret. This will create a secret named `portainer-key`, which will be the key used to encrypt the Portainer database.
@@ -180,6 +180,7 @@ volumeMounts:
     mountPath: /data
   - name: portainer-key
     mountPath: /run/secrets/portainer
+    subPath: portainer
 ```
 
 We also need to add a definition to the `volumes` definition for the `spec`:
@@ -192,7 +193,10 @@ spec:
   volumes:
     - name: portainer-key
       secret:
-        secret_name: portainer-key
+        secretName: portainer-key
+        items:
+         - key: secret
+           path: portainer
       
 ```
 
