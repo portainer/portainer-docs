@@ -195,8 +195,8 @@ spec:
       secret:
         secretName: portainer-key
         items:
-         - key: secret
-           path: portainer
+          - key: secret
+            path: portainer
       
 ```
 
