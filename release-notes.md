@@ -50,11 +50,18 @@ None
 
 #### Removed features
 
-*   **Platform and Architecture-Specific Images**:
+* **Platform and Architecture-Specific Images**:
+  * We have removed image tags named for various architectures using the convention `<platform>-<arch>`. These images tags were deprecated in a previous release. This change ensures further standardization and consistency across our software distribution.
 
-    * We have removed image tags named for various architectures using the convention `<platform>-<arch>`. These images tags were deprecated in a previous release. This change ensures further standardization and consistency across our software distribution.
+## Release 2.21.3 <a href="#release-2.21.3" id="release-2.21.3"></a>
 
+October 8, 2024
 
+### Changes <a href="#changes-1" id="changes-1"></a>
+
+* Improved home page search performance, addressing slow response times in certain environments.
+* Fixed an issue where the Edge admin role would be removed after login when authenticating via OAuth.
+* Fixed an issue where the CRL (Certificate Revocation List) request timeout may be too short, causing potential connection issues.
 
 ## Release 2.22.0
 
