@@ -8,6 +8,7 @@
 
 * [Introduction](start/intro.md)
 * [Portainer architecture](start/architecture.md)
+* [Lifecycle policy](start/lifecycle.md)
 * [Requirements and prerequisites](start/requirements-and-prerequisites.md)
 * [Install Portainer BE](start/install/README.md)
   * [Set up a new Portainer BE Server installation](start/install/server/README.md)
