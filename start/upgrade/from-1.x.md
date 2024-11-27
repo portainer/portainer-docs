@@ -39,7 +39,7 @@ Verify that you are running version 1.24.2 by logging into Portainer and reading
 
 ## Updating from 1.24.1 and 1.24.2
 
-If you are running a version prior to 1.24.1 and want to update to the latest Portainer release, you must first update to `portainer/portainer-ce:2.0.0`, use the following commands to stop then remove the old version. Your other applications/containers will not be removed.
+If you are running version 1.24.1 or 1.24.2 and want to update to the latest Portainer release, you must first update to `portainer/portainer-ce:2.0.0`. Use the following commands to stop then remove the old version. Your other applications/containers will not be removed.
 
 ### Docker Standalone
 
