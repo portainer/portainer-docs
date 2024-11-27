@@ -1,13 +1,17 @@
 # Updating on Docker Swarm
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.21.3 make sure all of the agents are also on version 2.21.3.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.21.4 make sure all of the agents are also on version 2.21.4.
 {% endhint %}
 
 {% hint style="warning" %}
 Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443.` These instructions will configure Portainer to use 9443 for HTTPS  and 9000 for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update.&#x20;
 
 Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.&#x20;
+{% endhint %}
+
+{% hint style="danger" %}
+If you are updating from the 1.x version of Portainer, you **must** first [update to 2.0.0](from-1.x.md) **before** updating to the newest version or you will run into issues.
 {% endhint %}
 
 {% hint style="danger" %}

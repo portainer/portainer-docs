@@ -52,6 +52,14 @@ If you would prefer to manually update your Portainer installation, choose your 
 [kubernetes.md](kubernetes.md)
 {% endcontent-ref %}
 
+If you are coming from the Portainer 1.x branch, there are steps you **must** follow in order to update successfully:
+
+{% content-ref url="from-1.x.md" %}
+[from-1.x.md](from-1.x.md)
+{% endcontent-ref %}
+
+
+
 ### Update the Portainer Agent
 
 To update the standard (non-Edge) Portainer Agent, you can find instructions in the above platform-specific links ([Docker Standalone](docker.md#agent-only-upgrade), [Docker Swarm](swarm.md), and [Kubernetes](kubernetes.md)).
@@ -64,7 +72,7 @@ If you are using the Portainer Edge Agent, we have specific update instructions 
 
 ### Upgrading to Business Edition
 
-If you are coming from Portainer CE or the 1.24.x branch, we have guides for you as well.
+If you are coming from Portainer CE and want to move to BE, we have guides for you as well.
 
 {% content-ref url="tobe/" %}
 [tobe](tobe/)
