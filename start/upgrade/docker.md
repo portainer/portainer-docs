@@ -5,6 +5,10 @@ Always match the agent version to the Portainer Server version. In other words, 
 {% endhint %}
 
 {% hint style="danger" %}
+If you are updating from the 1.x version of Portainer, you **must** first [update to 2.0.0](from-1.x.md) **before** updating to the newest version or you will run into issues.
+{% endhint %}
+
+{% hint style="danger" %}
 Before beginning any update, we highly recommend [taking a backup](https://github.com/portainer/portainer-docs/blob/2.21/admin/settings/general/README.md#back-up-portainer) of your current Portainer configuration.
 {% endhint %}
 

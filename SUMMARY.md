@@ -8,6 +8,7 @@
 
 * [Introduction](start/intro.md)
 * [Portainer architecture](start/architecture.md)
+* [Lifecycle policy](start/lifecycle.md)
 * [Requirements and prerequisites](start/requirements-and-prerequisites.md)
 * [Install Portainer BE](start/install/README.md)
   * [Set up a new Portainer BE Server installation](start/install/server/README.md)
@@ -49,6 +50,7 @@
   * [Updating on Kubernetes](start/upgrade/kubernetes.md)
   * [Updating on Nomad](start/upgrade/nomad.md)
   * [Updating the Edge Agent](start/upgrade/edge.md)
+  * [Updating from Portainer 1.x](start/upgrade/from-1.x.md)
   * [Switching to Portainer Business Edition](start/upgrade/tobe/README.md)
     * [Upgrade to Business Edition from within Portainer Community Edition](start/upgrade/tobe/inapp.md)
     * [Docker Standalone](start/upgrade/tobe/docker.md)
@@ -321,7 +323,7 @@
 * [Portainer Academy](https://academy.portainer.io)
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
 * [GitHub](https://github.com/orgs/portainer/discussions)
-* [Slack](https://join.slack.com/t/portainer/shared\_invite/zt-21zpww5ab-mG\_lA7UXbWL3HW3sPqjqEA)
+* [Slack](https://join.slack.com/t/portainer/shared_invite/zt-21zpww5ab-mG_lA7UXbWL3HW3sPqjqEA)
 * [Discord](https://discord.com/invite/j8fVken)
 * [Open a support request](https://www.portainer.io/portainer-business-support)
 
