@@ -37,7 +37,7 @@ podman volume create portainer_data
 
 Then, download and install the Portainer Server container:
 
-<pre><code><strong>podman run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always --privileged -v /run/podman/podman.sock:/run/podman/podman.sock -v portainer_data:/data portainer/portainer-ee:2.22.0
+<pre><code><strong>podman run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:2.22.0
 </strong></code></pre>
 
 {% hint style="info" %}
