@@ -6,7 +6,7 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 October 3, 2024
 
-This is a [STS (Short Term Support) release](https://www.portainer.io/blog/portainer-2.20-release) that includes all the changes added up to and including the 2.21.2 release, as well as various fixes aimed at enhancing the stability and scalability of Portainer. For more details on what is included from the 2.21 release, refer to the [2.21 release notes](release-notes.md#release-2.21.2).
+This is a [STS (Short Term Support) release](start/lifecycle.md#sts-versus-lts) that includes all the changes added up to and including the 2.21.2 release, as well as various fixes aimed at enhancing the stability and scalability of Portainer. For more details on what is included from the 2.21 release, refer to the [2.21 release notes](release-notes.md#release-2.21.2).
 
 ### Breaking changes
 

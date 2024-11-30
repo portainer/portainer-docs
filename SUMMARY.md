@@ -8,6 +8,7 @@
 
 * [Introduction](start/intro.md)
 * [Portainer architecture](start/architecture.md)
+* [Lifecycle policy](start/lifecycle.md)
 * [Requirements and prerequisites](start/requirements-and-prerequisites.md)
 * [Install Portainer BE](start/install/README.md)
   * [Set up a new Portainer BE Server installation](start/install/server/README.md)
@@ -321,7 +322,7 @@
 * [Portainer Academy](https://academy.portainer.io)
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
 * [GitHub](https://github.com/orgs/portainer/discussions)
-* [Slack](https://join.slack.com/t/portainer/shared\_invite/zt-21zpww5ab-mG\_lA7UXbWL3HW3sPqjqEA)
+* [Slack](https://join.slack.com/t/portainer/shared_invite/zt-21zpww5ab-mG_lA7UXbWL3HW3sPqjqEA)
 * [Discord](https://discord.com/invite/j8fVken)
 * [Open a support request](https://www.portainer.io/portainer-business-support)
 
