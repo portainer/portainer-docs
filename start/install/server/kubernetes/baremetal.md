@@ -27,6 +27,10 @@ The installation instructions also make the following assumptions about your env
 
 Portainer requires data persistence, and as a result needs at least one StorageClass available to use. Portainer will attempt to use the default StorageClass during deployment. If you do not have a StorageClass tagged as `default` the deployment will likely fail.
 
+{% hint style="info" %}
+We recommend using block storage for Kubernetes rather than network storage for the best performance and reliability, but do pay attention to the IOPS of your block storage devices when choosing the volume to use as some options are slower than others.
+{% endhint %}
+
 You can check if you have a default StorageClass by running the following command on your cluster:
 
 ```
@@ -89,7 +93,7 @@ Using the following command, Portainer will be available on port `30779` for HTT
 ```
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set enterpriseEdition.enabled=true \
-    --set enterpriseEdition.image.tag=2.24.0 \
+    --set enterpriseEdition.image.tag=2.24.1 \
     --set tls.force=true
 ```
 
@@ -108,7 +112,7 @@ In this example, Portainer will be deployed to your cluster and assigned a Clust
 ```
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set enterpriseEdition.enabled=true \
-    --set enterpriseEdition.image.tag=2.24.0 \
+    --set enterpriseEdition.image.tag=2.24.1 \
     --set service.type=ClusterIP \
     --set tls.force=true \
     --set ingress.enabled=true \
@@ -130,7 +134,7 @@ Using the following command, Portainer will be available at an assigned Load Bal
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=LoadBalancer \
     --set enterpriseEdition.enabled=true \
-    --set enterpriseEdition.image.tag=2.24.0 \
+    --set enterpriseEdition.image.tag=2.24.1 \
     --set tls.force=true
 ```
 

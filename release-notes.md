@@ -2,6 +2,34 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.24.1
+
+December 3, 2024
+
+### Known issues
+
+**Known issues with Docker support**
+
+* Service pruning does not work with stacks using relative paths
+
+**Known issues with Podman support**
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+### Changes
+
+* Fixed an issue where Git stacks using subdirectories and environment files could not be edited.
+* Fixed an issue where an extra network was being created when deploying a stack with only external networks defined.
+* Fixed an issue where the `env_file` field in Compose files was being ignored.
+* Fixed an issue where users were unable to pull images from private registries as expected.
+* Fixed an issue where a stack that built an image that it then referenced would fail to deploy with a "no such image" error.
+* Fixed an infinite recursion issue in an RBAC route when switching users and connecting to an agent endpoint.
+* Fixed an issue that omitted copying the IP address in container port mapping when provided during the Edit/Duplicate operation for an existing container.
+* Fixed an issue with images that included files failing to build.
+* Fixed an issue where activity logs shown in the Portainer UI were encoded with base64.
+
 ## Release 2.24.0
 
 November 20, 2024

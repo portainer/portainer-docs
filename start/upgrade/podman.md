@@ -1,7 +1,7 @@
 # Updating on Podman
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.24.0 make sure all of the agents are also on version 2.24.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.24.1 make sure all of the agents are also on version 2.24.1.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -39,13 +39,13 @@ Now that you have stopped and removed the old version of Portainer, you must ens
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-podman pull portainer/portainer-ee:2.24.0
+podman pull portainer/portainer-ee:2.24.1
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-podman pull portainer/portainer-ce:2.24.0
+podman pull portainer/portainer-ce:2.24.1
 ```
 {% endtab %}
 {% endtabs %}
@@ -55,13 +55,13 @@ Finally, deploy the updated version of Portainer:
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-podman run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always --privileged -v /run/podman/podman.sock:/run/podman/podman.sock -v portainer_data:/data portainer/portainer-ee:2.24.0
+podman run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always --privileged -v /run/podman/podman.sock:/run/podman/podman.sock -v portainer_data:/data portainer/portainer-ee:2.24.1
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-podman run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always --privileged -v /run/podman/podman.sock:/run/podman/podman.sock -v portainer_data:/data portainer/portainer-ce:2.24.0
+podman run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always --privileged -v /run/podman/podman.sock:/run/podman/podman.sock -v portainer_data:/data portainer/portainer-ce:2.24.1
 ```
 {% endtab %}
 {% endtabs %}
@@ -74,7 +74,7 @@ These `podman run` commands include opening port `8000` which is used for Edge A
 To provide your own SSL certs you may use `--sslcert` and `--sslkey` flags as below to provide the certificate and key files. The certificate file needs to be the full chain and in PEM format. For example, for Business Edition:
 
 ```
-podman run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always --privileged -v /run/podman/podman.sock:/run/podman/podman.sock -v portainer_data:/data portainer/portainer-ee:2.24.0 --sslcert /path/to/cert/portainer.crt --sslkey /path/to/cert/portainer.key
+podman run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always --privileged -v /run/podman/podman.sock:/run/podman/podman.sock -v portainer_data:/data portainer/portainer-ee:2.24.1 --sslcert /path/to/cert/portainer.crt --sslkey /path/to/cert/portainer.key
 ```
 {% endhint %}
 
@@ -97,13 +97,13 @@ podman rm portainer_agent
 Next, pull the updated version of the image:
 
 ```
-podman pull portainer/agent:2.24.0
+podman pull portainer/agent:2.24.1
 ```
 
 Finally, start the agent with the updated image:
 
 ```
-podman run -d -p 9001:9001 --name portainer_agent --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v /var/lib/containers/storage/volumes:/var/lib/docker/volumes portainer/agent:2.24.0
+podman run -d -p 9001:9001 --name portainer_agent --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v /var/lib/containers/storage/volumes:/var/lib/docker/volumes portainer/agent:2.24.1
 ```
 
 {% hint style="warning" %}

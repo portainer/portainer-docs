@@ -1,7 +1,7 @@
 # Updating on Docker Swarm
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.24.0 make sure all of the agents are also on version 2.24.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.24.1 make sure all of the agents are also on version 2.24.1.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -28,8 +28,8 @@ Make note of the service names for Portainer. You will need them later.
 
 ```
 ID             NAME                    MODE         REPLICAS   IMAGE                          PORTS
-tb9gtxc647fw   portainer-agent_agent   global       3/3        portainer/agent:2.23.0
-m3a3mtuy55ed   portainer_portainer     replicated   1/1        portainer/portainer-ee:2.23.0  *:8000->8000/tcp, *:9000->9000/tcp
+tb9gtxc647fw   portainer-agent_agent   global       3/3        portainer/agent:2.24.0
+m3a3mtuy55ed   portainer_portainer     replicated   1/1        portainer/portainer-ee:2.24.0  *:8000->8000/tcp, *:9000->9000/tcp
 ```
 
 To update Portainer Server to the latest version, run one of the sets of commands below depending on your edition of Portainer (replace the `portainer_portainer` service name if your setup differs):
@@ -37,15 +37,15 @@ To update Portainer Server to the latest version, run one of the sets of command
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker pull portainer/portainer-ee:2.24.0
-docker service update --image portainer/portainer-ee:2.24.0 --publish-add 9443:9443 --force portainer_portainer
+docker pull portainer/portainer-ee:2.24.1
+docker service update --image portainer/portainer-ee:2.24.1 --publish-add 9443:9443 --force portainer_portainer
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker pull portainer/portainer-ce:2.24.0
-docker service update --image portainer/portainer-ce:2.24.0 --publish-add 9443:9443 --force portainer_portainer
+docker pull portainer/portainer-ce:2.24.1
+docker service update --image portainer/portainer-ce:2.24.1 --publish-add 9443:9443 --force portainer_portainer
 ```
 {% endtab %}
 {% endtabs %}
@@ -53,8 +53,8 @@ docker service update --image portainer/portainer-ce:2.24.0 --publish-add 9443:9
 To update the Portainer Agent to the latest version, run the commands below (replace the `portainer_agent` service name if your setup differs):
 
 ```
-docker pull portainer/agent:2.24.0
-docker service update --image portainer/agent:2.24.0 --force portainer_agent 
+docker pull portainer/agent:2.24.1
+docker service update --image portainer/agent:2.24.1 --force portainer_agent 
 ```
 
 This will deploy the newest version of Portainer and the agent across your swarm and upgrade the Portainer database to match.
