@@ -27,6 +27,10 @@ The installation instructions also make the following assumptions about your env
 
 Portainer requires data persistence, and as a result needs at least one StorageClass available to use. Portainer will attempt to use the default StorageClass during deployment. If you do not have a StorageClass tagged as `default` the deployment will likely fail.
 
+{% hint style="info" %}
+We recommend using block storage for Kubernetes rather than network storage for the best performance and reliability, but do pay attention to the IOPS of your block storage devices when choosing the volume to use as some options are slower than others.
+{% endhint %}
+
 You can check if you have a default StorageClass by running the following command on your cluster:
 
 ```
