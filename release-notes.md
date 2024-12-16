@@ -10,6 +10,10 @@ This is a [STS (Short Term Support) release](start/lifecycle.md#sts-versus-lts) 
 
 ### Known issues
 
+#### **Known issues with Docker support**
+
+* Service pruning does not work with stacks using relative paths
+
 #### **Known issues with Podman support**
 
 * Podman environments aren't supported by auto-onboarding script
