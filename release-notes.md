@@ -2,6 +2,23 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.21.5
+
+December 20, 2024
+
+### Resolved CVEs
+
+* CVE-2024-45337
+
+### Changes
+
+* Fixed an issue that omitted copying the IP address in container port mapping when provided during the Edit/Duplicate operation for an existing container.
+* Fixed an issue with images that included files failing to build.
+* Fixed a resource leak that prevented the backup process from finishing under some specific circumstances.
+* Optimized the space used by Git repositories.
+* Fixed aggressive image pulling retry.
+* Fixed an issue where LDAP users get duplicated in a Team for each login.
+
 ## Release 2.21.4
 
 October 25, 2024

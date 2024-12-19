@@ -56,7 +56,7 @@ Using the following command, Portainer will be available on port `30777` for HTT
 ```
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set enterpriseEdition.enabled=true \
-    --set enterpriseEdition.image.tag=2.21.4
+    --set enterpriseEdition.image.tag=2.21.5
 ```
 
 {% hint style="info" %}
@@ -70,7 +70,7 @@ In this example, Portainer will be deployed to your cluster and assigned a Clust
 ```
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set enterpriseEdition.enabled=true \
-    --set enterpriseEdition.image.tag=2.21.4 \
+    --set enterpriseEdition.image.tag=2.21.5 \
     --set service.type=ClusterIP \
     --set tls.force=true \
     --set ingress.enabled=true \
@@ -88,7 +88,7 @@ Using the following command, Portainer will be available at an assigned Load Bal
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=LoadBalancer \
     --set enterpriseEdition.enabled=true \
-    --set enterpriseEdition.image.tag=2.21.4
+    --set enterpriseEdition.image.tag=2.21.5
 ```
 
 {% hint style="info" %}
