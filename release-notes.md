@@ -2,6 +2,47 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.25.1
+
+December 20, 2024
+
+### Known issues
+
+#### Known issues with Docker support
+
+* Service pruning does not work with stacks using relative paths
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+### Resolved CVEs
+
+* CVE-2024-45337 \[[BE-11511](https://linear.app/portainer/issue/BE-11511/cve-2024-45337)]
+
+### Changes
+
+* Fixed an issue where excessive warnings were logged if agents weren’t updated to match server version \[[BE-11498](https://linear.app/portainer/issue/BE-11498/snapshots-not-forming-for-edge-agents)]
+
+## Release 2.21.5
+
+December 20, 2024
+
+### Resolved CVEs <a href="#resolved-cves" id="resolved-cves"></a>
+
+* CVE-2024-45337
+
+### Changes <a href="#changes" id="changes"></a>
+
+* Fixed an issue that omitted copying the IP address in container port mapping when provided during the Edit/Duplicate operation for an existing container.
+* Fixed an issue with images that included files failing to build.
+* Fixed a resource leak that prevented the backup process from finishing under some specific circumstances.
+* Optimized the space used by Git repositories.
+* Fixed aggressive image pulling retry.
+* Fixed an issue where LDAP users get duplicated in a Team for each login.
+
 ## Release 2.25.0
 
 December 16, 2024

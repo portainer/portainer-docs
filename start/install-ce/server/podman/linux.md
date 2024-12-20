@@ -36,7 +36,7 @@ podman volume create portainer_data
 
 Then, download and install the Portainer Server container:
 
-<pre><code><strong>podman run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.25.0
+<pre><code><strong>podman run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.25.1
 </strong></code></pre>
 
 {% hint style="info" %}
@@ -54,7 +54,7 @@ Portainer Server has now been installed. You can check to see whether the Portai
 ```bash
 root@server:~# podman ps
 CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS      PORTS                                                                                  NAMES             
-de5b28eb2fa9   portainer/portainer-ce:2.25.0  "/portainer"             2 weeks ago   Up 9 days   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
+de5b28eb2fa9   portainer/portainer-ce:2.25.1  "/portainer"             2 weeks ago   Up 9 days   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
 ```
 
 ## Logging In

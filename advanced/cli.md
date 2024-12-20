@@ -62,13 +62,13 @@ Once the password has been created, specify the admin password from the command 
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.0 --admin-password='$2y$05$8oz75U8m5tI/xT4P0NbSHeE7WyRzOWKRBprfGotwDkhBOGP/u802u'
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.1 --admin-password='$2y$05$8oz75U8m5tI/xT4P0NbSHeE7WyRzOWKRBprfGotwDkhBOGP/u802u'
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.0 --admin-password='$2y$05$8oz75U8m5tI/xT4P0NbSHeE7WyRzOWKRBprfGotwDkhBOGP/u802u'
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.1 --admin-password='$2y$05$8oz75U8m5tI/xT4P0NbSHeE7WyRzOWKRBprfGotwDkhBOGP/u802u'
 ```
 {% endtab %}
 {% endtabs %}
@@ -86,13 +86,13 @@ Next, start the Portainer container:
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ee:2.25.0 --admin-password-file /tmp/portainer_password
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ee:2.25.1 --admin-password-file /tmp/portainer_password
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ce:2.25.0 --admin-password-file /tmp/portainer_password
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ce:2.25.1 --admin-password-file /tmp/portainer_password
 ```
 {% endtab %}
 {% endtabs %}
@@ -114,7 +114,7 @@ docker service create \
     --replicas=1 \
     --constraint 'node.role == manager' \
     --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
-    portainer/portainer-ee:2.25.0 \
+    portainer/portainer-ee:2.25.1 \
     --admin-password-file '/run/secrets/portainer-pass' \
     -H unix:///var/run/docker.sock
 ```
@@ -130,7 +130,7 @@ docker service create \
     --replicas=1 \
     --constraint 'node.role == manager' \
     --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
-    portainer/portainer-ce:2.25.0 \
+    portainer/portainer-ce:2.25.1 \
     --admin-password-file '/run/secrets/portainer-pass' \
     -H unix:///var/run/docker.sock
 ```
@@ -150,13 +150,13 @@ To hide this container, when starting Portainer add the `-l owner=acme` option o
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.0 -l owner=acme
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.1 -l owner=acme
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.0 -l owner=acme
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.1 -l owner=acme
 ```
 {% endtab %}
 {% endtabs %}
@@ -166,13 +166,13 @@ To hide multiple containers, repeat the `-l` flag:
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.0 -l owner=acme -l service=secret
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.1 -l owner=acme -l service=secret
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.0 -l owner=acme -l service=secret
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.1 -l owner=acme -l service=secret
 ```
 {% endtab %}
 {% endtabs %}
@@ -188,13 +188,13 @@ Replace our logo with your own using the `--logo` flag to specify the location o
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.0 --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.1 --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.0 --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.1 --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
 ```
 {% endtab %}
 {% endtabs %}
@@ -214,13 +214,13 @@ Templates are loaded once when Portainer is first started. If you already deploy
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.0 --templates http://my-host.my-domain/templates.json
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:2.25.1 --templates http://my-host.my-domain/templates.json
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.0 --templates http://my-host.my-domain/templates.json
+docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:2.25.1 --templates http://my-host.my-domain/templates.json
 ```
 {% endtab %}
 {% endtabs %}

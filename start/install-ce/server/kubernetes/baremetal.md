@@ -92,7 +92,7 @@ Using the following command, Portainer will be available on port `30779` for HTT
 ```
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set tls.force=true \
-    --set image.tag=2.25.0
+    --set image.tag=2.25.1
 ```
 
 {% hint style="info" %}
@@ -111,7 +111,7 @@ In this example, Portainer will be deployed to your cluster and assigned a Clust
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=ClusterIP \
     --set tls.force=true \
-    --set image.tag=2.25.0 \
+    --set image.tag=2.25.1 \
     --set ingress.enabled=true \
     --set ingress.ingressClassName=<ingressClassName (eg: nginx)> \
     --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
@@ -131,7 +131,7 @@ Using the following command, Portainer will be available at an assigned Load Bal
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=LoadBalancer \
     --set tls.force=true \
-    --set image.tag=2.25.0
+    --set image.tag=2.25.1
 ```
 
 {% hint style="info" %}
