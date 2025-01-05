@@ -7,7 +7,7 @@ Always match the agent version to the Portainer Server version. In other words, 
 {% endhint %}
 
 {% hint style="danger" %}
-Before beginning any update, we highly recommend [taking a backup](../../admin/settings/#backup-portainer) of your current Portainer configuration.
+Before beginning any update, we highly recommend [taking a backup](../../admin/settings/general.md#back-up-portainer) of your current Portainer configuration.
 {% endhint %}
 
 ## Docker Standalone

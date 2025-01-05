@@ -15,7 +15,7 @@ If you are updating from the 1.x version of Portainer, you **must** first [updat
 {% endhint %}
 
 {% hint style="danger" %}
-Before beginning any update, we highly recommend [taking a backup](../../admin/settings/#backup-portainer) of your current Portainer configuration.
+Before beginning any update, we highly recommend [taking a backup](../../admin/settings/general.md#back-up-portainer) of your current Portainer configuration.
 {% endhint %}
 
 To update the Portainer Server and the agents on Docker Swarm, first run the following command on the manager node of your Docker Swarm cluster:

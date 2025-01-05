@@ -9,7 +9,7 @@ If you are updating from the 1.x version of Portainer, you **must** first [updat
 {% endhint %}
 
 {% hint style="danger" %}
-Before beginning any update, we highly recommend [taking a backup](../../admin/settings/general/#back-up-portainer) of your current Portainer configuration.
+Before beginning any update, we highly recommend [taking a backup](../../admin/settings/general.md#back-up-portainer) of your current Portainer configuration.
 {% endhint %}
 
 ## Updating your Portainer Server
