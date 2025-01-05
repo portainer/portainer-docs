@@ -11,7 +11,7 @@ Before you make Portainer HTTPS only, make sure you have all your Agents and Edg
 {% endhint %}
 
 {% hint style="danger" %}
-Before beginning any update, we highly recommend [taking a backup](../../admin/settings/#backup-portainer) of your current Portainer configuration.
+Before beginning any update, we highly recommend [taking a backup](../../admin/settings/general.md#back-up-portainer) of your current Portainer configuration.
 {% endhint %}
 
 Select the Portainer update method which matches the original installation method used.
