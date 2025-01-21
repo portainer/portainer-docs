@@ -37,7 +37,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /root/secrets/portainer:/run/secrets/portainer \
-    portainer/portainer-ee:2.26.0
+    portainer/portainer-ee:2.26.1
 ```
 
 When the Portainer container starts, it will encrypt any existing database, or for a fresh install will create a new encrypted database as part of the install process.
@@ -98,7 +98,7 @@ version: '3.2'
 
 services:
   agent:
-    image: portainer/agent:2.26.0
+    image: portainer/agent:2.26.1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
@@ -110,7 +110,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ee:2.26.0
+    image: portainer/portainer-ee:2.26.1
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     ports:
       - "9443:9443"
@@ -164,7 +164,7 @@ Once the secret has been created, we need to modify the YAML file to mount the s
 ```
 containers:
   - name: portainer
-    image: "portainer/portainer-ee:2.26.0"
+    image: "portainer/portainer-ee:2.26.1"
     imagePullPolicy: Always
     args:          
     volumeMounts:
