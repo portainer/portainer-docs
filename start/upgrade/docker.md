@@ -86,7 +86,7 @@ The newest version of Portainer will now be deployed on your system, using the p
 
 When the deployment is finished, go to `https://your-server-address:9443` or `http://your-server-address:9000` and log in. You should notice that the update notification has disappeared and the version number has been updated.
 
-## Agent-only upgrade
+## Agent-only update
 
 To update to the latest version of Portainer Agent, use the following commands to stop then remove the old version. Your other applications/containers will not be removed.
 
