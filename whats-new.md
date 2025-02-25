@@ -2,6 +2,8 @@
 
 Portainer version 2.27 includes a number of new fixes and updates. For a full list of changes, please refer to our [release notes](release-notes.md).
 
+{% embed url="https://www.youtube.com/watch?v=6xjVN7pSp5E" %}
+
 ## Long Term Support (LTS)
 
 2.27 is a Long Term Support, or "LTS", release of Portainer. LTS releases are intended to to be solid, tested, production-ready versions of Portainer, suitable for running in both testing and production environments. LTS releases generally do not have any additional features as compared to the previous STS release, but rather are a consolidation of all the new features and changes that have gone into the previous STS releases but with additional polishing and testing.
@@ -20,7 +22,7 @@ At present, support is limited to rootful Podman 5 installations on CentOS 9. Wh
 
 ### Omni Integration ![](.gitbook/assets/button_be.png)&#x20;
 
-We're excited to introduce our integration with Sidero's Omni platform in this release. With Omni, you can provision, configure and manage Talos Linux servers runnning Kubernetes environments right from the Portainer UI with [just a few clicks](admin/environments/add/kube-create/omni.md).
+We're excited to introduce our integration with Sidero's Omni platform in this release. With Omni, you can provision, configure and manage Talos Linux servers running Kubernetes environments right from the Portainer UI with [just a few clicks](admin/environments/add/kube-create/omni.md).
 
 <figure><img src=".gitbook/assets/2.26-whatsnew-omni.png" alt=""><figcaption></figcaption></figure>
 
@@ -92,7 +94,7 @@ We've also made significant changes in how we log within Portainer, in particula
 
 ### Additional option for session timeout ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
-In 2.26 we've expanded the [session timeout options](admin/settings/authentication/) for authentication to include a 30 minute option. This helps to meet with security requirements around session timeout as well as giving you more options to suit your particular needs.
+In 2.27 we've expanded the [session timeout options](admin/settings/authentication/) for authentication to include a 30 minute option. This helps to meet with security requirements around session timeout as well as giving you more options to suit your particular needs.
 
 ### Updated third-party binaries and libraries ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
