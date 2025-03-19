@@ -198,7 +198,7 @@ services:
       - "./vhost.d:/etc/nginx/vhost.d:ro"
 
   agent:
-    image: portainer/agent:2.26.1
+    image: portainer/agent:lts
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -216,7 +216,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ce:2.26.1
+    image: portainer/portainer-ce:lts
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data

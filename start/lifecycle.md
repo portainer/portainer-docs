@@ -54,14 +54,14 @@ Each stream (LTS and STS) will have a number of patch releases throughout it’s
 
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
+| 2.28 STS     | Mar 2025     | Apr 2025                   |
 | **2.27 LTS** | **Feb 2025** | **Jan 2026**               |
-| 2.26 STS     | Jan 2025     | Feb 2025                   |
 
 ### Planned releases
 
 | Release  | Release Date | End of support/maintenance |
 | -------- | ------------ | -------------------------- |
-| 2.28 STS | Mar 2025     | Apr 2025                   |
+| 2.29 STS | Apr 2025     | May 2025                   |
 
 <figure><img src="../.gitbook/assets/portainer-lifecycle-releases.png" alt=""><figcaption></figcaption></figure>
 
