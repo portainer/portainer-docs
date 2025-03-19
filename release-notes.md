@@ -10,6 +10,8 @@ This is a STS (Short Term Support) release that includes all the changes added u
 
 ### Known issues
 
+* We are aware of an issue in 2.28.0 for Kubernetes environments with CA-signed TLS certificates configured. A patch release is coming for this issue but we do not recommend users with this configuration update to 2.28.0 at this time.
+
 #### Known issues with Podman support
 
 * Podman environments aren't supported by auto-onboarding script
