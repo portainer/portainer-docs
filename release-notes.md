@@ -8,6 +8,8 @@ March 19, 2025
 
 ### Known issues
 
+* When viewing or editing your user profile (via My Account) an error is being thrown. A fix for this will be provided in the next patch release.
+
 #### Known issues with Podman support
 
 * Podman environments aren't supported by auto-onboarding script
