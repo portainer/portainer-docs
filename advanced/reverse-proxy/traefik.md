@@ -278,7 +278,6 @@ services:
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
       - --providers.docker=true
-      - --providers.docker.swarmMode=true
       - --providers.docker.exposedbydefault=false
       - --providers.docker.network=public
       - --api
