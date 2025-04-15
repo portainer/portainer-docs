@@ -1,7 +1,7 @@
 # Updating on Kubernetes
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.27.2 make sure all of the agents are also on version 2.27.2.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.27.4 make sure all of the agents are also on version 2.27.4.
 {% endhint %}
 
 {% hint style="warning" %}
