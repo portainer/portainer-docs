@@ -2,6 +2,109 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.29.0
+
+April 16, 2025
+
+### Known issues
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### Known issues with Talos clusters managed by Omni
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### New in this release
+
+* Added code auto-completion in the Stack web editor.
+* Improved the Helm details view to provide more comprehensive information about Helm releases.
+* Added an informational message on the Edge Stack page regarding edge config file interpolation.
+* Improved performance by skipping the processing of raw Docker snapshots when possible.
+* Refactored the Helm upgrade implementation for improved stability and maintainability.
+* Fixed an issue where Edge groups with more than 10k environments could not be edited.
+* Fixed an issue where brackets and braces in URLs were incorrectly encoded.
+* Fixed an issue where `libstack` used an incorrect working directory in some scenarios.
+* Fixed an issue that prevented stack deployment when the Compose file contained profiles.
+* Fixed an issue where HTTP panics were being suppressed, reducing visibility of failures.
+* Fixed an issue where updating an Edge stack caused the process to get stuck.
+* Fixed an issue where all ConfigMaps and Secrets in Kubernetes environments were incorrectly labeled as unused.
+* Fixed an issue where Kubernetes cluster reservations were not being displayed.
+* Fixed an issue where master/control plane nodes appeared as worker nodes on the cluster information page.
+* Fixed a UI issue where the sub-table was misaligned compared to the main table items on the Kubernetes application list page.
+* Fixed a UI alignment issue with tags in the Kubernetes ConfigMap and Secret views.
+* Resolved the following CVEs:
+  * CVE-2025-22868
+  * CVE-2025-30204
+  * CVE-2025-32386
+  * CVE-2025-32387
+* Implemented functionality to provide an additional method to update Team Memberships from external auth using API keys.
+* Fixed an issue where user access was lost due to the `--disable-role-sync` flag in Kubernetes environments.
+* Added the ability to assign a new role, Namespace Operator, for Kubernetes.
+* Added support to view details of mTLS CA and server certificates in the Edge Compute settings.
+* Added a feature to display mTLS certificate information for each environment on the home page.
+* Added the ability to view mTLS certificate errors by hovering over the mTLS label on the home page.
+* Introduced build-time validation for RBAC authorization usage in the frontend.
+* Added additional options for Edge agent async check-in intervals.
+* Improved performance when updating Edge groups in Edge Stacks with configured Edge configurations.
+* Improved performance when resolving endpoints based on Edge groups.
+* Removed redundant status updates for async Edge agents.
+* Fixed an issue where remote agent updates could not be scheduled properly for large Edge groups (>10k).
+* Fixed an issue where the Environment Details page could not be opened for async Edge agents.
+* Fixed an issue where async Edge agents did not use the default intervals.
+* Fixed an issue where the Environment Group Access page failed to render the list view in large-scale environments.
+* Fixed an issue with separating CPU and memory requests and limits.
+* Fixed an issue where a false error message "Endpoint is not in async mode" was displayed.
+* Fixed a data loss issue when updating stacks with relative path enabled.
+* Fixed an error that occurred when updating user theme settings in the profile page.
+* Fixed an issue where the container image form disappeared after a hard page refresh.
+* Fixed an issue where admin users encountered an error when visiting a specific page.
+* Fixed an issue where updating Edge groups in Edge Stacks failed when Edge configuration was set.
+* Fixed an issue where Edge configurations were not being deleted.
+* Fixed an issue where the container snapshot from async agents did not display environment variable information.
+* Fixed an issue where an "edge secret is not allowed to transmit over HTTP” error could appear when pushing a change to an Edge Configuration using the API
+* Fixed an index-out-of-range issue resulting in a panic when using ECR registry.
+* Fixed a UI issue with missing left spacing for form labels in the container details view for async Edge environments.
+
+### **Deprecated and removed features**
+
+**Deprecated features**
+
+None
+
+**Removed features**
+
+None
+
+## Release 2.27.4
+
+April 15, 2025
+
+### Known issues <a href="#known-issues" id="known-issues"></a>
+
+#### **Known issues with Podman support**
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### **Known issues with Talos clusters managed by Omni**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration and does not affect authentication for any other functionality in the cluster.
+
+### Changes <a href="#changes" id="changes"></a>
+
+* Implemented functionality to provide a method to update Team Memberships from external auth
+* Fixed an issue where an "edge secret is not allowed to transmit over HTTP” error could appear when pushing a change to an Edge Configuration using the API
+* Resolved the following CVEs:
+  * CVE-2025-22868
+  * CVE-2025-30204
+  * CVE-2025-32386
+  * CVE-2025-32387
+
 ## Release 2.28.1
 
 March 20, 2025
