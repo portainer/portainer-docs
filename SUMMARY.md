@@ -140,7 +140,6 @@
     * [Manage a namespace](user/kubernetes/namespaces/manage.md)
     * [Manage access to a namespace](user/kubernetes/namespaces/access.md)
     * [Remove a namespace](user/kubernetes/namespaces/remove.md)
-  * [Helm](user/kubernetes/helm.md)
   * [Applications](user/kubernetes/applications/README.md)
     * [Add a new application using a form](user/kubernetes/applications/add.md)
     * [Add a new application using code](user/kubernetes/applications/manifest.md)

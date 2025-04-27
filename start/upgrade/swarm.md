@@ -1,7 +1,7 @@
 # Updating on Docker Swarm
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.28.0 make sure all of the agents are also on version 2.28.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.29.2 make sure all of the agents are also on version 2.29.2.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -28,8 +28,8 @@ Make note of the service names for Portainer. You will need them later.
 
 ```
 ID             NAME                    MODE         REPLICAS   IMAGE                          PORTS
-tb9gtxc647fw   portainer-agent_agent   global       3/3        portainer/agent:2.27.2
-m3a3mtuy55ed   portainer_portainer     replicated   1/1        portainer/portainer-ee:2.27.2  *:8000->8000/tcp, *:9000->9000/tcp
+tb9gtxc647fw   portainer-agent_agent   global       3/3        portainer/agent:2.28.0
+m3a3mtuy55ed   portainer_portainer     replicated   1/1        portainer/portainer-ee:2.28.0  *:8000->8000/tcp, *:9000->9000/tcp
 ```
 
 To update Portainer Server to the most recent version, run one of the sets of commands below depending on your edition of Portainer (replace the `portainer_portainer` service name if your setup differs):

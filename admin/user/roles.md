@@ -18,10 +18,11 @@ There are several types of roles:
 * **Edge administrator** has full control over all resources in all Edge environments, and access to the Edge Compute features.
 * **Operator** has operational control over the resources deployed within a given environment. Operator can update, re-deploy, start and stop containers/services, check logs and console into containers, but cannot create or delete any resources.
 * **Helpdesk** has read-only access to the resources deployed within a given environment but cannot make changes to any resource, nor can they open a console to a container or make changes to a container’s volumes.
+* **Namespace Operator** has operational control over all existing resources in a namespace of an environment. This is similar to the Operator role, but restricted to specified namespaces instead of the entire environment, and is only available for Kubernetes environments.
 * **Standard User** has complete control over the resources that a user deploys, or if the user is a member of a team, has complete control over the resources that users of that team deploy.
 * **Read-Only User** has read-only access to the resources they are entitled to see (resources created by members of their team, and public resources).
 
-<figure><img src="../../.gitbook/assets/2.20-user-roles-list.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.29-admin-user-roles.png" alt=""><figcaption></figcaption></figure>
 
 The **Administrator** role sits outside of the other roles and effectively acts as a 'Global Admin'. A user assigned to this role has complete control over Portainer settings, and all resources on every environment under Portainer's control.
 

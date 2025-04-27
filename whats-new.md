@@ -12,7 +12,7 @@ You can read more about our release principles in our [lifecycle policy](start/l
 
 ### Helm Details ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
-2.29 brings a brand new view of Helm deployments to Portainer. Clicking on a Helm deployment within the Applications list takes you to the new Helm details page, which provides a ton of information about the deployment's status and configuration.
+2.29 brings a brand new view of Helm deployments to Portainer. Clicking on a Helm deployment within the Applications list takes you to the new [Helm details](user/kubernetes/applications/inspect-helm.md) page, which provides a ton of information about the deployment's status and configuration.
 
 <figure><img src=".gitbook/assets/2.29-whatsnew-helmdetails.png" alt=""><figcaption></figcaption></figure>
 

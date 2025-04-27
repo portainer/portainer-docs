@@ -22,10 +22,6 @@ The following sections describe how to manage a Kubernetes environment using men
 [namespaces](namespaces/)
 {% endcontent-ref %}
 
-{% content-ref url="helm.md" %}
-[helm.md](helm.md)
-{% endcontent-ref %}
-
 {% content-ref url="applications/" %}
 [applications](applications/)
 {% endcontent-ref %}
