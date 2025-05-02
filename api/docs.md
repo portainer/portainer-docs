@@ -8,8 +8,8 @@ You will need an access token in order to use the Portainer API. If you have not
 
 You can find our API documentation at SwaggerHub:
 
-* [Business Edition (BE) 2.27.4 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ee/2.27.4)
-* [Community Edition (CE) 2.27.4 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.27.4)
+* [Business Edition (BE) 2.27.5 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ee/2.27.5)
+* [Community Edition (CE) 2.27.5 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.27.5)
 
 We have also provided some examples of API usage.
 
