@@ -2,7 +2,7 @@
 
 From the menu select **Containers**, select the container then select **Logs**.
 
-<figure><img src="../../../.gitbook/assets/2.17-containers-logs.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.30-containers-logs.gif" alt=""><figcaption></figcaption></figure>
 
 Here you can see the contents of the Docker logs for your container.&#x20;
 
@@ -12,8 +12,6 @@ Here you can see the contents of the Docker logs for your container.&#x20;
 
 You can also set various options for how the logs are displayed:
 
-<table><thead><tr><th width="244">Field/Option</th><th>Overview</th></tr></thead><tbody><tr><td>Auto-refresh</td><td>Toggle this option off to disable auto refreshing of the log view. When off, you can click the refresh icon to the right of the toggle to manually refresh the view.</td></tr><tr><td>Fetch</td><td>Select the time period from which to retrieve the logs.</td></tr><tr><td>Lines</td><td>Limit the number of lines per log file (the default is 1000).</td></tr><tr><td>Show timestamp</td><td>When enabled, display a timestamp before each log line.</td></tr><tr><td>Show line numbers</td><td>When enabled, display line numbers for each log line.</td></tr><tr><td>Wrap line</td><td>When enabled, lines longer than the screen width will be wrapped onto the next line.</td></tr><tr><td>Full screen</td><td>Click the full screen icon to expand the log display to fill your screen.</td></tr></tbody></table>
+<table><thead><tr><th width="244">Field/Option</th><th>Overview</th></tr></thead><tbody><tr><td>Date picker</td><td>Select the time period from which to retrieve the logs.</td></tr><tr><td>Lines</td><td>Limit the number of lines per log file (the default is 1000).</td></tr><tr><td>Line numbers</td><td>When enabled, display line numbers for each log line.</td></tr><tr><td>Timestamp</td><td>When enabled, display a timestamp before each log line.</td></tr><tr><td>Wrap lines</td><td>When enabled, lines longer than the screen width will be wrapped onto the next line.</td></tr><tr><td>Auto refresh</td><td>Enable this option to automatically refresh the log view. When off, you can click the refresh icon to the right of the button to manually refresh the view.</td></tr><tr><td>Full screen</td><td>Click the full screen icon to expand the log display to fill your screen.</td></tr></tbody></table>
 
-
-
-<figure><img src="../../../.gitbook/assets/2.17-containers-logs-options.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.30-containers-logs-options.png" alt=""><figcaption></figcaption></figure>
