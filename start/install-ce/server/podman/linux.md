@@ -22,22 +22,43 @@ The installation instructions also make the following assumptions about your env
 
 ## Deployment
 
+### Rootful
 First, ensure the Podman socket is enabled:
 
 ```
-systemctl enable --now podman.socket
+sudo systemctl enable --now podman.socket
 ```
 
 Next, create the volume that Portainer Server will use to store its database:
 
 ```bash
-podman volume create portainer_data
+sudo podman volume create portainer_data
 ```
 
 Then, download and install the Portainer Server container:
 
-<pre><code><strong>podman run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
+<pre><code><strong>sudo podman run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
 </strong></code></pre>
+
+### Rootless
+Enable Podman socket for your user:
+
+```
+systemctl --user enable --now podman.socket
+```
+
+Create Portainer volume (normally in `$HOME/.local/share/containers/storage/volumes`)
+
+```bash
+podman volume create portainer_data
+```
+
+Download and install the Portainer Server container:
+
+<pre><code><strong>podman run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always --privileged -v /run/user/$(id -u)/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data docker.io/portainer/portainer-ce:lts
+</strong></code></pre>
+
+### Post-install
 
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-docker-standalone) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
@@ -49,7 +70,7 @@ If you require HTTP port `9000` open for legacy reasons, add the following to yo
 `-p 9000:9000`
 {% endhint %}
 
-Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `podman ps`:
+Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `sudo podman ps` (rootful) or `podman ps` (rootless):
 
 ```bash
 root@server:~# podman ps
