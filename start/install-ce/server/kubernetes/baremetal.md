@@ -50,7 +50,16 @@ To set a StorageClass as default, you can use the following:
 kubectl patch storageclass <storage-class-name> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
 
-replacing `<storage-class-name>` with the name of your StorageClass. Alternatively, if you are installing using our Helm chart, you can pass the following parameter in your helm install command to specify the StorageClass to use for Portainer:
+replacing `<storage-class-name>` with the name of your StorageClass.
+
+⚠️ If you are using Windows PowerShell:
+PowerShell interprets quotes differently. Use escaped quotes inside the JSON string like this:
+
+```powershell
+kubectl patch storageclass <storage-class-name> -p '{\"metadata\": {\"annotations\":{\"storageclass.kubernetes.io/is-default-class\":\"true\"}}}'
+```
+
+Alternatively, if you are installing using our Helm chart, you can pass the following parameter in your helm install command to specify the StorageClass to use for Portainer:
 
 ```
 --set persistence.storageClass=<storage-class-name>
