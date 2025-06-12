@@ -1,6 +1,6 @@
 # Add an environment to an existing installation
 
-&#x20;you want to add another environment to your existing Portainer installation, first select the type of environment you would like to add.&#x20;
+If you want to add another environment to your existing Portainer installation, first select the type of environment you would like to add.
 
 You can choose to connect to existing environments:
 
