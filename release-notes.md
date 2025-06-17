@@ -23,6 +23,7 @@ June 17, 2025
 * Resolved the following CVEs:
   * CVE-2025-22871
   * CVE-2025-22874
+  * CVE-2025-49593
 
 ## Release 2.27.6
 
