@@ -2,6 +2,47 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.31.2 <a href="#release-2.27.7" id="release-2.27.7"></a>
+
+June 26, 2025
+
+### Known issues
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### Known issues with Talos clusters managed by Omni
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### Changes
+
+* Fixed an issue that prevented the use of and loading of values.yaml for Helm charts from custom registries
+
+## Release 2.27.8 <a href="#release-2.27.7" id="release-2.27.7"></a>
+
+June 25, 2025
+
+### Known issues <a href="#known-issues" id="known-issues"></a>
+
+#### **Known issues with Podman support**
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### **Known issues with Talos clusters managed by Omni**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration and does not affect authentication for any other functionality in the cluster.
+
+### Changes <a href="#changes" id="changes"></a>
+
+* Fixed an issue where the Kubernetes client cache was not cleared and created correctly per user
+* Fixed an issue where Kubernetes namespace access changes were not reflected for API users after sign-in
+
 ## Release 2.31.1 <a href="#release-2.27.7" id="release-2.27.7"></a>
 
 June 19, 2025
