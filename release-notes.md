@@ -2,6 +2,26 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.27.9 LTS
+
+July 2, 2025
+
+### Known issues <a href="#known-issues" id="known-issues"></a>
+
+#### **Known issues with Podman support**
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### **Known issues with Talos clusters managed by Omni**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration and does not affect authentication for any other functionality in the cluster.
+
+### Changes <a href="#changes" id="changes"></a>
+
+* Added the `--trusted-origins` CLI option and `TRUSTED_ORIGINS` environment variable to specify (in a comma-separated list) the domain(s) used to access Portainer when it is behind a reverse proxy. Use this option if Portainer is behind a reverse proxy and you are getting "Origin invalid" errors.
+
 ## Release 2.27.8
 
 June 25, 2025

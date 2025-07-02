@@ -1,7 +1,7 @@
 # Updating on Podman
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.27.8 make sure all of the agents are also on version 2.27.8.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.27.9 make sure all of the agents are also on version 2.27.9.
 {% endhint %}
 
 {% hint style="danger" %}
