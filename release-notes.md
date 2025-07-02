@@ -28,6 +28,8 @@ June 25, 2025
 
 ### Known issues <a href="#known-issues" id="known-issues"></a>
 
+* Users with Portainer deployed behind a reverse proxy may encounter "Origin invalid" issues under some configurations. We recommend updating to 2.27.9 which provides a workaround to this issue.
+
 #### **Known issues with Podman support**
 
 * Podman environments aren't supported by auto-onboarding script
@@ -48,6 +50,8 @@ June 25, 2025
 June 17, 2025
 
 ### Known issues <a href="#known-issues" id="known-issues"></a>
+
+* Users with Portainer deployed behind a reverse proxy may encounter "Origin invalid" issues under some configurations. We recommend updating to 2.27.9 which provides a workaround to this issue.
 
 #### **Known issues with Podman support**
 
