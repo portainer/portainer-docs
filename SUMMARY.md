@@ -338,4 +338,4 @@
 
 ***
 
-* [Privacy Policy](privacy-policy.md)
+* [Privacy Policy](privacy.md)
