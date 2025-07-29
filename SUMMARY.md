@@ -336,3 +336,7 @@
 * [Build instructions](contribute/build/README.md)
   * [Set up a macOS build environment](contribute/build/mac.md)
   * [Set up a Linux build environment](contribute/build/linux.md)
+
+***
+
+* [Privacy Policy](privacy.md)
