@@ -46,4 +46,8 @@ We've also introduced a new experimental feature in 2.32 - Observability. With t
 
 This feature is very much an experimental feature, and as such we highly advise against enabling this on a production environment.
 
+For an introduction to the feature have a look at this video from our team member Nick:
+
+{% embed url="https://www.youtube.com/watch?v=Ov6bq1cx2hE" %}
+
 As the initial release of this functionality [we are keen to get your feedback](https://github.com/orgs/portainer/discussions/12793) on what we can add or improve in the future.
