@@ -81,7 +81,7 @@ Since `stack.env` does not support variable substitution, you can use webhooks o
 
 ### **Additional Resources**
 
-* [**Portainer Webhook Documentation**](../../user/docker/stacks/webhooks.md): For more detailed instructions on using webhooks with Docker Swarm, refer to the official documentation.
+* [**Portainer Webhook Documentation**](../../../user/docker/stacks/webhooks.md): For more detailed instructions on using webhooks with Docker Swarm, refer to the official documentation.
 
 ***
 

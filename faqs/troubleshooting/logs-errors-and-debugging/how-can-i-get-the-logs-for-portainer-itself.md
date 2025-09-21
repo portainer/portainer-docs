@@ -1,6 +1,6 @@
 # How can I get the logs for Portainer itself?
 
-Portainer runs as a container, so you can view the Portainer logs in the same way you would do for any other container. You can view the logs [through the Portainer UI](../../user/docker/containers/logs.md), or alternatively if you have access to the host you can use the Docker CLI:
+Portainer runs as a container, so you can view the Portainer logs in the same way you would do for any other container. You can view the logs [through the Portainer UI](../../../user/docker/containers/logs.md), or alternatively if you have access to the host you can use the Docker CLI:
 
 Log into the command line of a Docker manager node (for Swarm) or the Docker host (for Standalone) and run the following command:
 

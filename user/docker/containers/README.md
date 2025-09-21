@@ -8,7 +8,7 @@ When the [new image indicator](../host/setup.md#other) feature is enabled, the *
 
 You can click the reload button next to the search box to recheck the images for all your containers for updates, or to recheck a single container's image you can click the image indicator icon for that container.
 
-For more on how this works, have a look at [this knowledge base article](../../../faqs/troubleshooting/how-does-the-image-update-notification-icon-work.md).
+For more on how this works, have a look at [this knowledge base article](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-does-the-image-update-notification-icon-work.md).
 
 To add a new container, click **Add container**.
 

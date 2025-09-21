@@ -4,4 +4,4 @@ AWS Elastic Container Registry [requires users to pre-create all repositories](h
 
 If the AWS Elastic Container Registry does not have a repository created, the user will receive the following error message while attempting to push an image in Portainer:
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>

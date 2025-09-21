@@ -144,7 +144,7 @@ If you have 2FA configured in GitHub, your passcode is your password.
 Portainer supports automatically updating your stacks deployed from Git repositories. To enable this, toggle on **GitOps updates** and configure your settings.
 
 {% hint style="info" %}
-For more detail on how GitOps updates function under the hood, have a look at [this article](../../../faqs/troubleshooting/how-do-automatic-updates-for-stacks-applications-work.md).
+For more detail on how GitOps updates function under the hood, have a look at [this article](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-do-automatic-updates-for-stacks-applications-work.md).
 {% endhint %}
 
 | Field/Option   | Overview                                                                                                                                                                                                                                                                            |

@@ -4,7 +4,7 @@ In order to change the Portainer server URL for an Edge Agent, a redeployment of
 
 When deploying an Edge Agent, the Portainer server URL is encrypted into the Edge key. This tells the Edge Agent where to look for the Portainer server.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 The most typical scenarios that require a change to the Portainer server URL are:
 

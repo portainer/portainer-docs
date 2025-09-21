@@ -3,7 +3,7 @@
 You have set up a multi-control-plane node Kubernetes cluster using k0s and have successfully deployed the Portainer agent to the cluster. Portainer can connect to the Kubernetes cluster; however, you may encounter errors when accessing logs—sometimes intermittently. You might see an error message toast similar to the following when attempting to view the logs.\
 `Unable to get pod logs: Get “https://<IP>:10250/… : No agent available`
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 Based on our testing, the likely cause of this issue is the absence of node-local load balancing in a k0s-based Kubernetes cluster with multiple control-plane nodes. For more details, refer to the [Configuration file reference](https://docs.k0sproject.io/stable/k0sctl-install/) in the Mirantis, Inc. Configuration Options documentation.
 

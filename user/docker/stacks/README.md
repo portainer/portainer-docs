@@ -8,7 +8,7 @@ When the [new image indicator](../host/setup.md#other) feature is enabled, the *
 
 You can click the **Reload image indicators** button to recheck the images for your stacks for updates, or to recheck a single stack's images you can click the image indicator icon for that stack.
 
-For more on how this works, have a look at [this article](../../../faqs/troubleshooting/how-does-the-image-update-notification-icon-work.md).
+For more on how this works, have a look at [this article](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-does-the-image-update-notification-icon-work.md).
 
 {% content-ref url="add.md" %}
 [add.md](add.md)

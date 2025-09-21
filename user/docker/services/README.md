@@ -12,7 +12,7 @@ When the [new image indicator](../swarm/setup.md#other) feature is enabled, the 
 
 You can click the **Reload image indicators** button to recheck the images for all your services for updates, or to recheck a single service's images you can click the image indicator icon for that service.
 
-For more on how this works, have a look at [this article](../../../faqs/troubleshooting/how-does-the-image-update-notification-icon-work.md).
+For more on how this works, have a look at [this article](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-does-the-image-update-notification-icon-work.md).
 
 {% content-ref url="add.md" %}
 [add.md](add.md)

@@ -1,6 +1,6 @@
 # I enabled "Force HTTPS only" and now I'm locked out of Portainer. How do I get back in?
 
-Enabling the **Force HTTPS only** option (either via the toggle in [Settings](../../admin/settings/) or via the --http-disabled command line option) disables logging into Portainer via HTTP. If your HTTPS setup is misconfigured (for example a malformed or missing certificate chain) this can result in you being locked out of Portainer.
+Enabling the **Force HTTPS only** option (either via the toggle in [Settings](../../../admin/settings/) or via the --http-disabled command line option) disables logging into Portainer via HTTP. If your HTTPS setup is misconfigured (for example a malformed or missing certificate chain) this can result in you being locked out of Portainer.
 
 To resolve this, you can re-enable HTTP access by using the --http-enabled command line option in your docker run command, for example:
 

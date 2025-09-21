@@ -19,7 +19,7 @@ proxy_read_timeout 3600;
 Edit the proxy host that you need to change and add `proxy_read_timeout 3600;` as below.\
 
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 **Nginx Ingress Controller (Kubernetes)**\
 \

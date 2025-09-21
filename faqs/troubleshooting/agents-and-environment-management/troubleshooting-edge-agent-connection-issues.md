@@ -5,7 +5,7 @@
 Check your **Portainer Edge Compute Settings** by navigating to **Settings** > **Edge Compute** > **Edge Compute Settings**. \
 &#x20;  \- Confirm that the **Portainer API Server URL** and the **Portainer Tunnel Address** are correct.\
 &#x20;  \- Ensure that ports **9443** and **8000** are open in your firewall.\
-&#x20;  \- Refer to the official Portainer documentation for detailed agent setup [requirements](../../advanced/edge-agent.md)
+&#x20;  \- Refer to the official Portainer documentation for detailed agent setup [requirements](../../../advanced/edge-agent.md)
 
 ***
 
