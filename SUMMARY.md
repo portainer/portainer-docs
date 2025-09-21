@@ -382,6 +382,7 @@
   * [Unable to Authenticate After Portainer Update](faqs/troubleshooting/unable-to-authenticate-after-portainer-update.md)
   * [How do I recover orphaned stacks from a previously deleted environment?](faqs/troubleshooting/how-do-i-recover-orphaned-stacks-from-a-previously-deleted-environment.md)
   * [How do I change the way I connect to an environment without losing my existing stacks?](faqs/troubleshooting/how-do-i-change-the-way-i-connect-to-an-environment-without-losing-my-existing-stacks.md)
+  * [Why doesn’t the Portainer UI load inside an iframe?](faqs/troubleshooting/why-doesnt-the-portainer-ui-load-inside-an-iframe.md)
 * [Contributing](faqs/contributing/README.md)
   * [How do I report a bug?](faqs/contributing/how-do-i-report-a-bug.md)
   * [How do I raise a feature request?](faqs/contributing/how-do-i-raise-a-feature-request.md)

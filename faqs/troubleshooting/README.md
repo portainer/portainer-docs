@@ -44,3 +44,4 @@ description: >-
 * [Unable to Authenticate After Portainer Update](unable-to-authenticate-after-portainer-update.md)
 * [How do I recover orphaned stacks from a previously deleted environment?](how-do-i-recover-orphaned-stacks-from-a-previously-deleted-environment.md)
 * [How do I change the way I connect to an environment without losing my existing stacks?](how-do-i-change-the-way-i-connect-to-an-environment-without-losing-my-existing-stacks.md)
+* [Why doesn’t the Portainer UI load inside an iframe?](why-doesnt-the-portainer-ui-load-inside-an-iframe.md)
