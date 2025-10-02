@@ -23,7 +23,11 @@ The installation instructions also make the following assumptions about your env
 
 ## Deployment
 
-First, create the volume that Portainer Server will use to store its database:
+You can choose to deploy Portainer using `docker run` or via Docker Compose.
+
+{% tabs %}
+{% tab title="docker run" %}
+To install using `docker run`, first create the volume that Portainer Server will use to store its database:
 
 ```bash
 docker volume create portainer_data
@@ -32,7 +36,7 @@ docker volume create portainer_data
 Then, download and install the Portainer Server container:
 
 ```
-docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:sts
 ```
 
 {% hint style="info" %}
@@ -49,9 +53,57 @@ Portainer Server has now been installed. You can check to see whether the Portai
 
 ```bash
 root@server:~# docker ps
-CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS      PORTS                                                                                  NAMES             
-de5b28eb2fa9   portainer/portainer-ce:lts     "/portainer"             2 weeks ago   Up 9 days   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
+CONTAINER ID   IMAGE                        COMMAND        CREATED         STATUS         PORTS                                                                                                NAMES
+7963585688a9   portainer/portainer-ce:sts   "/portainer"   8 seconds ago   Up 8 seconds   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp   portainer
 ```
+{% endtab %}
+
+{% tab title="Docker Compose" %}
+To install using Docker Compose, download the compose file using the following `curl` command:
+
+```
+curl -L https://downloads.portainer.io/ce-sts/portainer-compose.yaml -o portainer-compose.yaml
+```
+
+Alternatively, create a `portainer-compose.yaml` file with the following contents:
+
+```
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:sts
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    ports:
+      - 9443:9443
+      - 8000:8000  # Remove if you do not intend to use Edge Agents
+
+volumes:
+  portainer_data:
+    name: portainer_data
+
+networks:
+  default:
+    name: portainer_network
+```
+
+Once you have created or downloaded the compose file, you can deploy it with the following command:
+
+```
+docker compose -f portainer-compose.yaml up -d
+```
+
+Docker Compose will create the necessary resources and deploy Portainer. You can check to see whether the Portainer Server container has started by running `docker ps`:
+
+```
+root@server:~# docker ps
+CONTAINER ID   IMAGE                        COMMAND        CREATED         STATUS         PORTS                                                                                                NAMES
+7963585688a9   portainer/portainer-ce:sts   "/portainer"   8 seconds ago   Up 8 seconds   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp   portainer
+```
+{% endtab %}
+{% endtabs %}
 
 ## Logging In
 
