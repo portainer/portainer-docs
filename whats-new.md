@@ -1,10 +1,10 @@
 # What's new in version 2.34
 
-Portainer version 2.34 includes a number of new fixes and updates, bringing the changes from the previous STS releases into the LTS stream. For a full list of changes, please refer to our [release notes](release-notes.md).
+Portainer version 2.34 includes a number of new fixes and updates. For a full list of changes, please refer to our [release notes](release-notes.md).
 
-## Long Term Support (LTS)
+## Short Term Support (STS)
 
-2.34 is a Long Term Support, or "LTS", release of Portainer. LTS releases are intended to to be solid, tested, production-ready versions of Portainer, suitable for running in both testing and production environments. LTS releases generally do not have any additional features as compared to the previous STS release, but rather are a consolidation of all the new features and changes that have gone into the previous STS releases but with additional polishing and testing.
+2.34 is a Short Term Support, or "STS", release of Portainer. STS releases intended to be an introduction of new features and functionality in Portainer, and while we do perform significant testing prior to release are not recommended for production use. For production, we recommend staying with the Long Term Support (LTS) releases. The features that appear in STS releases will, once refined and stable, be implemented in the next LTS release.
 
 You can read more about our release principles in our [lifecycle policy](start/lifecycle.md).
 
