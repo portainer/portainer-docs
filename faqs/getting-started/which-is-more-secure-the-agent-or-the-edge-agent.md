@@ -1,0 +1,4 @@
+# Which is more secure, the Agent or the Edge Agent?
+
+From a network security perspective, Agents and Edge Agents operate in opposite directions. In the case of the standard Agent, it is the Agent listening for connections and Portainer connecting to it. Inversely for Edge Agents, it is Portainer listening for connections and the Edge Agent that connects to Portainer.\
+In terms of which is more secure, this will depend on your particular setup and security posture. In most cases, the Edge Agent is likely to be the more secure option simply because the scope of concern can focus on just the Portainer instance itself. Using Edge Agent there is no need to design every Agent network to have a port open for Portainer to connect to. As you add more Edge Agents, there is only one system, the Portainer instance, that would require its ports to be exposed.
