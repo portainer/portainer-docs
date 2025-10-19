@@ -452,7 +452,7 @@
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
 * [GitHub](https://github.com/orgs/portainer/discussions)
 * [Slack](https://portainer.io/slack)
-* [Discord](https://discord.com/invite/j8fVken)
+* [Discord](https://portainer.io/discord)
 * [Open a support request](https://www.portainer.io/portainer-business-support)
 
 ## Contribute to Portainer <a href="#contribute" id="contribute"></a>
