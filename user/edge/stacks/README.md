@@ -12,17 +12,17 @@ The Edge Stacks page displays a list of Edge Stacks deployed across your environ
 
 You can click on an individual stack's name to view the stack's details or edit the stack:
 
-<figure><img src="../../../.gitbook/assets/2.19-edge-stacks-edit-stack.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.35-view-stack-details-1.png" alt=""><figcaption></figcaption></figure>
 
 You can also view details about the stack's deployment across environments on the **Environments** tab.
 
-<figure><img src="../../../.gitbook/assets/2.19-edge-stacks-edit-environment.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.35-view-stack-envs.png" alt=""><figcaption></figcaption></figure>
 
 ## Add a new stack
 
 From the menu select **Edge Stacks** then click **Add stack**.
 
-<figure><img src="../../../.gitbook/assets/2.19-edge-stacks-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.35.0-new-edge-stack-1.gif" alt=""><figcaption></figcaption></figure>
 
 Give the stack a descriptive name then select one or more [Edge Groups](../groups.md).
 
@@ -34,7 +34,7 @@ In **Deployment type**, select the type of deployment you are performing.
 This may be auto-selected by your choice of [Edge Groups](../groups.md).
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.15-edge-stacks-add-deptype.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.35-Edge-group-deployment-types-1.png" alt=""><figcaption></figcaption></figure>
 
 In the **Build Method**, define how to deploy your app from one of the following options:
 
