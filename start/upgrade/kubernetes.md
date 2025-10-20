@@ -5,7 +5,7 @@ Always match the agent version to the Portainer Server version. In other words, 
 {% endhint %}
 
 {% hint style="warning" %}
-Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443.` These instructions will configure Portainer to use both `9443` for HTTPS and `9000` for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update.&#x20;
+Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443`. These instructions will configure Portainer to use both `9443` for HTTPS and `9000` for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update.&#x20;
 
 Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.&#x20;
 {% endhint %}
@@ -31,7 +31,7 @@ Next, run one of the following commands to update Portainer:
 {% tab title="Business Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set enterpriseEdition.image.tag=sts
+    --set enterpriseEdition.image.tag=sts --set enterpriseEdition.enabled=true
 ```
 {% endtab %}
 
