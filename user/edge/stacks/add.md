@@ -135,7 +135,7 @@ Ensure that this path is available on all of your Docker Swarm nodes and is writ
 <figure><img src="../../../.gitbook/assets/2.35-relative-path-swarm.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-For more detail on how this feature works, have a look at [this article](../../../advanced-topics/relative-paths.md).
+For more detail on how this feature works, have a look at [this article](../../../advanced/relative-paths.md).
 {% endhint %}
 
 #### Always clone Git repository

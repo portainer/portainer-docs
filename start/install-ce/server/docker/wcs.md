@@ -54,7 +54,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always -v \\.
 ```
 
 {% hint style="info" %}
-By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced-topics/ssl.md) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
 {% endhint %}
 
 {% hint style="warning" %}

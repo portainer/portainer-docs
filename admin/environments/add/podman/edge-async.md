@@ -3,7 +3,7 @@
 When a remote environment is not directly accessible from the Portainer Server instance, we recommend deploying the Portainer _Edge Agent_ to the remote environment. This allows you to manage the remote environment from your Portainer Server instance without having to open any ports on the environment. Rather than the traditional approach of the server connecting to Agents, the Edge Agent instead polls the Portainer Server periodically to see if there are any pending jobs to perform, and acts appropriately.
 
 {% hint style="info" %}
-For a technical summary of how the Edge Agent works, refer to our [advanced documentation](../../../../advanced-topics/edge-agent.md).
+For a technical summary of how the Edge Agent works, refer to our [advanced documentation](../../../../advanced/edge-agent.md).
 {% endhint %}
 
 ## Async mode vs Standard mode

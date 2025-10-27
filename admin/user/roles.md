@@ -44,4 +44,4 @@ Scroll down to the **Effective access viewer** section and select a user from th
 
 Because Docker does not natively provide role-based access control, we implement our own role management in order to provide this functionality. On a Kubernetes environment, we leverage the RBAC functionality built into Kubernetes alongside our own role management to provide security and flexibility to roles and access.
 
-For more information on the permissions that each role has for Docker and Swarm environments, see our [Docker roles and permissions documentation](../../advanced-topics/docker-roles-and-permissions.md). For more information about how we map Portainer roles to Kubernetes roles, see our [roles and bindings documentation](../../advanced-topics/kubernetes-roles-and-bindings.md).
+For more information on the permissions that each role has for Docker and Swarm environments, see our [Docker roles and permissions documentation](../../advanced/docker-roles-and-permissions.md). For more information about how we map Portainer roles to Kubernetes roles, see our [roles and bindings documentation](../../advanced/kubernetes-roles-and-bindings.md).

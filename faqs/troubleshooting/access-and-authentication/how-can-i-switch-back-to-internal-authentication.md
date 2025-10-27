@@ -10,4 +10,4 @@ https://localhost:9443/#!/internal-auth
 
 Replace https://localhost:9443 with the URL and port of your Portainer server. You can then log in as the initial administrator user you first set up when installing Portainer.
 
-If you don't have the password for the initial administrator user, you can use our [password reset helper.](../../../advanced-topics/reset-admin.md)
+If you don't have the password for the initial administrator user, you can use our [password reset helper.](../../../advanced/reset-admin.md)

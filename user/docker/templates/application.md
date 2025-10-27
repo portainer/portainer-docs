@@ -14,4 +14,4 @@ Portainer supports templates of both individual containers and stacks of contain
 [deploy-container.md](deploy-container.md)
 {% endcontent-ref %}
 
-By default, Portainer provides a pre-built set of app templates, but you are free to modify or [replace these with your own](../../../advanced-topics/app-templates/build.md). You can also create your own custom templates either manually or from an existing stack.
+By default, Portainer provides a pre-built set of app templates, but you are free to modify or [replace these with your own](../../../advanced/app-templates/build.md). You can also create your own custom templates either manually or from an existing stack.

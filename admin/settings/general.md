@@ -32,7 +32,7 @@ Your message will then be shown at the login screen.
 
 ### App Templates
 
-You can deploy containers and services using Portainer's set of built-in app templates, or [replace them with your own](../../advanced-topics/app-templates/build.md) set of templates. Once you have a JSON file containing the template definitions, you can provide the URL to it here.
+You can deploy containers and services using Portainer's set of built-in app templates, or [replace them with your own](../../advanced/app-templates/build.md) set of templates. Once you have a JSON file containing the template definitions, you can provide the URL to it here.
 
 <figure><img src="../../.gitbook/assets/2.15-settings-settings-2.png" alt=""><figcaption></figcaption></figure>
 
