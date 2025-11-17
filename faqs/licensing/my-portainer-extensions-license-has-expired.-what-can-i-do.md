@@ -10,13 +10,13 @@ In December 2020, Portainer stopped the extensions program as part of the releas
 
 As a Portainer Extensions user, you have two options:
 
-**Option 1: 5 Nodes Free**
+**Option 1: 3 Nodes Free**
 
-If you have 5 nodes or less in your environment, we can send you a license for 5 Portainer Business nodes free. Please [complete the form](https://www.portainer.io/take-5?hsLang=en) and our team will be in touch.
+If you have 3 nodes or less in your environment, we can send you a license for 3 Portainer Business nodes free. Please [complete the form](https://www.portainer.io/take-5?hsLang=en) and our team will be in touch.
 
-**Option 2: Purchase a license for more than 5 nodes**
+**Option 2: Purchase a license for more than 3 nodes**
 
-If you have more than 5 nodes, please complete our [additional pricing request form](https://www.portainer.io/portainer-business-buy-more?hsLang=en) and we'll get in touch as soon as possible with a quote.
+If you have more than 3 nodes, please complete our [additional pricing request form](https://www.portainer.io/portainer-business-buy-more?hsLang=en) and we'll get in touch as soon as possible with a quote.
 
 ### Upgrade Instructions
 

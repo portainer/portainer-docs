@@ -14,7 +14,7 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 
 ### **Home & Student Plan**&#x20;
 
-**$149/year -** [**Purchase here**](https://portal.portainer.io/knowledge/what-is-the-pricing-for-business-edition)
+**$149/year -** [**Purchase here**](https://www.portainer.io/homeandstudent-payment)
 
 * Max of 15 nodes
 * Restricted to Non-Commercial use (if you are a business you cannot purchase this license, license keys will be revoked)
@@ -41,7 +41,7 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 
 ### **Scale**
 
-**From $199/month or $1995/year -** [**Purchase here**](https://www.portainer.io/business-enterprise-pricing?hsLang=en)
+**From $199/month or $1995/year -** [**Purchase here**](https://www.portainer.io/scale-plans)
 
 **Ideal for businesses who require access to expert assistance and commercial support**
 
@@ -80,9 +80,9 @@ Buy a Professional or Enterprise Plan, then Add On Nodes
 
 First, choose from Professional or Enterprise Plans:&#x20;
 
-| Professional                                                                                                                                                                                                                            | Enterprise                                                                                                                                                                                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <ul><li>Scale by adding nodes</li></ul><ul><li>Onboarding assistance</li><li>9x5 support</li><li>Customer Success</li><li>Click-through license agreement</li><li>Can manage up to a maximum of 100 nodes (see below options)</li></ul> | <ul><li>Scale by adding nodes</li></ul><ul><li>Onboarding assistance</li><li>Prioritized 9x5 support</li><li>Assigned Success Engineer</li><li>Professional Services available</li><li>Custom MSSA option</li></ul> |
+| Professional                                                                                                                                                                                                                   | Enterprise                                                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>Scale by adding nodes</li><li>Onboarding assistance</li><li>9x5 support</li><li>Customer Success</li><li>Click-through license agreement</li><li>Can manage up to a maximum of 100 nodes (see below options)</li></ul> | <ul><li>Scale by adding nodes</li><li>Onboarding assistance</li><li>Prioritized 9x5 support</li><li>Assigned Success Engineer</li><li>Professional Services available</li><li>Custom MSSA option</li></ul> |
 
 Second, add on Nodes:&#x20;
 
