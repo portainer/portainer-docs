@@ -64,7 +64,7 @@ http GET <portainer url>/api/endpoints/1/docker/containers/json \
     all==true
 ```
 
-The response is identical to that returned by the `ContainerList` operation of the Docker API. See [Docker's documentation about this operation](https://docs.docker.com/engine/api/v1.41/#operation/ContainerList).
+The response is identical to that returned by the `ContainerList` operation of the Docker API. See [Docker's documentation about this operation](https://docs.docker.com/reference/api/engine/version/v1.44/#tag/Container/operation/ContainerList).
 
 ### **Create a container**
 
@@ -78,7 +78,7 @@ http POST <portainer url>/api/endpoints/1/docker/containers/create \
     HostConfig:='{ "PortBindings": { "80/tcp": [{ "HostPort": "8080" }] } }'
 ```
 
-The response is identical to that returned by the `ContainerCreate` operation of the Docker API. See [Docker's documentation about this operation](https://docs.docker.com/engine/api/v1.41/#operation/ContainerCreate).
+The response is identical to that returned by the `ContainerCreate` operation of the Docker API. See [Docker's documentation about this operation](https://docs.docker.com/reference/api/engine/version/v1.44/#tag/Container/operation/ContainerCreate).
 
 Here is an example response:
 
@@ -102,7 +102,7 @@ http POST <portainer url>/api/endpoints/1/docker/containers/5fc2a93d7a3d426a1c39
     X-API-Key:your_access-token
 ```
 
-The response is identical to that returned by the `ContainerStart` operation of the Docker API. See [Docker's documentation about this operation](https://docs.docker.com/engine/api/v1.41/#operation/ContainerStart).
+The response is identical to that returned by the `ContainerStart` operation of the Docker API. See [Docker's documentation about this operation](https://docs.docker.com/reference/api/engine/version/v1.44/#tag/Container/operation/ContainerStart).
 
 ### **Delete a container**
 
@@ -114,4 +114,4 @@ http DELETE <portainer url>/api/endpoints/1/docker/containers/5fc2a93d7a3d426a1c
     force==true
 ```
 
-The response is identical to that returned by the `ContainerDelete` operation of the Docker API. See [Docker's documentation about this operation](https://docs.docker.com/engine/api/v1.41/#operation/ContainerDelete).
+The response is identical to that returned by the `ContainerDelete` operation of the Docker API. See [Docker's documentation about this operation](https://docs.docker.com/reference/api/engine/version/v1.44/#tag/Container/operation/ContainerDelete).
