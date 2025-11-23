@@ -4,7 +4,7 @@ When connecting a Docker Standalone host to Portainer, there are a few different
 
 Regardless of the method you choose, there are some generic requirements you will need to meet. You will require:
 
-* The latest version of Docker installed and working on your Docker Standalone host.
+* The latest [supported](../../../../start/requirements-and-prerequisites.md) version of Docker installed and working on your Docker Standalone host.
 * sudo, root, or Administrator access on your Docker Standalone host.
 
 The installation instructions also make the following assumptions about your environment:

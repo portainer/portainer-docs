@@ -4,7 +4,7 @@ When connecting a Docker Swarm environment to Portainer, there are a few differe
 
 Regardless of the method you choose, there are some generic requirements you will need to meet. You will require:
 
-* The latest version of Docker installed and working on your Docker Swarm nodes.
+* The latest [supported](../../../../start/requirements-and-prerequisites.md) version of Docker installed and working on your Docker Swarm nodes.
 * Swarm mode enabled and working, including the overlay network for the swarm service communication.
 * `sudo`, `root` or Administrator access on the manager node of your swarm cluster.
 

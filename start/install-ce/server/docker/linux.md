@@ -10,7 +10,7 @@ Portainer consists of two elements, the _Portainer Server_, and the _Portainer A
 
 To get started, you will need:
 
-* The latest version of Docker installed and working. We recommend following the [official installation instructions](https://docs.docker.com/engine/install/) for Docker - in particular, we advise _against_ installing Docker via snap on Ubuntu distributions as you may run into compatibility issues.
+* The latest [supported](../../../requirements-and-prerequisites.md) version of Docker installed and working. We recommend following the [official installation instructions](https://docs.docker.com/engine/install/) for Docker - in particular, we advise _against_ installing Docker via snap on Ubuntu distributions as you may run into compatibility issues.
 * sudo access on the machine that will host your Portainer Server instance
 * By default, Portainer Server will expose the UI over port `9443` and expose a TCP tunnel server over port `8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 
