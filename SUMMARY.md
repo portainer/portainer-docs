@@ -301,6 +301,7 @@
   * [What does Portainer's backup include?](faqs/getting-started/what-does-portainers-backup-include.md)
   * [How does Portainer respond to CVEs?](faqs/getting-started/how-does-portainer-respond-to-cves.md)
   * [Can Portainer’s interface language be changed?](faqs/getting-started/can-portainers-interface-language-be-changed.md)
+  * [Why shouldn’t I give all Portainer users admin access?](faqs/getting-started/why-shouldnt-i-give-all-portainer-users-admin-access.md)
 * [Installing](faqs/installing/README.md)
   * [How do I install Portainer?](faqs/installing/how-do-i-install-portainer.md)
   * [Can I run Portainer on my configuration?](faqs/installing/can-i-run-portainer-on-my-configuration.md)
