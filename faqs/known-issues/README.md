@@ -6,7 +6,7 @@ description: >-
 
 # Known issues
 
-* [Edge stacks do not support authenticating against a private registry to deploy applications stored on private registries](edge-stacks-do-not-support-authenticating-to-deploy-applications-from-private-registries..md)
+* [Edge stacks do not support authenticating against a private registry to deploy applications stored on private registries](edge-stacks-do-not-support-authenticating-to-deploy-applications-from-private-registries.md)
 * [Known issues with VMware](known-issues-with-vmware.md)
 * [Groups info issue with OAuth using Microsoft AD](groups-info-issue-with-oauth-using-microsoft-ad.md)
 * [Resource limits in a compose file are not applying](resource-limits-in-a-compose-file-are-not-applying.md)
