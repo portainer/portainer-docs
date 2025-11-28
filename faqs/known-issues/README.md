@@ -18,3 +18,4 @@ description: >-
 * [MicroK8s Known Issues](microk8s-known-issues.md)
 * ["Unauthorized" error when pushing images to ACR with Service Principal account](unauthorized-error-when-pushing-images-to-acr-with-service-principal-account.md)
 * ["Invalid certificate file" error when browsing empty Azure Container Registry](invalid-certificate-file-error-when-browsing-empty-azure-container-registry.md)
+* [Environments not loading with Docker Engine 29.0.0](environments-not-loading-with-docker-engine-29.0.0.md)

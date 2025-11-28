@@ -34,13 +34,17 @@ Portainer has two release streams, STS and LTS and it’s important you know the
 
 Short Term Support releases are identified with an “STS” suffix.
 
-These are supported and maintained until the release of the next STS or LTS version. Use STS versions if you are interested in getting the latest features faster and don’t mind upgrading more frequently.
+These are supported and maintained until the release of the next STS or LTS version. Use STS versions if you are interested in getting the latest features faster and don’t mind upgrading more frequently, and are fine with potential bugs that weren't picked up in testing.
+
+{% hint style="info" %}
+While we _do_ perform automated and manual testing on STS releases, the testing is not as intense as that done for our LTS releases.
+{% endhint %}
 
 #### **Long Term Support (LTS) releases**
 
 Long Term Support releases are identified with an “LTS” suffix.
 
-These releases are supported and maintained until the release of the next LTS version plus a three month migration window so are more suitable for environments where adding new features on a frequent basis is less desirable.
+These releases are supported and maintained until the release of the next LTS version plus a three month migration window so are more suitable for environments where adding new features on a frequent basis is less desirable. They also undergo intense testing before release, more so than the STS releases.
 
 {% hint style="info" %}
 Portainer LTS releases focus less on new features and more on stability so Portainer recommends LTS releases for production workloads.
