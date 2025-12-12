@@ -421,6 +421,7 @@
   * ["Unauthorized" error when pushing images to ACR with Service Principal account](faqs/known-issues/unauthorized-error-when-pushing-images-to-acr-with-service-principal-account.md)
   * ["Invalid certificate file" error when browsing empty Azure Container Registry](faqs/known-issues/invalid-certificate-file-error-when-browsing-empty-azure-container-registry.md)
   * [Environments not loading with Docker Engine 29.0.0](faqs/known-issues/environments-not-loading-with-docker-engine-29.0.0.md)
+  * [Docker Compose files including build steps fail](faqs/known-issues/docker-compose-files-including-build-steps-fail.md)
 * [Getting support](faqs/getting-support/README.md)
   * [Where can I find the documentation for Portainer?](faqs/getting-support/where-can-i-find-the-documentation-for-portainer.md)
   * [How to get support for Community Edition and 5 Nodes Free Users](faqs/getting-support/how-to-get-support-for-community-edition-and-5-nodes-free-users.md)

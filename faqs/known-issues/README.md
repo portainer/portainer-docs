@@ -22,3 +22,4 @@ metaLinks:
 * ["Unauthorized" error when pushing images to ACR with Service Principal account](unauthorized-error-when-pushing-images-to-acr-with-service-principal-account.md)
 * ["Invalid certificate file" error when browsing empty Azure Container Registry](invalid-certificate-file-error-when-browsing-empty-azure-container-registry.md)
 * [Environments not loading with Docker Engine 29.0.0](environments-not-loading-with-docker-engine-29.0.0.md)
+* [Docker Compose files including build steps fail](docker-compose-files-including-build-steps-fail.md)
