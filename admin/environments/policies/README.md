@@ -29,7 +29,7 @@ From the menu, expand **Environment-related**, select **Policies**, then click *
 
 <figure><img src="../../../.gitbook/assets/2.37.0-navigate-to-policies (1).gif" alt=""><figcaption></figcaption></figure>
 
-There are eight policy types available, depending on the environment type you are managing and the kind of access you want to enforce. You can use the search function or filter by environment type to narrow down the list.
+There are eight policy types available, based on the environment type you are managing and the access you want to enforce. You can use the search or filter by environment type to narrow the list. Only policies that apply to your existing [groups](../groups.md) are shown. For example, if you have no Kubernetes groups, the Kubernetes policy types will not appear.
 
 After selecting a policy type, select **Continue** to open the configuration form. The fields shown will vary depending on the policy you are creating, and each form guides you through the required settings for that specific policy. Select a policy type below for more details on creating the policy.&#x20;
 
