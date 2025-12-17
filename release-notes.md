@@ -2,7 +2,39 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
-## Release 2.33.5 LTS <a href="#release-2.33.4-lts" id="release-2.33.4-lts"></a>
+## Release 2.33.6 LTS <a href="#release-2.33.6-lts" id="release-2.33.6-lts"></a>
+
+December 16, 2025
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+**Known issues with Podman support**
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+**Known issues with Talos clusters managed by Omni**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### New in this Release
+
+* Fixed an issue where a standard stack could not pull private images from a private registry during a GitOps update (polling/webhook) when "Re-pull image" was enabled and a relative path was configured
+* Fixed an issue where starting a Stack failed when a private image referenced by the Stack had been removed from the environment
+* Fixed an issue where empty Docker snapshot could cause issues
+* Fixed an issue where Duplicate/Edit Container adds persistent MAC address causing Network issues
+* Fixed an issue where Docker Compose configs were not injected into containers for stacks correctly
+* Fixed an issue where the API endpoint `/endpoints/{id}/edge/stacks/{stackId}` leaked environment names
+* Fixed an issue where Docker Swarm Service view fails with the error message “Cannot read properties of undefined (reading ‘Ports’)”
+* Resolved the following CVEs:
+  * CVE-2025-47914
+  * CVE-2025-61727
+  * CVE-2025-61729
+
+## Release 2.33.5 LTS <a href="#release-2.33.5-lts" id="release-2.33.5-lts"></a>
 
 November 27, 2025
 

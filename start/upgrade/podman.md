@@ -1,7 +1,7 @@
 # Updating on Podman
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.33.5 make sure all of the agents are also on version 2.33.5.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.33.6 make sure all of the agents are also on version 2.33.6.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -11,7 +11,7 @@ Before beginning any update, we highly recommend [taking a backup](../../admin/s
 ## Updating your Portainer Server
 
 {% hint style="warning" %}
-Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443.` These instructions will configure Portainer to use 9443 for HTTPS and do not expose 9000 for HTTP. If you need to retain HTTP access, you can add:
+Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443` . These instructions will configure Portainer to use 9443 for HTTPS and do not expose 9000 for HTTP. If you need to retain HTTP access, you can add:
 
 `-p 9000:9000`
 
