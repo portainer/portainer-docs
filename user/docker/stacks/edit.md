@@ -78,7 +78,7 @@ You can also toggle the stack [webhook](webhooks.md) and retrieve the webhook UR
 
 You can choose to **Prune services** if you have made changes that remove some services from the stack.
 
-<figure><img src="/broken/files/5cu2Q9GNn6Gzxrb7wVP1" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.20-stacks-edit-swarm-prune.png" alt=""><figcaption></figcaption></figure>
 
 When you have finished making changes, click **Update the stack**.
 

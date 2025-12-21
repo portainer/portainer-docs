@@ -164,12 +164,12 @@ Select **Store in S3** and fill in the options, using the below as a guide.
 | Access Key ID              | Enter the access key ID for your S3 bucket.                                                                                                                                                                                                                                                                   |
 | Secret Access Key          | Enter the secret key for your S3 bucket.                                                                                                                                                                                                                                                                      |
 | Region                     | Enter the region where your bucket is located (for example, `us-west-1`).                                                                                                                                                                                                                                     |
-| Bucket name                | Enter the name of your S3 bucket.                                                                                                                                                                                                                                                                             |
+| Bucket name                | <p>Enter the name of your S3 bucket. <br>Note that if you include a folder path in the Bucket name field, the prefix must end with a trailing slash.</p>                                                                                                                                                      |
 | S3 compatible host         | If you are using a non-AWS S3-compatible provider (such as MinIO), enter the URL (including the protocol and port if necessary) here. If you're using AWS S3, leave this blank.                                                                                                                               |
 | Password protect           | Enable this to protect your backups with a password.                                                                                                                                                                                                                                                          |
 | Password                   | Enter the password to set on your backups.                                                                                                                                                                                                                                                                    |
 
-<figure><img src="../../.gitbook/assets/2.17-admin-settings-backup-s3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/take-a-backup.png" alt=""><figcaption></figcaption></figure>
 
 ### Restoring from a local file
 
@@ -194,12 +194,12 @@ Restoring a configuration is only possible on a fresh instance of Portainer duri
 | Access key ID      | Enter the access key ID for your S3 bucket.                                                                                                                                     |
 | Secret access key  | Enter the secret key for your S3 bucket.                                                                                                                                        |
 | Region             | Enter the region where your bucket is located (for example, `us-west-1`).                                                                                                       |
-| Bucket name        | Enter the name of your S3 bucket.                                                                                                                                               |
+| Bucket name        | <p>Enter the name of your S3 bucket. <br>Note that if you include a folder path in the Bucket name field, the prefix must end with a trailing slash.</p>                        |
 | S3 Compatible Host | If you are using a non-AWS S3-compatible provider (such as MinIO), enter the URL (including the protocol and port if necessary) here. If you're using AWS S3, leave this blank. |
 | Filename           | Enter the filename of the backup you want to restore.                                                                                                                           |
 | Password           | Enter the password set on your backup (if any).                                                                                                                                 |
 
-<figure><img src="../../.gitbook/assets/2.17-admin-settings-backup-s3-restore.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/restore-from-backup.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Restore Portainer**. The restore might take a few moments. When it has finished, you will be redirected to the login page. You can now log in with your previous credentials and your previous configuration will be restored.
 
