@@ -61,3 +61,11 @@ The backup contains records which cover configuration, metadata, access control,
 * Auto update configuration
 * Schedules
 * Pending actions
+
+#### What is not included in a Portainer backup?
+
+Portainer backups do not include:
+
+* Containers, images or volumes
+* Application data stored in volumes or bind mounts
+* Docker or Kubernetes configuration outside of Portainer’s own database
