@@ -374,6 +374,7 @@
     * [Why is a feature only available in Portainer Business Edition?](faqs/troubleshooting/ui-and-features/why-is-a-feature-only-available-in-portainer-business-edition.md)
     * [Runtime and Resource sliders are not showing the set value on ARM](faqs/troubleshooting/ui-and-features/runtime-and-resource-sliders-are-not-showing-the-set-value-on-arm.md)
     * [Why doesn’t the Portainer UI load inside an iframe?](faqs/troubleshooting/ui-and-features/why-doesnt-the-portainer-ui-load-inside-an-iframe.md)
+    * [Why can I not see an update option within the UI?](faqs/troubleshooting/ui-and-features/why-can-i-not-see-an-update-option-within-the-ui.md)
   * [Logs, errors and debugging](faqs/troubleshooting/logs-errors-and-debugging/README.md)
     * [Unable to Access Pod Logs in My k0s Cluster](faqs/troubleshooting/logs-errors-and-debugging/unable-to-access-pod-logs-in-my-k0s-cluster.md)
     * [Can you view deleted container logs in Portainer?](faqs/troubleshooting/logs-errors-and-debugging/can-you-view-deleted-container-logs-in-portainer.md)
