@@ -127,6 +127,10 @@ This feature is only available in [Portainer Business Edition](https://www.porta
 
 During installation, Portainer by default creates a self-signed SSL certificate to encrypt traffic between the Portainer Server and the end user, as well as between the Portainer Server and the Portainer Agent. This certificate can be replaced with your own certificate.
 
+{% hint style="warning" %}
+Note that SSL certificates [specified by CLI options](../../advanced/cli.md#configuration-flags-available-at-the-command-line) will override any certificates uploaded here.
+{% endhint %}
+
 {% hint style="info" %}
 We recommend including the full chain in the certificate to ensure compatibility. If you do not have the full chain for your certificate, ask your certificate provider or use [What's My Chain Cert?](https://whatsmychaincert.com/) to generate it.
 {% endhint %}
