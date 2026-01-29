@@ -22,4 +22,4 @@ Since the initial release of [Policies](user/policy-based-management/policies/) 
 
 Along with [numerous fixes and UI improvements](release-notes.md#release-2.38.0-sts), this release introduces policy templates that provide preconfigured policies, making policy creation possible in just a few clicks. Templates are currently available for [Kubernetes security ](user/policy-based-management/policies/kubernetes/kubernetes-security-policy.md)and [Docker security](user/policy-based-management/policies/docker/security-policy.md) policies, with more to come in future releases.
 
-<figure><img src=".gitbook/assets/2.38-whats-new-policies.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/2.38-whatsnew-policy-templates.png" alt=""><figcaption></figcaption></figure>
