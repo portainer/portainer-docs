@@ -16,11 +16,11 @@ January 29, 2026
 
 * On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
 
-**Known issues with Fleet Management (BE only)**
+**Known issues with Policy Based Management (BE only)**
 
 * When creating a Kubernetes Security Policy, the security setting for 'Restrict Proc Mount types' does not allow you to select Allowed Proc Mount types as it should
 * The Kubernetes setup policy currently defaults to resource over-commit off. This diverges from the default Kubernetes over-commit setting. When creating a Kubernetes setup policy consider toggling resource over-commit on to match the Kubernetes default, otherwise you may experience an impact on existing workloads that rely on resource over-commit. In a future release we will adjust the policy default to match the Kubernetes default
-* Currently, RBAC policies do not override environment or group-level settings, as they create non-conflicting role bindings. This may result in users retaining higher privileges (e.g. Environment Administrator) even when a policy is applied to restrict them to a Standard User role.
+* Currently, RBAC policies do not override environment or group-level settings, as they create non-conflicting role bindings. This may result in users retaining higher privileges (e.g. Environment Administrator) even when a policy is applied to restrict them to a Standard User role
 
 **Known issues with Podman support**
 
@@ -29,7 +29,7 @@ January 29, 2026
 
 **Known issues with Talos clusters managed by Omni (BE only)**
 
-* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.&#x20;
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
 
 ### New in this Release
 
