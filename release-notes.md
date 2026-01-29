@@ -65,7 +65,6 @@ January 29, 2026
 * Fixed a problem that could cause encrypting an existing Portainer database to fail
 * Improved the Azure Container Instance (ACI) experience with a new environment variables section in the creation form and a corresponding table in the instance view
 * Updated the Portainer logo and favicon throughout the application to the new branding
-* Updated the Namespace dropdown lists across the UI to be sorted alphabetically by default
 * Upgraded the golang/stdlib to version 1.24.11 to the following CVEs in the Portainer agent:
   * CVE-2025-61729
   * CVE-2025-61727
