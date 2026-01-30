@@ -30,11 +30,17 @@ From the menu, under **Additional Functionality**, select **Policy Based Managem
 
 <figure><img src="../../../.gitbook/assets/2.38-Add-policy.gif" alt=""><figcaption></figcaption></figure>
 
-There multiple policy types available, depending on the environment type you are managing and the kind of access you want to enforce. You can use the search function or filter by environment type or policy category to narrow down the list.
+There are multiple policy types available, depending on the environment type you are managing and the kind of access you want to enforce. You can use the search function or filter by environment type or policy category to narrow down the list.
 
-After selecting a policy type, select **Continue** at the bottom of the page to open the configuration form. The fields shown will vary depending on the policy you are creating, and each form guides you through the required settings for that specific policy. Select a policy type below for more details on creating the policy.&#x20;
+After selecting a policy type, select **Continue** at the bottom of the page to open the configuration form. The fields shown will vary depending on the policy you are creating, and each form guides you through the required settings for that specific policy. Select an environment type below for more details on creating the policy.&#x20;
 
-<table data-column-title-hidden data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><h4>Kubernetes RBAC</h4></td><td><a href="kubernetes/kubernetes-rbac-policy.md">kubernetes-rbac-policy.md</a></td><td data-object-fit="fill"><a href="../../../.gitbook/assets/2.37.0-Kube-rbac-1.png">2.37.0-Kube-rbac-1.png</a></td></tr><tr><td><h4>Kubernetes Security</h4></td><td><a href="kubernetes/kubernetes-security-policy.md">kubernetes-security-policy.md</a></td><td data-object-fit="contain"><a href="../../../.gitbook/assets/2.37.0-Kube-security.png">2.37.0-Kube-security.png</a></td></tr><tr><td><h4>Kubernetes Setup</h4></td><td><a href="kubernetes/kubernetes-setup-policy.md">kubernetes-setup-policy.md</a></td><td data-object-fit="contain"><a href="../../../.gitbook/assets/2.37.0-Kube-setup-policy.png">2.37.0-Kube-setup-policy.png</a></td></tr><tr><td><h4>Kubernetes Registry</h4></td><td><a href="kubernetes/kubernetes-registry-policy.md">kubernetes-registry-policy.md</a></td><td data-object-fit="contain"><a href="../../../.gitbook/assets/2.37.0-Kube-Reg-policy.png">2.37.0-Kube-Reg-policy.png</a></td></tr><tr><td><h4>Docker / Swarm / Podman RBAC</h4></td><td><a href="docker/rbac-policy.md">rbac-policy.md</a></td><td data-object-fit="contain"><a href="../../../.gitbook/assets/2.37.0-RBAC-policy.png">2.37.0-RBAC-policy.png</a></td></tr><tr><td><h4>Docker / Swarm / Podman Security</h4></td><td><a href="docker/security-policy.md">security-policy.md</a></td><td data-object-fit="contain"><a href="../../../.gitbook/assets/2.37.0-Security-policy.png">2.37.0-Security-policy.png</a></td></tr><tr><td><h4>Docker / Swarm / Podman Setup</h4></td><td><a href="docker/setup-policy.md">setup-policy.md</a></td><td data-object-fit="contain"><a href="../../../.gitbook/assets/2.37.0-Setup-policy.png">2.37.0-Setup-policy.png</a></td></tr><tr><td><h4>Docker / Swarm / Podman Registry</h4></td><td><a href="docker/registry-policy.md">registry-policy.md</a></td><td data-object-fit="contain"><a href="../../../.gitbook/assets/Screenshot 2025-12-05 at 10.23.28 AM.png">Screenshot 2025-12-05 at 10.23.28 AM.png</a></td></tr></tbody></table>
+{% content-ref url="kubernetes-policies/" %}
+[kubernetes-policies](kubernetes-policies/)
+{% endcontent-ref %}
+
+{% content-ref url="docker-policies/" %}
+[docker-policies](docker-policies/)
+{% endcontent-ref %}
 
 ## View policy details
 
@@ -72,7 +78,7 @@ The attachment tab displays details about the environments attached to the polic
 
 ### Settings&#x20;
 
-The Settings tab shows the policy configuration. Settings vary by policy type. Details for each policy type are covered in the [Kubernetes policies](kubernetes/) and [Docker policies](docker/) sections of this documentation.
+The Settings tab shows the policy configuration. Settings vary by policy type. Details for each policy type are covered in the [Kubernetes policies](kubernetes-policies/) and [Docker policies](docker-policies/) sections of this documentation.
 
 ## Remove a policy
 
