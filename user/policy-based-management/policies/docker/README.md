@@ -1,4 +1,4 @@
-# Docker
+# Docker Policies
 
 The following section describes the details of creating a policy for Docker, Swarm or Podman environments.&#x20;
 

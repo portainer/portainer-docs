@@ -34,12 +34,12 @@ There are multiple policy types available, depending on the environment type you
 
 After selecting a policy type, select **Continue** at the bottom of the page to open the configuration form. The fields shown will vary depending on the policy you are creating, and each form guides you through the required settings for that specific policy. Select an environment type below for more details on creating the policy.&#x20;
 
-{% content-ref url="kubernetes-policies/" %}
-[kubernetes-policies](kubernetes-policies/)
+{% content-ref url="kubernetes/" %}
+[kubernetes](kubernetes/)
 {% endcontent-ref %}
 
-{% content-ref url="docker-policies/" %}
-[docker-policies](docker-policies/)
+{% content-ref url="docker/" %}
+[docker](docker/)
 {% endcontent-ref %}
 
 ## View policy details
@@ -78,7 +78,7 @@ The attachment tab displays details about the environments attached to the polic
 
 ### Settings&#x20;
 
-The Settings tab shows the policy configuration. Settings vary by policy type. Details for each policy type are covered in the [Kubernetes policies](kubernetes-policies/) and [Docker policies](docker-policies/) sections of this documentation.
+The Settings tab shows the policy configuration. Settings vary by policy type. Details for each policy type are covered in the [Kubernetes policies](kubernetes/) and [Docker policies](docker/) sections of this documentation.
 
 ## Remove a policy
 

@@ -27,3 +27,7 @@ This section provides information and management for your Kubernetes cluster.
 {% content-ref url="registries.md" %}
 [registries.md](registries.md)
 {% endcontent-ref %}
+
+{% content-ref url="policies.md" %}
+[policies.md](policies.md)
+{% endcontent-ref %}

@@ -1,4 +1,4 @@
-# Kubernetes
+# Kubernetes Policies
 
 The following section describes the details of creating a policy for Kubernetes environments.&#x20;
 
