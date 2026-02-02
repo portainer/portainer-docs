@@ -360,6 +360,7 @@
     * [Troubleshooting Edge Agent Connection Issues](faqs/troubleshooting/agents-and-environment-management/troubleshooting-edge-agent-connection-issues.md)
     * [How do I change the way I connect to an environment without losing my existing stacks?](faqs/troubleshooting/agents-and-environment-management/how-do-i-change-the-way-i-connect-to-an-environment-without-losing-my-existing-stacks.md)
   * [Stacks, deployments and updates](faqs/troubleshooting/stacks-deployments-and-updates/README.md)
+    * [Why do relative bind mounts appear empty after updating a stack that was deployed from Git?](faqs/troubleshooting/stacks-deployments-and-updates/empty-relative-bind-mounts.md)
     * [How do automatic updates for stacks/applications work?](faqs/troubleshooting/stacks-deployments-and-updates/how-do-automatic-updates-for-stacks-applications-work.md)
     * [How does the image update notification icon work?](faqs/troubleshooting/stacks-deployments-and-updates/how-does-the-image-update-notification-icon-work.md)
     * [Can I build an image while deploying a stack/application from Git?](faqs/troubleshooting/stacks-deployments-and-updates/can-i-build-an-image-while-deploying-a-stack-application-from-git.md)
