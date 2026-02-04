@@ -73,9 +73,8 @@ The attachment tab displays details about the environments attached to the polic
 | Environment name   | The name of the environment within the attached group. Click the environment name to open the environment dashboard.                                           |
 | Status             | A status indicating whether the policy is successfully applied to the environment. If the status is not Active, the policy will not apply to the environment.  |
 | Message            | If the status is not Active, the displayed message explains why the policy could not be applied to the environment.                                            |
-| Last Attempt       | The date and time when the policy was last applied to, or an attempt was made to apply it to, the environment.                                                 |
 
-<figure><img src="../../../.gitbook/assets/2.38.1-policies-attachments.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.38-Policy-Attachments (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Settings&#x20;
 
