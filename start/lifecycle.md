@@ -75,7 +75,9 @@ We intend to release a new version every month, with a new LTS release (in bold 
 | ------------ | ------------ | -------------------------- |
 | **2.39 LTS** | **Feb 2026** | **Nov 2026**               |
 
-Sitting on an older release that is no longer maintained or supported is strongly discouraged and customers take full responsibility for doing so. Customers are strongly encouraged to ensure they are running the latest patch release for a given stream.
+<figure><img src="../.gitbook/assets/release-schedule.png" alt=""><figcaption></figcaption></figure>
+
+Sitting on an older release that is no longer maintained or supported is strongly discouraged and users take full responsibility for doing so. Users are strongly encouraged to ensure they are running the latest patch release for a given stream.
 
 ## Older releases that are no longer supported or maintained
 
@@ -101,7 +103,7 @@ The following releases have passed the end of support date and are no longer mai
 
 ## Notes
 
-Portainer uses the [semantic versioning scheme](https://semver.org/) and while Portainer endeavors to follow best practices, we reserve the right to make exceptions should that be in Portainer’s and our customer’s best interests.
+Portainer uses the [semantic versioning scheme](https://semver.org/) and while Portainer endeavors to follow best practices, we reserve the right to make exceptions should that be in Portainer’s and our user’s best interests.
 
 For information on the available options and best practices for updating Portainer deployments, [refer to our update documentation](upgrade/).
 
