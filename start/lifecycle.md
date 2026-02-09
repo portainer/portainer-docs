@@ -74,6 +74,7 @@ We intend to release a new version every month, with a new LTS release (in bold 
 
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
+| 2.38.1 STS   | Feb 2026     | Mar 2026                   |
 | **2.39 LTS** | **Feb 2026** | **Jan 2027**               |
 
 <figure><img src="../.gitbook/assets/2.33-lifecycle-timetable.png" alt=""><figcaption></figcaption></figure>
