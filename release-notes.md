@@ -2,6 +2,39 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.33.7 LTS <a href="#release-2.33.6-lts" id="release-2.33.6-lts"></a>
+
+February 10, 2026
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+**Known issues with Podman support**
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+**Known issues with Talos clusters managed by Omni**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### New in this Release
+
+* Fixed an issue that would cause the Containers page to not load
+* Fixed an error when updating Edge Stacks
+* Fixed a panic in Edge Group creation
+* Fixed a deadlock in the auto onboarding
+* Fixed a problem that prevented the loading of the Containers page
+* Fixed a problem in Edge Stacks and GitOps when the entry file name was not at the repository root
+* Upgraded compose to v2.40.3 to fix a nil pointer error
+* Fixed an issue where the docker-compose file was excluded for certain Git repository structures during Edge Stack deployment when Git Edge configuration was enabled, resulting in an “EntryFileName not found in DirEntries” error
+* Fixed the update of Edge Configs in async environments
+* Resolved the following CVEs:
+  * CVE-2025-61726
+  * CVE-2025-68121
+
 ## Release 2.33.6 LTS <a href="#release-2.33.6-lts" id="release-2.33.6-lts"></a>
 
 December 16, 2025

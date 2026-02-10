@@ -67,6 +67,8 @@ Each stream (LTS and STS) will have a number of patch releases throughout it’s
 | ------------ | ------------ | -------------------------- |
 | **2.39 LTS** | **Feb 2026** | **Nov 2026**               |
 
+<figure><img src="../.gitbook/assets/release-schedule.png" alt=""><figcaption></figcaption></figure>
+
 Sitting on an older release that is no longer maintained or supported is strongly discouraged and customers take full responsibility for doing so. Customers are strongly encouraged to ensure they are running the latest patch release for a given stream.
 
 ## Older releases that are no longer supported or maintained
