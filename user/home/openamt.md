@@ -1,5 +1,9 @@
 # OpenAMT
 
+{% hint style="danger" %}
+OpenAMT integration is now deprecated and will be removed in a future release.
+{% endhint %}
+
 OpenAMT allows you to remotely manage your compatible Edge devices from Portainer, letting you start, stop, restart and access the device console directly from within the Portainer UI.
 
 ## Preparation
