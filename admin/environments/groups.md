@@ -41,14 +41,14 @@ Removing a group will not delete environments and users in that group. However, 
 
 ## Manage policies of a group
 
-[Policies](../../user/policy-based-management/policies/) allow you to apply configuration, security rules, and cluster settings to groups of environments, rather than configuring each environment individually. Note that the policies feature is experimental and [must be turned on in settings](../settings/general.md#experimental-features) before it can be used.&#x20;
+[Policies](policies/) allow you to apply configuration, security rules, and cluster settings to groups of environments, rather than configuring each environment individually. Note that the policies feature is experimental and [must be turned on in settings](../settings/general.md#experimental-features) before it can be used.&#x20;
 
-To manage the policies of a group, in the menu expand **Environment-related** then select **Groups**. Locate the environment group you want to manage the policies for, then select **Manage policies** under the **Actions** table header. This will direct you to the [Policies](../../user/policy-based-management/policies/) page where you can manage existing polices or create new policies.&#x20;
+To manage the policies of a group, in the menu expand **Environment-related** then select **Groups**. Locate the environment group you want to manage the policies for, then select **Manage policies** under the **Actions** table header. This will direct you to the [Policies](policies/) page where you can manage existing polices or create new policies.&#x20;
 
 ## Manage access to an environment group
 
 {% hint style="warning" %}
-If a group's access is controlled by a [policy](../../user/policy-based-management/policies/), you cannot add access at this level because the policy access takes precedence.
+If a group's access is controlled by a [policy](policies/), you cannot add access at this level because the policy access takes precedence.
 {% endhint %}
 
 {% hint style="info" %}

@@ -8,7 +8,7 @@ metaLinks:
 # Setup
 
 {% hint style="warning" %}
-If access to an environment is being managed by a Kubernetes setup [policy](../../policy-based-management/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
+If access to an environment is being managed by a Kubernetes setup [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
 {% endhint %}
 
 You can make changes to your environment's Kubernetes configuration by expanding **Cluster** from the menu then selecting **Setup**.

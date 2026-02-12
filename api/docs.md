@@ -9,8 +9,8 @@ metaLinks:
 {% hint style="success" %}
 We are looking at replacing our current API documentation with the following:&#x20;
 
-* [Business Edition (BE) 2.38.0 API Documentation](https://api-docs.portainer.io/?edition=ee\&version=2.38.0)&#x20;
-* [Community Edition (CE) 2.38.0 API Documentation](https://api-docs.portainer.io/?edition=ce\&version=2.38.0)
+* [Business Edition (BE) 2.38.1 API Documentation](https://api-docs.portainer.io/?edition=ee\&version=2.38.1)&#x20;
+* [Community Edition (CE) 2.38.1 API Documentation](https://api-docs.portainer.io/?edition=ce\&version=2.38.1)
 
 These sites are work in progress, and we would appreciate you trying them out and [letting us know of any issues](../contribute/contribute.md#reporting-bugs) that you find.
 {% endhint %}
@@ -23,8 +23,8 @@ You will need an access token in order to use the Portainer API. If you have not
 
 You can find our API documentation at SwaggerHub:
 
-* [Business Edition (BE) 2.38.0 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ee/2.38.0)
-* [Community Edition (CE) 2.38.0 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.38.0)
+* [Business Edition (BE) 2.38.1 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ee/2.38.1)
+* [Community Edition (CE) 2.38.1 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.38.1)
 
 We have also provided some examples of API usage.
 

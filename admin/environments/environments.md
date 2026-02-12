@@ -32,7 +32,7 @@ This action cannot be reversed, so proceed with caution!
 ## Manage access to environments  <a href="#manage-access" id="manage-access"></a>
 
 {% hint style="warning" %}
-If an environment's access is controlled by a [policy](../../user/policy-based-management/policies/), you cannot add access at this level because the policy access takes precedence.
+If an environment's access is controlled by a [policy](policies/), you cannot add access at this level because the policy access takes precedence.
 {% endhint %}
 
 {% hint style="info" %}

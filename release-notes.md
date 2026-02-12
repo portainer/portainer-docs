@@ -8,6 +8,44 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.38.1 STS
+
+February 13, 2026
+
+#### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+**Known issues with Podman support**
+
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this Release
+
+* Fixed an issue around changing an environment group for Kubernetes standard agent within the environment details view
+* Fixed an issue where local environments using Docker would have their protocol removed
+* Improved the namespace dropdown list to be sorted alphabetically by default
+* Fixed an issue where environment changes were applied immediately instead of waiting for the Update group action
+* Fixed an issue where Pod Security Constraints related policies were not correctly created
+* Fixed an issue where policy selection was blocked when managing more than 100 environments and a supported environment was not detected
+* Fixed an issue where resource overcommit was not enabled by default in the setup policy
+* Worked on ensuring an RBAC policy will override the environment / group level RBAC settings
+* Improved validation to ensure policy name is unique
+* Improved the UX for policy status updates
+* Re-added Policy based management under environment related menu
+* Removed retry button from policy attachments table, replaced it with a timestamp of when it was last attempted to install
+* Fixed an issue where a permissive Docker security policy was restricting standard users from managing containers
+* Fixed an issue where standard users were seeing errors when viewing the policies applied to the Kubernetes environment they were in
+* Resolved the following CVEs:
+  * CVE-2025-61726
+  * CVE-2025-61728
+  * CVE-2025-61730
+
 ## Release 2.38.0 STS
 
 January 29, 2026
@@ -33,7 +71,7 @@ January 29, 2026
 
 ### New in this Release
 
-* Changed [Policy Based Management](user/policy-based-management/) from experimental to beta, to indicate that it is ready for you to test against your environments
+* Changed [Policy Based Management](user/policy-based-management.md) from experimental to beta, to indicate that it is ready for you to test against your environments
 * Fixed an issue where starting Stack is failed when the private image referenced by the stack was removed from the environment
 * Fixed an issue where deploying a Stack in Kubernetes caused a memory leak
 * Fixed a UI issue when updating edge stacks
@@ -120,7 +158,7 @@ December 11, 2025
 
 ### New in this Release <a href="#new-in-this-release" id="new-in-this-release"></a>
 
-* Introduced [Fleetwide Policies](user/policy-based-management/policies/), a new feature allowing administrators to centrally configure reusable settings that are automatically applied and across all environments in a group. **This feature is experimental**
+* Introduced [Fleetwide Policies](admin/environments/policies/), a new feature allowing administrators to centrally configure reusable settings that are automatically applied and across all environments in a group. **This feature is experimental**
 * Fixed an issue where a standard stack could not pull private images from a private registry during a GitOps update (polling/webhook) when "Re-pull image" was enabled and a relative path was configured
 * Fixed an issue where the Update the Stack button was disabled when editing a standard stack deployed via the Web Editor
 * Fixed Service view display for Docker Swarm

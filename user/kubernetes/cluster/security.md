@@ -8,7 +8,7 @@ metaLinks:
 # Security constraints
 
 {% hint style="warning" %}
-If access to an environment is being managed by a Kubernetes security [policy](../../policy-based-management/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
+If access to an environment is being managed by a Kubernetes security [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
 {% endhint %}
 
 Pod security policies can be used to define under what conditions workloads can run. With Portainer we achieve this by leveraging [Open Policy Agent](https://www.openpolicyagent.org/) via [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper).&#x20;

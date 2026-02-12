@@ -11,6 +11,7 @@ This table lists deprecated and removed features and functionality that are no l
 | Feature                                                                                                                    | Deprecated | Remove |
 | -------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
 | [OpenAMT](../user/home/openamt.md) integration                                                                             | 2.36.0     | TBD    |
+| `--sslcert` and `--sslkey` options (use `--tlscert` and `--tlskey` instead)                                                | 2.33.2     | TBD    |
 | Experimental OpenAI integration                                                                                            | 2.32.0     | 2.33.0 |
 | Published Portainer images being built using the Docker manifest list format in favor of the OCI image index format        | 2.31.0     | TBD    |
 | [Provision KaaS Cluster](../admin/environments/add/kaas/) feature                                                          | 2.30.0     | TBD    |

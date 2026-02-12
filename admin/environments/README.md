@@ -40,8 +40,8 @@ User access can be managed within environments, within environment groups, or us
 [groups.md](groups.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../user/policy-based-management/policies/" %}
-[policies](../../user/policy-based-management/policies/)
+{% content-ref url="policies/" %}
+[policies](policies/)
 {% endcontent-ref %}
 
 Automatic onboarding scripts can be generated for larger Edge Agent deployments.

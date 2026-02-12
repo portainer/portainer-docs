@@ -8,10 +8,8 @@ metaLinks:
 
 {% hint style="warning" %}
 Policies is part of the new Policy Based Management functionality which is considered a beta feature:\
-\- To access this feature, enable **Policy Based Management** in the [additional functionality](../../../admin/settings/general.md#additional-functionality) section within the settings.\
-\- Use this feature with caution and expect changes or additions as development continues. Issues we are aware of include:
-
-* Policies may not act as intended when there is an existing environment level access in place. We recommend creating policies only for new environment setups.
+\- To access this feature, enable **Policy Based Management** in the [additional functionality](../../settings/general.md#additional-functionality) section within the settings.\
+\- Use this feature with caution and expect changes or additions as development continues.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -26,27 +24,27 @@ Policies introduces a centralized configuration and policy inheritance as part o
 
 ## Create a new policy
 
-From the menu, under **Additional Functionality**, select **Policy Based Management**.
+From the menu, under **Environment-related**, select **Policies** then select **Create policy**.
 
-<figure><img src="../../../.gitbook/assets/2.38-Add-policy.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.38.1-create-policy.gif" alt=""><figcaption></figcaption></figure>
 
 There are multiple policy types available, depending on the environment type you are managing and the kind of access you want to enforce. You can use the search function or filter by environment type or policy category to narrow down the list.
 
 After selecting a policy type, select **Continue** at the bottom of the page to open the configuration form. The fields shown will vary depending on the policy you are creating, and each form guides you through the required settings for that specific policy. Select an environment type below for more details on creating the policy.&#x20;
 
-{% content-ref url="kubernetes/" %}
-[kubernetes](kubernetes/)
+{% content-ref url="kubernetes-policies/" %}
+[kubernetes-policies](kubernetes-policies/)
 {% endcontent-ref %}
 
-{% content-ref url="docker/" %}
-[docker](docker/)
+{% content-ref url="docker-policies/" %}
+[docker-policies](docker-policies/)
 {% endcontent-ref %}
 
 ## View policy details
 
-From the menu, under **Additional Functionality**, select **Policy Based Management**. The policies page lists all existing policies. To see the details of an existing policy, click on the policy name.&#x20;
+From the menu, under **Environment-related**, select **Policies**. The policies page lists all existing policies. To see the details of an existing policy, click on the policy name.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.38-View-policy.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.28.1-Policy-details.gif" alt=""><figcaption></figcaption></figure>
 
 Three tabs display the policy details: **Info**, **Attachments**, and **Settings**. These details are read-only for standard users and can be edited by admin users from this view.
 
@@ -67,21 +65,26 @@ The **Info** tab displays general information about the policy setup.
 
 The attachment tab displays details about the environments attached to the policy. Within this view, you can filter on status, or use the search bar to find specific environments.&#x20;
 
+{% hint style="info" %}
+If a policy attachment fails, it is automatically retried every 15 minutes. If the **Message** field shows “Failed to install/upgrade Helm chart”, the issue is at the environment level and must be resolved before the policy can be applied.
+{% endhint %}
+
 | Field/Option       | Overview                                                                                                                                                       |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Environment groups | <p>The environments applied to this policy.<br>Add environments to the policy by selecting groups from the dropdown menu.</p>                                  |
 | Environment name   | The name of the environment within the attached group. Click the environment name to open the environment dashboard.                                           |
 | Status             | A status indicating whether the policy is successfully applied to the environment. If the status is not Active, the policy will not apply to the environment.  |
 | Message            | If the status is not Active, the displayed message explains why the policy could not be applied to the environment.                                            |
+| Last Attempt       | The date and time the policy was last applied or attempted to be applied to the environment.                                                                   |
 
-<figure><img src="../../../.gitbook/assets/2.38-Policy-Attachments (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.38.1-policy-attachments.png" alt=""><figcaption></figcaption></figure>
 
 ### Settings&#x20;
 
-The Settings tab shows the policy configuration. Settings vary by policy type. Details for each policy type are covered in the [Kubernetes policies](kubernetes/) and [Docker policies](docker/) sections of this documentation.
+The Settings tab shows the policy configuration. Settings vary by policy type. Details for each policy type are covered in the [Kubernetes policies](kubernetes-policies/) and [Docker policies](docker-policies/) sections of this documentation.
 
 ## Remove a policy
 
-From the menu, under **Additional Functionality**, select **Policy Based Management**. Tick the checkbox next to the policy you want to remove then click **Remove**.
+From the menu, under **Environment-related**, select **Policies**. Tick the checkbox next to the policy you want to remove then click **Remove**.
 
-<figure><img src="../../../.gitbook/assets/2.38.0-remove-policy.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.38.1-Remove-policy.gif" alt=""><figcaption></figcaption></figure>

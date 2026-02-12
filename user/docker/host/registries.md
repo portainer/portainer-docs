@@ -7,7 +7,7 @@ metaLinks:
 # Registries
 
 {% hint style="warning" %}
-If access to an environment is being managed by a Docker registry [policy](../../policy-based-management/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
+If access to an environment is being managed by a Docker registry [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
 {% endhint %}
 
 {% hint style="warning" %}
@@ -25,7 +25,7 @@ From the menu select **Host**, select **Registries** then click **Add registry**
 ## Managing access
 
 {% hint style="warning" %}
-If access to a registry is being managed by a registry [policy](../../policy-based-management/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
+If access to a registry is being managed by a registry [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
 {% endhint %}
 
 To configure access to a registry, from the menu select **Host** then select **Registries**.
