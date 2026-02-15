@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [What's new in version 2.38](whats-new.md)
+* [What's new in version 2.39](whats-new.md)
 * [Release Notes](release-notes.md)
 
 ## Getting Started <a href="#start" id="start"></a>

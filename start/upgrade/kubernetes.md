@@ -7,7 +7,7 @@ metaLinks:
 # Updating on Kubernetes
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.38.0 make sure all of the agents are also on version 2.38.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.39.0 make sure all of the agents are also on version 2.39.0.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -37,14 +37,14 @@ Next, run one of the following commands to update Portainer:
 {% tab title="Business Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set enterpriseEdition.image.tag=sts --set enterpriseEdition.enabled=true
+    --set enterpriseEdition.image.tag=lts --set enterpriseEdition.enabled=true
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set image.tag=sts
+    --set image.tag=lts
 ```
 {% endtab %}
 {% endtabs %}
@@ -62,13 +62,13 @@ Copy the contents of the relevant NodePort manifest file:
 **Business Edition:**
 
 ```
-https://downloads.portainer.io/ee-sts/portainer.yaml
+https://downloads.portainer.io/ee-lts/portainer.yaml
 ```
 
 **Community Edition:**
 
 ```
-https://downloads.portainer.io/ce-sts/portainer.yaml
+https://downloads.portainer.io/ce-lts/portainer.yaml
 ```
 
 For an agent-only deployment, use one of the following manifests instead:
@@ -76,13 +76,13 @@ For an agent-only deployment, use one of the following manifests instead:
 **Business Edition:**
 
 ```
-https://downloads.portainer.io/ee-sts/portainer-agent-k8s-nodeport.yaml
+https://downloads.portainer.io/ee-lts/portainer-agent-k8s-nodeport.yaml
 ```
 
 **Community Edition:**
 
 ```
-https://downloads.portainer.io/ce-sts/portainer-agent-k8s-nodeport.yaml
+https://downloads.portainer.io/ce-lts/portainer-agent-k8s-nodeport.yaml
 ```
 
 {% hint style="warning" %}
@@ -151,13 +151,13 @@ Log into the control node of your Kubernetes cluster and run one of the followin
 **Business Edition:**
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer.yaml
 ```
 
 **Community Edition:**
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce-sts/portainer.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ce-lts/portainer.yaml
 ```
 
 For an agent-only deployment, use one of the following commands instead:
@@ -165,13 +165,13 @@ For an agent-only deployment, use one of the following commands instead:
 **Business Edition:**
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer-agent-k8s-nodeport.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-agent-k8s-nodeport.yaml
 ```
 
 **Community Edition:**
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce-sts/portainer-agent-k8s-nodeport.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ce-lts/portainer-agent-k8s-nodeport.yaml
 ```
 
 {% hint style="warning" %}
@@ -188,13 +188,13 @@ Log into the control node of your Kubernetes cluster and run one of the followin
 **Business Edition:**
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-lb.yaml
 ```
 
 **Community Edition:**
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce-sts/portainer.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ce-lts/portainer.yaml
 ```
 
 For an agent-only deployment, use one of the following commands instead:
@@ -202,13 +202,13 @@ For an agent-only deployment, use one of the following commands instead:
 **Business Edition:**
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer-agent-k8s-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-agent-k8s-lb.yaml
 ```
 
 **Community Edition:**
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce-sts/portainer-agent-k8s-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ce-lts/portainer-agent-k8s-lb.yaml
 ```
 
 {% hint style="warning" %}
