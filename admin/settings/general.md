@@ -48,13 +48,17 @@ This is a beta feature and is only available in Portainer Business Edition.
 Automatic patch update settings can only be edited by an admin user.&#x20;
 {% endhint %}
 
-Toggle **Apply patch updates when available** to enable your Portainer version to be automatically updated when a new patch is released. Automatic updates will _only_ apply to patches, for example from 2.35.0 to 2.35.1. Your Portainer version will not automatically update with major or minor releases (2.35.0 to 2.36.0 for example).&#x20;
-
-{% hint style="warning" %}
+{% hint style="danger" %}
 Portainer deployed via Helm charts is not aware of automatic patching. If the Helm chart is reapplied, it may overwrite a patched version, causing a rollback.
 {% endhint %}
 
-Specify the time you want Portainer to check for new updates each day. The time specified is UTC, and the first update check will occur one hour after enabling automatic patch updates.
+Toggle **Apply patch updates when available** to enable your Portainer version to be automatically updated when a new patch is released. Automatic updates will _only_ apply to patches, for example from 2.35.0 to 2.35.1. Your Portainer version will not automatically update with major or minor releases (2.35.0 to 2.36.0 for example).&#x20;
+
+Specify the time you want Portainer to check for new updates each day, the time specified is UTC.&#x20;
+
+{% hint style="warning" %}
+Update checks only start **one hour after enabling**. The first check runs at the next scheduled check time that is **at least one hour later**.
+{% endhint %}
 
 By default, Portainer retrieves update images from Docker Hub. You can override this by selecting **Use** **custom registry**, which tells Portainer to use your own image registry. This option is useful for environments that mirror Portainer images internally, operate within air-gapped networks, or restrict direct internet access for security and compliance reasons.&#x20;
 
