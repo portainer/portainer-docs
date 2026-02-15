@@ -9,7 +9,7 @@ metaLinks:
 
 From the menu expand **Networking**, select **Ingresses** then click **Add with form**.
 
-<figure><img src="../../../../.gitbook/assets/2.20-kubernetes-networking-ingresses-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Ingress-add-with-form.gif" alt=""><figcaption></figcaption></figure>
 
 Select the **namespace** that the Ingress needs to be created in from the list.
 

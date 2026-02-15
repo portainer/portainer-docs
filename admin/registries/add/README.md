@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Registries** then click **Add registry**.
 
-<figure><img src="../../../.gitbook/assets/2.19-registries-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-registry-new.gif" alt=""><figcaption></figcaption></figure>
 
 From the **Registry provider** section select the type of registry you want to add. Portainer provides configuration support for a number of popular registry providers:
 

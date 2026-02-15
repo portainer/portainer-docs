@@ -17,7 +17,7 @@ You can also [create a template from an existing deployed stack](../stacks/templ
 
 To view a list of custom templates, from the menu expand **Templates** then select **Custom**.
 
-<figure><img src="../../../.gitbook/assets/2.20-templates-custom.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/custom-templates-new.gif" alt=""><figcaption></figcaption></figure>
 
 ## Creating a new custom template
 

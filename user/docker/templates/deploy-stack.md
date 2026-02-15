@@ -15,7 +15,7 @@ You can also [create a template from a stack](../stacks/template.md).
 
 From the menu expand **Templates**, select **Application** or **Custom** (depending on the template) then select the template you want to deploy. In this example we'll create a WordPress stack.
 
-<figure><img src="../../../.gitbook/assets/2.20-templates-deploy-stack.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/deploy-a-stack-new.gif" alt=""><figcaption></figcaption></figure>
 
 Enter a name for the stack and set any required configuration values (these will differ from template to template). Toggle **Enable access control** on or off as required.
 

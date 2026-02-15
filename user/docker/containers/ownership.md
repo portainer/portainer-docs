@@ -11,7 +11,7 @@ Portainer allows you to limit container management to specific teams or users.
 
 From the menu select **Containers** then select the container whose ownership you want to change.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_containers_container_details.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Container-change-ownership.gif" alt=""><figcaption></figcaption></figure>
 
 Under the **Access control** section tick the **Change ownership** checkbox then select the new ownership type, using the table below as a guide.
 

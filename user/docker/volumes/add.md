@@ -10,7 +10,7 @@ metaLinks:
 
 From the menu select **Volumes** then click **Add volume**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_volumes_add_volume.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-volume.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the information in the **Create volume** screen, using the table below as a guide.
 
@@ -34,7 +34,7 @@ In Portainer, you can mount an NFS volume to persist the data of your containers
 
 From the menu select **Volumes** then click **Add volume**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_volumes_add_volume.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-volume.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the information in the **Create volume** screen, using the table below as a guide.
 
@@ -69,7 +69,7 @@ In Portainer, you can mount a CIFS volume to persist the data of your containers
 
 From the menu select **Volumes** then click **Add volume**.
 
-
+<figure><img src="../../../.gitbook/assets/Add-volume.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the information in the **Create volume** screen, using the table below as a guide.
 
@@ -101,7 +101,7 @@ When you're finished, click **Create the volume**.
 
 From the menu select **Volumes** then click **Add volume**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_volumes_add_volume.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-volume.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the information in the **Create volume** screen, using the table below as a guide.
 

@@ -14,7 +14,7 @@ If you export a container to a tar file, the volumes won't get exported with it.
 
 From the menu select **Images**, select the image you want to export then click **Export this image**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_images_build_image_export.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Export-image-1.gif" alt=""><figcaption></figcaption></figure>
 
 When the warning message appears, click **Continue**.
 

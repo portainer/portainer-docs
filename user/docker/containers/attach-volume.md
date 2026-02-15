@@ -15,7 +15,7 @@ This article explains how to attach a new [volume](../volumes/) to a running con
 
 From the menu select **Containers**, select the container that you want to attach a volume to, then click **Duplicate/Edit**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_containers_container_edit.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/duplicate-container.gif" alt=""><figcaption></figcaption></figure>
 
 Scroll down to **Advanced container settings**. Click **Volumes** then click **map additional volume**.
 

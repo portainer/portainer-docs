@@ -11,7 +11,7 @@ metaLinks:
 
 From the menu select **Settings** then select **Authentication**. Under the **Authentication method** section click **OAuth**.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-authentication-oauth.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Auth-with-OAuth-1.gif" alt=""><figcaption></figcaption></figure>
 
 In the next screen, enter the credentials provided by your OAuth provider, using the table below as a guide.
 

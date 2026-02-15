@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu expand **User-related** then select **Teams**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.20-users-teams.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-team-new.gif" alt=""><figcaption></figcaption></figure>
 
 Enter the name of the team and optionally select team leaders. Team leaders can add and remove existing users to and from their team, as well as promote existing team members to co-team leaders.
 

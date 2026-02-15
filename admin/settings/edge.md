@@ -12,7 +12,7 @@ To enable and configure Edge Compute functionality in Portainer, select **Settin
 To learn how to use our Edge Compute functionality, please refer to the [Edge Compute](../../user/edge/) section of this documentation.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/2.15-settings-edgecompute.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Edge-compute-settings-new.png" alt=""><figcaption></figcaption></figure>
 
 ## Edge Compute settings
 

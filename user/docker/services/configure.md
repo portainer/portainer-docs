@@ -9,7 +9,7 @@ metaLinks:
 
 From the menu select **Services** then select the service you want to configure.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_services_configure.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Select-service-new.gif" alt=""><figcaption></figcaption></figure>
 
 ## Service details
 

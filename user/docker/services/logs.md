@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Services**, select the service whose logs you want to view then click **Service logs**.
 
-<figure><img src="../../../.gitbook/assets/2.30-services-logs.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Service-logs-new.gif" alt=""><figcaption></figcaption></figure>
 
 Here you can see the contents of the Docker logs for your service.&#x20;
 

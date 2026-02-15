@@ -10,7 +10,7 @@ In Portainer you can create an [app template](../templates/) from deployed stack
 
 From the menu select **Stacks**, select the already-deployed stack, then click **Create template from stack**.
 
-<figure><img src="../../../.gitbook/assets/2.20-stacks-template.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/create-template-from-stack-new.gif" alt=""><figcaption></figcaption></figure>
 
 Define some properties for the new template, using the table below as a guide.
 

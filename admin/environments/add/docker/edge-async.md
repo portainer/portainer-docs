@@ -39,7 +39,7 @@ In addition, our instructions assume your environment meets [our requirements](.
 
 To add an async Edge Agent to a Docker Standalone environment, from the menu expand **Environment-related**, click **Environments**, then click **Add environment**.
 
-<figure><img src="../../../../.gitbook/assets/2.22-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Docker Standalone** then click **Start Wizard**. Then select the **Edge Agent Async** option. Enter the environment details using the table below as a guide.
 

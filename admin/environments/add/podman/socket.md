@@ -11,7 +11,7 @@ Connecting to the Podman socket directly can only be done from the local environ
 
 From the menu expand **Environment-related**, click **Environments**, then click **Add environment**.
 
-<figure><img src="../../../../.gitbook/assets/2.22-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
 Next, select **Podman** as the environment type then click **Start Wizard**. Select the **Socket** option and your platform. You will be shown the command required to ensure you have started the Podman socket.
 

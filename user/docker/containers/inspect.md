@@ -11,7 +11,7 @@ View information about any container, such as network settings, volumes and imag
 
 From the menu select **Containers**, select the container then select **Inspect**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_containers_container_inspect.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Inspect-container-new.gif" alt=""><figcaption></figcaption></figure>
 
 All of the information about the container will display in a tree view. Select any parameter to show more details (if available).
 

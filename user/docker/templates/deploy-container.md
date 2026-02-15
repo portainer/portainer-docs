@@ -11,7 +11,7 @@ Portainer lets you deploy a standalone container from the default templates list
 
 From the menu expand **Templates** then select **Application** or **Custom** (depending on the container). On the Application templates page you can choose to display only Container templates using the **Type** dropdown.
 
-<figure><img src="../../../.gitbook/assets/2.20-templates-deploy-container.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/deploy-a-container-new.gif" alt=""><figcaption></figcaption></figure>
 
 Then, select the container template you want to deploy. Define a name, a network, port mapping and volumes, and toggle **Enable access control** on if needed.
 

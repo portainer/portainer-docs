@@ -9,7 +9,7 @@ metaLinks:
 
 To view information about applications running in a cluster, from the menu select **Applications** then select the application you want to inspect.
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-applications-inspect.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/View-application.gif" alt=""><figcaption></figcaption></figure>
 
 The **Application details** screen is organized into four sections. The following tables explain all of the information to be found in each.
 

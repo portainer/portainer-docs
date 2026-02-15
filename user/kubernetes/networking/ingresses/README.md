@@ -11,7 +11,7 @@ An **Ingress** in Kubernetes is an API object that provides routing rules to man
 
 To view, edit or create ingresses in your environment, expand **Networking** and select **Ingresses** from the left hand menu.
 
-<figure><img src="../../../../.gitbook/assets/2.20-kubernetes-networking-ingresses.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Ingresses.gif" alt=""><figcaption></figcaption></figure>
 
 All the Ingresses that a user has access to are listed on this page.&#x20;
 

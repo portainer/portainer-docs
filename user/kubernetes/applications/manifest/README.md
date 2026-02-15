@@ -13,7 +13,7 @@ There are two ways to add a new application: [manually by using a form](../add.m
 Creating from code isn't just for applications - you can also deploy namespaces, ingresses, ConfigMaps, secrets, volumes and more using code.
 {% endhint %}
 
-In the left-hand menu, select **Applications** and click **Create from code**. Next, choose whether you want to deploy your application using a **Manifest** or a **Helm chart**.
+From the menu, select **Applications** and click **Create from code**. Next, choose whether you want to deploy your application using a **Manifest** or a **Helm chart**.
 
 <figure><img src="../../../../.gitbook/assets/2.35-K8-deploy-from-code (1).gif" alt=""><figcaption></figcaption></figure>
 

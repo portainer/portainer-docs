@@ -20,7 +20,7 @@ When building an image with Portainer, you are unable to use `ADD` or `COPY` com
 
 From the menu select **Images** then click **Build a new image**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_images_build_image.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Build-new-image.gif" alt=""><figcaption></figcaption></figure>
 
 Next, give the image a descriptive name (you can enter multiple names), select the **Web editor** option under **Build method**, then write your Dockerfile in the web editor.
 
@@ -46,7 +46,7 @@ If you have an existing Dockerfile, you can upload it to Portainer and use it to
 
 From the menu select **Images** then click **Build a new image**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_images_build_image_upload.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Build-new-image-upload.gif" alt=""><figcaption></figcaption></figure>
 
 Next, give the image a descriptive name (you can enter multiple names), select the **Upload** option under **Build method**, then browse to and upload the Dockerfile.
 
@@ -64,7 +64,7 @@ If the Dockerfile is hosted on the Internet (either in a tarball or a public Git
 
 From the menu select **Images** then click **Build a new image**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_images_build_image_URL.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Build-new-image-url.gif" alt=""><figcaption></figcaption></figure>
 
 Next, give the image a descriptive name (you can enter multiple names), select the **Upload** option under **Build method**, then enter the **URL** of the file and the **Dockerfile path** within the tarball or repository.
 

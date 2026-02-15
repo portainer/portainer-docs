@@ -21,7 +21,7 @@ Webhooks are only available on non-Edge environments (environments running Porta
 
 From the menu select **Containers** then select the container that you want to configure the webhook for.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_containers_container_details.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Container-webhook-new.gif" alt=""><figcaption></figcaption></figure>
 
 In the **Container details** screen toggle the **Container webhook** option on. When the URL appears, click **Copy link**. This URL will be used to configure the webhook in your chosen registry.
 

@@ -11,7 +11,7 @@ metaLinks:
 
 From the menu select **Custom Templates** then click **Add Custom Template**.
 
-<figure><img src="../../../.gitbook/assets/2.19-kubernetes-templates-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/custom-template.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the form, using the table below as a guide.
 

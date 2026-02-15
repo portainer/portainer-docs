@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu expand **User-related** then select **Teams**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.20-users-teams.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-team-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select the team you want to add users to then click **Add** next to the user.
 

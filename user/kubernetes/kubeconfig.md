@@ -14,7 +14,7 @@ To generate and download your `kubeconfig` file, from the Home page click the **
 You must be accessing Portainer via HTTPS for the kubeconfig button to appear. If you are logged in with HTTP, you will not see the option.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/2.15-k8s-kubeconfig.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/kubeconfig (1).gif" alt=""><figcaption></figcaption></figure>
 
 You will be asked to select the Kubernetes environments that you would like in your `kubeconfig` file. If you have configured a [kubeconfig expiry](../../admin/settings/#kubeconfig-expiry) value, this will also be shown.&#x20;
 

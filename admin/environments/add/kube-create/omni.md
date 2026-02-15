@@ -24,7 +24,7 @@ In order to connect to Omni and deploy a Talos Kubernetes cluster and the Portai
 
 To create your Talos Kubernetes cluster and deploy the Portainer Edge Agent to your machines, from the menu expand **Environment-related**, click **Environments**, then click **Add environment**.
 
-<figure><img src="../../../../.gitbook/assets/2.22-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Create a Kubernetes cluster** and click **Start wizard**, then ensure **Talos Kubernetes** is selected.
 

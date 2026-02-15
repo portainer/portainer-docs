@@ -68,7 +68,7 @@ Replace `[resource-group-name]` with the resource group containing your cluster.
 
 Once you have your kubeconfig file created, from the menu expand **Environment-related**, click **Environments**, then click **Add environment**.
 
-<figure><img src="../../../../.gitbook/assets/2.22-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
 &#x20;Select the **Kubernetes** option and click **Start Wizard**. Then select the **Import** option.
 

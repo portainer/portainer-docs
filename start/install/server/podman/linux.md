@@ -18,7 +18,7 @@ Portainer consists of two elements, the _Portainer Server_, and the _Portainer A
 To get started, you will need:
 
 * CentOS 9 with the latest version of Podman 5.x installed and working on your Podman host. Other Podman versions and Linux distros may work but we currently only support the above. We recommend following the [official installation instructions](https://podman.io/docs/installation#installing-on-linux) for Podman.
-* sudo access on the machine that will host your Portainer Server instance
+* Sudo access on the machine that will host your Portainer Server instance
 * By default, Portainer Server will expose the UI over port `9443` and expose a TCP tunnel server over port `8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 * A license key for Portainer Business Edition.
 

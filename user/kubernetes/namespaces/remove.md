@@ -9,7 +9,7 @@ metaLinks:
 
 From the menu select **Namespaces**, tick the checkbox next to the namespace then click **Remove**.
 
-<figure><img src="../../../.gitbook/assets/2.20-namespaces-remove.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/remove-namespace.gif" alt=""><figcaption></figcaption></figure>
 
 When the confirmation message appears, click **Remove**.
 

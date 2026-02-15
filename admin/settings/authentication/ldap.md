@@ -17,7 +17,7 @@ To configure Portainer LDAP authentication, you first need to add a user to your
 
 Log into Portainer as an administrator. From the menu select **Settings**, select **Authentication** then select the **LDAP Authentication** option. Extra fields will appear, allowing you to configure LDAP.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-authentication-ldap.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Auth-with-LDAP-new.gif" alt=""><figcaption></figcaption></figure>
 
 ### Automatic user provisioning
 

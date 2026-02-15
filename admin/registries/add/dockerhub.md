@@ -15,7 +15,7 @@ At present we do not support Docker Hub as a source for OCI-format Helm charts. 
 
 From the menu select **Registries** then click **Add registry** and select **DockerHub** as the registry provider.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-registries-add-dockerhub.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-registry-dockerhub-new.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the form, using the table below as a guide.
 

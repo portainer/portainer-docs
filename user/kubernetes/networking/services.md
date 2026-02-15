@@ -11,7 +11,7 @@ In Kubernetes, a **Service** is an object that is used to expose an application 
 
 The Services page lists the services within your cluster, and provides detail on each service. To view the list of services, expand **Networking** and select **Services** from the left hand menu.
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-networking-services.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Services.gif" alt=""><figcaption></figcaption></figure>
 
 All the services the user has access to are listed on this page.
 

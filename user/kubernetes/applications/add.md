@@ -7,9 +7,11 @@ metaLinks:
 
 # Add a new application using a form
 
-There are two ways to add a new application: manually by using a form, or automatically by [using code](manifest/). This article explains how to add an application using a form.
+There are two ways to add a new application: manually by using a form, or automatically by [using code](manifest/). This article explains how to add an application using a form.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.24.0-kubernetes-applications-form-add.gif" alt=""><figcaption></figcaption></figure>
+From the menu select **Applications** then click **Add with form**.
+
+<figure><img src="../../../.gitbook/assets/Application-add-with-form.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the required information, using the sections below as a guide.
 

@@ -17,7 +17,7 @@ Webhooks are only available on non-Edge environments (environments running Porta
 
 From the menu select **Services** then select the service that you want to configure the webhook for.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_services.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Webhook-service-new.gif" alt=""><figcaption></figcaption></figure>
 
 In the **Service details** screen toggle the **Service webhook** option on. When the URL appears, click **Copy link**. This URL will be used to configure the webhook in your chosen registry.
 

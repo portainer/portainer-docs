@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Networks** then click **Add network**.
 
-<figure><img src="../../../.gitbook/assets/2.20-networks-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-networks.gif" alt=""><figcaption></figcaption></figure>
 
 Define the new network, using the table below as a guide.
 

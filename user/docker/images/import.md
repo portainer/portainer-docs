@@ -10,7 +10,7 @@ You can import images from other Portainer instances, the Docker CLI or the Dock
 
 From the menu select **Images** then click **Import**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_images_build_image_import.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Import-image.gif" alt=""><figcaption></figcaption></figure>
 
 Click **Select file** to browse for the image file to upload. Portainer supports `.tar`, `.tar.gz`, `.tar.bz2` and `.tar.xz` files. If you are on a multi-node environment, select the node where you wish to save the image.
 

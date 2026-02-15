@@ -7,9 +7,9 @@ metaLinks:
 
 # Edit an application
 
-From the menu select **Applications**, select the application you want to edit, then click **Edit this application**.
+From the menu select **Applications**, select the application you want to edit, then click **Edit this application** or **Edit external application**.
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-applications-edit.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/edit-application.gif" alt=""><figcaption></figcaption></figure>
 
 Your editing options will depend on how the application was deployed initially.
 

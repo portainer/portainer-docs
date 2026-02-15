@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu click **Services** then click **Add service**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_services_add_service.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-service-new.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the fields, using the table below as a guide.
 

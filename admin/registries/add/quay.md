@@ -12,7 +12,7 @@ From the menu select **Registries** then click **Add registry** and select **Qua
 At present we do not support Quay.io as a source for OCI-format Helm charts. We hope to address this in a future release.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-registries-add-quay.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-registry-Quay-new.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the form, using the table below as a guide.
 

@@ -13,7 +13,7 @@ From the menu select **Namespaces** then click **Add with form**.
 Namespaces can also be added [using a manifest](../applications/manifest/) by clicking **Create from manifest**.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.20-namespaces-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/add-namespace.gif" alt=""><figcaption></figcaption></figure>
 
 Give the namespace a descriptive **name**. As an optional step you can add annotations to your namespace as required by clicking **Add annotation** and filling in the **Key** and **Value** fields.&#x20;
 

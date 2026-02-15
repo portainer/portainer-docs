@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Containers**, select the container then select **Logs**.
 
-<figure><img src="../../../.gitbook/assets/2.30-containers-logs.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Container-logs-new.gif" alt=""><figcaption></figcaption></figure>
 
 Here you can see the contents of the Docker logs for your container.&#x20;
 

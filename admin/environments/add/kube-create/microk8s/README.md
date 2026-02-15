@@ -35,7 +35,7 @@ By necessity, our MicroK8s deployment makes some configuration decisions for you
 
 To create and deploy MicroK8s and the Portainer Agent to your machines, from the menu expand **Environment-related**, click **Environments**, then click **Add environment**.
 
-<figure><img src="../../../../../.gitbook/assets/2.22-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Create a Kubernetes cluster** and click **Start wizard**, then select **MicroK8s**.
 

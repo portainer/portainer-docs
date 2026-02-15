@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Registries** then click **Add registry** and select **Azure** as the registry provider.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-registries-add-azure.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-registry-Azure-new.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the form, using the table below as a guide.
 

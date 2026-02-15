@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Registries** then click **Add registry** and select **ProGet** as the registry provider.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-registries-add-proget.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-registry-ProGet-new.gif" alt=""><figcaption></figcaption></figure>
 
 Complete the form, using the table below as a guide.
 

@@ -11,7 +11,7 @@ Portainer Business Edition lets you connect to an existing Microsoft Active Dire
 
 To set up Active Directory authentication, from the menu select **Settings** then select **Authentication**. Under the **Authentication method** section select **Microsoft Active Directory**.
 
-<figure><img src="../../../.gitbook/assets/2.15-settings-authentication-ad.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Auth-with-AD-new.gif" alt=""><figcaption></figcaption></figure>
 
 A guide to all of the Active Directory configuration settings follows.
 

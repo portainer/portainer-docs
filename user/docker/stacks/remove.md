@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Stacks**, tick the checkbox next to the stack you want to remove, then click **Remove**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.20-stacks-remove.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Remove-a-stack.gif" alt=""><figcaption></figcaption></figure>
 
 When the confirmation message appears, click **Remove**.
 

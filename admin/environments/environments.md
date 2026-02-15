@@ -43,7 +43,7 @@ If you manually assign a user to an environment, and they are already assigned t
 
 From the menu expand **Environment-related** and select **Environments**. Locate the environment you want to give users access to then select **Manage access** at the end of the row.
 
-<figure><img src="../../.gitbook/assets/2.20-environments-access.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Manage-env-access.gif" alt=""><figcaption></figcaption></figure>
 
 Next, select the users or teams you want to add using the dropdown. Then use the **Role** dropdown to select the role you want this user or team to have.
 

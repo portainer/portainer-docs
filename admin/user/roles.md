@@ -40,9 +40,9 @@ The **Team Leader** role (which can be defined when [adding a new team](teams/ad
 
 Portainer's **Effective access viewer** lets you see what access a user has. From the menu expand **User-related** then select **Roles**.
 
-<figure><img src="../../.gitbook/assets/2.20-users-roles.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Roles-page-new.gif" alt=""><figcaption></figcaption></figure>
 
-Scroll down to the **Effective access viewer** section and select a user from the **User** dropdown. The user's roles and their access on your environments will display. Select **Manage access** on any row to be taken to the [environment's access configuration](/broken/pages/-MhRf3LxN2ln2V0-Yxmj).
+Scroll down to the **Effective access viewer** section and select a user from the **User** dropdown. The user's roles and their access on your environments will display. Select **Manage access** on any row to be taken to the [environment's access configuration](../environments/environments.md#manage-access).
 
 <figure><img src="../../.gitbook/assets/2.15-settings-users-roles-access.png" alt=""><figcaption></figcaption></figure>
 

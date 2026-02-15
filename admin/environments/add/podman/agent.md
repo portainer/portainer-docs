@@ -22,7 +22,7 @@ The Portainer Agent installation instructions also make the following additional
 
 From the menu expand **Environment-related**, click **Environments**, then click **Add environment**.
 
-<figure><img src="../../../../.gitbook/assets/2.22-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
 Next, select **Podman** as the environment type then click **Start Wizard**. Select the **Agent** option, then your environment type. Copy the commands and run them on your Podman instance.
 

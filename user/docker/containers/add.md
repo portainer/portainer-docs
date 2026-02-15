@@ -8,7 +8,7 @@ metaLinks:
 
 Select **Containers** from the menu then click **Add container**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_containers_add_container.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-container-new.gif" alt=""><figcaption></figcaption></figure>
 
 Configure the container settings as required.
 

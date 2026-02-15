@@ -10,7 +10,7 @@ Within the Portainer Business Edition UI you can view a log of all actions taken
 
 From the menu expand **Logs** then select **Activity**.
 
-<figure><img src="../../.gitbook/assets/2.36.0-activity-logs.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/activity-logs-new.gif" alt=""><figcaption></figcaption></figure>
 
 To filter the logs, select the date range you want to view. You can further narrow the results by adjusting the time fields within the date range, or by filtering on a specific user or environment. Once these filters are added, the activity logs will update automatically. You can download the filtered logs by clicking **Export as CSV**.
 

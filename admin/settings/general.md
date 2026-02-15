@@ -30,7 +30,7 @@ This setting allows you to specify a custom text banner that will appear on the 
 
 Your message will then be shown at the login screen.
 
-<figure><img src="../../.gitbook/assets/2.16-settings-login-screen-banner-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/login-with-message.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### App Templates
 
@@ -188,7 +188,7 @@ This backup is **only** intended to back up the Portainer configuration. It does
 
 Log in as an admin user. From the menu select **Settings**, then scroll down to the **Back up Portainer** section.
 
-<figure><img src="../../.gitbook/assets/2.20-settings-general-backup.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Back-up-Portainer-new.gif" alt=""><figcaption></figcaption></figure>
 
 **Download backup file** is the default option. As an optional step, toggle **Password protect** on and enter a password to encrypt the backup file. When you click **Download backup**, a `tar.gz` file will be downloaded via the browser.
 
@@ -198,7 +198,7 @@ With Portainer Business Edition you have the option to store a backup of your co
 
 To do this, log in as an admin user, select **Settings** from the menu, then scroll down to **Backup Portainer**.
 
-<figure><img src="../../.gitbook/assets/2.20-settings-general-backup.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Back-up-Portainer-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Store in S3** and fill in the options, using the below as a guide.
 

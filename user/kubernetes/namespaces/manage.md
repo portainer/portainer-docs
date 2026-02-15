@@ -9,7 +9,7 @@ metaLinks:
 
 From the menu select **Namespaces** then select the namespace you want to manage.
 
-<figure><img src="../../../.gitbook/assets/2.20-namespaces-manage.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/edit-namespace.gif" alt=""><figcaption></figcaption></figure>
 
 Here you can view details about the namespace and configure options specific to the namespace.
 

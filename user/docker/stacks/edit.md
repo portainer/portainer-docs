@@ -10,7 +10,7 @@ metaLinks:
 
 From the menu select **Stacks** then select the stack you want to inspect.
 
-<figure><img src="../../../.gitbook/assets/2.20-stacks-edit.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/view-stack-new.gif" alt=""><figcaption></figcaption></figure>
 
 From here you can stop, delete or [create a template from the stack](template.md), and if deployed from Git you can [detach the stack from the Git repository](edit.md#detach-from-git).
 

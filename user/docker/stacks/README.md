@@ -10,7 +10,7 @@ A stack is a collection of services, usually related to one application or usage
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-list.png" alt=""><figcaption></figcaption></figure>
 
-Within the Stack list, you’ll see all stacks that have been previously created in the selected environment. If an environment is deleted, any stacks that belonged to it become orphaned. To display any orphaned stacks, click the three dots in the top right corner and select **Show all orphaned stacks**, [the stack will need to be re-associated](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-do-i-recover-orphaned-stacks-from-a-previously-deleted-environment.md) to be fully recovered.
+Within the Stacks list, you’ll see all stacks that have been previously created in the selected environment. If an environment is deleted, any stacks that belonged to it become orphaned. To display any orphaned stacks, click the three dots in the top right corner and select **Show all orphaned stacks**, [the stack will need to be re-associated](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-do-i-recover-orphaned-stacks-from-a-previously-deleted-environment.md) to be fully recovered.
 
 <figure><img src="../../../.gitbook/assets/Show-orphaned-stacks-FAQ.png" alt=""><figcaption></figcaption></figure>
 

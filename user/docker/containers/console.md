@@ -9,7 +9,7 @@ metaLinks:
 
 From the menu select **Containers**, select the container then select **Console**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_containers_container_console.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Container-console-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select the command and the user you want to give access to, then click **Connect**.
 

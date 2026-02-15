@@ -9,7 +9,7 @@ metaLinks:
 
 #### If you're a Community Edition or 5 Nodes Free User here are the ways to get support. <a href="#hs_cos_wrapper_kb-article-module-4" id="hs_cos_wrapper_kb-article-module-4"></a>
 
-1. Check our documentation and knowledge base first.
+1. Check our documentation first.
 2. Then if you are still having trouble you can post your issue or question on:&#x20;
    1. Our [Portainer Community Slack Channel ](https://portainer.slack.com/join/shared_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA)
    2. Our [Discord Channel](https://discord.com/invite/j8fVken)

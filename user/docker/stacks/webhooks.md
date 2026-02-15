@@ -18,9 +18,9 @@ Webhooks are only available on non-Edge environments (environments running Porta
 
 ## Enabling a stack webhook
 
-From the menu select **Stacks** then select the container that you want to configure the webhook for. Then select the **Edit** tab.
+From the menu select **Stacks** then select the container that you want to configure the webhook for. Then select the **Editor** tab.
 
-<figure><img src="../../../.gitbook/assets/2.20-stacks-webhooks.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Enabling-a-stack-webhook.gif" alt=""><figcaption></figcaption></figure>
 
 Scroll down to the **Webhooks** section and toggle the **Create a stack webhook** option on. When the URL appears, click **Copy link**. This URL will be used to configure the webhook in your chosen registry.
 

@@ -12,7 +12,7 @@ Tags can be applied to environments and are useful for defining node or resource
 
 From the menu expand **Environment-related** then select **Tags**.&#x20;
 
-<figure><img src="../../.gitbook/assets/2.20-environments-tags.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Tags-page-new.gif" alt=""><figcaption></figcaption></figure>
 
 Enter a name for the tag then click **Create tag**. The tag appears in the list and can be assigned to environments.
 

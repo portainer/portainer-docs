@@ -19,7 +19,7 @@ There are four ways to deploy a new stack from Portainer:
 
 From the menu select **Stacks**, click **Add stack**, give the stack a descriptive name then select **Web editor**. Use the web editor to define the services.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_add_stack_web_editor.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/stacks-web-editor-new-1 (1).gif" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
@@ -67,7 +67,7 @@ When you're ready, click **Deploy the stack**.
 
 In Portainer you can create stacks from Compose YML files. To do this, from the menu select **Stacks**, click **Add stack**, then give the stack a descriptive name.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_add_stack_upload.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/stacks-upload-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Upload** then select the Compose file from your computer.
 
@@ -111,7 +111,7 @@ When a stack is deployed from Git, Portainer will clone the entire Git repositor
 Portainer's Git deployment functionality does not currently support the use of Git submodules. If your repository includes submodules, they will not be pulled as part of the deployment. We [hope to add support](https://github.com/orgs/portainer/discussions/9767) for submodules in a future release.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_add_stack_git.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/stacks-git-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Git Repository** then enter information about your Git repo.
 

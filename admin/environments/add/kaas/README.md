@@ -18,7 +18,7 @@ This feature is only available in [Portainer Business Edition](https://www.porta
 
 To get started, from the menu expand **Environment-related**, click **Environments**, then click **Add environment**.
 
-<figure><img src="../../../../.gitbook/assets/2.22-environments-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
 From the wizard select the **Provision KaaS Cluster** option and click **Start Wizard**. Then, select your provider. We currently support the following providers:
 

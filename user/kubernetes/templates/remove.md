@@ -13,7 +13,7 @@ Removing a custom template will not remove any deployments created using the tem
 
 From the menu select **Custom Templates** then click **Delete** next to the template you want to remove.
 
-<figure><img src="../../../.gitbook/assets/2.15-k8s_kubernetes_delete_custom_templates.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/remove-custom-template.gif" alt=""><figcaption></figcaption></figure>
 
 When the confirmation message appears, click **Remove**.
 

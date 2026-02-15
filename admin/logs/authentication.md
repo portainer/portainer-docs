@@ -14,7 +14,7 @@ Portainer also provides the ability to view [detailed activity logs](activity.md
 
 From the menu expand **Logs** and select **Authentication**.
 
-<figure><img src="../../.gitbook/assets/2.20-logs-authentication.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Auth-logs-new.gif" alt=""><figcaption></figcaption></figure>
 
 If you want to export logs, filter by date range then click **Export to CSV**.
 

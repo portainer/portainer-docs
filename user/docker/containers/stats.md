@@ -9,7 +9,7 @@ metaLinks:
 
 From the menu select **Containers**, select the container then select **Stats**.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_containers_container_stats.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Container-stats-new.gif" alt=""><figcaption></figcaption></figure>
 
 The information available includes:
 

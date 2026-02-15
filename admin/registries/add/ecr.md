@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Registries** then click **Add registry** and select **AWS ECR** as the registry provider.
 
-<figure><img src="../../../.gitbook/assets/2.19-registries-add-ecr.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Add-registry-ECR.gif" alt=""><figcaption></figcaption></figure>
 
 ## Preparation
 

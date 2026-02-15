@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Containers**, then select the container you want to view.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_containers_container_details.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Container-details-new.gif" alt=""><figcaption></figcaption></figure>
 
 Here you can view the container's status and details, including port configurations, environment variables, labels, attached volumes and networks, and more. You also have a number of actions available, including starting, stopping and removing the container.
 
