@@ -1,0 +1,10 @@
+---
+metaLinks:
+  alternates:
+    - >-
+      https://app.gitbook.com/s/j6QEqM3Sd94bdPsX4HaN/faqs/installing/does-portainer-support-containerd
+---
+
+# Does Portainer support containerd?
+
+Currently, Portainer does not support containerd directly. However, it can be utilized through Kubernetes integration.
