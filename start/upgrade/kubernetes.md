@@ -31,14 +31,14 @@ Next, run one of the following commands to update Portainer:
 {% tab title="Business Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set enterpriseEdition.image.tag=sts --set enterpriseEdition.enabled=true
+    --set tls.force=true --set enterpriseEdition.image.tag=sts --set enterpriseEdition.enabled=true
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set image.tag=lts
+    --set tls.force=true --set image.tag=lts
 ```
 {% endtab %}
 {% endtabs %}
