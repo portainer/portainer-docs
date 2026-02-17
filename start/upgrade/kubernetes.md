@@ -24,6 +24,10 @@ Select the Portainer update method which matches the original installation metho
 
 ## Method 1: Updating using Helm
 
+{% hint style="info" %}
+This article assumes that you installed originally using our [install instructions](../install/server/kubernetes/baremetal.md#deploy-using-helm).
+{% endhint %}
+
 Add the Portainer Helm repository by running the following commands. Ignore any warnings about the repo already being there:
 
 ```
@@ -37,14 +41,14 @@ Next, run one of the following commands to update Portainer:
 {% tab title="Business Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set enterpriseEdition.image.tag=lts --set enterpriseEdition.enabled=true
+    --set tls.force=true --set enterpriseEdition.image.tag=lts --set enterpriseEdition.enabled=true
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set image.tag=lts
+    --set tls.force=true --set image.tag=lts
 ```
 {% endtab %}
 {% endtabs %}
