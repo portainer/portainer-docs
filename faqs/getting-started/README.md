@@ -18,4 +18,6 @@ metaLinks:
 * [What does Portainer's backup include?](what-does-portainers-backup-include.md)
 * [How does Portainer respond to CVEs?](how-does-portainer-respond-to-cves.md)
 * [Can Portainer's interface language be changed?](can-portainers-interface-language-be-changed.md)
+* [Why shouldn't I give all Portainer users admin access?](why-shouldnt-i-give-all-portainer-users-admin-access.md)
+* [Why do we recommend using the Edge Agent instead of the traditional Agent?](why-do-we-recommend-using-the-edge-agent-instead-of-the-traditional-agent.md)
 

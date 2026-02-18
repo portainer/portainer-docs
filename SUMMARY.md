@@ -313,6 +313,7 @@
   * [How does Portainer respond to CVEs?](faqs/getting-started/how-does-portainer-respond-to-cves.md)
   * [Can Portainer’s interface language be changed?](faqs/getting-started/can-portainers-interface-language-be-changed.md)
   * [Why shouldn’t I give all Portainer users admin access?](faqs/getting-started/why-shouldnt-i-give-all-portainer-users-admin-access.md)
+  * [Why do we recommend using the Edge Agent instead of the traditional Agent?](faqs/getting-started/why-do-we-recommend-using-the-edge-agent-instead-of-the-traditional-agent.md)
 * [Installing](faqs/installing/README.md)
   * [How do I install Portainer?](faqs/installing/how-do-i-install-portainer.md)
   * [Can I run Portainer on my configuration?](faqs/installing/can-i-run-portainer-on-my-configuration.md)
