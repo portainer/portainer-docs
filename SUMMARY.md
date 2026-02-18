@@ -368,6 +368,7 @@
     * [Client sent an HTTP request to an HTTPS server](faqs/troubleshooting/access-and-authentication/client-sent-an-http-request-to-an-https-server.md)
     * [Unable to Authenticate After Portainer Update](faqs/troubleshooting/access-and-authentication/unable-to-authenticate-after-portainer-update.md)
     * [Unable to Login via LDAP in Portainer](faqs/troubleshooting/access-and-authentication/unable-to-login-via-ldap-in-portainer.md)
+    * [LDAP Groups are not auto-populating Portainer teams](faqs/troubleshooting/access-and-authentication/ldap-groups-are-not-auto-populating-portainer-teams.md)
   * [Agents and environment management](faqs/troubleshooting/agents-and-environment-management/README.md)
     * [How can I move existing Edge Agent deployments to a new Portainer Server instance?](faqs/troubleshooting/agents-and-environment-management/how-can-i-move-existing-edge-agent-deployments-to-a-new-portainer-server-instance.md)
     * [Why can't my agents communicate with Portainer on Swarm?](faqs/troubleshooting/agents-and-environment-management/why-cant-my-agents-communicate-with-portainer-on-swarm.md)
