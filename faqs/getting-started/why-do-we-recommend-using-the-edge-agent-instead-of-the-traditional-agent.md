@@ -6,10 +6,10 @@ We recommend using the Edge Agent for most modern deployments, especially remote
 
 The Edge Agent unlocks Portainer’s full Edge Compute feature set, including:
 
-* Edge Stacks - deploy and manage stacks across distributed systems from one place.
-* Edge Jobs - schedule scripts or tasks on edge hosts.
-* Edge Configurations - pre-deploy config sets to environments.
-* Agent updates and policy management - centrally manage agent versions and policies across fleets.
+* [Edge Stacks](../../user/edge/stacks/) - deploy and manage stacks across distributed systems from one place.
+* [Edge Jobs](../../user/edge/jobs.md) - schedule scripts or tasks on edge hosts.
+* [Edge Configurations](../../user/edge/configurations.md) - pre-deploy config sets to environments.
+* [Agent updates](../../admin/environments/update.md) and [policy management](../../user/policy-based-management.md) - centrally manage agent versions and policies across fleets.
 
 These capabilities don’t exist with the traditional Agent, which is focused on basic connectivity rather than edge orchestration.
 
@@ -17,7 +17,7 @@ These capabilities don’t exist with the traditional Agent, which is focused on
 
 The traditional Agent requires the Portainer Server to initiate connections to each agent, meaning each agent must expose a listening port reachable by the server. This often forces you to open additional network ports on remote nodes.
 
-In contrast, the Edge Agent connects outbound to the Portainer Server, requiring only that the agents can reach the server — not the other way around. This greatly reduces the number of open ports needed across your environments.
+In contrast, the Edge Agent connects outbound to the Portainer Server, requiring only that the agents can reach the server, not the other way around. This greatly reduces the number of open ports needed across your environments.
 
 ### Resilient to spotty or limited connectivity
 
