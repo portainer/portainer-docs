@@ -49,7 +49,18 @@ Automatic patch update settings can only be edited by an admin user.&#x20;
 {% endhint %}
 
 {% hint style="danger" %}
-Portainer deployed via Helm charts is not aware of automatic patching. If the Helm chart is reapplied, it may overwrite a patched version, causing a rollback.
+Enabling automatic updates deviates from standard deployment practices where version control is managed externally. This may result in the running version of Portainer becoming out of sync with your deployment manifests or configuration management tools.
+{% endhint %}
+
+{% hint style="info" %}
+This feature is designed for environments where maintaining a high security posture via immediate patching is the priority. It is suitable for standalone Portainer instances where manual maintenance overhead must be minimized.
+
+#### When to avoid this feature
+
+* **Infrastructure as Code (IaC):** If you operate a strict GitOps or IaC workflow, this feature may lead to configuration drift. The running Portainer version will no longer match the version defined in your deployment manifests (e.g. Docker Compose files).
+* **Helm Deployments:** Portainer instances deployed via Helm charts are not aware of automatic patching. Reapplying a Helm chart will likely overwrite a patched version, resulting in an unintended rollback to the version specified in the chart.
+* **Environmental Consistency:** For environments where containers must remain identical to their tested image (immutability), this feature is not recommended. It introduces a change to the running environment that has not been explicitly triggered by your deployment tools.
+* **Change Control:** This feature should be avoided in environments requiring manual validation or staging of all updates before they reach production.
 {% endhint %}
 
 Toggle **Apply patch updates when available** to enable your Portainer version to be automatically updated when a new patch is released. Automatic updates will _only_ apply to patches, for example from 2.35.0 to 2.35.1. Your Portainer version will not automatically update with major or minor releases (2.35.0 to 2.36.0 for example).&#x20;
