@@ -7,6 +7,10 @@ metaLinks:
 
 # Install Portainer Agent on Podman
 
+{% hint style="warning" %}
+Installing Portainer Agent on Podman is a legacy option that does not support edge features or policy management. For most use cases, [the Edge Agent is recommended](../../../../faqs/getting-started/why-do-we-recommend-using-the-edge-agent-instead-of-the-traditional-agent.md).
+{% endhint %}
+
 Portainer uses the _Portainer Agent_ container to communicate with the _Portainer Server_ instance and provide access to the node's resources. This document will outline how to install the Portainer Agent on your node and how to connect to it from your Portainer Server instance. If you do not have a working Portainer Server instance yet, please refer to the [Portainer Server installation guide](../../../../start/install/server/docker/linux.md) first.
 
 In addition to the generic requirements for Podman environments, you will need:
@@ -24,7 +28,7 @@ From the menu expand **Environment-related**, click **Environments**, then click
 
 <figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
-Next, select **Podman** as the environment type then click **Start Wizard**. Select the **Agent** option, then your environment type. Copy the commands and run them on your Podman instance.
+Next, select **Podman** as the environment type then click **Start Wizard**. Under **More options**, select the **Agent** option, then your environment type. Copy the commands and run them on your Podman instance.
 
 {% hint style="info" %}
 If you want to use the [host management features](../../../../user/docker/host/setup.md#enable-host-management-features) of the Portainer Agent, you should add the necessary volume mount to the command that Portainer provides:
@@ -48,7 +52,9 @@ The right side of the mount should remain as `/var/lib/docker/volumes`, as that 
 
 Once the Agent has been deployed, enter the environment details using the table below as a guide:
 
-<figure><img src="../../../../.gitbook/assets/2.36.0-Podman-Agent.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.39-Podman-agent-2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../../.gitbook/assets/2.39-Podman-agent-1.png" alt=""><figcaption></figcaption></figure>
 
 | Field/Option        | Overview                                                                                                                                                                                                                                                                      |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

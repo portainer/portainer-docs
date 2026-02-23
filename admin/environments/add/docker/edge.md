@@ -31,7 +31,7 @@ To add a standard Edge Agent to a Docker Standalone environment, from the menu e
 
 Select **Docker Standalone** then click **Start Wizard**. Then select the **Edge Agent Standard** option. Enter the environment details using the table below as a guide.
 
-<figure><img src="../../../../.gitbook/assets/2.36.0-docker-SA-agent-standard.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.39-Edge-agent-Std-1.png" alt=""><figcaption></figcaption></figure>
 
 | Field                           | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -7,6 +7,10 @@ metaLinks:
 
 # Install Portainer Agent on Docker Swarm
 
+{% hint style="warning" %}
+Installing Portainer Agent on Docker Swarm is a legacy option that does not support edge features or policy management. For most use cases, [the Edge Agent is recommended](../../../../faqs/getting-started/why-do-we-recommend-using-the-edge-agent-instead-of-the-traditional-agent.md).
+{% endhint %}
+
 Portainer uses the _Portainer Agent_ container to communicate with the _Portainer Server_ instance and provide access to the node's resources. This document will outline how to install the Portainer Agent on your environment and how to connect to it from your Portainer Server instance. If you do not have a working Portainer Server instance yet, please refer to the [Portainer Server installation guide](../../../../start/install/server/swarm/linux.md) first.
 
 In addition to the generic requirements for Docker Swarm environments, you will need:
@@ -34,7 +38,7 @@ Only do this **once** for your environment, regardless of how many nodes are in 
 
 <figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
-Next, select **Docker Swarm** as the environment type then click **Start Wizard**. Select the **Agent** option and your platform. Copy the command, then run it on the manager node of your Docker Swarm cluster. For example, if you are deploying on a Linux machine or a Windows machine with WSL installed, use the **Linux & Windows WSL** command. If you are deploying on a Windows machine with WCS, use the **Windows WCS** command.
+Next, select **Docker Swarm** as the environment type then click **Start Wizard**. Under **More options**, select the **Agent** option and your platform. Copy the command, then run it on the manager node of your Docker Swarm cluster. For example, if you are deploying on a Linux machine or a Windows machine with WSL installed, use the **Linux & Windows WSL** command. If you are deploying on a Windows machine with WCS, use the **Windows WCS** command.
 
 {% hint style="info" %}
 You must run the command on the Docker Swarm cluster before entering the environment details.
@@ -60,7 +64,9 @@ For example, if your volume path was `/srv/data/docker`, you would change the li
 The `dst` value of the mount should remain as `/var/lib/docker/volumes`, as that is what the Agent expects.
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/2.16-environments-add-swarm-agent.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.39-swarm-agent-1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../../.gitbook/assets/2.39-swarm-agent-2.png" alt=""><figcaption></figcaption></figure>
 
 The deployment command will return something similar to this:
 

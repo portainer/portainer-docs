@@ -31,7 +31,7 @@ To add a standard Edge Agent to a Podman environment, from the menu expand **Env
 
 Select **Podman** then click **Start Wizard**. Then select the **Edge Agent Standard** option. Enter the environment details using the table below as a guide.
 
-<figure><img src="../../../../.gitbook/assets/2.36.0-Podman-edge-agent-standard.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.39-podman-edge-agent-std.png" alt=""><figcaption></figcaption></figure>
 
 | Field                           | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

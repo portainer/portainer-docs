@@ -31,7 +31,7 @@ From the menu expand **Environment-related**, click **Environments**, then click
 
 Select **Kubernetes** then click **Start Wizard**. Then select the **Edge Agent Standard** option. Enter the environment details using the table below as a guide.
 
-<figure><img src="../../../../.gitbook/assets/2.36.0-Kube-edge-standard.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.39-k8s-edge-std.png" alt=""><figcaption></figcaption></figure>
 
 | Field                           | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
