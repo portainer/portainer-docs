@@ -12,11 +12,11 @@ Groups organize your environments in Portainer. As an example, you can create gr
 Portainer Community Edition supports basic user and group assignments. For more complex user roles within groups, use Portainer Business Edition.
 {% endhint %}
 
-## Adding a group
+## Creating a group
 
 From the menu expand **Environment-related**, select **Groups**, then click **Add group**.&#x20;
 
-<figure><img src="../../.gitbook/assets/2.37.0-add-group-gif.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.39-add-a-group.gif" alt=""><figcaption></figcaption></figure>
 
 Define the properties of the group, using the table below as a guide.
 
@@ -41,9 +41,11 @@ Removing a group will not delete environments and users in that group. However, 
 
 ## Manage policies of a group
 
-[Policies](policies/) allow you to apply configuration, security rules, and cluster settings to groups of environments, rather than configuring each environment individually. Note that the policies feature is experimental and [must be turned on in settings](../settings/general.md#experimental-features) before it can be used.&#x20;
+[Policies](policies/) allow you to apply configuration, security rules, and cluster settings to groups of environments, rather than configuring each environment individually.
 
 To manage the policies of a group, in the menu expand **Environment-related** then select **Groups**. Locate the environment group you want to manage the policies for, then select **Manage policies** under the **Actions** table header. This will direct you to the [Policies](policies/) page where you can manage existing polices or create new policies.&#x20;
+
+<figure><img src="../../.gitbook/assets/2.39-group-to-policy-nav.gif" alt=""><figcaption></figcaption></figure>
 
 ## Manage access to an environment group
 

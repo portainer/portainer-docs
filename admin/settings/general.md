@@ -157,12 +157,11 @@ After making changes to this section, click **Apply Changes**.
 
 This section contains options for enabling and configuring additional functionality within Portainer.
 
-| Field/Option            | Overview                                                                                                                                                                                                                                                                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Observability           | <p>Toggle this on to enable the Observability feature. Enabling this will add a new menu section named <a href="../../user/observability/">Observability</a> to the left hand menu.<br>This feature is currently limited to alerting, with additional observability capabilities to be introduced in future updates.</p> |
-| Policy Based Management | Toggle this on to enable the Policy Based Management feature. Enabling this will add a new menu item [policies](../environments/policies/) within the Environment-related menu.                                                                                                                                          |
+| Field/Option  | Overview                                                                                                                                                                                                                                                                             |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Observability | <p>Toggle this on to enable the Observability feature which is avaliable under <strong>Additional Functionality</strong> in the left hand menu.<br>This feature is currently limited to alerting, with additional observability capabilities to be introduced in future updates.</p> |
 
-<figure><img src="../../.gitbook/assets/2.38-Additional-functionality.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.39-additional-functionality.png" alt=""><figcaption></figcaption></figure>
 
 ## Experimental features
 

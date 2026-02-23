@@ -75,7 +75,7 @@ January 29, 2026
 
 ### New in this Release
 
-* Changed [Policy Based Management](user/policy-based-management.md) from experimental to beta, to indicate that it is ready for you to test against your environments
+* Changed [Policy Based Management](/broken/pages/sVXwh5AjWlxKSXVhHQ5d) from experimental to beta, to indicate that it is ready for you to test against your environments
 * Fixed an issue where starting Stack is failed when the private image referenced by the stack was removed from the environment
 * Fixed an issue where deploying a Stack in Kubernetes caused a memory leak
 * Fixed a UI issue when updating edge stacks

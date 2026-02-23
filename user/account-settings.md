@@ -8,7 +8,7 @@ metaLinks:
 
 To get access to and update your user settings, click your username in the top-right of the Portainer UI and select **My account**.
 
-<figure><img src="../.gitbook/assets/2.20-api-access-myaccount.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2.39-account-settings.gif" alt=""><figcaption></figcaption></figure>
 
 ## Changing the theme
 

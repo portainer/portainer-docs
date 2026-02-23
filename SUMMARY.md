@@ -122,6 +122,7 @@
     * [Details](user/docker/host/details.md)
     * [Setup](user/docker/host/setup.md)
     * [Registries](user/docker/host/registries.md)
+    * [Policies](user/docker/host/policies.md)
   * [Swarm](user/docker/swarm/README.md)
     * [Details](user/docker/swarm/details.md)
     * [Cluster visualizer](user/docker/swarm/cluster-visualizer.md)
@@ -196,7 +197,6 @@
     * [Custom](user/edge/templates/custom.md)
 * [Observability](user/observability/README.md)
   * [Alerting](user/observability/alerting.md)
-* [Policy Based Management](user/policy-based-management.md)
 * [Account settings](user/account-settings.md)
 
 ## Administering Portainer <a href="#admin" id="admin"></a>

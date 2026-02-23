@@ -9,7 +9,7 @@ The Edge Agent unlocks Portainer’s full Edge Compute feature set, including:
 * [Edge Stacks](../../user/edge/stacks/) - deploy and manage stacks across distributed systems from one place.
 * [Edge Jobs](../../user/edge/jobs.md) - schedule scripts or tasks on edge hosts.
 * [Edge Configurations](../../user/edge/configurations.md) - pre-deploy config sets to environments.
-* [Agent updates](../../admin/environments/update.md) and [policy management](../../user/policy-based-management.md) - centrally manage agent versions and policies across fleets.
+* [Agent updates](../../admin/environments/update.md) and [policy management](/broken/pages/sVXwh5AjWlxKSXVhHQ5d) - centrally manage agent versions and policies across fleets.
 
 These capabilities don’t exist with the traditional Agent, which is focused on basic connectivity rather than edge orchestration.
 
