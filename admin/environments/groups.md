@@ -16,20 +16,20 @@ Portainer Community Edition supports basic user and group assignments. For more 
 
 From the menu expand **Environment-related**, select **Groups**, then click **Add group**.&#x20;
 
-<figure><img src="../../.gitbook/assets/2.39-add-a-group.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.39-add-group.gif" alt=""><figcaption></figcaption></figure>
 
 Define the properties of the group, using the table below as a guide.
 
-| Field/Option            | Overview                                                |
-| ----------------------- | ------------------------------------------------------- |
-| Name                    | Give the group a descriptive name.                      |
-| Description             | Optionally describe the group in more detail.           |
-| Tags                    | Apply any tags to the group.                            |
-| Associated environments | Select the environments to be categorized in the group. |
+| Field/Option            | Overview                                                                                                                                                                                                                                                                                     |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name                    | Give the group a descriptive name.                                                                                                                                                                                                                                                           |
+| Description             | Optionally describe the group in more detail.                                                                                                                                                                                                                                                |
+| Tags                    | Apply any tags to the group.                                                                                                                                                                                                                                                                 |
+| Associated environments | A table showing the environments to be added to the group. Use the **Add** button in the top right corner of the table to select your environments. To remove an environment from the list, select the checkbox next to the entry and click **Remove** in the top right corner of the table. |
 
-<figure><img src="../../.gitbook/assets/2.20-environments-groups-add-details.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.39-create-a-group.png" alt=""><figcaption></figcaption></figure>
 
-When you're finished, click **Create the group**.
+When you're finished, click **Create**.
 
 ## Removing a group
 
