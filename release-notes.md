@@ -14,10 +14,7 @@ February 26, 2026
 
 #### Known issues
 
-**Known issues with Async Edge environments**
-
-* An invalid update schedule date can be displayed when browsing a snapshot
-* The agent loses state on shutdown (as expected) and that causes problems next time a policy comes in
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
 
 **Known issues with Podman support**
 
