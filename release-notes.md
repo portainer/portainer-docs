@@ -10,7 +10,96 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.39 LTS
 
+February 26, 2026
 
+#### Known issues
+
+**Known issues with Async Edge environments**
+
+* An invalid update schedule date can be displayed when browsing a snapshot
+* The agent loses state on shutdown (as expected) and that causes problems next time a policy comes in
+
+**Known issues with Podman support**
+
+* Auto onboarding a podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this Release
+
+* Fixed an issue preventing environment group changes for Kubernetes standard agents from the environment details view
+* Addressed security vulnerability disclosure
+* Updated form behavior to only show errors after the input has been touched/visited or submitted
+* Improved HTTP response code handling via the Portainer API
+* Added default alphabetical sorting to the namespace dropdown list
+* Fixed a UI issue where the dropdown form elements were overlapping with the footer
+* Updated styling of shared tabs used throughout Portainer
+* Improved TLS initialization for custom registries
+* Fixed a memory leak in kubectl delete
+* Fixed an issue where a “”Release: not found” error was presented when installing a Traefik ingress
+* Fixed an issue when editing an environment that could inadvertently remove unix:// from URLs
+* Reordered the agent options in the “Add Environment” interface
+* Fixed an issue where Portainer was unable to pull from a private registry with a port in the URL
+* Fixed an issue where a webhook was missing during the initial deployment
+* Fixed an issue where the API response code from /docker/containers/create was returning 200 instead of 201
+* Improved visibility of the "New version available" alert in light mode
+* Upgraded package versions to mitigate potential frontend vulnerabilities
+* Associated environments in a group will now only be saved when submitting the form
+* Updated the documentation link supplied in the Portainer logs when a user tries to start Portainer BE with a CE database
+* Fixed a 500 issue when loading Docker in the dashboard
+* Fixed a problem with GitOps removing containers when image pull fails
+* Fixed incorrect transaction usage around webhooks
+* Fixed incorrect transaction usage when deleting endpoints
+* Moved Fleet Governance Policies out of experimental, standardizing naming and presentation in-app
+* Fixed a formatting issue where backup download error messages were displaying as \[object
+
+ArrayBuffer] instead of human-readable text
+
+* Fixed an error when creating a new environment group
+* Fixed an issue where Podman environments were appearing in auto onboarding as Docker
+* Moved “Policy based management” from Additional functionality to “Policies” within the Environment-related menu
+* Updated misleading license overuse error messages
+* Improved styling for the policy views
+* Fixed dead-ends when creating policies on a fresh Portainer instance
+* Removed “recommended” sentence from automatic patch updates
+* Improved policy status performance
+* Added a read only policy view for Docker environments
+* Fixed an issue with read only policy view for regular users
+* Stabilized the Policy Status states on the attachment section of the policy detail page
+* Fixed an issue that could cause namespace errors when a Registry policy was applied
+* Updated behavior for the Unassigned group within the Environment Groups list page
+* Improved updating Edge client policy status state
+* Set policy default overcommit to enabled for Kubernetes environments
+* Fixed an issue with policy selection when there are more than 100 environments
+* Fixed a policy status update edge case issue
+* Fixed an issue where pod security constraints were not being properly created when policies were associated with an environment group
+* Fixed an issue where the docker security policy with no rules prevents container creation for users
+* Fixed incorrect policy plural in copy
+* Ensured RBAC policies properly override environment and group level RBAC settings
+* Fixed pagination issues in policy groups with large numbers of endpoints
+* Improved policy status performance
+* Updated security constraints port range to be visually wider
+* Fixed an issue where some users were not able to add a Team to a Namespace after the 2.33.3 fix&#x20;
+* Fixed incorrect enabled disabled wording in Docker read only policy view
+* Fixed inconsistent styling of the notice about settings being managed by a policy
+* Fixed a data race in the alert manager
+* Fixed a data race in the Omni service
+* Fixed a deadlock in the auto onboarding code
+* Fixed a timing attack in hash comparisons
+* Fixed data races in the token cache manager
+* Fixed improper logging in the Omni service
+* Fixed incorrect transaction usage in the Pending Actions service
+* Added the ability to bulk add existing environments to an environment group
+* Removed the retry button from policy actions
+* Resolved the following CVEs:
+  * CVE-2025-61726
+  * CVE-2025-68121
+  * GO-2026-4337
+  * CVE-2025-15467
 
 ## Release 2.38.1 STS
 
@@ -75,7 +164,7 @@ January 29, 2026
 
 ### New in this Release
 
-* Changed [Policy Based Management](/broken/pages/sVXwh5AjWlxKSXVhHQ5d) from experimental to beta, to indicate that it is ready for you to test against your environments
+* Changed [Policy Based Management](admin/environments/policies/) from experimental to beta, to indicate that it is ready for you to test against your environments
 * Fixed an issue where starting Stack is failed when the private image referenced by the stack was removed from the environment
 * Fixed an issue where deploying a Stack in Kubernetes caused a memory leak
 * Fixed a UI issue when updating edge stacks
