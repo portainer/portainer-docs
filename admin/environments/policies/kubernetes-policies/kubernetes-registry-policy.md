@@ -26,17 +26,26 @@ Currently, only custom registry policies can be created. Future improvements to 
 
 Click **Add Access** to add the registry to the access list. You can add multiple entries, and each will appear in the **Registry access list** table. To remove a registry, select the checkbox next to the entry and click **Remove** in the top right corner of the table.
 
-To restrict deployment to approved container images only, enable **Restrict sources** and define the allowed images. You can set the scope to apply cluster-wide or limit it to specific namespaces.
+To ensure that only approved container images can be deployed, enable **Restrict to allowed sources** and specify the images that are permitted.
+
+When adding an allowed image, you can choose the scope:
+
+* **Global** - The image can be deployed across the entire cluster.
+* **Specific namespaces** - The image can only be deployed within selected namespaces.
+
+{% hint style="info" %}
+Restricting container images requires Kubernetes 1.30 or later.
+{% endhint %}
 
 The **Allowed sources** list is pre-populated with common images, including those required for Portainer to operate.&#x20;
 
-| Field/Option        | Overview                                                                                                                                                                                                                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Restrict sources    | When enabled, Portainer creates a Kubernetes `ValidatingAdmissionPolicy` to ensure only container images from approved registries can be deployed. Any Pod that references an image from an unapproved source will be rejected at admission time and will not be created. |
-| Registry URL prefix | The container image or registry that is permitted for deployment.                                                                                                                                                                                                         |
-| Scope               | Specify whether the allowed access should apply cluster-wide (Global) or be restricted to selected [namespaces](../../../../user/kubernetes/namespaces/) only.                                                                                                            |
+| Field/Option        | Overview                                                                                                                                                                                                                                                                            |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Restrict sources    | When enabled, Portainer creates a Kubernetes `ValidatingAdmissionPolicy` to ensure only container images from approved registries can be deployed. Any Pod that references an image from an unapproved source will be rejected at admission time and will not be created.           |
+| Registry URL prefix | <p>The container image or <a href="../../../../user/docker/host/registries.md">registry</a> that is permitted for deployment. </p><p>Enter the registry hostname and optional path prefix. Only images whose fully-qualified reference starts with this prefix will be allowed.</p> |
+| Scope               | Specify whether the allowed access should apply cluster-wide (Global) or be restricted to selected [namespaces](../../../../user/kubernetes/namespaces/) only.                                                                                                                      |
 
-<figure><img src="../../../../.gitbook/assets/2.39-Restrict-sources.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.39-container-image-restrictions.png" alt=""><figcaption></figcaption></figure>
 
 Click **Add source** to add an image to the allowed sources list. You can add multiple entries, and each will appear in the **Allowed sources** table. To remove a source, select the checkbox next to the entry and click **Remove** in the top right corner of the table.
 
