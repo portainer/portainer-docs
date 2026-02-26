@@ -85,7 +85,7 @@ If you have 2FA configured in GitHub, your passcode is your password.
 ### GitOps updates
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 Portainer supports automatically updating your Edge Stacks deployed from Git repositories. To enable this, toggle on **GitOps updates** and configure your settings.
@@ -114,7 +114,7 @@ For more detail on how automatic updates function under the hood, have a look at
 ### Relative path volumes
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 When you toggle **Enable relative path volumes** to on, you are able to specify relative path references in your compose files. Portainer will create the required directory structure and populate the directories with the relevant files from your Git repository. This feature is only available for Docker Standalone and Docker Swarm environments.
@@ -145,12 +145,16 @@ For more detail on how this feature works, have a look at [this article](../../.
 
 #### Always clone Git repository
 
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+{% endhint %}
+
 With relative path volumes enabled, you can also toggle **Always clone git repository.**  Enabling this option ensures that the Git repository is always cloned for any relative paths defined in your Compose files. The referenced content is then pulled directly from your Git repository to the environment where the stack is deployed.
 
 ### GitOps Edge configurations
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 You can also choose to deploy device-specific configurations from your Git repository to the devices your Edge stack will be deployed to. To use this, enable the **GitOps Edge configurations** toggle, enter the **Local** or **Remote filesystem path**, **Directory** (relative to the root of your Git repository) and select the **Device** or **Group matching rule** that corresponds to your configuration.
@@ -200,7 +204,7 @@ Select an Edge Stack template to deploy from the **Template** dropdown, and make
 ### Webhooks
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 For the Web editor, Upload and Template build methods you can choose to enable an Edge Stack webhook. This webhook will allow you to trigger updates to the stack by sending a POST request to a specific URL, instructing Portainer to pull the most up to date version of the associated image and re-deploy the stack.
@@ -214,7 +218,7 @@ For Git deployed stacks, this functionality is available via [GitOps updates](ad
 ### Environment variables
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 As an optional step, you can also set environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
@@ -246,7 +250,7 @@ Note the compose file is not changed when environment variables are used - this 
 ### Registry
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 If your stack requires access to images in private registries, you can specify which registry to use as part of the deployment.
@@ -256,7 +260,7 @@ If your stack requires access to images in private registries, you can specify w
 ### Pre-pull images
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 By default, Docker will start containers within the stack that it already has images for, while at the same time pulling any other images it needs from the upstream registries. In some cases you may want to wait until all of the needed images are pulled to the device before starting the stack. To do this, enable the **Pre-pull images** toggle. This can also help to avoid issues when some images in a stack are unable to be pulled, leading to an incomplete or partial deployment.
@@ -266,7 +270,7 @@ By default, Docker will start containers within the stack that it already has im
 ### Retry deployment
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 If a deployment of an Edge Stack fails (for example if the remote Edge environment is unavailable), by default Portainer will not try and redeploy the stack. If you wish to enable retrying of failed deployments, you can toggle **Retry deployment** to on and set **Retry for** to the length of time you want Portainer to retry deploying the stack.
@@ -278,7 +282,7 @@ When the time selected in **Retry for** is reached, Portainer will stop retrying
 ### Update configurations
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 This section lets you define the method in which your stack updates are deployed across your Edge devices. You can choose to deploy to **All edge devices at once**, or select **Parallel edge device(s)** to specify how many devices to update concurrently.

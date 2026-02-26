@@ -6,6 +6,10 @@ metaLinks:
 
 # Browse a registry
 
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+{% endhint %}
+
 The registry manager extends your container management experience by giving you the ability to browse defined registries and manipulate their content. By using this feature, container users enjoy the benefit of having a single interface to manage any Docker registry deployment, providing a consistent look and feel across any provider.
 
 {% hint style="info" %}

@@ -6,6 +6,10 @@ metaLinks:
 
 # Update & Rollback
 
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+{% endhint %}
+
 This feature lets you upgrade your Edge Agent deployments directly from Portainer, without the need to log into the remote environments and manually update.
 
 {% hint style="warning" %}

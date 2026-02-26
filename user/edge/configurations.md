@@ -6,6 +6,10 @@ metaLinks:
 
 # Edge Configurations
 
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+{% endhint %}
+
 Edge Configurations are sets of files that can be pre-deployed to your Edge environments in order to provide dynamic configurability on each Edge environment as well as avoid storing large amounts of config files in deployment repositories.
 
 From the menu under **Edge compute** select **Edge Configurations**.

@@ -6,12 +6,12 @@ metaLinks:
 
 # Policies
 
-{% hint style="warning" %}
-Policies can only be applied to Edge (Standard) Agent environments that are of version 2.37.0 or greater.
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
-{% hint style="info" %}
-Policies can only be created in Portainer Business Edition.
+{% hint style="warning" %}
+Policies can only be applied to Edge (Standard) Agent environments that are of version 2.37.0 or greater.
 {% endhint %}
 
 Policies introduces a centralized configuration and policy inheritance as part of the Fleet Governance Policies feature set. This allows you to apply configuration, security rules, and cluster settings to groups of environments, rather than configuring each environment individually. By defining settings once at the group level, all child environments inherit those values, helping you keep access consistent and reduce configuration drift. Any created policies will override existing environment level access.

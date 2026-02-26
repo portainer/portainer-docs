@@ -24,6 +24,10 @@ Replaces our logo with your own. Toggle on and enter the URL to the logo. The re
 
 ### Login screen banner
 
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+{% endhint %}
+
 This setting allows you to specify a custom text banner that will appear on the login screen for all users. This could be used to provide informational detail, a warning message, or whatever you need. To enable this, toggle the **Login screen banner** option on and enter your message in the **Details** box.
 
 <figure><img src="../../.gitbook/assets/2.16-settings-login-screen-banner.png" alt=""><figcaption></figcaption></figure>
@@ -41,7 +45,7 @@ You can deploy containers and services using Portainer's set of built-in app tem
 ### Automatic Portainer patch updates
 
 {% hint style="warning" %}
-This is a beta feature and is only available in Portainer Business Edition.
+This is a beta feature and is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 {% hint style="info" %}
@@ -126,11 +130,11 @@ In this section you can configure various Kubernetes-specific deployment options
 
 ## Certificate Authority file for Kubernetes Helm repositories
 
-This section lets you supply a certificate authority (CA) file for use with HTTPS connections to Helm repositories from Portainer. This is useful if the TLS certificate your Helm repository uses is signed by a custom CA, and applies to both the Helm Repository configured above and to Helm repositories configured per environment.
-
 {% hint style="info" %}
 This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
+
+This section lets you supply a certificate authority (CA) file for use with HTTPS connections to Helm repositories from Portainer. This is useful if the TLS certificate your Helm repository uses is signed by a custom CA, and applies to both the Helm Repository configured above and to Helm repositories configured per environment.
 
 <figure><img src="../../.gitbook/assets/2.18-settings-helmcafile.png" alt=""><figcaption></figcaption></figure>
 
@@ -166,6 +170,10 @@ After making changes to this section, click **Apply Changes**.
 
 ## Additional functionality
 
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+{% endhint %}
+
 This section contains options for enabling and configuring additional functionality within Portainer.
 
 | Field/Option  | Overview                                                                                                                                                                                                                                                                             |
@@ -175,6 +183,10 @@ This section contains options for enabling and configuring additional functional
 <figure><img src="../../.gitbook/assets/2.39-additional-functionality.png" alt=""><figcaption></figcaption></figure>
 
 ## Experimental features
+
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+{% endhint %}
 
 This section allows you to enable experimental Portainer features for use in your deployment. These features are in early development and have gone through a limited set of testing, and are provided to users in order to gather feedback on the feature at an earlier stage of development.
 
@@ -207,6 +219,10 @@ Log in as an admin user. From the menu select **Settings**, then scroll down to 
 **Download backup file** is the default option. As an optional step, toggle **Password protect** on and enter a password to encrypt the backup file. When you click **Download backup**, a `tar.gz` file will be downloaded via the browser.
 
 ### Backing up to S3
+
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+{% endhint %}
 
 With Portainer Business Edition you have the option to store a backup of your configuration in an S3 bucket, either on demand or on a defined schedule.
 
@@ -263,6 +279,10 @@ Restoring a configuration is only possible on a fresh instance of Portainer duri
 When you're ready, click **Restore Portainer**. The restore might take a few moments. When it has finished, you will be redirected to the login page. You can now log in with your previous credentials and your previous configuration will be restored.
 
 ## Portainer support
+
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+{% endhint %}
 
 In this section you will find settings related to troubleshooting your Portainer installation.
 
