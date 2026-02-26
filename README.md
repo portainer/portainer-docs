@@ -1,9 +1,3 @@
----
-metaLinks:
-  alternates:
-    - https://app.gitbook.com/s/j6QEqM3Sd94bdPsX4HaN/
----
-
 # Welcome
 
 Welcome to Portainer's official documentation site.
