@@ -8,7 +8,7 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
-## Release 2.39 LTS
+## Release 2.39.0 LTS
 
 February 26, 2026
 
@@ -18,7 +18,7 @@ February 26, 2026
 
 **Known issues with Podman support**
 
-* Auto onboarding a podman environment defaults to “Standard” and not “Podman”
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
 * It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
 * Support for only CentOS 9, Podman 5 rootful
 
