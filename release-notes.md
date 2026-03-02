@@ -8,6 +8,10 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.40.0 STS
+
+
+
 ## Release 2.39.0 LTS
 
 February 26, 2026

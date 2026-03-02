@@ -9,7 +9,7 @@ metaLinks:
 To update the Portainer Edge Agent to the latest version, follow the below instructions for your Edge environment.
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.39.0 make sure all of the agents are also on version 2.39.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.40.0 make sure all of the agents are also on version 2.40.0.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -38,7 +38,7 @@ docker rm portainer_edge_agent
 We also want to ensure we have the updated version of the container image locally:
 
 ```
-docker pull portainer/agent:lts
+docker pull portainer/agent:sts
 ```
 
 To deploy the updated Edge Agent, replace the `your-edge-identifier-here` and `your-edge-key-here` values in the following command with those you retrieved earlier, then run the command:
@@ -54,7 +54,7 @@ To update the Portainer Edge Agent on a Docker Swarm environment, run the follow
 First, to ensure you have the updated container image locally, pull the image:
 
 ```
-docker pull portainer/agent:lts
+docker pull portainer/agent:sts
 ```
 
 Then, update the service to use the new image version:
@@ -72,13 +72,13 @@ To download the manifest, you can use one of the following commands:
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-curl -L https://downloads.portainer.io/ee-lts/portainer-agent-edge-k8s.yaml  -o portainer-agent-edge-k8s.yaml
+curl -L https://downloads.portainer.io/ee-sts/portainer-agent-edge-k8s.yaml  -o portainer-agent-edge-k8s.yaml
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-curl -L https://downloads.portainer.io/ce-lts/portainer-agent-edge-k8s.yaml -o portainer-agent-edge-k8s.yaml  
+curl -L https://downloads.portainer.io/ce-sts/portainer-agent-edge-k8s.yaml -o portainer-agent-edge-k8s.yaml  
 ```
 {% endtab %}
 {% endtabs %}

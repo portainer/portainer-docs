@@ -7,7 +7,7 @@ metaLinks:
 # Updating on Docker Standalone
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.39.0 make sure all of the agents are also on version 2.39.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.40.0 make sure all of the agents are also on version 2.40.0.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -49,13 +49,13 @@ Now that you have stopped and removed the old version of Portainer, you must ens
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker pull portainer/portainer-ee:lts
+docker pull portainer/portainer-ee:sts
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker pull portainer/portainer-ce:lts
+docker pull portainer/portainer-ce:sts
 ```
 {% endtab %}
 {% endtabs %}
@@ -65,13 +65,13 @@ Finally, deploy the updated version of Portainer:
 {% tabs %}
 {% tab title="Business Edition" %}
 ```
-docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:lts
+docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:sts
 ```
 {% endtab %}
 
 {% tab title="Community Edition" %}
 ```
-docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
+docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:sts
 ```
 {% endtab %}
 {% endtabs %}
@@ -107,13 +107,13 @@ docker rm portainer_agent
 Next, pull the updated version of the image:
 
 ```
-docker pull portainer/agent:lts
+docker pull portainer/agent:sts
 ```
 
 Finally, start the agent with the updated image:
 
 ```
-docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:lts
+docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:sts
 ```
 
 {% hint style="warning" %}
