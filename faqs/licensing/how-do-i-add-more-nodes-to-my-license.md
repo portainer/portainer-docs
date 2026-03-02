@@ -5,8 +5,9 @@ metaLinks:
       https://app.gitbook.com/s/xdTQRpMuktD2l0URtOJO/faqs/licensing/how-do-i-add-more-nodes-to-my-license
 ---
 
-# How do I add more nodes to my license?
+# Can I add more nodes to my existing subscription?
 
-Licensing in Portainer Business Edition is based on the number of nodes you are managing. If you want to manage additional clusters or nodes and your license doesn't cover the additional nodes, you will need to buy an additional license..
+Existing Starter, Scale and Home & Student subscriptions cannot be modified or extended once purchased. If you need to manage additional nodes or clusters, you will need to [purchase a new subscription](https://www.portainer.io/pricing).
 
-To buy an additional license, please get in touch with [our success team](https://www.portainer.io/portainer-business-buy-more-nodes?hsLang=en).
+To increase node capacity under an Enterprise subscription, please [contact our Sales team](https://www.portainer.io/contact-sales) to discuss your requirements.
+

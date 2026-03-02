@@ -344,7 +344,7 @@
   * [How can I roll back to a previous version of Portainer?](faqs/upgrading/how-can-i-roll-back-to-a-previous-version-of-portainer.md)
 * [Licensing](faqs/licensing/README.md)
   * [What is a node for licensing purposes?](faqs/licensing/what-is-a-node-for-licensing-purposes.md)
-  * [How do I add more nodes to my license?](faqs/licensing/how-do-i-add-more-nodes-to-my-license.md)
+  * [Can I add more nodes to my existing subscription?](faqs/licensing/how-do-i-add-more-nodes-to-my-license.md)
   * [How do I renew my subscription?](faqs/licensing/how-do-i-renew-my-subscription.md)
   * [What is the pricing for Business Edition?](faqs/licensing/what-is-the-pricing-for-business-edition.md)
   * [How do I enter my Portainer Business license into Portainer CE?](faqs/licensing/how-do-i-enter-my-portainer-business-license-into-portainer-ce.md)
