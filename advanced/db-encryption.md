@@ -180,6 +180,23 @@ containers:
 
 In the `volumeMounts` section, add a definition for the secret created earlier:
 
+{% hint style="info" %}
+Note this step differs between Business Edition and Community Edition versions of Portainer.
+{% endhint %}
+
+{% tabs %}
+{% tab title="Business Edition" %}
+```
+volumeMounts:
+  - name: data
+    mountPath: /data
+  - name: portainer-key
+    mountPath: /run/portainer/portainer
+    subPath: portainer
+```
+{% endtab %}
+
+{% tab title="Community Edition" %}
 ```
 volumeMounts:
   - name: data
@@ -188,6 +205,8 @@ volumeMounts:
     mountPath: /run/secrets/portainer
     subPath: portainer
 ```
+{% endtab %}
+{% endtabs %}
 
 We also need to add a definition to the `volumes` definition for the `spec`:
 
