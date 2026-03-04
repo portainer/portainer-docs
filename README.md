@@ -1,3 +1,9 @@
+---
+metaLinks:
+  alternates:
+    - https://app.gitbook.com/s/j6QEqM3Sd94bdPsX4HaN/
+---
+
 # Welcome
 
 Welcome to Portainer's official documentation site.
@@ -18,7 +24,7 @@ Our team is here to help you on your journey. Community and five/three nodes fre
 
 ## Documentation
 
-We're working hard to ensure that our documentation keeps up with our ever-growing Portainer community. If you have a question we encourage you to start with the documentation (right here!). If you can't find what you're looking for, please raise a question in one of our [support channels](./#getting-support).&#x20;
+We're working hard to ensure that our documentation keeps up with our ever-growing Portainer community. If you have a question we encourage you to start with the documentation (right here!). If you can't find what you're looking for, please raise a question in one of our [support channels](./#getting-support).
 
 For more detailed step-by-step guides to Portainer, we're building out the [Portainer Academy](https://academy.portainer.io) with more courses regularly.
 
