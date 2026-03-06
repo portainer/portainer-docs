@@ -24,9 +24,11 @@ We don't currently support running multiple instances of the Portainer Server co
 
 ## Agent vs Edge Agent
 
-In standard deployments, the central Portainer Server instance and any environments it manages are assumed to be on the same network, that is, Portainer Server and the Portainer Agents are able to seamlessly communicate with one another. However, in configurations where the remote environments are on a completely separate network to Portainer Server, say, across the internet, historically we would have been unable to centrally manage these devices.
+In most instances we recommend using the Edge Agent rather than the classic Agent when managing environments. With the Edge Agent, rather than the Portainer Server needing seamless access to the remote environment, only the remote environments need to be able to access the Portainer Server. This communication is performed over an encrypted TLS tunnel. This is important in Internet-connected configurations where there is no desire to expose the Portainer Agent to the internet.
 
-With the new Edge Agent, we altered the architecture. Rather than the Portainer Server needing seamless access to the remote environment, only the remote environments need to be able to access the Portainer Server. This communication is performed over an encrypted TLS tunnel. This is important in Internet-connected configurations where there is no desire to expose the Portainer Agent to the internet.
+In contrast, in classic Agent deployments the central Portainer Server accesses the environments, i.e. Portainer → Agents. As such, any environments it manages are assumed to be on the same network as the Portainer Server so it can securely communicate with Portainer Agents.
+
+The classic Agent option remains for legacy purposes, and can still be used for local network scenarios, but it is worth noting that features such as Fleet Governance Policies are not available with the classic Agent.
 
 ## Security and compliance
 
