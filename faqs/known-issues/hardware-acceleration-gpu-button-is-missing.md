@@ -8,9 +8,9 @@ metaLinks:
 # Hardware Acceleration GPU button is missing
 
 {% hint style="info" %}
-**Affected versions:** 2.15.0 and above
+**Affected versions:** 2.15.0, 2.16.0, 2.17.0
 
-**Fixed in:** Upcoming release
+**Fixed in:** 2.18.0 and above
 {% endhint %}
 
 #### Issue Description

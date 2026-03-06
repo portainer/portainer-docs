@@ -423,7 +423,6 @@
   * [Hardware Acceleration GPU button is missing](faqs/known-issues/hardware-acceleration-gpu-button-is-missing.md)
   * [Unable to update environment variables when running on Synology NAS](faqs/known-issues/unable-to-update-environment-variables-when-running-on-synology-nas.md)
   * [Unable to remove the Group Configuration from Active Directory authentication configuration](faqs/known-issues/unable-to-remove-the-group-configuration-from-active-directory-authentication-configuration.md)
-  * [Nomad Jobs only displays Service Jobs](faqs/known-issues/nomad-jobs-only-displays-service-jobs.md)
   * ["Image not found on registry" error when upgrading from CE to BE or self-updating on Synology NAS](faqs/known-issues/image-not-found-on-registry-error-when-upgrading-from-ce-to-be-or-self-updating-on-synology-nas.md)
   * [MicroK8s Known Issues](faqs/known-issues/microk8s-known-issues.md)
   * ["Unauthorized" error when pushing images to ACR with Service Principal account](faqs/known-issues/unauthorized-error-when-pushing-images-to-acr-with-service-principal-account.md)
