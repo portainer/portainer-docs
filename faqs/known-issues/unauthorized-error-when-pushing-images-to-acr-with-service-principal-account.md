@@ -8,9 +8,9 @@ metaLinks:
 # "Unauthorized" error when pushing images to ACR with Service Principal account
 
 {% hint style="info" %}
-**Affected versions:** 2.13.0 and above
+**Affected versions:** 2.13.0 to 2.16.0
 
-**Fixed in:** Upcoming release
+**Fixed in:** 2.17.0
 {% endhint %}
 
 #### Issue Description
