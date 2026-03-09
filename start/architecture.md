@@ -16,7 +16,7 @@ For a deeper dive into the architecture of Portainer, have a look at our [techni
 
 A single Portainer Server will accept connections from any number of Portainer Agents, providing the ability to manage multiple clusters from one centralized interface. To do this, the Portainer Server container requires data persistence. The Portainer Agents are stateless, with data being shipped back to the Portainer Server container.
 
-<figure><img src="../.gitbook/assets/2.33-portainer-architecture-detailed.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2.38-portainer-architecture-detailed.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 We don't currently support running multiple instances of the Portainer Server container to manage the same clusters. We recommend running the Portainer Server on a specific management node, with Portainer Agents deployed across the remaining nodes.
@@ -33,8 +33,6 @@ The classic Agent option remains for legacy purposes, and can still be used for 
 ## Security and compliance
 
 Portainer runs exclusively on your servers, within your network, behind your own firewalls. As a result, we do not currently hold any SOC or PCI/DSS compliance because we do not host any of your infrastructure. You can even run Portainer completely disconnected (air-gapped) without any impact on functionality.
-
-While we do (optionally) collect anonymous usage analytics from Portainer installations, we remain compliant with GDPR. Data collection can be disabled when you install the product, or at any time after that. If your installation is air-gapped, collection will silently fail without any adverse effects.
 
 {% content-ref url="lifecycle.md" %}
 [lifecycle.md](lifecycle.md)
