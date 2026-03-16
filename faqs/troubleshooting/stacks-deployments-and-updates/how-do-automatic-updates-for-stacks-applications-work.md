@@ -46,6 +46,8 @@ using the file defined in the Compose path and any additional compose paths defi
 
 {% hint style="info" %}
 For all platforms, we do **not** force a redeployment if the image has not updated (the default behavior of each of the tools). Therefore, if Docker or Kubernetes determines the image hasn't changed for a container it will **not** redeploy that container.
+
+If a configuration file mounted by a service changes, Portainer will restart the affected service during the GitOps update so the updated configuration is applied.
 {% endhint %}
 
 The commit hash in the Portainer database is updated to match the newly deployed commit hash.

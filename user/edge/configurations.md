@@ -14,7 +14,7 @@ Edge Configurations are sets of files that can be pre-deployed to your Edge envi
 
 From the menu under **Edge compute** select **Edge Configurations**.
 
-<figure><img src="../../.gitbook/assets/2.19-edge-configurations.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.40-edge-config.gif" alt=""><figcaption></figcaption></figure>
 
 Here you can see a list of your current configurations, the Edge groups they apply to, creation and update dates, as well as the progress in pushing the configuration to your Edge environments.&#x20;
 
@@ -83,3 +83,11 @@ services:
 ```
 
 In this example, each Edge device the stack was deployed to would mount their specific device (based on the Portainer Edge ID) folder to the `/my-device-config` folder in the container.
+
+## Updating an Edge Configuration used by a stack
+
+If you update an existing Edge Configuration that is referenced by an Edge Stack, the updated files will be pushed to the Edge environments the configuration applies to. Once the updated configuration is received on the Edge device, the files in the configured directory will be replaced with the new versions.
+
+If the updated files are mounted by a service in an Edge Stack, the affected service will automatically restart during the next GitOps update so that the updated configuration is applied. Only services that reference the updated configuration will restart. Other services in the stack will continue running without interruption.
+
+This ensures configuration updates are applied consistently across Edge devices without requiring a full stack redeployment.

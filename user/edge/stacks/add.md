@@ -91,7 +91,7 @@ This feature is only available in [Portainer Business Edition](https://www.porta
 Portainer supports automatically updating your Edge Stacks deployed from Git repositories. To enable this, toggle on **GitOps updates** and configure your settings.
 
 {% hint style="info" %}
-For more detail on how automatic updates function under the hood, have a look at [this knowledge base article](https://portal.portainer.io/knowledge/how-do-automatic-updates-for-stacks-applications-work).
+For more detail on how automatic updates function under the hood, have a look at [this FAQ](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-do-automatic-updates-for-stacks-applications-work.md).
 {% endhint %}
 
 | Field/Option   | Overview                                                                                                                                                                                                                                                                                                                                      |
