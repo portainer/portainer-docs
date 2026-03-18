@@ -11,8 +11,14 @@ metaLinks:
 
 A "node" can be simply described as a "server" (whether this is an actual physical server, a VM, a Raspberry Pi, your desktop or laptop, an industrial computer, or an embedded compute device) that is capable of running containers (via Docker, Kubernetes or another orchestrator) which is either running the Portainer Server or is under the management of a Portainer Server installation.
 
+Nodes that are used solely as management environments are not counted toward your node limit. A management environment is only counted as a node if it is also being managed by Portainer.&#x20;
+
 {% hint style="info" %}
 Node pricing is also dependent on the [type of node](what-is-the-pricing-for-business-edition.md) you are using.
+{% endhint %}
+
+{% hint style="info" %}
+All examples given below assume the management node is also managed from within Portainer.
 {% endhint %}
 
 ### Docker
