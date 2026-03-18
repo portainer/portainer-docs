@@ -93,5 +93,7 @@ But what if you're running multiple environments? Let's combine what we have abo
 
 <figure><img src="../../.gitbook/assets/nodes-mixed.png" alt=""><figcaption></figcaption></figure>
 
-You'll note the Portainer Server is only running in one place - the management server. The rest of the cluster is running the Portainer Agent. With three Docker Swarm nodes and three nodes in the Kubernetes cluster that's 6 nodes, plus the management node makes 7, for a 7 node license.\
+You'll note the Portainer Server is only running in one place - the management server. The rest of the cluster is running the Portainer Agent. With three Docker Swarm nodes and three nodes in the Kubernetes cluster that's 6 nodes, plus the management node makes 7, for a 7 node license. If the management server in this example was acting purely as a management server, not running any other container workloads and not itself being managed by Portainer, then a node license would not be consumed, taking the total count to 6 nodes.
+
+\
 Hopefully that has made the node licensing model easier to understand. If you're still confused, feel free to [Contact our Sales team](https://www.portainer.io/contact-sales) who can help put a quote together for your specific needs.
