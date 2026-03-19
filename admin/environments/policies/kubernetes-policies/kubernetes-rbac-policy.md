@@ -22,6 +22,6 @@ Currently, only custom RBAC policies can be created. Future improvements to the 
 | Users/teams        | Select one or more [users](../../../user/users.md) or [teams](../../../user/teams/) from the dropdown menu.                                                                                                                                                                                                        |
 | Role               | <p>Select the role you want to assign to the users or teams. <br>If you select a <a href="../../../../user/kubernetes/namespaces/">namespace-scoped role</a>, a <strong>Namespaces</strong> field will appear, allowing you to pick one or more existing namespaces, or to type a name to add a new namespace.</p> |
 
-<figure><img src="../../../../.gitbook/assets/2.37.0-Kube-RBAC-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.40.0-kube-RBAC-config.png" alt=""><figcaption></figcaption></figure>
 
 Click **Add Access** to add a user or team to the policy. You can add multiple users or teams, and each entry appears in the **Access list**. When you have finished adding access, click **Create policy**. A confirmation screen displays the changes being made and any existing policy that will be replaced. Click **Confirm** to acknowledge the changes and create the policy.

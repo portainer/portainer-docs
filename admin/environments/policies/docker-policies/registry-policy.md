@@ -22,6 +22,6 @@ Currently, only custom registry policies can be created. Future improvements to 
 | Select registry           | ​Select a [registry](../../../../user/kubernetes/cluster/registries.md) from the dropdown menu. ​                                                                                                                         |
 | Select users and/or teams | Select one or more [user](../../../user/users.md) or [team](../../../user/teams/) that you want to have access to the selected registry.                                                                                  |
 
-<figure><img src="../../../../.gitbook/assets/2.37-docker-registry.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.40.0-registry-policy-configuration.png" alt=""><figcaption></figcaption></figure>
 
 Click **Add Access** to add the registry to the access list, multiple entries can be added. Each access added will show in the **Registry access list**. When you have finished adding access, click **Create policy**. A confirmation screen displays the changes being made and any existing policy that will be replaced. Click **Confirm** to acknowledge the changes and create the policy.

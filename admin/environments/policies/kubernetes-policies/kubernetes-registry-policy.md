@@ -45,7 +45,7 @@ The **Allowed sources** list is pre-populated with common images, including thos
 | Registry URL prefix | <p>The container image or <a href="../../../../user/docker/host/registries.md">registry</a> that is permitted for deployment. </p><p>Enter the registry hostname and optional path prefix. Only images whose fully-qualified reference starts with this prefix will be allowed.</p> |
 | Scope               | Specify whether the allowed access should apply cluster-wide (Global) or be restricted to selected [namespaces](../../../../user/kubernetes/namespaces/) only.                                                                                                                      |
 
-<figure><img src="../../../../.gitbook/assets/2.39-container-image-restrictions.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.40.0-kube-registry-policy.png" alt=""><figcaption></figcaption></figure>
 
 Click **Add source** to add an image to the allowed sources list. You can add multiple entries, and each will appear in the **Allowed sources** table. To remove a source, select the checkbox next to the entry and click **Remove** in the top right corner of the table.
 
