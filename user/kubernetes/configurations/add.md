@@ -10,10 +10,10 @@ metaLinks:
 From the menu select **ConfigMaps & Secrets**, ensure the **ConfigMaps** tab is selected, then click **Add with form**.&#x20;
 
 {% hint style="info" %}
-ConfigMaps can also be added [using a manifest](../applications/manifest/) by clicking **Create from manifest**.
+Change hint settingsConfigMaps can also be added using a manifest or Helm chart by clicking **Create from code**.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.19-kubernetes-configurations-configmaps-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.40.0-create-configmap.gif" alt=""><figcaption></figcaption></figure>
 
 Define the ConfigMap, using the table below as a guide.
 

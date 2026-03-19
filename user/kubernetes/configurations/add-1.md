@@ -10,10 +10,10 @@ metaLinks:
 From the menu select **ConfigMaps & Secrets**, ensure the **Secrets** tab is selected, then click **Add with form**.&#x20;
 
 {% hint style="info" %}
-Secrets can also be added [using a manifest](../applications/manifest/) by clicking **Create from manifest**.
+Secrets can also be added [using a manifest or Helm chart](../applications/manifest/) by clicking **Create from code**.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.19-kubernetes-configurations-secrets-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.40.0-secrets (1).png" alt=""><figcaption></figcaption></figure>
 
 Define the secret, using the table below as a guide.
 
