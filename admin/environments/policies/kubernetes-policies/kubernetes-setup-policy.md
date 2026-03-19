@@ -9,11 +9,7 @@ metaLinks:
 
 Define a policy by configuring cluster settings, resources, and deployment options for Kubernetes clusters.
 
-To create a Kubernetes setup policy, in the menu, under **Environment-related**, select **Policies** then select **Create policy**. From the policy type list, navigate to the **Kubernetes** > **Setup** section, select **Custom** then select **Continue** to begin configuring the policy.
-
-{% hint style="info" %}
-Currently, only custom setup policies can be created. Future improvements to the policies feature will introduce policy templates.
-{% endhint %}
+To create a Kubernetes setup policy, in the menu, under **Environment-related**, select **Policies** then select **Create policy**. From the policy type list, navigate to the **Kubernetes** > **Setup** section, select either a predefined template or the **Custom** policy, then select **Continue** to begin configuring the policy.
 
 | Field/Option                                            | Overview                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
