@@ -34,6 +34,10 @@ After selecting a policy type, select **Continue** at the bottom of the page to 
 [docker-policies](docker-policies/)
 {% endcontent-ref %}
 
+{% content-ref url="any-environment-type-policies/" %}
+[any-environment-type-policies](any-environment-type-policies/)
+{% endcontent-ref %}
+
 ## View policy details
 
 From the menu, under **Environment-related**, select **Policies**. The policies page lists all existing policies. To see the details of an existing policy, click on the policy name.&#x20;
