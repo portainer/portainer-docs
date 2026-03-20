@@ -8,6 +8,49 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.39.1 LTS
+
+March 19, 2026
+
+#### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+**Known issues with Podman support**
+
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this Release
+
+* Fixed an issue where a Git-based Docker stack from GitLab failed validation for non-admin users
+* Re-enabled image registries for FIPS
+* Fixed an issue where groups were missing after an upgrade
+* Fixed an issue where not all containers for a service were shown in v2.39.0 Alpine
+* Fixed an issue where users could not add new environments to an existing group when the group already contained a large number of environments
+* Fixed an issue where the Edit this application button was disabled for non-admin users
+* Fixed an issue where custom template file content was accessible to unauthorized users
+* Fixed an issue where users could not view their containers
+* Fixed an issue where users saw a blank dashboard
+* Updated the kubectl shell image to version `1.35.2`
+* Updated Kubernetes to version `1.35`
+* Updated Go to version `1.25.8` to mitigate the following CVEs:
+  * CVE-2026-25679
+  * CVE-2026-27142
+  * CVE-2026-27139
+* Resolved the following CVEs:
+  * GO-2026-4550
+  * GO-2026-4473
+  * GO-2026-4394
+  * CVE-2026-24051
+  * CVE-2025-68121
+  * CVE-2026-33186
+
 ## Release 2.39.0 LTS
 
 February 26, 2026

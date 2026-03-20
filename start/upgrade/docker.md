@@ -7,7 +7,7 @@ metaLinks:
 # Updating on Docker Standalone
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.39.0 make sure all of the agents are also on version 2.39.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.39.1 make sure all of the agents are also on version 2.39.1.
 {% endhint %}
 
 {% hint style="danger" %}
