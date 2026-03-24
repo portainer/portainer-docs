@@ -17,8 +17,14 @@ This section lists the Service Accounts on your Kubernetes cluster. The list can
 Editing of Service Account details is disabled for resources in namespaces [marked as system](../namespaces/manage.md#actions).&#x20;
 {% endhint %}
 
+{% hint style="info" %}
+When [registry access is added to a namespace](../cluster/registries.md#managing-access), Portainer creates a registry secret and adds it to the default Service Account as an imagePullSecret, allowing Pods in the namespace to pull images from the private registry automatically. When registry access is removed, Portainer deletes the registry secret and removes it from the default Service Account while retaining any other existing imagePullSecrets.
+{% endhint %}
+
 You can view the details of a Service Account by clicking its name from the Service Account list.
 
-The **Service account** tab displays read-only details for the selected account. To modify the resource, switch to the **YAML** tab where you can edit the manifest directly. Once you have made your changes, click **Apply changes** in the bottom right.
+The **Service account** tab displays details for the selected account.&#x20;
 
-<figure><img src="../../../.gitbook/assets/2.40.0-service-account-details.png" alt=""><figcaption></figcaption></figure>
+To modify the resource, switch to the **YAML** tab where you can edit the manifest directly. Once you have made your changes, click **Apply changes**.
+
+<figure><img src="../../../.gitbook/assets/2.40-service-account-details.png" alt=""><figcaption></figcaption></figure>

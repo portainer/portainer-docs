@@ -15,6 +15,10 @@ To create a Kubernetes registry policy, in the menu, under **Environment-related
 Currently, only custom registry policies can be created. Future improvements to the policies feature will introduce policy templates.
 {% endhint %}
 
+{% hint style="info" %}
+When registry access is added to a namespace, Portainer creates a registry secret and adds it to the default [Service Account](../../../../user/kubernetes/more-resources/service-accounts.md) as an imagePullSecret, allowing Pods in the namespace to pull images from the private registry automatically. When registry access is removed, Portainer deletes the registry secret and removes it from the default Service Account while retaining any other existing imagePullSecrets.
+{% endhint %}
+
 | Field/Option       | Overview                                                                                                                                                                                                                             |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Name               | Define a name for this policy.                                                                                                                                                                                                       |

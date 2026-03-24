@@ -21,7 +21,7 @@ This view lets you manage access to each of the registries that are currently av
 
 From the menu expand **Cluster**, select **Registries** then click **Add registry**. When the global registries page appears, follow [these instructions](../../../admin/registries/add/).
 
-<figure><img src="../../../.gitbook/assets/2.15-k8s-cluster-registries-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.40.0-new-registry.gif" alt=""><figcaption></figcaption></figure>
 
 ## Managing access
 
@@ -31,13 +31,15 @@ If access to a registry is being managed by a Kubernetes registry [policy](../..
 
 To configure access to a registry, from the menu expand **Cluster** then select **Registries**.
 
-<figure><img src="../../../.gitbook/assets/2.15-k8s-cluster-registries.gif" alt=""><figcaption></figcaption></figure>
-
 Find the registry you want to manage then select **Manage access**.&#x20;
 
 <figure><img src="../../../.gitbook/assets/2.15-k8s-cluster-registries-manage.png" alt=""><figcaption></figcaption></figure>
 
 From the dropdown, select the namespaces that you would like to have access, then click **Create access**.
+
+{% hint style="info" %}
+When registry access is added to a namespace, Portainer creates a registry secret and adds it to the default [Service Account](../more-resources/service-accounts.md) as an imagePullSecret, allowing Pods in the namespace to pull images from the private registry automatically. When registry access is removed, Portainer deletes the registry secret and removes it from the default Service Account while retaining any other existing imagePullSecrets.
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/2.15-k8s-cluster-registries-createaccess.png" alt=""><figcaption></figcaption></figure>
 

@@ -36,3 +36,10 @@ By combining visual identification with enforced confirmation, this policy helps
 
 <figure><img src=".gitbook/assets/2.40-warning-confirmation-box.png" alt="" width="364"><figcaption></figcaption></figure>
 
+
+
+### Default Service Account imagePullSecret management  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+
+Portainer now automatically updates the default [Service Account](user/kubernetes/more-resources/service-accounts.md) in a namespace when registry access is added or removed as part of a [registry policy](admin/environments/policies/kubernetes-policies/kubernetes-registry-policy.md) (BE only) or from the [Registries view](user/kubernetes/cluster/registries.md#managing-access). When access is granted, the registry secret is added as an imagePullSecret to the default Service Account, allowing Pods in the namespace to pull images from the private registry automatically. When access is removed, the secret is removed from the default Service Account while any other existing imagePullSecrets are retained. This change is accompanied by an improved Service account details view, which allows you to view Service Account details and edit the YAML.
+
+<figure><img src=".gitbook/assets/2.40-service-account-details.png" alt=""><figcaption></figcaption></figure>
