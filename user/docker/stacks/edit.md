@@ -6,26 +6,13 @@ metaLinks:
 
 # Inspect or edit a stack
 
-## Inspecting a stack
+From the menu select **Stacks** then select the stack you want to inspect or edit.
 
-From the menu select **Stacks** then select the stack you want to inspect.
+<figure><img src="../../../.gitbook/assets/2.40.0-stack-page.gif" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/view-stack-new.gif" alt=""><figcaption></figcaption></figure>
+From the **Stack details** section at the top of the page, you can stop, delete, [migrate the stack](migrate.md) or [create a template from the stack](template.md). If deployed from Git you can [detach the stack from the Git repository](edit.md#detach-from-git).
 
-From here you can stop, delete or [create a template from the stack](template.md), and if deployed from Git you can [detach the stack from the Git repository](edit.md#detach-from-git).
-
-<figure><img src="../../../.gitbook/assets/2.20-stacks-edit-options.png" alt=""><figcaption></figcaption></figure>
-
-If the stack was deployed from a Git repository, you can:
-
-* Configure [GitOps updates](add.md#gitops-updates) or manually pull and redeploy the stack.
-* View and edit the stack's environment variables.
-
-<figure><img src="../../../.gitbook/assets/2.20-stacks-edit-git.png" alt=""><figcaption></figcaption></figure>
-
-If the stack was deployed using the [Web Editor](add.md#option-1-web-editor) or [uploaded](add.md#option-2-upload), you will have the option to [edit your compose file manually](edit.md#editing-a-stack).
-
-Regardless of the deployment method used, you can also [migrate or duplicate](migrate.md) the stack.
+## Inspect a stack
 
 ### Docker Standalone / Podman
 
@@ -58,9 +45,39 @@ You can also see the image update indicator for each service in the stack. To re
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-services.png" alt=""><figcaption></figcaption></figure>
 
-## Editing a stack
+## Edit a stack
 
-Editing a stack allows you to make changes to the configuration and redeploy those changes. To edit a stack, from the menu select **Stacks**, select the stack you want to edit, then select the **Editor** tab.
+### Edit a stack deployed from Git
+
+<figure><img src="../../../.gitbook/assets/2.40.0-stack-details-1.png" alt=""><figcaption></figcaption></figure>
+
+#### Edit Git settings
+
+If the stack was deployed from a Git repository, you can select **Edit Git settings** from the bottom of the Stack details view, allowing you to:
+
+* Edit the [Git repository details](add.md#option-3-git-repository).
+* Configure [GitOps updates](add.md#gitops-updates) or manually pull and redeploy the stack.
+* View and edit the stack's environment variables.
+
+Check **Redeploy** if you would like the stack to redeploy on saving. Click **Save settings** when you are done.
+
+<figure><img src="../../../.gitbook/assets/2.40.0-Edit-Git-settings-view.png" alt=""><figcaption></figcaption></figure>
+
+#### Detach from Git
+
+If your stack was created from a Git repository, you have the option to detach the stack from the repository. This means you can [edit the stack directly within Portainer](edit.md#editing-a-stack), but it does mean that the stack can't be updated from Git anymore. This action also cannot be reversed.
+
+{% hint style="info" %}
+Detaching downloads the main compose file for the stack and stores it in Portainer. It does not download any additional compose files or `.env` files that may be contained within the repository.
+{% endhint %}
+
+Click **Detach from Git** to detach. You will be asked to confirm the action - click **Detach** to do so.
+
+### Edit a stack deployed using the Web Editor or uploaded
+
+If the stack was deployed using the [Web Editor](add.md#option-1-web-editor) or [uploaded](add.md#option-2-upload), you will have the option to edit your compose file manually, allowing you to make changes to the configuration and redeploy those changes.&#x20;
+
+To edit a stack, from the menu select **Stacks**, select the stack you want to edit, then select the **Editor** tab.
 
 {% hint style="info" %}
 The Editor tab is only available for stacks that were deployed using the [Web Editor](add.md#option-1-web-editor). For stacks deployed from a Git repository, the compose file must be edited in the repository itself.
@@ -87,13 +104,3 @@ You can choose to **Prune services** if you have made changes that remove some s
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-swarm-prune.png" alt=""><figcaption></figcaption></figure>
 
 When you have finished making changes, click **Update the stack**.
-
-## Detach from Git
-
-If your stack was created from a Git repository, you have the option to detach the stack from the repository. This means you can [edit the stack directly within Portainer](edit.md#editing-a-stack), but it does mean that the stack can't be updated from Git anymore. This action also cannot be reversed.
-
-{% hint style="info" %}
-Detaching downloads the main compose file for the stack and stores it in Portainer. It does not download any additional compose files or `.env` files that may be contained within the repository.
-{% endhint %}
-
-Click **Detach from Git** to detach. You will be asked to confirm the action - click **Detach** to do so.
