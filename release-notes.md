@@ -28,7 +28,7 @@ March 26, 2026
 
 #### New in this Release <a href="#new-in-this-release" id="new-in-this-release"></a>
 
-#### New and improved features
+**New and improved features**
 
 * Added an information panel showing current and planned GitOps deployment details when a Git URL or config path is changed
 * Docker Compose GitOps stacks can now have their Git URL, config path, and entry point edited after creation
@@ -46,7 +46,7 @@ March 26, 2026
 * Added private registries to default service account as imagePullSecrets to automatically allow private image pulls for applications in associated namespaces
 * Improved registry secret display — secrets list and details views now show the associated Portainer registry name
 
-#### Security improvements
+**Security improvements**
 
 * Upgraded CIRCL library to v1.6.3 to fix GO-2026-4550 incorrect secp384r1 CombinedMult calculation
 * Upgraded go-git to v5.17.0 to fix GO-2026-4473 improper verification of data integrity for .idx and .pack files
@@ -57,7 +57,7 @@ March 26, 2026
 * Upgraded gRPC to v1.79.3 to fix CVE-2026-33186
 * Fixed missing authorization check on the Custom Template file content API endpoint
 
-#### Bug Fixes
+**Bug Fixes**
 
 * Fixed GitOps Edge Configurations not restarting the correct service when a bind-mounted configuration file changes
 * Fixed Git reference (branch/tag/commit) input field not working in GitOps forms
