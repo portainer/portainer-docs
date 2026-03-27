@@ -62,12 +62,12 @@ Adding shared Git credentials can be done from the [Shared credentials](../admin
 
 To add a new credential, click the **Add git credential** button and fill out the fields using the table below as a guide:
 
-| Field                 | Overview                                                                                                                                                                                |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name                  | Enter a name for this credential entry. This is how it will appear when selecting it for use when deploying.                                                                            |
-| Authorization type    | Select either **Basic** or **Token** authorization depending on what your Git repository requires. For example, GitHub uses Basic authorization and Bitbucket uses Token authorization. |
-| Username              | Enter the username, if relevant.                                                                                                                                                        |
-| Personal Access Token | Enter the personal access token.                                                                                                                                                        |
+| Field                 | Overview                                                                                                                                                                                                                                                 |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name                  | Enter a name for this credential entry. This is how it will appear when selecting it for use when deploying.                                                                                                                                             |
+| Authorization type    | Select either **Basic** or **Token** authorization depending on what your Git repository requires. For example, GitHub uses Basic authorization and Bitbucket uses Token authorization.                                                                  |
+| Username              | Enter the username, if relevant.                                                                                                                                                                                                                         |
+| Personal Access Token | <p>Enter the personal access token.<br>Ensure your token has repository read permissions. See the <a href="../faqs/getting-started/what-scopes-are-required-for-github-gitlab-and-bitbucket-tokens.md">Git authentication token permissions FAQ</a>.</p> |
 
 <figure><img src="../.gitbook/assets/2.33-account-git-creds-new.png" alt=""><figcaption></figcaption></figure>
 

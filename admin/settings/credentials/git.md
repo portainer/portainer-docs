@@ -15,6 +15,10 @@ To add your Git credentials, from the [Shared credentials](https://docs.portaine
 
 Enter a name for your shared credentials, then select your Git provider or select **Custom** if no options fit your authentication type. Fill in your Username and access token or password.&#x20;
 
+{% hint style="info" %}
+Ensure your token has repository read permissions (scopes), otherwise authentication will fail. See the [Git authentication token permissions FAQ](../../../faqs/getting-started/what-scopes-are-required-for-github-gitlab-and-bitbucket-tokens.md) for more information.
+{% endhint %}
+
 <figure><img src="../../../.gitbook/assets/2.40.0-git-credentials.png" alt=""><figcaption></figcaption></figure>
 
 Once you've entered the relevant details, click **Add credentials** to save the entry.
