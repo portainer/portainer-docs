@@ -388,6 +388,7 @@
     * [Why are stack deployment times slow?](faqs/troubleshooting/stacks-deployments-and-updates/why-are-stack-deployment-times-slow.md)
     * [Environment Variable Management in Docker: .env vs. stack.env](faqs/troubleshooting/stacks-deployments-and-updates/environment-variable-management-in-docker-.env-vs.-stack.env.md)
     * [How do I recover orphaned stacks from a previously deleted environment?](faqs/troubleshooting/stacks-deployments-and-updates/how-do-i-recover-orphaned-stacks-from-a-previously-deleted-environment.md)
+    * [Why is my Portainer backup so large?](faqs/troubleshooting/stacks-deployments-and-updates/why-is-my-portainer-backup-so-large.md)
   * [UI and features](faqs/troubleshooting/ui-and-features/README.md)
     * [Why can't I use the console with my container?](faqs/troubleshooting/ui-and-features/why-cant-i-use-the-console-with-my-container.md)
     * [Exposed ports in the container view redirect me to 0.0.0.0. What can I do?](faqs/troubleshooting/ui-and-features/exposed-ports-in-the-container-view-redirect-me-to-0.0.0.0.-what-can-i-do.md)
