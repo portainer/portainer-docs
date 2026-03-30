@@ -22,7 +22,7 @@ Edge jobs run by modifying the crontab on the underlying host, not in a containe
 
 From the menu select **Edge Jobs** then click **Add Edge job**.
 
-<figure><img src="../../.gitbook/assets/2.15-edge-jobs.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.40.0-add-edge-job.gif" alt=""><figcaption></figcaption></figure>
 
 Give the job a descriptive name then select one of the following options:
 
@@ -31,10 +31,11 @@ Give the job a descriptive name then select one of the following options:
 | Basic Configuration    | Select a date from the calendar. |
 | Advanced Configuration | Write your own `cron` rule.      |
 
-If you select **Recurring Edge job** also enter the **Edge job time**.
+For a basic configuration, enable **Recurring Edge job** and select the **Edge job time** if you want the job to repeat. If you want the job to run only once, leave **Recurring Edge job** disabled and specify the **Scheduled date** instead.\
+For an advanced configuration, enter a **Cron rule** to define the schedule.
 
 {% hint style="info" %}
-The Edge job time is based on the time on the host, not the Portainer Server. Bear this in mind when scheduling jobs across time zones.
+The Edge job schedule date is based on the time on the host, not the Portainer Server. Bear this in mind when scheduling jobs across time zones.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/2.15-edge-jobs-config.png" alt=""><figcaption></figcaption></figure>
@@ -49,4 +50,4 @@ You can also select environments individually in **Target environments**. Click 
 
 <figure><img src="../../.gitbook/assets/2.15-edge-jobs-targetenvs.png" alt=""><figcaption></figcaption></figure>
 
-Once you have made your selections, click **Create edge job** to create and run the job.
+Once you have made your selections, click **Add edge job** to create and run the job.

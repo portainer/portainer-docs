@@ -8,7 +8,7 @@ metaLinks:
 
 From the menu select **Edge Stacks** then click **Add stack**.
 
-<figure><img src="../../../.gitbook/assets/2.20-edge-stacks-add.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.35.0-new-edge-stack-1.gif" alt=""><figcaption></figcaption></figure>
 
 Give the stack a descriptive name then select one or more [Edge Groups](../groups.md).
 
