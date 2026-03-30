@@ -7,6 +7,10 @@ metaLinks:
 
 # What does Portainer's backup include?
 
+{% hint style="info" %}
+If you are concerned that your backup is large, check out [this FAQ](../troubleshooting/stacks-deployments-and-updates/why-is-my-portainer-backup-so-large.md).
+{% endhint %}
+
 Portainer's backup includes the Portainer database as well as any stack files that were deployed using Portainer. The backup does **not** include your environment's containers or their data. The data stored is intended to bring Portainer's configuration back into a known-good state, not the containers that it manages.
 
 The backup contains records which cover configuration, metadata, access control, and feature state. This includes:

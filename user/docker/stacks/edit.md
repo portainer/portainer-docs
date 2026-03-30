@@ -65,7 +65,7 @@ Check **Redeploy** if you would like the stack to redeploy on saving. Click **Sa
 
 #### Detach from Git
 
-If your stack was created from a Git repository, you have the option to detach the stack from the repository. This means you can [edit the stack directly within Portainer](edit.md#editing-a-stack), but it does mean that the stack can't be updated from Git anymore. This action also cannot be reversed.
+If your stack was created from a Git repository, you have the option to detach the stack from the repository. This means you can edit the stack directly within Portainer, but it does mean that the stack can't be updated from Git anymore. This action also cannot be reversed.
 
 {% hint style="info" %}
 Detaching downloads the main compose file for the stack and stores it in Portainer. It does not download any additional compose files or `.env` files that may be contained within the repository.
