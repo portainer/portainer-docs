@@ -89,6 +89,9 @@ Here, you can edit the Compose file for the stack to suit your needs. Using the 
 
 {% hint style="info" %}
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
+
+\
+The web editor will visually highlight invisible special characters such as non-breaking spaces, helping you identify hidden characters that may cause unexpected errors in your configuration.
 {% endhint %}
 
 In this section you can expand the Environment variables section to view and make changes to the stack's environment variables.

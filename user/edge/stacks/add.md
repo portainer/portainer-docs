@@ -39,6 +39,10 @@ Use the web editor to define the services for your deployment.
 
 {% hint style="info" %}
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
+
+
+
+The web editor will visually highlight invisible special characters such as non-breaking spaces, helping you identify hidden characters that may cause unexpected errors in your configuration.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/2.19-edge-stacks-edit-webeditor.png" alt=""><figcaption></figcaption></figure>
