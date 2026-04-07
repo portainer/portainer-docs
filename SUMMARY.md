@@ -439,6 +439,7 @@
 
 ## Advanced Topics <a href="#advanced" id="advanced"></a>
 
+* [Manage Portainer using Terraform](advanced/manage-portainer-using-terraform.md)
 * [CLI configuration options](advanced/cli.md)
 * [App templates](advanced/app-templates/README.md)
   * [Build and host your own app templates](advanced/app-templates/build.md)
