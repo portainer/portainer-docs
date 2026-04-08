@@ -16,4 +16,7 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
-###
+### Manage Portainer using Terraform&#x20;
+
+[Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), allowing you to manage Portainer resources through the Portainer API with Terraform. This lets you create and manage environments, users, teams, stacks, and other Portainer resources as code, and integrate Portainer into your existing Infrastructure as Code and CI/CD workflows.
+
