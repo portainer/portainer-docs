@@ -86,9 +86,11 @@ Here you can specify the machines to use for your cluster. The dropdowns will di
 
 <figure><img src="../../../../.gitbook/assets/2.26-environments-add-kube-create-omni-machines (1).png" alt=""><figcaption></figcaption></figure>
 
-Once you have selected machines here you can tweak the networking configuration for each machine individually if necessary by clicking the cog icon next to the individual machine.
+Once you have selected machines here you can tweak the networking and device settings for each machine individually by clicking the cog icon next to the individual machine in the list.
 
-<figure><img src="../../../../.gitbook/assets/2.26-environments-add-kube-create-omni-machines-customconfig-form.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.41-omni-edit-settings.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../../.gitbook/assets/2.41-omni-device-network-settings.png" alt=""><figcaption></figcaption></figure>
 
 Machines that have had their networking configuration adjusted in this way will have an orange dot on the cog icon:
 
