@@ -21,5 +21,5 @@ The list of cron jobs can be sorted by any of the columns and filtered by Namesp
 
 The list of Kubernetes Jobs can be sorted by any of the columns and filtered by namespace, and the logs for Jobs can be listed by clicking **Logs**. To remove a Job, check the box next to the Job you want to remove then click the **Remove** button.
 
-<figure><img src="../../../.gitbook/assets/2.26-kubernetes-more-resources-jobs-jobs.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-Jobs-list.png" alt=""><figcaption></figcaption></figure>
 
