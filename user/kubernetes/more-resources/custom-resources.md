@@ -19,7 +19,7 @@ Select the relevant tab to switch between Resources and Definitions.
 
 ### Resources
 
-To view Custom Resources, under the Resources tab select a CRD first to see the resources of that type. The table shows each resource with its name, definition, creation time and available actions. Click the resource name to view the full YAML, or click the **Describe** action for a detailed summary equivalent to `kubectl describe`.
+To view Custom Resources, under the Resources tab select a CRD first to see the resources of that type. The table shows each resource with its **name**, **definition name**, the time it was **created** and available **actions**. Click the resource name to view the full YAML, or click the **Describe** action for a detailed summary equivalent to `kubectl describe`.
 
 To remove a Custom Resource, tick the checkbox next to the resource you want to remove and click **Remove** in the top-right corner. You can enable auto-refresh for the table by opening the three-dot menu in the top-right corner, selecting **Auto-refresh**, and setting the refresh rate.
 
