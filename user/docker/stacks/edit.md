@@ -8,9 +8,9 @@ metaLinks:
 
 From the menu select **Stacks** then select the stack you want to inspect or edit.
 
-<figure><img src="../../../.gitbook/assets/2.40.0-stack-page.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-stacks-details.gif" alt=""><figcaption></figcaption></figure>
 
-From the **Stack details** section at the top of the page, you can stop, delete, [migrate the stack](migrate.md) or [create a template from the stack](template.md). If deployed from Git you can [detach the stack from the Git repository](edit.md#detach-from-git).
+From the **Stack details** section at the top of the page, you can stop, delete, [migrate the stack](migrate.md) or [create a template from the stack](template.md). If the stack is deployed from Git you can [edit the Git settings](edit.md#edit-git-settings), [Pull and redeploy](edit.md#pull-and-redeploy) and [detach the stack from the Git repository](edit.md#detach-from-git) directly from this stack details view.
 
 ## Inspect a stack
 
@@ -49,11 +49,11 @@ You can also see the image update indicator for each service in the stack. To re
 
 ### Edit a stack deployed from Git
 
-<figure><img src="../../../.gitbook/assets/2.40.0-stack-details-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-Edit-git-stack.png" alt=""><figcaption></figcaption></figure>
 
 #### Edit Git settings
 
-If the stack was deployed from a Git repository, you can select **Edit Git settings** from the bottom of the Stack details view, allowing you to:
+If the stack was deployed from a Git repository, you can select **Edit Git settings**, allowing you to:
 
 * Edit the [Git repository details](add.md#option-3-git-repository).
 * Configure [GitOps updates](add.md#gitops-updates) or manually pull and redeploy the stack.
@@ -62,6 +62,14 @@ If the stack was deployed from a Git repository, you can select **Edit Git setti
 Check **Redeploy** if you would like the stack to redeploy on saving. Click **Save settings** when you are done.
 
 <figure><img src="../../../.gitbook/assets/2.40.0-Edit-Git-settings-view.png" alt=""><figcaption></figcaption></figure>
+
+#### Pull and redeploy
+
+If the stack was deployed from a Git repository, you can pull the latest commit from the Git repository and redeploy the stack by selecting **Pull and redeploy**.&#x20;
+
+In the resulting dialog box, optionally toggle **Re-pull image and redeploy** to force Docker to pull the latest version of the container images from the registry, even if it already has a copy locally. Select **Update** when you are ready. This may result in service interruption.&#x20;
+
+<figure><img src="../../../.gitbook/assets/2.41-repull-image.png" alt=""><figcaption></figcaption></figure>
 
 #### Detach from Git
 
