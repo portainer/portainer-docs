@@ -30,7 +30,7 @@ This section shows how many nodes are in the cluster and a link to the [cluster 
 
 ## Summary tiles
 
-The remaining dashboard is made up of tiles showing the number of [stacks](stacks/), [services](services/) (for Docker Swarm), [containers](containers/) (including health and running-status metrics), [images](images/) (and how much disk space they consume), [volumes](volumes/) and [networks](networks/), and GPUs (if enabled).
+The remaining dashboard is made up of tiles showing the number of [stacks](stacks/), [services](services/) (for Docker Swarm), [containers](containers/) (including health and running-status metrics), [images](images/) (and how much disk space they consume), [volumes](volumes/) and [networks](networks/), [GPUs](containers/advanced.md#gpu) (if enabled), and [policies](../../admin/environments/policies/).
 
-<figure><img src="../../.gitbook/assets/2.15-docker-dashboard-tiles.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-dashboard.png" alt=""><figcaption></figcaption></figure>
 

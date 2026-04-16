@@ -16,6 +16,6 @@ This section shows the environment name, its URL and port, along with any [tags]
 
 ## Summary tiles
 
-The remaining dashboard is made up of tiles showing the number of [namespaces](namespaces/), [applications](applications/), [services](networking/services.md), [ingresses](networking/ingresses/), [ConfigMaps](configurations/#configmaps), [secrets](configurations/#secrets), [volumes](volumes/), and [policies](/broken/pages/OsMe78cEzUTOQXfxrBNp) that make up the environment.
+The remaining dashboard is made up of tiles showing the number of [namespaces](namespaces/), [applications](applications/), [services](networking/services.md), [ingresses](networking/ingresses/), [ConfigMaps](configurations/#configmaps), [secrets](configurations/#secrets), [volumes](volumes/), and [policies](../../admin/environments/policies/) that make up the environment.
 
 <figure><img src="../../.gitbook/assets/2.38-Dashboard-tiles.png" alt=""><figcaption></figcaption></figure>

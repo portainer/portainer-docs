@@ -1,5 +1,9 @@
 # Manage Portainer using Terraform
 
+{% hint style="success" %}
+Find a full walk through of how to deploy a Docker stack with Terraform in [this how-to article](https://www.portainer.io/how-to/how-to-deploy-a-docker-stack-with-terraform).
+{% endhint %}
+
 Portainer can be automated using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), allowing you to manage Portainer resources through the [Portainer API](../api/docs.md) with Terraform. This lets you create and manage environments, users, teams, stacks, and other Portainer resources as code, and integrate Portainer into your existing Infrastructure as Code and CI/CD workflows.
 
 ### Initial set up and authentication
