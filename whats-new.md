@@ -18,5 +18,12 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ### Manage Portainer using Terraform&#x20;
 
-[Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), allowing you to manage Portainer resources through the Portainer API with Terraform. This lets you create and manage environments, users, teams, stacks, and other Portainer resources as code, and integrate Portainer into your existing Infrastructure as Code and CI/CD workflows.
+[Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), allowing you to manage Portainer resources through the Portainer API with Terraform. This lets you create and manage environments, users, teams, stacks, and other Portainer resources as code, and integrate Portainer into your existing Infrastructure as Code and CI/CD workflows.&#x20;
 
+You can find a full walkthrough of how to deploy a Docker stack with Terraform in our [How-to articles](https://www.portainer.io/how-to/how-to-deploy-a-docker-stack-with-terraform).
+
+### A new look for the home page
+
+The Portainer [home page](user/home/) has a new look. As part of our ongoing UI refresh, environments are now displayed in helpful groupings, making it easier to quickly spot environments that are down or not assigned to a group. You can also sort environments by group, platform, or health.
+
+<figure><img src=".gitbook/assets/2.41-environments-view.png" alt=""><figcaption></figcaption></figure>

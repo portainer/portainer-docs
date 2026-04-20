@@ -87,7 +87,7 @@ In this section you can configure how automatic Edge environment configuration f
 OpenAMT integration is now deprecated and will be removed in a future release.
 {% endhint %}
 
-This section controls the configuration of the [Intel OpenAMT](../../user/home/openamt.md) functionality in Portainer.
+This section controls the configuration of the [Intel OpenAMT](/broken/pages/5ZCkvS2nVsDo03ojOshw) functionality in Portainer.
 
 | Field/Option                         | Overview                                                                                                                                                                                                                                          |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

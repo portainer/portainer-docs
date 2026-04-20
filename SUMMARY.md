@@ -63,7 +63,6 @@
 
 * [Home](user/home/README.md)
   * [Snapshot browsing](user/home/snapshot.md)
-  * [OpenAMT](user/home/openamt.md)
 * [Docker/Swarm/Podman](user/docker/README.md)
   * [Dashboard](user/docker/dashboard.md)
   * [Templates](user/docker/templates/README.md)
