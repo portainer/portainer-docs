@@ -2675,7 +2675,7 @@ August 31, 2023
 * Resolved an issue where the 'change windows setting' option was shifting outside of the div when a user was using a smaller screen
 * Fixed an API issue where the incorrect parameter HasEdgeGroup was being used instead of HasEdgeJob for endpoint /edge\_groups. Users relying on the HasEdgeGroup parameter should now use HasEdgeJob to achieve the intended functionality.
 * Introducing the ability to use environment variables for edge stack.
-* Introducing a new feature: [GitOps Edge Configurations](user/edge/stacks/add.md#gitops-edge-configurations), which simplify edge device configurations with GitOps. Effortlessly manage settings via version-controlled Git repositories for enhanced configuration control.
+* Introducing a new feature: [GitOps Edge Configurations](user/edge/stacks/add/#gitops-edge-configurations), which simplify edge device configurations with GitOps. Effortlessly manage settings via version-controlled Git repositories for enhanced configuration control.
 * Introducing the latest commit ID display in edge stacks. Perfect for GitOps updates, this feature lets you easily track your running version. Stay informed and up-to-date effortlessly.
 * Introduced ability to push per-device configurations effortlessly. Bundle settings in a zip package, Portainer matches and delivers to edge devices. Simplify management, enhance precision.
 * Fixed an issue where the count of edge stack deployments was incorrect when dealing with asynchronous devices exceeding 100.
