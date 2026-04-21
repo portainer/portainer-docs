@@ -115,6 +115,10 @@ When a stack is deployed from Git, Portainer will clone the entire Git repositor
 Portainer's Git deployment functionality does not currently support the use of Git submodules. If your repository includes submodules, they will not be pulled as part of the deployment. We [hope to add support](https://github.com/orgs/portainer/discussions/9767) for submodules in a future release.
 {% endhint %}
 
+{% hint style="warning" %}
+Symlinks within a Git repository are not supported. Repositories containing symlinks will not be deployed successfully.
+{% endhint %}
+
 <figure><img src="../../../.gitbook/assets/stacks-git-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select **Git Repository** then enter information about your Git repo.
