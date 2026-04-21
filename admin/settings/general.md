@@ -168,20 +168,6 @@ Ensure that any Edge Agents have been correctly configured for HTTPS communicati
 
 After making changes to this section, click **Apply Changes**.
 
-## Additional functionality
-
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
-
-This section contains options for enabling and configuring additional functionality within Portainer.
-
-| Field/Option  | Overview                                                                                                                                                                                                                                                                             |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Observability | <p>Toggle this on to enable the Observability feature which is avaliable under <strong>Additional Functionality</strong> in the left hand menu.<br>This feature is currently limited to alerting, with additional observability capabilities to be introduced in future updates.</p> |
-
-<figure><img src="../../.gitbook/assets/2.39-additional-functionality.png" alt=""><figcaption></figcaption></figure>
-
 ## Experimental features
 
 {% hint style="info" %}

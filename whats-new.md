@@ -6,7 +6,7 @@ metaLinks:
 
 # What's new in version 2.41
 
-Portainer version 2.40 includes a number of new fixes and updates. For a full list of changes, please refer to our [release notes](release-notes.md).
+Portainer version 2.41 includes a number of new fixes and updates. For a full list of changes, please refer to our [release notes](release-notes.md).
 
 ## Short Term Support (STS) <a href="#short-term-support-sts" id="short-term-support-sts"></a>
 
@@ -16,19 +16,27 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
-### **Docker image prune**
+### **Docker image prune** ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 Keeping your Docker environments tidy is now easier with the introduction of [image pruning](user/docker/images/prune-dangling-and-unused-images.md). You can now prune directly from the Images view, with the option to remove only dangling images or extend the cleanup to all unused images.&#x20;
 
 <figure><img src=".gitbook/assets/2.41-image-prune.gif" alt=""><figcaption></figcaption></figure>
 
-### Manage Portainer using Terraform&#x20;
+### Manage Portainer using Terraform  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 [Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), allowing you to manage Portainer resources through the Portainer API with Terraform. This lets you create and manage environments, users, teams, stacks, and other Portainer resources as code, and integrate Portainer into your existing Infrastructure as Code and CI/CD workflows.&#x20;
 
 You can find a full walkthrough of how to deploy a Docker stack with Terraform in our [How-to articles](https://www.portainer.io/how-to/how-to-deploy-a-docker-stack-with-terraform).
 
-### A new look for the home page
+### Improvements to Alerting ![](.gitbook/assets/button_be.png)
+
+[Alerting](user/observability/alerting.md) is now generally available, having graduated from being behind the Additional Functionality feature flag. This release brings several improvements to alerts, including clearer rule configuration and the ability to scope rules to specific environment groups.
+
+Notifications can be sent to Slack, Email, or Microsoft Teams. [We'd love to hear your feedback](https://github.com/orgs/portainer/discussions) as we continue to develop this feature.
+
+<figure><img src=".gitbook/assets/2.41-active-alert.png" alt=""><figcaption></figcaption></figure>
+
+### A new look for the home page  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 The Portainer [home page](user/home/) has a new look. As part of our ongoing UI refresh, environments are now displayed in helpful groupings, making it easier to quickly spot environments that are down or not assigned to a group. You can also sort environments by group, platform, or health.
 

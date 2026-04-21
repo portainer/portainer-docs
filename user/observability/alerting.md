@@ -12,27 +12,29 @@ This section is only available in Portainer Business Edition and only accessible
 
 On the Alerting page you can configure alerts for events related to your environments and for Portainer itself. Alerts will display on the Alerting page and notifications can be sent via Slack or Microsoft Teams integration, via email, or by triggering a webhook.
 
-To access Alerting once the feature is enabled under [additional functionality](../../admin/settings/general.md#additional-functionality), click on **Alerting** under **Additional Functionality** in the left menu.
+Click on **Alerting** under **Additional Functionality** in the left menu.
 
-<figure><img src="../../.gitbook/assets/2.34-observability-alerting.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-alerting.gif" alt=""><figcaption></figcaption></figure>
+
+To set up an alert, begin by [configuring the alert manager](alerting.md#settings) in the **Settings** tab, before [turning on any alert rules](alerting.md#rules) that you want to see in the **Rules** tab.
 
 ## Active Alerts
 
-This tab shows any active alerts on your environments.
+This tab shows any active alerts.
 
 | Field/Option | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Alert Name   | The name of the alert that has been triggered, along with the environments that triggered the alert (where relevant).                                                                                                                                                                                                                                                                                                                       |
+| Environment  | The environments that this alert applies to.                                                                                                                                                                                                                                                                                                                                                                                                |
+| Group        | The environment groups that this alert applies to.                                                                                                                                                                                                                                                                                                                                                                                          |
 | Actions      | Actions you can perform on the alert. You can click **Silence** to silence the alert.                                                                                                                                                                                                                                                                                                                                                       |
 | State        | <p>The state of the active alert. This can be one of the following:<br><strong>Active:</strong> The alert is currently active and firing.<br><strong>Firing:</strong> The alert rule is currently firing and has triggered alerts.<br><strong>Inactive:</strong> The alert rule is not currently firing and has not triggered alerts.<br><strong>Pending:</strong> The alert rule is currently firing but has not yet triggered alerts.</p> |
 | Severity     | The severity level of the alert. This will depend on the severity level selected on the corresponding rule (where configurable).                                                                                                                                                                                                                                                                                                            |
 | Message      | The message sent along with the alert.                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Source       | The source of the alert.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Instance     | The instance that has sent the alert.                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Started At   | The date and time the active alert began.                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Last Updated | The date and time the alert status was last updated.                                                                                                                                                                                                                                                                                                                                                                                        |
 
-<figure><img src="../../.gitbook/assets/2.34-observability-alerting-active.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-active-alert.png" alt=""><figcaption></figcaption></figure>
 
 ### Silence an alert
 
@@ -47,7 +49,7 @@ You can choose to temporarily silence an alert, for example when you are aware o
 | Ends At      | The end date and time of the silencing. This is based on the Duration selection above if using a preset option.                      |
 | Matchers     | A list of the criteria this silencing action will match.                                                                             |
 
-<figure><img src="../../.gitbook/assets/2.34-observability-alerting-silence.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-silence-alert.png" alt=""><figcaption></figcaption></figure>
 
 Once you're ready, click the **Create Silence** button.
 
@@ -55,17 +57,19 @@ Once you're ready, click the **Create Silence** button.
 
 This tab lists any silenced alerts. Silenced alerts are active alerts that have been temporarily silenced and will not notify.
 
-| Field/Option | Overview                                                                                                                                                                                          |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Alert Rule   | The name of the rule that has been silenced.                                                                                                                                                      |
-| Status       | The status of the silencing. The `active` status indicates the silence is currently active. The `expired` status indicates the silence is no longer active due to the Ends At time having passed. |
-| Actions      | Click the trash icon to remove the silencing. If the alert is still active it will return to Active Alerts.                                                                                       |
-| Comment      | The comment provided when silencing the alert.                                                                                                                                                    |
-| Created By   | The user that created the silencing.                                                                                                                                                              |
-| Starts At    | The start date and time of the silencing.                                                                                                                                                         |
-| Ends At      | The end date and time of the silencing.                                                                                                                                                           |
+| Field/Option      | Overview                                                                                                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Environment       | The environments that this alert applies to.                                                                                                                                                      |
+| Environment group | The environment groups that this alert applies to.                                                                                                                                                |
+| Alert Rule        | The name of the rule that has been silenced.                                                                                                                                                      |
+| Status            | The status of the silencing. The `active` status indicates the silence is currently active. The `expired` status indicates the silence is no longer active due to the Ends At time having passed. |
+| Actions           | Click the trash icon to remove the silencing. If the alert is still active it will return to Active Alerts.                                                                                       |
+| Comment           | The comment provided when silencing the alert.                                                                                                                                                    |
+| Created By        | The user that created the silencing.                                                                                                                                                              |
+| Starts At         | The start date and time of the silencing.                                                                                                                                                         |
+| Ends At           | The end date and time of the silencing.                                                                                                                                                           |
 
-<figure><img src="../../.gitbook/assets/2.34-observability-alerting-silenced.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-silenced-alerts.png" alt=""><figcaption></figcaption></figure>
 
 ## Rules
 
@@ -86,11 +90,21 @@ At present the list of rules is limited. We plan to extend the available rules h
 | Duration (min) | The period (in minutes) within which the condition and threshold must be true for the rule to be triggered. For rules where this isn't relevant, a dash is listed.               |
 | Created At     | The creation date and time of the rule.                                                                                                                                          |
 
-<figure><img src="../../.gitbook/assets/2.33-observability-alerting-rules.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-rules.png" alt=""><figcaption></figcaption></figure>
 
 ### Editing a rule
 
 Some rules can be edited to suit your needs. To edit an editable rule, click the **Edit** button for the rule in the **Actions** column.
+
+From the rule view, you can view the detail of the rule under the **Info** tab.
+
+<figure><img src="../../.gitbook/assets/2.41-rule-info.png" alt=""><figcaption></figcaption></figure>
+
+The **Attachments** tab shows the environment groups the rule applies to. By default, a rule applies to all relevant environments. To restrict the rule to specific environment groups, select the desired groups and click **Apply changes**. Only rules that apply to environments can be modified in this way.
+
+<figure><img src="../../.gitbook/assets/2.41-attachments.png" alt=""><figcaption></figcaption></figure>
+
+To edit a rule navigate to the **Settings** tab.
 
 {% hint style="info" %}
 For system rules, some fields may be restricted from modification.
@@ -108,7 +122,7 @@ The following fields are available:
 | Severity           | The severity level of the rule.                                                                                                                                     |
 | Enabled            | When toggled on, the rule is enabled.                                                                                                                               |
 
-<figure><img src="../../.gitbook/assets/2.33-observability-alerting-rules-edit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-settings.png" alt=""><figcaption></figcaption></figure>
 
 When you have made your changes, click **Save Rule**.
 
@@ -122,19 +136,19 @@ At present only the `internal` instance is available.
 
 The following fields are displayed:
 
-| Field/Option | Overview                                                                                                                                    |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name         | The name of the alert manager instance.                                                                                                     |
-| Status       | The connection status of the alert manager instance.                                                                                        |
-| Enabled      | Whether the instance is enabled.                                                                                                            |
-| Channels     | The number of notification channels configured in the instance.                                                                             |
-| Actions      | Click Test to test whether the instance is reachable. Click Edit to make changes to the instance configuration and to set up notifications. |
+| Field/Option | Overview                                                                                                                                                                                                                                                          |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name         | The name of the alert manager instance.                                                                                                                                                                                                                           |
+| Status       | The connection status of the alert manager instance.                                                                                                                                                                                                              |
+| Enabled      | Whether the instance is enabled.                                                                                                                                                                                                                                  |
+| Channels     | The number of notification channels configured in the instance.                                                                                                                                                                                                   |
+| Actions      | <p>Click <strong>Test</strong> to test whether the alert manager instance is up and running. Note this does not test the channel connections. <br>Click <strong>Edit</strong> to make changes to the instance configuration and to set up or remove channels.</p> |
 
-<figure><img src="../../.gitbook/assets/2.33-observability-alerting-settings.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-alert-settings.png" alt=""><figcaption></figcaption></figure>
 
 ### Edit an instance
 
-To edit an alert manager instance, click the **Edit** button for the instance in the **Actions** column. Here you can see the Name of the instance and enable or disable it through the toggle. You will also see any notification channels you have added listed here.
+To edit an alert manager instance, click the **Edit** button for the instance in the **Actions** column. Here you can see the **Name** of the instance and enable or disable it through the toggle. You will also see any notification channels you have added listed here.
 
 <figure><img src="../../.gitbook/assets/2.33-observability-alerting-settings-edit.png" alt=""><figcaption></figcaption></figure>
 
@@ -155,7 +169,7 @@ The subsequent options will depend on the selected type.
 
 ### Slack
 
-The following options are available when configuring a Slack notification channel:
+Complete the following fields when configuring a Slack notification channel:
 
 | Field/Option | Overview                                                                                                                                                                     |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -168,7 +182,7 @@ When you have completed the configuration, click **Save Settings**.
 
 ### Email
 
-The following options are available when configuring an email notification channel:
+Complete the following fields when configuring an email notification channel:
 
 | Field/Option       | Overview                                                                                                |
 | ------------------ | ------------------------------------------------------------------------------------------------------- |
@@ -186,7 +200,7 @@ When you have completed the configuration, click **Save Settings**.
 
 ### Webhook
 
-The following options are available when configuring a webhook notification channel:
+Complete the following fields when configuring a webhook notification channel:
 
 | Field/Option | Overview                                      |
 | ------------ | --------------------------------------------- |
@@ -199,7 +213,7 @@ When you have completed the configuration, click **Save Settings**.
 
 ### Microsoft Teams V2
 
-The following options are available when configuring a Microsoft Teams V2 notification channel:
+Complete the following fields when configuring a Microsoft Teams V2 notification channel:
 
 | Field/Option | Overview                                                                                                                                                                                                                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
