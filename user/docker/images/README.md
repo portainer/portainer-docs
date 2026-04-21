@@ -8,7 +8,7 @@ metaLinks:
 
 Images are what is used to build containers. Each image defines the pieces required to build and configure a container and can be reused many times. The **Images** section in Portainer lets you interact with the images in an environment.
 
-<figure><img src="../../../.gitbook/assets/2.15-images-splash.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-images.png" alt=""><figcaption></figcaption></figure>
 
 You can pull images from Docker Hub or any other [registry](../../../admin/registries/add/):
 
@@ -16,7 +16,13 @@ You can pull images from Docker Hub or any other [registry](../../../admin/regis
 [pull.md](pull.md)
 {% endcontent-ref %}
 
-You can also view a list of the images that are currently available in an environment, including their IDs, usage states, tags, sizes and creation dates. There are many other options available:
+The **Images** table provides an overview of all images currently available in an environment, including each image's ID, usage status, tags, size, and creation date.
+
+From this table you can also:
+
+* **Build** a new image
+* **Import** or **Export** an image
+* **Prune** dangling and unused images to reclaim disk space
 
 {% content-ref url="build.md" %}
 [build.md](build.md)
@@ -30,3 +36,6 @@ You can also view a list of the images that are currently available in an enviro
 [export.md](export.md)
 {% endcontent-ref %}
 
+{% content-ref url="prune-dangling-and-unused-images.md" %}
+[prune-dangling-and-unused-images.md](prune-dangling-and-unused-images.md)
+{% endcontent-ref %}

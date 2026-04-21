@@ -103,6 +103,7 @@
     * [Build a new image](user/docker/images/build.md)
     * [Import an image](user/docker/images/import.md)
     * [Export an image](user/docker/images/export.md)
+    * [Prune dangling and unused images](user/docker/images/prune-dangling-and-unused-images.md)
   * [Networks](user/docker/networks/README.md)
     * [Add a new network](user/docker/networks/add.md)
     * [Remove a network](user/docker/networks/remove.md)

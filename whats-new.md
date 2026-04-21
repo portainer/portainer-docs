@@ -16,6 +16,12 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
+### **Docker image prune**
+
+Keeping your Docker environments tidy is now easier with the introduction of [image pruning](user/docker/images/prune-dangling-and-unused-images.md). You can now prune directly from the Images view, with the option to remove only dangling images or extend the cleanup to all unused images.&#x20;
+
+<figure><img src=".gitbook/assets/2.41-image-prune.gif" alt=""><figcaption></figcaption></figure>
+
 ### Manage Portainer using Terraform&#x20;
 
 [Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), allowing you to manage Portainer resources through the Portainer API with Terraform. This lets you create and manage environments, users, teams, stacks, and other Portainer resources as code, and integrate Portainer into your existing Infrastructure as Code and CI/CD workflows.&#x20;
