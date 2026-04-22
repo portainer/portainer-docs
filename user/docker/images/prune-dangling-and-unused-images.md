@@ -13,3 +13,7 @@ On selecting **Prune**, Portainer will by default delete all untagged (dangling)
 <figure><img src="../../../.gitbook/assets/2.41-image-prune-confirm.png" alt=""><figcaption></figcaption></figure>
 
 Press **Continue** to complete the prune. On success, a confirmation dialog will show how much disk space was reclaimed.
+
+{% hint style="info" %}
+If a prune operation reports 0B reclaimed, this is likely because the image layers are still referenced by existing images, or are being retained in the Docker build cache. See this [Docker forum discussion](https://forums.docker.com/t/cant-delete-images-with-docker-prune-but-with-docker-system-prune-and-docker-builder-prune/139267/8) for more detail on this behaviour.
+{% endhint %}
