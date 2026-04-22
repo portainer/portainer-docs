@@ -25,19 +25,19 @@ The **Application details** screen is organized into four sections. The followin
 | Creation         | Shows when the application was created and by whom, as well as how the application was deployed.                                     |
 | Note             | Add a note about the application or edit an existing note.                                                                           |
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-applications-inspect-application.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-application-details.png" alt=""><figcaption></figcaption></figure>
 
 ## Placement tab
 
 Here you'll find information about any placement constraints or preferences that have been defined for the application and how they're being applied.
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-applications-inspect-placement.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-application-placement.png" alt=""><figcaption></figcaption></figure>
 
 ## Events tab
 
 Shows information about application-related events.
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-applications-inspect-events.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-application-events.png" alt=""><figcaption></figcaption></figure>
 
 ## YAML tab
 
@@ -47,7 +47,7 @@ This displays the YAML generated from the application deployment, and lets you e
 Editing your YAML through this section is only available in Portainer Business Edition.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-applications-inspect-yaml.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-application-yaml.png" alt=""><figcaption></figcaption></figure>
 
 Make your edits then click **Apply changes** to update the deployment.
 
@@ -59,28 +59,27 @@ Editing the YAML is not available for resources in namespaces marked as system.
 
 Depending on how the application was deployed, a number of actions can be performed, including:
 
-* [Editing the application](edit.md).
+* [Editing the application](edit.md)
+* Edit the [Git settings](manifest/create.md#repository)
+* Pull and redeploy
 * Perform a rolling restart of the application (Business Edition only).
 * Redeploying the application (terminating all the services and recreating them).
 * Rolling the application back to a previous configuration.
 * Creating a [template](../templates/) from the application.
 
-{% hint style="info" %}
-When using a Git repository, the rolling restart and redeploy options do not re-pull the manifest from the upstream repository. To do this, use the **Pull and update application** button when [editing an application](edit.md#method-1-redeploy-from-git).
-{% endhint %}
-
-<figure><img src="../../../.gitbook/assets/2.17-k8s-applications-inspect-actions.png" alt=""><figcaption><p>Some of the potential actions that may appear for your application</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-application-options.png" alt=""><figcaption><p>Some of the potential actions that may appear for your application</p></figcaption></figure>
 
 ### Configuration details
 
-| Configuration                                | Overview                                                                                                |
-| -------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Accessing the application                    | Shows which ports (if any) are published from the container.                                            |
-| Auto-scaling                                 | Indicates the application's auto-scaling policy.                                                        |
-| Environment variables, ConfigMaps or Secrets | A list of any environment variables, ConfigMaps and secrets that have been defined for the application. |
-| Data persistence                             | A list of the persistent folders and their details.                                                     |
+| Configuration                                | Overview                                                                                                                         |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Git deployment details                       | If your application was deployed from Git, you will see details about the Git deployment within the **Managed by Git** section.  |
+| Accessing the application                    | Shows which ports (if any) are published from the container.                                                                     |
+| Auto-scaling                                 | Indicates the application's auto-scaling policy.                                                                                 |
+| Environment variables, ConfigMaps or Secrets | A list of any environment variables, ConfigMaps and secrets that have been defined for the application.                          |
+| Data persistence                             | A list of the persistent folders and their details.                                                                              |
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-applications-inspect-configdetails.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-application-actions.png" alt=""><figcaption></figcaption></figure>
 
 ## Application containers
 
