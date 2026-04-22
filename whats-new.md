@@ -35,9 +35,3 @@ You can find a full walkthrough of how to deploy a Docker stack with Terraform i
 Notifications can be sent to Slack, Email, or Microsoft Teams. [We'd love to hear your feedback](https://github.com/orgs/portainer/discussions) as we continue to develop this feature.
 
 <figure><img src=".gitbook/assets/2.41-active-alert.png" alt=""><figcaption></figcaption></figure>
-
-### A new look for the home page  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
-
-The Portainer [home page](user/home/) has a new look. As part of our ongoing UI refresh, environments are now displayed in helpful groupings, making it easier to quickly spot environments that are down or not assigned to a group. You can also sort environments by group, platform, or health.
-
-<figure><img src=".gitbook/assets/2.41-environments-view.png" alt=""><figcaption></figcaption></figure>
