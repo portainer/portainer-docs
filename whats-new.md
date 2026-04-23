@@ -20,7 +20,7 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 Keeping your Docker environments tidy is now easier with the introduction of [image pruning](user/docker/images/prune-dangling-and-unused-images.md). You can now prune directly from the Images view, with the option to remove only dangling images or extend the cleanup to all unused images.&#x20;
 
-<figure><img src=".gitbook/assets/2.41-image-prune.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/2.41-docker-prune.gif" alt=""><figcaption></figcaption></figure>
 
 ### Manage Portainer using Terraform  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
