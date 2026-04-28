@@ -280,6 +280,7 @@
   * [Browse a registry](admin/registries/browse.md)
   * [Manage a registry](admin/registries/manage.md)
 * [Licenses](admin/licenses.md)
+* [Recommendations](admin/recommendations.md)
 * [Logs](admin/logs/README.md)
   * [Authentication](admin/logs/authentication.md)
   * [Activity](admin/logs/activity.md)

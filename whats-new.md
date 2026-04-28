@@ -16,6 +16,12 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
+### Recommendations ![](.gitbook/assets/button_be.png)
+
+Introducing Portainer [Recommendations](admin/recommendations.md). This new view will help you get the most out of your Portainer setup by surfacing actionable suggestions when it detects environment issues or Portainer configuration gaps. Each recommendation includes a direct action to take you straight to the relevant area of Portainer to resolve it.
+
+<figure><img src=".gitbook/assets/2.41-recommendations.png" alt=""><figcaption></figcaption></figure>
+
 ### Workflows ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 The new [Workflows](user/workflows.md) dashboard provides a unified view of all Docker, Edge, and Kubernetes workloads deployed from a Git repository. Quickly assess deployment health across your environments and jump directly to any stack or application that needs attention.
@@ -28,12 +34,6 @@ Keeping your Docker environments tidy is now easier with the introduction of [im
 
 <figure><img src=".gitbook/assets/2.41-docker-prune.gif" alt=""><figcaption></figcaption></figure>
 
-### Manage Portainer using Terraform  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
-
-[Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), allowing you to manage Portainer resources through the Portainer API with Terraform. This lets you create and manage environments, users, teams, stacks, and other Portainer resources as code, and integrate Portainer into your existing Infrastructure as Code and CI/CD workflows.&#x20;
-
-You can find a full walkthrough of how to deploy a Docker stack with Terraform in our [How-to articles](https://www.portainer.io/how-to/how-to-deploy-a-docker-stack-with-terraform).
-
 ### Improvements to Alerting ![](.gitbook/assets/button_be.png)
 
 [Alerting](user/alerting.md) is now generally available, having graduated from being behind the Additional Functionality feature flag. This release brings several improvements to alerts, including clearer rule configuration and the ability to scope rules to specific environment groups.
@@ -41,3 +41,9 @@ You can find a full walkthrough of how to deploy a Docker stack with Terraform i
 Notifications can be sent to Slack, Email, or Microsoft Teams. [We'd love to hear your feedback](https://github.com/orgs/portainer/discussions) as we continue to develop this feature.
 
 <figure><img src=".gitbook/assets/2.41-active-alert.png" alt=""><figcaption></figcaption></figure>
+
+### Manage Portainer using Terraform  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+
+[Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), allowing you to manage Portainer resources through the Portainer API with Terraform. This lets you create and manage environments, users, teams, stacks, and other Portainer resources as code, and integrate Portainer into your existing Infrastructure as Code and CI/CD workflows.&#x20;
+
+You can find a full walkthrough of how to deploy a Docker stack with Terraform in our [How-to articles](https://www.portainer.io/how-to/how-to-deploy-a-docker-stack-with-terraform).
