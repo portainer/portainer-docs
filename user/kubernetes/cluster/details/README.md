@@ -42,9 +42,13 @@ This functionality is in beta and only tested with some configurations.
 
 This section lists the nodes in your cluster with information about each node. To view [details of a specific node](node.md), click the name of the node in the list.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/2.27-kubernetes-details-nodes-list.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.40-Nodes-table (1).png" alt=""><figcaption></figcaption></figure>
 
 The **Conditions** column shows any conditions that are currently active on the node. If no conditions are displayed, this indicates the node is healthy. Any active conditions (DiskPressure, MemoryPressure, PIDPressure, NetworkUnavailable) will be displayed for the particular node.
+
+The **Cached images** column shows the number of cached images on each node. Click the displayed number to view a list of those images, including details of the image size and alias count.
+
+<figure><img src="../../../../.gitbook/assets/2.41-Cached-images.png" alt=""><figcaption></figcaption></figure>
 
 To view usage stats for a node, click the stats icon to the right of the node.
 
