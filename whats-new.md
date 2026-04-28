@@ -16,6 +16,12 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
+### Workflows ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+
+The new [Workflows](user/workflows.md) dashboard provides a unified view of all Docker, Edge, and Kubernetes workloads deployed from a Git repository. Quickly assess deployment health across your environments and jump directly to any stack or application that needs attention.
+
+<figure><img src=".gitbook/assets/2.41-gitops-workfows.png" alt=""><figcaption></figcaption></figure>
+
 ### **Docker image prune** ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 Keeping your Docker environments tidy is now easier with the introduction of [image pruning](user/docker/images/prune-dangling-and-unused-images.md). You can now prune directly from the Images view, with the option to remove only dangling images or extend the cleanup to all unused images.&#x20;
@@ -30,7 +36,7 @@ You can find a full walkthrough of how to deploy a Docker stack with Terraform i
 
 ### Improvements to Alerting ![](.gitbook/assets/button_be.png)
 
-[Alerting](user/observability/alerting.md) is now generally available, having graduated from being behind the Additional Functionality feature flag. This release brings several improvements to alerts, including clearer rule configuration and the ability to scope rules to specific environment groups.
+[Alerting](user/alerting.md) is now generally available, having graduated from being behind the Additional Functionality feature flag. This release brings several improvements to alerts, including clearer rule configuration and the ability to scope rules to specific environment groups.
 
 Notifications can be sent to Slack, Email, or Microsoft Teams. [We'd love to hear your feedback](https://github.com/orgs/portainer/discussions) as we continue to develop this feature.
 

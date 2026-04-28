@@ -184,7 +184,7 @@
     * [Add a new container](user/aci/containers/add.md)
     * [View container details](user/aci/containers/details.md)
     * [Remove a container](user/aci/containers/remove.md)
-* [Nomad](user/nomad.md)
+* [Workflows](user/workflows.md)
 * [Edge Compute](user/edge/README.md)
   * [Edge Groups](user/edge/groups.md)
   * [Edge Stacks](user/edge/stacks/README.md)
@@ -198,8 +198,7 @@
   * [Edge Templates](user/edge/templates/README.md)
     * [Application](user/edge/templates/application.md)
     * [Custom](user/edge/templates/custom.md)
-* [Observability](user/observability/README.md)
-  * [Alerting](user/observability/alerting.md)
+* [Alerting](user/alerting.md)
 * [Account settings](user/account-settings.md)
 
 ## Administering Portainer <a href="#admin" id="admin"></a>
@@ -462,7 +461,8 @@
 * [Helm chart configuration options](advanced/helm-chart-configuration-options.md)
 * [Docker roles and permissions](advanced/docker-roles-and-permissions.md)
 * [Kubernetes roles and bindings](advanced/kubernetes-roles-and-bindings.md)
-* [Deprecated and removed features](advanced/deprecated.md)
+* [Deprecated and removed features](advanced/deprecated/README.md)
+  * [Nomad](advanced/deprecated/nomad.md)
 
 ## API
 
