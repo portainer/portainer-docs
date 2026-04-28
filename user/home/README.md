@@ -6,21 +6,34 @@ metaLinks:
 
 # Home
 
-The **Home** page is the first page you will see after logging into Portainer. This page provides an overview of your environments along with vital statistics about each. You can search and filter your list of environments using the options at the top of the list.
+The Home page is the first page you will see after logging into Portainer. It provides a grouped, card-based view of your environments with at-a-glance health and performance metrics. Environments are organized by [groups](../../admin/environments/groups.md) by default, so if you've set up groups, your fleet will be displayed in that structure.
 
-<figure><img src="../../.gitbook/assets/2.32-user-home.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-env-view.png" alt=""><figcaption></figcaption></figure>
 
-Your currently selected environment (if any) will be shown by the **Connected** status on the right. To choose an environment, either click on the tile for the environment or the **Live connect** or **Browse snapshot** button (for [Edge Devices in async mode](snapshot.md)). You can click the pencil icon to edit the environment's connection configuration, and the cog button to go to the environment's settings page (if the environment is directly accessible).
+A header bar above the environment list shows a live breakdown of your fleet by health and calling out any environments that are **unassigned** and therefore do not belong to a group. Clicking any of these segments filters the list, replacing any existing filter or grouping. Select the **x** next to the **Showing:** segment to the right of the header bar to remove any selected filters.
 
-<figure><img src="../../.gitbook/assets/2.32-user-home-buttons.png" alt=""><figcaption></figcaption></figure>
+From this view you can search for specific environments, filtering the list by your search term, and download your [Kubeconfig](../kubernetes/kubeconfig.md) file (if your list has Kubernetes environments).
+
+<figure><img src="../../.gitbook/assets/2.41-search-envs.png" alt=""><figcaption></figcaption></figure>
+
+Each environment is displayed as a card showing the metrics most relevant to that environment type:
+
+* **Containers count** - shown for Docker host environments
+* **Nodes count** - shown for Kubernetes and Docker Swarm environments
+* **CPU and memory usage -** shown for all environment types
+* **Status badge** - displayed next to the environment name; shows **Up/Down** for standard agents and **Heartbeat/Down** for Edge agents
+
+<figure><img src="../../.gitbook/assets/2.41-env-options.png" alt=""><figcaption></figcaption></figure>
+
+To open an environment, click its card. Click the pencil icon to edit the environment's connection configuration, the cog button to go to the environment's settings page (only available if the environment is directly accessible), and the certificate icon to view the mTLS certificate (if applicable).
 
 ## Build information
 
 You can view the build information for your Portainer installation by clicking on the Portainer version number in the bottom left of the UI. This may be helpful when troubleshooting issues with the Portainer support team.
 
-<figure><img src="../../.gitbook/assets/2.32-user-home-buildinfo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-build-info.png" alt="" width="375"><figcaption></figcaption></figure>
 
-In the box that appears you can see the server version, database version, build number and image tag, as well as the versions of the compilation tools, dependencies, and environment variables used to build Portainer.&#x20;
+In the box that appears you can see the server version, database version, build number, image tag, and Git commit, as well as the versions of the compilation tools, dependencies, and environment variables used to build Portainer.
 
 ## Getting help
 

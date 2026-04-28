@@ -16,13 +16,19 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
-### Recommendations ![](.gitbook/assets/button_be.png)
+### A new look for the home page  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+
+The Portainer [home page](user/home/) has a new look. As part of our ongoing UI refresh, environments on the home page are now displayed in helpful groupings, making it easier to spot environments that are down or not assigned to a group. You can also sort environments by group, platform, or health.
+
+<figure><img src=".gitbook/assets/2.41-env-view.png" alt=""><figcaption></figcaption></figure>
+
+### New Recommendations view ![](.gitbook/assets/button_be.png)
 
 Introducing Portainer [Recommendations](admin/recommendations.md). This new view will help you get the most out of your Portainer setup by surfacing actionable suggestions when it detects environment issues or Portainer configuration gaps. Each recommendation includes a direct action to take you straight to the relevant area of Portainer to resolve it.
 
 <figure><img src=".gitbook/assets/2.41-recommendations.png" alt=""><figcaption></figcaption></figure>
 
-### Workflows ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+### New Workflows dashboard ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 The new [Workflows](user/workflows.md) dashboard provides a unified view of all Docker, Edge, and Kubernetes workloads deployed from a Git repository. Quickly assess deployment health across your environments and jump directly to any stack or application that needs attention.
 
