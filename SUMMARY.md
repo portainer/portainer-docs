@@ -409,6 +409,7 @@
     * [What does a 500 error code mean?](faqs/troubleshooting/logs-errors-and-debugging/what-does-a-500-error-code-mean.md)
     * [Why is my console closing after a certain time?](faqs/troubleshooting/logs-errors-and-debugging/why-is-my-console-closing-after-a-certain-time.md)
     * [“Failed logging user activity” error in Portainer](faqs/troubleshooting/logs-errors-and-debugging/failed-logging-user-activity-error-in-portainer.md)
+    * [Portainer fails to start with "invalid url for trusted origin" error](faqs/troubleshooting/logs-errors-and-debugging/portainer-fails-to-start-with-invalid-url-for-trusted-origin-error.md)
   * [Certificates and security](faqs/troubleshooting/certificates-and-security/README.md)
     * [How to enable/disable image Up-to-date indicator](faqs/troubleshooting/certificates-and-security/how-to-enable-disable-image-up-to-date-indicator.md)
     * [How can I use my custom certificate authority (CA) with Portainer?](faqs/troubleshooting/certificates-and-security/how-can-i-use-my-custom-certificate-authority-ca-with-portainer.md)
