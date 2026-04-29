@@ -10,7 +10,118 @@ The following release notes are for the **Business Edition** of Portainer. For *
 
 ## Release 2.41.0 STS
 
-removed feature: microK8s
+April 30, 2026
+
+### **Known issues**
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+**Known issues with Podman support**
+
+* Support for only CentOS 9, Podman 5 rootful
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this release
+
+#### Breaking changes
+
+Changes to the CSRF protection implementation may cause failures when upgrading:
+
+* Portainer fails to start with a fatal log entry like `failed to build server | error="invalid url for trusted origin... trusted_origin: \"portainer.example.com\""`. The new implementation requires each entry in the trusted origins list to be a full URL including scheme (e.g. `https://portainer.example.com`); bare hostnames are no longer accepted.
+* Browser requests return `403 Forbidden` on state-changing actions, with `CSRF check failed` entries in the server logs. This means the browser's origin is not in the trusted origins list and needs to be added.
+
+The previous CSRF implementation can be re-enabled by starting Portainer with the `legacy-csrf` feature flag (`-feat legacy-csrf`). This flag is provided for 2.41 only and is scheduled for removal in 2.42 - [please report any problems](https://github.com/portainer/portainer/issues) so they can be addressed before the flag is removed.
+
+#### Removed features
+
+* Removed MicroK8s cluster provisioning and management integration from the EE server.
+
+#### New and improved features
+
+* Added support for deploying Helm chart edge stacks sourced from Helm repositories and Git repositories.
+* Reworked Docker stack creation and deployment to an async flow for consistent behaviour with Compose.
+* Kubernetes Manifest GitOps stacks can now be edited after deployment — admins can update the Git repository URL, reference, manifest filename, and credentials from the application detail view instead of tearing down and recreating the stack.
+* Added TUI (text-based UI) application support to the Web Console and kubectl shell, including proper terminal resize handling.
+* Added a "Redeploy" button to the Git-backed stack detail view for pulling and redeploying from the repository.
+* Added visible rendering of special and non-printable characters in the web code editor.
+* Added Edit YAML and Describe actions to Services, Jobs, CronJobs, Roles, RoleBindings, ClusterRoles, and ClusterRoleBindings datatables in the Kubernetes UI.
+* Added support for pruning unused Docker images from the Images list, with a confirmation modal.
+* Refreshed the navigation bar and page header styling.
+* Added a registry-access notice on Kubernetes app create/edit and Helm install/upgrade views to guide users to configure registry access.
+* Added a GitOps Workflows page — a new top-level sidebar item that lists every GitOps workflow across environments and edge stacks with a status summary bar, sortable list, and cross-jump to each stack's edit view. The backing API is RBAC-aware: admins see everything; Edge admins see Edge-stack workflows; environment and Kubernetes-namespace operators see workflows scoped to what they manage; standard users see workflows on stacks they can access via team membership.
+* Added custom namespace support when deploying Helm-based edge stacks.
+* Home UI improvements to highlight environment groups.
+* Alerting graduates to GA: agent-side evaluation of Kubernetes alert rules on Edge Standard agents.&#x20;
+* Added Omni install-disk customization in Talos install settings: operators can select the system install disk, set the EPHEMERAL partition size, and optionally enable a User Volume with a size cap. Generates Talos-compatible `VolumeConfig` and `UserVolumeConfig` templates with matching validation and tests.
+* Added the `Hide security-opt for non-administrators` option to the Docker security policy.
+* Added new Recommendations page.
+
+#### Security improvements
+
+* Bumped Go toolchain to 1.26.2 to remediate the following CVEs:
+  * CVE-2026-32280 (crypto/x509 excessive chain-building work in Verify, denial of service)
+  * CVE-2026-32281 (crypto/x509 inefficient policy validation, denial of service)
+  * CVE-2026-32283 (crypto/tls 1.3 key update deadlock, uncontrolled resource consumption)
+  * CVE-2026-33810 (crypto/x509 excluded DNS constraints not applied to wildcard domains in different case)
+* Bumped helm.sh/helm/v4 to v4.1.4 to remediate the following CVEs:
+  * CVE-2026-35204 (plugin version path traversal enables arbitrary file write; GHSA-vmx8-mqv2-9gmg)
+  * CVE-2026-35205 (plugin missing-provenance signature-verification bypass; GHSA-q5jf-9vfq-h4h7)
+* Bumped github.com/moby/spdystream to v0.5.1 to remediate CVE-2026-35469.
+* Bumped github.com/buger/jsonparser to v1.1.2 to remediate GHSA-6g7g-w4f8-9c9x.&#x20;
+* Upgraded the bundled Docker binary from v29.3.0 to v29.4.1 (agent, server-ce, server-ee, compose-unpacker), picking up Go 1.25.8 and 1.25.9 to mitigate the following CVEs:
+  * CVE-2026-25679
+  * CVE-2026-27142
+  * CVE-2026-27139
+  * CVE-2026-32280
+  * CVE-2026-32281
+  * CVE-2026-32283
+  * CVE-2026-32282
+  * CVE-2026-32289
+  * CVE-2026-32288
+
+#### Bug fixes
+
+* Fixed keyword search failing to highlight matches in application and container log views.
+* Fixed several data races in Kubernetes environment detection by switching to transactional code.
+* Fixed a use-after-close data race in the endpoint force-update service.
+* Cached the MOTD on the server to eliminate a banner-related layout shift on page load.
+* Fixed published-port rendering in the Containers list so the icon and port text appear on the same row instead of wrapping to separate lines.
+* Fixed the Container details page rendering as empty when the container reports a healthcheck with an empty Log array (the check now uses `health.Log?.length`).
+* Fixed the Deploy button not re-enabling when editing a running stack's YAML.
+* Reworked the stack update flow to the async model already used for stack create.
+* Fixed a goroutine leak in the Kubernetes pod exec websocket handler.
+* Fixed `InvalidateUserKeyCache` returning an incorrect value.
+* Fixed Git repository errors returning raw HTML by returning a clean error message instead.
+* Fixed a "missing file" error when updating a Git-backed stack's repository URL.
+* Fixed Git credentials not being saved when creating or updating repository-backed stacks.
+* Suppressed noisy error toasts from repository validation queries by honouring the `meta.error` flag.
+* Reduced noisy repository validation requests and fixed assorted errors on the GitOps form.
+* Fixed a data race in Docker service restore caused by a shared handler field.
+* Added a success toast when a stack is deployed.
+* Fixed several potential nil-pointer dereferences across Kubernetes (applications, cronjob, ingress, job, pod, custom resources), LDAP, EKS, and Edge revoke code paths.
+* Fixed the volume dropdown blanking out after selection when creating a container — the selected volume name now stays visible in the control.
+* Fixed kubectl shell issues including closing the terminal on Ctrl+D.
+* Fixed a data race in the portainer-updater container health checker.
+* Fixed a resource leak in the portainer-updater log query helper.
+* Fixed a websocket data race and goroutine leak by adding proper locking around hijacked connections.
+* Fixed Edge stack retry on the agent: the `FirstAction` timestamp was captured once and never reset, causing retries to silently stop working 7 days after the agent first saw a stack. It's now reset on each deployment so retries work for the configured window from the latest action.
+* Fixed Kubernetes CronJob executions showing identical lists for same-named CronJobs across namespaces.
+* Removed the non-functional items-per-page selector from the Kubernetes CronJob executions datatable.
+* Fixed malformed YAML documents in the Kubernetes web editor.
+* Fixed an issue where a modal could outgrow the viewport and not be visible.
+* Adjusted page header padding and spacing, and fixed breadcrumb first-item rendering.
+* Fixed the Docker proxy rejecting valid empty-body requests (e.g. `container start`) as required by the Docker API.
+* Fixed Azure GitOps credentials using the wrong authorization type.
+* Fixed a nil-pointer panic when non-admin users listed webhooks.
+* Fixed Swarm → Kubernetes stack migration hanging on a `/docker/swarm` call when the target environment has no Docker daemon. The migration now skips the Swarm lookup when the target is Kubernetes (passing an `isKubernetesTarget` flag from the form), tolerates an already-existing namespace instead of failing, and correctly captures errors Docker CLI writes to stdout (previously produced 500s with an empty JSON body).
+* Fixed counter-intuitive new-row behaviour and assorted bugs in RBAC policy inline editing.
+* Fixed the policy/environment banner border not wrapping to full screen height in Firefox.&#x20;
+* Aligned license alert and expiration panel styles, and used a consistent contact link.&#x20;
+* Resolved the "content cache must be set" error when using Helm OCI dependencies.&#x20;
+* Updated links in Policies code to point at the correct documentation pages.&#x20;
 
 ## Release 2.40.0 STS
 

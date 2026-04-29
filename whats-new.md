@@ -28,7 +28,7 @@ Introducing Portainer [Recommendations](admin/recommendations.md). This new view
 
 <figure><img src=".gitbook/assets/2.41-recommendations.png" alt=""><figcaption></figcaption></figure>
 
-### New Workflows dashboard ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+### New GitOps Workflows dashboard ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 The new [Workflows](user/workflows.md) dashboard provides a unified view of all Docker, Edge, and Kubernetes workloads deployed from a Git repository. Quickly assess deployment health across your environments and jump directly to any stack or application that needs attention.
 
