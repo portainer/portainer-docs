@@ -1,6 +1,6 @@
 # Portainer fails to start with "invalid url for trusted origin" error
 
-#### Symptoms
+#### Issue
 
 * Portainer fails to start and logs a fatal error such as:
 
@@ -20,7 +20,7 @@ As of Portainer version 2.41, CSRF protection has been migrated from `gorilla/cs
 | `https://portainer.example.com`      | Valid              |
 | `https://portainer.example.com:9443` | Valid              |
 
-#### Resolution
+#### Solution&#x20;
 
 Update all entries in your `PORTAINER_TRUSTED_ORIGINS` configuration (CLI flag or environment variable) to use full URLs with scheme.
 
