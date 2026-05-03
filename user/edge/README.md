@@ -6,6 +6,10 @@ metaLinks:
 
 # Edge Compute
 
+Edge Compute is Portainer's capability set for centrally managing container environments outside of your primary network, for example on remote sites or factory floors.
+
+Edge Agents connect outbound to the Portainer Server, meaning no inbound ports need to be opened on remote devices, improving security and firewall compatibility.
+
 The following sections describe how to manage Edge Compute environments using menu options available in the Portainer Server.
 
 {% hint style="info" %}
