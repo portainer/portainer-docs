@@ -20,8 +20,8 @@ As of Portainer version 2.41, CSRF protection has been migrated from `gorilla/cs
 | `https://portainer.example.com`      | Valid              |
 | `https://portainer.example.com:9443` | Valid              |
 
-#### Solution&#x20;
+#### Solution
 
 Update all entries in your `PORTAINER_TRUSTED_ORIGINS` configuration (CLI flag or environment variable) to use full URLs with scheme.
 
-If you need more time to update your configuration, a `legacy-csrf` feature flag is available in 2.41 to revert to the previous behaviour. Note that this flag will be removed in 2.42.
+If you need more time to update your configuration, a `legacy-csrf` feature flag is available in 2.41 to temporarily revert to `gorilla/csrf`. Note that this flag will be removed in 2.42, at which point the new trusted origins format (full URLs with scheme) will be permanently required - the old hostname format will not be supported going forward.
