@@ -2,6 +2,66 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.33.8 LTS <a href="#release-2.33.6-lts" id="release-2.33.6-lts"></a>
+
+May 7, 2026
+
+### Known issues
+
+#### Known Issues with Edge Environment
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+#### Known issues with Podman support
+
+* Podman environments aren't supported by auto-onboarding script
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+* Support for only CentOS 9, Podman 5 rootful
+
+#### Known issues with Talos clusters managed by Omni
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster. (BE only)
+
+### New in this Release
+
+* Fixed a Docker API proxy authorisation bypass that allowed regular users to circumvent deny-plugin restrictions
+* Changed a default setting to enforce server-side EdgeID on first connection
+* Fixed a path traversal vulnerability in custom template handling
+* Fixed unauthorized access to custom template file contents via a direct API endpoint
+* Removed the option to pass a JWT token as a query string parameter
+* Removed the possibility to clone Git repositories that contain symlinks
+* Fixed a bind mount restriction bypass via `HostConfig.Mounts` during container creation&#x20;
+* Fixed a bind mount restriction bypass during Swarm service creation
+* Fixed a container capabilities and sysctl restriction bypass during Swarm service creation
+* Fixed an error handling condition in the database
+* Added missing return statements to prevent continued execution after failed authorisation checks
+* Fixed an issue where Edge stack deployment retries stopped working
+* Resolved the following CVEs:
+  * CVE-2026-25679&#x20;
+  * CVE-2026-27139&#x20;
+  * CVE-2026-27142
+  * CVE-2026-32280&#x20;
+  * CVE-2026-32281
+  * CVE-2026-32282&#x20;
+  * CVE-2026-32283&#x20;
+  * CVE-2026-32288&#x20;
+  * CVE-2026-32289
+  * CVE-2025-58058&#x20;
+  * CVE-2026-1229
+  * CVE-2026-24051&#x20;
+  * CVE-2026-25934&#x20;
+  * CVE-2026-32285&#x20;
+  * CVE-2026-32952&#x20;
+  * CVE-2026-33186&#x20;
+  * CVE-2026-33762&#x20;
+  * CVE-2026-34165&#x20;
+  * CVE-2026-35206&#x20;
+  * CVE-2026-35469
+  * CVE-2026-39882
+  * CVE-2026-39883
+  * GHSA-3xc5-wrhm-f963
+  * GHSA-xmrv-pmrh-hhx2
+
 ## Release 2.33.7 LTS <a href="#release-2.33.6-lts" id="release-2.33.6-lts"></a>
 
 February 10, 2026

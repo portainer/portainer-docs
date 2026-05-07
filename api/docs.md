@@ -6,10 +6,10 @@ Portainer exposes an HTTP API that you can use to automate everything you do via
 You will need an access token in order to use the Portainer API. If you have not already set up an access token for the API, we have [instructions on how to do so](access.md).
 {% endhint %}
 
-You can find our API documentation at SwaggerHub:
+You can find our API documentation here:
 
-* [Business Edition (BE) 2.33.7 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ee/2.33.7)
-* [Community Edition (CE) 2.33.7 API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.33.7)
+* [Business Edition (BE) 2.33.8 API Documentation](https://api-docs.portainer.io/?edition=ee\&version=2.33.8)&#x20;
+* [Community Edition (CE) 2.33.8 API Documentation](https://api-docs.portainer.io/?edition=ce\&version=2.33.8)
 
 We have also provided some examples of API usage.
 
