@@ -43,7 +43,7 @@ docker volume create portainer_data
 
 Then, download and install the Portainer Server container:
 
-<pre><code><strong>docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:sts
+<pre><code><strong>docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:lts
 </strong></code></pre>
 
 {% hint style="info" %}
@@ -78,7 +78,7 @@ Alternatively, create a `portainer-compose.yaml` file with the following content
 services:
   portainer:
     container_name: portainer
-    image: portainer/portainer-ee:sts
+    image: portainer/portainer-ee:lts
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
