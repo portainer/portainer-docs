@@ -25,7 +25,7 @@ When using Docker Standalone or Podman, you can:
 * View container statistics.
 * Get access to the container's console.
 
-You can also see the image update indicator for each container in the stack. To recheck the image update status for all containers in the stack you can click the reload button next to the search box, or to recheck a single container's image, click the image update indicator icon for that container.&#x20;
+You can also see the image update indicator for each container in the stack. To recheck the image update status for all containers in the stack you can click the reload button next to the search box, or to recheck a single container's image, click the image update indicator icon for that container.
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-containers.png" alt=""><figcaption></figcaption></figure>
 
@@ -41,7 +41,7 @@ When using Docker Swarm, you can:
 * View service statistics.
 * Get access to the service's console.
 
-You can also see the image update indicator for each service in the stack. To recheck the image update status for all services in the stack you can click the Reload image indicators button, or to recheck a single service's image, click the image update indicator icon for that service.&#x20;
+You can also see the image update indicator for each service in the stack. To recheck the image update status for all services in the stack you can click the Reload image indicators button, or to recheck a single service's image, click the image update indicator icon for that service.
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-services.png" alt=""><figcaption></figcaption></figure>
 
@@ -65,9 +65,9 @@ Check **Redeploy** if you would like the stack to redeploy on saving. Click **Sa
 
 #### Pull and redeploy
 
-If the stack was deployed from a Git repository, you can pull the latest commit from the Git repository and redeploy the stack by selecting **Pull and redeploy**.&#x20;
+If the stack was deployed from a Git repository, you can pull the latest commit from the Git repository and redeploy the stack by selecting **Pull and redeploy**.
 
-In the resulting dialog box, optionally toggle **Re-pull image and redeploy** to force Docker to pull the latest version of the container images from the registry, even if it already has a copy locally. Select **Update** when you are ready. This may result in service interruption.&#x20;
+In the resulting dialog box, optionally toggle **Re-pull image and redeploy** to force Docker to pull the latest version of the container images from the registry, even if it already has a copy locally. Select **Update** when you are ready. This may result in service interruption.
 
 <figure><img src="../../../.gitbook/assets/2.41-repull-image.png" alt=""><figcaption></figcaption></figure>
 
@@ -83,7 +83,7 @@ Click **Detach from Git** to detach. You will be asked to confirm the action - c
 
 ### Edit a stack deployed using the Web Editor or uploaded
 
-If the stack was deployed using the [Web Editor](add.md#option-1-web-editor) or [uploaded](add.md#option-2-upload), you will have the option to edit your compose file manually, allowing you to make changes to the configuration and redeploy those changes.&#x20;
+If the stack was deployed using the [Web Editor](add.md#option-1-web-editor) or [uploaded](add.md#option-2-upload), you will have the option to edit your compose file manually, allowing you to make changes to the configuration and redeploy those changes.
 
 To edit a stack, from the menu select **Stacks**, select the stack you want to edit, then select the **Editor** tab.
 
@@ -93,7 +93,7 @@ The Editor tab is only available for stacks that were deployed using the [Web Ed
 
 <figure><img src="../../../.gitbook/assets/2.19-stacks-edit-webeditor.png" alt=""><figcaption></figcaption></figure>
 
-Here, you can edit the Compose file for the stack to suit your needs. Using the **Version** dropdown you can also select a previous version of your stack file (if one exists) to switch back to if required. Selecting a different version from the dropdown will replace the contents of the editor with that of the selected version.&#x20;
+Here, you can edit the Compose file for the stack to suit your needs. Using the **Version** dropdown you can also select a previous version of your stack file (if one exists) to switch back to if required. Selecting a different version from the dropdown will replace the contents of the editor with that of the selected version.
 
 {% hint style="info" %}
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
@@ -106,12 +106,12 @@ In this section you can expand the Environment variables section to view and mak
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-envvars.png" alt=""><figcaption></figcaption></figure>
 
-You can also toggle the stack [webhook](webhooks.md) and retrieve the webhook URL:&#x20;
+You can also toggle the stack [webhook](webhooks.md) and retrieve the webhook URL:
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-webhook.png" alt=""><figcaption></figcaption></figure>
 
 You can choose to **Prune services** if you have made changes that remove some services from the stack.
 
-<figure><img src="../../../.gitbook/assets/2.20-stacks-edit-swarm-prune.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 When you have finished making changes, click **Update the stack**.

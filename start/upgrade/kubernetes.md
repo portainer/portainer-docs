@@ -7,13 +7,13 @@ metaLinks:
 # Updating on Kubernetes
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.41.0 make sure all of the agents are also on version 2.41.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.41.1 make sure all of the agents are also on version 2.41.1.
 {% endhint %}
 
 {% hint style="warning" %}
-Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443`. These instructions will configure Portainer to use both `9443` for HTTPS and `9000` for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update.&#x20;
+Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443`. These instructions will configure Portainer to use both `9443` for HTTPS and `9000` for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update.
 
-Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.&#x20;
+Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -93,7 +93,7 @@ https://downloads.portainer.io/ce-sts/portainer-agent-k8s-nodeport.yaml
 If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by specifying an `AGENT_SECRET` environment variable when starting the Portainer Server container) you must remember to explicitly provide the same secret to your Agent in the same way (as an environment variable) in the YAML when updating your Agent:
 
 `environment:`\
-&#x20; `- AGENT_SECRET: yoursecret`
+`- AGENT_SECRET: yoursecret`
 {% endhint %}
 {% endtab %}
 
@@ -131,12 +131,12 @@ If you have set a custom `AGENT_SECRET` on your Portainer Server instance you mu
 
 `environment:`
 
-&#x20; `- AGENT_SECRET: yoursecret`
+`- AGENT_SECRET: yoursecret`
 {% endhint %}
 {% endtab %}
 {% endtabs %}
 
-Log into Portainer and connect to the Kubernetes environment where Portainer is installed. From the menu select **Applications** then select **Create from manifest**. Toggle **Use namespace(s) specified from manifest** to on, then enter `portainer` in the **Name** field.&#x20;
+Log into Portainer and connect to the Kubernetes environment where Portainer is installed. From the menu select **Applications** then select **Create from manifest**. Toggle **Use namespace(s) specified from manifest** to on, then enter `portainer` in the **Name** field.
 
 {% hint style="warning" %}
 If you used a different name for your Portainer deployment, use that instead.
@@ -182,7 +182,7 @@ kubectl apply -n portainer -f https://downloads.portainer.io/ce-sts/portainer-ag
 If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by specifying an `AGENT_SECRET` environment variable when starting the Portainer Server container) you must remember to explicitly provide the same secret to your Agent in the same way (as an environment variable) in the YAML when updating your Agent:
 
 `environment:`\
-&#x20; `- AGENT_SECRET: yoursecret`
+`- AGENT_SECRET: yoursecret`
 {% endhint %}
 {% endtab %}
 
@@ -220,7 +220,7 @@ If you have set a custom `AGENT_SECRET` on your Portainer Server instance you mu
 
 `environment:`
 
-&#x20; `- AGENT_SECRET: yoursecret`
+`- AGENT_SECRET: yoursecret`
 {% endhint %}
 {% endtab %}
 {% endtabs %}

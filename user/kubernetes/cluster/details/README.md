@@ -9,7 +9,7 @@ metaLinks:
 
 A cluster is a collection of nodes that runs containerized workloads. Portainer lets you keep track of your cluster and its individual nodes, including resource usage and configuration.
 
-From the menu expand the **Cluster** section and select **Details**.&#x20;
+From the menu expand the **Cluster** section and select **Details**.
 
 <figure><img src="../../../../.gitbook/assets/2.41.0-cluster-details.gif" alt=""><figcaption></figcaption></figure>
 
@@ -40,9 +40,9 @@ This functionality is in beta and only tested with some configurations.
 
 ## Nodes
 
-This section lists the nodes in your cluster with information about each node. To view [details of a specific node](node.md), click the name of the node in the list.&#x20;
+This section lists the nodes in your cluster with information about each node. To view [details of a specific node](node.md), click the name of the node in the list.
 
-<figure><img src="../../../../.gitbook/assets/2.40-Nodes-table (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.40-Nodes-table.png" alt=""><figcaption></figcaption></figure>
 
 The **Conditions** column shows any conditions that are currently active on the node. If no conditions are displayed, this indicates the node is healthy. Any active conditions (DiskPressure, MemoryPressure, PIDPressure, NetworkUnavailable) will be displayed for the particular node.
 
@@ -71,4 +71,3 @@ If you would like to define security constraints on the pods in your environment
 {% content-ref url="../security.md" %}
 [security.md](../security.md)
 {% endcontent-ref %}
-

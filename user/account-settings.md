@@ -69,7 +69,7 @@ To add a new credential, click the **Add git credential** button and fill out th
 | Username              | Enter the username, if relevant.                                                                                                                                                                                                                         |
 | Personal Access Token | <p>Enter the personal access token.<br>Ensure your token has repository read permissions. See the <a href="../faqs/getting-started/what-scopes-are-required-for-github-gitlab-and-bitbucket-tokens.md">Git authentication token permissions FAQ</a>.</p> |
 
-<figure><img src="../.gitbook/assets/2.33-account-git-creds-new.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 Once you've entered the relevant details, click **Save git credential** to save the entry.
 

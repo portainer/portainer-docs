@@ -7,22 +7,22 @@ metaLinks:
 
 # Add a Secret
 
-From the menu select **ConfigMaps & Secrets**, ensure the **Secrets** tab is selected, then click **Add with form**.&#x20;
+From the menu select **ConfigMaps & Secrets**, ensure the **Secrets** tab is selected, then click **Add with form**.
 
 {% hint style="info" %}
 Secrets can also be added [using a manifest or Helm chart](../applications/manifest/) by clicking **Create from code**.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/2.40.0-secrets (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.40.0-secrets.png" alt=""><figcaption></figcaption></figure>
 
 Define the secret, using the table below as a guide.
 
-| Field/Option | Overview                                                                                                                            |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Namespace    | Select the namespace where the secret will be saved.                                                                                |
-| Name         | Give the secret a descriptive name.                                                                                                 |
-| Annotations  | You can add annotations to your secret as required by clicking **Add annotation** and filling in the **Key** and **Value** fields.  |
-| Secret Type  | Select from the list of available secret types or select **Custom** to define your own type.                                        |
+| Field/Option | Overview                                                                                                                           |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Namespace    | Select the namespace where the secret will be saved.                                                                               |
+| Name         | Give the secret a descriptive name.                                                                                                |
+| Annotations  | You can add annotations to your secret as required by clicking **Add annotation** and filling in the **Key** and **Value** fields. |
+| Secret Type  | Select from the list of available secret types or select **Custom** to define your own type.                                       |
 
 <figure><img src="../../../.gitbook/assets/2.19-kubernetes-configurations-secrets-add.png" alt=""><figcaption></figcaption></figure>
 

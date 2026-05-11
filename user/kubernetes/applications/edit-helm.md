@@ -26,7 +26,7 @@ In the popup that appears, choose whether to edit using deployment details from 
 If the application was deployed from a Git repository you can view or edit your Git configuration defined during setup.
 
 {% hint style="info" %}
-For more details on the fields you can edit in this view, see the documentation on [setting up a Helm  application from a Git repository](manifest/helm.md#git-repository).
+For more details on the fields you can edit in this view, see the documentation on [setting up a Helm application from a Git repository](manifest/helm.md#git-repository).
 {% endhint %}
 
 A tag showing the **repository** and **reference** indicates whether the current setup is **Valid** or **Invalid**. Click the **Git repository** title to expand the section and edit the details.
@@ -35,7 +35,7 @@ A tag showing the **repository** and **reference** indicates whether the current
 
 You can modify Automatic update options from this view. If **GitOps updates** are enabled, a tag showing the configured update timeframe is displayed next to the title. Click the **Automatic updates** title to expand the section and edit the settings.
 
-<figure><img src="../../../.gitbook/assets/2.35-Edit-git-helm-1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.35-Edit-git-helm-1.png" alt=""><figcaption></figcaption></figure>
 
 You can edit the **Helm chart path** in this view. The specified folder must contain a `Chart.yaml` file.
 
@@ -53,7 +53,7 @@ You can get more information about the Helm values file format in the [official 
 
 Tick the **Upgrade now** box to apply the upgrade immediately, instead of waiting for the next poll or webhook trigger.
 
-<figure><img src="../../../.gitbook/assets/2.35-Edit-git-helm-2 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.35-Edit-git-helm-2.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Edit configuration**. The upgrade will begin, and you'll be returned to the application's details page.
 

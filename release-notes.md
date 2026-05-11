@@ -8,6 +8,27 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.41.1 STS
+
+May 11, 2026
+
+### **Known issues**
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+
+**Known issues with Podman support**
+
+* Support for only CentOS 9, Podman 5 rootful
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this release
+
+* Added Age as a sort option on the Home environments list and made it the default sort order, with "Oldest" (ascending by environment ID) and "Newest" (descending) toggles
+* Fixed the Talos Cluster Details page rendering blank by reverting the Omni cluster phase fields to int32 so they match the frontend OmniClusterPhase / OmniClusterUpgradePhase enum contract
+
 ## Release 2.41.0 STS
 
 April 30, 2026
@@ -54,7 +75,7 @@ The previous CSRF implementation can be re-enabled by starting Portainer with th
 * Added a GitOps Workflows page — a new top-level sidebar item that lists every GitOps workflow across environments and edge stacks with a status summary bar, sortable list, and cross-jump to each stack's edit view. The backing API is RBAC-aware: admins see everything; Edge admins see Edge-stack workflows; environment and Kubernetes-namespace operators see workflows scoped to what they manage; standard users see workflows on stacks they can access via team membership.
 * Added custom namespace support when deploying Helm-based edge stacks.
 * Home UI improvements to highlight environment groups.
-* Alerting graduates to GA: agent-side evaluation of Kubernetes alert rules on Edge Standard agents.&#x20;
+* Alerting graduates to GA: agent-side evaluation of Kubernetes alert rules on Edge Standard agents.
 * Added Omni install-disk customization in Talos install settings: operators can select the system install disk, set the EPHEMERAL partition size, and optionally enable a User Volume with a size cap. Generates Talos-compatible `VolumeConfig` and `UserVolumeConfig` templates with matching validation and tests.
 * Added the `Hide security-opt for non-administrators` option to the Docker security policy.
 * Added new Recommendations page.
@@ -70,7 +91,7 @@ The previous CSRF implementation can be re-enabled by starting Portainer with th
   * CVE-2026-35204 (plugin version path traversal enables arbitrary file write; GHSA-vmx8-mqv2-9gmg)
   * CVE-2026-35205 (plugin missing-provenance signature-verification bypass; GHSA-q5jf-9vfq-h4h7)
 * Bumped github.com/moby/spdystream to v0.5.1 to remediate CVE-2026-35469.
-* Bumped github.com/buger/jsonparser to v1.1.2 to remediate GHSA-6g7g-w4f8-9c9x.&#x20;
+* Bumped github.com/buger/jsonparser to v1.1.2 to remediate GHSA-6g7g-w4f8-9c9x.
 * Upgraded the bundled Docker binary from v29.3.0 to v29.4.1 (agent, server-ce, server-ee, compose-unpacker), picking up Go 1.25.8 and 1.25.9 to mitigate the following CVEs:
   * CVE-2026-25679
   * CVE-2026-27142
@@ -118,10 +139,10 @@ The previous CSRF implementation can be re-enabled by starting Portainer with th
 * Fixed a nil-pointer panic when non-admin users listed webhooks.
 * Fixed Swarm → Kubernetes stack migration hanging on a `/docker/swarm` call when the target environment has no Docker daemon. The migration now skips the Swarm lookup when the target is Kubernetes (passing an `isKubernetesTarget` flag from the form), tolerates an already-existing namespace instead of failing, and correctly captures errors Docker CLI writes to stdout (previously produced 500s with an empty JSON body).
 * Fixed counter-intuitive new-row behaviour and assorted bugs in RBAC policy inline editing.
-* Fixed the policy/environment banner border not wrapping to full screen height in Firefox.&#x20;
-* Aligned license alert and expiration panel styles, and used a consistent contact link.&#x20;
-* Resolved the "content cache must be set" error when using Helm OCI dependencies.&#x20;
-* Updated links in Policies code to point at the correct documentation pages.&#x20;
+* Fixed the policy/environment banner border not wrapping to full screen height in Firefox.
+* Aligned license alert and expiration panel styles, and used a consistent contact link.
+* Resolved the "content cache must be set" error when using Helm OCI dependencies.
+* Updated links in Policies code to point at the correct documentation pages.
 
 ## Release 2.40.0 STS
 
@@ -157,7 +178,7 @@ March 26, 2026
 * Added Helm chart policy support for async Edge agents
 * Added Banner and Custom Change Confirmation policy type
 * Added new policy templates for Fleet Governance Policies
-* Added service account details view&#x20;
+* Added service account details view
 * Added private registries to default service account as imagePullSecrets to automatically allow private image pulls for applications in associated namespaces
 * Improved registry secret display — secrets list and details views now show the associated Portainer registry name
 
@@ -324,7 +345,7 @@ ArrayBuffer] instead of human-readable text
 * Fixed pagination issues in policy groups with large numbers of endpoints
 * Improved policy status performance
 * Updated security constraints port range to be visually wider
-* Fixed an issue where some users were not able to add a Team to a Namespace after the 2.33.3 fix&#x20;
+* Fixed an issue where some users were not able to add a Team to a Namespace after the 2.33.3 fix
 * Fixed incorrect enabled disabled wording in Docker read only policy view
 * Fixed inconsistent styling of the notice about settings being managed by a policy
 * Fixed a data race in the alert manager
@@ -425,7 +446,7 @@ January 29, 2026
 * Upgraded Git library to fix compatibility problem with gitee
 * Removed all the Matomo code to no longer collect user statistics
 * Removed confusing Podman log message in Docker environments
-* Replaced [gopkg.in/yaml.v3](http://gopkg.in/yaml.v3) with [go.yaml.in/yaml/v3](http://go.yaml.in/yaml/v3)&#x20;
+* Replaced [gopkg.in/yaml.v3](http://gopkg.in/yaml.v3) with [go.yaml.in/yaml/v3](http://go.yaml.in/yaml/v3)
 * Ensured the surfacing of Edge Stack file not found errors to the UI
 * Changed the code to avoid creating updater networks
 * Fixed registry selection recall for Stacks pages
@@ -433,7 +454,7 @@ January 29, 2026
 * Fixed a nil pointer dereference error in deleteEndpointGroup()
 * Fixed a nil pointer dereference error in CopyPath()
 * Improved visibility on proxy errors
-* Fixed a problem while renaming stacks on Swarm&#x20;
+* Fixed a problem while renaming stacks on Swarm
 * Fixed a problem that could cause encrypting an existing Portainer database to fail
 * Improved the Azure Container Instance (ACI) experience with a new environment variables section in the creation form and a corresponding table in the instance view
 * Updated the Portainer logo and favicon throughout the application to the new branding
@@ -452,17 +473,17 @@ January 29, 2026
 * Fixed a problem with S3 backups and trailing slashes
 * Added input validation to the `rollbackTo` query parameter
 * Improved the overall experience of the Fleet management feature.
-* Fixed an issue where the number of environments displayed in the policy view are capped at 99.&#x20;
+* Fixed an issue where the number of environments displayed in the policy view are capped at 99.
 * Fixed an issue where the 'Allowed proc mount types' was missing from the policy screen.
 * Fixed an issue where Namespace access table remains empty despite user additions.
 * Improved the overall policy status filter.
 * Fixed an issue where policy setup view incorrectly hides policy types.
-* Improved the policy attachments to allow all environment groups as options.&#x20;
+* Improved the policy attachments to allow all environment groups as options.
 * Improved stability of Kubernetes RBAC resources being applied and restored using a policy.
 * Improved the policy feature with a status field to display the number of applied environments efficiently.
 * Fixed an issue where incorrect environment group policy status may be displayed.
 * Improved the environment summary view to contain list of associated policies.
-* Fixed an issue where detaching a policy did not restore to the previous state.&#x20;
+* Fixed an issue where detaching a policy did not restore to the previous state.
 * Improved the Policy creation experience to include sticky header and footers.
 * Fixed an issue where policy view tries to open tunnel to async edge environment.
 * Improved the policy creation to show the full preview of what will happen when a policy is applied.
@@ -566,7 +587,7 @@ November 27, 2025
 * Fixed a nil pointer dereference when adding team accesses to namespaces in Kubernetes environments
 * Fixed Edge Stacks list inconsistent counts
 * Fixed the Edge Stack relations reconciliation when updating endpoint groups
-* Added the support for Kubernetes CRDs&#x20;
+* Added the support for Kubernetes CRDs
 * Fixed local development build scripts for community contributors with Apple M series chips
 * Improved ECR session management in the Agent
 * Added support for Docker v29
@@ -698,7 +719,7 @@ October 16, 2025
 
 #### Known issues with Talos clusters managed by Omni
 
-* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.&#x20;
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
 
 ### New in this Release
 
@@ -720,7 +741,7 @@ October 16, 2025
 * Added a new automatic patch update feature (disabled by default) to ensure Portainer stays secure and consistent without manual intervention. This mechanism automatically applies patch releases (e.g. _x.x.n_), reducing version fragmentation and improving supportability.
 * Added a help tooltip to the git Authorization type field
 * Fixed an error where updating Portainer in Swarm would lead to portainer-updater being unable to execute the update
-* Resolved the following CVEs:&#x20;
+* Resolved the following CVEs:
   * CVE-2025-7783
   * CVE-2022-37601
   * CVE-2025-22868
@@ -2083,14 +2104,6 @@ As part of the changes on the Kubernetes experiences, some API operations for Ku
   * All logic related to **Kompose** has been removed, following its deprecation in a previous version.
 * **Nomad Support**:
   * All logic related to **Nomad** support has been removed after it was deprecated and subsequently removed from the client in version 2.20.
-
-
-
-
-
-
-
-
 
 ## Release 2.21.2
 
@@ -3782,8 +3795,6 @@ February 7, 2023
 * PUT `/settings`
 * POST `/stacks`
 
-
-
 ## Release 2.16.2
 
 November 21, 2022
@@ -3795,8 +3806,6 @@ November 21, 2022
 ### Portainer
 
 * Fixed issue where the effective viewer is not showing the correct user access role of environments they have access to. [portainer/portainer#8070](https://github.com/portainer/portainer/issues/8070)
-
-
 
 ## Release 2.16.1
 
@@ -3815,8 +3824,6 @@ November 9, 2022
 
 * Fixed license key issue where node counts were not updated when environments are deleted.
 * Fixed issue with JSON formatted logs failing in 2.16.0.
-
-
 
 ## Release 2.16.0
 
@@ -3918,8 +3925,6 @@ October 31, 2022
 * Replaced the logrus logging framework with Zerolog. [portainer/portainer#7935](https://github.com/portainer/portainer/issues/7935)
 * Fixed an issue where new installations that use the develop branch didn't apply the analytics setting correctly. [portainer/portainer#7584](https://github.com/portainer/portainer/issues/7584)
 
-
-
 ## Release 2.15.1
 
 September 16, 2022
@@ -3933,8 +3938,6 @@ September 16, 2022
 
 * Fixed an issue where some colors in dark mode appeared too brown. [portainer/portainer#7616](https://github.com/portainer/portainer/issues/7616)
 * Fixed an issue when using leading or trailing spaces in a password would break the login process. [portainer/portainer#7621](https://github.com/portainer/portainer/issues/7621)
-
-
 
 ## Release 2.15.0
 
@@ -4028,8 +4031,6 @@ September 6, 2022
 
 * Standardized the behavior of Nomad edge environments to be the same as non-Nomad edge environments.
 
-
-
 ## Release 2.14.2
 
 July 26, 2022
@@ -4058,11 +4059,9 @@ July 26, 2022
 * Fixed an issue where auto populate team admins LDAP feature didn't work on upgrade from CE to BE.
 * Resolved an issue where new installs of recent Portainer releases had an extraneous (although innocuous) db version update on restart.
 
-### Edge&#x20;
+### Edge
 
 * Fixed pagination issue on Add edge jobs page for listed environments. [portainer/portainer#7312](https://github.com/portainer/portainer/issues/7312)
-
-
 
 ## Release 2.14.1
 
@@ -4094,8 +4093,6 @@ July 12, 2022
 ### Edge
 
 * Fixed issue where the edge agent could not connect when running Portainer behind a reverse proxy only supporting TLS v1.2. [portainer/portainer#7167](https://github.com/portainer/portainer/issues/7167)
-
-
 
 ## Release 2.14.0
 
@@ -4482,7 +4479,7 @@ November 15, 2021
 * Introduced the ability to remove all workloads of a manifest based deployment: [portainer/portainer#5715](https://github.com/portainer/portainer/issues/5715)
 * Added the ability to display Helm chart deployments in the applications list: [portainer/portainer#5478](https://github.com/portainer/portainer/issues/5478)
 * Added the ability to update and redeploy an application created from a git repository: [portainer/portainer#5486](https://github.com/portainer/portainer/issues/5486)
-* Added support for deploying images stored on private registries for Docker and Kubernetes: [portainer/portainer#4393](https://github.com/portainer/portainer/issues/4393)&#x20;
+* Added support for deploying images stored on private registries for Docker and Kubernetes: [portainer/portainer#4393](https://github.com/portainer/portainer/issues/4393)
 * Introduced the ability to mark and unmark namespaces as system: [portainer/portainer#4389](https://github.com/portainer/portainer/issues/4389)
 * Added functionality to define a manifest as custom template: [portainer/portainer#5489](https://github.com/portainer/portainer/issues/5489)
 * Added the ability to deploy a manifest from a URL: [portainer/portainer#5556](https://github.com/portainer/portainer/issues/5556)

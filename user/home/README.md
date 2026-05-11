@@ -6,15 +6,15 @@ metaLinks:
 
 # Home
 
-The Home page is the first page you will see after logging into Portainer. It provides a grouped, card-based view of your environments with at-a-glance health and performance metrics. Environments are organized by [groups](../../admin/environments/groups.md) by default, so if you've set up groups, your fleet will be displayed in that structure.
+The Home page is the first page you will see after logging into Portainer. It provides a grouped, card-based view of your environments with at-a-glance health and performance metrics.&#x20;
 
-<figure><img src="../../.gitbook/assets/2.41-env-view.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41.1-home.png" alt=""><figcaption></figcaption></figure>
 
-A header bar above the environment list shows a live breakdown of your fleet by health and calling out any environments that are **unassigned** and therefore do not belong to a group. Clicking any of these segments filters the list, replacing any existing filter or grouping. Select the **x** next to the **Showing:** segment to the right of the header bar to remove any selected filters.
+A header bar above the environment list shows a live breakdown of your fleet by health, calling out any environments that are **unassigned** and therefore do not belong to a group. Clicking any of these segments filters the list, replacing any existing filter or grouping.&#x20;
 
-From this view you can search for specific environments, filtering the list by your search term, and download your [Kubeconfig](../kubernetes/kubeconfig.md) file (if your list has Kubernetes environments).
+Environments are sorted by age by default; clicking the **Age** option toggles between newest and oldest. You can also filter your environment list by **Group**, **Platform**, or **Health**. You can search for specific environments by name, which will filter the list by your search term. If your list includes Kubernetes environments, you can also download a combined [Kubeconfig](../kubernetes/kubeconfig.md) file from this panel.
 
-<figure><img src="../../.gitbook/assets/2.41-search-envs.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41.1-filtered-home.png" alt=""><figcaption></figcaption></figure>
 
 Each environment is displayed as a card showing the metrics most relevant to that environment type:
 
@@ -37,6 +37,6 @@ In the box that appears you can see the server version, database version, build 
 
 ## Getting help
 
-From any page in the Portainer UI, you can click on the **question mark icon** in the top right next to your username to access the related section of this documentation. You can also click the **robot icon** to start a conversation with our [AI chatbot](https://portainer.io/ask-the-ai).&#x20;
+From any page in the Portainer UI, you can click on the **question mark icon** in the top right next to your username to access the related section of this documentation. You can also click the **robot icon** to start a conversation with our [AI chatbot](https://portainer.io/ask-the-ai).
 
 <figure><img src="../../.gitbook/assets/2.41-home-buttons.png" alt="" width="285"><figcaption></figcaption></figure>

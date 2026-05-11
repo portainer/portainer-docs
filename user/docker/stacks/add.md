@@ -19,12 +19,10 @@ There are four ways to deploy a new stack from Portainer:
 
 From the menu select **Stacks**, click **Add stack**, give the stack a descriptive name then select **Web editor**. Use the web editor to define the services.
 
-<figure><img src="../../../.gitbook/assets/stacks-web-editor-new-1 (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/stacks-web-editor-new-1.gif" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
-
-
 
 The web editor will visually highlight invisible special characters such as non-breaking spaces, helping you identify hidden characters that may cause unexpected errors in your configuration.
 {% endhint %}
@@ -135,8 +133,6 @@ Any Git-compatible repository should work here. Substitute the details as requir
 | Username              | Enter your Git username.                                                                                                                                                                                                                                                                                                                                                                                               |
 | Personal Access Token | <p>Enter your personal access token or password.<br>Ensure your token has repository read permissions. See the <a href="../../../faqs/getting-started/what-scopes-are-required-for-github-gitlab-and-bitbucket-tokens.md">Git authentication token permissions FAQ</a>.</p>                                                                                                                                            |
 | Save credential       | Check this option to save the credentials entered above for future use under the name provided in the **credential name** field.                                                                                                                                                                                                                                                                                       |
-
-
 
 {% hint style="info" %}
 If you have 2FA configured in GitHub, your passcode is your password.

@@ -14,7 +14,7 @@ metaLinks:
 
 {% stepper %}
 {% step %}
-### 1. Remove Portainer
+#### 1. Remove Portainer
 
 {% hint style="info" %}
 If you changed the default name of the Portainer container, please use that; the command below assumes you used the default name.
@@ -22,9 +22,9 @@ If you changed the default name of the Portainer container, please use that; the
 
 {% stepper %}
 {% step %}
-#### **Stop the Portainer container**
+**Stop the Portainer container**
 
-To remove the Portainer server, first, stop the running Portainer container by executing the following docker stop command:&#x20;
+To remove the Portainer server, first, stop the running Portainer container by executing the following docker stop command:
 
 ```
 docker stop portainer
@@ -44,7 +44,7 @@ docker rm portainer
 {% endstep %}
 
 {% step %}
-### Remove Portainer data volume
+#### Remove Portainer data volume
 
 {% hint style="info" %}
 If you changed the default name of the Portainer data volume, please use that; the command below assumes you used the default name.
@@ -52,7 +52,7 @@ If you changed the default name of the Portainer data volume, please use that; t
 
 **Delete the Portainer data volume**
 
-Ensure Portainer has been removed before attempting to delete the volume using the following command.&#x20;
+Ensure Portainer has been removed before attempting to delete the volume using the following command.
 
 **Note that this command will irreversibly delete your Portainer data volume.**
 
@@ -62,7 +62,7 @@ docker volume rm portainer_data
 {% endstep %}
 
 {% step %}
-### Remove Portainer Agents
+#### Remove Portainer Agents
 
 {% hint style="info" %}
 If you changed the default name of the Portainer Agent container, please use that; the command below assumes you used the default name.
@@ -70,7 +70,7 @@ If you changed the default name of the Portainer Agent container, please use tha
 
 {% stepper %}
 {% step %}
-#### **Stop the Portainer Agent container**
+**Stop the Portainer Agent container**
 
 To remove the Portainer Agent, first, stop the running Portainer Agent container using the following docker stop command:
 
@@ -110,13 +110,13 @@ docker rm portainer_edge_agent
 
 {% stepper %}
 {% step %}
-#### **Remove the Docker Swarm stack**
+**Remove the Docker Swarm stack**
 
 {% hint style="info" %}
 This assumes you followed the official Portainer documentation when deploying the Portainer Stack. If you have Edge Agents, refer to "**Removing The Edge Agent Service**" first.
 {% endhint %}
 
-For Portainer deployments via Docker Swarm and deployed via the Portainer stack, which includes Portainer, Portainer Agent, and the agent network, can be deleted using the following command.&#x20;
+For Portainer deployments via Docker Swarm and deployed via the Portainer stack, which includes Portainer, Portainer Agent, and the agent network, can be deleted using the following command.
 
 ```
 docker stack rm portainer
@@ -136,7 +136,7 @@ docker service rm portainer_edge_agent
 {% step %}
 **Remove the Docker Swarm volume**
 
-The Portainer data volume can now be removed by running the following command.&#x20;
+The Portainer data volume can now be removed by running the following command.
 
 **Please note that this command will permanently delete your Portainer data volume.**
 
@@ -154,7 +154,7 @@ docker volume rm portainer_portainer_data
 
 Portainer deployments created via Kubernetes can be removed by deleting the Portainer namespace. This process is the same whether Portainer was deployed via Helm or YAML.
 
-This will remove all resources under the Portainer namespace, including Edge Agents.&#x20;
+This will remove all resources under the Portainer namespace, including Edge Agents.
 
 {% hint style="info" %}
 By default, the Persistent Volume is not retained when the namespace is removed. If you set your Persistent Volume to retain, you will need to delete it manually.
