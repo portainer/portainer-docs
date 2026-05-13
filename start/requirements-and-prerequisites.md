@@ -57,7 +57,7 @@ The following tables list all of the configurations that we have tested, validat
 | Community 2.33.2 LTS | September 25, 2025 | 27.5.1 28.4.0  | 1.31 1.32 1.33     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.34.0 STS | September 18, 2025 | 27.5.1 28.3.3  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.33.1 LTS | August 27, 2025    | 27.5.1 28.3.2  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.33.0 LTS | August 20, 2025    | 27.5.1 28.3.2  | 1.31 1.32 .133     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
+| Community 2.33.0 LTS | August 20, 2025    | 27.5.1 28.3.2  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 
 {% hint style="info" %}
 If you find an issue with an unlisted configuration, before reporting a bug, update your environment to a valid configuration and try to replicate the issue.

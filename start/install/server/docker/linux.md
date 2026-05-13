@@ -61,7 +61,7 @@ Portainer Server has now been installed. You can check to see whether the Portai
 ```bash
 root@server:~# docker ps
 CONTAINER ID   IMAGE                        COMMAND        CREATED         STATUS         PORTS                                                                                                NAMES
-7963585688a9   portainer/portainer-ee:sts   "/portainer"   8 seconds ago   Up 8 seconds   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp   portainer
+7963585688a9   portainer/portainer-ee:lts   "/portainer"   8 seconds ago   Up 8 seconds   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp   portainer
 ```
 {% endtab %}
 
@@ -107,7 +107,7 @@ Docker Compose will create the necessary resources and deploy Portainer. You can
 ```
 root@server:~# docker ps
 CONTAINER ID   IMAGE                        COMMAND        CREATED         STATUS         PORTS                                                                                                NAMES
-7963585688a9   portainer/portainer-ee:sts   "/portainer"   8 seconds ago   Up 8 seconds   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp   portainer
+7963585688a9   portainer/portainer-ee:lts   "/portainer"   8 seconds ago   Up 8 seconds   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp   portainer
 ```
 {% endtab %}
 {% endtabs %}
