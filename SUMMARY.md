@@ -200,7 +200,8 @@
   * [Edge Templates](user/edge/templates/README.md)
     * [Application](user/edge/templates/application.md)
     * [Custom](user/edge/templates/custom.md)
-* [Alerting](user/alerting.md)
+* [Alerting](user/alerting/README.md)
+  * [Alerting rules](user/alerting/alerting-rules.md)
 * [Account settings](user/account-settings.md)
 
 ## Administering Portainer <a href="#admin" id="admin"></a>

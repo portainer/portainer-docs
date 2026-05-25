@@ -34,7 +34,7 @@ Portainer now includes a dedicated [Sources](user/app-delivery/sources.md) view,
 
 ### Alerting improvements  ![](.gitbook/assets/button_be.png)
 
-[Alerting](user/alerting.md) sees several improvements in this release. Select alert types now support multi-severity thresholds for specifying critical, warning, and info levels, while the rules view gains category-based grouping and filtering. New Kubernetes rules cover etcd, API server, TLS certificate expiry, and NotReady nodes, and alert summaries now surface meaningful per-entity context for faster triage.
+[Alerting](user/alerting/) sees several improvements in this release. Select alert types now support multi-severity thresholds for specifying critical, warning, and info levels, while the rules view gains category-based grouping and filtering. New Kubernetes rules cover etcd, API server, TLS certificate expiry, and NotReady nodes, and alert summaries now surface meaningful per-entity context for faster triage.
 
 <figure><img src=".gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 

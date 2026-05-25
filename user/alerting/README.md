@@ -14,15 +14,15 @@ The Alerting page allows you to configure alerts for events related to your envi
 
 To access, click **Alerting** under **Additional Functionality** in the left menu.
 
-<figure><img src="../.gitbook/assets/2.41-alerting.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-alerting.gif" alt=""><figcaption></figcaption></figure>
 
-To set up an alert, first [configure the alert manager](alerting.md#settings) in the **Settings** tab, then [enable the alert rules you want to apply](alerting.md#rules) in the **Rules** tab.
+To set up an alert, first [configure the alert manager](./#settings) in the **Settings** tab, then [enable the alert rules you want to apply](./#rules) in the **Rules** tab.
 
 ## Active Alerts
 
-This tab shows any active alerts with details including when the alert was first triggered. The **Actions** column contains a **Silence** button, allowing you to temporarily [silence an alert](alerting.md#silence-an-alert).
+This tab shows any active alerts with details including when the alert was first triggered. The **Actions** column contains a **Silence** button, allowing you to temporarily [silence an alert](./#silence-an-alert).
 
-<figure><img src="../.gitbook/assets/2.41-active-alert.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-active-alert.png" alt=""><figcaption></figcaption></figure>
 
 ### Silence an alert
 
@@ -37,13 +37,13 @@ You can choose to temporarily silence an alert, for example when you are aware o
 | Ends At      | The end date and time of the silencing. This is based on the **Duration** selection above if using a preset option.                                 |
 | Matchers     | A list of the criteria this silencing action will match.                                                                                            |
 
-<figure><img src="../.gitbook/assets/2.41-silence-alert.png" alt="" width="544"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-silence-alert.png" alt="" width="544"><figcaption></figcaption></figure>
 
 ## Silenced Alerts
 
 This tab lists any silenced alerts. Silenced alerts are active alerts that have been temporarily muted and will not send notifications. Each entry displays relevant details along with a trash icon in the **Actions** column - click this icon to remove the silence. Once removed, if the alert is still active, it will return to the **Active Alerts** table.
 
-<figure><img src="../.gitbook/assets/2.41-silenced-alerts.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-silenced-alerts.png" alt=""><figcaption></figcaption></figure>
 
 ## Rules
 
@@ -55,11 +55,13 @@ The **Rules** tab is where you define the rules that trigger alerts. Rules are g
 
 All rules are shown by default. You can filter by category by selecting one of the three options.
 
-<figure><img src="../.gitbook/assets/2.42-rules-categories.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.42-rules-categories.png" alt=""><figcaption></figcaption></figure>
 
-Each rule displays the conditions that will trigger an active alert. In the **Actions** column, use the toggle to enable a rule. [Some rules can be customized](alerting.md#editing-a-rule) by clicking the **Edit** button. Note that an [alert manager must be configured](alerting.md#settings) before a rule can be enabled.
+Each rule displays the conditions that will trigger an active alert. In the **Actions** column, use the toggle to enable a rule. [Some rules can be customized](./#editing-a-rule) by clicking the **Edit** button. Note that an [alert manager must be configured](./#settings) before a rule can be enabled.
 
-<figure><img src="../.gitbook/assets/2.42.0-alert-rules.png" alt=""><figcaption></figcaption></figure>
+For a full list of the available rules, see the [alerting rules](alerting-rules.md) page.&#x20;
+
+<figure><img src="../../.gitbook/assets/2.42.0-alert-rules.png" alt=""><figcaption></figcaption></figure>
 
 ### Editing a rule
 
@@ -67,11 +69,11 @@ To edit a rule, click the **Edit** button in the **Actions** column for that rul
 
 From the rule view, the **Info** tab displays the rule's details.
 
-<figure><img src="../.gitbook/assets/2.41-rule-info.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-rule-info.png" alt=""><figcaption></figcaption></figure>
 
 The **Attachments** tab shows which environment groups the rule applies to - by default, a rule applies to all relevant environments. To restrict a rule to specific environment groups, select the desired groups and click **Apply Changes**. This option is only available for rules that apply to environments.
 
-<figure><img src="../.gitbook/assets/2.41-attachments.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-attachments.png" alt=""><figcaption></figcaption></figure>
 
 To modify the rule's configuration, navigate to the **Settings** tab and fill in the following details:
 
@@ -85,7 +87,7 @@ To modify the rule's configuration, navigate to the **Settings** tab and fill in
 | Severity                        | The severity level of the rule.                                                                                                                                                                                                                                                                                                                                                                            |
 | Enabled                         | When toggled on, the rule is enabled.                                                                                                                                                                                                                                                                                                                                                                      |
 
-<figure><img src="../.gitbook/assets/2.42-rule-view-2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.42-rule-view-2.png" alt=""><figcaption></figcaption></figure>
 
 When you have made your changes, click **Save Rule**.
 
@@ -100,13 +102,13 @@ The **Settings** tab lists the alert managers used for sending notifications and
 At present only the `internal` instance is available.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/2.41-alert-settings.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.41-alert-settings.png" alt=""><figcaption></figcaption></figure>
 
 ### Edit alert settings
 
 To edit an alert manager instance, click the **Edit** button in the **Actions** column. Here you can view the instance name, enable or disable it using the toggle, and manage any notification channels.
 
-<figure><img src="../.gitbook/assets/2.33-observability-alerting-settings-edit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.33-observability-alerting-settings-edit.png" alt=""><figcaption></figcaption></figure>
 
 ### Add a notification channel
 
@@ -114,12 +116,12 @@ To add a notification channel, go to the **Settings** tab, click **Edit** next t
 
 Select a **Notification Type** from the dropdown. The available options are:
 
-* [Slack](alerting.md#slack)
-* [Email](alerting.md#email)
-* [Webhook](alerting.md#webhook)
-* [Microsoft Teams V2](alerting.md#microsoft-teams-v2)
+* [Slack](./#slack)
+* [Email](./#email)
+* [Webhook](./#webhook)
+* [Microsoft Teams V2](./#microsoft-teams-v2)
 
-<figure><img src="../.gitbook/assets/2.33-observability-alerting-settings-channels-type.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.33-observability-alerting-settings-channels-type.png" alt=""><figcaption></figcaption></figure>
 
 #### Slack
 
@@ -130,7 +132,7 @@ Complete the following fields when configuring a Slack notification channel:
 | Name         | Specify a name for your notification channel.                                                                                                                                |
 | Webhook URL  | Enter the webhook URL for your Slack integration. You can learn more about how to configure this [in the Slack API documentation](https://api.slack.com/messaging/webhooks). |
 
-<figure><img src="../.gitbook/assets/2.33-observability-alerting-settings-channels-slack.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.33-observability-alerting-settings-channels-slack.png" alt=""><figcaption></figcaption></figure>
 
 When you have completed the configuration, click **Save Settings**.
 
@@ -148,7 +150,7 @@ Complete the following fields when configuring an email notification channel:
 | To Email Address   | Enter the email address you want to send notifications to.                                              |
 | From Email Address | Enter the email address that will appear as the sender for your notification emails.                    |
 
-<figure><img src="../.gitbook/assets/2.34-observability-alerting-notification-email.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.34-observability-alerting-notification-email.png" alt=""><figcaption></figcaption></figure>
 
 When you have completed the configuration, click **Save Settings**.
 
@@ -161,7 +163,7 @@ Complete the following fields when configuring a webhook notification channel:
 | Name         | Specify a name for your notification channel. |
 | Webhook URL  | Enter the URL for your webhook.               |
 
-<figure><img src="../.gitbook/assets/2.33-observability-alerting-settings-channels-webhook.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.33-observability-alerting-settings-channels-webhook.png" alt=""><figcaption></figcaption></figure>
 
 When you have completed the configuration, click **Save Settings**.
 
@@ -174,6 +176,6 @@ Complete the following fields when configuring a Microsoft Teams V2 notification
 | Name         | Specify a name for your notification channel.                                                                                                                                                                                                                             |
 | Webhook URL  | Enter the webhook URL for your Microsoft Teams integration. You can learn more about configuring Microsoft Teams webhooks [in the Microsoft documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook). |
 
-<figure><img src="../.gitbook/assets/2.33-observability-alerting-settings-channels-teams.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.33-observability-alerting-settings-channels-teams.png" alt=""><figcaption></figcaption></figure>
 
 When you have completed the configuration, click **Save Settings**.
