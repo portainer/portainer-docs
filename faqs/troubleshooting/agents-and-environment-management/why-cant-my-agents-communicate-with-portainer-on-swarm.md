@@ -8,14 +8,14 @@ metaLinks:
 # Why can't my agents communicate with Portainer on Swarm?
 
 {% hint style="info" %}
-If you are running on a VMware environment, have a look at this article as well.
+If you are running on a VMware environment, have a look at [this](../../known-issues/known-issues-with-vmware.md) article as well.
 {% endhint %}
 
 You have set up a multi-node Swarm cluster and have deployed the Portainer Agent across the cluster successfully, but the Agent is failing to communicate with the Portainer Server. You may see log messages similar to the following:
 
 `[err: Cannot connect to the Docker daemon at tcp://tasks.portainer_agent:9001. Is the docker daemon running?]`
 
-`[err: Error response from daemon: The agent was unable to contact any other agent located on a manager node]`&#x20;
+`[err: Error response from daemon: The agent was unable to contact any other agent located on a manager node]`
 
 We have most commonly seen this on hosting providers such as Hetzner where the network used to communicate between Swarm nodes uses a MTU that is not 1500. Hetzner's private networking, for example, uses a MTU of 1450.
 
