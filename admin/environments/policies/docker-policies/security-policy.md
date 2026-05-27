@@ -9,7 +9,7 @@ metaLinks:
 
 Define a policy by specifying security constraints for Docker, Swarm, or Podman environments.
 
-To create a security policy, in the menu, under **Environment-related**, select **Policies** then select **Create policy**. From the policy type list, go to **Docker** > **Security**, select either a predefined template or the **Custom** policy, then select **Continue** to start configuring the policy.
+To create a security policy, in the menu, under **Environment-related**, select **Policies** then select **Create policy**. From the policy type list, go to **Docker** > **Security**, select either a [predefined template](security-policy.md#policy-templates) or the **Custom** policy, then select **Continue** to start configuring the policy.
 
 | Field/Option                                       | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,3 +27,11 @@ To create a security policy, in the menu, under **Environment-related**, select 
 <figure><img src="../../../../.gitbook/assets/2.41-docker-security-policy-1.png" alt=""><figcaption></figcaption></figure>
 
 When you have completed the form, click **Create policy.** A confirmation screen displays the changes being made and any existing policy that will be replaced. Click **Confirm** to acknowledge the changes and create the policy.
+
+### Policy templates
+
+Policy templates come with a pre-configured setup that you can adjust before creating the policy. The following Docker, Swarm or Podman security templates are currently available:
+
+| Policy template | Default setup description                                                                                             |
+| --------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Production      | A policy suitable for production Docker environments, prioritizing safety with a high number of restrictions applied. |

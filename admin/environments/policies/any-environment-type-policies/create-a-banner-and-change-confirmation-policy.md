@@ -11,7 +11,7 @@ Define a policy that allows you to display a custom banner with your chosen text
 
 This policy also lets you configure a confirmation prompt that appears whenever a user applies a change to those environments, adding an extra layer of protection for sensitive workloads.
 
-To create a banner and change confirmation policy, in the menu, under **Environment-related**, select **Policies** then select **Create policy**. From the policy type list, navigate to the **All (Kubernetes, Docker, Podman and Swarm)** > **Banner and change confirmation** section, select either a predefined template or the **Custom** policy, then select **Continue** to begin configuring the policy.
+To create a banner and change confirmation policy, in the menu, under **Environment-related**, select **Policies** then select **Create policy**. From the policy type list, navigate to the **All (Kubernetes, Docker, Podman and Swarm)** > **Banner and change confirmation** section, select either a [predefined template](create-a-banner-and-change-confirmation-policy.md#policy-templates) or the **Custom** policy, then select **Continue** to begin configuring the policy.
 
 | Field/Option               | Overview                                                                                                                                                                                                                  |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,3 +32,11 @@ To create a banner and change confirmation policy, in the menu, under **Environm
 ### Example banner styles
 
 <table data-header-hidden><thead><tr><th></th><th data-type="image"></th></tr></thead><tbody><tr><td>Default</td><td><a href="../../../../.gitbook/assets/2.40.0-Default-confirm-box.png">2.40.0-Default-confirm-box.png</a></td></tr><tr><td>Warning</td><td><a href="../../../../.gitbook/assets/2.40-warning-confirmation-box.png">2.40-warning-confirmation-box.png</a></td></tr><tr><td>Error</td><td><a href="../../../../.gitbook/assets/2.40.0-error-confirmation-box.png">2.40.0-error-confirmation-box.png</a></td></tr></tbody></table>
+
+### Policy templates
+
+Policy templates come with a pre-configured setup that you can adjust before creating the policy. The following banner and change confirmation templates are currently available:
+
+| Policy template           | Default setup description                                                                                   |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Production change warning | A policy set up to highlight production environments and prompt users to confirm before making any changes. |
