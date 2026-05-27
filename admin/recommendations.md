@@ -30,7 +30,7 @@ The following are issues or recommendations that can be surfaced:
 
 An offline environment means Portainer has lost contact with that endpoint and cannot deploy, manage, or monitor workloads running there. This may indicate a network issue, a crashed agent, or a problem with the host itself. Because this directly affects operational visibility and control, it is treated as a critical issue requiring prompt attention.
 
-**Action:** Click **View** to navigate to the environment list.
+**Action:** Click **View** to navigate to the [environment list](environments/environments.md).
 
 </details>
 
@@ -44,7 +44,7 @@ An offline environment means Portainer has lost contact with that endpoint and c
 
 Portainer administrators have unrestricted access to all environments, settings, and resources. A high ratio of admins relative to total users is a common sign that role assignment has not been reviewed, and increases the risk of unintended or unauthorised changes. Standard users with environment-level access should be preferred for day-to-day operations.
 
-**Action:** Click **View Users** to navigate to the user list to review and adjust role assignments.
+**Action:** Click **View Users** to navigate to the user list to review and adjust [role assignments](user/roles.md).
 
 </details>
 
@@ -58,7 +58,7 @@ Portainer administrators have unrestricted access to all environments, settings,
 
 Without a governance policy, there are no enforced controls over what can be deployed to those environments. This creates a compliance and security risk, particularly in regulated or production environments.
 
-**Action:** Click **View Groups** to navigate to the groups list.
+**Action:** Click **View Groups** to navigate to the [groups](environments/groups.md) list.
 
 </details>
 
@@ -72,7 +72,7 @@ Without a governance policy, there are no enforced controls over what can be dep
 
 Outdated agents may lack support for newer Portainer features and may present compatibility or security risks. Keeping agents up to date ensures full functionality and supportability.
 
-**Action:** Click **View** to navigate to the environment list.
+**Action:** Click **View** to navigate to the [environment list](environments/environments.md).
 
 </details>
 
@@ -86,7 +86,7 @@ Outdated agents may lack support for newer Portainer features and may present co
 
 Unattached policies have no effect. If a policy was created with the intent of governing environments, it should be assigned to the relevant group. If the policy is no longer needed, consider removing it to keep your configuration clean.
 
-**Action:** Click **View Policies** to navigate to the policy list.
+**Action:** Click **View Policies** to navigate to the [policy](environments/policies/) list.
 
 </details>
 
@@ -94,12 +94,26 @@ Unattached policies have no effect. If a policy was created with the intent of g
 
 <summary>Unassigned environments</summary>
 
-**Severity:** Warning
+**Severity:** Info
 
 **Trigger condition:** At least one environment is in the Unassigned group.
 
 Environments in the Unassigned group are not subject to any governance policy and cannot be managed as part of a logical fleet. Grouping environments is a prerequisite for applying governance and access controls consistently.
 
-**Action:** Click **View Environments** to navigate to the environment list.
+**Action:** Click **View Environments** to navigate to the [environment list](environments/environments.md).
+
+</details>
+
+<details>
+
+<summary>No automated backup configured </summary>
+
+**Severity:** Warning
+
+**Trigger condition:** Portainer has no automated backup scheduled.&#x20;
+
+A scheduled backup protects your Portainer data against accidental loss and corruption.
+
+**Action:** Click **Configure backups** to navigate to the settings menu where you can configure Portainer [backups](settings/general.md#back-up-portainer).
 
 </details>
