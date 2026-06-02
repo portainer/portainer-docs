@@ -58,7 +58,6 @@ Each stream (LTS and STS) will have a number of patch releases throughout it’s
 
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
-| 2.33 LTS     | Aug 2025     | May 2026                   |
 | **2.39 LTS** | **Feb 2026** | **Nov 2026**               |
 | 2.43 STS     | Jun 2026     | Jul 2026                   |
 
@@ -89,6 +88,7 @@ The following releases have passed the end of support date and are no longer mai
 | 2.36 STS     | Nov 2025     | Dec 2025                   |
 | 2.35 STS     | Oct 2025     | Nov 2025                   |
 | 2.34 STS     | Sep 2025     | Oct 2025                   |
+| **2.33 LTS** | **Aug 2025** | **May 2026**               |
 | 2.32 STS     | Jul 2025     | Aug 2025                   |
 | 2.31 STS     | Jun 2025     | Jul 2025                   |
 | 2.30 STS     | May 2025     | Jun 2025                   |
