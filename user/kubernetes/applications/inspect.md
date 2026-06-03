@@ -76,8 +76,8 @@ Depending on how the application was deployed, a number of actions can be perfor
 
 ## Application pods
 
-This section lists the pods running your application. Each pod displays the node it is running on (select to view node details), its IP address, the number of containers, and the creation date. You can restart or delete a pod using the buttons in the top-right corner of its tile. Note that restarting is only available if the connected cluster supports the `pods/restart` subresource.&#x20;
+This section lists the pods running your application. Each pod displays the node it is running on (select to view node details), its IP address, the number of containers, and the creation date. You can delete a pod using the buttons in the top-right corner of its tile. Note that if a pod is configured with the `RestartAllContainers` restart strategy, containers will restart in-place automatically.
 
 Select a pod to expand it and view its containers, including the image in use, the image pull policy, and the current status. From the **Actions** column, you can also access container stats, logs, and the console.
 
-<figure><img src="../../../.gitbook/assets/2.42.0-pod-details.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.43-application-pod.png" alt=""><figcaption></figcaption></figure>
