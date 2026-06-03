@@ -4,7 +4,7 @@
 This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=k8s-create-from-kubeconfig).
 {% endhint %}
 
-[KubeSolo](https://www.portainer.io/solutions/kubesolo) provides a lightweight, single-node Kubernetes distribution designed for edge deployments. With Portainer Business Edition you can deploy a single-node Kubernetes edge environment with KubeSolo on your existing infrastructure directly from the Portainer UI.
+[KubeSolo](https://kubesolo.io/) provides a lightweight, single-node Kubernetes distribution designed for edge deployments. With Portainer Business Edition you can deploy a single-node Kubernetes edge environment with KubeSolo on your existing infrastructure directly from the Portainer UI.
 
 The KubeSolo environment can be deployed as a Standard or Async Edge Agent.
 

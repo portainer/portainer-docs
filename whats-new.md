@@ -10,4 +10,10 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
+#### Add KubeSolo Edge Environments directly from Portainer ![](.gitbook/assets/button_be.png)&#x20;
+
+Business edition users can now [onboard KubeSolo edge environments](admin/environments/add/add-a-kubesolo-edge-environment/) directly through the Portainer Environment Wizard.&#x20;
+
+[KubeSolo](https://kubesolo.io/) is a lightweight, single-node Kubernetes distribution built for edge deployments. The wizard generates the setup command for your environment and walks you through deploying the Portainer Edge Agent - whether you're installing KubeSolo fresh or already have it running and just need to add the agent.
+
 ### &#x20; ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
