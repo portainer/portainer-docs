@@ -1,6 +1,6 @@
 # Shared credentials
 
-In this section you can create and manage credentials that are shared at admin level. Shared Git credentials can be used to connect to Git repositories, while the other shared credentials can be used with our [KaaS provisioning functionality](../../environments/add/kaas/) and our Kubernetes provisioning feature.
+In this section you can create and manage credentials that are shared at admin level. Shared Git credentials can be used to connect to Git repositories, while the other shared credentials can be used with our [KaaS provisioning functionality](/broken/pages/75r7MwmKS8qoApxilQLj) and our Kubernetes provisioning feature.
 
 {% hint style="info" %}
 The Shared credentials feature is only available in Portainer Business Edition.

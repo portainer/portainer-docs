@@ -136,4 +136,4 @@ To add credentials for an AWS account, from the [Shared credentials](./) page cl
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-09-16 at 11.26.12 AM.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on AWS](../../environments/add/kaas/eks.md).
+When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on AWS](/broken/pages/UdX28QXp9EMWRLTxXCyS).

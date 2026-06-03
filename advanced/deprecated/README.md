@@ -8,7 +8,7 @@ This table lists deprecated and removed features and functionality that are no l
 | `--sslcert` and `--sslkey` options (use `--tlscert` and `--tlskey` instead)                                                | 2.33.2     | TBD    |
 | Experimental OpenAI integration                                                                                            | 2.32.0     | 2.33.0 |
 | Published Portainer images being built using the Docker manifest list format in favor of the OCI image index format        | 2.31.0     | TBD    |
-| [Provision KaaS Cluster](../../admin/environments/add/kaas/) feature                                                       | 2.30.0     | TBD    |
+| Provision KaaS Cluster feature                                                                                             | 2.30.0     | 2.43.0 |
 | Create a MicroK8s cluster feature                                                                                          | 2.30.0     | 2.41.0 |
 | `PUT /kubernetes/{id}/namespaces` API endpoint                                                                             | 2.25.0     | TBD    |
 | Nomad support                                                                                                              | 2.20.0     | 2.20.0 |

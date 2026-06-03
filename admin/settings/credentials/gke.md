@@ -16,4 +16,4 @@ To add credentials for a Google Cloud account, from the [Shared credentials](./)
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-09-16 at 11.25.21 AM.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on Google Cloud](../../environments/add/kaas/gke.md).
+When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on Google Cloud](/broken/pages/3CmEV2QbmFjeNt4N2NWJ).

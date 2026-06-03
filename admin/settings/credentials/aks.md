@@ -34,4 +34,4 @@ To add credentials for an Azure account, from the [Cloud settings](./) page clic
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-09-16 at 11.28.22 AM.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on Azure](../../environments/add/kaas/aks.md).
+When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on Azure](/broken/pages/IlX59VfTDMNr2pe7Xhd7).
