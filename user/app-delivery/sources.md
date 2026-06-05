@@ -2,8 +2,6 @@
 
 The GitOps Sources screen provides a central place to view and manage all external sources connected to your Portainer instance, including Git repositories, registries, and GitOps-created authentication tokens.&#x20;
 
-Sources is a read-only view - to create or edit a GitOps configuration, use the [Docker Stacks](../docker/stacks/add.md#option-3-git-repository), [Kubernetes Applications](../kubernetes/applications/manifest/create.md#repository), or [Edge Stacks](../edge/stacks/add/) views.
-
 {% hint style="info" %}
 Supporting resources such as Service Accounts, ConfigMaps, and Secrets deployed via Create from code are not included in the Sources view.
 {% endhint %}
@@ -20,15 +18,25 @@ Each source displays its current connectivity status, calculated at the time of 
 
 ### View a source
 
-Click a source to view its details. The **Settings** tab shows:
+Click a source to view its details.
+
+From this view, you can select **Test Connection** to verify that the source is reachable. You can also **Remove** the source if it is no longer used by any GitOps Workflows.
+
+The **Settings** tab shows:
 
 * The **Connection Details**, including the repository URL, branch, and source type.
 * The **Authentication** method configured for the source.
 * Any **Change Detection** settings.
-* The **Sync Status** including the time of the last sync.
+* The **Sync Status**, including the time of the last sync.
 
-<figure><img src="../../.gitbook/assets/2.42-gitops-sources.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.43-gitops sources-view.png" alt=""><figcaption></figcaption></figure>
 
 The **Workflows** tab lists any [workflows](workflows.md) using this source.
 
 <figure><img src="../../.gitbook/assets/2.42-gitops-sources-workflows.png" alt=""><figcaption></figcaption></figure>
+
+### Edit a source&#x20;
+
+To edit a source, select **Edit** in the top right corner of the **Settings** view. In edit mode, update the connection details or authentication settings as needed, then optionally select **Test Connection** to verify your changes before saving. Select **Save Changes** when done.
+
+<figure><img src="../../.gitbook/assets/2.43-edit-a-source-2.png" alt=""><figcaption></figcaption></figure>

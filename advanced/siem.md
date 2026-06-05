@@ -1,9 +1,5 @@
 # Stream auth and activity logs to an external provider
 
-{% hint style="warning" %}
-This is an experimental feature.
-{% endhint %}
-
 {% hint style="info" %}
 This feature is only available in Portainer Business Edition.
 {% endhint %}

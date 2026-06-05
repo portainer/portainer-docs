@@ -16,4 +16,10 @@ Business edition users can now [onboard KubeSolo edge environments](admin/enviro
 
 [KubeSolo](https://kubesolo.io/) is a lightweight, single-node Kubernetes distribution built for edge deployments. The wizard generates the setup command for your environment and walks you through deploying the Portainer Edge Agent - whether you're installing KubeSolo fresh or already have it running and just need to add the agent.
 
-### &#x20; ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+<figure><img src=".gitbook/assets/2.43-whats-new-kubesolo.png" alt=""><figcaption></figcaption></figure>
+
+### Edit directly from the GitOps sources view ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+
+The [GitOps source](user/app-delivery/sources.md) details view is now editable. Previously read-only, you can now update connection details and authentication settings directly from the Sources view, rather than having to update workflows individually.
+
+<figure><img src=".gitbook/assets/2.43-edit-a-source-3.png" alt=""><figcaption></figcaption></figure>
