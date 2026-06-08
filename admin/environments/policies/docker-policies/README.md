@@ -17,3 +17,7 @@ The following section describes the details of creating a policy for Docker, Swa
 {% content-ref url="registry-policy.md" %}
 [registry-policy.md](registry-policy.md)
 {% endcontent-ref %}
+
+{% content-ref url="cleanup-policy.md" %}
+[cleanup-policy.md](cleanup-policy.md)
+{% endcontent-ref %}

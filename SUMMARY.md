@@ -261,6 +261,7 @@
       * [Create a Docker, Swarm or Podman security policy](admin/environments/policies/docker-policies/security-policy.md)
       * [Create a Docker, Swarm or Podman setup policy](admin/environments/policies/docker-policies/setup-policy.md)
       * [Create a Docker, Swarm or Podman registry policy](admin/environments/policies/docker-policies/registry-policy.md)
+      * [Create a Docker, Swarm or Podman image cleanup policy](admin/environments/policies/docker-policies/cleanup-policy.md)
     * [Policies for all environment types](admin/environments/policies/any-environment-type-policies/README.md)
       * [Create a banner and change confirmation policy](admin/environments/policies/any-environment-type-policies/create-a-banner-and-change-confirmation-policy.md)
   * [Tags](admin/environments/tags.md)
