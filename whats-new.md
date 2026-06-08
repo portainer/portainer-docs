@@ -10,6 +10,12 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
+#### Automated image cleanup policies ![](.gitbook/assets/button_be.png)&#x20;
+
+You can now create an [image cleanup policy](admin/environments/policies/docker-policies/cleanup-policy.md) that automatically removes old and unused Docker images on a schedule, helping you reclaim disk space without manual intervention. Configure age-based or storage-threshold-triggered cleanup, apply policies across environment groups, and protect specific images from removal.&#x20;
+
+
+
 #### Add KubeSolo Edge Environments directly from Portainer ![](.gitbook/assets/button_be.png)&#x20;
 
 Business edition users can now [onboard KubeSolo edge environments](admin/environments/add/add-a-kubesolo-edge-environment/) directly through the Portainer Environment Wizard.&#x20;
