@@ -1,5 +1,9 @@
 # Deploying Portainer behind nginx reverse proxy
 
+{% hint style="info" %}
+Before deploying, review the [security considerations for reverse proxy deployments](./) to understand how Portainer's cookie, CSRF, and CSP behaviour interacts with your proxy configuration.
+{% endhint %}
+
 ## Deploying in a Docker Standalone scenario
 
 To deploy Portainer behind an nginx proxy in a Docker standalone scenario you must use a Docker Compose file. In the following docker-compose.yml you will find the configuration of the nginx proxy and the Portainer Server.

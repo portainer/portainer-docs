@@ -1,5 +1,9 @@
 # Deploying Portainer behind Traefik Proxy
 
+{% hint style="info" %}
+Before deploying, review the [security considerations for reverse proxy deployments](./) to understand how Portainer's cookie, CSRF, and CSP behaviour interacts with your proxy configuration.
+{% endhint %}
+
 [Traefik Proxy](https://traefik.io/traefik/) is a reverse proxy and load balancing solution focused on micro services.
 
 ## Deploying in a Docker Standalone scenario
