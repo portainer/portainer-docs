@@ -15,12 +15,12 @@ A `Secure` cookie is silently dropped by the browser if the browser-to-proxy con
 The proxy must make Portainer's view of the connection scheme match what the browser is actually using. If the browser connects to the proxy over HTTP, do not forward `X-Forwarded-Proto: https` to Portainer, and do not connect to Portainer over TLS unless you also upgrade the browser-facing connection to HTTPS.
 
 {% hint style="info" %}
-A common misconfiguration is a setup where the browser connects to the proxy over HTTP on port 80, but the proxy forwards to Portainer over HTTPS on port 9443. In this case, Portainer sets `Secure` cookies, the browser discards them, and login fails.&#x20;
+A common misconfiguration is a setup where the browser connects to the proxy over HTTP on port 80, but the proxy forwards to Portainer over HTTPS on port 9443. In this case, Portainer sets `Secure` cookies, the browser discards them, and login fails.
 {% endhint %}
 
 ### CSRF protection and host forwarding
 
-CSRF protection is always enabled. Portainer validates incoming requests by comparing the `Origin` header to the `Host` header. If these don't match, the request is rejected with a 403.
+CSRF protection is always enabled. Portainer uses Go's cross-origin protection, which primarily checks the `Sec-Fetch-Site` header (supported by all major browsers since 2023). For older browsers, it falls back to comparing the hostname in the `Origin` header against the `Host` header. Requests without either header are assumed to be same-origin or non-browser requests and are allowed. If the headers are present but don't match, the request is rejected with a 403.
 
 When configuring your proxy, forward the full host as the browser sent it, including any non-standard port. In nginx, use `$http_host` rather than `$host`:
 
@@ -30,17 +30,21 @@ When configuring your proxy, forward the full host as the browser sent it, inclu
 If your public-facing origin cannot be inferred from the forwarded headers, for example, if the proxy rewrites the host, you can explicitly trust an origin using the `--trusted-origins` flag or the `TRUSTED_ORIGINS` environment variable:
 
 ```
---trusted-origins https://portainer.yourdomain.com
+--trusted-origins https://portainer.yourdomain.com,https://example.com
+```
+
+Trusted origins can also include custom ports and IP addresses:
+
+```
+--trusted-origins https://portainer.yourdomain.com:9443
 ```
 
 ### Recommended forwarded headers
 
-Set the following headers in your proxy configuration to ensure Portainer correctly detects the client IP and connection scheme:
+Set the following headers in your proxy configuration to ensure Portainer correctly detects the connection scheme:
 
 ```
-X-Forwarded-For: <client-ip>
 X-Forwarded-Proto: http   # or https, matching the browser-facing scheme
-X-Real-IP: <client-ip>
 Host: $http_host
 ```
 
