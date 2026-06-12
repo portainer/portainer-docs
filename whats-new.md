@@ -10,13 +10,19 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
-#### Automated image cleanup policies ![](.gitbook/assets/button_be.png)&#x20;
+### Automated image cleanup policies ![](.gitbook/assets/button_be.png)&#x20;
 
-You can now create an [image cleanup policy](admin/environments/policies/docker-policies/cleanup-policy.md) that automatically removes old and unused Docker images on a schedule, helping you reclaim disk space without manual intervention. Configure age-based or storage-threshold-triggered cleanup, apply policies across environment groups, and protect specific images from removal.&#x20;
+You can now create an [image cleanup policy](admin/environments/policies/docker-policies/cleanup-policy.md) that automatically removes old and unused Docker images on a schedule, helping you reclaim disk space without manual intervention. Configure age-based or storage-threshold-triggered cleanup and protect specific images from removal.&#x20;
 
+<figure><img src=".gitbook/assets/2.43-whats-new-docker-cleanup.png" alt=""><figcaption></figcaption></figure>
 
+### Native Kubernetes RBAC support ![](.gitbook/assets/button_be.png)&#x20;
 
-#### Add KubeSolo Edge Environments directly from Portainer ![](.gitbook/assets/button_be.png)&#x20;
+[Kubernetes RBAC policies](admin/environments/policies/kubernetes-policies/kubernetes-rbac-policy.md) now include a native Kubernetes permission model as an additional option alongside the existing legacy Portainer privileges model. With native Kubernetes RBAC, permissions accumulate across cluster, team, and namespace roles, aligning with standard Kubernetes expectations. This is the recommended option for new deployments.
+
+<figure><img src=".gitbook/assets/2.43-whats-new-k8-policy.png" alt=""><figcaption></figcaption></figure>
+
+### Add KubeSolo Edge Environments directly from Portainer ![](.gitbook/assets/button_be.png)&#x20;
 
 Business edition users can now [onboard KubeSolo edge environments](admin/environments/add/add-a-kubesolo-edge-environment/) directly through the Portainer Environment Wizard.&#x20;
 
