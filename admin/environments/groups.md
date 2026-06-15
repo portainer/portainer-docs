@@ -51,7 +51,7 @@ To add or view access, locate the environment group you want to give users acces
 
 To add access, select the users or teams you want to add using the dropdown. Then use the **Role** dropdown to select the role you want this user or team to have.
 
-<figure><img src="../../.gitbook/assets/2.20-environments-access-groups-create.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.43-groups-2.png" alt=""><figcaption></figcaption></figure>
 
 Once all have been selected, click **Create access**.
 
@@ -63,7 +63,7 @@ When you no longer need a group, locate the group you want to delete from the **
 Removing a group will not delete environments and users in that group. However, it may change the environments accessible to users who have their access assigned via a group.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/2.43-delete-group.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.43-groups-1.png" alt=""><figcaption></figcaption></figure>
 
 ## Manage policies of a group
 
