@@ -35,3 +35,9 @@ Business edition users can now [onboard KubeSolo edge environments](admin/enviro
 The [GitOps source](user/app-delivery/sources.md) details view is now editable. Previously read-only, you can now update connection details and authentication settings directly from the Sources view, rather than having to update workflows individually.
 
 <figure><img src=".gitbook/assets/2.43-edit-a-source-3.png" alt=""><figcaption></figcaption></figure>
+
+### SSRF mitigation  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+
+Portainer now includes built-in SSRF mitigation. A [new setting](admin/settings/general.md#ssrf) lets you define an allowlist of permitted proxy destinations and choose how Portainer responds to requests outside that list - blocking them (enforce mode), logging them (audit mode), or taking no action.
+
+<figure><img src=".gitbook/assets/2.43-SSRF.png" alt=""><figcaption></figcaption></figure>
