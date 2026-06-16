@@ -8,17 +8,13 @@ Welcome to Portainer's official documentation site.
 
 ## About Portainer
 
-**Portainer Business Edition (BE)** is our product for businesses and organizations. With features including [Role-Based Access Control](admin/user/roles.md), [registry management](admin/registries/browse.md), and [dedicated support](./#getting-support), Portainer BE is a powerful toolset that allows you to easily build and manage containers in Kubernetes, Docker, Docker Swarm, Podman and Azure ACI.
+**Portainer Business Edition (BE)** is our product for businesses and organizations. With features including [Role-Based Access Control](admin/user/roles.md), [registry management](admin/registries/browse.md), and [dedicated support](./#getting-support), Portainer BE is a powerful toolset that allows you to easily build and manage containers in Kubernetes, Docker, Docker Swarm, Podman and Azure ACI. A license key is required to install and use Portainer BE - you can [request three nodes free](https://www.portainer.io/get-a-license) or [purchase a license](https://www.portainer.io/pricing).
 
-**Portainer Community Edition (CE)** is our free, open source option for home users and hobbyists. CE supports Kubernetes, Docker, Docker Swarm, and Azure ACI, and is best suited for personal projects and home lab use.
-
-{% hint style="info" %}
-Portainer Business Edition requires a license key to install and use. If you don't currently have a license key, you can [request three nodes free](https://www.portainer.io/get-a-license) of Portainer Business Edition or [purchase a license](https://www.portainer.io/pricing).
-{% endhint %}
+**Portainer Community Edition (CE)** is our free, open source option for home users and hobbyists. CE does not include all the features available in Business Edition - for a detailed comparison, [see our website](https://www.portainer.io/features).
 
 Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
 
-Our team is here to help you on your journey. Business customers can get help through our [business support channels](./#business-edition-customers), and community and five/three nodes free users can get assistance through our [community support channels](./#community-edition-five-three-node-free-and-home-and-student-users).
+Our team is here to help you on your journey. Business customers can get help through our [business support channels](./#business-edition-customers), and Community and free tier users can get assistance through our [community support channels](./#community-edition-five-three-node-free-and-home-and-student-users).
 
 ## Documentation
 
