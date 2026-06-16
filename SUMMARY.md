@@ -433,8 +433,8 @@
   * [Environments not loading with Docker Engine 29.0.0](faqs/known-issues/environments-not-loading-with-docker-engine-29.0.0.md)
   * [Docker Compose files including build steps fail](faqs/known-issues/docker-compose-files-including-build-steps-fail.md)
 * [Getting support](faqs/getting-support/README.md)
-  * [How to get support for Community Edition and 5 Nodes Free Users](faqs/getting-support/how-to-get-support-for-community-edition-and-5-nodes-free-users.md)
   * [How to get support for Business Edition Customers with a subscription](faqs/getting-support/how-to-get-support-for-business-edition-customers-with-a-subscription.md)
+  * [How to get support for Community Edition and 5 Nodes Free Users](faqs/getting-support/how-to-get-support-for-community-edition-and-5-nodes-free-users.md)
   * [Which versions of Portainer do you provide support for?](faqs/getting-support/which-versions-of-portainer-do-you-provide-support-for.md)
 
 ## Advanced Topics <a href="#advanced" id="advanced"></a>

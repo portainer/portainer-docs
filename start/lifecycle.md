@@ -87,6 +87,7 @@ The following releases have passed the end of support date and are no longer mai
 
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
+| 2.42 STS     | May 2026     | June 2026                  |
 | 2.41 STS     | Apr 2026     | May 2026                   |
 | 2.40 STS     | Mar 2026     | Apr 2026                   |
 | 2.38 STS     | Jan 2026     | Feb 2026                   |
