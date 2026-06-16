@@ -102,6 +102,10 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% hint style="info" %}
 If you need to access Portainer via HTTP on port `30777`, remove the `--set tls.force=true` option.
 {% endhint %}
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Expose via Ingress" %}
@@ -122,6 +126,10 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
 {% hint style="info" %}
 If you need to access Portainer via HTTP, remove the `--set tls.force=true` option.
 {% endhint %}
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Expose via Load Balancer" %}
@@ -140,6 +148,10 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 
 {% hint style="info" %}
 If you need to access Portainer via HTTP on port `9000`, remove the `--set tls.force=true` option.
+{% endhint %}
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
 {% endhint %}
 {% endtab %}
 {% endtabs %}

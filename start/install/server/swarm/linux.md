@@ -52,6 +52,10 @@ docker stack deploy -c portainer-agent-stack.yml portainer
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-docker-swarm) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
 {% endhint %}
 
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+{% endhint %}
+
 Portainer Server and the Agents have now been installed. You can check to see whether the Portainer Server and Agent containers have started by running `docker ps`:
 
 ```

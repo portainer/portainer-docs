@@ -335,6 +335,7 @@
   * [Does Portainer support containerd?](faqs/installing/does-portainer-support-containerd.md)
   * ["Your Portainer instance has timed out for security purposes" error fix](faqs/installing/your-portainer-instance-has-timed-out-for-security-purposes-error-fix.md)
   * [Can I use internal authentication and external authentication at the same time?](faqs/installing/can-i-use-internal-authentication-and-external-authentication-at-the-same-time.md)
+  * [Can I skip or customize the setup token for first-time setup and restore?](faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md)
 * [Upgrading and downgrading](faqs/upgrading/README.md)
   * [How do I upgrade Portainer to the latest version?](faqs/upgrading/how-do-i-upgrade-portainer-to-the-latest-version.md)
   * [Can I upgrade from Portainer Community Edition to Portainer Business Edition?](faqs/upgrading/can-i-upgrade-from-portainer-community-edition-to-portainer-business-edition.md)

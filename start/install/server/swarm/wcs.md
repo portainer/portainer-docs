@@ -69,6 +69,10 @@ docker stack deploy --compose-file=portainer-windows-stack.yml portainer
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-docker-swarm) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
 {% endhint %}
 
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+{% endhint %}
+
 ## Logging In
 
 Now that the installation is complete, you can log into your Portainer Server instance by opening a web browser and going to:

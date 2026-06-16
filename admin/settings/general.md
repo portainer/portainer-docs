@@ -324,9 +324,19 @@ Once the fields are complete, select **Back up now** to immediately start a back
 
 Restoring a configuration is only possible on a fresh instance of Portainer during the initial installation. When you need to restore Portainer, deploy a fresh instance of Portainer with an empty data volume and choose the **Restore Portainer from backup** option during setup.
 
-<figure><img src="../../.gitbook/assets/2.15-backup-restore-file.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.43-backup-view.png" alt=""><figcaption></figcaption></figure>
 
-On the initialization page, expand **Restore Portainer from backup**. Click **Select file** then browse to and select the `tar.gz` backup file. If the backup was originally encrypted, enter the password then click **Restore Portainer**.
+On the initialization page, expand **Restore Portainer from backup**. Click **Select file** then browse to and select the `tar.gz` backup file. If the backup was originally encrypted, enter the password.
+
+Your setup token can be found in your Portainer server logs. Search for `setup_token=` within your logs to find the token. For details on restoring your Portainer instance without entering a setup token, refer to [this FAQ.](../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md)&#x20;
+
+{% hint style="info" %}
+Your Portainer server logs can be found at:
+
+`docker logs <container>` , `podman logs <container>`  or `kubectl logs <pod_name>`
+{% endhint %}
+
+When you have entered the details, click **Restore Portainer**.
 
 The restore might take a few moments. When it has finished, you will be redirected to the login page. You can now log in with your previous credentials and your previous configuration will be restored.
 
@@ -338,17 +348,18 @@ This feature is only available in Portainer Business Edition.
 
 Restoring a configuration is only possible on a fresh instance of Portainer during the initial installation. When you need to restore Portainer, deploy a fresh instance of Portainer with an empty data volume and choose the **Restore Portainer from backup** option during setup, making sure to select **Retrieve from S3**. Complete the fields using the table below as a guide.
 
-| Field/Option       | Overview                                                                                                                                                                        |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Access key ID      | Enter the access key ID for your S3 bucket.                                                                                                                                     |
-| Secret access key  | Enter the secret key for your S3 bucket.                                                                                                                                        |
-| Region             | Enter the region where your bucket is located (for example, `us-west-1`).                                                                                                       |
-| Bucket name        | Enter the name of your S3 bucket.                                                                                                                                               |
-| S3 Compatible Host | If you are using a non-AWS S3-compatible provider (such as MinIO), enter the URL (including the protocol and port if necessary) here. If you're using AWS S3, leave this blank. |
-| Filename           | Enter the filename of the backup you want to restore.                                                                                                                           |
-| Password           | Enter the password set on your backup (if any).                                                                                                                                 |
+| Field/Option       | Overview                                                                                                                                                                                                                                                                                       |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Access key ID      | Enter the access key ID for your S3 bucket.                                                                                                                                                                                                                                                    |
+| Secret access key  | Enter the secret key for your S3 bucket.                                                                                                                                                                                                                                                       |
+| Region             | Enter the region where your bucket is located (for example, `us-west-1`).                                                                                                                                                                                                                      |
+| Bucket name        | Enter the name of your S3 bucket.                                                                                                                                                                                                                                                              |
+| S3 Compatible Host | If you are using a non-AWS S3-compatible provider (such as MinIO), enter the URL (including the protocol and port if necessary) here. If you're using AWS S3, leave this blank.                                                                                                                |
+| Filename           | Enter the filename of the backup you want to restore.                                                                                                                                                                                                                                          |
+| Password           | Enter the password set on your backup (if any).                                                                                                                                                                                                                                                |
+| Setup token        | Enter the setup token, which can be found in your Portainer server logs - look for the `setup_token=` line. For details on restoring Portainer without a setup token, refer to [this FAQ.](../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md)  |
 
-<figure><img src="../../.gitbook/assets/restore-from-backup.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.43-retrieve-from-s3.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Restore Portainer**. The restore might take a few moments. When it has finished, you will be redirected to the login page. You can now log in with your previous credentials and your previous configuration will be restored.
 

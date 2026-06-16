@@ -61,6 +61,10 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](https://app.gitbook.com/admin/settings#ssl-certificate) after installation is complete.
 {% endhint %}
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Expose via Ingress" %}
@@ -77,6 +81,10 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
     --set ingress.hosts[0].host=<fqdn (eg: portainer.example.io)> \
     --set ingress.hosts[0].paths[0].path="/"
 ```
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Expose via Load Balancer" %}
@@ -90,6 +98,10 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
 
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](https://app.gitbook.com/admin/settings#ssl-certificate) after installation is complete.
+{% endhint %}
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
 {% endhint %}
 {% endtab %}
 {% endtabs %}
