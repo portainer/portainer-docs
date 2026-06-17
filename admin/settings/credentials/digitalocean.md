@@ -12,4 +12,4 @@ To add credentials for a DigitalOcean account, from the [Shared credentials](./)
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-09-16 at 11.23.17 AM.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on DigitalOcean](/broken/pages/a1EXsqFjBHbkhrrpRVn8).
+When you're ready, click **Add credentials**.

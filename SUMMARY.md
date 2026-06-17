@@ -301,7 +301,6 @@
     * [Add AWS credentials](admin/settings/credentials/eks.md)
     * [Add Azure credentials](admin/settings/credentials/aks.md)
     * [Add SSH credentials](admin/settings/credentials/ssh.md)
-    * [Add Git credentials](admin/settings/credentials/git.md)
   * [Edge Compute](admin/settings/edge.md)
 
 ## Frequently Asked Questions <a href="#faqs" id="faqs"></a>
@@ -387,7 +386,6 @@
     * [Why do relative bind mounts appear empty after updating a stack that was deployed from Git?](faqs/troubleshooting/stacks-deployments-and-updates/empty-relative-bind-mounts.md)
     * [How do automatic updates for stacks/applications work?](faqs/troubleshooting/stacks-deployments-and-updates/how-do-automatic-updates-for-stacks-applications-work.md)
     * [How does the image update notification icon work?](faqs/troubleshooting/stacks-deployments-and-updates/how-does-the-image-update-notification-icon-work.md)
-    * [Can I build an image while deploying a stack/application from Git?](faqs/troubleshooting/stacks-deployments-and-updates/can-i-build-an-image-while-deploying-a-stack-application-from-git.md)
     * [Why don't custom standalone app templates show when using Docker Swarm?](faqs/troubleshooting/stacks-deployments-and-updates/why-dont-custom-standalone-app-templates-show-when-using-docker-swarm.md)
     * [How do I configure Portainer's GitOps features to authenticate to a Bitbucket repository?](faqs/troubleshooting/stacks-deployments-and-updates/how-do-i-configure-portainers-gitops-features-to-authenticate-to-a-bitbucket-repository.md)
     * [Why are stack deployment times slow?](faqs/troubleshooting/stacks-deployments-and-updates/why-are-stack-deployment-times-slow.md)

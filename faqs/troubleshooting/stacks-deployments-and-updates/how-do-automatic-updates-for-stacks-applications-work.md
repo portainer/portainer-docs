@@ -45,7 +45,7 @@ If a configuration file mounted by a service changes, Portainer will restart the
 
 The commit hash in the Portainer database is updated to match the newly deployed commit hash.
 
-Portainer doesn't otherwise reference any other files in the repository, unless those files are referenced by the compose files. This [can have consequences](can-i-build-an-image-while-deploying-a-stack-application-from-git.md) if you are trying to build an image within your compose file. The exception to this is the .env file, which if it exists (and environment variables have not been previously defined) is processed as well.
+Portainer doesn't otherwise reference any other files in the repository, unless those files are referenced by the compose files. This [can have consequences](/broken/pages/0Y1AJPHMMj1rhxIJ1ewo) if you are trying to build an image within your compose file. The exception to this is the .env file, which if it exists (and environment variables have not been previously defined) is processed as well.
 
 {% hint style="info" %}
 The above commit hash checks are not performed if a stack or application is manually updated (for example using the **Pull and redeploy** button). In this case, the stack or application would be force-redeployed.

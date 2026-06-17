@@ -14,4 +14,4 @@ To add credentials for a Civo account, from the [Shared credentials](./) page cl
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-09-16 at 11.21.49 AM.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on Civo](/broken/pages/JJ44S6e2i9Dnjbu9S4h2).
+When you're ready, click **Add credentials**.&#x20;

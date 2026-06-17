@@ -12,4 +12,4 @@ To add credentials for an Akamai account, from the [Shared credentials](./) page
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-09-16 at 11.22.56 AM.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Add credentials**. Your credentials will now be available to you when [provisioning a Kubernetes cluster on Akamai Connected Cloud](/broken/pages/1wzT3x0mrZghXzzZ5EnM).
+When you're ready, click **Add credentials**.&#x20;

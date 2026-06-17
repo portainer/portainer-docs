@@ -1,6 +1,6 @@
 # Shared credentials
 
-In this section you can create and manage credentials that are shared at admin level. Shared Git credentials can be used to connect to Git repositories, while the other shared credentials can be used with our [KaaS provisioning functionality](/broken/pages/75r7MwmKS8qoApxilQLj) and our Kubernetes provisioning feature.
+In this section you can create and manage credentials that are shared at admin level.&#x20;
 
 {% hint style="info" %}
 The Shared credentials feature is only available in Portainer Business Edition.
@@ -10,7 +10,7 @@ The Shared credentials feature is only available in Portainer Business Edition.
 
 To add a new set of credentials, click the **Add credentials** button.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-09-15 at 10.30.00 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.43-shared-creds.png" alt=""><figcaption></figcaption></figure>
 
 Portainer currently supports the following credential types:
 
@@ -22,6 +22,5 @@ Portainer currently supports the following credential types:
 * [Amazon Web Services (AWS)](eks.md)
 * [Microsoft Azure](aks.md)
 * [SSH](ssh.md) (for use with Kubernetes cluster deployments)
-* [Git](git.md)
 
 To remove a set of credentials, check the box next to the credentials to remove and click **Remove**.
