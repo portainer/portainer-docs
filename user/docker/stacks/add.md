@@ -99,51 +99,19 @@ When you're ready click **Deploy the stack**.
 
 If your Compose file is hosted in a Git repository, you can deploy from there. From the menu select **Stacks**, click **Add stack**, then give the stack a descriptive name.
 
-{% hint style="warning" %}
-When a stack is deployed from Git, Portainer will clone the entire Git repository as part of the deployment process. Ensure you have enough free space to accommodate this.
-{% endhint %}
-
-{% hint style="warning" %}
-Portainer's Git deployment functionality does not currently support the use of Git submodules. If your repository includes submodules, they will not be pulled as part of the deployment. We [hope to add support](https://github.com/orgs/portainer/discussions/9767) for submodules in a future release.
-{% endhint %}
-
-{% hint style="warning" %}
-Symlinks within a Git repository are not supported. Repositories containing symlinks will not be deployed successfully.
-{% endhint %}
-
 <figure><img src="../../../.gitbook/assets/stacks-git-new.gif" alt=""><figcaption></figcaption></figure>
 
-Select **Git Repository** then enter information about your Git repo.
+Select **Git Repository** then fill in the details of the repository.
 
-{% hint style="info" %}
-Any Git-compatible repository should work here. Substitute the details as required.
-{% endhint %}
+| Field/Option         | Overview                                                                                                                                                                                                                                                                             |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../app-delivery/sources/).                                                                                                                                                                                   |
+| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                                                                                                      |
+| Compose path         | Enter the path to the Compose file from the root of the repository.                                                                                                                                                                                                                  |
+| Additional paths     | Click **Add file** to add additional YAML files to be parsed by the build. This is the equivalent of passing multiple `-f` options to `docker compose`, and abides by the same [merging rules](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/#merging-rules). |
+| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                                                                                                                                                                                                 |
 
-| Field/Option          | Overview                                                                                                                                                                                                                                                                                                                                                                                                               |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Authentication        | Toggle this on if your Git repository requires authentication.                                                                                                                                                                                                                                                                                                                                                         |
-| Git Credentials       | If the **Authentication** toggle is enabled and you have configured [individual](../../account-settings.md#git-credentials) or [shared](../../../admin/settings/credentials/git.md) Git credentials, you can select them from this dropdown. Shared Git credentials can be identified with the **Shared** tag, and are only available to administrators at present. Leave this field unset to provide new credentials. |
-| Authorization type    | Select either **Basic** or **Token** authorization depending on what your Git repository requires. For example, GitHub, GitLab, and Bitbucket Cloud expect Basic Auth, even when using an API or access token.                                                                                                                                                                                                         |
-| Username              | Enter your Git username.                                                                                                                                                                                                                                                                                                                                                                                               |
-| Personal Access Token | <p>Enter your personal access token or password.<br>Ensure your token has repository read permissions. See the <a href="../../../faqs/getting-started/what-scopes-are-required-for-github-gitlab-and-bitbucket-tokens.md">Git authentication token permissions FAQ</a>.</p>                                                                                                                                            |
-| Save credential       | Check this option to save the credentials entered above for future use under the name provided in the **credential name** field.                                                                                                                                                                                                                                                                                       |
-
-{% hint style="info" %}
-If you have 2FA configured in GitHub, your passcode is your password.
-{% endhint %}
-
-<figure><img src="../../../.gitbook/assets/2.35-stacks-add-git-auth.png" alt=""><figcaption></figcaption></figure>
-
-| Field/Option          | Overview                                                                                                                                                                                                                                                                             |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Repository URL        | Enter the repository URL. If you have enabled Authentication above the credentials will be used to access the repository. The below options will be populated by what is found in the repository.                                                                                    |
-| Skip TLS verification | Toggle this on to skip the verification of TLS certificates used by your repository. This is useful if your repo uses a self-signed certificate.                                                                                                                                     |
-| Repository reference  | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                                                                                                      |
-| Compose path          | Enter the path to the Compose file from the root of the repository.                                                                                                                                                                                                                  |
-| Additional paths      | Click **Add file** to add additional YAML files to be parsed by the build. This is the equivalent of passing multiple `-f` options to `docker compose`, and abides by the same [merging rules](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/#merging-rules). |
-| GitOps updates        | Toggle this on to enable GitOps updates (see below).                                                                                                                                                                                                                                 |
-
-<figure><img src="../../../.gitbook/assets/2.24.0-docker-stacks-add-git.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.43-add-a-docker-source-git-repo.png" alt=""><figcaption></figcaption></figure>
 
 ### GitOps updates
 
@@ -153,12 +121,11 @@ Portainer supports automatically updating your stacks deployed from Git reposito
 For more detail on how GitOps updates function under the hood, have a look at [this article](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-do-automatic-updates-for-stacks-applications-work.md).
 {% endhint %}
 
-| Field/Option   | Overview                                                                                                                                                                                                                                                                            |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mechanism      | Select the method to use when checking for updates:                                                                                                                                                                                                                                 |
-|                | <p><strong>Polling:</strong> Periodically poll the Git repository from Portainer to check for updates to the repository.</p><p><strong>Webhook:</strong> Generate a webhook URL to add to your Git repository to trigger the update on demand (for example via GitHub actions).</p> |
-| Fetch interval | If **Polling** is selected, how often Portainer will check the Git repository for updates.                                                                                                                                                                                          |
-| Webhook        | When **Webhook** is selected, displays the webhook URL to use in your integration. Click **Copy link** to copy the webhook URL to the clipboard.                                                                                                                                    |
+| Field/Option   | Overview                                                                                                                                                                                                                                                                                                                                   |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Mechanism      | <p>Select the method to use when checking for updates:<br><strong>Polling:</strong> Periodically poll the Git repository from Portainer to check for updates to the repository.</p><p><strong>Webhook:</strong> Generate a webhook URL to add to your Git repository to trigger the update on demand (for example via GitHub actions).</p> |
+| Fetch interval | If **Polling** is selected, how often Portainer will check the Git repository for updates.                                                                                                                                                                                                                                                 |
+| Webhook        | When **Webhook** is selected, displays the webhook URL to use in your integration. Click **Copy link** to copy the webhook URL to the clipboard.                                                                                                                                                                                           |
 
 <figure><img src="../../../.gitbook/assets/2.19-stacks-add-git-polling.png" alt=""><figcaption><p>Automatic updates when using polling</p></figcaption></figure>
 

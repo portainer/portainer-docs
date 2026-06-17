@@ -6,6 +6,6 @@ The App Delivery section covers Portainer functionality for viewing and managing
 [workflows.md](workflows.md)
 {% endcontent-ref %}
 
-{% content-ref url="sources.md" %}
-[sources.md](sources.md)
+{% content-ref url="sources/" %}
+[sources](sources/)
 {% endcontent-ref %}

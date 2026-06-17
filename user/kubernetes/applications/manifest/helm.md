@@ -12,40 +12,16 @@ This feature is only available in [Portainer Business Edition](https://www.porta
 
 Use the provided fields to enter the details of your Git repository containing your Helm chart and values files.
 
-{% hint style="warning" %}
-When an application is deployed from Git, Portainer will clone the entire Git repository as part of the deployment process. Ensure you have enough free space to accommodate this.
-{% endhint %}
+| Field/Option         | Overview                                                                                               |
+| -------------------- | ------------------------------------------------------------------------------------------------------ |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/).  |
+| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                        |
 
-{% hint style="warning" %}
-Portainer's Git deployment functionality does not currently support the use of Git submodules. If your repository includes submodules, they will not be pulled as part of the deployment. We [hope to add support](https://github.com/orgs/portainer/discussions/9767) for submodules in a future release.
-{% endhint %}
-
-| Field/Option          | Overview                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Authentication        | Toggle this on if your repository requires authentication.                                                                                                                                                                                                                                                                                                                                                                   |
-| Git Credentials       | If the **Authentication** toggle is enabled and you have configured [individual](../../../account-settings.md#git-credentials) or [shared](../../../../admin/settings/credentials/git.md) Git credentials, you can select them from this dropdown. Shared Git credentials can be identified with the **Shared** tag, and are only available to administrators at present. Leave this field unset to provide new credentials. |
-| Authorization type    | Select either **Basic** or **Token** authorization depending on what your Git repository requires. For example, GitHub, GitLab, and Bitbucket Cloud expect Basic Auth, even when using an API or access token.                                                                                                                                                                                                               |
-| Username              | Enter your Git username.                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Personal Access Token | Enter your personal access token or password.                                                                                                                                                                                                                                                                                                                                                                                |
-| Save credential       | Check this option to save the credentials entered above for future use under the name provided in the **credential name** field.                                                                                                                                                                                                                                                                                             |
-
-<figure><img src="../../../../.gitbook/assets/2.35-stacks-add-git-auth.png" alt=""><figcaption></figcaption></figure>
-
-| Field/Option          | Overview                                                                                                                                                                                          |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Repository URL        | Enter the repository URL. If you have enabled Authentication above the credentials will be used to access the repository. The below options will be populated by what is found in the repository. |
-| Skip TLS Verification | Toggle this on to skip the verification of TLS certificates used by your repository. This is useful if your repo uses a self-signed certificate.                                                  |
-| Repository reference  | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                   |
-
-<figure><img src="../../../../.gitbook/assets/2.35-Git-Helm-Git-repo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.43-helm-chart-repo.png" alt=""><figcaption></figcaption></figure>
 
 #### Automatic updates
 
 Enabling **GitOps updates** gives Portainer the ability to update your application automatically, either by polling the repository at a defined interval for changes or by using a webhook to trigger an update.
-
-{% hint style="info" %}
-For more detail on how GitOps updates function under the hood, have a look at [this knowledge base article](https://portal.portainer.io/knowledge/how-do-automatic-updates-for-stacks-applications-work).
-{% endhint %}
 
 {% hint style="warning" %}
 If your application is configured for GitOps updates and you make changes locally, these changes will be overridden by the application definition in the Git repository. Bear this in mind when making configuration changes.

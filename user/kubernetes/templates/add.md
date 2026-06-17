@@ -45,18 +45,13 @@ When you're ready, click **Create custom template**.
 
 If you have a template in a Git repository, you can add it to your custom templates. Enter the required details for access to your Git repository.
 
-| Field/Option          | Overview                                                                                                                                  |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Authentication        | Toggle this option on if your repository requires authentication.                                                                         |
-| Git credentials       | If you have credentials configured you can select the set to use from this dropdown.                                                      |
-| Username              | Enter your Git username.                                                                                                                  |
-| Personal access token | Enter your personal access token or password.                                                                                             |
-| Repository URL        | Enter the URL to your Git repository.                                                                                                     |
-| Repository reference  | Select the reference to use from your repository. This will be auto populated with available references from your repository.             |
-| Manifest path         | Enter the path and filename of the manifest within your repository.                                                                       |
-| Skip TLS Verification | Toggle this option on to skip TLS verification for the repository. This is useful if you are using self-signed certificates on your repo. |
+| Field/Option         | Overview                                                                                                                      |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../app-delivery/sources/).                            |
+| Repository reference | Select the reference to use from your repository. This will be auto populated with available references from your repository. |
+| Manifest path        | Enter the path and filename of the manifest within your repository.                                                           |
 
-<figure><img src="../../../.gitbook/assets/2.19-kubernetes-templates-add-git.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.43-kubernetes-custom-template.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Create custom template**.
 

@@ -1,10 +1,6 @@
 # Add a new namespace
 
-From the menu select **Namespaces** then click **Add with form**.
-
-{% hint style="info" %}
-Namespaces can also be added [using a manifest](../applications/manifest/) by clicking **Create from manifest**.
-{% endhint %}
+From the menu select **Namespaces** then click **Add with form** and fill in the details using the below details as a guide. You can also add a new namespace [using a manifest or Helm chart](../applications/manifest/) by clicking **Create from code**.
 
 <figure><img src="../../../.gitbook/assets/add-namespace.gif" alt=""><figcaption></figcaption></figure>
 

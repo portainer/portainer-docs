@@ -13,32 +13,13 @@ Define how to deploy your app from one of the **Build Method** options.
 
 Enter the information about your Git repository to deploy your Edge Stack from Git.
 
-{% hint style="warning" %}
-Portainer's Git deployment functionality does not currently support the use of Git submodules. If your repository includes submodules, they will not be pulled as part of the deployment. We [hope to add support](https://github.com/orgs/portainer/discussions/9767) for submodules in a future release.
-{% endhint %}
+| Field/Option         | Overview                                                                                               |
+| -------------------- | ------------------------------------------------------------------------------------------------------ |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/).  |
+| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                        |
+| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                   |
 
-| Field/Option          | Overview                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Authentication        | Toggle this on if your Git repository requires authentication.                                                                                                                                                                                                                                                                                                                                                               |
-| Git Credentials       | If the **Authentication** toggle is enabled and you have configured [individual](../../../account-settings.md#git-credentials) or [shared](../../../../admin/settings/credentials/git.md) Git credentials, you can select them from this dropdown. Shared Git credentials can be identified with the **Shared** tag, and are only available to administrators at present. Leave this field unset to provide new credentials. |
-| Username              | Enter your Git username.                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Personal Access Token | <p>Enter your personal access token or password.<br>Ensure your token has repository read permissions. See the <a href="../../../../faqs/getting-started/what-scopes-are-required-for-github-gitlab-and-bitbucket-tokens.md">Git authentication token permissions FAQ</a>.</p>                                                                                                                                               |
-| Save credential       | Check this option to save the credentials entered above for future use under the name provided in the **credential name** field.                                                                                                                                                                                                                                                                                             |
-
-{% hint style="info" %}
-If you have 2FA configured in GitHub, your passcode is your password.
-{% endhint %}
-
-<figure><img src="../../../../.gitbook/assets/2.41-github-creds.png" alt=""><figcaption></figcaption></figure>
-
-| Field/Option          | Overview                                                                                                                                                                                          |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Repository URL        | Enter the repository URL. If you have enabled Authentication above the credentials will be used to access the repository. The below options will be populated by what is found in the repository. |
-| Skip TLS verification | Toggle this on to skip the verification of TLS certificates used by your repository. This is useful if your repo uses a self-signed certificate.                                                  |
-| Repository reference  | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                   |
-| GitOps updates        | Toggle this on to enable GitOps updates (see below).                                                                                                                                              |
-
-<figure><img src="../../../../.gitbook/assets/2.19-stacks-add-git.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.43-edge-stack-helm-repo.png" alt=""><figcaption></figcaption></figure>
 
 #### GitOps updates
 
