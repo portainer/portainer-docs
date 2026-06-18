@@ -5,12 +5,11 @@ metaLinks:
       https://app.gitbook.com/s/j6QEqM3Sd94bdPsX4HaN/faqs/getting-support/how-to-get-support-for-community-edition-and-5-nodes-free-users
 ---
 
-# How to get support for Community Edition and 5 Nodes Free Users
+# How to get support for Five/Three Node Free, Home & Student, and Starter subscription users
 
-#### If you're a Community Edition or 5 Nodes Free User here are the ways to get support. <a href="#hs_cos_wrapper_kb-article-module-4" id="hs_cos_wrapper_kb-article-module-4"></a>
+Five/Three Node Free, Home & Student, and Starter subscription users can get support through the following channels:
 
-1. Check our documentation first.
-2. Then if you are still having trouble you can post your issue or question on:&#x20;
-   1. Our [Portainer Community Slack Channel ](https://portainer.slack.com/join/shared_invite/zt-txh3ljab-52QHTyjCqbe5RibC2lcjKA)
-   2. Our [Discord Channel](https://discord.com/invite/j8fVken)
-3. If you need personalized, prioritized support then talk to our [Success team](https://www.portainer.io/portainer-business-buy-more-nodes?hsLang=en) regarding a purchase of Business Edition.&#x20;
+* **Ask our AI chatbot** on the [Ask the AI page](https://www.portainer.io/ask-the-ai). Our AI chatbot pulls from a number of sources and is a great place to start when looking for help.
+* **Ask questions** either in our [GitHub Discussions](https://github.com/orgs/portainer/discussions/categories/help) forum or the [community Slack channel](https://portainer.io/slack). Other platforms exist (Reddit, Discord, Stack Overflow) but we are less active in those spaces.
+* **Log bugs** in [GitHub Issues](https://github.com/portainer/portainer/issues) so they can be properly managed.
+* **Report any security vulnerabilities** by emailing [security@portainer.io](mailto:security@portainer.io) or by [opening a vulnerability report in GitHub](https://github.com/portainer/portainer/security/advisories/new) so the issue can be reviewed and addressed as quickly as possible.
