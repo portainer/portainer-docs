@@ -14,7 +14,7 @@ metaLinks:
 
 Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
 
-Our team is here to help you on your journey. Business customers can get help through our [business support channels](./#business-edition-customers), and Community and free tier users can get assistance through our [community support channels](./#community-edition-five-three-node-free-and-home-and-student-users).
+Our team is here to help you on your journey. Business customers can get help through our [business support channels](./#business-edition-customers), and free tier users can get assistance through our [community support channels](./#community-edition-five-three-node-free-and-home-and-student-users).
 
 ## Documentation
 
@@ -28,9 +28,9 @@ For more detailed step-by-step guides, we're expanding the [Portainer Academy](h
 
 If you are a Professional or Enterprise tier Portainer Business Edition customer, you can log tickets directly with our team via [email](mailto:businesssupport@portainer.io) or by filling out the [Request Support form](https://www.portainer.io/portainer-business-support). You can report a bug, ask a question, raise a documentation issue, or request a feature. Tickets are reviewed and responded to by Portainer staff within the SLA.
 
-### Community Edition, Five/Three Node Free and Home & Student Users
+### Five/Three Node Free, Home & Student, and Starter subscription users
 
-Community Edition, five/three nodes free and Home & Student users can get support through the following channels:
+Five/Three Node Free, Home & Student, and Starter subscription users can get support through the following channels:
 
 * **Ask our AI bot** from our [Ask the AI webpage](https://www.portainer.io/ask-the-ai). Our AI chatbot pulls from a number of sources and is a great place to start when looking for help.
 * **Ask questions** either in our [GitHub Discussions](https://github.com/orgs/portainer/discussions/categories/help) forum or the [community Slack channel](https://portainer.io/slack). Other platforms exist (Reddit, Discord, Stack Overflow) but we are less active in those spaces.
