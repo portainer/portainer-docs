@@ -17,7 +17,7 @@ Within your logs, you can find the setup token by searching for the following li
 
 <figure><img src="../../.gitbook/assets/2.43-setup-token.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/2.43-new-setup-token.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/new-install.png" alt="" width="563"><figcaption></figcaption></figure>
 
 The setup token is one-time use, you do not need to store or remember it after setup is complete.
 
