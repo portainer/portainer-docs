@@ -8,7 +8,7 @@ the Portainer instance timed out for security purposes, to re-enable your Portai
 
 #### Cause
 
-When you first install Portainer, if you do not log in and complete the initial setup within 5 minutes the Portainer service within the container stops. This is a security measure to prevent a malicious user taking over a fresh Portainer installation and configuring it themselves. To avoid this happening, we suggest completing the initial setup within 5 minutes of starting the Portainer container for the first time.
+When you first install Portainer, if you do not log in and complete the initial setup within 5 minutes the Portainer service within the container stops. This is a security measure to prevent a malicious user taking over a fresh Portainer installation and configuring it themselves. To avoid this happening, you must complete the initial setup within 5 minutes of starting the Portainer container for the first time.
 
 #### Resolution
 

@@ -51,7 +51,7 @@ If you require HTTP port `9000` open for legacy reasons, add the following to yo
 {% endhint %}
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 
 Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `podman ps`:

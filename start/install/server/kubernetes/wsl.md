@@ -64,7 +64,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endhint %}
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 {% endtab %}
 
@@ -85,7 +85,7 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
 ```
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 {% endtab %}
 
@@ -104,7 +104,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endhint %}
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 {% endtab %}
 {% endtabs %}

@@ -23,7 +23,7 @@ The installation instructions also make the following assumptions about your env
 * You are accessing Docker via Unix sockets. Connecting via TCP is not supported in Docker Swarm.
 * SELinux is disabled on the machine running Docker.
 * Docker is running as root. Portainer with rootless Docker has some limitations, and requires additional configuration.
-* You are running a single manager node in your swarm. If you have more than one, please [read this knowledge base article](https://portal.portainer.io/knowledge/how-can-i-ensure-portainers-configuration-is-retained) before proceeding.
+* You are running a single manager node in your swarm. If you have more than one, please [read this FAQ](https://portal.portainer.io/knowledge/how-can-i-ensure-portainers-configuration-is-retained) before proceeding.
 * If your nodes are using DNS records to communicate, that all records are resolvable across the cluster.
 
 ## Deployment <a href="#deployment" id="deployment"></a>
@@ -53,7 +53,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endhint %}
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/can-i-skip-or-customize-the-setup-token-for-first-time-setup-and-restore.md) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 
 Portainer Server and the Agents have now been installed. You can check to see whether the Portainer Server and Agent containers have started by running `docker ps`:
