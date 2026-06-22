@@ -32,9 +32,9 @@ Business edition users can now [onboard KubeSolo edge environments](admin/enviro
 
 ### Create and edit GitOps sources directly from the Sources view ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
-The [GitOps source](user/app-delivery/sources/) view is now the central place to manage your Git connections. Admin users can [create new GitOps sources](user/app-delivery/sources/add-a-new-source/) directly from this view - replacing the previous approach of entering Git credentials individually within each workflow. Connection details and authentication settings are also now editable in place.
+The [GitOps source](user/app-delivery/sources/) view is now the central place to manage your Git connections. Admin users can [create new GitOps sources](user/app-delivery/sources/add-a-new-source/) directly from this view - replacing the previous approach of entering Git credentials individually within each workflow. Connection details, authentication settings and source access are also now editable in place.
 
-<figure><img src=".gitbook/assets/2.43-edit-a-source-3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/2.43-sources-view.png" alt=""><figcaption></figcaption></figure>
 
 ### SSRF mitigation  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
