@@ -1,17 +1,17 @@
 # How do I find, skip, or customize my setup token?
 
-From Portainer version 2.43 / 2.39.4, new Portainer instances require a setup token to complete first-time setup. This token exists to protect a freshly started instance from being claimed by someone other than the intended administrator. The token only applies to brand-new instances with no administrator account, and to restoring Portainer from a backup. Existing deployments are unaffected.
+From Portainer version 2.43 / 2.39.4, new Portainer instances require a setup token to complete first-time setup. This token exists to protect a freshly started instance from being claimed by someone other than the intended administrator. The token only applies to brand-new instances with no administrator account, for setting the initial administrator password or restoring Portainer from a backup. Existing deployments are unaffected.
 
 ### How do I retrieve my token?
 
 Your setup token must be retrieved from your Portainer server logs. How you access your logs will depend on the environment that you have installed Portainer on. Run the relevant command in a terminal on the machine where Portainer is installed.
 
-| Environment       | Command                   | Notes                                                                                              |
-| ----------------- | ------------------------- | -------------------------------------------------------------------------------------------------- |
-| Docker Standalone | `docker logs <container>` | Replace `<container>` with your Portainer container name or ID. Run `docker ps` to find it.        |
-| Docker Swarm      | `docker logs <container>` | Replace `<container>` with your Portainer container name or ID. Run `docker ps` to find it.        |
-| Podman            | `podman logs <container>` | Replace `<container>` with your Portainer container name or ID. Run `podman ps` to find it.        |
-| Kubernetes        | `kubectl logs <pod_name>` | Replace `<pod_name>` with your Portainer pod name. Run `kubectl get pods -n portainer` to find it. |
+| Environment       | Command                   | Notes                                                                                                                                                                                                                  |
+| ----------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Docker Standalone | `docker logs <container>` | Replace `<container>` with your Portainer container name or ID. Run `docker ps` to find it.                                                                                                                            |
+| Docker Swarm      | `docker logs <container>` | <p>Replace <code>&#x3C;container></code> with your Portainer container name or ID. Run <code>docker ps</code> to find it.<br>Run the command from the manager node that is running the Portainer server container.</p> |
+| Podman            | `podman logs <container>` | Replace `<container>` with your Portainer container name or ID. Run `podman ps` to find it.                                                                                                                            |
+| Kubernetes        | `kubectl logs <pod_name>` | Replace `<pod_name>` with your Portainer pod name. Run `kubectl get pods -n portainer` to find it.                                                                                                                     |
 
 Within your logs, you can find the setup token by searching for the following line: `setup_token=`. Copy the token and paste it into the **Setup token** field.
 
