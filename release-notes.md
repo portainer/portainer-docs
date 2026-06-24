@@ -2,6 +2,120 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.43.0 STS
+
+Jun 25, 2026
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot.
+
+**Known issues with Podman support**
+
+* Support for only CentOS 9, Podman 5 rootful.
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### New in this release
+
+#### Removed Features
+
+* Removed the deprecated Provision KaaS Cluster feature
+
+#### New and improved features
+
+* GitOps Sources: new Source Creation wizard, Source Detail screen and Source editing, with reuse of existing sources when adding Docker repository stacks and Kubernetes Helm-from-git installs
+* Display cached container images per node on Kubernetes
+* In-product installation flow for KubeSolo-based single-node edge deployments
+* Kubernetes application list and pod logs now default to expanded
+* Environment Group Detail View update with a new sortable-list-based group list UI
+* Kubernetes-Native Additive RBAC: opt-in toggle for additive RBAC policy mode plus per-namespace role support in the Kubernetes user-access model
+* Added a new Docker cleanup policy: new governance policy for cleaning up Docker resources
+* Added to built-in alerts: Kubernetes API Server high request latency alert
+* Created configurable count-based severity tiers for the Node NotReady alert
+* Added to the recommendations view: recommend enabling automated backups when none are configured; recommend using teams to segment access when there are >10 users and no teams; expandable Fleet Governance checklist
+* Added a activity logging to GitOps Sources
+
+#### Security improvements
+
+* Added a one-time setup token, printed to the server logs at startup, that is required to create the first administrator account or restore a backup on a new, uninitialised instance.&#x20;
+* Implemented an SSRF protection mechanism with a configurable allow-list in settings (off / audit / enforce modes)
+* Added an endpoint authorization check to `/api/kubernetes/{id}/*` routes, preventing users with no access from enumerating Kubernetes resources
+* Fixed custom-template user-access checks that bypassed the Resource Control definition, allowing edit/inspect/delete authorization to ignore admins-only / public / team grants
+* Filtered `GET namespace` results by the user's allowed-namespace list, returning Forbidden for namespaces the user cannot access
+* Masked credentials in policy create/update API responses
+* Fixed cluster roles incorrectly granted to a new user with no team memberships across all team-scoped namespaces
+* Bumped `golang.org/x/net` to v0.55.0 for the following CVEs:
+  * CVE-2026-39821, CVE-2026-25680, CVE-2026-25681, CVE-2026-27136, CVE-2026-42502, CVE-2026-42506
+* Bumped `golang.org/x/crypto` to v0.52.0 for the following CVEs:
+  * CVE-2026-39830, CVE-2026-39831, CVE-2026-39832, CVE-2026-39833, CVE-2026-39834, CVE-2026-42508, CVE-2026-46595
+* Bumped `go.opentelemetry.io/otel` to v1.43.0 for the following CVEs:
+  * CVE-2026-39882, CVE-2026-39883
+* Bumped `github.com/go-git/go-git/v5` to v5.19.1 for the following CVEs:
+  * CVE-2026-45571, GHSA-w5pp-99ch-qj29, CVE-2026-45570
+* Bumped Go stdlib to 1.26.4 for the following CVEs:
+  * CVE-2026-42504, CVE-2026-27145, CVE-2026-42507
+* Bumped Go to 1.26.3 for the following CVEs:
+  * CVE-2026-42499, CVE-2026-39836, CVE-2026-39820, CVE-2026-33814, CVE-2026-33811, CVE-2026-39826, CVE-2026-39823, CVE-2026-39825
+* Bumped `containerd` to 1.7.32 and `containerd/v2` to 2.2.4 for the following CVEs:
+  * CVE-2026-46680
+* Upgraded the kubectl-shell Helm SDK to helm/v4 4.1.4  for the following CVEs:
+  * CVE-2026-35204, CVE-2026-35205
+
+#### Bug fixes
+
+* Fixed edge stacks that could not be deployed (Helm file-path cleared incorrectly)
+* Fixed a `ZodError` (`edgeStackId` invalid input) when deploying an edge stack from a private repo to a group
+* Fixed "Invalid option: expected one of 1|2" error for environments in the waiting room
+* Fixed edge agent poll-handler timeouts and deadlocks; stale tunnels are now cleaned up immediately
+* Fixed webhook POST returning 404 "Unable to find a webhook with this token" (webhook ID creation in the frontend)
+* Fixed Git auto-update polling failures for regular stacks caused by a cancelled deployment context
+* Standard users with access permission can again browse and delete private registry images (2.39.2 regression)
+* Fixed a 500 error on stack deploy/update when an invalid ECR registry is present; ECR token pre-validation errors now log a warning instead
+* Networks assigned to a Docker Swarm service at creation time are now correctly applied to the created service
+* Restored YAML syntax highlighting in the web editor
+* Improved performance of the image up-to-date status indicator; the UI no longer becomes slow/unresponsive on environments with many containers
+* Replaced the agent's `docker cp` shell-out with the Docker SDK, removing the bundled docker binary; fixed directory archiving&#x20;
+* Pass proxy configuration through to the compose-unpacker container
+* Display a meaningful node count for Docker (non-swarm) on the home page
+* Fixed environment up/down summary counts that were the wrong way round
+* Fixed "Groups show No Environments" when environments are associated (Environment Groups detail breakdown regression)
+* Removed a duplicate success notification on environment group update
+* Environment group / home view UI bug fixes and environment-card consistency (long names wrap instead of overflowing)
+* Unified Kubernetes application container actions as icon buttons with tooltip hover&#x20;
+* Improved the PVC deletion UX based on workload usage; fixed inability to delete unused Kubernetes volumes
+* PVC list now hides system-namespace PersistentVolumeClaims unless "show system resources" is enabled
+* Corrected the tooltip description for the pod-restart feature gate
+* Made connectivity-test transport errors distinct from other errors (Linux error handling)
+* Fixed table views missing horizontal margins
+* Restored badge colors that were not visible in dark mode
+* Fixed misalignment shown when an environment is down or has no containers
+* Fixed a goroutine leak in user activity log
+* Fixed environments being automatically removed from an Edge stack when updating an edge group
+* Fixed update & rollback jobs that could not be deleted or restarted when an edge-group environment failed to update
+* Fixed stack reference breaking stack deployment (commit hash now passed for git stacks)
+* Fixed the dashboard not displaying (endpoint parsing on GET)
+* Fixed GitOps auto-update failing to authenticate against a private registry unless the registry was explicitly selected on the stack&#x20;
+* Fixed GitOps auto-update deploying the manifest one commit behind after each git change (in-memory config hash for versioned folder resolution)
+* Fixed migration failures upgrading from 2.13 to 2.39 (added missing nil checks in the migrator)
+* Non-admin users can again redeploy a stack that references an `env_file` (compose validation regression in 2.39.x)
+* Fixed user removal and role updates failing in the group access tab
+* Fixed policies partially applying on unsupported environments / despite a warning for mixed agent groups
+* Fixed Docker edge agent and policy deletion bugs
+* Corrected the Docker cleanup policy filter-bar statuses
+* Implemented Helm release conflict detection for chart-based policies; fixed releases stuck in pending-install for externally sourced charts
+* Fixed alerting threshold input UI: prevented negative thresholds, unit auto-conversion and display drift
+* Removed the misleading state tooltip from the active alerts table
+* Fixed an issue with Omni cluster provisioning where partial clusters could be created on a Talos and Kubernetes version mismatch
+* Fixed an issue with the Omni feature where the Talos version-select dropdown was clipping and scroll boxes were failing to expand
+* Fixed application logs for consistent log action-bar heights and other minor UI elements
+* Removed the browsing-snapshot badge from the home view
+* Fixed a recommendations link issue: unassigned environments now navigate to the environments list view instead of the group page
+
+***
+
 ## Release 2.42.0 STS
 
 May 21, 2026
