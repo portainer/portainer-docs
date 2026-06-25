@@ -318,7 +318,7 @@
 * [Installing](faqs/installing/README.md)
   * [How do I install Portainer?](faqs/installing/how-do-i-install-portainer.md)
   * [Can I run Portainer on my configuration?](faqs/installing/can-i-run-portainer-on-my-configuration.md)
-  * [How do I find, skip, or customize my setup token?](faqs/installing/how-do-i-find-skip-or-customize-my-setup-token.md)
+  * [How do I find, skip, or customize my setup token?](faqs/installing/setup-token.md)
   * [How do I change the port that Portainer runs on?](faqs/installing/how-do-i-change-the-port-that-portainer-runs-on.md)
   * [My host is using SELinux. Can I use Portainer?](faqs/installing/my-host-is-using-selinux.-can-i-use-portainer.md)
   * [Does Portainer support WSL1?](faqs/installing/does-portainer-support-wsl1.md)

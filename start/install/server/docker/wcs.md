@@ -80,7 +80,7 @@ If you require HTTP port `9000` open for legacy reasons, add the following to yo
 {% endhint %}
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/how-do-i-find-skip-or-customize-my-setup-token.md) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 
 ## Logging In
