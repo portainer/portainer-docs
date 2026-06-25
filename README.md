@@ -14,7 +14,7 @@ Welcome to Portainer's official documentation site.
 
 Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
 
-Our team is here to help you on your journey. Business customers can get help through our [business support channels](./#business-edition-customers), and free tier users can get assistance through our [community support channels](./#community-edition-five-three-node-free-and-home-and-student-users).
+Our team is here to help you on your journey. Business customers can get help through our [business support channels](./#business-edition-customers), and free tier users can get assistance through our [community support channels](./#five-three-node-free-home-and-student-and-starter-subscription-users).
 
 ## Documentation
 
