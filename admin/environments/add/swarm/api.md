@@ -21,7 +21,7 @@ Next, select **Docker Swarm** as the environment type then click **Start Wizard*
 
 <figure><img src="../../../../.gitbook/assets/2.39-swarm-api-1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/2.39-swarm-api-2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.39-swarm-api-2.png" alt=""><figcaption></figcaption></figure>
 
 <table><thead><tr><th width="280">Field/Option</th><th>Overview</th></tr></thead><tbody><tr><td>Name</td><td>Give the environment a descriptive name.</td></tr><tr><td>Docker API URL</td><td>Enter the DNS name or IP address to connect to the Docker host along with the port. When connecting without TLS, the default port is <code>2375</code>. When connecting with TLS, the default port is <code>2376</code>.</td></tr><tr><td>TLS</td><td>Toggle this option on if you wish to use TLS. Toggle it off if you don't want to use TLS.</td></tr><tr><td>Skip Certification Verification</td><td>Toggle this option on to skip the verification of the TLS certificate used by the Docker API. If this option is off, the below fields will not appear.</td></tr><tr><td>TLS CA certificate</td><td>Select your CA certificate.</td></tr><tr><td>TLS certificate</td><td>Select your certificate.</td></tr><tr><td>TLS key</td><td>Select the key that matches the certificate.</td></tr></tbody></table>
 

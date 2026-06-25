@@ -9,7 +9,7 @@ metaLinks:
 
 Yes, you can downgrade from Portainer Business Edition (BE) to Portainer Community Edition (CE). However there are some important points to note.
 
-You may want to downgrade from Portainer BE to Portainer CE for many reasons; including if you decide not to purchase a full license after your free Portainer Business Edition trial period has ended.&#x20;
+You may want to downgrade from Portainer BE to Portainer CE for many reasons; including if you decide not to purchase a full license after your free Portainer Business Edition trial period has ended.
 
 {% hint style="info" %}
 The downgrade process only works if you upgraded from CE to BE (the process points you back to the CE database which doesn't get deleted when BE is installed). If you did not come from a CE instance, you won't be able to downgrade. You will need to do a full install of CE.
@@ -23,7 +23,7 @@ If you have a running instance of Portainer Business and want to downgrade to Po
 
 {% stepper %}
 {% step %}
-#### **Shut down the existing Portainer Business instance**
+**Shut down the existing Portainer Business instance**
 
 Make sure that the Portainer Business instance is stopped before attempting any of the other steps.
 
@@ -41,7 +41,7 @@ docker service scale portainer=0
 {% endstep %}
 
 {% step %}
-#### **Back up your data**
+**Back up your data**
 
 First make sure to create a copy of the Portainer data volume.
 
@@ -57,7 +57,7 @@ docker run --rm --volumes-from portainer -v $(pwd):/backup ubuntu tar cvf /backu
 {% endstep %}
 
 {% step %}
-#### Downgrade the Portainer Business database
+**Downgrade the Portainer Business database**
 
 Use the following command to downgrade the Portainer database (again, replacing portainer\_data with the correct volume/bind mount if necessary):
 
@@ -67,7 +67,7 @@ docker run -it --name portainer-database-rollback -v portainer_data:/data portai
 {% endstep %}
 
 {% step %}
-#### Redeploy a Portainer CE instance
+**Redeploy a Portainer CE instance**
 
 After downgrading the database, you can redeploy Portainer CE and re-use the existing Portainer Business data.
 {% endstep %}

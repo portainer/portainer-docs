@@ -19,7 +19,7 @@ There are four ways to deploy a new stack from Portainer:
 
 From the menu select **Stacks**, click **Add stack**, give the stack a descriptive name then select **Web editor**. Use the web editor to define the services.
 
-<figure><img src="../../../.gitbook/assets/stacks-web-editor-new-1 (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/stacks-web-editor-new-1.gif" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).

@@ -7,7 +7,7 @@ metaLinks:
 # Updating on Kubernetes
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.39.3 make sure all of the agents are also on version 2.39.3.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.39.4 make sure all of the agents are also on version 2.39.4.
 {% endhint %}
 
 {% hint style="warning" %}

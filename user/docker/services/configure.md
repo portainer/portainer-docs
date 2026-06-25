@@ -7,7 +7,7 @@ metaLinks:
 
 # Configure service options
 
-From the menu select **Services** then select the service you want to configure.&#x20;
+From the menu select **Services** then select the service you want to configure.
 
 <figure><img src="../../../.gitbook/assets/Select-service-new.gif" alt=""><figcaption></figcaption></figure>
 
@@ -21,7 +21,7 @@ In this section you can:
 * View the [service logs](logs.md).
 * Update, [roll back](rollback.md) or delete the service.
 
-<figure><img src="../../../.gitbook/assets/2.15-docker_services_service_details (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.15-docker_services_service_details.png" alt=""><figcaption></figcaption></figure>
 
 ## Container specification configuration options
 

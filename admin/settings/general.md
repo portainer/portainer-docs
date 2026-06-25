@@ -49,7 +49,7 @@ This is a beta feature and is only available in [Portainer Business Edition](htt
 {% endhint %}
 
 {% hint style="info" %}
-Automatic patch update settings can only be edited by an admin user.&#x20;
+Automatic patch update settings can only be edited by an admin user.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -59,7 +59,7 @@ Enabling automatic updates deviates from standard deployment practices where ver
 {% hint style="info" %}
 This feature is designed for environments where maintaining a high security posture via immediate patching is the priority. It is suitable for standalone Portainer instances where manual maintenance overhead must be minimized.
 
-#### When to avoid this feature
+**When to avoid this feature**
 
 * **Infrastructure as Code (IaC):** If you operate a strict GitOps or IaC workflow, this feature may lead to configuration drift. The running Portainer version will no longer match the version defined in your deployment manifests (e.g. Docker Compose files).
 * **Helm Deployments:** Portainer instances deployed via Helm charts are not aware of automatic patching. Reapplying a Helm chart will likely overwrite a patched version, resulting in an unintended rollback to the version specified in the chart.
@@ -67,23 +67,23 @@ This feature is designed for environments where maintaining a high security post
 * **Change Control:** This feature should be avoided in environments requiring manual validation or staging of all updates before they reach production.
 {% endhint %}
 
-Toggle **Apply patch updates when available** to enable your Portainer version to be automatically updated when a new patch is released. Automatic updates will _only_ apply to patches, for example from 2.35.0 to 2.35.1. Your Portainer version will not automatically update with major or minor releases (2.35.0 to 2.36.0 for example).&#x20;
+Toggle **Apply patch updates when available** to enable your Portainer version to be automatically updated when a new patch is released. Automatic updates will _only_ apply to patches, for example from 2.35.0 to 2.35.1. Your Portainer version will not automatically update with major or minor releases (2.35.0 to 2.36.0 for example).
 
-Specify the time you want Portainer to check for new updates each day, the time specified is UTC.&#x20;
+Specify the time you want Portainer to check for new updates each day, the time specified is UTC.
 
 {% hint style="warning" %}
 Update checks only start **one hour after enabling**. The first check runs at the next scheduled check time that is **at least one hour later**.
 {% endhint %}
 
-By default, Portainer retrieves update images from Docker Hub. You can override this by selecting **Use** **custom registry**, which tells Portainer to use your own image registry. This option is useful for environments that mirror Portainer images internally, operate within air-gapped networks, or restrict direct internet access for security and compliance reasons.&#x20;
+By default, Portainer retrieves update images from Docker Hub. You can override this by selecting **Use** **custom registry**, which tells Portainer to use your own image registry. This option is useful for environments that mirror Portainer images internally, operate within air-gapped networks, or restrict direct internet access for security and compliance reasons.
 
 When specifying a custom registry, the following fields are mandatory:
 
-| Field/Option               | Overview                                                                                                                                                                                                                           |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Registry                   | The address of your custom image registry, selected from your existing Portainer registries.                                                                                                                                       |
-| Portainer image repository | The repository for the Portainer image (for example, `myrepo/portainer-ee`).                                                                                                                                                       |
-| Updater image repository   | <p>The repository for the Portainer updater image used to perform the update (for example, <code>myrepo/portainer-updater</code>). </p><p>The updater repository must exist in the same registry as the Portainer repository. </p> |
+| Field/Option               | Overview                                                                                                                                                                                                                         |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Registry                   | The address of your custom image registry, selected from your existing Portainer registries.                                                                                                                                     |
+| Portainer image repository | The repository for the Portainer image (for example, `myrepo/portainer-ee`).                                                                                                                                                     |
+| Updater image repository   | <p>The repository for the Portainer updater image used to perform the update (for example, <code>myrepo/portainer-updater</code>).</p><p>The updater repository must exist in the same registry as the Portainer repository.</p> |
 
 <figure><img src="../../.gitbook/assets/2.35_auto_patch_updates.png" alt=""><figcaption></figcaption></figure>
 
@@ -207,7 +207,7 @@ Stops a container from appearing in the Portainer UI through the container label
 This setting contains all of the information that Portainer stores on the `/data` volume, archived in a `tar.gz` file, and is optionally encrypted with a password. This archive is all you need to restore Portainer.
 
 {% hint style="warning" %}
-This backup is **only** intended to back up the Portainer configuration. It does **not** back up what you have deployed on your environments (for example, containers, stacks, services, volumes, etc).&#x20;
+This backup is **only** intended to back up the Portainer configuration. It does **not** back up what you have deployed on your environments (for example, containers, stacks, services, volumes, etc).
 {% endhint %}
 
 ### Backing up to a local disk <a href="#backup-to-local-disk" id="backup-to-local-disk"></a>
@@ -301,4 +301,3 @@ Click **Download support bundle** to generate and download a .tar.gz file contai
 Toggle **Enable debug log** on to enable debug logging in the Portainer container logs. Debug logging can help with troubleshooting issues by providing a more verbose output.
 
 <figure><img src="../../.gitbook/assets/2.25.0-settings-support-debug.png" alt=""><figcaption></figcaption></figure>
-

@@ -38,7 +38,7 @@ When using Docker Standalone or Podman, you can:
 * View container statistics.
 * Get access to the container's console.
 
-You can also see the image update indicator for each container in the stack. To recheck the image update status for all containers in the stack you can click the reload button next to the search box, or to recheck a single container's image, click the image update indicator icon for that container.&#x20;
+You can also see the image update indicator for each container in the stack. To recheck the image update status for all containers in the stack you can click the reload button next to the search box, or to recheck a single container's image, click the image update indicator icon for that container.
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-containers.png" alt=""><figcaption></figcaption></figure>
 
@@ -54,7 +54,7 @@ When using Docker Swarm, you can:
 * View service statistics.
 * Get access to the service's console.
 
-You can also see the image update indicator for each service in the stack. To recheck the image update status for all services in the stack you can click the Reload image indicators button, or to recheck a single service's image, click the image update indicator icon for that service.&#x20;
+You can also see the image update indicator for each service in the stack. To recheck the image update status for all services in the stack you can click the Reload image indicators button, or to recheck a single service's image, click the image update indicator icon for that service.
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-services.png" alt=""><figcaption></figcaption></figure>
 
@@ -68,7 +68,7 @@ The Editor tab is only available for stacks that were deployed using the [Web Ed
 
 <figure><img src="../../../.gitbook/assets/2.19-stacks-edit-webeditor.png" alt=""><figcaption></figcaption></figure>
 
-Here, you can edit the Compose file for the stack to suit your needs. Using the **Version** dropdown you can also select a previous version of your stack file (if one exists) to switch back to if required. Selecting a different version from the dropdown will replace the contents of the editor with that of the selected version.&#x20;
+Here, you can edit the Compose file for the stack to suit your needs. Using the **Version** dropdown you can also select a previous version of your stack file (if one exists) to switch back to if required. Selecting a different version from the dropdown will replace the contents of the editor with that of the selected version.
 
 {% hint style="info" %}
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
@@ -78,13 +78,13 @@ In this section you can expand the Environment variables section to view and mak
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-envvars.png" alt=""><figcaption></figcaption></figure>
 
-You can also toggle the stack [webhook](webhooks.md) and retrieve the webhook URL:&#x20;
+You can also toggle the stack [webhook](webhooks.md) and retrieve the webhook URL:
 
 <figure><img src="../../../.gitbook/assets/2.20-stacks-edit-webhook.png" alt=""><figcaption></figcaption></figure>
 
 You can choose to **Prune services** if you have made changes that remove some services from the stack.
 
-<figure><img src="../../../.gitbook/assets/2.20-stacks-edit-swarm-prune.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 When you have finished making changes, click **Update the stack**.
 

@@ -8,6 +8,56 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.39.4 LTS
+
+Jun 25, 2026
+
+### Known Issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this Release
+
+* Added an API endpoint to refresh Team/Group membership for a user
+* Fixed an issue where users with no environment access are able to enumerate Kubernetes resources
+* Fixed ecr token pre-validation error with warning log
+* Fixed the way a standard user could not redeploy team stack or delete registry image
+* Fixed the restore endpoint allowing admin takeover for uninitialised Portainer instances
+* Fixed link on timed out page
+* Replaced docker binary with libstack
+* Fixed update & rollback jobs failing to be deleted or restarted if any of the environments in the edge group fail to update
+* Fixed GitOps auto-update failure with private registry
+* Fixed stack redeploy when stack references env\_file for non-admins
+* Bumped go-git to 5.19.1 to address the following CVEs:
+  * CVE-2026-45570,&#x20;
+  * CVE-2026-45571,&#x20;
+  * GHSA-w5pp-99ch-qj29
+* Bumped go stdlib to 1.25.11 to remediate the following stdlib CVEs:
+  * CVE-2026-42504
+  * CVE-2026-27145
+  * CVE-2026-42499
+  * CVE-2026-39836
+  * CVE-2026-39820
+  * CVE-2026-33814
+  * CVE-2026-33811
+  * CVE-2026-39826
+  * CVE-2026-39823
+  * CVE-2026-39825
+  * CVE-2026-42504
+  * CVE-2026-27145
+  * CVE-2026-42507
+
 ## Release 2.39.3 LTS
 
 Jun 4, 2026

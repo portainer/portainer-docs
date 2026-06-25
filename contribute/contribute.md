@@ -6,14 +6,14 @@ metaLinks:
 
 # Contribute
 
-We value contributions from the Portainer community and encourage developers to propose fixes, improvements, and new ideas.&#x20;
+We value contributions from the Portainer community and encourage developers to propose fixes, improvements, and new ideas.
 
-The following guidelines outline our engineering workflows, please review these before making a contribution to ensure any changes can be integrated smoothly.&#x20;
+The following guidelines outline our engineering workflows, please review these before making a contribution to ensure any changes can be integrated smoothly.
 
 ## Contributing to the Portainer CE codebase
 
 {% hint style="warning" %}
-### AI assistance notice <a href="#id-987d7792-f717-4a29-9fe7-b9014d343629" id="id-987d7792-f717-4a29-9fe7-b9014d343629"></a>
+#### AI assistance notice <a href="#id-987d7792-f717-4a29-9fe7-b9014d343629" id="id-987d7792-f717-4a29-9fe7-b9014d343629"></a>
 
 If you use any form of AI assistance to create your contribution - whether for code, documentation, or drafting pull request (PR) responses - it must be disclosed in your pull request description.
 
@@ -66,7 +66,7 @@ If you find a bug, [please tell us](https://github.com/portainer/portainer/issue
 
 [This article](../faqs/contributing/how-do-you-decide-which-bugs-and-features-to-work-on-first.md) covers how we prioritize bug fixes.
 
-## Reporting security vulnerabilities&#x20;
+## Reporting security vulnerabilities
 
 The Portainer team takes the security of our products seriously. If you believe you have discovered a security vulnerability in any Portainer-owned repository, please report it responsibly.
 
@@ -74,7 +74,7 @@ Plase do not report security vulnerabilities through public channels, including 
 
 Instead, report vulnerabilities using one of the following methods:
 
-* Email the Portainer team at [security@portainer.io](mailto:security@portainer.io)&#x20;
+* Email the Portainer team at [security@portainer.io](mailto:security@portainer.io)
 * [Submit a private vulnerability report](https://github.com/portainer/portainer/security/advisories/new) through the relevant Portainer repository on GitHub
 
 These channels allow the team to review and address the issue as quickly as possible while minimizing the risk of public exposure before a fix is available.

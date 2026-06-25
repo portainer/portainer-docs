@@ -66,7 +66,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endhint %}
 
 {% hint style="warning" %}
-If you see an error message similar to:&#x20;
+If you see an error message similar to:
 
 `"\\.\pipe\dockerDesktopEngine" includes invalid characters for a local volume name`
 
@@ -77,6 +77,10 @@ then you may not have Windows containers properly enabled. If you are using Dock
 If you require HTTP port `9000` open for legacy reasons, add the following to your `docker run` command:
 
 `-p 9000:9000`
+{% endhint %}
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/how-do-i-find-skip-or-customize-my-setup-token.md) for more details.
 {% endhint %}
 
 ## Logging In

@@ -69,6 +69,10 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](https://app.gitbook.com/admin/settings#ssl-certificate) after installation is complete.
 {% endhint %}
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/how-do-i-find-skip-or-customize-my-setup-token.md) for more details.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Expose via Ingress" %}
@@ -86,6 +90,10 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
     --set ingress.hosts[0].host=<fqdn (eg: portainer.example.io)> \
     --set ingress.hosts[0].paths[0].path="/"
 ```
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/how-do-i-find-skip-or-customize-my-setup-token.md) for more details.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Expose via Load Balancer" %}
@@ -101,6 +109,10 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
 {% hint style="info" %}
 By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](https://app.gitbook.com/admin/settings#ssl-certificate) after installation is complete.
 {% endhint %}
+
+{% hint style="info" %}
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/how-do-i-find-skip-or-customize-my-setup-token.md) for more details.
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
@@ -114,7 +126,7 @@ Our YAML manifests support exposing Portainer via either NodePort or Load Balanc
 
 {% tabs %}
 {% tab title="Expose via NodePort" %}
-To expose via NodePort, you can use the following command (Portainer will be available on port `30777`  for HTTP and `30779` for  HTTPS):
+To expose via NodePort, you can use the following command (Portainer will be available on port `30777` for HTTP and `30779` for HTTPS):
 
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer.yaml
