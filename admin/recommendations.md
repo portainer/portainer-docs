@@ -117,3 +117,17 @@ A scheduled backup protects your Portainer data against accidental loss and corr
 **Action:** Click **Configure backups** to navigate to the settings menu where you can configure Portainer [backups](settings/general.md#back-up-portainer).
 
 </details>
+
+<details>
+
+<summary>Users not in teams</summary>
+
+**Severity:** Info
+
+**Trigger condition:** At least 10 users exist that are not assigned to a team.
+
+The use of teams makes it easy to manage access at scale.
+
+**Action:** Click **Manage teams** to navigate to the [teams view](user/teams/).
+
+</details>
