@@ -16,17 +16,18 @@ To expose the server on a different host port, use `-p <custom-port>:80 \` .
 
 {% code title="Example creation script with -e EDGE_KEY replaced with -p 80:80" %}
 ```
-docker network create \
-  --driver overlay \
-  portainer_agent_network;
-
-docker service create \
-  --name portainer_edge_agent \
-  --network portainer_agent_network \
+docker run -d \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /var/lib/docker/volumes:/var/lib/docker/volumes \
+  -v /:/host \
+  -v portainer_agent_data:/data \
+  --restart always \
   -e EDGE=1 \
   -e EDGE_ID=$PORTAINER_EDGE_ID \
   -p 80:80 \
-  ...
+  -e EDGE_INSECURE_POLL=1 \
+  --name portainer_edge_agent \
+  portainer/agent:2.43.0
 ```
 {% endcode %}
 
