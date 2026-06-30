@@ -8,11 +8,11 @@ Welcome to Portainer's official documentation site.
 
 ## About Portainer
 
+Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
+
 **Portainer Business Edition (BE)** is our product for businesses and organizations. With features including [Role-Based Access Control](admin/user/roles.md), [registry management](admin/registries/browse.md), and [dedicated support](./#getting-support), Portainer BE is a powerful toolset that allows you to easily build and manage containers in Kubernetes, Docker, Docker Swarm, Podman and Azure ACI. A license key is required to install and use Portainer BE - you can [request three nodes free](https://www.portainer.io/get-a-license) or [purchase a license](https://www.portainer.io/pricing).
 
-**Portainer Community Edition (CE)** is our free, open source option for home users and hobbyists. CE does not include all the features available in Business Edition - for a detailed comparison, [see the features page our website](https://www.portainer.io/features).
-
-Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
+**Portainer Community Edition (CE)** is our free, open source option for home users and hobbyists. CE does not include all the features available in Business Edition - for a detailed comparison, [see the features page on our website](https://www.portainer.io/features).
 
 Our team is here to help you on your journey. Business customers can get help through our [business support channels](./#business-edition-customers), and free tier users can get assistance through our [community support channels](./#five-three-node-free-home-and-student-and-starter-subscription-users).
 
