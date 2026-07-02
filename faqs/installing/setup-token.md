@@ -1,6 +1,6 @@
 # How do I find, skip, or customize my setup token?
 
-From Portainer version 2.43 / 2.39.4, new Portainer instances require a setup token to complete first-time setup. This token exists to protect a freshly started instance from being claimed by someone other than the intended administrator. The token only applies to brand-new instances with no administrator account, for setting the initial administrator password or restoring Portainer from a backup. Existing deployments are unaffected.
+From Portainer version 2.43 / 2.39.4, new Portainer instances require a setup token to complete first-time setup. This token exists to protect a freshly started instance from being claimed by someone other than the intended administrator. The token only applies to brand-new instances with no administrator account, for setting the initial administrator password or restoring Portainer from a backup. Existing deployments are unaffected. For more details, see the [GitHub security advisory](https://github.com/portainer/portainer/security/advisories/GHSA-x626-fcwx-f5pc).
 
 ### How do I retrieve my token?
 
