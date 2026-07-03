@@ -5,7 +5,7 @@ From the menu select **Stacks**, then click **Add stack**. Give the stack a desc
 * **Web editor** - type your compose content directly
 * **Upload** - upload a `stack.yml` file
 * **Git repository** - [deploy from a hosted Git repository](add.md#deploying-from-a-git-repository)
-* **Custom template** - use a pre-defined template
+* **Custom template** - use a pre-defined [template](../templates/custom.md)
 
 <figure><img src="../../../.gitbook/assets/stacks-git-new.gif" alt=""><figcaption></figcaption></figure>
 
