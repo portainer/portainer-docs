@@ -19,16 +19,16 @@ You can enable a webhook to allow remote triggering of stack redeployments. See 
 
 ### Environment variables&#x20;
 
-Environment variables let you define values that vary between deployments, such as hostnames or database names. You can set them individually in Portainer, or upload a `.env` file using **Load variables from .env file**.
+Environment variables let you define values that vary between deployments, such as hostnames or database names. You can set them individually using **Add an environment variable**, or upload a `.env` file using **Load variables from .env file**. To switch to a view that allows you to paste multiple `key=value` variables, select **advanced mode.**
 
-Variables defined in either way are available in your compose file:
+However your variables have been defined, they will be available to use in your compose file using an `environment` definition:
 
 ```
 environment:
   MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
 ```
 
-On Docker Standalone and Podman environments, you can also reference all defined variables via an `env_file` definition:
+On Docker Standalone and Podman environments you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
 
 ```
 env_file:
@@ -40,7 +40,7 @@ env_file:
 {% endhint %}
 
 {% hint style="info" %}
-The compose file itself is not modified when environment variables are set - variables can be updated in Portainer without editing the compose file.
+The compose file itself is not modified when environment variables are set - variables can be updated in Portainer without editing the compose file. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_stack_wed_editor_env_var.png" alt=""><figcaption></figcaption></figure>
