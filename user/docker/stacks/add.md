@@ -1,107 +1,74 @@
 # Add a new stack
 
-There are four ways to deploy a new stack from Portainer:
+From the menu select **Stacks**, then click **Add stack**. Give the stack a descriptive name, then choose a build method:
 
-| Option                                           | Overview                                                                                                 |
-| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| [Web editor](add.md#option-1-web-editor)         | Use our web editor to define the services for the stack using a docker-compose format.                   |
-| [Upload](add.md#option-2-upload)                 | If you have a `stack.yml` file, you can upload it from your computer and use it to deploy the stack.     |
-| [Git repository](add.md#option-3-git-repository) | You can use a docker-compose format file hosted in a Git repository.                                     |
-| Custom template                                  | If you have created a [custom stack template](../templates/custom.md), you can deploy using this option. |
+* **Web editor** - type your compose content directly
+* **Upload** - upload a `stack.yml` file
+* **Git repository** - [deploy from a hosted Git repository](add.md#deploying-from-a-git-repository)
+* **Custom template** - use a pre-defined template
 
-## Option 1: Web editor
+<figure><img src="../../../.gitbook/assets/stacks-git-new.gif" alt=""><figcaption></figcaption></figure>
 
-From the menu select **Stacks**, click **Add stack**, give the stack a descriptive name then select **Web editor**. Use the web editor to define the services.
+Once the stack content is defined, you can configure [webhooks](add.md#webhooks), [environment variables](add.md#environment-variables), [registries](add.md#registries), and [access control](add.md#access-control) before deploying.
 
-<figure><img src="../../../.gitbook/assets/stacks-web-editor-new-1.gif" alt=""><figcaption></figcaption></figure>
+### Webhooks
 
-{% hint style="info" %}
-You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
-
-The web editor will visually highlight invisible special characters such as non-breaking spaces, helping you identify hidden characters that may cause unexpected errors in your configuration.
-{% endhint %}
-
-As part of the stack creation you can enable a stack webhook, allowing you to remotely trigger redeployments of the stack from your repository, for example. You can read more on this in our documentation on [stack webhooks](webhooks.md).
+You can enable a webhook to allow remote triggering of stack redeployments. See [stack webhooks](webhooks.md) for details.
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_stack_web_editor_webhook.png" alt=""><figcaption></figcaption></figure>
 
-As an optional step, you can also use the web editor to define environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
+### Environment variables&#x20;
 
-Environment variables can be set individually within Portainer or you can use **Load variables from .env file** to upload a file containing your environment variables. Environment variables you define (either individually or via a .env file) will be available to use in your compose file using an `environment` definition:
+Environment variables let you define values that vary between deployments, such as hostnames or database names. You can set them individually in Portainer, or upload a `.env` file using **Load variables from .env file**.
+
+Variables defined in either way are available in your compose file:
 
 ```
 environment:
   MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
 ```
 
-Alternatively, on Docker Standalone and Podman environments you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
+On Docker Standalone and Podman environments, you can also reference all defined variables via an `env_file` definition:
 
 ```
 env_file:
   - stack.env
 ```
 
-**Note:** Using `env_file` to define a file does not work in Docker Swarm due to the lack of `env_file` support in `docker stack deploy` (used on Swarm environments to deploy your stack). On Docker Swarm, you will need to define each environment variable manually.
+{% hint style="warning" %}
+**Note:** `env_file` is not supported on Docker Swarm. Define each variable individually instead.
+{% endhint %}
 
 {% hint style="info" %}
-Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
+The compose file itself is not modified when environment variables are set - variables can be updated in Portainer without editing the compose file.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_stack_wed_editor_env_var.png" alt=""><figcaption></figcaption></figure>
 
-You can also select the registries to use when deploying the stack. This is useful when your stack deploys multiple images from different registries that require authentication.
+### Registries
 
-{% hint style="info" %}
-By default, all configured registries are used. However, when you have multiple registries from the same provider (like multiple ghcr.io registries), Docker's authentication system may use the wrong credentials during deployment. Explicitly selecting the specific registry ensures the correct credentials are used.
+Select the registries to use when deploying the stack. This is useful when your stack pulls images from multiple registries requiring authentication.
+
+{% hint style="warning" %}
+By default, all configured registries are used. If you have multiple registries from the same provider (such as multiple `ghcr.io` registries), explicitly selecting the correct registry ensures the right credentials are used.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/2.33-stacks-add-registries.png" alt=""><figcaption></figcaption></figure>
 
+### Access control
+
+To restrict management of this stack, enable access control and select one of:
+
+* **Administrators only**
+* **Restricted** - specify the users and teams who should have access
+
+<figure><img src="../../../.gitbook/assets/new-stack-access-control.png" alt=""><figcaption></figcaption></figure>
+
 When you're ready, click **Deploy the stack**.
 
-## Option 2: Upload
+## Deploying from a Git repository
 
-In Portainer you can create stacks from Compose YML files. To do this, from the menu select **Stacks**, click **Add stack**, then give the stack a descriptive name.
-
-<figure><img src="../../../.gitbook/assets/stacks-upload-new.gif" alt=""><figcaption></figcaption></figure>
-
-Select **Upload** then select the Compose file from your computer.
-
-As part of the stack creation you can enable a stack webhook, allowing you to remotely trigger redeployments of the stack from your repository, for example. You can read more on this in our documentation on [stack webhooks](webhooks.md).
-
-<figure><img src="../../../.gitbook/assets/2.15-docker_stack_web_editor_webhook.png" alt=""><figcaption></figcaption></figure>
-
-As an optional step, enter any environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
-
-Environment variables can be set individually within Portainer or you can use **Load variables from .env file** to upload a file containing your environment variables. Environment variables you define (either individually or via a .env file) will be available to use in your compose file using an `environment` definition:
-
-```
-environment:
-  MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
-```
-
-Alternatively, you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
-
-```
-env_file:
-  - stack.env
-```
-
-{% hint style="info" %}
-Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself which would take it out of sync with your local copy. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
-{% endhint %}
-
-<figure><img src="../../../.gitbook/assets/2.15-docker_add_stack_upload_env_var.png" alt=""><figcaption></figcaption></figure>
-
-When you're ready click **Deploy the stack**.
-
-## Option 3: Git repository
-
-If your Compose file is hosted in a Git repository, you can deploy from there. From the menu select **Stacks**, click **Add stack**, then give the stack a descriptive name.
-
-<figure><img src="../../../.gitbook/assets/stacks-git-new.gif" alt=""><figcaption></figcaption></figure>
-
-Select **Git Repository** then fill in the details of the repository.
+If your compose file is hosted in a Git repository, you can deploy directly from it. See the details below on setting up your Git repository.&#x20;
 
 | Field/Option         | Overview                                                                                                                                                                                                                                                                             |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -115,17 +82,17 @@ Select **Git Repository** then fill in the details of the repository.
 
 ### GitOps updates
 
-Portainer supports automatically updating your stacks deployed from Git repositories. To enable this, toggle on **GitOps updates** and configure your settings.
+To keep your stack automatically in sync with your repository, toggle on **GitOps updates** and configure your settings.&#x20;
 
 {% hint style="info" %}
-For more detail on how GitOps updates function under the hood, have a look at [this article](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-do-automatic-updates-for-stacks-applications-work.md).
+See [this article](../../../faqs/troubleshooting/stacks-deployments-and-updates/how-do-automatic-updates-for-stacks-applications-work.md) for details on how GitOps updates work
 {% endhint %}
 
 | Field/Option   | Overview                                                                                                                                                                                                                                                                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Mechanism      | <p>Select the method to use when checking for updates:<br><strong>Polling:</strong> Periodically poll the Git repository from Portainer to check for updates to the repository.</p><p><strong>Webhook:</strong> Generate a webhook URL to add to your Git repository to trigger the update on demand (for example via GitHub actions).</p> |
-| Fetch interval | If **Polling** is selected, how often Portainer will check the Git repository for updates.                                                                                                                                                                                                                                                 |
-| Webhook        | When **Webhook** is selected, displays the webhook URL to use in your integration. Click **Copy link** to copy the webhook URL to the clipboard.                                                                                                                                                                                           |
+| Fetch interval | If **Polling** is selected, define how often Portainer will check the Git repository for updates.                                                                                                                                                                                                                                          |
+| Webhook        | When **Webhook** is selected, this field displays the webhook URL to use in your integration. Click **Copy link** to copy the webhook URL to the clipboard.                                                                                                                                                                                |
 
 <figure><img src="../../../.gitbook/assets/2.19-stacks-add-git-polling.png" alt=""><figcaption><p>Automatic updates when using polling</p></figcaption></figure>
 
@@ -140,54 +107,15 @@ For more detail on how GitOps updates function under the hood, have a look at [t
 
 ### Relative path volumes
 
-When you toggle **Enable relative path volumes** to on, you are able to specify relative path references in your compose files. Portainer will create the required directory structure and populate the directories with the relevant files from your Git repository.
-
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
+Enabling relative path volumes is available in Business Edition only.
 {% endhint %}
 
-On Docker Standalone and Podman environments, specify the path at which you want your files to be created on your host filesystem in the **Local filesystem path** field.
+Toggle on **Enable relative path volumes** to use relative path references in your compose files. Portainer will create the required directory structure and populate it with files from your Git repository.
 
-{% hint style="warning" %}
-Ensure this directory exists on your local filesystem and is writable.
-{% endhint %}
+* **Docker Standalone / Podman** - specify the path in the **Local filesystem path** field. The directory must exist on your host filesystem and be writable.
+* **Docker Swarm** - specify the path in the **Network filesystem path** field. The path must be available and writable across all Swarm nodes.
+
+See [this article](../../../advanced/relative-paths.md) for more detail on how relative path volumes work.
 
 <figure><img src="../../../.gitbook/assets/2.17-stacks-add-relativepath.png" alt=""><figcaption></figcaption></figure>
-
-On Docker Swarm environments, specify the path at which you want your files to be created in the Network filesystem path field.
-
-{% hint style="warning" %}
-Ensure that this path is available on all of your Docker Swarm nodes and is writable.
-{% endhint %}
-
-<figure><img src="../../../.gitbook/assets/2.17-stacks-add-relativepath-swarm.png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="info" %}
-For more detail on how this feature works, have a look at [this article](../../../advanced/relative-paths.md).
-{% endhint %}
-
-### Environment variables
-
-As an optional step, you can also set environment variables. You can use these to define values in your compose file that would vary between deployments (for example, hostnames, database names, etc).
-
-Environment variables can be set individually within Portainer or you can use **Load variables from .env file** to upload a file containing your environment variables. Environment variables you define (either individually or via a .env file) will be available to use in your compose file using an `environment` definition:
-
-```
-environment:
-  MY_ENVIRONMENT_VARIABLE: ${MY_ENVIRONMENT_VARIABLE}
-```
-
-Alternatively, you can add `stack.env` as an `env_file` definition to add all the environment variables that you have defined individually as well as those included in an uploaded .env file:
-
-```
-env_file:
-  - stack.env
-```
-
-{% hint style="info" %}
-Note the compose file is not changed when environment variables are used - this allows variables to be updated within Portainer without editing the compose file itself which would take it out of sync with the Git repository. You will still see the `${MY_ENVIRONMENT_VARIABLE}` style entry in the compose file.
-{% endhint %}
-
-<figure><img src="../../../.gitbook/assets/2.15-docker_stack_wed_editor_env_var.png" alt=""><figcaption></figcaption></figure>
-
-Enter environment variables if required then click **Deploy the stack**.
