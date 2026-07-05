@@ -31,6 +31,12 @@ This functionality is in beta and only tested with some configurations.
 
 <figure><img src="../../../../.gitbook/assets/2.26-kubernetes-cluster-details-omni.png" alt=""><figcaption></figcaption></figure>
 
+## GPU
+
+The GPU section is available for environments where GPU nodes are detected. The GPU table shows the readiness status of each node (`Ready` / `Degraded` / `Not Available`), and a breakdown of GPU capacity, allocatable, allocated, and available counts per `nvidia.com/*` resource type. The total GPU-capable nodes count and Degraded nodes count are shown at the bottom, along with GPU operator detected and device plugin detected badges where applicable. To be taken to the [GPU details view](./#gpu), select **View GPU details**.
+
+<figure><img src="../../../../.gitbook/assets/2.44-cluster-details-GPU.png" alt=""><figcaption></figcaption></figure>
+
 ## Nodes
 
 This section lists the nodes in your cluster with information about each node. To view [details of a specific node](node.md), click the name of the node in the list.

@@ -4,7 +4,7 @@ Welcome to Portainer's official documentation site.
 
 ## About Portainer
 
-**Portainer Business Edition (BE)** is our product for businesses and organizations. With features including [Role-Based Access Control](admin/user/roles.md), [registry management](admin/registries/browse.md), and [dedicated support](./#getting-support), Portainer BE is a powerful toolset that allows you to easily build and manage containers in Kubernetes, Docker, Docker Swarm, Podman and Azure ACI. A license key is required to install and use Portainer BE - you can [request three nodes free](https://www.portainer.io/get-a-license) or [purchase a license](https://www.portainer.io/pricing).
+**Portainer Business Edition (BE)** is our product for businesses and organizations. With features including [Role-Based Access Control](admin/user/roles.md), [registry management](admin/registries/browse.md), and [dedicated support](./#getting-support), Portainer BE is a powerful toolset that allows you to easily build and manage containers in Kubernetes, Docker and Docker Swarm. A license key is required to install and use Portainer BE - you can [request three nodes free](https://www.portainer.io/get-a-license) or [purchase a license](https://www.portainer.io/pricing).
 
 **Portainer Community Edition (CE)** is our free, open source option for home users and hobbyists. CE does not include all the features available in Business Edition - for a detailed comparison, [see the features page our website](https://www.portainer.io/features).
 

@@ -93,7 +93,7 @@ If you wish to use your own Helm repository in place of the Bitnami repository w
 
 ### Kubeconfig
 
-Here you can select the expiry time for [exported kubeconfig files](../../user/kubernetes/kubeconfig.md) from this dropdown. The new expiry time will only apply to configurations created after this value was changed. Administrators are also able to disable Kubeconfig download for non-admin users here.
+Here you can select the expiry time for [exported kubeconfig files](../../user/kubernetes/dashboard/kubeconfig.md) from this dropdown. The new expiry time will only apply to configurations created after this value was changed. Administrators are also able to disable Kubeconfig download for non-admin users here.
 
 <figure><img src="../../.gitbook/assets/2.22.0-settings-kubernetes-kubeconfig.png" alt=""><figcaption></figcaption></figure>
 

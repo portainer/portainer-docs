@@ -4,4 +4,4 @@ Although the Portainer UI provides access to a lot of Kubernetes functionality, 
 
 To access the shell, select **kubectl shell** from the menu. Once the shell loads, you can run `kubectl` and `helm` commands as needed.
 
-<figure><img src="../../.gitbook/assets/2.33-kube-shell.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.33-kube-shell.gif" alt=""><figcaption></figcaption></figure>

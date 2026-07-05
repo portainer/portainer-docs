@@ -2,16 +2,16 @@
 
 The following sections describe how to manage a Kubernetes environment using menu options available in the Portainer Server.
 
-{% content-ref url="dashboard.md" %}
-[dashboard.md](dashboard.md)
+{% content-ref url="dashboard/" %}
+[dashboard](dashboard/)
 {% endcontent-ref %}
 
-{% content-ref url="kubectl.md" %}
-[kubectl.md](kubectl.md)
+{% content-ref url="dashboard/kubectl.md" %}
+[kubectl.md](dashboard/kubectl.md)
 {% endcontent-ref %}
 
-{% content-ref url="kubeconfig.md" %}
-[kubeconfig.md](kubeconfig.md)
+{% content-ref url="dashboard/kubeconfig.md" %}
+[kubeconfig.md](dashboard/kubeconfig.md)
 {% endcontent-ref %}
 
 {% content-ref url="templates/" %}
@@ -40,6 +40,10 @@ The following sections describe how to manage a Kubernetes environment using men
 
 {% content-ref url="volumes/" %}
 [volumes](volumes/)
+{% endcontent-ref %}
+
+{% content-ref url="gpu.md" %}
+[gpu.md](gpu.md)
 {% endcontent-ref %}
 
 {% content-ref url="cluster/" %}

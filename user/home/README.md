@@ -6,7 +6,7 @@ The Home page is the first page you will see after logging into Portainer. It pr
 
 A header bar above the environment list shows a live breakdown of your fleet by health, calling out any environments that are **unassigned** and therefore do not belong to a group. Clicking any of these segments filters the list, replacing any existing filter or grouping.&#x20;
 
-Environments are sorted by age by default; clicking the **Age** option toggles between newest and oldest. You can also filter your environment list by **Group**, **Platform**, or **Health**. You can search for specific environments by name, which will filter the list by your search term. If your list includes Kubernetes environments, you can also download a combined [Kubeconfig](../kubernetes/kubeconfig.md) file from this panel.
+Environments are sorted by age by default; clicking the **Age** option toggles between newest and oldest. You can also filter your environment list by **Group**, **Platform**, or **Health**. You can search for specific environments by name, which will filter the list by your search term. If your list includes Kubernetes environments, you can also download a combined [Kubeconfig](../kubernetes/dashboard/kubeconfig.md) file from this panel.
 
 <figure><img src="../../.gitbook/assets/2.41.1-filtered-home.png" alt=""><figcaption></figcaption></figure>
 
@@ -14,6 +14,7 @@ Each environment is displayed as a card showing the metrics most relevant to tha
 
 * **Containers count** - shown for Docker host environments
 * **Nodes count** - shown for Kubernetes and Docker Swarm environments
+* **GPU usage** - shown for Kubernetes environments that have GPU-capable nodes
 * **CPU and memory usage -** shown for all environment types
 * **Status badge** - displayed next to the environment name; shows **Up/Down** for standard agents and **Heartbeat/Down** for Edge agents
 

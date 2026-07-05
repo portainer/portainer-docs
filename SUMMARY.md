@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [What's new in version 2.43](whats-new.md)
+* [What's new in version 2.44](whats-new.md)
 * [Release Notes](release-notes.md)
 
 ## Getting Started <a href="#start" id="start"></a>
@@ -129,9 +129,9 @@
     * [Setup](user/docker/swarm/setup.md)
     * [Registries](user/docker/swarm/registries.md)
 * [Kubernetes](user/kubernetes/README.md)
-  * [Dashboard](user/kubernetes/dashboard.md)
-  * [kubectl shell](user/kubernetes/kubectl.md)
-  * [Kubeconfig](user/kubernetes/kubeconfig.md)
+  * [Dashboard](user/kubernetes/dashboard/README.md)
+    * [kubectl shell](user/kubernetes/dashboard/kubectl.md)
+    * [Kubeconfig](user/kubernetes/dashboard/kubeconfig.md)
   * [Custom Templates](user/kubernetes/templates/README.md)
     * [Add a new custom template](user/kubernetes/templates/add.md)
     * [Edit a custom template](user/kubernetes/templates/edit.md)
@@ -165,6 +165,7 @@
   * [Volumes](user/kubernetes/volumes/README.md)
     * [Inspect and edit a volume](user/kubernetes/volumes/inspect.md)
     * [Remove a volume](user/kubernetes/volumes/remove.md)
+  * [GPU](user/kubernetes/gpu.md)
   * [More Resources](user/kubernetes/more-resources/README.md)
     * [Custom Resources](user/kubernetes/more-resources/custom-resources.md)
     * [Cron Jobs & Jobs](user/kubernetes/more-resources/jobs.md)
