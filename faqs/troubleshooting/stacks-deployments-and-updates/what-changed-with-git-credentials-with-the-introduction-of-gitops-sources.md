@@ -4,11 +4,11 @@ Portainer version 2.43 introduced [GitOps Sources](../../../user/app-delivery/so
 
 When you upgrade your Portainer version and switch to this new functionality, any existing GitOps setups are automatically converted to Sources, each carrying over its own copy of the credentials it was using before.
 
-This shift moves away from broad, reusable tokens - which typically grant access to every repository across every org you belong to - toward fine-grained tokens scoped to a single repository. GitHub itself now recommends fine-grained tokens for this reason.&#x20;
+Classic personal access tokens are still supported, but each one still needs to be re-entered per Source. GitHub introduced [fine-grained personal access tokens](https://github.blog/security/application-security/introducing-fine-grained-personal-access-tokens-for-github/#choosing-the-right-programmatic-access-method) in 2022 as a more secure alternative - scoped to a single repository and a specific set of permissions, rather than everything you have access to across every org. We strongly recommend generating a unique fine-grained token per Source, scoped only to that repository.
 
-#### What to do moving forward:
+**What to do moving forward:**
 
-* For each repository you deploy from, [create a Source](../../../user/app-delivery/sources/add-a-new-source/).
+* For each repository you deploy from, [create a Source](../../../user/app-delivery/sources/add-a-new-source/add-a-new-git-repository-source.md).
 * Generate a new fine-grained token for that Source, scoped to only that repository and only the permissions it needs.
 * Share the Source with others in your organization by setting the access level at creation time. Since it's scoped to one repository, sharing it doesn't expose access to anything else.
-* Use any new created source in multiple [workflows](../../../user/app-delivery/workflows.md).&#x20;
+* Use any newly created Source in multiple [workflows](../../../user/app-delivery/workflows.md).
