@@ -71,7 +71,11 @@ By default, a Kubernetes cluster will instantiate a default namespace when provi
 
 By default, users are able to view and edit Kubernetes secrets within the Portainer UI. Enabling this option disallows all non-admin users from doing so. Note that due to limitations within Kubernetes itself this only applies to the Portainer UI and does not prevent users from doing so through the command line or API.
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-cluster-setup-security.png" alt=""><figcaption></figcaption></figure>
+### Enable node shell for admins
+
+By default, users can not [open a shell](details/#nodes) directly on any Kubernetes node's host OS. Enable this option to allow admin users to do so.&#x20;
+
+<figure><img src="../../../.gitbook/assets/2.44-cluster-security.png" alt=""><figcaption></figcaption></figure>
 
 ## Resources and Metrics
 

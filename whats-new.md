@@ -16,4 +16,10 @@ Kubernetes environments with detected GPU nodes now display a [dedicated GPU vie
 
 <figure><img src=".gitbook/assets/2.44-GPU-navigation.gif" alt=""><figcaption></figcaption></figure>
 
+### **A dedicated node shell** ![](.gitbook/assets/button_be.png)&#x20;
+
+Administrators can now open a root shell directly on any cluster node from the [Nodes table](user/kubernetes/cluster/details/#nodes), without needing SSH. The feature is disabled by default and can be enabled per cluster in Cluster → Setup → [Security](user/kubernetes/cluster/setup.md#security), or centrally through a [Kubernetes Security Policy](admin/environments/policies/kubernetes-policies/kubernetes-security-policy.md).
+
+<figure><img src=".gitbook/assets/2.44-an-open-node-shell.png" alt="" width="563"><figcaption></figcaption></figure>
+
 ### ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)

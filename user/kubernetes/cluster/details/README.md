@@ -49,13 +49,31 @@ The **Cached images** column shows the number of cached images on each node. Cli
 
 <figure><img src="../../../../.gitbook/assets/2.41-Cached-images.png" alt=""><figcaption></figcaption></figure>
 
-To view usage stats for a node, click the stats icon to the right of the node.
+
+
+To view usage stats for a node, including details of memory usage and CPU usage, click the **stats icon** under **Actions.**
 
 {% hint style="info" %}
-Node stats are only available when you have [enabled using the metrics API](../setup.md#enable-features-using-the-metrics-api).
+Node stats are only available when you have [enabled features using the metrics API](../setup.md#enable-features-using-the-metrics-api).
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/2.17-k8s-cluster-nodestats.png" alt=""><figcaption></figcaption></figure>
+
+
+
+To open a dedicated shell for the node, click the Shell **>\_** icon under **Actions**.&#x20;
+
+{% hint style="warning" %}
+Opening the node shell is only available to admins when [enabled node shell for admins](../setup.md#enable-node-shell-for-admins) has been enabled. This feature is disabled by default.&#x20;
+{% endhint %}
+
+{% hint style="info" %}
+This feature is avaliable on Business Edition only.&#x20;
+{% endhint %}
+
+<figure><img src="../../../../.gitbook/assets/2.44-an-open-node-shell.png" alt=""><figcaption></figcaption></figure>
+
+
 
 On Talos Kubernetes or MicroK8s environments provisioned with the [Create a Kubernetes cluster](../../../../admin/environments/add/kube-create/) feature, you will also see buttons to add and remove nodes as well as additional action icons on MicroK8s environments to view the MicroK8s status (for control plane nodes) and to connect to the environment via SSH console.
 
