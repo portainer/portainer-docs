@@ -42,6 +42,6 @@ You can now proceed to [add your credentials](omni.md#adding-your-credentials).
 
 To add credentials for an Omni account, from the [Shared credentials](./) page click **Add credentials**, then select the **Sidero Omni** option. Give your credential set a **name** and paste your **Endpoint URL** and **Service account key** into the respective boxes.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-09-16 at 11.20.08 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.44-add-omni-credentials.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Add credentials**. Your credentials will now be available to you when [creating an Omni Talos cluster](../../environments/add/kube-create/omni.md).

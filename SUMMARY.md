@@ -295,12 +295,6 @@
     * [Authenticate via OAuth](admin/settings/authentication/oauth.md)
   * [Shared credentials](admin/settings/credentials/README.md)
     * [Add Sidero Omni credentials](admin/settings/credentials/omni.md)
-    * [Add Civo credentials](admin/settings/credentials/civo.md)
-    * [Add Akamai Connected Cloud credentials](admin/settings/credentials/linode.md)
-    * [Add DigitalOcean credentials](admin/settings/credentials/digitalocean.md)
-    * [Add Google Cloud credentials](admin/settings/credentials/gke.md)
-    * [Add AWS credentials](admin/settings/credentials/eks.md)
-    * [Add Azure credentials](admin/settings/credentials/aks.md)
     * [Add SSH credentials](admin/settings/credentials/ssh.md)
   * [Edge Compute](admin/settings/edge.md)
 
