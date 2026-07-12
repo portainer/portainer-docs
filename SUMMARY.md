@@ -461,6 +461,7 @@
 * [Docker roles and permissions](advanced/docker-roles-and-permissions.md)
 * [Kubernetes roles and bindings](advanced/kubernetes-roles-and-bindings.md)
 * [Deprecated and removed features](advanced/deprecated.md)
+* [How to prestage an Edge Agent environment](advanced/how-to-prestage-an-edge-agent-environment.md)
 
 ## API
 
