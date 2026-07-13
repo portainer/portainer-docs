@@ -8,6 +8,44 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.39.5 LTS
+
+Jul 14, 2026
+
+### Known Issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this Release
+
+* Fixed a 2.39.4 regression where a relative `env_file:` in a Git stack whose compose file lives in a repository sub-directory was resolved against the project root instead of the compose file's own directory, deploying stacks with an empty environment or failing outright
+* Improved Edge tunnel reliability over high-latency links (satellite/VSAT): the server no longer tears down a half-established tunnel on timeout, keep-alive and unlimited background retries were added on the agent, and the ping timeout was raised from 3s to 8s
+* Fixed standard users not seeing all of their teams in access control selectors (e.g. when restricting access on a newly created Docker Config), caused by `FilterUserTeams` incorrectly dropping teams
+* Fixed deleting images from the Swarm image list only removing them from a single node instead of every node they exist on
+* Fixed a potential block where a Docker stack deployment exceeding the internal 15-minute timeout left the stack stuck in "Deploying" status, preventing further redeployments
+* Fixed the environment details view always showing the default poll frequency for Edge environments instead of the saved value
+* Added access control checks to the GitOps repository file search and file preview APIs (`POST /gitops/repo/files/search`, `POST /gitops/repo/file/preview`), preventing authenticated users from listing or extracting the contents of Git repositories they do not have permission to access
+* Fixed Swarm edge stacks that use GitOps edge configs failing to deploy with "failed to parse compose file … no such file or directory", because the swarm deployer resolved relative `env_file` references against the compose file's directory instead of the stack working directory
+* Upgraded `go.mongodb.org/mongo-driver` to 1.17.7 to address CVE-2026-2303
+* Upgraded the Alpine base image from 3.23.4 to 3.24.1 to address OS-level package CVEs, including the jq advisories (CVE-2026-32316, CVE-2026-40164 and others)
+* Upgraded `github.com/containerd/containerd/v2` to 2.2.5 to address the following CVEs:
+  * CVE-2026-53488,&#x20;
+  * CVE-2026-53492,&#x20;
+  * CVE-2026-53489,&#x20;
+  * CVE-2026-47262,
+  * CVE-2026-50195
+
 ## Release 2.39.4 LTS
 
 Jun 25, 2026
