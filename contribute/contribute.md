@@ -73,6 +73,8 @@ Instead, report vulnerabilities using one of the following methods:
 
 These channels allow the team to review and address the issue as quickly as possible while minimizing the risk of public exposure before a fix is available.
 
+Portainer does not operate a paid bug bounty program and does not offer monetary rewards for vulnerability reports. Portainer will not pursue legal action against good-faith research conducted in line with this policy.
+
 ## Feature requests
 
 You can request new features by posting an Idea in our [GitHub Discussions](https://github.com/orgs/portainer/discussions/categories/ideas) forum. Please check to see if someone has already requested the feature you want, and give it an upvote if so.
