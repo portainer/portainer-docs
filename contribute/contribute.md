@@ -70,7 +70,7 @@ If you find a bug, [please tell us](https://github.com/portainer/portainer/issue
 
 The Portainer team takes the security of our products seriously. If you believe you have discovered a security vulnerability in any Portainer-owned repository, please report it responsibly.
 
-Plase do not report security vulnerabilities through public channels, including standard GitHub issues.
+Please do not report security vulnerabilities through public channels, including standard GitHub issues.
 
 Instead, report vulnerabilities using one of the following methods:
 
@@ -78,6 +78,8 @@ Instead, report vulnerabilities using one of the following methods:
 * [Submit a private vulnerability report](https://github.com/portainer/portainer/security/advisories/new) through the relevant Portainer repository on GitHub
 
 These channels allow the team to review and address the issue as quickly as possible while minimizing the risk of public exposure before a fix is available.
+
+Portainer does not operate a paid bug bounty program and does not offer monetary rewards for vulnerability reports. Portainer will not pursue legal action against good-faith research conducted in line with this policy.
 
 ## Feature requests
 
