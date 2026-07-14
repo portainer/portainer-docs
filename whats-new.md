@@ -10,6 +10,10 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
+### Portainer MCP Server ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+
+Portainer now ships an [MCP server](advanced/portainer-mcp-server.md), generated from the Portainer OpenAPI spec, that exposes the platform's API as MCP tools - list environments, manage GitOps workflows, and troubleshoot Docker and Kubernetes resources from any MCP-compatible client. Install locally in minutes with a one-click bundle, or deploy as a container so your whole team can connect, each acting under their own Portainer permissions.
+
 ### GPU visibility ![](.gitbook/assets/button_be.png)&#x20;
 
 Kubernetes environments with detected GPU nodes now display a [dedicated GPU view](user/kubernetes/gpu.md) with three tables. The **GPU** table shows node readiness and a per-resource-type breakdown of GPU capacity, allocatable, allocated, and available counts, plus total and degraded node counts. The **GPU Nodes** table lists each node with its GPU capacity, allocatable, and allocated counts, along with a status badge and reason if not ready. The **GPU Workloads** table lists pods with GPU requests, showing namespace, pod name, owner workload, GPU requested, scheduled node, status, and any scheduling issues.
@@ -21,5 +25,3 @@ Kubernetes environments with detected GPU nodes now display a [dedicated GPU vie
 Administrators can now open a root shell directly on any cluster node from the [Nodes table](user/kubernetes/cluster/details/#nodes), without needing SSH. The feature is disabled by default and can be enabled per cluster in Cluster → Setup → [Security](user/kubernetes/cluster/setup.md#security), or centrally through a [Kubernetes Security Policy](admin/environments/policies/kubernetes-policies/kubernetes-security-policy.md).
 
 <figure><img src=".gitbook/assets/2.44-an-open-node-shell.png" alt="" width="563"><figcaption></figcaption></figure>
-
-### ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)

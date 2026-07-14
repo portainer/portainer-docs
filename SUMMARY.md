@@ -462,6 +462,7 @@
 * [Deprecated and removed features](advanced/deprecated/README.md)
   * [Nomad](advanced/deprecated/nomad.md)
 * [How to prestage an Edge Agent environment](advanced/how-to-prestage-an-edge-agent-environment.md)
+* [Portainer MCP Server](advanced/portainer-mcp-server.md)
 
 ## API
 
