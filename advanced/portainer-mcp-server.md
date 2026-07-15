@@ -52,15 +52,15 @@ The recommended setup when multiple users need to interact with your Portainer i
 
 Each request carries two credentials:
 
-* A **shared gate secret** (`PORTAINER_MCP_AUTH_TOKEN`) that admits the request to the MCP server.
-* The **user's own Portainer API key**, forwarded by their client, which determines what that user can actually do (governed by their existing Portainer identity and permissions).
+* A shared gate secret (`PORTAINER_MCP_AUTH_TOKEN`) that admits the request to the MCP server.
+* The user's own Portainer API key, forwarded by their client, which determines what that user can actually do (governed by their existing Portainer identity and permissions).
 
 Both values are sent over the wire, so the transport must be secured. You must declare one of three transport postures:
 
 **Required for every option:**
 
-* `PORTAINER_MCP_ALLOWED_HOSTS` — set to the hostname or IP address users will use to reach the MCP server. This is a DNS-rebinding allowlist; requests to any other host are rejected with a `421` status.
-* `PORTAINER_MCP_AUTH_TOKEN` — required in HTTP mode. This is the shared front-gate secret you distribute to users; their MCP client sends it via the `Authorization` header.
+* `PORTAINER_MCP_ALLOWED_HOSTS` - set to the hostname or IP address users will use to reach the MCP server. This is a DNS-rebinding allowlist; requests to any other host are rejected with a `421` status.
+* `PORTAINER_MCP_AUTH_TOKEN` - required in HTTP mode. This is the shared front-gate secret you distribute to users; their MCP client sends it via the `Authorization` header.
 
 #### Option A - BYO certificates
 
@@ -94,7 +94,7 @@ claude mcp add portainer --transport http https://mcp.example.com:17717/mcp \
 
 Bring your own proxy and terminate TLS in front of the container.
 
-* Don't publish the container port when a reverse proxy sits in front of it — only the proxy should be able to reach the container.
+* Don't publish the container port when a reverse proxy sits in front of it - only the proxy should be able to reach the container.
 * Set `PORTAINER_MCP_FORWARDED_ALLOW_IPS` to your proxy's exact IP, if stable.
 * Confirm your proxy forwards the original `Host` header and adds `X-Forwarded-Proto: https`.
 
