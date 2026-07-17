@@ -79,6 +79,8 @@ Instead, report vulnerabilities using one of the following methods:
 
 These channels allow the team to review and address the issue as quickly as possible while minimizing the risk of public exposure before a fix is available.
 
+In your report, please include a description of the vulnerability and the potential impact, step-by-step reproduction, and the version and environment where you found it. We will acknowledge your report, give an initial assessment, and provide an estimated timeline for remediation - we do not commit to a fixed window. We will let you know when a fix ships and credit you using your GitHub handle.
+
 Portainer does not operate a paid bug bounty program and does not offer monetary rewards for vulnerability reports. Portainer will not pursue legal action against good-faith research conducted in line with this policy.
 
 ## Feature requests
