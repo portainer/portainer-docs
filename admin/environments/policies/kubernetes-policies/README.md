@@ -17,3 +17,7 @@ The following section describes the details of creating a policy for Kubernetes 
 {% content-ref url="kubernetes-registry-policy.md" %}
 [kubernetes-registry-policy.md](kubernetes-registry-policy.md)
 {% endcontent-ref %}
+
+{% content-ref url="create-a-kubernetes-observability-policy.md" %}
+[create-a-kubernetes-observability-policy.md](create-a-kubernetes-observability-policy.md)
+{% endcontent-ref %}

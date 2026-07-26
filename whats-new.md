@@ -20,6 +20,18 @@ Kubernetes environments with detected GPU nodes now display a [dedicated GPU vie
 
 <figure><img src=".gitbook/assets/2.44-GPU-navigation.gif" alt=""><figcaption></figcaption></figure>
 
+### Pod Security Standards policy for Kubernetes namespaces  ![](.gitbook/assets/button_be.png)&#x20;
+
+You can now apply Kubernetes' built-in [Pod Security Standards](admin/environments/policies/kubernetes-policies/create-a-kubernetes-pod-security-standards-policy.md) to a namespace directly from Portainer using a policy. Choose a `privileged`, `baseline`, or `restricted` profile independently for each mode (`enforce`, `audit`, `warn`), giving you fine-grained control over how strictly pods are validated per namespace.&#x20;
+
+<figure><img src=".gitbook/assets/2.44-pod-security-policy.png" alt=""><figcaption></figcaption></figure>
+
+### **Kubernetes observability policy** ![](.gitbook/assets/button_be.png)&#x20;
+
+You can now define a [Kubernetes observability policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-observability-policy.md) to connect Portainer to your [OneUptime ](https://oneuptime.com/)instance, bringing logs and metrics directly into the namespace details view. Choose to connect to an existing OneUptime agent or have Portainer deploy one for you, then view log and metric data for environments within your policy groups right from Portainer.
+
+<figure><img src=".gitbook/assets/2.44-oneuptime-policy-logs-metrics.png" alt=""><figcaption></figcaption></figure>
+
 ### **A dedicated node shell** ![](.gitbook/assets/button_be.png)&#x20;
 
 Administrators can now open a root shell directly on any cluster node from the [Nodes table](user/kubernetes/cluster/details/#nodes), without needing SSH. The feature is disabled by default and can be enabled per cluster in Cluster → Setup → [Security](user/kubernetes/cluster/setup.md#security), or centrally through a [Kubernetes Security Policy](admin/environments/policies/kubernetes-policies/kubernetes-security-policy.md).
