@@ -10,11 +10,12 @@ The Shared credentials feature is only available in Portainer Business Edition.
 
 To add a new set of credentials, click the **Add credentials** button.
 
-<figure><img src="../../../.gitbook/assets/2.44-new-shared-credentials.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.44-shared-git-credentials.png" alt=""><figcaption></figcaption></figure>
 
 Portainer currently supports the following credential types:
 
 * [Sidero Omni](omni.md)
 * [SSH](ssh.md) (for use with Kubernetes cluster deployments)
+* [Git](add-git-credentials.md)
 
 To remove a set of credentials, check the box next to the credentials to remove and click **Remove**.
