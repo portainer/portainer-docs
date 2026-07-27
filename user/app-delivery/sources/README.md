@@ -31,7 +31,7 @@ The **Settings** tab shows:
 
 <figure><img src="../../../.gitbook/assets/2.43-source-view.png" alt=""><figcaption></figcaption></figure>
 
-The **Workflows** tab lists any [workflows](../workflows.md) using this source.
+The **Workflows** tab lists any [workflows](../workflows/) using this source.
 
 <figure><img src="../../../.gitbook/assets/2.34-workflows-view.png" alt=""><figcaption></figcaption></figure>
 

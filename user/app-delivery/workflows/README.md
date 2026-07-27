@@ -2,19 +2,17 @@
 
 Workflows provides a single view of all Docker, Edge, and Kubernetes workloads deployed from a Git repository, giving you a unified overview of deployment health across your environments. From here you can quickly identify anything that needs attention and jump directly to the relevant stack or application.
 
-Workflows is a read-only view - to create or edit a GitOps configuration, use the [Docker Stacks](../docker/stacks/add.md#option-3-git-repository), [Kubernetes Applications](../kubernetes/applications/manifest/create.md#repository), or [Edge Stacks](../edge/stacks/add/) views.
-
 {% hint style="info" %}
 Supporting resources such as Service Accounts, ConfigMaps, and Secrets deployed via Create from code are not included in the workflow view.
 {% endhint %}
 
 To access Workflows, select **Workflows** in the left-hand menu.
 
-<figure><img src="../../.gitbook/assets/2.42-workflows.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.42-workflows.gif" alt=""><figcaption></figcaption></figure>
 
 At the top of the page, a count of all your workflows is displayed, broken down by status. Click any segment to filter the workflow list by that status. The total count reflects all workflows visible to you.
 
-<figure><img src="../../.gitbook/assets/2.41-gitops-status.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-gitops-status.png" alt=""><figcaption></figcaption></figure>
 
 A workflow will have one of the following statuses:
 
@@ -30,7 +28,7 @@ The workflows table lists each GitOps-configured stack or application as a workf
 
 Each workflow card displays the following information:
 
-<figure><img src="../../.gitbook/assets/2.41-gitops-card.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.41-gitops-card.png" alt=""><figcaption></figcaption></figure>
 
 | Element       | Description                                                                                                                                                          |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

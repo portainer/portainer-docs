@@ -10,6 +10,12 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
+### GitOps workflow creation  ![](.gitbook/assets/button_be.png)&#x20;
+
+You can now create a complete [GitOps deployment workflow](user/app-delivery/workflows/add-a-new-workflow.md) in a single guided flow. From selecting a source and stack file, to configuring deployment targets, environment variables, registry settings, and rollout strategy (including parallel batches with automatic pause or rollback on failure). Once created, Portainer creates the workflow, the stack, and begins deploying in one operation.
+
+<figure><img src=".gitbook/assets/2.44-gitops-workflow-create.gif" alt=""><figcaption></figcaption></figure>
+
 ### Portainer MCP Server ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 Portainer now ships an [MCP server](advanced/portainer-mcp-server.md), generated from the Portainer OpenAPI spec, that exposes the platform's API as MCP tools - list environments, manage GitOps workflows, and troubleshoot Docker and Kubernetes resources from any MCP-compatible client. Install locally in minutes with a one-click bundle, or deploy as a container so your whole team can connect, each acting under their own Portainer permissions.
