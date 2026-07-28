@@ -10,6 +10,16 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
+### Portainer Add-ons  ![](.gitbook/assets/button_be.png)&#x20;
+
+Portainer now supports installable [add-on applications](admin/add-ons/) - purpose-built tools that extend Portainer with additional capabilities and run directly alongside it in your local Kubernetes cluster.&#x20;
+
+Each add-on is deployed as a Helm release and appears as a separate tool in the Portainer sidebar switcher, letting users move between Portainer and its add-ons without leaving the interface. Admins can install, upgrade, restart, and uninstall add-ons from a central catalog, monitor their health through dedicated Resources, Events, and Logs tabs, and control which teams have access.&#x20;
+
+Check out the first Portainer Add-on, [Portainer-Run](https://portainer.ai/), and let us know what you think on [GitHub discussions](https://github.com/orgs/portainer/discussions).
+
+<figure><img src=".gitbook/assets/2.44-add-on-whats-new.png" alt=""><figcaption></figcaption></figure>
+
 ### **Kubernetes Network Security Policy** ![](.gitbook/assets/button_be.png)&#x20;
 
 The new [Kubernetes network security policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-network-security-policy.md) now lets admin users define ingress and egress traffic rules for Kubernetes pods without writing manifests. Choose from presets - block all inbound, allow from a namespace, permit Prometheus scraping, restrict outbound while keeping DNS, and more - or build custom rules targeting pods by label or expression. Policies are automatically deployed as native Kubernetes `NetworkPolicy` objects via Helm across all environments in the assigned group.
