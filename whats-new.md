@@ -10,6 +10,12 @@ You can read more about our release principles in our [lifecycle policy](https:/
 
 ## New in this release
 
+### **Kubernetes Network Security Policy** ![](.gitbook/assets/button_be.png)&#x20;
+
+The new [Kubernetes network security policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-network-security-policy.md) now lets admin users define ingress and egress traffic rules for Kubernetes pods without writing manifests. Choose from presets - block all inbound, allow from a namespace, permit Prometheus scraping, restrict outbound while keeping DNS, and more - or build custom rules targeting pods by label or expression. Policies are automatically deployed as native Kubernetes `NetworkPolicy` objects via Helm across all environments in the assigned group.
+
+<figure><img src=".gitbook/assets/2.44-whats-new-network-sec.png" alt=""><figcaption></figcaption></figure>
+
 ### GitOps workflow creation  ![](.gitbook/assets/button_be.png)&#x20;
 
 You can now create a complete [GitOps deployment workflow](user/app-delivery/workflows/add-a-new-workflow.md) in a single guided flow. From selecting a source and stack file, to configuring deployment targets, environment variables, registry settings, and rollout strategy (including parallel batches with automatic pause or rollback on failure). Once created, Portainer creates the workflow, the stack, and begins deploying in one operation.

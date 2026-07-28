@@ -1,7 +1,7 @@
 # Policies
 
 {% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+This feature is only available to admin users in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
 {% hint style="warning" %}

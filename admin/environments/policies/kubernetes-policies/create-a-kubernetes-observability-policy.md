@@ -37,6 +37,8 @@ After connecting to your OneUptime instance, choose whether to connect to an exi
 | Expected namespace         | The namespace that the OneUptime agent was deployed into.               |
 | Expected Helm release name | The Helm release name that was used to deploy your OneUptime instance.  |
 
+<figure><img src="../../../../.gitbook/assets/2.44-oneuptime-policy-3.png" alt=""><figcaption></figcaption></figure>
+
 #### Deploy agents and connect
 
 | Field / Option               | Overview                                                                                                                                                                                                                          |
@@ -48,7 +50,7 @@ After connecting to your OneUptime instance, choose whether to connect to an exi
 | Cluster Distribution         | Applies compatible defaults for your Kubernetes distribution.                                                                                                                                                                     |
 | Log Collection mode          | Leave on **Preset default** to let the preset decide (**standard** → DaemonSet; **gke-autopilot** / **eks-fargate** → API). Override this if you know your cluster's requirements better than the preset does.                    |
 
-<figure><img src="../../../../.gitbook/assets/2.44-oneuptime-policy-3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2.44-observability-policy-5.png" alt=""><figcaption></figcaption></figure>
 
 When you have finished adding access, click **Create policy**. A confirmation screen displays the changes being made and any existing policy that will be replaced. Click **Confirm** to acknowledge the changes and create the policy.
 
