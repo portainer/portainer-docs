@@ -1,5 +1,9 @@
 # Managing an installed add-on
 
+{% hint style="info" %}
+Non-admin users cannot access the catalog, install wizard, or detail view for add-ons.
+{% endhint %}
+
 To manage an installed add-on, navigate to **Add-ons** under Administration in the menu and click an add-on card to open its detail view. The header shows the current status and provides the available actions. Five tabs give full visibility into the add-on's state.
 
 ### Configuration

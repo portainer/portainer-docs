@@ -1,5 +1,9 @@
 # Installing an add-on
 
+{% hint style="info" %}
+Non-admin users cannot access the catalog, install wizard, or detail view for add-ons.
+{% endhint %}
+
 To install an add-on, navigate to **Add-ons** under Administration in the menu and click **Install** on the application you would like to install.&#x20;
 
 Add-on configuration varies by application. Refer to that application's documentation, linked in the [add-ons catalog](./#add-ons-catalog), for help with installation.
