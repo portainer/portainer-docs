@@ -2,6 +2,111 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.44.0 STS
+
+Jul 30, 2026
+
+### Known issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot.
+* In some Portainer Server Kubernetes installs, removing the local Kubernetes environment can prevent add-ons from being detected or managed correctly.
+* When creating a GitOps workflow, Compose files not named `docker-compose.yml` or `compose.yml` are detected as Kubernetes manifests, so Docker edge groups aren't offered as deployment targets.
+
+**Known issues with Podman support**
+
+* Support for only CentOS 9, Podman 5 rootful.
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster.
+
+### New in this release
+
+#### New and improved features
+
+* Added a basic workflow details screen
+* Added GPU visibility in the Environment Details view
+* Made the Portainer setup token easier to spot in the installation logs
+* Tracked the Source, Workflow, and Artifact status persistently
+* Upgraded bbolt to v1.5.0 for performance and robustness improvements
+* Moved the build pipeline to BuildKit v0.31.2 (previously v0.27.0); image build provenance attestations moved to the SLSA v1.0 format (previously v0.2) — any tooling that parses attestations needed to be verified against the new format
+* Introduced a new feature called Portainer Add-ons, allowing users to install and manage Portainer products such as Portainer-Run
+* Added a new Observability policy that deployed OneUptime monitoring agents into clusters, or connected to an existing OneUptime instance
+* Added Logs and Metrics tabs to the Applications, Namespaces, and Helm Releases views, surfacing OneUptime data when the Observability policy was enabled
+* Added a new Pod Security Standards policy that enforced Kubernetes Pod Security Standards across Kubernetes environments
+* Added a new Standard Network Security policy that applied baseline network-security rules across Kubernetes environments
+* Added a workflow creation wizard
+
+#### Security improvements
+
+* Fixed unauthorized access via leftover service accounts
+* Fixed path traversal in the swarm compose deployer, where configs/secrets file paths escaped the project root
+* Fixed the Docker proxy resolving RBAC from a stale cached endpoint, so access changes after proxy creation weren't honoured until restart (2.39.0+)
+* Fixed Edge async command routes over-gating authorized non-admins with a 403
+* Fixed rolling restart / delete pod bypassing namespace RBAC, where RestartPod/DeletePod skipped the isKubeAdmin/nonAdminNamespaces check
+* CVE remediation:
+  * Upgraded oras.land/oras-go/v2 to 2.6.1 to remediate CVEs
+  * Upgraded containerd to 1.7.33 / v2 2.2.5 to remediate CVEs
+  * Upgraded google.golang.org/grpc to 1.82.1 to remediate GHSA-hrxh-6v49-42gf
+  * Upgraded axios to 1.18.0 to remediate CVEs
+  * Upgraded shell-quote to 1.8.4 to remediate CVEs
+
+#### Bug fixes
+
+* Fixed the "This node is not a swarm manager" error message when running inside a swarm
+* Fixed image builds failing to authenticate against private registries in FROM lines by allowing the X-Registry-Config header through the proxy
+* Fixed a team with valid access not appearing in Config access control while another team with identical access was visible
+* Fixed AD/LDAP settings defects where special characters were stripped, the username format selection was invisible, the root domain was unpopulated, and the delete button was broken
+* Fixed an issue where \[object Object] appeared as an element name on the Alerting page
+* Fixed a problem that caused sources to fail to load
+* Brought back shared Git credentials for GitOps Sources
+* Fixed an issue where a space-delimited list of scopes wasn't correctly requesting access to resources on the user's behalf, so the Google consent screen didn't show the expected permissions
+* Fixed the poll frequency selection dropdown staying on the default value
+* Fixed RBAC policy's datatable namespace input
+* Fixed the forced polling usage in Git sources
+* Fixed Helm chart uninstall showing cosmetic errors only
+* Fixed the tooltip rendering for environment variables in Portainer Application Templates
+* Fixed the Ingress service port number being displayed as 0 instead of the configured value
+* Fixed Kubernetes manifest deployments reporting success but silently failing when "Use namespace from manifest" was disabled
+* Fixed an output mismatch in the Kubectl shell between BE and CE
+* Fixed an issue where logout caused an infinite page reload
+* Fixed a missing source in the list until refresh
+* Fixed non-admin redeploy failing when numeric environment variables were quoted in a stack (invalid containerPort)
+* Fixed Portainer STS 2.42.0 showing "1 Agent needs upgrading" when none did
+* Fixed Docker stack deployments that exceeded the 15-minute timeout remaining stuck in the "Deploying" state and blocking further redeployments
+* Fixed RBAC policies not creating RoleBindings for grants with no namespace list (e.g. Operator, Helpdesk)
+* Fixed re-assigning an edge group to an edge stack bringing back old state
+* Fixed a regression where relative env\_file: in Git sub-directory stacks resolved from the project root instead of the compose file's directory
+* Removed the hint box from the Applications page
+* Fixed Swarm stack and service deployments reporting success despite image pull failures caused by insufficient disk space
+* Fixed the issue where a standard user couldn't deploy a Git stack against an admin-created Source
+* Improved edge tunnel resiliency over high-latency/lossy network links
+* Fixed Swarm edge stacks with edge configs failing to deploy
+* Fixed Swarm image deletion inconsistencies
+* Fixed Swarm stack deployments failing to re-pull private Docker Hub images despite valid registry credentials
+* Improved the containers list to show only the first three published ports inline, collapsing the rest into a "+N more" badge, so containers with many ports no longer broke the table layout
+* Fixed a v2.43.0 migration related to stacks and sources
+* Fixed incorrect WebSocket handler error messages
+* Fixed dark mode styling issues on the Workflows page
+* Fixed the way ListRefs ignored request context, causing "context deadline exceeded" on large repos
+* Fixed SSRF protection ignoring Dialer timeouts
+* Fixed application details/edit unconditionally querying nodes, which 403'd for namespace-scoped users and produced a spurious toast that blocked form edits
+* Fixed an unexpected update triggered by a change to the Git stack reference
+* Fixed various policies front-end issues
+* Fixed create screens listing namespaces the user couldn't create in, where the dropdown was gated on a coarse namespace-write key (or not gated at all)
+* Fixed edge agents registering with the wrong environment type under high-volume self-registration
+* Fixed alignment issues and missing information in the Docker Async Agent dashboard screen
+* Gated Kubernetes application action buttons by per-namespace authorization
+* Implemented a catch-all for cases where the policy hadn't created per-namespace RoleBindings
+* Fixed problems caused by remote update schedule reuse
+* Added the missing workflow name on the source workflow tab
+* Fixed problems with scheduled updates when a new schedule was created while an old one was still active
+* Fixed the Environment Groups page lagging when updating user roles
+* Fixed the updating of edge stacks using private repositories
+* Fixed an installation media link opening the wrong page in the cluster creation form (omni)
+* Hid the edit application YAML button in the UI when the user lacked permissions
+* Fixed the Kubectl shell returning 403s for namespace operators, helpdesk, and read-only users; access was now gated on OperationPortainerWebsocketExec
+
 ## Release 2.43.0 STS
 
 Jun 25, 2026

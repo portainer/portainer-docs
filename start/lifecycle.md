@@ -59,7 +59,7 @@ Each stream (LTS and STS) will have a number of patch releases throughout it’s
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
 | **2.39 LTS** | **Feb 2026** | **Nov 2026**               |
-| 2.43 STS     | Jun 2026     | Jul 2026                   |
+| 2.44 STS     | Jul 2026     | Aug 2026                   |
 
 ### Planned releases
 
@@ -67,7 +67,6 @@ We intend to release a new version every month, with a new LTS release (in bold 
 
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
-| 2.44 STS     | Jul 2026     | Aug 2026                   |
 | **2.45 LTS** | **Aug 2026** | **May 2027**               |
 
 <figure><img src="../.gitbook/assets/2.39-release-schedule.png" alt=""><figcaption></figcaption></figure>
@@ -80,6 +79,7 @@ The following releases have passed the end of support date and are no longer mai
 
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
+| 2.43 STS     | Jun 2026     | Jul 2026                   |
 | 2.42 STS     | May 2026     | Jun 2026                   |
 | 2.41 STS     | Apr 2026     | May 2026                   |
 | 2.40 STS     | Mar 2026     | Apr 2026                   |
