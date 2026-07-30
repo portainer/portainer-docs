@@ -15,9 +15,9 @@ Your setup token must be retrieved from your Portainer server logs. How you acce
 
 Within your logs, you can find the setup token by searching for the following line: `setup_token=`. Copy the token and paste it into the **Setup token** field.
 
-<figure><img src="../../.gitbook/assets/2.43-setup-token.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.44-setup-token.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/new-install.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.44-setup-token-1.png" alt=""><figcaption></figcaption></figure>
 
 The setup token is one-time use, you do not need to store or remember it after setup is complete.
 
