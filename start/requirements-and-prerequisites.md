@@ -36,6 +36,7 @@ The following tables list all of the configurations that we have tested, validat
 
 | Portainer Version    | Release Date       | Docker Version | Kubernetes Version | Podman Version | Architectures                                                                                          |
 | -------------------- | ------------------ | -------------- | ------------------ | -------------- | ------------------------------------------------------------------------------------------------------ |
+| Community 2.44.0 STS | Jul 30, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.43.0 STS | Jun 18, 2026       | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.42.0 STS | May 21, 2026       | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.41.0 STS | April 30, 2026     | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
