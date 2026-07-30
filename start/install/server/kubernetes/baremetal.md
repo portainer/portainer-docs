@@ -93,7 +93,7 @@ Using the following command, Portainer will be available on port `30779` for HTT
 ```
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set enterpriseEdition.enabled=true \
-    --set enterpriseEdition.image.tag=lts \
+    --set enterpriseEdition.image.tag=sts \
     --set tls.force=true
 ```
 
@@ -116,7 +116,7 @@ In this example, Portainer will be deployed to your cluster and assigned a Clust
 ```
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set enterpriseEdition.enabled=true \
-    --set enterpriseEdition.image.tag=lts \
+    --set enterpriseEdition.image.tag=sts \
     --set service.type=ClusterIP \
     --set tls.force=true \
     --set ingress.enabled=true \
@@ -142,7 +142,7 @@ Using the following command, Portainer will be available at an assigned Load Bal
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=LoadBalancer \
     --set enterpriseEdition.enabled=true \
-    --set enterpriseEdition.image.tag=lts \
+    --set enterpriseEdition.image.tag=sts \
     --set tls.force=true
 ```
 
@@ -173,7 +173,7 @@ Our YAML manifests support exposing Portainer via either NodePort or Load Balanc
 To expose via NodePort, you can use the following command (Portainer will be available on port `30777` for HTTP and `30779` for HTTPS):
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer.yaml
 ```
 
 {% hint style="info" %}
@@ -185,7 +185,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 To expose via Load Balancer, use the following command to provision Portainer at an assigned Load Balancer IP on port `9000` for HTTP and `9443` for HTTPS:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer-lb.yaml
 ```
 
 {% hint style="info" %}

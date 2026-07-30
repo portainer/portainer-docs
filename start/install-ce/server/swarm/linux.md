@@ -52,7 +52,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endhint %}
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](/broken/pages/j9woSyd6d0WozsRnLzYh) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 
 Portainer Server and the Agents have now been installed. You can check to see whether the Portainer Server and Agent containers have started by running `docker ps`:

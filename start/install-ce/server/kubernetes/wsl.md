@@ -55,7 +55,7 @@ Using the following command, Portainer will be available on port `30777` for HTT
 
 ```
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
-    --set image.tag=lts
+    --set image.tag=sts
 ```
 
 {% hint style="info" %}
@@ -63,7 +63,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endhint %}
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](/broken/pages/j9woSyd6d0WozsRnLzYh) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 {% endtab %}
 
@@ -74,7 +74,7 @@ In this example, Portainer will be deployed to your cluster and assigned a Clust
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=ClusterIP \
     --set tls.force=true \
-    --set image.tag=lts \
+    --set image.tag=sts \
     --set ingress.enabled=true \
     --set ingress.ingressClassName=<ingressClassName (eg: nginx)> \
     --set ingress.annotations."nginx\.ingress\.kubernetes\.io/backend-protocol"=HTTPS \
@@ -93,7 +93,7 @@ Using the following command, Portainer will be available at an assigned Load Bal
 ```
 helm upgrade --install --create-namespace -n portainer portainer portainer/portainer \
     --set service.type=LoadBalancer \
-    --set image.tag=lts
+    --set image.tag=sts
 ```
 
 {% hint style="info" %}

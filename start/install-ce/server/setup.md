@@ -6,7 +6,7 @@ Once the Portainer Server has been deployed, and you have navigated to the insta
 
 Your first user will be an administrator. The username defaults to `admin` but you can change it if you prefer. The password must be at least 12 characters long and meet the listed password requirements.
 
-Your setup token can be found in your Portainer server logs - look for the `setup_token=` line. For details on starting Portainer without a setup token or with a custom setup token, refer to [this FAQ.](/broken/pages/j9woSyd6d0WozsRnLzYh)
+Your setup token can be found in your Portainer server logs - look for the `setup_token=` line. For details on starting Portainer without a setup token or with a custom setup token, refer to [this FAQ](../../../faqs/installing/setup-token.md).&#x20;
 
 {% hint style="info" %}
 Your Portainer server logs can be accessed with:
