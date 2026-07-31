@@ -18,10 +18,10 @@ Send a request to the `/api/endpoints` endpoint, specifying `EndpointCreationTyp
 
 {% code title="" %}
 ```
-curl -sf -X POST "$PORTAINER_URL/api/endpoints"
--H "X-API-Key: $ADMIN_TOKEN"
--F "Name=local"
--F "EndpointCreationType=5"
+curl -sf -X POST "$PORTAINER_URL/api/endpoints" \
+  -H "X-API-Key: $ADMIN_TOKEN" \
+  -F "Name=local" \
+  -F "EndpointCreationType=5"
 ```
 {% endcode %}
 
