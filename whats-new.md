@@ -34,7 +34,7 @@ You can now create a complete [GitOps deployment workflow](user/app-delivery/wor
 
 ### GPU visibility ![](.gitbook/assets/button_be.png)&#x20;
 
-Kubernetes environments with detected GPU nodes now display a [dedicated GPU view](user/kubernetes/gpu.md) with three tables. The **GPU** table shows node readiness and a per-resource-type breakdown of GPU capacity, allocatable, allocated, and available counts, plus total and degraded node counts. The **GPU Nodes** table lists each node with its GPU capacity, allocatable, and allocated counts, along with a status badge and reason if not ready. The **GPU Workloads** table lists pods with GPU requests, showing namespace, pod name, owner workload, GPU requested, scheduled node, status, and any scheduling issues.
+Kubernetes environments with detected GPU nodes now display a [dedicated GPU view](user/kubernetes/gpu.md) with three tables. The GPU table shows node readiness and a per-resource-type breakdown of GPU capacity, allocatable, allocated, and available counts, plus total and degraded node counts. The GPU Nodes table lists each node with its GPU capacity, allocatable, and allocated counts, along with a status badge and reason if not ready. The GPU Workloads table lists pods with GPU requests, showing namespace, pod name, owner workload, GPU requested, scheduled node, status, and any scheduling issues.
 
 <figure><img src=".gitbook/assets/2.44-GPU-navigation.gif" alt=""><figcaption></figcaption></figure>
 
