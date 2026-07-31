@@ -9,7 +9,7 @@ Jul 30, 2026
 ### Known issues
 
 * On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot.
-* In some Portainer Server Kubernetes installs, removing the local Kubernetes environment can prevent add-ons from being detected or managed correctly.
+* In some Portainer Server Kubernetes installs, removing the local Kubernetes environment can prevent add-ons from being detected or managed correctly. For more information and a workaround, see [this FAQ](faqs/known-issues/add-ons-are-unavailable-because-the-local-kubernetes-environment-is-missing.md).&#x20;
 * When creating a GitOps workflow, Compose files not named `docker-compose.yml` or `compose.yml` are detected as Kubernetes manifests, so Docker edge groups aren't offered as deployment targets.
 
 **Known issues with Podman support**
