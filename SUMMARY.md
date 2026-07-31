@@ -188,6 +188,7 @@
 * [App Delivery](user/app-delivery/README.md)
   * [Workflows](user/app-delivery/workflows/README.md)
     * [Add a new workflow](user/app-delivery/workflows/add-a-new-workflow.md)
+    * [Manage a workflow](user/app-delivery/workflows/manage-a-workflow.md)
   * [Sources](user/app-delivery/sources/README.md)
     * [Add a new source](user/app-delivery/sources/add-a-new-source/README.md)
       * [Add a new Git Repository source](user/app-delivery/sources/add-a-new-source/add-a-new-git-repository-source.md)
