@@ -328,7 +328,7 @@ Restoring a configuration is only possible on a fresh instance of Portainer duri
 
 On the initialization page, expand **Restore Portainer from backup**. Click **Select file** then browse to and select the `tar.gz` backup file. If the backup was originally encrypted, enter the password.
 
-Your setup token can be found in your Portainer server logs. Search for `setup_token=` within your logs to find the token. For details on restoring your Portainer instance without entering a setup token, refer to [this FAQ.](/broken/pages/j9woSyd6d0WozsRnLzYh)&#x20;
+Your setup token can be found in your Portainer server logs. Search for `setup_token=` within your logs to find the token. For details on restoring your Portainer instance without entering a setup token, refer to [this FAQ](../../faqs/installing/setup-token.md).&#x20;
 
 {% hint style="info" %}
 Your Portainer server logs can be found at:
