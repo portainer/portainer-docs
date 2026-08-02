@@ -47,9 +47,12 @@ The following tables list all of the configurations that we have tested, validat
 
 | Portainer Version    | Release Date       | Docker Version | Kubernetes Version | Podman Version | Architectures                                                                                          |
 | -------------------- | ------------------ | -------------- | ------------------ | -------------- | ------------------------------------------------------------------------------------------------------ |
+| Community 2.44 STS   | Jul 30, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.39.5 LTS | Jul 14, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.39.4 LTS | Jun 25, 2026       | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
+| Community 2.43 STS   | Jun 25, 2026       | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.39.3 LTS | Jun 4, 2026        | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
+| Community 2.42 STS   | May 21, 2026       | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.39.2 LTS | May 7, 2026        | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.41.0 STS | April 30, 2026     | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
 | Community 2.40.0 STS | March 26, 2026     | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
