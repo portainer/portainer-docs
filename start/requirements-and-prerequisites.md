@@ -10,51 +10,59 @@ The following tables list all of the configurations that we have tested, validat
 
 ### Portainer Business Edition (BE)
 
-| Portainer Version                                               | Release Date       | Docker Version | Kubernetes Version | Podman Version | Architectures                                                                                          |
-| --------------------------------------------------------------- | ------------------ | -------------- | ------------------ | -------------- | ------------------------------------------------------------------------------------------------------ |
-| [Business 2.44 STS](../release-notes.md#release-2.44.0-sts)     | Jul 30, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.43 STS](../release-notes.md#release-2.43.0-sts)     | Jun 25, 2026       | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.42 STS](../release-notes.md#release-2.42.0-sts)     | May 21, 2026       | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.41 STS](../release-notes.md#release-2.41.0-sts)     | April 30, 2026     | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.40 STS](../release-notes.md#release-2.40.0-sts)     | March 26, 2026     | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.39.1 LTS](../release-notes.md#release-2.39.1-lts)   | March 19, 2026     | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.39.0 LTS](../release-notes.md#release-2.39.0-lts)   | February 26, 2026  | 28.5.1 29.2.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.38.1 STS](../release-notes.md#release-2.38.1-sts)   | February 13, 2026  | 28.5.1 29.2.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.38.0 STS](../release-notes.md#release-2.38.0-sts)   | January 29, 2026   | 28.5.1 29.1.2  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.37.0 STS](../release-notes.md)                      | December 11, 2025  | 28.5.1 29.1.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.33.5 LTS](../release-notes.md#release-2.33.4-lts)   | November 27, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.36.0 STS](../release-notes.md#release-2.36.0-sts)   | November 27, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.33.4 LTS](../release-notes.md#release-2.33.4-lts-1) | November 20, 2025  | 27.5.1 28.5.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.33.3 LTS](../release-notes.md#release-2.33.3-lts)   | October 30, 2025   | 27.5.1 28.5.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.35.0 STS](../release-notes.md#release-2.35.0-sts)   | October 16, 2025   | 27.5.1 28.4.0  | 1.31 1.32 1.33     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.33.2 LTS](../release-notes.md#release-2.33.2-lts)   | September 25, 2025 | 27.5.1 28.4.0  | 1.31 1.32 1.33     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.34.0 STS](../release-notes.md#release-2.34.0-sts)   | September 18, 2025 | 27.5.1 28.3.3  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.33.1 LTS](../release-notes.md#release-2.33.1-lts)   | August 27, 2025    | 27.5.1 28.3.2  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| [Business 2.33.0 LTS](../release-notes.md#release-2.33.0-lts)   | August 20, 2025    | 27.5.1 28.3.2  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
+| Portainer Version                                               | Release Date       | Docker Version | Kubernetes Version | Podman Version | Architectures                                                                 |
+| --------------------------------------------------------------- | ------------------ | -------------- | ------------------ | -------------- | ----------------------------------------------------------------------------- |
+| [Business 2.44 STS](../release-notes.md#release-2.44.0-sts)     | Jul 30, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.39.5 LTS](../release-notes.md#release-2.39.5-lts)   | Jul 14, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md),  x86\_64 |
+| [Business 2.39.4 LTS](../release-notes.md#release-2.39.4-lts)   | Jun 25, 2026       | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.43 STS](../release-notes.md#release-2.43.0-sts)     | Jun 25, 2026       | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.39.3 LTS](../release-notes.md#release-2.39.3-lts)   | Jun 4, 2026        | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.42 STS](../release-notes.md#release-2.42.0-sts)     | May 21, 2026       | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.39.2 LTS ](../release-notes.md#release-2.39.2-lts)  | May 7, 2026        | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.41 STS](../release-notes.md#release-2.41.0-sts)     | April 30, 2026     | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.40 STS](../release-notes.md#release-2.40.0-sts)     | March 26, 2026     | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.39.1 LTS](../release-notes.md#release-2.39.1-lts)   | March 19, 2026     | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.39.0 LTS](../release-notes.md#release-2.39.0-lts)   | February 26, 2026  | 28.5.1 29.2.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.38.1 STS](../release-notes.md#release-2.38.1-sts)   | February 13, 2026  | 28.5.1 29.2.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.38.0 STS](../release-notes.md#release-2.38.0-sts)   | January 29, 2026   | 28.5.1 29.1.2  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.37.0 STS](../release-notes.md)                      | December 11, 2025  | 28.5.1 29.1.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.33.5 LTS](../release-notes.md#release-2.33.4-lts)   | November 27, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.36.0 STS](../release-notes.md#release-2.36.0-sts)   | November 27, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.33.4 LTS](../release-notes.md#release-2.33.4-lts-1) | November 20, 2025  | 27.5.1 28.5.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.33.3 LTS](../release-notes.md#release-2.33.3-lts)   | October 30, 2025   | 27.5.1 28.5.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.35.0 STS](../release-notes.md#release-2.35.0-sts)   | October 16, 2025   | 27.5.1 28.4.0  | 1.31 1.32 1.33     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.33.2 LTS](../release-notes.md#release-2.33.2-lts)   | September 25, 2025 | 27.5.1 28.4.0  | 1.31 1.32 1.33     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.34.0 STS](../release-notes.md#release-2.34.0-sts)   | September 18, 2025 | 27.5.1 28.3.3  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.33.1 LTS](../release-notes.md#release-2.33.1-lts)   | August 27, 2025    | 27.5.1 28.3.2  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
+| [Business 2.33.0 LTS](../release-notes.md#release-2.33.0-lts)   | August 20, 2025    | 27.5.1 28.3.2  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64  |
 
 ### Portainer Community Edition (CE)
 
-| Portainer Version    | Release Date       | Docker Version | Kubernetes Version | Podman Version | Architectures                                                                                          |
-| -------------------- | ------------------ | -------------- | ------------------ | -------------- | ------------------------------------------------------------------------------------------------------ |
-| Community 2.44.0 STS | Jul 30, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.43.0 STS | Jun 18, 2026       | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.42.0 STS | May 21, 2026       | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.41.0 STS | April 30, 2026     | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.40.0 STS | March 26, 2026     | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.39.1 LTS | March 19, 2026     | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.39.0 LTS | February 26, 2026  | 28.5.1 29.2.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.38.1 STS | February 13, 2026  | 28.5.1 29.2.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.38.0 STS | January 29, 2026   | 28.5.1 29.1.2  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.37.0 STS | December 11, 2025  | 28.5.1 29.1.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.33.5 LTS | November 27, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.36.0 STS | November 27, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.33.4 LTS | November 20, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.33.3 LTS | October 30, 2025   | 27.5.1 28.5.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.35.0 STS | October 16, 2025   | 27.5.1 28.4.0  | 1.31 1.32 1.33     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.33.2 LTS | September 25, 2025 | 27.5.1 28.4.0  | 1.31 1.32 1.33     | 5.6.0          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.34.0 STS | September 18, 2025 | 27.5.1 28.3.3  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.33.1 LTS | August 27, 2025    | 27.5.1 28.3.2  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
-| Community 2.33.0 LTS | August 20, 2025    | 27.5.1 28.3.2  | 1.31 1.32 .133     | 5.5.1          | [ARM64](https://portal.portainer.io/knowledge/which-arm-architectures-does-portainer-support), x86\_64 |
+| Portainer Version    | Release Date       | Docker Version | Kubernetes Version | Podman Version | Architectures                                                                |
+| -------------------- | ------------------ | -------------- | ------------------ | -------------- | ---------------------------------------------------------------------------- |
+| Community 2.44.0 STS | Jul 30, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.39.5 LTS | Jul 14, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.39.4 LTS | Jun 25, 2026       | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.43.0 STS | Jun 18, 2026       | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.39.3 LTS | Jun 4, 2026        | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.42.0 STS | May 21, 2026       | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.39.2 LTS | May 7, 2026        | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.41.0 STS | April 30, 2026     | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.40.0 STS | March 26, 2026     | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.39.1 LTS | March 19, 2026     | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.39.0 LTS | February 26, 2026  | 28.5.1 29.2.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.38.1 STS | February 13, 2026  | 28.5.1 29.2.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.38.0 STS | January 29, 2026   | 28.5.1 29.1.2  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.37.0 STS | December 11, 2025  | 28.5.1 29.1.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.33.5 LTS | November 27, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.36.0 STS | November 27, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.33.4 LTS | November 20, 2025  | 28.5.1 29.0.0  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.33.3 LTS | October 30, 2025   | 27.5.1 28.5.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.35.0 STS | October 16, 2025   | 27.5.1 28.4.0  | 1.31 1.32 1.33     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.33.2 LTS | September 25, 2025 | 27.5.1 28.4.0  | 1.31 1.32 1.33     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.34.0 STS | September 18, 2025 | 27.5.1 28.3.3  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.33.1 LTS | August 27, 2025    | 27.5.1 28.3.2  | 1.31 1.32 1.33     | 5.5.1          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| Community 2.33.0 LTS | August 20, 2025    | 27.5.1 28.3.2  | 1.31 1.32 .133     | 5.5.1          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
 
 {% hint style="info" %}
 If you find an issue with an unlisted configuration, before reporting a bug, update your environment to a valid configuration and try to replicate the issue.
