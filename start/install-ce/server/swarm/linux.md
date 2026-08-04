@@ -38,7 +38,7 @@ Only do this **once** for your environment, regardless of how many nodes are in 
 First, retrieve the stack YML manifest:
 
 ```
-curl -L https://downloads.portainer.io/ce-lts/portainer-agent-stack.yml -o portainer-agent-stack.yml
+curl -L https://downloads.portainer.io/ce-sts/portainer-agent-stack.yml -o portainer-agent-stack.yml
 ```
 
 Then use the downloaded YML manifest to deploy your stack:
