@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [What's new in version 2.44](whats-new.md)
+* [What's new in version 2.45](whats-new.md)
 * [Release Notes](release-notes.md)
 
 ## Getting Started <a href="#start" id="start"></a>
@@ -48,7 +48,6 @@
   * [Updating on Docker Standalone](start/upgrade/docker.md)
   * [Updating on Docker Swarm](start/upgrade/swarm.md)
   * [Updating on Podman](start/upgrade/podman.md)
-  * [Updating on Nomad](start/upgrade/nomad.md)
   * [Updating the Edge Agent](start/upgrade/edge.md)
   * [Updating from Portainer 1.x](start/upgrade/from-1.x.md)
   * [Switching to Portainer Business Edition](start/upgrade/tobe/README.md)

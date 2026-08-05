@@ -2,6 +2,10 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.45.0 LTS <a href="#release-2.44.0-sts" id="release-2.44.0-sts"></a>
+
+Aug 28, 2026
+
 ## Release 2.44.0 STS <a href="#release-2.44.0-sts" id="release-2.44.0-sts"></a>
 
 Jul 30, 2026

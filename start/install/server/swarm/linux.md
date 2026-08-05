@@ -39,7 +39,7 @@ Only do this **once** for your environment, regardless of how many nodes are in 
 First, retrieve the stack YML manifest:
 
 ```
-curl -L https://downloads.portainer.io/ee-sts/portainer-agent-stack.yml -o portainer-agent-stack.yml
+curl -L https://downloads.portainer.io/ee-lts/portainer-agent-stack.yml -o portainer-agent-stack.yml
 ```
 
 Then use the downloaded YML manifest to deploy your stack:
@@ -61,8 +61,8 @@ Portainer Server and the Agents have now been installed. You can check to see wh
 ```
 root@manager01:~# docker ps
 CONTAINER ID   IMAGE                           COMMAND                  CREATED              STATUS              PORTS                NAMES
-59ee466f6b15   portainer/agent:sts             "./agent"                About a minute ago   Up About a minute                        portainer_agent.xbb8k6r7j1tk9gozjku7e43wr.5sa6b3e8cl6hyu0snlt387sgv
-2db7dd4bfba0   portainer/portainer-ee:sts      "/portainer -H tcp:/…"   About a minute ago   Up About a minute   8000/tcp, 9443/tcp   portainer_portainer.1.gpuvu3pqmt1m19zxfo44v7izx
+59ee466f6b15   portainer/agent:lts             "./agent"                About a minute ago   Up About a minute                        portainer_agent.xbb8k6r7j1tk9gozjku7e43wr.5sa6b3e8cl6hyu0snlt387sgv
+2db7dd4bfba0   portainer/portainer-ee:lts      "/portainer -H tcp:/…"   About a minute ago   Up About a minute   8000/tcp, 9443/tcp   portainer_portainer.1.gpuvu3pqmt1m19zxfo44v7izx
 ```
 
 ## Logging In <a href="#logging-in" id="logging-in"></a>

@@ -41,7 +41,7 @@ services:
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
 
   portainer:
-    image: portainer/portainer-ee:sts
+    image: portainer/portainer-ee:lts
     command: -H unix:///var/run/docker.sock
     restart: always
     volumes:
@@ -99,7 +99,7 @@ services:
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
 
   portainer:
-    image: portainer/portainer-ce:sts
+    image: portainer/portainer-ce:lts
     command: -H unix:///var/run/docker.sock
     restart: always
     volumes:
@@ -218,7 +218,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
   agent:
-    image: portainer/agent:sts
+    image: portainer/agent:lts
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -314,7 +314,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ce:sts
+    image: portainer/portainer-ce:lts
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data
@@ -370,8 +370,8 @@ To check the deployment, run `docker service ls`. You should see an output simil
 
 ```
 ID                  NAME                  MODE                REPLICAS            IMAGE                          PORTS
-lt21zrypsll6        portainer_agent       global              1/1                 portainer/agent:sts
-m6912ynwdcd7        portainer_portainer   replicated          1/1                 portainer/portainer-ee:sts
+lt21zrypsll6        portainer_agent       global              1/1                 portainer/agent:ts
+m6912ynwdcd7        portainer_portainer   replicated          1/1                 portainer/portainer-ee:lts
 tw2nb4i640e4        portainer_traefik     replicated          1/1                 traefik:latest                 *:80->80/tcp, *:443->443/tcp
 ```
 

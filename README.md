@@ -2,7 +2,7 @@
 
 Welcome to Portainer's official documentation site.&#x20;
 
-This documentation covers Portainer 2.44 (STS). If you're running the LTS stream, see the [LTS documentation](https://docs.portainer.io) instead.
+This documentation covers Portainer 2.45 (LTS). If you're running the STS stream, see the [LTS documentation](https://docs.portainer.io/sts/) instead.
 
 ## About Portainer
 

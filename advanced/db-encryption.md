@@ -43,7 +43,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /root/secrets/portainer:/run/portainer/portainer \
-    portainer/portainer-ee:sts
+    portainer/portainer-ee:lts
 ```
 {% endtab %}
 
@@ -54,7 +54,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /root/secrets/portainer:/run/secrets/portainer \
-    portainer/portainer-ee:sts
+    portainer/portainer-ee:lts
 ```
 {% endtab %}
 {% endtabs %}
@@ -117,7 +117,7 @@ version: '3.2'
 
 services:
   agent:
-    image: portainer/agent:sts
+    image: portainer/agent:lts
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes

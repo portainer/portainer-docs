@@ -24,7 +24,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /path/to/your/certs:/certs \
-    portainer/portainer-ee:sts \
+    portainer/portainer-ee:lts \
     --sslcert /certs/portainer.crt \
     --sslkey /certs/portainer.key
 ```
@@ -37,7 +37,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /path/to/your/certs:/certs \
-    portainer/portainer-ce:sts \
+    portainer/portainer-ce:lts \
     --sslcert /certs/portainer.crt \
     --sslkey /certs/portainer.key
 ```
@@ -55,7 +55,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v portainer_data:/data \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
-    portainer/portainer-ee:sts \
+    portainer/portainer-ee:lts \
     --sslcert /certs/live/yourdomain/fullchain.pem \
     --sslkey /certs/live/yourdomain/privkey.pem
 ```
@@ -69,7 +69,7 @@ docker run -d -p 9443:9443 -p 8000:8000 \
     -v portainer_data:/data \
     -v /etc/letsencrypt/live/yourdomain:/certs/live/yourdomain:ro \
     -v /etc/letsencrypt/archive/yourdomain:/certs/archive/yourdomain:ro \
-    portainer/portainer-ce:sts \
+    portainer/portainer-ce:lts \
     --sslcert /certs/live/yourdomain/fullchain.pem \
     --sslkey /certs/live/yourdomain/privkey.pem
 ```
@@ -94,13 +94,13 @@ Next, retrieve the stack YML manifest:
 **Business Edition:**
 
 ```
-curl -L https://downloads.portainer.io/ee-sts/portainer-agent-stack-ssl.yml -o portainer-agent-stack.yml
+curl -L https://downloads.portainer.io/ee-lts/portainer-agent-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 
 **Community Edition:**
 
 ```
-curl -L https://downloads.portainer.io/ce-sts/portainer-agent-stack-ssl.yml -o portainer-agent-stack.yml
+curl -L https://downloads.portainer.io/ce-lts/portainer-agent-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 {% endtab %}
 
@@ -108,13 +108,13 @@ curl -L https://downloads.portainer.io/ce-sts/portainer-agent-stack-ssl.yml -o p
 **Business Edition:**
 
 ```
-curl https://downloads.portainer.io/ee-sts/portainer-windows-stack-ssl.yml -o portainer-agent-stack.yml
+curl https://downloads.portainer.io/ee-lts/portainer-windows-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 
 **Community Edition:**
 
 ```
-curl https://downloads.portainer.io/ce-sts/portainer-windows-stack-ssl.yml -o portainer-agent-stack.yml
+curl https://downloads.portainer.io/ce-lts/portainer-windows-stack-ssl.yml -o portainer-agent-stack.yml
 ```
 {% endtab %}
 {% endtabs %}

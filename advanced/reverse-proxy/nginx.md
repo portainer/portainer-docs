@@ -27,7 +27,7 @@ services:
       - "/var/run/docker.sock:/tmp/docker.sock:ro"
 
   portainer:
-    image: portainer/portainer-ee:sts
+    image: portainer/portainer-ee:lts
     command: -H unix:///var/run/docker.sock
     restart: always
     environment:
@@ -58,7 +58,7 @@ services:
       - "/var/run/docker.sock:/tmp/docker.sock:ro"
 
   portainer:
-    image: portainer/portainer-ce:sts
+    image: portainer/portainer-ce:lts
     command: -H unix:///var/run/docker.sock
     restart: always
     environment:
@@ -86,7 +86,7 @@ When this has finished, run `docker ps` . You should see an output similar to th
 
 ```
 CONTAINER ID   IMAGE                           COMMAND                  CREATED         STATUS         PORTS                                                           NAMES
-8c8f2eac7c9a   portainer/portainer-ee:sts      "/portainer -H unix:…"   4 minutes ago   Up 4 minutes   9000/tcp, 0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 9443/tcp   portainer_portainer_1
+8c8f2eac7c9a   portainer/portainer-ee:lts      "/portainer -H unix:…"   4 minutes ago   Up 4 minutes   9000/tcp, 0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 9443/tcp   portainer_portainer_1
 3e7c8b5d71d7   nginxproxy/nginx-proxy          "/app/docker-entrypo…"   4 minutes ago   Up 4 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp                               portainer_nginx-proxy_1
 ```
 
@@ -138,7 +138,7 @@ services:
       - "./vhost.d:/etc/nginx/vhost.d:ro"
 
   agent:
-    image: portainer/agent:sts
+    image: portainer/agent:lts
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -156,7 +156,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ee:sts
+    image: portainer/portainer-ee:lts
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data
@@ -202,7 +202,7 @@ services:
       - "./vhost.d:/etc/nginx/vhost.d:ro"
 
   agent:
-    image: portainer/agent:sts
+    image: portainer/agent:lts
     environment:
       # REQUIRED: Should be equal to the service name prefixed by "tasks." when
       # deployed inside an overlay network
@@ -220,7 +220,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ce:sts
+    image: portainer/portainer-ce:lts
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - data:/data
@@ -261,9 +261,9 @@ To check the deployment, run `docker service ls`. You should see an output simil
 
 ```
 ID                  NAME                    MODE                REPLICAS            IMAGE                          PORTS
-gy2bjxid0g4p        portainer_agent         global              1/1                 portainer/agent:sts
+gy2bjxid0g4p        portainer_agent         global              1/1                 portainer/agent:ts
 jwvjp5bux4sz        portainer_nginx-proxy   replicated          1/1                 nginxproxy/nginx-proxy:latest  *:80->80/tcp
-5nflcvoxl3c7        portainer_portainer     replicated          1/1                 portainer/portainer-ee:sts     *:8000->8000/tcp
+5nflcvoxl3c7        portainer_portainer     replicated          1/1                 portainer/portainer-ee:lts     *:8000->8000/tcp
 ```
 
 Once the services are running, you will be able to access Portainer from the URL you defined earlier, for example: `portainer.yourdomain.com`.

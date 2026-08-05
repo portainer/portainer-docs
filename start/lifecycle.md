@@ -59,7 +59,7 @@ Each stream (LTS and STS) will have a number of patch releases throughout it’s
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
 | **2.39 LTS** | **Feb 2026** | **Nov 2026**               |
-| 2.44 STS     | Jul 2026     | Aug 2026                   |
+| **2.45 LTS** | **Aug 2026** | **May 2027**               |
 
 ### Planned releases
 
@@ -67,9 +67,14 @@ We intend to release a new version every month, with a new LTS release (in bold 
 
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
-| **2.45 LTS** | **Aug 2026** | **May 2027**               |
+| 2.46 STS     | Sept 2026    | Oct 2026                   |
+| 2.47 STS     | Oct 2026     | Nov 2026                   |
+| 2.48 STS     | Nov 2026     | Dec 2026                   |
+| 2.49 STS     | Dec 2026     | Jan 2027                   |
+| 2.50 STS     | Jan 2027     | Feb 2027                   |
+| **2.51 LTS** | **Feb 2027** | **Nov 2027**               |
 
-<figure><img src="../.gitbook/assets/2.39-release-schedule.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2.45-release-schedule-.png" alt=""><figcaption></figcaption></figure>
 
 Sitting on an older release that is no longer maintained or supported is strongly discouraged and users take full responsibility for doing so. Users are strongly encouraged to ensure they are running the latest patch release for a given stream.
 
@@ -79,6 +84,7 @@ The following releases have passed the end of support date and are no longer mai
 
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
+| 2.44 STS     | Jul 2026     | Aug 2026                   |
 | 2.43 STS     | Jun 2026     | Jul 2026                   |
 | 2.42 STS     | May 2026     | Jun 2026                   |
 | 2.41 STS     | Apr 2026     | May 2026                   |
