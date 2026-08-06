@@ -357,7 +357,7 @@ Restoring a configuration is only possible on a fresh instance of Portainer duri
 | S3 Compatible Host | If you are using a non-AWS S3-compatible provider (such as MinIO), enter the URL (including the protocol and port if necessary) here. If you're using AWS S3, leave this blank.                                                 |
 | Filename           | Enter the filename of the backup you want to restore.                                                                                                                                                                           |
 | Password           | Enter the password set on your backup (if any).                                                                                                                                                                                 |
-| Setup token        | Enter the setup token, which can be found in your Portainer server logs - look for the `setup_token=` line. For details on restoring Portainer without a setup token, refer to [this FAQ.](/broken/pages/j9woSyd6d0WozsRnLzYh)  |
+| Setup token        | Enter the setup token, which can be found in your Portainer server logs - look for the `setup_token=` line. For details on restoring Portainer without a setup token, refer to [this FAQ](../../faqs/installing/setup-token.md) |
 
 <figure><img src="../../.gitbook/assets/2.43-retrieve-from-s3.png" alt=""><figcaption></figcaption></figure>
 
