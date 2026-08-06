@@ -50,11 +50,12 @@ Editing the YAML is not available for resources in namespaces marked as system.
 
 ## Actions
 
-Depending on how the application was deployed, a number of actions can be performed, including:
+Depending on how the application was deployed and your user role, a number of actions can be performed, including:
 
-* [Editing the application](edit.md)
-* Edit the [Git settings](manifest/create.md#repository)
-* Pull and redeploy
+* [Editing the application](edit.md).
+* Edit the [Git settings](manifest/create.md#repository).
+* Scale the application (Business Edition only).
+* Pull and redeploy.
 * Perform a rolling restart of the application (Business Edition only).
 * Redeploying the application (terminating all the services and recreating them).
 * Rolling the application back to a previous configuration.
