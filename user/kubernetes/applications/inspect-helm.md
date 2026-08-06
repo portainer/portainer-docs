@@ -4,7 +4,7 @@ To view information about Helm applications running in a cluster, from the menu 
 
 <figure><img src="../../../.gitbook/assets/2.35-view-k8-app.gif" alt=""><figcaption></figcaption></figure>
 
-You will be shown details about the Helm application including the name, namespace, revision, chart used for the deployment, the chart source, the application version, the chart version, and the last deployment date. You'll also find buttons to [edit or upgrade](inspect-helm.md#upgrading), roll back or uninstall your Helm deployment.
+You will be shown details about the Helm application including the name, namespace, revision, chart used for the deployment, the chart source, the application version, the chart version, and the last deployment date. You'll also find buttons to [edit or upgrade](edit.md), roll back or uninstall your Helm deployment.
 
 If your Helm application was deployed using a Git repository, you will also see details of the repo, ref, the commit hash, and if auto-update is on or off. If there is a new chart version available in the Git repo, an **Out of sync** label will be shown. Click on this label to sync the deployment with the repository.
 

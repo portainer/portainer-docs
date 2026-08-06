@@ -21,7 +21,7 @@ In order to configure Portainer with mTLS support, you will need the following:
 
 ## Configuring the Portainer Server
 
-To use mTLS with your Edge Agents, the Portainer Server instance must be configured with mTLS support. This can either be done during the initial installation of the Portainer Server instance, or after installation through the [Edge Compute settings](../admin/settings/edge.md#mtls-certificate).
+To use mTLS with your Edge Agents, the Portainer Server instance must be configured with mTLS support. This can either be done during the initial installation of the Portainer Server instance, or after installation through the [Edge Compute settings](../user/edge/configurations.md).
 
 ### Configure mTLS during installation
 

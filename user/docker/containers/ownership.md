@@ -8,11 +8,11 @@ From the menu select **Containers** then select the container whose ownership yo
 
 Under the **Access control** section tick the **Change ownership** checkbox then select the new ownership type, using the table below as a guide.
 
-| Ownership Type | Overview                                                                                                 |
-| -------------- | -------------------------------------------------------------------------------------------------------- |
-| Administrators | Only Portainer administrators can manage the container.                                                  |
-| Restricted     | Only teams or users you specify can manage the container.                                                |
-| Public         | Anyone who has [access to the environment](/broken/pages/-MhRf3LxN2ln2V0-Yxmj) can manage the container. |
+| Ownership Type | Overview                                                                                                                        |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Administrators | Only Portainer administrators can manage the container.                                                                         |
+| Restricted     | Only teams or users you specify can manage the container.                                                                       |
+| Public         | Anyone who has [access to the environment](../../../admin/environments/environments.md#manage-access) can manage the container. |
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_containers_container_access_control.png" alt=""><figcaption></figcaption></figure>
 

@@ -94,7 +94,7 @@ networks:
 ```
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](/broken/pages/j9woSyd6d0WozsRnLzYh) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 
 Once you have created or downloaded the compose file, you can deploy it with the following command:

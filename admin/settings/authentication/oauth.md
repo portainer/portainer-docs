@@ -125,7 +125,3 @@ Complete the **OAuth Configuration** section based on the table below.
 <figure><img src="../../../.gitbook/assets/2.21-settings-authentication-oauth-custom.png" alt=""><figcaption></figcaption></figure>
 
 When you're finished, click **Save settings**.
-
-## Giving environment access to OAuth teams and users
-
-See [Managing user access to environments](/broken/pages/-MhRf3LxN2ln2V0-Yxmj).

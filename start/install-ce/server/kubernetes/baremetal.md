@@ -128,7 +128,7 @@ If you need to access Portainer via HTTP, remove the `--set tls.force=true` opti
 {% endhint %}
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](/broken/pages/j9woSyd6d0WozsRnLzYh) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 {% endtab %}
 
@@ -151,7 +151,7 @@ If you need to access Portainer via HTTP on port `9000`, remove the `--set tls.f
 {% endhint %}
 
 {% hint style="info" %}
-By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](/broken/pages/j9woSyd6d0WozsRnLzYh) for more details.
+By default, new Portainer instances require a setup token to complete first-time setup. To skip or customize the token, pass a flag at startup. See [this FAQ](../../../../faqs/installing/setup-token.md) for more details.
 {% endhint %}
 {% endtab %}
 {% endtabs %}

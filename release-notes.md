@@ -977,7 +977,7 @@ December 11, 2025
 * Added a check to reject async environments in the Edge Jobs logs API
 * Fixed a data-race related with alerting
 
-## Release 2.33.5 LTS <a href="#release-2.33.4-lts" id="release-2.33.4-lts"></a>
+## Release 2.33.5 LTS <a href="#release-2.33.5-lts" id="release-2.33.5-lts"></a>
 
 November 27, 2025
 
