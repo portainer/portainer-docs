@@ -6,15 +6,11 @@ Managing a workflow is read-only for Community Edition.&#x20;
 
 The workflow detail page gives you a live view of a workflow's health, the git sources and files it draws from, the stacks it manages, and the environments those stacks are deployed to.
 
-To manage a GitOps workflow,  in the left-hand menu select **Workflows**, then click into the workflow you would like to manage.&#x20;
+To manage a GitOps workflow, in the left-hand menu select **Workflows**, then click into the workflow you would like to manage.&#x20;
 
 ### Edit a workflow
 
-{% hint style="info" %}
-The edit button is currently disabled for Kubernetes stacks, where in-place editing is not yet available through the workflow view.
-{% endhint %}
-
-To edit a workflow, from the workflow details view, click **Edit.** This takes you to the deployed stack's edit page so you can modify its configuration directly.&#x20;
+To edit a workflow, from the workflow details view, select **Edit**. This returns you to the [workflow creation](add-a-new-workflow.md) steps with your preconfigured values, allowing changes to any field.
 
 ### Delete a workflow
 
