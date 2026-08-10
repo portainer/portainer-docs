@@ -1,5 +1,9 @@
 # Add a Podman environment
 
+{% hint style="info" %}
+Portainer manages Podman through Podman's Docker-compatible API - the compatibility layer Podman's own service exposes to emulate the Docker Engine API - not a native Podman integration. Podman environments therefore behave like Docker environments in Portainer, and support is limited to configurations where that Docker-compatible API behaves consistently.
+{% endhint %}
+
 When connecting a Podman host to Portainer, there are a few different methods you can use depending on your particular requirements. You can install the Portainer Agent on the Podman host and connect via the agent, you can connect directly to the Podman socket, or you can deploy the Portainer Edge Agent in standard or async mode.
 
 Regardless of the method you choose, there are some generic requirements you will need to meet. You will require:
