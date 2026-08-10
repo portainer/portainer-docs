@@ -4,6 +4,10 @@
 These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/podman/linux.md).
 {% endhint %}
 
+{% hint style="info" %}
+Portainer manages Podman through Podman's Docker-compatible API - the compatibility layer Podman's own service exposes to emulate the Docker Engine API - not a native Podman integration. Podman environments therefore behave like Docker environments in Portainer, and support is limited to configurations where that Docker-compatible API behaves consistently.
+{% endhint %}
+
 ## Introduction
 
 Portainer consists of two elements, the _Portainer Server_, and the _Portainer Agent_. Both elements run as lightweight containers on a Podman engine. This document will help you install the Portainer Server container on your Linux environment. To add a new Linux environment to an existing Portainer Server installation, please refer to the [Portainer Agent installation instructions](../../../../admin/environments/add/podman/agent.md).
