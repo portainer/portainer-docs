@@ -119,8 +119,9 @@ The following tables cover the two roles available in Portainer Community Editio
 
 ### portainer-cr-user
 
-| API Group         | Resources         | Verbs |
-| ----------------- | ----------------- | ----- |
-| (Empty)           | namespaces, nodes | list  |
-| storage.k8s.io    | storageclasses    | list  |
-| networking.k8s.io | ingresses         | list  |
+| API Group         | Resources               | Verbs     |
+| ----------------- | ----------------------- | --------- |
+| (Empty)           | namespaces, nodes       | get, list |
+| storage.k8s.io    | storageclasses          | list      |
+| metrics.k8s.io    | namespaces, pods, nodes | get, list |
+| networking.k8s.io | ingresses               | list      |

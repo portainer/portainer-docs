@@ -202,6 +202,12 @@ Stops a container from appearing in the Portainer UI through the container label
 
 <figure><img src="../../.gitbook/assets/2.15-settings-settings-hiddencontainers.png" alt=""><figcaption></figcaption></figure>
 
+## SSRF <a href="#ssrf" id="ssrf"></a>
+
+The SSRF setting allows you to control which destinations Portainer can proxy requests to. You can configure a list of permitted destinations and choose how Portainer handles requests to destinations outside addresses defined in the list. The **SSRF protection mode** lets you decide to block destinations outright (**Enforce** mode), log them without blocking (**Audit** mode), or take no action (**Off**).
+
+<figure><img src="../../.gitbook/assets/2.43-SSRF.png" alt=""><figcaption></figcaption></figure>
+
 ## Back up Portainer
 
 This setting contains all of the information that Portainer stores on the `/data` volume, archived in a `tar.gz` file, and is optionally encrypted with a password. This archive is all you need to restore Portainer.
