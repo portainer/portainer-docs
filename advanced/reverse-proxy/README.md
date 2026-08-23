@@ -61,6 +61,10 @@ If you need to embed Portainer in a frame, you will need to disable or customise
 Disabling CSP reduces your security posture. Only do this if your deployment specifically requires iframe embedding, and ensure other controls are in place.&#x20;
 {% endhint %}
 
+### Authentication logs
+
+To ensure that the correct IP address is displayed in the Origin field of the [Authentication logs](../../admin/logs/authentication.md), we recommend using the `--trusted-proxies` [CLI option](../cli.md) and specifying the IP addresses / CIDRs of your proxy. This tells Portainer to read the `X-Forwarded-For` / `Forwarded` header in the request and trust it's value as the real source IP address. Without this set, the Origin field will contain your proxy's IP address rather than the true source.
+
 ## Reverse proxy guides
 
 We have guides to walk you through deploying Portainer behind a proxy for Traefik and nginx:

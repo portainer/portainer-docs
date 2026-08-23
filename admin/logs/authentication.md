@@ -17,3 +17,7 @@ If you want to export logs, filter by date range then click **Export to CSV**.
 Authentication events are searchable and filterable, and the date and time, origin IP address, context, user and result are provided for each.
 
 <figure><img src="../../.gitbook/assets/2.15-settings-authlogs-list.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+If you are using a forwarding proxy in front of Portainer we recommend using the `--trusted-proxies` [CLI option](../../advanced/cli.md) to ensure that `X-Forwarded-For` / `Forwarded` headers are read to show the real Origin IP address.&#x20;
+{% endhint %}
