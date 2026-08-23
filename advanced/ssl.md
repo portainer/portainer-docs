@@ -125,7 +125,7 @@ Finally, use the downloaded YML manifest to deploy your stack:
 docker stack deploy -c portainer-agent-stack.yml portainer
 ```
 
-For more information about secrets, read [Docker's own documentation](https://docs.docker.com/compose/compose-file/#secrets).
+For more information about secrets, read [Docker's own documentation](https://docs.docker.com/reference/compose-file/#secrets).
 
 ## Using your own SSL certificate on Kubernetes (via Helm)
 
