@@ -12,4 +12,17 @@ If your Portainer installation uses external authentication and teams are synced
 
 <figure><img src="../../../.gitbook/assets/2.15-settings-users-teams-add.png" alt=""><figcaption></figcaption></figure>
 
+If you have any add-ons installed you will see additional options when creating teams:
+
+| Field/Option             | Overview                                                                                                                                                                              |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Restrict to add-ons only | When this is toggled on, members of this team can only use the add-ons they've been granted. They won't see the Portainer management UI, and will land on an add-on when they log in. |
+| Grant access to add-ons  | Select the add-on or add-ons that this team can access.                                                                                                                               |
+
+{% hint style="info" %}
+These options can also be set and changed on teams after creation.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/2.45-teams-add-addons.png" alt=""><figcaption></figcaption></figure>
+
 When you're ready, click **Create team**.
