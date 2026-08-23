@@ -114,7 +114,7 @@ Once you have entered your cluster configuration details, click **Provision envi
 
 ### Provision progress
 
-From the Environments page you will be able to see the progress of any running Kubernetes environment provisions. The status will be updated as the provision completes, and if the provision runs into problems an error will be displayed here. You can hover over the status or error for additional detail.
+From the Environments page you will be able to see the progress of any running Kubernetes environment provisions. The status will be updated as the provision completes, and if the provision runs into problems an error will be displayed here. You can hover over the status or error for additional detail. You can also cancel an in-progress cluster provision from this list, with an option when doing so to also delete the cluster in Omni.
 
 <figure><img src="../../../../.gitbook/assets/2.26-environments-add-kube-create-omni-progress.png" alt=""><figcaption></figcaption></figure>
 
