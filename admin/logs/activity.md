@@ -1,6 +1,6 @@
 # Activity
 
-Within the Portainer Business Edition UI you can view a log of all actions taken. The log is read-only and cannot be edited.
+Within the Portainer Business Edition UI you can view a log of all actions taken through Portainer, including actions via `kubectl exec`, container exec, node shell and pod-exec websocket sessions. The log is read-only and cannot be edited.
 
 From the menu expand **Logs** then select **Activity**.
 
