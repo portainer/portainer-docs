@@ -308,6 +308,10 @@ Fill in the fields using the guide below.
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+Credential fields are redacted after saving. If the tenant ID / client ID fields are changed or a new certificate is uploaded, the credentials will need to be re-entered.
+{% endhint %}
+
 | Field/Option       | Overview                                                                                                           |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | Service URL        | Optionally enter a custom Azure Blob Storage endpoint. Leave this field blank to use the standard public endpoint. |
