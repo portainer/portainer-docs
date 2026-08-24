@@ -1,7 +1,7 @@
 # Add-ons
 
 {% hint style="info" %}
-Add-ons are only available to admin users in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file) and require a local Kubernetes environment.&#x20;
+Add-ons are only available to admin users in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=addons) and require a local Kubernetes environment.&#x20;
 {% endhint %}
 
 {% hint style="warning" %}
@@ -12,7 +12,7 @@ Portainer Add-ons are applications that extend Portainer. From this view, you ca
 
 ### Add-ons catalog
 
-The catalog lists every add-on available and is updated dynamically from the catalog URL. Each card shows the add-on's name, description, installed version, and current status, along with the actions available for that state.
+The catalog lists every add-on available and is updated dynamically from the [catalog URL](../settings/general.md#add-on-settings). Each card shows the add-on's name, description, installed version, and current status, along with the actions available for that state.
 
 These are the current add-ons listed in the default add-on catalog:
 
