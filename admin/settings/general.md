@@ -122,6 +122,18 @@ In this section you can configure various Kubernetes-specific deployment options
 
 <figure><img src="../../.gitbook/assets/2.20-settings-general-kubernetes-deployment.png" alt=""><figcaption></figcaption></figure>
 
+## Add-on settings
+
+{% hint style="info" %}
+This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=addon-settings).
+{% endhint %}
+
+This section contains settings related to the Add-ons functionality in Portainer.&#x20;
+
+Here you can specify a custom catalog URL to use to provide Portainer with the list of add-ons available to it. If left blank, the default catalog URL is used.
+
+<figure><img src="../../.gitbook/assets/2.45-settings-general-addon.png" alt=""><figcaption></figcaption></figure>
+
 ## Certificate Authority file for Kubernetes Helm repositories
 
 {% hint style="info" %}

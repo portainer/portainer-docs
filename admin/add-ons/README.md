@@ -12,7 +12,9 @@ Portainer Add-ons are applications that extend Portainer. From this view, you ca
 
 ### Add-ons catalog
 
-The catalog lists every add-on available with your installed Portainer version. Each card shows the add-on's name, description, installed version, and current status, along with the actions available for that state.
+The catalog lists every add-on available and is updated dynamically from the catalog URL. Each card shows the add-on's name, description, installed version, and current status, along with the actions available for that state.
+
+These are the current add-ons listed in the default add-on catalog:
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><h4>Portainer-Run</h4></td><td>Portainer-Run is a governed self-service layer that lets non-developer business teams deploy the apps they build with AI tools onto your organization's own Kubernetes, without ever needing to know anything about Kubernetes, containers, or infrastructure.</td><td><a href="https://docs.portainer.ai/">https://docs.portainer.ai/</a></td><td data-object-fit="contain"><a href="../../.gitbook/assets/portainer-run-svg.svg">portainer-run-svg.svg</a></td></tr></tbody></table>
 
