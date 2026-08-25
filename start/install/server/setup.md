@@ -24,6 +24,19 @@ Paste the license key you were provided into the box and click **Submit**.
 
 <figure><img src="../../../.gitbook/assets/2.32-initial-setup-license.png" alt=""><figcaption></figcaption></figure>
 
+## Set up Edge Compute
+
+Enable and configure [Edge Compute functionality](../../../user/edge/) here. Configure the settings below, then select **Enable and continue**. Alternatively, select **Skip** to leave Edge Compute features off, or to keep any settings already applied via [CLI flags](../../../advanced/cli.md).
+
+|                                      |                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Edge Compute features         | Toggle this on to enable Edge Compute functionality including Edge Device features.                                                                                                                                                                                                                                                                                                                         |
+| Portainer API server URL             | <p>Enter the default URL and port of your Portainer Server instance as it will be seen from your Edge environment. If using a FQDN, ensure that DNS is properly configured to provide this.<br>This value can be overridden when manually deploying an Edge Agent.</p>                                                                                                                                      |
+| Portainer tunnel server address      | Enter the default address and port of your Portainer Server instance's tunnel server as it will be seen from your Edge environment. If using a FQDN, ensure that DNS is properly configured to provide this. In most cases, this will be the same address as the Portainer API server URL, but without the protocol and on port `8000`. This value can be overridden when manually deploying an Edge Agent. |
+| Enable Edge Environment Waiting Room | The Edge Devices [Waiting room](../../../user/edge/waiting-room.md) lists any Edge Devices that have connected using the pre-deploy script and are pending association with the Portainer instance. Toggle this setting on to ensure new edge agents wait for manual approval in the waiting room. If left off, agents will be automatically trusted on first connect.                                      |
+
+<figure><img src="../../../.gitbook/assets/2.45-edge-compute-setup.png" alt=""><figcaption></figcaption></figure>
+
 ## Connecting Portainer to your environments
 
 Once the admin user has been created, the **Environment Wizard** will automatically launch. The wizard will help get you started with Portainer.
