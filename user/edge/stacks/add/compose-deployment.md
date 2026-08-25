@@ -33,12 +33,12 @@ Click **Select a file** to upload a file from your computer containing your stac
 
 Enter the information about your Git repository to deploy your Edge Stack from Git.
 
-| Field/Option         | Overview                                                                                                                                                                                                                       |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). Select **Create new source** to navigate to the [source creation view](../../../app-delivery/sources/add-a-new-source/). |
-| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                                                |
-| Compose path         | Enter the path to the Compose file from the root of the repository.                                                                                                                                                            |
-| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                                                                                                                                           |
+| Field/Option         | Overview                                                                                                                                                                                                          |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). Select **Create new source** to navigate to the [source creation view](/broken/pages/tHkiYwfwbWNoBDw6C8FS). |
+| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                                   |
+| Compose path         | Enter the path to the Compose file from the root of the repository.                                                                                                                                               |
+| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                                                                                                                              |
 
 <figure><img src="../../../../.gitbook/assets/2.43-edge-stack-compose-repo.png" alt=""><figcaption></figcaption></figure>
 

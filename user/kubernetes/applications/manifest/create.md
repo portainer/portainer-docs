@@ -16,13 +16,13 @@ Your next options will depend on the deployment method you selected.
 
 Use the provided fields to enter the details of your Git repository containing your Kubernetes manifests.
 
-| Field/Option         | Overview                                                                                                                                                                                                                       |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). Select **Create new source** to navigate to the [source creation view](../../../app-delivery/sources/add-a-new-source/). |
-| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                                                |
-| Manifest path        | Enter the path to your manifest file relative to the root of your repository.                                                                                                                                                  |
-| Additional paths     | Click **Add file** to define additional manifests or compose files to process as part of the deployment.                                                                                                                       |
-| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                                                                                                                                           |
+| Field/Option         | Overview                                                                                                                                                                                                          |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). Select **Create new source** to navigate to the [source creation view](/broken/pages/tHkiYwfwbWNoBDw6C8FS). |
+| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                                   |
+| Manifest path        | Enter the path to your manifest file relative to the root of your repository.                                                                                                                                     |
+| Additional paths     | Click **Add file** to define additional manifests or compose files to process as part of the deployment.                                                                                                          |
+| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                                                                                                                              |
 
 <figure><img src="../../../../.gitbook/assets/2.43-new-application-repo.png" alt=""><figcaption></figcaption></figure>
 

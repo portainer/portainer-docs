@@ -10,7 +10,7 @@ To view your GitOps sources, select **Sources** from the left-hand menu.
 
 <figure><img src="../../../.gitbook/assets/2.43-navigate-to-sources.gif" alt=""><figcaption></figcaption></figure>
 
-From this view, admin users can [add a new source](add-a-new-source/), monitor the connectivity status of each source, and manage credentials - maintaining consistency across the platform without navigating between multiple configuration screens.&#x20;
+From this view, admin users can [add a new source](/broken/pages/tHkiYwfwbWNoBDw6C8FS), monitor the connectivity status of each source, and manage credentials - maintaining consistency across the platform without navigating between multiple configuration screens.&#x20;
 
 Each source displays its current connectivity status, calculated at the time of the last connection attempt, whether triggered manually or via an automated GitOps polling workflow. If a credential expires or a network change blocks access, the status updates to reflect this. It also displays the source URL, the number of workflows and environments the source is connected to, and the time of the last sync.&#x20;
 

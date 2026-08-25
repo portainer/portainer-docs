@@ -3,7 +3,7 @@
 {% hint style="info" %}
 Creating a workflow assumes you have:
 
-* At least one [source](../sources/add-a-new-source/)
+* At least one [source](/broken/pages/tHkiYwfwbWNoBDw6C8FS)
 * At least one [edge group](../../edge/groups.md)
 {% endhint %}
 
