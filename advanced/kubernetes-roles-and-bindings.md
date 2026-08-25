@@ -13,70 +13,98 @@ The following tables provide a reference for how our Portainer roles map to capa
 
 ## Role Allocations <a href="#role-allocations" id="role-allocations"></a>
 
-| Portainer Role            | Cluster Role Binding                                                                                                                                 | Namespace Role Binding                                                                                                                                          |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Environment Administrator | cluster-admin (k8s system)                                                                                                                           | N/A                                                                                                                                                             |
-| Operator                  | [portainer-operator](kubernetes-roles-and-bindings.md#portainer-operator), [portainer-helpdesk](kubernetes-roles-and-bindings.md#portainer-helpdesk) | [portainer-view](kubernetes-roles-and-bindings.md#portainer-view) (all non-system namespaces)                                                                   |
-| User                      | [portainer-basic](kubernetes-roles-and-bindings.md#portainer-basic)                                                                                  | [portainer-edit](kubernetes-roles-and-bindings.md#portainer-edit), [portainer-view](kubernetes-roles-and-bindings.md#portainer-view) (only assigned namespaces) |
-| Helpdesk                  | [portainer-helpdesk](kubernetes-roles-and-bindings.md#portainer-helpdesk)                                                                            | [portainer-view](kubernetes-roles-and-bindings.md#portainer-view) (all non-system namespaces)                                                                   |
-| Read-Only                 | [portainer-basic](kubernetes-roles-and-bindings.md#portainer-basic)                                                                                  | [portainer-view](kubernetes-roles-and-bindings.md#portainer-view) (only assigned namespaces)                                                                    |
+| Portainer Role            | Cluster Role Binding                                                | Namespace Role Binding                                                                                                                                                                                                                                                               |
+| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Environment Administrator | cluster-admin (k8s system)                                          | N/A                                                                                                                                                                                                                                                                                  |
+| Operator                  | [portainer-basic](kubernetes-roles-and-bindings.md#portainer-basic) | [portainer-view](kubernetes-roles-and-bindings.md#portainer-view), [portainer-helpdesk](kubernetes-roles-and-bindings.md#portainer-access-restrictions), [portainer-cluster-operator](kubernetes-roles-and-bindings.md#portainer-access-restrictions-1) (all non-system namespaces)  |
+| Namespace Operator        | [portainer-basic](kubernetes-roles-and-bindings.md#portainer-basic) | [portainer-view](kubernetes-roles-and-bindings.md#portainer-view), [portainer-helpdesk](kubernetes-roles-and-bindings.md#portainer-access-restrictions), [portainer-namespace-operator](kubernetes-roles-and-bindings.md#portainer-access-restrictions-2) (only assigned namespaces) |
+| User                      | [portainer-basic](kubernetes-roles-and-bindings.md#portainer-basic) | [portainer-edit](kubernetes-roles-and-bindings.md#portainer-edit), [portainer-view](kubernetes-roles-and-bindings.md#portainer-view) (only assigned namespaces)                                                                                                                      |
+| Helpdesk                  | [portainer-basic](kubernetes-roles-and-bindings.md#portainer-basic) | [portainer-view](kubernetes-roles-and-bindings.md#portainer-view), [portainer-helpdesk](kubernetes-roles-and-bindings.md#portainer-access-restrictions) (all non-system namespaces)                                                                                                  |
+| Read-Only                 | [portainer-basic](kubernetes-roles-and-bindings.md#portainer-basic) | [portainer-view](kubernetes-roles-and-bindings.md#portainer-view) (only assigned namespaces)                                                                                                                                                                                         |
 
 ## Cluster Roles <a href="#cluster-roles" id="cluster-roles"></a>
 
 ### portainer-basic <a href="#portainer-basic" id="portainer-basic"></a>
 
-| API Group         | Resources               | Verbs     |
-| ----------------- | ----------------------- | --------- |
-| (Empty)           | namespaces, nodes       | get, list |
-| storage.k8s.io    | storageclasses          | list      |
-| metrics.k8s.io    | namespaces, pods, nodes | get, list |
-| networking.k8s.io | ingressclasses          | list      |
-
-### portainer-helpdesk <a href="#portainer-helpdesk" id="portainer-helpdesk"></a>
-
-| API Group         | Resources                                               | Verbs            |
-| ----------------- | ------------------------------------------------------- | ---------------- |
-| (Empty)           | componentstatuses, endpoints, events, namespaces, nodes | get, list, watch |
-| storage.k8s.io    | storageclasses                                          | get, list, watch |
-| networking.k8s.io | ingresses                                               | get, watch       |
-| networking.k8s.io | ingressclasses                                          | list             |
-| metrics.k8s.io    | pods, nodes, nodes/stats, namespace                     | get, list, watch |
-
-### portainer-operator <a href="#portainer-operator" id="portainer-operator"></a>
-
-| API Group      | Resources                             | Verbs            |
-| -------------- | ------------------------------------- | ---------------- |
-| (Empty)        | configmaps                            | update           |
-| (Empty)        | pods                                  | delete           |
-| apps           | daemonsets, deployments, statefulsets | patch            |
-| metrics.k8s.io | pods, nodes, nodes/stats, namespaces  | get, list, watch |
+| API Group         | Resources         | Verbs     |
+| ----------------- | ----------------- | --------- |
+| (Empty)           | namespaces, nodes | get, list |
+| storage.k8s.io    | storageclasses    | list      |
+| metrics.k8s.io    | nodes             | get, list |
+| networking.k8s.io | ingressclasses    | list      |
 
 ## Namespace Roles <a href="#namespace-roles" id="namespace-roles"></a>
 
 ### portainer-edit <a href="#portainer-edit" id="portainer-edit"></a>
 
-| API Group         | Resources                                                                                                                                                                                                           | Verbs                                           |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| (Empty)           | configmaps, endpoints, persistentvolumeclaims, pods, pods/attach, pods/exec, pods/portforward, pods/proxy, replicationcontrollers, replicationcontrollers/scale, secrets, serviceaccounts, services, services/proxy | create, delete, deletecollection, patch, update |
-| (Empty)           | pods/attach, pods/exec, pods/portforward, pods/proxy, secrets, services/proxy                                                                                                                                       | get, list, watch                                |
-| apps              | daemonsets, deployments, deployments/rollback, deployments/scale, replicasets, replicasets/scale, statefulsets, statefulsets/scale                                                                                  | create, delete, deletecollection, patch, update |
-| autoscaling       | horizontalpodautoscalers                                                                                                                                                                                            | create, delete, deletecollection, patch, update |
-| batch             | cronjobs, jobs                                                                                                                                                                                                      | create, delete, deletecollection, patch, update |
-| extensions        | daemonsets, deployments, deployments/rollback, deployments/scale, ingresses, networkpolicies, replicasets, replicasets/scale, replicationcontrollers/scale                                                          | create, delete, deletecollection, patch, update |
-| networking.k8s.io | ingresses, networkpolicies                                                                                                                                                                                          | create, delete, deletecollection, patch, update |
-| policy            | poddisruptionbudgets                                                                                                                                                                                                | create, delete, deletecollection, patch, update |
+{% hint style="info" %}
+The `ingresses` permissions in the `extensions` and `networking.k8s.io` groups are granted only when **Only allow admins to deploy ingresses** is disabled for the environment. When that option is enabled, Standard Users can view ingresses (through portainer-view) but not create or change them.
+{% endhint %}
+
+| API Group          | Resources                                                                                                                                                                                                           | Verbs                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| (Empty)            | configmaps, endpoints, persistentvolumeclaims, pods, pods/attach, pods/exec, pods/portforward, pods/proxy, replicationcontrollers, replicationcontrollers/scale, secrets, serviceaccounts, services, services/proxy | create, delete, deletecollection, patch, update |
+| (Empty)            | pods/attach, pods/exec, pods/portforward, pods/proxy, secrets, services/proxy                                                                                                                                       | get, list, watch                                |
+| apps               | daemonsets, deployments, deployments/rollback, deployments/scale, replicasets, replicasets/scale, statefulsets, statefulsets/scale                                                                                  | create, delete, deletecollection, patch, update |
+| autoscaling        | horizontalpodautoscalers                                                                                                                                                                                            | create, delete, deletecollection, patch, update |
+| batch              | cronjobs, jobs                                                                                                                                                                                                      | create, delete, deletecollection, patch, update |
+| extensions         | daemonsets, deployments, deployments/rollback, deployments/scale, ingresses, networkpolicies, replicasets, replicasets/scale, replicationcontrollers/scale                                                          | create, delete, deletecollection, patch, update |
+| networking.k8s.io  | ingresses, networkpolicies                                                                                                                                                                                          | create, delete, deletecollection, patch, update |
+| policy             | poddisruptionbudgets                                                                                                                                                                                                | create, delete, deletecollection, patch, update |
+| postgresql.cnpg.io | clusters                                                                                                                                                                                                            | create, delete, deletecollection, patch, update |
 
 ### portainer-view <a href="#portainer-view" id="portainer-view"></a>
 
-| API Group         | Resources                                                                                                                                                                                                                                                                                                                                                                   | Verbs            |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| (Empty)           | bindings, componentstatuses, configmaps, endpoints, events, limitranges, namespaces, namespaces/status, persistentvolumeclaims, persistentvolumeclaims/status, pods, pods/log, pods/status, replicationcontrollers, replicationcontrollers/scale, replicationcontrollers/status, resourcequotas, resourcequotas/status, secrets, serviceaccounts, services, services/status | get, list, watch |
-| apps              | controllerrevisions, daemonsets, daemonsets/status, deployments, deployments/scale, deployments/status, replicasets, replicasets/scale, replicasets/status, statefulsets, statefulsets/scale, statefulsets/status                                                                                                                                                           | get, list, watch |
-| autoscaling       | horizontalpodautoscalers, horizontalpodautoscalers/status                                                                                                                                                                                                                                                                                                                   | get, list, watch |
-| batch             | cronjobs, cronjobs/status, jobs, jobs/status                                                                                                                                                                                                                                                                                                                                | get, list, watch |
-| extensions        | daemonsets, daemonsets/status, deployments, deployments/scale, deployments/status, ingresses, ingresses/status, networkpolicies, replicasets, replicasets/scale, replicasets/status, replicationcontrollers/scale                                                                                                                                                           | get, list, watch |
-| networking.k8s.io | ingresses, ingresses/status, networkpolicies                                                                                                                                                                                                                                                                                                                                | get, list, watch |
-| policy            | poddisruptionbudgets, poddisruptionbudgets/status                                                                                                                                                                                                                                                                                                                           | get, list, watch |
+| API Group          | Resources                                                                                                                                                                                                                                                                                                                                                          | Verbs            |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| (Empty)            | bindings, componentstatuses, configmaps, endpoints, events, limitranges, namespaces, namespaces/status, persistentvolumeclaims, persistentvolumeclaims/status, pods, pods/log, pods/status, replicationcontrollers, replicationcontrollers/scale, replicationcontrollers/status, resourcequotas, resourcequotas/status, serviceaccounts, services, services/status | get, list, watch |
+| apps               | controllerrevisions, daemonsets, daemonsets/status, deployments, deployments/scale, deployments/status, replicasets, replicasets/scale, replicasets/status, statefulsets, statefulsets/scale, statefulsets/status                                                                                                                                                  | get, list, watch |
+| autoscaling        | horizontalpodautoscalers, horizontalpodautoscalers/status                                                                                                                                                                                                                                                                                                          | get, list, watch |
+| batch              | cronjobs, cronjobs/status, jobs, jobs/status                                                                                                                                                                                                                                                                                                                       | get, list, watch |
+| extensions         | daemonsets, daemonsets/status, deployments, deployments/scale, deployments/status, ingresses, ingresses/status, networkpolicies, replicasets, replicasets/scale, replicasets/status, replicationcontrollers/scale                                                                                                                                                  | get, list, watch |
+| metrics.k8s.io     | pods                                                                                                                                                                                                                                                                                                                                                               | get, list, watch |
+| networking.k8s.io  | ingresses, ingresses/status, networkpolicies                                                                                                                                                                                                                                                                                                                       | get, list, watch |
+| policy             | poddisruptionbudgets, poddisruptionbudgets/status                                                                                                                                                                                                                                                                                                                  | get, list, watch |
+| postgresql.cnpg.io | clusters                                                                                                                                                                                                                                                                                                                                                           | get, list, watch |
+
+### portainer-helpdesk <a href="#portainer-access-restrictions" id="portainer-access-restrictions"></a>
+
+| API Group          | Resources                                               | Verbs            |
+| ------------------ | ------------------------------------------------------- | ---------------- |
+| (Empty)            | componentstatuses, endpoints, events, namespaces, nodes | get, list, watch |
+| storage.k8s.io     | storageclasses                                          | get, list, watch |
+| networking.k8s.io  | ingresses                                               | get, watch       |
+| networking.k8s.io  | ingressclasses                                          | list             |
+| metrics.k8s.io     | pods, nodes, nodes/stats                                | get, list, watch |
+| postgresql.cnpg.io | clusters                                                | get, list, watch |
+
+### portainer-cluster-operator <a href="#portainer-access-restrictions" id="portainer-access-restrictions"></a>
+
+| API Group          | Resources                             | Verbs            |
+| ------------------ | ------------------------------------- | ---------------- |
+| (Empty)            | configmaps                            | update           |
+| (Empty)            | secrets                               | get, list, watch |
+| (Empty)            | pods                                  | delete           |
+| (Empty)            | pods/exec                             | create           |
+| apps               | daemonsets, deployments, statefulsets | patch            |
+| metrics.k8s.io     | pods, nodes, nodes/stats              | get, list, watch |
+| postgresql.cnpg.io | clusters                              | get, list, watch |
+
+### portainer-namespace-operator <a href="#portainer-access-restrictions" id="portainer-access-restrictions"></a>
+
+{% hint style="info" %}
+These permissions are the same as [portainer-cluster-operator](kubernetes-roles-and-bindings.md#portainer-access-restrictions-1); the difference is that this role is bound only in the namespaces a user has been assigned.
+{% endhint %}
+
+| API Group          | Resources                             | Verbs            |
+| ------------------ | ------------------------------------- | ---------------- |
+| (Empty)            | configmaps                            | update           |
+| (Empty)            | secrets                               | get, list, watch |
+| (Empty)            | pods                                  | delete           |
+| (Empty)            | pods/exec                             | create           |
+| apps               | daemonsets, deployments, statefulsets | patch            |
+| metrics.k8s.io     | pods, nodes, nodes/stats              | get, list, watch |
+| postgresql.cnpg.io | clusters                              | get, list, watch |
 
 ## Portainer Access Restrictions <a href="#portainer-access-restrictions" id="portainer-access-restrictions"></a>
 
@@ -112,9 +140,9 @@ The following tables cover the two roles available in Portainer Community Editio
 
 ### portainer-cr-user
 
-| API Group         | Resources               | Verbs     |
-| ----------------- | ----------------------- | --------- |
-| (Empty)           | namespaces, nodes       | get, list |
-| storage.k8s.io    | storageclasses          | list      |
-| metrics.k8s.io    | namespaces, pods, nodes | get, list |
-| networking.k8s.io | ingresses               | list      |
+| API Group         | Resources                    | Verbs     |
+| ----------------- | ---------------------------- | --------- |
+| (Empty)           | namespaces, nodes, endpoints | get, list |
+| storage.k8s.io    | storageclasses               | list      |
+| metrics.k8s.io    | namespaces, pods, nodes      | get, list |
+| networking.k8s.io | ingresses                    | list      |
