@@ -26,7 +26,7 @@ Paste the license key you were provided into the box and click **Submit**.
 
 ## Set up Edge Compute
 
-Enable and configure [Edge Compute functionality](../../../user/edge/) here. Configure the settings below, then select **Enable and continue**. Alternatively, select **Skip** to leave Edge Compute features off, or to keep any settings already applied via [CLI flags](../../../advanced/cli.md).
+Next, enable and configure [Edge Compute functionality](../../../user/edge/). Configure the settings as described below, then select **Enable and continue**. Alternatively, select **Skip** to leave Edge Compute features off.
 
 |                                      |                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

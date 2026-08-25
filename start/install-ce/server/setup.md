@@ -16,6 +16,18 @@ Your Portainer server logs can be accessed with:
 
 <figure><img src="../../../.gitbook/assets/2.43-portainer-install.png" alt=""><figcaption></figcaption></figure>
 
+## Set up Edge Compute
+
+Next, enable and configure [Edge Compute functionality](../../../user/edge/). Configure the settings as described below, then select **Enable and continue**. Alternatively, select **Skip** to leave Edge Compute features off.
+
+|                                      |                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Edge Compute features         | Toggle this on to enable Edge Compute functionality including Edge Device features.                                                                                                                                                                                                                                                                                    |
+| Portainer API server URL             | <p>Enter the default URL and port of your Portainer Server instance as it will be seen from your Edge environment. If using a FQDN, ensure that DNS is properly configured to provide this.<br>This value can be overridden when manually deploying an Edge Agent.</p>                                                                                                 |
+| Enable Edge Environment Waiting Room | The Edge Devices [Waiting room](../../../user/edge/waiting-room.md) lists any Edge Devices that have connected using the pre-deploy script and are pending association with the Portainer instance. Toggle this setting on to ensure new edge agents wait for manual approval in the waiting room. If left off, agents will be automatically trusted on first connect. |
+
+<figure><img src="../../../.gitbook/assets/2.45-edge-compute-setup-ce.png" alt=""><figcaption></figcaption></figure>
+
 ## Connecting Portainer to your environments
 
 Once the admin user has been created, the **Environment Wizard** will automatically launch. The wizard will help get you started with Portainer.
