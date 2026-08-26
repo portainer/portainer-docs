@@ -4,10 +4,6 @@
 Add-ons are only available to admin users in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=addons) and require a local Kubernetes environment.&#x20;
 {% endhint %}
 
-{% hint style="warning" %}
-In some Portainer Server Kubernetes installs, removing the local Kubernetes environment can prevent add-ons from being detected or managed correctly. For more information and a workaround, see [this FAQ](/broken/pages/unBTSwp2hPAiTxz4ZnZe).
-{% endhint %}
-
 Portainer Add-ons are applications that extend Portainer. From this view, you can install and manage any available add-on applications. Add-ons are deployed as Helm releases into your local Kubernetes cluster and appear as separate tools in the sidebar switcher.
 
 ### Add-ons catalog

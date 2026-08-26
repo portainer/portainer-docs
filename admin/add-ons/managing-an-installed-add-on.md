@@ -6,6 +6,10 @@ Non-admin users cannot access the catalog, install wizard, or detail view for ad
 
 To manage an installed add-on, navigate to **Add-ons** under Administration in the menu and click an add-on card to open its detail view. The header shows the current status and provides the available actions. Five tabs give full visibility into the add-on's state.
 
+{% hint style="info" %}
+If an installed add-on can't authenticate back to Portainer - for example after a database restore - a **Repair credential** button will show under the listed add-on, giving you a one-click way to fix it without reinstalling.
+{% endhint %}
+
 ### Configuration
 
 Edit the version and add-on configuration values, identical to the install wizard's first step. Click **Apply changes** to upgrade in place. If the change requires a restart, a confirmation dialog will note this before proceeding.
