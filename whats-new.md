@@ -94,12 +94,6 @@ The new [Recommendations](admin/recommendations.md) view surfaces actionable sug
 
 <figure><img src=".gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
-### Docker Compose to Kubernetes migration ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
-
-We've added an experimental feature that allows you to [migrate Docker Compose workloads to Kubernetes](user/docker/stacks/migrate.md#docker-compose-to-kubernetes-migration). Using the [Kompose conversion tool](https://kompose.io/), Portainer can translate your existing Docker Compose definitions into Kubernetes resources, helping streamline the transition between platforms. As this feature is experimental, it is not recommended for production use, and we strongly advise [taking a backup](admin/settings/general.md#back-up-portainer) before starting any migration.
-
-<figure><img src=".gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
-
 ### Manage Portainer using Terraform ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 [Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), letting you manage environments, users, teams, stacks, and other resources as code, and integrate Portainer into existing Infrastructure as Code and CI/CD workflows.
