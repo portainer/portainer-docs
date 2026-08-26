@@ -10,17 +10,32 @@ Information about the cluster is separated into three screen tabs: **Node**, **E
 
 The **Node** tab summarizes the following information about the selected node:
 
-| Field/Option    | Overview                                                                               |
-| --------------- | -------------------------------------------------------------------------------------- |
-| Hostname        | The hostname of the node.                                                              |
-| Kubernetes API  | The address and port of the Kubernetes API for this node.                              |
-| Role            | The role of the node.                                                                  |
-| Kubelet version | The version of kubelet on the node.                                                    |
-| Creation date   | The date when this node was created.                                                   |
-| Status          | The status of the node.                                                                |
-| Availability    | Defines the availability of the node. Options are **Active**, **Pause** and **Drain**. |
+| Field/Option    | Overview                                                                                                                                                                                                         |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hostname        | The hostname of the node.                                                                                                                                                                                        |
+| Kubernetes API  | The address and port of the Kubernetes API for this node.                                                                                                                                                        |
+| Role            | The role of the node.                                                                                                                                                                                            |
+| Kubelet version | The version of kubelet on the node.                                                                                                                                                                              |
+| Creation date   | The date when this node was created.                                                                                                                                                                             |
+| Status          | The status of the node.                                                                                                                                                                                          |
+| Availability    | Defines the availability of the node. Options are **Active**, **Pause** and **Drain**.  If drain is selected, continue to configure the availability by defining the [**Drain options**](node.md#drain-options). |
 
 <figure><img src="../../../../.gitbook/assets/2.15-k8s-cluster-node-details.png" alt=""><figcaption></figcaption></figure>
+
+#### Drain options
+
+When drain is selected as the node availability, the drain options can be configured as defined below.
+
+| Field/Option           | Overview                                                                                                                                                                                                                         |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ignore DaemonSets      | Ignore DaemonSet-managed pods. These are skipped because they are recreated by their controller and would otherwise block the drain.                                                                                             |
+| Timeout (seconds)      | How long to wait for the drain to complete before giving up. Increase this for nodes with many pods or pods with long shutdown routines.                                                                                         |
+| Grace period (seconds) | Overrides each pod's termination grace period. `-1` use whatever grace period each pod already has configured in its own spec.                                                                                                   |
+| Force                  | Allows deletion of standalone pods that aren't managed by any controller (Deployment, ReplicaSet, Job, DaemonSet, StatefulSet).                                                                                                  |
+| Delete emptyDir data   | Allows eviction of pods using `emptyDir` volumes. Any data in those volumes is lost when the pod is deleted.                                                                                                                     |
+| Disable eviction       | Deletes pods directly instead of using the Eviction API, which bypasses any PodDisruptionBudgets protecting your applications. Use only if a drain is stuck because a PodDisruptionBudget won't allow enough pods to be evicted. |
+
+<figure><img src="../../../../.gitbook/assets/2.45-node-drain.png" alt=""><figcaption></figcaption></figure>
 
 ### Resource reservation
 
