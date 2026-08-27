@@ -8,6 +8,33 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.39.7 LTS <a href="#release-2.39.6-lts" id="release-2.39.6-lts"></a>
+
+August 27, 2026
+
+### Known Issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this release
+
+* Fixed a critical Docker proxy authorization bypass. Unrecognised API version prefixes like `/v1.47.0/` or `/v01.47/` skipped access control entirely, letting non-admin users reach the Docker API directly
+* Closed a remaining gap in the CVE-2026-44849 (GHSA-5fxq-qcf3-244w) fix and broadened bind-mount restrictions for non-admin users, now including Compose and Swarm stack deployments
+* Fixed the issue where Kubernetes RoleBindings remain stale after a user is removed from a team with environment access granted through an environment group
+* Restored admin-only access to the `/users`, `/teams` and `/roles` list endpoints, which had regressed in 2.39.0 to allow any authenticated user to enumerate non-administrator accounts, teams and the full role catalogue. Together with the team-membership fix shipped in 2.39.6, this closes the directory-enumeration surface for non-admin users
+* Fixed the kubectl shell immediately showing "Console disconnected" for Namespace Operator, Helpdesk and Read-only users. The websocket route is now gated on baseline Kubernetes authorization instead of `OperationPortainerWebsocketExec`
+
 ## Release 2.39.6 LTS <a href="#release-2.39.6-lts" id="release-2.39.6-lts"></a>
 
 August 13, 2026
@@ -42,7 +69,7 @@ August 13, 2026
 * Fixed request-handler panics being logged as unexpected crashes when a client disconnected mid-request (e.g. a long-poll on a Kubernetes Jobs watch)
 * Fixed the "Always clone git repository" toggle incorrectly rendering (disabled) on the Edit form for standalone Docker stacks with a Git source
 
-#### Security
+#### Security improvements&#x20;
 
 * Implemented an SSRF protection mechanism with a configurable allow-list in settings (off / audit / enforce modes)
 * Changed a default setting to enforce server-side EdgeID on first connection

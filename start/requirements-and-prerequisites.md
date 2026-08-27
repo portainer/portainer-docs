@@ -19,6 +19,7 @@ The following tables list all of the configurations that we have tested, validat
 
 | Portainer Version                                               | Release Date       | Docker Version | Kubernetes Version | Podman Version | Architectures                                                                                                              |
 | --------------------------------------------------------------- | ------------------ | -------------- | ------------------ | -------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [Business 2.39.7 LTS](../release-notes.md#release-2.39.6-lts)   | Aug 26, 2026       | 28.5.1 29.7.1  | 1.34 1.35 1.36     | 5.8.5          | [ARM64](architecture.md), x86\_64                                                                                          |
 | [Business 2.39.6 LTS](../release-notes.md#release-2.39.6-lts)   | Aug 13, 2026       | 28.5.1 29.7.1  | 1.34 1.35 1.36     | 5.8.5          | [ARM64](architecture.md), x86\_64                                                                                          |
 | [Business 2.44 STS](../release-notes.md#release-2.44.0-sts)     | Jul 30, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](architecture.md), x86\_64                                                                                          |
 | [Business 2.39.5 LTS](../release-notes.md#release-2.39.5-lts)   | Jul 14, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](architecture.md), x86\_64                                                                                          |
@@ -48,6 +49,7 @@ The following tables list all of the configurations that we have tested, validat
 
 | Portainer Version    | Release Date       | Docker Version | Kubernetes Version | Podman Version | Architectures                     |
 | -------------------- | ------------------ | -------------- | ------------------ | -------------- | --------------------------------- |
+| Community 2.39.7 LTS | Aug 26, 2026       | 28.5.1 29.7.1  | 1.34 1.35 1.36     | 5.8.5          | [ARM64](architecture.md), x86\_64 |
 | Community 2.39.6 LTS | Aug 13, 2026       | 28.5.1 29.7.1  | 1.34 1.35 1.36     | 5.8.5          | [ARM64](architecture.md), x86\_64 |
 | Community 2.44 STS   | Jul 30, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](architecture.md), x86\_64 |
 | Community 2.39.5 LTS | Jul 14, 2026       | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](architecture.md), x86\_64 |
