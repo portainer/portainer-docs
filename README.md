@@ -2,8 +2,6 @@
 
 Welcome to Portainer's official documentation site.&#x20;
 
-This documentation covers Portainer 2.45 (LTS). If you're running the STS stream, see the [STS documentation](https://docs.portainer.io/sts/) instead.
-
 ## About Portainer
 
 Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
