@@ -94,6 +94,20 @@ The new [Recommendations](admin/recommendations.md) view surfaces actionable sug
 
 <figure><img src=".gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
+### Default Service Account imagePullSecret management  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+
+Portainer now automatically updates the default [Service Account](user/kubernetes/more-resources/service-accounts.md) in a namespace when registry access is added or removed as part of a [registry policy](admin/environments/policies/kubernetes-policies/kubernetes-registry-policy.md) (BE only) or from the [Registries view](user/kubernetes/cluster/registries.md#managing-access). When access is granted, the registry secret is added as an imagePullSecret to the default Service Account, allowing Pods in the namespace to pull images from the private registry automatically. When access is removed, the secret is removed from the default Service Account while any other existing imagePullSecrets are retained. This change is accompanied by an improved Service account details view, which allows you to view Service Account details and edit the YAML.
+
+<figure><img src=".gitbook/assets/2.40-service-account-details.png" alt=""><figcaption></figcaption></figure>
+
+### Kubernetes volumes page restructure and improvements  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+
+Previous Volumes and Storage tabs found on the [Kubernetes volumes page](user/kubernetes/volumes/) have been replaced with three sections - Persistent Volumes, Persistent Volume Claims, and Storage Classes - giving each resource type its own focused view. You can now edit a volume's reclaim policy and resize persistent volume claims directly from the Actions menu, and storage classes can be set as the cluster default with a single click.&#x20;
+
+<figure><img src=".gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+
 ### Manage Portainer using Terraform ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
-[Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), letting you manage environments, users, teams, stacks, and other resources as code, and integrate Portainer into existing Infrastructure as Code and CI/CD workflows.
+[Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), letting you manage environments, users, teams, stacks, and other resources as code, and integrate Portainer into existing Infrastructure as Code and CI/CD workflows.&#x20;
+
+You can find a full walkthrough of how to deploy a Docker stack with Terraform in our [How-to articles](https://www.portainer.io/how-to/how-to-deploy-a-docker-stack-with-terraform).
