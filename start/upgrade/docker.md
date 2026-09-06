@@ -15,7 +15,7 @@ Before beginning any update, we highly recommend [taking a backup](../../admin/s
 ## Updating your Portainer Server
 
 {% hint style="warning" %}
-Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443`. These instructions will configure Portainer to use 9443 for HTTPS and do not expose 9000 for HTTP. If you need to retain HTTP access, you can add:
+Starting from Portainer BE 2.10, HTTPS is enabled by default on port `9443`. These instructions will configure Portainer to use 9443 for HTTPS and do not expose 9000 for HTTP. If you need to retain HTTP access, you can add:
 
 `-p 9000:9000`
 
@@ -40,35 +40,15 @@ docker rm portainer
 
 Now that you have stopped and removed the old version of Portainer, you must ensure that you have the most up to date version of the image locally. You can do this with a `docker pull` command:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker pull portainer/portainer-ee:lts
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker pull portainer/portainer-ce:lts
-```
-{% endtab %}
-{% endtabs %}
 
 Finally, deploy the updated version of Portainer:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:lts
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
-```
-{% endtab %}
-{% endtabs %}
 
 {% hint style="warning" %}
 These `docker run` commands include opening port `8000` which is used for Edge Agent communication as included in our [installation instructions](../install/server/docker/linux.md). If you do not need this port open, you can remove it from the command.

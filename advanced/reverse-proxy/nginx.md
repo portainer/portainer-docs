@@ -12,8 +12,6 @@ To deploy Portainer behind an nginx proxy in a Docker standalone scenario you mu
 This example uses the excellent [nginxproxy/nginx-proxy](https://hub.docker.com/r/nginxproxy/nginx-proxy) image as the proxy container, which requires no additional configuration beyond the two environment variables added to the `portainer` container's definition.
 {% endhint %}
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 version: "2"
 
@@ -42,39 +40,6 @@ services:
 volumes:
   portainer_data:
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-version: "2"
-
-services:
-  nginx-proxy:
-    image: nginxproxy/nginx-proxy
-    restart: always
-    ports:
-      - "80:80"
-    volumes:
-      - "/var/run/docker.sock:/tmp/docker.sock:ro"
-
-  portainer:
-    image: portainer/portainer-ce:lts
-    command: -H unix:///var/run/docker.sock
-    restart: always
-    environment:
-      - VIRTUAL_HOST=portainer.yourdomain.com
-      - VIRTUAL_PORT=9000
-    ports:
-      - 8000:8000
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
-
-volumes:
-  portainer_data:
-```
-{% endtab %}
-{% endtabs %}
 
 To start working with this recipe, change the `VIRTUAL_HOST` value then deploy Portainer by running the following:
 
@@ -121,8 +86,6 @@ Next, create the volume:
 
 And finally, save the following recipe as `portainer.yml`:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 version: '3.2'
 
@@ -184,72 +147,6 @@ networks:
 volumes:
    data:
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-version: '3.2'
-
-services:
-  nginx-proxy:
-    image: nginxproxy/nginx-proxy
-    networks:
-      - proxy
-    ports:
-      - "80:80"
-    volumes:
-      - "/var/run/docker.sock:/tmp/docker.sock:ro"
-      - "./vhost.d:/etc/nginx/vhost.d:ro"
-
-  agent:
-    image: portainer/agent:lts
-    environment:
-      # REQUIRED: Should be equal to the service name prefixed by "tasks." when
-      # deployed inside an overlay network
-      AGENT_CLUSTER_ADDR: tasks.agent
-      # AGENT_PORT: 9001
-      # LOG_LEVEL: DEBUG
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /var/lib/docker/volumes:/var/lib/docker/volumes
-    networks:
-      - agent_network
-    deploy:
-      mode: global
-      placement:
-        constraints: [node.platform.os == linux]
-
-  portainer:
-    image: portainer/portainer-ce:lts
-    command: -H tcp://tasks.agent:9001 --tlsskipverify
-    volumes:
-      - data:/data
-    environment:
-      - VIRTUAL_HOST=portainer.yourdomain.com
-      - VIRTUAL_PORT=9000
-    ports:
-      - 8000:8000
-    networks:
-      - proxy
-      - agent_network
-    deploy:
-      mode: replicated
-      replicas: 1
-      placement:
-        constraints: [node.role == manager]
-
-
-networks:
-  proxy:
-    external: true
-  agent_network:
-    external: true
-
-volumes:
-   data:
-```
-{% endtab %}
-{% endtabs %}
 
 To start working with this recipe, change the `VIRTUAL_HOST` value then deploy Portainer by running the following:
 

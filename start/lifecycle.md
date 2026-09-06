@@ -20,9 +20,9 @@ All releases are cumulative - all previous enhancements and fixes are included i
 
 When we say “supported”, we are referring to the commercial support that is included with Portainer Business Edition subscriptions at the Scale and Enterprise level. This includes access to all STS and LTS releases and patches. Our [support terms](https://www.portainer.io/support-terms) have more detail on what is and isn’t covered by our support.
 
-For Starter, Home & Student, our free Business Edition offerings, and our Community Edition, support is provided through our [community support channels](https://www.portainer.io/get-support-for-portainer).
+For Starter, Home & Student, our free Business Edition offerings, support is provided through our [community support channels](https://www.portainer.io/get-support-for-portainer).
 
-The term “maintained” refers to the act of releasing updated versions of our releases, for example patches to resolve bugs or security issues. All editions of Business Edition and Community Edition will be maintained according to each release’s respective lifecycle.
+The term “maintained” refers to the act of releasing updated versions of our releases, for example patches to resolve bugs or security issues. All editions of Business Edition will be maintained according to each release’s respective lifecycle.
 
 Portainer always recommends updating to the latest version in the release stream to ensure you have the latest security fixes, bug fixes, and performance improvements. It is at Portainer’s discretion to backport fixes to any version outside of the supported version window.
 

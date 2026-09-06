@@ -1,7 +1,7 @@
 # Podman
 
 {% hint style="info" %}
-These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/podman/).
+These installation instructions are for Portainer Business Edition (BE).
 {% endhint %}
 
 {% content-ref url="linux.md" %}

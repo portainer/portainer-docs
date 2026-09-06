@@ -1,7 +1,7 @@
 # Install Portainer BE on your Kubernetes environment
 
 {% hint style="info" %}
-These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/kubernetes/baremetal.md).
+These installation instructions are for Portainer Business Edition (BE).
 {% endhint %}
 
 ## Introduction

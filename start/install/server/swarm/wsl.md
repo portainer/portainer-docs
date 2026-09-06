@@ -1,7 +1,7 @@
 # Install Portainer BE with Docker Swarm on WSL / Docker Desktop
 
 {% hint style="info" %}
-These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/swarm/wsl.md).
+These installation instructions are for Portainer Business Edition (BE).
 {% endhint %}
 
 ## Introduction

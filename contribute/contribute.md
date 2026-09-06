@@ -4,7 +4,7 @@ We value contributions from the Portainer community and encourage developers to 
 
 The following guidelines outline our engineering workflows, please review these before making a contribution to ensure any changes can be integrated smoothly.
 
-## Contributing to the Portainer CE codebase
+## Contributing to the Portainer codebase
 
 {% hint style="warning" %}
 #### AI assistance notice <a href="#id-987d7792-f717-4a29-9fe7-b9014d343629" id="id-987d7792-f717-4a29-9fe7-b9014d343629"></a>
@@ -16,7 +16,7 @@ Trivial assistance, like single-word auto-completion, does not require disclosur
 For commits where an AI tool has significantly contributed to the code, it is recommended to add a Co-Authored-By trailer in the commit message to formally credit the tool, using the format specified by the tool's provider.
 {% endhint %}
 
-The Portainer CE codebase is available in [GitHub](https://github.com/portainer/portainer). Please follow our [build instructions](build/) and the following guidelines when making a contribution.
+The Portainer codebase is available in [GitHub](https://github.com/portainer/portainer). Please follow our [build instructions](build/) and the following guidelines when making a contribution.
 
 ### Repository structure
 

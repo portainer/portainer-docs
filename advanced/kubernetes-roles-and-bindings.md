@@ -129,20 +129,6 @@ These permissions are the same as [portainer-cluster-operator](kubernetes-roles-
 | Application Error Details   | R              | R                  | R                  |                    |                    |
 | Storage Class Disabled      | R              | R                  | R                  |                    |                    |
 
-## Community Edition
-
-The following tables cover the two roles available in Portainer Community Edition (CE). Note there is no Portainer access restriction in Portainer CE.
-
-| Portainer Role | Cluster Role Binding                                                    | Namespace Role Binding                            |
-| -------------- | ----------------------------------------------------------------------- | ------------------------------------------------- |
-| Admin          | (no restriction)                                                        | (no restriction)                                  |
-| User           | [portainer-cr-user](kubernetes-roles-and-bindings.md#portainer-cr-user) | edit (default k8s role, only assigned namespaces) |
-
-### portainer-cr-user
-
-| API Group         | Resources                    | Verbs     |
-| ----------------- | ---------------------------- | --------- |
-| (Empty)           | namespaces, nodes, endpoints | get, list |
-| storage.k8s.io    | storageclasses               | list      |
-| metrics.k8s.io    | namespaces, pods, nodes      | get, list |
-| networking.k8s.io | ingresses                    | list      |
+| storage.k8s.io    | storageclasses          | list      |
+| metrics.k8s.io    | namespaces, pods, nodes | get, list |
+| networking.k8s.io | ingresses               | list      |

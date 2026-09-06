@@ -5,7 +5,7 @@ Always match the agent version to the Portainer Server version. In other words, 
 {% endhint %}
 
 {% hint style="warning" %}
-Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443`. These instructions will configure Portainer to use both `9443` for HTTPS and `9000` for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update.
+Starting from Portainer BE 2.10, HTTPS is enabled by default on port `9443`. These instructions will configure Portainer to use both `9443` for HTTPS and `9000` for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update.
 
 Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.
 {% endhint %}
@@ -31,21 +31,10 @@ helm repo update
 
 Next, run one of the following commands to update Portainer:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 helm upgrade -n portainer portainer portainer/portainer \
     --set tls.force=true --set enterpriseEdition.image.tag=lts --set enterpriseEdition.enabled=true
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-helm upgrade -n portainer portainer portainer/portainer \
-    --set tls.force=true --set image.tag=lts
-```
-{% endtab %}
-{% endtabs %}
 
 ## Method 2: Updating using YAML Manifest
 
@@ -57,30 +46,14 @@ The easiest way to update is to use the Portainer UI along with our manifest fil
 {% tab title="NodePort" %}
 Copy the contents of the relevant NodePort manifest file:
 
-**Business Edition:**
-
 ```
 https://downloads.portainer.io/ee-lts/portainer.yaml
 ```
 
-**Community Edition:**
-
-```
-https://downloads.portainer.io/ce-lts/portainer.yaml
-```
-
 For an agent-only deployment, use one of the following manifests instead:
-
-**Business Edition:**
 
 ```
 https://downloads.portainer.io/ee-lts/portainer-agent-k8s-nodeport.yaml
-```
-
-**Community Edition:**
-
-```
-https://downloads.portainer.io/ce-lts/portainer-agent-k8s-nodeport.yaml
 ```
 
 {% hint style="warning" %}
@@ -94,30 +67,14 @@ If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by sp
 {% tab title="Load Balancer" %}
 Copy the contents of the relevant Load Balancer manifest file:
 
-**Business Edition:**
-
 ```
 https://downloads.portainer.io/ee-lts/portainer-lb.yaml
 ```
 
-**Community Edition:**
-
-```
-https://downloads.portainer.io/ce-lts/portainer-lb.yaml
-```
-
 For an agent-only deployment, use one of the following manifests instead:
-
-**Business Edition:**
 
 ```
 https://downloads.portainer.io/ee-lts/portainer-agent-k8s-lb.yaml
-```
-
-**Community Edition:**
-
-```
-https://downloads.portainer.io/ce-lts/portainer-agent-k8s-lb.yaml
 ```
 
 {% hint style="warning" %}
@@ -146,30 +103,14 @@ If you prefer to use the command line to update, you can do so using `kubectl` c
 {% tab title="NodePort" %}
 Log into the control node of your Kubernetes cluster and run one of the following commands:
 
-**Business Edition:**
-
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer.yaml
 ```
 
-**Community Edition:**
-
-```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce-lts/portainer.yaml
-```
-
 For an agent-only deployment, use one of the following commands instead:
-
-**Business Edition:**
 
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-agent-k8s-nodeport.yaml
-```
-
-**Community Edition:**
-
-```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce-lts/portainer-agent-k8s-nodeport.yaml
 ```
 
 {% hint style="warning" %}
@@ -183,30 +124,14 @@ If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by sp
 {% tab title="Load Balancer" %}
 Log into the control node of your Kubernetes cluster and run one of the following commands:
 
-**Business Edition:**
-
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-lb.yaml
 ```
 
-**Community Edition:**
-
-```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce-lts/portainer.yaml
-```
-
 For an agent-only deployment, use one of the following commands instead:
-
-**Business Edition:**
 
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-agent-k8s-lb.yaml
-```
-
-**Community Edition:**
-
-```
-kubectl apply -n portainer -f https://downloads.portainer.io/ce-lts/portainer-agent-k8s-lb.yaml
 ```
 
 {% hint style="warning" %}

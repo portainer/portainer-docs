@@ -66,19 +66,9 @@ docker run --rm httpd:2.4-alpine htpasswd -nbB admin "your-password" | cut -d ":
 
 Once the password has been created, specify the admin password from the command line by starting Portainer with the `--admin-password` flag:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:lts --admin-password='$2y$05$8oz75U8m5tI/xT4P0NbSHeE7WyRzOWKRBprfGotwDkhBOGP/u802u'
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:lts --admin-password='$2y$05$8oz75U8m5tI/xT4P0NbSHeE7WyRzOWKRBprfGotwDkhBOGP/u802u'
-```
-{% endtab %}
-{% endtabs %}
 
 ### Method 2: Creating the account using a file
 
@@ -90,19 +80,9 @@ echo -n mypassword > /tmp/portainer_password
 
 Next, start the Portainer container:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ee:lts --admin-password-file /tmp/portainer_password
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/portainer_password:/tmp/portainer_password portainer/portainer-ce:sts --admin-password-file /tmp/portainer_password
-```
-{% endtab %}
-{% endtabs %}
 
 This also works well with Docker Swarm and Docker Secrets:
 
@@ -110,8 +90,6 @@ This also works well with Docker Swarm and Docker Secrets:
 echo -n mypassword | docker secret create portainer-pass -
 ```
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker service create \
     --name portainer \
@@ -125,24 +103,6 @@ docker service create \
     --admin-password-file '/run/secrets/portainer-pass' \
     -H unix:///var/run/docker.sock
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker service create \
-    --name portainer \
-    --secret portainer-pass \
-    --publish 9443:9443 \
-    --publish 8000:8000 \
-    --replicas=1 \
-    --constraint 'node.role == manager' \
-    --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
-    portainer/portainer-ce:lts \
-    --admin-password-file '/run/secrets/portainer-pass' \
-    -H unix:///var/run/docker.sock
-```
-{% endtab %}
-{% endtabs %}
 
 ## Hiding specific containers
 
@@ -154,35 +114,15 @@ docker run -d --label owner=acme nginx
 
 To hide this container, when starting Portainer add the `-l owner=acme` option on the CLI:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:lts -l owner=acme
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:lts -l owner=acme
-```
-{% endtab %}
-{% endtabs %}
 
 To hide multiple containers, repeat the `-l` flag:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:lts -l owner=acme -l service=secret
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:lts -l owner=acme -l service=secret
-```
-{% endtab %}
-{% endtabs %}
 
 ## Using your own logo
 
@@ -192,19 +132,9 @@ Images must be exactly 155px by 55px in size.
 
 Replace our logo with your own using the `--logo` flag to specify the location of the image file:
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:lts --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:lts --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
-```
-{% endtab %}
-{% endtabs %}
 
 You can also update the logo in the Portainer UI (**Settings** menu).
 
@@ -218,16 +148,6 @@ Portainer allows you to rapidly [deploy containers using app templates](../user/
 
 Templates are loaded once when Portainer is first started. If you already deployed a Portainer instance then decide to use your own templates, you’ll need to clear the default templates either in the user interface or through the HTTP API. Use the `--templates` flag to specify a URL where the template file can be accessed via HTTP.
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ee:lts --templates http://my-host.my-domain/templates.json
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker run -d -p 9443:9443 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:lts --templates http://my-host.my-domain/templates.json
-```
-{% endtab %}
-{% endtabs %}

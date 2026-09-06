@@ -2,7 +2,7 @@
 
 Portainer runs exclusively on your servers, within your network, behind your own firewalls. We do not host any of your infrastructure, so we hold no SOC or PCI/DSS compliance of our own. You can run Portainer completely disconnected (air-gapped) with no loss of functionality.
 
-Portainer collects no behavioural product analytics. Business Edition instances send basic installation and licensing metadata to our licensing service to administer your license - not to track usage - and this is not sent by Community Edition or by air-gapped instances. We comply with GDPR in relation to this data. See also our [privacy policy](https://www.portainer.io/legal/privacy-policy).
+Portainer collects no behavioural product analytics. Business Edition instances send basic installation and licensing metadata to our licensing service to administer your license - not to track usage - and this is not sent by air-gapped instances. We comply with GDPR in relation to this data. See also our [privacy policy](https://www.portainer.io/legal/privacy-policy).
 
 We scan our published container images for known vulnerabilities as part of our release process, and we act on issues reported through the responsible-disclosure process at the end of this page.
 

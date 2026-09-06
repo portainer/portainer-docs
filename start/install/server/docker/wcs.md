@@ -1,7 +1,7 @@
 # Install Portainer BE with Docker on Windows Container Service
 
 {% hint style="info" %}
-These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/docker/wcs.md).
+These installation instructions are for Portainer Business Edition (BE).
 {% endhint %}
 
 ## Introduction

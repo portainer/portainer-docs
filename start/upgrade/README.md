@@ -9,7 +9,7 @@ We added a [backup and restore feature](../../admin/settings/#backup-portainer) 
 {% endhint %}
 
 {% hint style="info" %}
-Starting with CE 2.9 and BE 2.10 Portainer is HTTPS enabled by default and uses port `9443` to serve the UI. HTTP can still be enabled on port `9000` if required.
+Starting with BE 2.10 Portainer is HTTPS enabled by default and uses port `9443` to serve the UI. HTTP can still be enabled on port `9000` if required.
 {% endhint %}
 
 ## Update order

@@ -31,12 +31,6 @@ To encrypt the database, add a bind mount to the `docker run` command that mount
 
 Your final `docker run` command may look like this:
 
-{% hint style="info" %}
-Note this command differs between Business Edition and Community Edition versions of Portainer.
-{% endhint %}
-
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     --restart=always \
@@ -45,19 +39,6 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     -v /root/secrets/portainer:/run/portainer/portainer \
     portainer/portainer-ee:lts
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
-    --restart=always \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v portainer_data:/data \
-    -v /root/secrets/portainer:/run/secrets/portainer \
-    portainer/portainer-ee:lts
-```
-{% endtab %}
-{% endtabs %}
 
 When the Portainer container starts, it will encrypt any existing database, or for a fresh install will create a new encrypted database as part of the install process.
 
@@ -193,12 +174,6 @@ containers:
 
 In the `volumeMounts` section, add a definition for the secret created earlier:
 
-{% hint style="info" %}
-Note this step differs between Business Edition and Community Edition versions of Portainer.
-{% endhint %}
-
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 volumeMounts:
   - name: data
@@ -207,19 +182,6 @@ volumeMounts:
     mountPath: /run/portainer/portainer
     subPath: portainer
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-volumeMounts:
-  - name: data
-    mountPath: /data
-  - name: portainer-key
-    mountPath: /run/secrets/portainer
-    subPath: portainer
-```
-{% endtab %}
-{% endtabs %}
 
 We also need to add a definition to the `volumes` definition for the `spec`:
 

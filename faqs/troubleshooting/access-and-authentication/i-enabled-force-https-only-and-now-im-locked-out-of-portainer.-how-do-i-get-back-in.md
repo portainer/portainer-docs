@@ -4,25 +4,12 @@ Enabling the **Force HTTPS only** option (either via the toggle in [Settings](..
 
 To resolve this, you can re-enable HTTP access by using the --http-enabled command line option in your docker run command, for example:
 
-**Business Edition:**
-
 ```
 docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 --name portainer \
   --restart=always \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v portainer_data:/data \
   portainer/portainer-ee:latest \
-  --http-enabled
-```
-
-**Community Edition:**
-
-```
-docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 --name portainer \
-  --restart=always \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -v portainer_data:/data \
-  portainer/portainer-ce:latest \
   --http-enabled
 ```
 

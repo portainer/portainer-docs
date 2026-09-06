@@ -5,7 +5,7 @@ Always match the agent version to the Portainer Server version. In other words, 
 {% endhint %}
 
 {% hint style="warning" %}
-Starting from Portainer CE 2.9 and BE 2.10, HTTPS is enabled by default on port `9443`. These instructions will configure Portainer to use 9443 for HTTPS and 9000 for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update.
+Starting from Portainer BE 2.10, HTTPS is enabled by default on port `9443`. These instructions will configure Portainer to use 9443 for HTTPS and 9000 for HTTP. You can choose to [completely disable HTTP](../../admin/settings/#force-https-only) after the update.
 
 Before you make Portainer HTTPS only, make sure you have all your Agents and Edge Agents already communicating with Portainer using HTTPS.
 {% endhint %}
@@ -32,23 +32,12 @@ tb9gtxc647fw   portainer-agent_agent   global       3/3        portainer/agent:l
 m3a3mtuy55ed   portainer_portainer     replicated   1/1        portainer/portainer-ee:lts  *:8000->8000/tcp, *:9000->9000/tcp
 ```
 
-To update Portainer Server to the most recent version, run one of the sets of commands below depending on your edition of Portainer (replace the `portainer_portainer` service name if your setup differs):
+To update Portainer Server to the most recent version, run the commands below (replace the `portainer_portainer` service name if your setup differs):
 
-{% tabs %}
-{% tab title="Business Edition" %}
 ```
 docker pull portainer/portainer-ee:lts
 docker service update --image portainer/portainer-ee:lts --publish-add 9443:9443 --force portainer_portainer
 ```
-{% endtab %}
-
-{% tab title="Community Edition" %}
-```
-docker pull portainer/portainer-ce:lts
-docker service update --image portainer/portainer-ce:lts --publish-add 9443:9443 --force portainer_portainer
-```
-{% endtab %}
-{% endtabs %}
 
 To update the Portainer Agent to the latest version, run the commands below (replace the `portainer_agent` service name if your setup differs):
 

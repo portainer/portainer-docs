@@ -1,7 +1,7 @@
 # Install Portainer BE
 
 {% hint style="info" %}
-These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../install-ce/).
+These installation instructions are for Portainer Business Edition (BE).
 {% endhint %}
 
 Portainer Business Edition is straightforward to install. There are two options: installing new or adding an environment to an existing installation.

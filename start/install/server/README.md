@@ -1,7 +1,7 @@
 # Set up a new Portainer BE Server installation
 
 {% hint style="info" %}
-These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../install-ce/server/).
+These installation instructions are for Portainer Business Edition (BE).
 {% endhint %}
 
 {% hint style="info" %}

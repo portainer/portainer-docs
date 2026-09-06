@@ -2,10 +2,6 @@
 
 Groups organize your environments in Portainer. As an example, you can create groups for development, staging and production to differentiate between environment roles. You can also use groups to define which environments are available to which users.
 
-{% hint style="info" %}
-Portainer Community Edition supports basic user and group assignments. For more complex user roles within groups, use Portainer Business Edition.
-{% endhint %}
-
 ## Creating a group
 
 From the menu expand **Environment-related**, select **Groups**, then click **Add group**.

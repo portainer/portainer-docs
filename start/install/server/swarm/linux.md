@@ -1,7 +1,7 @@
 # Install Portainer BE with Docker Swarm on Linux
 
 {% hint style="info" %}
-These installation instructions are for Portainer Business Edition (BE). For Portainer Community Edition (CE) refer to the [CE install documentation](../../../install-ce/server/swarm/linux.md).
+These installation instructions are for Portainer Business Edition (BE).
 {% endhint %}
 
 ## Introduction <a href="#introduction" id="introduction"></a>
