@@ -10,8 +10,8 @@
 * [Portainer architecture](start/architecture.md)
 * [Lifecycle policy](start/lifecycle.md)
 * [Requirements and prerequisites](start/requirements-and-prerequisites.md)
-* [Install Portainer BE](start/install/README.md)
-  * [Set up a new Portainer BE Server installation](start/install/server/README.md)
+* [Install Portainer](start/install/README.md)
+  * [Set up a new Portainer Server installation](start/install/server/README.md)
     * [Kubernetes](start/install/server/kubernetes/README.md)
       * [Install Portainer BE on your Kubernetes environment](start/install/server/kubernetes/baremetal.md)
       * [Install Portainer BE with Kubernetes on WSL / Docker Desktop](start/install/server/kubernetes/wsl.md)
@@ -295,7 +295,6 @@
   * [How do I get started with Portainer?](faqs/getting-started/how-do-i-get-started-with-portainer.md)
   * [What is Portainer's architecture?](faqs/getting-started/what-is-portainers-architecture.md)
   * [What information does Portainer collect?](faqs/getting-started/what-information-does-portainer-collect.md)
-  * [Can I use Portainer CE in a production environment?](faqs/getting-started/can-i-use-portainer-ce-in-a-production-environment.md)
   * [How does Portainer secure connectivity to and from Agents and Edge Agents?](faqs/getting-started/how-does-portainer-secure-connectivity-to-and-from-agents-and-edge-agents.md)
   * [Which is more secure, the Agent or the Edge Agent?](faqs/getting-started/which-is-more-secure-the-agent-or-the-edge-agent.md)
   * [What does Portainer's backup include?](faqs/getting-started/what-does-portainers-backup-include.md)
@@ -381,7 +380,6 @@
   * [UI and features](faqs/troubleshooting/ui-and-features/README.md)
     * [Why can't I use the console with my container?](faqs/troubleshooting/ui-and-features/why-cant-i-use-the-console-with-my-container.md)
     * [Exposed ports in the container view redirect me to 0.0.0.0. What can I do?](faqs/troubleshooting/ui-and-features/exposed-ports-in-the-container-view-redirect-me-to-0.0.0.0.-what-can-i-do.md)
-    * [Why is a feature only available in Portainer Business Edition?](faqs/troubleshooting/ui-and-features/why-is-a-feature-only-available-in-portainer-business-edition.md)
     * [Runtime and Resource sliders are not showing the set value on ARM](faqs/troubleshooting/ui-and-features/runtime-and-resource-sliders-are-not-showing-the-set-value-on-arm.md)
     * [Why doesn’t the Portainer UI load inside an iframe?](faqs/troubleshooting/ui-and-features/why-doesnt-the-portainer-ui-load-inside-an-iframe.md)
     * [Why can I not see an option to update the Portainer version within the UI?](faqs/troubleshooting/ui-and-features/why-can-i-not-see-an-option-to-update-the-portainer-version-within-the-ui.md)
@@ -468,13 +466,7 @@
 * [Slack](https://portainer.io/slack)
 * [Discord](https://portainer.io/discord)
 * [Open a support request](https://www.portainer.io/portainer-business-support)
-
-## Contribute to Portainer <a href="#contribute" id="contribute"></a>
-
-* [Contribute](contribute/contribute.md)
-* [Build instructions](contribute/build/README.md)
-  * [Set up a macOS build environment](contribute/build/mac.md)
-  * [Set up a Linux build environment](contribute/build/linux.md)
+* [Report a bug or security vulnerability](help/contribute.md)
 
 ***
 
