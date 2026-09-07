@@ -1,7 +1,7 @@
 # Updating on Kubernetes
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.45.0 make sure all of the agents are also on version 2.45.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 3.0.0 make sure all of the agents are also on version 3.0.0.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -33,7 +33,7 @@ Next, run one of the following commands to update Portainer:
 
 ```
 helm upgrade -n portainer portainer portainer/portainer \
-    --set tls.force=true --set enterpriseEdition.image.tag=lts --set enterpriseEdition.enabled=true
+    --set tls.force=true --set enterpriseEdition.image.tag=sts --set enterpriseEdition.enabled=true
 ```
 
 ## Method 2: Updating using YAML Manifest
@@ -47,13 +47,13 @@ The easiest way to update is to use the Portainer UI along with our manifest fil
 Copy the contents of the relevant NodePort manifest file:
 
 ```
-https://downloads.portainer.io/ee-lts/portainer.yaml
+https://downloads.portainer.io/ee-sts/portainer.yaml
 ```
 
 For an agent-only deployment, use one of the following manifests instead:
 
 ```
-https://downloads.portainer.io/ee-lts/portainer-agent-k8s-nodeport.yaml
+https://downloads.portainer.io/ee-sts/portainer-agent-k8s-nodeport.yaml
 ```
 
 {% hint style="warning" %}
@@ -68,13 +68,13 @@ If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by sp
 Copy the contents of the relevant Load Balancer manifest file:
 
 ```
-https://downloads.portainer.io/ee-lts/portainer-lb.yaml
+https://downloads.portainer.io/ee-sts/portainer-lb.yaml
 ```
 
 For an agent-only deployment, use one of the following manifests instead:
 
 ```
-https://downloads.portainer.io/ee-lts/portainer-agent-k8s-lb.yaml
+https://downloads.portainer.io/ee-sts/portainer-agent-k8s-lb.yaml
 ```
 
 {% hint style="warning" %}
@@ -104,13 +104,13 @@ If you prefer to use the command line to update, you can do so using `kubectl` c
 Log into the control node of your Kubernetes cluster and run one of the following commands:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer.yaml
 ```
 
 For an agent-only deployment, use one of the following commands instead:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-agent-k8s-nodeport.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer-agent-k8s-nodeport.yaml
 ```
 
 {% hint style="warning" %}
@@ -125,13 +125,13 @@ If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by sp
 Log into the control node of your Kubernetes cluster and run one of the following commands:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer-lb.yaml
 ```
 
 For an agent-only deployment, use one of the following commands instead:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-agent-k8s-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer-agent-k8s-lb.yaml
 ```
 
 {% hint style="warning" %}

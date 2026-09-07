@@ -56,7 +56,7 @@ Only do this **once** for your environment, regardless of how many nodes are in 
 You can use our YML manifest to run Portainer in Windows using Windows Containers. In PowerShell, run:
 
 ```
-curl https://downloads.portainer.io/ee-lts/portainer_windows_stack.yml -o portainer-windows-stack.yml
+curl https://downloads.portainer.io/ee-sts/portainer_windows_stack.yml -o portainer-windows-stack.yml
 ```
 
 Then use the downloaded YML manifest to deploy your stack:

@@ -1,7 +1,7 @@
 # Updating on Podman
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 2.45.0 make sure all of the agents are also on version 2.45.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 3.0.0 make sure all of the agents are also on version 3.0.0.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -37,13 +37,13 @@ podman rm portainer
 Now that you have stopped and removed the old version of Portainer, you must ensure that you have the most up to date version of the image locally. You can do this with a `podman pull` command:
 
 ```
-podman pull portainer/portainer-ee:lts
+podman pull portainer/portainer-ee:sts
 ```
 
 Finally, deploy the updated version of Portainer:
 
 ```
-podman run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:lts
+podman run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:sts
 ```
 
 {% hint style="warning" %}
@@ -77,13 +77,13 @@ podman rm portainer_agent
 Next, pull the updated version of the image:
 
 ```
-podman pull portainer/agent:lts
+podman pull portainer/agent:sts
 ```
 
 Finally, start the agent with the updated image:
 
 ```
-podman run -d -p 9001:9001 --name portainer_agent --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v /var/lib/containers/storage/volumes:/var/lib/docker/volumes portainer/agent:lts
+podman run -d -p 9001:9001 --name portainer_agent --restart=always --privileged -v /run/podman/podman.sock:/var/run/docker.sock -v /var/lib/containers/storage/volumes:/var/lib/docker/volumes portainer/agent:sts
 ```
 
 {% hint style="warning" %}

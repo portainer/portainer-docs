@@ -37,7 +37,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     -v /root/secrets/portainer:/run/portainer/portainer \
-    portainer/portainer-ee:lts
+    portainer/portainer-ee:sts
 ```
 
 When the Portainer container starts, it will encrypt any existing database, or for a fresh install will create a new encrypted database as part of the install process.
@@ -98,7 +98,7 @@ version: '3.2'
 
 services:
   agent:
-    image: portainer/agent:lts
+    image: portainer/agent:sts
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
