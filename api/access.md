@@ -24,7 +24,7 @@ Once the user has been created, you can add an access token to that user. The ac
 
 Once logged in as the user, click on your username in the top right and then select **My account**.
 
-<figure><img src="../.gitbook/assets/2.20-api-access-myaccount.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/3.0-user-settings.gif" alt=""><figcaption></figcaption></figure>
 
 Scroll down to the **Access tokens** section. Here you can see any access tokens that exist for the user.
 
