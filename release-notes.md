@@ -1,6 +1,6 @@
 # Release Notes
 
-The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
+
 
 ## Release 2.45.0 LTS <a href="#release-2.45.0-lts" id="release-2.45.0-lts"></a>
 
@@ -309,9 +309,9 @@ July 14, 2026
 * Upgraded `go.mongodb.org/mongo-driver` to 1.17.7 to address CVE-2026-2303
 * Upgraded the Alpine base image from 3.23.4 to 3.24.1 to address OS-level package CVEs, including the jq advisories (CVE-2026-32316, CVE-2026-40164 and others)
 * Upgraded `github.com/containerd/containerd/v2` to 2.2.5 to address the following CVEs:
-  * CVE-2026-53488,&#x20;
-  * CVE-2026-53492,&#x20;
-  * CVE-2026-53489,&#x20;
+  * CVE-2026-53488,
+  * CVE-2026-53492,
+  * CVE-2026-53489,
   * CVE-2026-47262,
   * CVE-2026-50195
 
@@ -347,8 +347,8 @@ June 25, 2026
 * Fixed GitOps auto-update failure with private registry
 * Fixed stack redeploy when stack references env\_file for non-admins
 * Bumped go-git to 5.19.1 to address the following CVEs:
-  * CVE-2026-45570,&#x20;
-  * CVE-2026-45571,&#x20;
+  * CVE-2026-45570,
+  * CVE-2026-45571,
   * GHSA-w5pp-99ch-qj29
 * Bumped go stdlib to 1.25.11 to remediate the following stdlib CVEs:
   * CVE-2026-42504
