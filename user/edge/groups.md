@@ -8,7 +8,7 @@ This functionality requires you to [enable Edge Compute](../../admin/settings/ed
 
 From the menu select **Edge Groups** then click **Add Edge group**.
 
-<figure><img src="../../.gitbook/assets/2.15-edge-groups.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3.0-add-edge-group.gif" alt=""><figcaption></figcaption></figure>
 
 Give the group a descriptive name then select either **Static** or **Dynamic**:
 
