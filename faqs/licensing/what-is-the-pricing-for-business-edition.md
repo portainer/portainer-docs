@@ -14,7 +14,7 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 
 ### **Home & Student Plan**
 
-**$149/year -** [**Purchase here**](https://www.portainer.io/homeandstudent-payment)
+**$155/year -** [**Purchase here**](https://www.portainer.io/homeandstudent-payment)
 
 * Max of 15 nodes
 * Restricted to Non-Commercial use (if you are a business you cannot purchase this license, license keys will be revoked)
@@ -28,7 +28,7 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 
 ### **Starter**
 
-**From $99/month or $995/year -**[ **Purchase here**](https://www.portainer.io/starter-plans?hsLang=en)
+**From $105/month or $1045/year -**[ **Purchase here**](https://www.portainer.io/starter-plans?hsLang=en)
 
 **Perfect for small businesses, or those beginning their containerization journey.**
 
@@ -42,7 +42,7 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 
 ### **Scale**
 
-**From $199/month or $1995/year -** [**Purchase here**](https://www.portainer.io/scale-plans)
+**From $209/month or $2095/year -** [**Purchase here**](https://www.portainer.io/scale-plans)
 
 **Ideal for businesses who require access to expert assistance and commercial support**
 
