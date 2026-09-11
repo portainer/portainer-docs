@@ -36,10 +36,6 @@ Shows information about application-related events.
 
 This displays the YAML generated from the application deployment, and lets you edit the YAML for an application directly. Updates to your manifest made here are applied using the Kubernetes `patch` mechanism.
 
-{% hint style="info" %}
-Editing your YAML through this section is only available in Portainer Business Edition.
-{% endhint %}
-
 <figure><img src="../../../.gitbook/assets/2.41-application-yaml.png" alt=""><figcaption></figcaption></figure>
 
 Make your edits then click **Apply changes** to update the deployment.
@@ -54,9 +50,9 @@ Depending on how the application was deployed and your user role, a number of ac
 
 * [Editing the application](edit.md).
 * Edit the [Git settings](manifest/create.md#repository).
-* Scale the application (Business Edition only).
+* Scale the application.
 * Pull and redeploy.
-* Perform a rolling restart of the application (Business Edition only).
+* Perform a rolling restart of the application.
 * Redeploying the application (terminating all the services and recreating them).
 * Rolling the application back to a previous configuration.
 * Creating a [template](../templates/) from the application.

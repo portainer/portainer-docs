@@ -1,9 +1,5 @@
 # GPU
 
-{% hint style="info" %}
-This feature is available for Business Edition only.&#x20;
-{% endhint %}
-
 The GPU view is available for environments where GPU nodes are detected. It displays three tables: GPU, GPU Nodes, and GPU Workloads.
 
 ### GPU

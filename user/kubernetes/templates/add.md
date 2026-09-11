@@ -59,10 +59,6 @@ When you're ready, click **Create custom template**.
 
 Custom templates support the use of variables to provide further customization of the deployed stack. A stack can define a variable that can then be adjusted by the user at deployment.
 
-{% hint style="info" %}
-This feature is only available in Portainer Business Edition.
-{% endhint %}
-
 Variables are identified in stacks with `{{ }}`. For example, the following stack provides a `REPLICA_COUNT` variable:
 
 <figure><img src="../../../.gitbook/assets/2.19-kubernetes-templates-add-variables.png" alt=""><figcaption></figcaption></figure>

@@ -1,9 +1,9 @@
 # How Relative Path Support works in Portainer
 
-The relative path volumes support in Portainer Business Edition is intended to provide you with a way to reference files and directories that are supplied within the Git repository alongside your compose file without needing to know the absolute path at which they will appear when they are deployed to your environment.
+Relative path volumes support in Portainer is intended to provide you with a way to reference files and directories that are supplied within the Git repository alongside your compose file without needing to know the absolute path at which they will appear when they are deployed to your environment.
 
 {% hint style="info" %}
-Relative path support is only present in Portainer Business Edition, and needs to be [enabled when deploying your stack from Git](../user/docker/stacks/add.md#relative-path-volumes) for this article to apply.
+Relative path support needs to be [enabled when deploying your stack from Git](../user/docker/stacks/add.md#relative-path-volumes) for this article to apply.
 {% endhint %}
 
 In the background the way this works is as follows:

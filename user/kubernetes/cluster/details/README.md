@@ -67,10 +67,6 @@ To open a dedicated shell for the node, click the Shell **>\_** icon under **Act
 Opening the node shell is only available to admins when [enabled node shell for admins](../setup.md#enable-node-shell-for-admins) has been enabled. This feature is disabled by default.&#x20;
 {% endhint %}
 
-{% hint style="info" %}
-This feature is avaliable on Business Edition only.&#x20;
-{% endhint %}
-
 <figure><img src="../../../../.gitbook/assets/2.44-an-open-node-shell.png" alt=""><figcaption></figcaption></figure>
 
 

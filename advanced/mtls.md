@@ -4,10 +4,6 @@ Mutual TLS (or **mTLS**) is a certificate-based system whereby the client and se
 
 This article will walk you through the process of deploying the Portainer Server and the Edge Agents with mTLS support.
 
-{% hint style="info" %}
-mTLS support is only available in Portainer Business Edition.
-{% endhint %}
-
 ## Requirements
 
 In order to configure Portainer with mTLS support, you will need the following:

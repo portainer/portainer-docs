@@ -1,9 +1,5 @@
 # Add a GitHub registry
 
-{% hint style="info" %}
-The GitHub registry option is only available in Portainer Business Edition.
-{% endhint %}
-
 From the menu select **Registries** then click **Add registry** and select **GitHub** as the registry provider.
 
 <figure><img src="../../../.gitbook/assets/Add-registry-GitHub-new.gif" alt=""><figcaption></figcaption></figure>

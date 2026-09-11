@@ -47,10 +47,6 @@ For more information on access tokens, refer to our [API access documentation](.
 This section lets you manage your saved Git credentials for use in deployments. These credentials are available only to your user.
 
 {% hint style="info" %}
-This feature is only available in Portainer Business Edition.
-{% endhint %}
-
-{% hint style="info" %}
 Adding shared Git credentials can be done from the [Shared credentials](../admin/settings/credentials/) view.
 {% endhint %}
 

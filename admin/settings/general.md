@@ -18,10 +18,6 @@ Replaces our logo with your own. Toggle on and enter the URL to the logo. The re
 
 ### Login screen banner
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
-
 This setting allows you to specify a custom text banner that will appear on the login screen for all users. This could be used to provide informational detail, a warning message, or whatever you need. To enable this, toggle the **Login screen banner** option on and enter your message in the **Details** box.
 
 <figure><img src="../../.gitbook/assets/2.16-settings-login-screen-banner.png" alt=""><figcaption></figcaption></figure>
@@ -39,7 +35,7 @@ You can deploy containers and services using Portainer's set of built-in app tem
 ### Automatic Portainer patch updates
 
 {% hint style="warning" %}
-This is a beta feature and is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
+This is a beta feature.
 {% endhint %}
 
 {% hint style="info" %}
@@ -124,10 +120,6 @@ In this section you can configure various Kubernetes-specific deployment options
 
 ## Add-on settings
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=addon-settings).
-{% endhint %}
-
 This section contains settings related to the Add-ons functionality in Portainer.&#x20;
 
 Here you can specify a custom catalog URL to use to provide Portainer with the list of add-ons available to it. If left blank, the default catalog URL is used.
@@ -135,10 +127,6 @@ Here you can specify a custom catalog URL to use to provide Portainer with the l
 <figure><img src="../../.gitbook/assets/2.45-settings-general-addon.png" alt=""><figcaption></figcaption></figure>
 
 ## Certificate Authority file for Kubernetes Helm repositories
-
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
 
 This section lets you supply a certificate authority (CA) file for use with HTTPS connections to Helm repositories from Portainer. This is useful if the TLS certificate your Helm repository uses is signed by a custom CA, and applies to both the Helm Repository configured above and to Helm repositories configured per environment.
 
@@ -190,10 +178,6 @@ After making changes to this section, click **Save SSL settings.**
 
 ## Experimental features
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
-
 This section allows you to enable experimental Portainer features for use in your deployment. These features are in early development and have gone through a limited set of testing, and are provided to users in order to gather feedback on the feature at an earlier stage of development.
 
 {% hint style="danger" %}
@@ -234,10 +218,6 @@ Use this option to download your backup file directly to your browser. Optionall
 
 ### Scheduled local backup
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
-
 To schedule automatic backups, select **Scheduled local backup** and toggle on **Schedule automatic backups**.
 
 By default, backup archives are written to `/data/scheduled-backups/` inside the Portainer container. To store backups on a separate host volume, mount that volume and point Portainer to it using the `PORTAINER_BACKUP_PATH` environment variable. Note that this path is resolved at startup, so any changes to `PORTAINER_BACKUP_PATH` require a container restart to take effect.
@@ -247,10 +227,6 @@ Define your cron rule and set the number of retention days. Set retention days t
 <figure><img src="../../.gitbook/assets/2.42-schedule-local-backup.png" alt=""><figcaption></figcaption></figure>
 
 ### Store in S3
-
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
 
 Select **Store in S3** to back up your configuration to an S3 bucket, either on demand or on a defined schedule.
 
@@ -273,10 +249,6 @@ Fill in the fields using the guide below.
 Once the fields are complete, select **Export backup** to immediately start a backup, or **Save backup settings** to save your configuration and activate any scheduled backups.
 
 ### Store in Azure Blob
-
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
 
 Select **Store in Azure Blob** to back up your configuration to an Azure Blob, either on demand or on a defined schedule.
 
@@ -358,10 +330,6 @@ The restore might take a few moments. When it has finished, you will be redirect
 
 ### Restoring from S3
 
-{% hint style="info" %}
-This feature is only available in Portainer Business Edition.
-{% endhint %}
-
 Restoring a configuration is only possible on a fresh instance of Portainer during the initial installation. When you need to restore Portainer, deploy a fresh instance of Portainer with an empty data volume and choose the **Restore Portainer from backup** option during setup, making sure to select **Retrieve from S3**. Complete the fields using the table below as a guide.
 
 | Field/Option       | Overview                                                                                                                                                                                                                          |
@@ -380,10 +348,6 @@ Restoring a configuration is only possible on a fresh instance of Portainer duri
 When you're ready, click **Restore Portainer**. The restore might take a few moments. When it has finished, you will be redirected to the login page. You can now log in with your previous credentials and your previous configuration will be restored.
 
 ## Portainer support
-
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
 
 In this section you will find settings related to troubleshooting your Portainer installation.
 

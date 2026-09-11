@@ -23,10 +23,6 @@ Enter the information about your Git repository to deploy your Edge Stack from G
 
 #### GitOps updates
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
-
 Portainer supports automatically updating your Edge Stacks deployed from Git repositories. To enable this, toggle on **GitOps updates** and configure your settings.
 
 {% hint style="info" %}
@@ -98,10 +94,6 @@ Optionally specify the following for your deployment:
 * **Timeout** - Set the maximum time allowed for Helm operations to complete. Leave blank for the default timeout to be applied.
 
 ### Update configurations
-
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
 
 This section lets you define the method in which your stack updates are deployed across your Edge devices. You can choose to deploy to **All edge devices at once**, or select **Parallel edge device(s)** to specify how many devices to update concurrently.
 

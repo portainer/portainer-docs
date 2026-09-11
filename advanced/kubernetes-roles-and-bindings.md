@@ -1,9 +1,5 @@
 # Kubernetes roles and bindings
 
-{% hint style="info" %}
-Role-Based Access Control is only available in Portainer Business Edition.
-{% endhint %}
-
 When managing a Kubernetes environment with Portainer, the Role-Based Access Control (RBAC) configuration is based on two components:
 
 * Kubernetes' cluster roles and namespace roles (which restrict access to Kubernetes itself)

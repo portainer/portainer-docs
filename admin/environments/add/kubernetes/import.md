@@ -6,10 +6,6 @@ Importing an existing Kubernetes environment is a legacy option that does not su
 
 With Portainer you can import your existing Kubernetes environment through the use of a [kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) file. Portainer will use the information in the kubeconfig file to connect to your environment then deploy and configure the Portainer Agent for you.
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=k8s-create-from-kubeconfig).
-{% endhint %}
-
 ## Requirements
 
 While we have tried to support as many configurations as possible, there are a few requirements in order to fully support the import process:
@@ -68,10 +64,6 @@ Once you have your kubeconfig file created, from the menu expand **Environment-r
 <figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
 Select the **Kubernetes** option and click **Start Wizard**. Under **More options**, select the **Import** option.
-
-{% hint style="info" %}
-The import option is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=k8s-create-from-kubeconfig).
-{% endhint %}
 
 Enter a **name** for cluster then click **Select a file** to browse for your kubeconfig file.
 

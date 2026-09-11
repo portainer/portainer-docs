@@ -1,7 +1,7 @@
 # Custom Resources
 
 {% hint style="warning" %}
-Custom resources can only be viewed by an admin user in Portainer Business Edition.
+Custom resources can only be viewed by an admin user.
 {% endhint %}
 
 Custom Resource Definitions (CRDs) extend the Kubernetes API to define new resource types in a cluster. From the Custom Resource view, admin users can review both Custom Resources and Custom Resource Definitions directly.

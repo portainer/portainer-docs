@@ -6,10 +6,6 @@ When creating an application from a Helm chart, you can deploy it from either a 
 
 ## Git repository
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
-
 Use the provided fields to enter the details of your Git repository containing your Helm chart and values files.
 
 | Field/Option         | Overview                                                                                               |
@@ -73,7 +69,7 @@ Once you have selected a **Namespace** for your Helm deployment, specify a **Rel
 Next, choose a **Helm chart source** from the dropdown. Portainer will pull the available chart list from the selected registry and display them below. Select a chart to use from the list. You can search within the list or filter by category.
 
 {% hint style="info" %}
-Business Edition users will be able to choose charts from OCI registries if they have been [configured](../../../../admin/registries/) and [given access to the selected namespace](../../cluster/registries.md#managing-access).
+You will be able to choose charts from OCI registries if they have been [configured](../../../../admin/registries/) and [given access to the selected namespace](../../cluster/registries.md#managing-access).
 {% endhint %}
 
 {% hint style="info" %}

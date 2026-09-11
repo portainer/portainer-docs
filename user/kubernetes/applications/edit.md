@@ -7,7 +7,7 @@ From the menu select **Applications**, select the application you want to edit, 
 Your editing options will depend on how the application was deployed initially.
 
 {% hint style="info" %}
-Regardless of the deployment method, you can [edit an application's YAML directly](inspect.md#yaml-tab) through the YAML tab in Portainer Business Edition.
+Regardless of the deployment method, you can [edit an application's YAML directly](inspect.md#yaml-tab) through the YAML tab.
 {% endhint %}
 
 ## Applications deployed from Git

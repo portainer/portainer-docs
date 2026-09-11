@@ -18,7 +18,7 @@ Give access to individual users then manage them as their needs change over time
 [password.md](password.md)
 {% endcontent-ref %}
 
-Add users to teams then assign them to roles (Business Edition).
+Add users to teams then assign them to roles.
 
 {% content-ref url="teams/" %}
 [teams](teams/)

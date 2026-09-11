@@ -1,7 +1,7 @@
 # Alerting
 
 {% hint style="info" %}
-This section is only available in Portainer Business Edition and is accessible by administrator users only.
+This section is accessible by administrator users only.
 {% endhint %}
 
 The Alerting page allows you to configure alerts for events related to your environments and for Portainer itself. Alerts will display on the Alerting page, and notifications can be sent via Slack, Microsoft Teams, email, or webhook.

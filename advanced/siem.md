@@ -1,9 +1,5 @@
 # Stream auth and activity logs to an external provider
 
-{% hint style="info" %}
-This feature is only available in Portainer Business Edition.
-{% endhint %}
-
 With Portainer 2.20 and later, you can configure the streaming of Portainer's authentication and activity logs to an external Security Information and Event Management (SIEM) system in Syslog format. This is done via CLI flags when starting the Portainer container.
 
 ## Available CLI flags

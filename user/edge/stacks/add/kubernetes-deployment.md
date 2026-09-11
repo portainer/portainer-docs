@@ -43,10 +43,6 @@ Enter the information about your Git repository to deploy your Edge Stack from G
 
 #### GitOps updates
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
-
 Portainer supports automatically updating your Edge Stacks deployed from Git repositories. To enable this, toggle on **GitOps updates** and configure your settings.
 
 {% hint style="info" %}
@@ -74,10 +70,6 @@ For more detail on how automatic updates function under the hood, have a look at
 
 ### Webhooks
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
-
 For the Web editor and Upload build methods you can choose to enable an Edge Stack webhook. This webhook will allow you to trigger updates to the stack by sending a POST request to a specific URL, instructing Portainer to pull the most up to date version of the associated image and re-deploy the stack.
 
 {% hint style="info" %}
@@ -88,19 +80,11 @@ For Git deployed stacks, this functionality is available via [GitOps updates](ku
 
 ### Registry
 
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
-
 If your stack requires access to images in private registries, you can specify which registry to use as part of the deployment.
 
 <figure><img src="../../../../.gitbook/assets/2.15-edge-stacks-add-registry.png" alt=""><figcaption></figcaption></figure>
 
 ### Update configurations
-
-{% hint style="info" %}
-This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
-{% endhint %}
 
 This section lets you define the method in which your stack updates are deployed across your Edge devices. You can choose to deploy to **All edge devices at once**, or select **Parallel edge device(s)** to specify how many devices to update concurrently.
 

@@ -142,10 +142,6 @@ For more detail on how GitOps updates function under the hood, have a look at [t
 
 When you toggle **Enable relative path volumes** to on, you are able to specify relative path references in your compose files. Portainer will create the required directory structure and populate the directories with the relevant files from your Git repository.
 
-{% hint style="info" %}
-This feature is only available in Portainer Business Edition.
-{% endhint %}
-
 On Docker Standalone and Podman environments, specify the path at which you want your files to be created on your host filesystem in the **Local filesystem path** field.
 
 {% hint style="warning" %}

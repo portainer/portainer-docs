@@ -67,10 +67,6 @@ This section shows information about node-related events.
 
 ## YAML
 
-{% hint style="info" %}
-Editing the YAML in this view is only available in Portainer Business Edition.
-{% endhint %}
-
 This section shows the node YAML within an editor. To apply any changes you make within the YAML editor, select the **Apply changes** button, and select **Apply changes** if you are sure. Changes are made by calling the Kubernetes API to patch the relevant resources. Any resource removals or unexpected resource additions that you make in the YAML will be ignored. Note that editing is disabled for resources in namespaces marked as system.
 
 <figure><img src="../../../../.gitbook/assets/Recording 2025-09-11 at 10.05.33.gif" alt=""><figcaption></figcaption></figure>

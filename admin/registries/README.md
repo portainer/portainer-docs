@@ -2,10 +2,6 @@
 
 A registry is a repository of container images or OCI-format Helm charts that can be pulled and deployed on a containerized infrastructure. Portainer supports connecting registries to the Portainer Server instance, allowing you to use those registries when deploying containers.
 
-{% hint style="info" %}
-OCI registries are only supported in Portainer Business Edition.
-{% endhint %}
-
 <figure><img src="../../.gitbook/assets/2.15-admin-registries.png" alt=""><figcaption></figcaption></figure>
 
 {% content-ref url="add/" %}
@@ -16,7 +12,7 @@ OCI registries are only supported in Portainer Business Edition.
 [custom.md](add/custom.md)
 {% endcontent-ref %}
 
-With Portainer Business Edition you can also browse and manage your registries within Portainer itself.
+You can also browse and manage your registries within Portainer itself.
 
 {% content-ref url="browse.md" %}
 [browse.md](browse.md)

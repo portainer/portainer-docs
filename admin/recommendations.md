@@ -1,10 +1,6 @@
 # Recommendations
 
 {% hint style="info" %}
-Recommendations is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=stack-webhook).
-{% endhint %}
-
-{% hint style="info" %}
 Recommendations is an administrator-only feature. It is not visible to standard users.
 {% endhint %}
 
