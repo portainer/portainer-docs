@@ -10,10 +10,14 @@ The Edge Stacks page displays a list of Edge Stacks deployed across your environ
 
 <figure><img src="../../../.gitbook/assets/2.19-edge-stacks-list.png" alt=""><figcaption></figcaption></figure>
 
-You can click on an individual stack's name to view the stack's details or edit the stack:
+You can click on an individual stack's name to view the stack's details or edit the stack. Details you can edit depend on how your stack was deployed, details on configuration can be found under [add a new Edge stack](add/).&#x20;
+
+{% hint style="info" %}
+Note that **Enable relative path volumes** and **GitOps Edge configurations** options are read-only when editing an existing stack - they can only be configured at creation time. If you need to change either setting, delete and recreate the stack with the desired configuration.
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/2.40.0-edge-stacks.png" alt=""><figcaption></figcaption></figure>
 
-You can also view details about the stack's deployment across environments on the **Environments** tab.
+You can also view details about the stack's deployment across environments on the **Environments** tab. If available, log controls for individual edge environments appear in the **Actions** column on each row.
 
 <figure><img src="../../../.gitbook/assets/2.40.0-edge-environments.png" alt=""><figcaption></figcaption></figure>

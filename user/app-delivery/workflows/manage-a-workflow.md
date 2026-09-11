@@ -12,6 +12,8 @@ To manage a GitOps workflow, in the left-hand menu select **Workflows**, then cl
 
 To edit a workflow, from the workflow details view, select **Edit**. This returns you to the [workflow creation](add-a-new-workflow.md) steps with your preconfigured values, allowing changes to any field.
 
+To configure settings of your created stack, from the workflow details view, click the stack name to be taken to the Edit [Edge stack](../../edge/stacks/) view.&#x20;
+
 ### Delete a workflow
 
 To delete a workflow, from the workflow details view, click **Delete.** You will then be asked to choose what happens to the stacks and resources it has already deployed. Choose between the following:
