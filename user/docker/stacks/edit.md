@@ -41,6 +41,10 @@ You can also see the image update indicator for each service in the stack. To re
 
 ## Edit a stack
 
+{% hint style="info" %}
+Redeploys run in the background. A successful response means the request was accepted, not that deployment finished. Learn more in [this FAQ](../../../faqs/troubleshooting/stacks-deployments-and-updates/why-did-my-api-client-start-getting-409-errors-after-upgrading.md).
+{% endhint %}
+
 ### Edit a stack deployed from Git
 
 <figure><img src="../../../.gitbook/assets/2.41-Edit-git-stack.png" alt=""><figcaption></figcaption></figure>
