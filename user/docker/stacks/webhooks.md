@@ -10,6 +10,10 @@ This functionality is only available in [Portainer Business Edition](https://www
 Webhooks are only available on non-Edge environments (environments running Portainer Server or Portainer Agent, not the Portainer Edge Agent). This is because the tunnel to the Portainer Edge Agent is only opened on-demand, and therefore would mean there is no way to expose a webhook permanently.
 {% endhint %}
 
+{% hint style="info" %}
+Webhook calls return before deployment completes. See this [stacks FAQ](../../../faqs/troubleshooting/stacks-deployments-and-updates/why-did-my-api-client-start-getting-409-errors-after-upgrading.md) for status codes and polling behavior.
+{% endhint %}
+
 ## Enabling a stack webhook
 
 From the menu select **Stacks** then select the container that you want to configure the webhook for. Then select the **Editor** tab.

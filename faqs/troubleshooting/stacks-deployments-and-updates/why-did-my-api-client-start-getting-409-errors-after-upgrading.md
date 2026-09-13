@@ -6,7 +6,7 @@ If your pipeline issues repeat update or redeploy calls against the same stack w
 
 #### Does a 200 response mean my stack deployed successfully?
 
-Not for Docker Standalone or Docker Swarm. A 200 from `PUT /api/stacks/{id}` means the update was accepted, not that deployment finished. The deployment runs in the background, and the outcome is only reflected once the stack's `Status` field leaves Deploying.
+Not necessarily. A 200 response does not guarantee that the stack’s workloads are healthy or fully converged. A 200 from `PUT /api/stacks/{id}` means the update was accepted, not that deployment finished. The deployment runs in the background, and the outcome is only reflected once the stack's `Status` field leaves Deploying.
 
 The full set of status values:
 
