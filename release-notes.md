@@ -8,6 +8,44 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.39.8 LTS <a href="#release-2.39.6-lts" id="release-2.39.6-lts"></a>
+
+September 17, 2026
+
+### Known Issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this release
+
+* Upgraded the Go toolchain from 1.25.12 to 1.25.14 to address the following CVEs:
+  * CVE-2026-39821
+  * CVE-2026-56862
+  * CVE-2026-56859
+  * CVE-2026-56853
+  * CVE-2026-33818
+  * CVE-2026-56858
+  * CVE-2026-56860
+* Upgraded `golang.org/x/mod` to 0.40.0 to address the following CVEs:
+  * CVE-2026-56865
+  * CVE-2026-56864
+* Upgraded `golang.org/x/crypto` to 0.55.0 in Portainer CE and compose-unpacker, which had lagged behind the other modules, to address GO-2026-6303
+* Upgraded `kubectl` in the kubectl shell image from 1.36.2 to 1.37.0, which is built with Go stdlib 1.26.6 and vendors `golang.org/x/net` 0.57.0, clearing 2 Critical findings (including CVE-2026-39821), 7 High and 7 Medium
+* Upgraded the Alpine packages in the kubectl shell image, moving `openssl`/`libssl3` to 3.5.8-r0 and `jq` to 1.8.2-r0, clearing a further 9 High, 10 Medium and 1 Low findings
+* Fixed the Portainer updater reporting a container as healthy when its health-check command had never actually run, which could cause a failed upgrade to skip its rollback. The updater now waits for the exec session to complete before reading its exit cod
+* Upgraded `github.com/google/cel-go` to 0.30.0 to address GHSA-gcjh-h69q-9w9g
+
 ## Release 2.39.7 LTS <a href="#release-2.39.6-lts" id="release-2.39.6-lts"></a>
 
 August 27, 2026
