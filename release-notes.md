@@ -2,6 +2,52 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.45.1 LTS <a href="#release-2.45.1-lts" id="release-2.45.1-lts"></a>
+
+September 17, 2026
+
+#### Known Issues <a href="#known-issues" id="known-issues"></a>
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this release <a href="#new-in-this-release" id="new-in-this-release"></a>
+
+* Hardened outbound requests against SSRF. Helm chart resolution and Git HTTP/HTTPS operations now go through the SSRF-aware transport, and the static rules that enforce this now match by type rather than by import alias, so an aliased import can no longer slip past them
+* Certificate-based authentication for Azure Blob backups is now disabled in FIPS mode
+* Added build-time static analysis that catches FIPS violations before they ship
+* Removed unused non-FIPS code paths from FIPS builds
+* Updated `golang.org/x/mod` to 0.40.0, fixing CVE-2026-56865 and CVE-2026-56864
+* Updated `golang.org/x/crypto` to 0.56.0, fixing CVE-2026-56854 (High), CVE-2026-78662 and CVE-2026-56855
+* Updated `google.golang.org/grpc` to 1.83.2, fixing CVE-2026-84304 (High, 8.7)
+* Updated `kubectl` in the kubectl shell image to v1.37.0, which removes `golang.org/x/net` 0.49.0 entirely — fixing CVE-2026-39821 (Critical) along with 2 High and 5 Medium findings
+* Updated `helm` in the kubectl shell image to v4.2.4, taking `golang.org/x/net` to 0.56.0 and fixing CVE-2026-46600 (High)
+* Upgraded the Alpine packages in the kubectl shell image, taking `openssl`/`libssl3` to 3.5.8-r0, `libcurl` to 8.22.0-r0 and `jq` to 1.8.2-r0. Clears 2 Critical findings (CVE-2026-63073 and CVE-2026-75803) plus 9 High, 11 Medium and 1 Low
+* Simplified the stat cards on the environment list
+* Renamed the GitOps “Edit git settings” button to “Edit stack settings”, which reflects what it actually changes
+* The `--secret-key-name` help text now documents the BE secret path as well as the CE one
+* Fixed the Swarm network list failing to render, showing “Cannot read properties of undefined (reading 'NodeRole')” and staying empty even after a network was created
+* Fixed the node details Applications section listing pods that are not running on that node
+* Fixed a registry personal access token continuing to be used after it was changed. The Helm registry cache is now flushed when credentials change
+* Fixed the Edge Updater status page failing to load because of a broken status sort
+* Added an info box to Edge stacks explaining that the GitOps source polling interval does not apply to them
+* Fixed the initial setup screen leaving the S3 host field enabled in FIPS mode
+* Fixed automatic Edge environment creation bypassing the FIPS environment gate
+* FIPS-blocked registry types now return consistent HTTP status codes instead of differing by registry type
+* Updated `github.com/google/cel-go` to 0.30.0, fixing GHSA-gcjh-h69q-9w9g
+* Fixed alert notifications not being sent after an upgrade from 2.40, caused by a stale default receiver breaking Alertmanager config sync
+* Fixed add-on installation failing when no local Kubernetes environment is connected
+
 ## Release 2.45.0 LTS <a href="#release-2.44.0-sts" id="release-2.44.0-sts"></a>
 
 August 27, 2026
