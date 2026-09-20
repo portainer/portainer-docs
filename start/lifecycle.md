@@ -52,7 +52,9 @@ Portainer LTS releases focus less on new features and more on stability so Porta
 
 ## Current and planned releases
 
-Each stream (LTS and STS) will have a number of patch releases throughout it’s life. The current LTS release is highlighted in bold.
+Each stream (LTS and STS) will have a number of patch releases throughout its life. LTS releases are highlighted in **bold**.
+
+We aim to release a new version every month, with a new LTS release every 4 months. We support LTS releases for up to 9 months, but encourage you to always be on the latest LTS release to get our most up-to-date product.
 
 ### Current releases
 
@@ -63,18 +65,16 @@ Each stream (LTS and STS) will have a number of patch releases throughout it’s
 
 ### Planned releases
 
-We intend to release a new version every month, with a new LTS release (in bold below) every 6 months.
+| Release     | Release Date        | End of support/maintenance |
+| ----------- | ------------------- | -------------------------- |
+| 3.0 STS     | October 2026        | November 2026              |
+| 3.1 STS     | Early November 2026 | December 2026              |
+| 3.2 STS     | Late November 2026  | December 2026              |
+| **3.3 LTS** | **December 2026**   | **September 2027**         |
+| 3.4 STS     | January 2027        | February 2027              |
+| 3.5 STS     | February 2027       | March 2027                 |
 
-| Release      | Release Date | End of support/maintenance |
-| ------------ | ------------ | -------------------------- |
-| 2.46 STS     | Sept 2026    | Oct 2026                   |
-| 2.47 STS     | Oct 2026     | Nov 2026                   |
-| 2.48 STS     | Nov 2026     | Dec 2026                   |
-| 2.49 STS     | Dec 2026     | Jan 2027                   |
-| 2.50 STS     | Jan 2027     | Feb 2027                   |
-| **2.51 LTS** | **Feb 2027** | **Nov 2027**               |
-
-<figure><img src="../.gitbook/assets/2.45-release-schedule-.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2.45-release-schedue-from3.0.png" alt=""><figcaption></figcaption></figure>
 
 Sitting on an older release that is no longer maintained or supported is strongly discouraged and users take full responsibility for doing so. Users are strongly encouraged to ensure they are running the latest patch release for a given stream.
 
@@ -95,12 +95,6 @@ The following releases have passed the end of support date and are no longer mai
 | 2.35 STS     | Oct 2025     | Nov 2025                   |
 | 2.34 STS     | Sep 2025     | Oct 2025                   |
 | **2.33 LTS** | **Aug 2025** | **May 2026**               |
-| 2.32 STS     | Jul 2025     | Aug 2025                   |
-| 2.31 STS     | Jun 2025     | Jul 2025                   |
-| 2.30 STS     | May 2025     | Jun 2025                   |
-| 2.29 STS     | Apr 2025     | May 2025                   |
-| 2.28 STS     | Mar 2025     | Apr 2025                   |
-| **2.27 LTS** | **Feb 2025** | **Nov 2025**               |
 
 ## Notes
 
