@@ -52,7 +52,7 @@ Portainer LTS releases focus less on new features and more on stability so Porta
 
 ## Current and planned releases
 
-Each stream (LTS and STS) will have a number of patch releases throughout its life. LTS releases are highlighted in **bold**.
+Each stream (LTS and STS) will have a number of patch releases throughout its life. The current LTS release is highlighted in **bold**.
 
 We aim to release a new version every month, with a new LTS release every 4 months. We support LTS releases for up to 9 months, but encourage you to always be on the latest LTS release to get our most up-to-date product.
 
@@ -60,7 +60,7 @@ We aim to release a new version every month, with a new LTS release every 4 mont
 
 | Release      | Release Date | End of support/maintenance |
 | ------------ | ------------ | -------------------------- |
-| **2.39 LTS** | **Feb 2026** | **Nov 2026**               |
+| 2.39 LTS     | Feb 2026     | Nov 2026                   |
 | **2.45 LTS** | **Aug 2026** | **May 2027**               |
 
 ### Planned releases
@@ -82,19 +82,19 @@ Sitting on an older release that is no longer maintained or supported is strongl
 
 The following releases have passed the end of support date and are no longer maintained or supported. If you are using one of these versions (or older), we recommend that you [update](upgrade/) as soon as possible.
 
-| Release      | Release Date | End of support/maintenance |
-| ------------ | ------------ | -------------------------- |
-| 2.44 STS     | Jul 2026     | Aug 2026                   |
-| 2.43 STS     | Jun 2026     | Jul 2026                   |
-| 2.42 STS     | May 2026     | Jun 2026                   |
-| 2.41 STS     | Apr 2026     | May 2026                   |
-| 2.40 STS     | Mar 2026     | Apr 2026                   |
-| 2.38 STS     | Jan 2026     | Feb 2026                   |
-| 2.37 STS     | Dec 2025     | Jan 2026                   |
-| 2.36 STS     | Nov 2025     | Dec 2025                   |
-| 2.35 STS     | Oct 2025     | Nov 2025                   |
-| 2.34 STS     | Sep 2025     | Oct 2025                   |
-| **2.33 LTS** | **Aug 2025** | **May 2026**               |
+| Release  | Release Date | End of support/maintenance |
+| -------- | ------------ | -------------------------- |
+| 2.44 STS | Jul 2026     | Aug 2026                   |
+| 2.43 STS | Jun 2026     | Jul 2026                   |
+| 2.42 STS | May 2026     | Jun 2026                   |
+| 2.41 STS | Apr 2026     | May 2026                   |
+| 2.40 STS | Mar 2026     | Apr 2026                   |
+| 2.38 STS | Jan 2026     | Feb 2026                   |
+| 2.37 STS | Dec 2025     | Jan 2026                   |
+| 2.36 STS | Nov 2025     | Dec 2025                   |
+| 2.35 STS | Oct 2025     | Nov 2025                   |
+| 2.34 STS | Sep 2025     | Oct 2025                   |
+| 2.33 LTS | Aug 2025     | May 2026                   |
 
 ## Notes
 
