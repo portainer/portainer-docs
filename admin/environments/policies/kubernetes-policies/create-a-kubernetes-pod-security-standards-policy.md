@@ -2,10 +2,10 @@
 
 Define a policy that lets you apply Kubernetes' built-in security profiles to namespaces, controlling what pod configurations are allowed to run.
 
-To create a Kubernetes pod security standards policy, in the menu, under **Environment-related**, select **Policies** then select **Create policy**. From the policy type list, navigate to the **Kubernetes** > **pod security standards** section, select **Custom** then select **Continue** to begin configuring the policy.
+To create a Kubernetes pod security standards policy, in the menu, under **Environment-related**, select **Policies** then select **Create policy**. From the policy type list, navigate to the **Kubernetes** > P**od Security Standards** section, select **Custom** then select **Continue** to begin configuring the policy.
 
 {% hint style="info" %}
-Currently, only custom registry policies can be created. Future improvements to the policies feature will introduce policy templates.
+Currently, only custom pod security policies can be created. Future improvements to the policies feature will introduce policy templates.
 {% endhint %}
 
 | Field/Option       | Overview                                                                                                                                                                                                                             |
@@ -15,7 +15,7 @@ Currently, only custom registry policies can be created. Future improvements to 
 
 <figure><img src="../../../../.gitbook/assets/2.44-policy-configuration.png" alt=""><figcaption></figcaption></figure>
 
-### Namespaces&#x20;
+### Namespaces
 
 Each namespace can have a pod security standard profile applied per mode. The mode determines how the cluster responds when a pod violates the profile:
 
@@ -25,7 +25,7 @@ Each namespace can have a pod security standard profile applied per mode. The mo
 | Audit   | Allows the pod but records the violation in the audit log. |
 | Warn    | Allows the pod but returns a warning to the user.          |
 
-You can set a different profile for each mode, or leave a mode unset to keep it unmanaged.&#x20;
+You can set a different profile for each mode, or leave a mode unset to keep it unmanaged.
 
 #### Profile levels
 
@@ -48,8 +48,6 @@ From least to most restrictive:
 * **Restricted** - Heavily restricted, following current pod hardening best practices.
 
 For the full definition of what each profile allows and blocks, see the [Kubernetes Pod Security Standards documentation](https://kubernetes.io/docs/concepts/security/pod-security-standards/).
-
-
 
 To add a namespace, select **Add namespace**, then enter the namespace name and choose a profile for each mode you want to set.
 
