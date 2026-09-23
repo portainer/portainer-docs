@@ -38,7 +38,6 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 * Payment via online purchase only
 * Click-through license agreement
 * For commercial (business) use
-* Limited to organizations with ≤ $50 million in annual revenue.
 
 ### **Scale**
 
@@ -53,7 +52,6 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 * Payment via invoice (bank transfer or credit card)
 * Vendor onboarding (ability to purchase via Reseller)
 * For commercial (business) use
-* Limited to organizations with ≤ $100 million in annual revenue.
 
 ### Enterprise
 
