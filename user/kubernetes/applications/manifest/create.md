@@ -18,7 +18,7 @@ Use the provided fields to enter the details of your Git repository containing y
 
 | Field/Option         | Overview                                                                                                                                                                                                          |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). Select **Create new source** to navigate to the [source creation view](/broken/pages/tHkiYwfwbWNoBDw6C8FS). |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). Select **Create new source** to navigate to the [source creation view](../../../app-delivery/sources/add-a-new-git-repository-source.md). |
 | Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                                   |
 | Manifest path        | Enter the path to your manifest file relative to the root of your repository.                                                                                                                                     |
 | Additional paths     | Click **Add file** to define additional manifests or compose files to process as part of the deployment.                                                                                                          |

@@ -5,7 +5,7 @@ Portainer releases contain new features and bug fixes so it's important to keep 
 While it's possible that an untested unvalidated update path might work, we recommend that all update paths are tested and validated on a non-critical system before applying them to your production systems.
 
 {% hint style="info" %}
-We added a [backup and restore feature](../../admin/settings/#backup-portainer) to Portainer BE 2.7 and strongly recommend that you take a backup of your Portainer instance before updating.
+We added a [backup and restore feature](../../admin/settings/general.md#back-up-portainer) to Portainer BE 2.7 and strongly recommend that you take a backup of your Portainer instance before updating.
 {% endhint %}
 
 {% hint style="info" %}
@@ -31,7 +31,7 @@ From 2.19, Business Edition users are able to update their Portainer installatio
 In the confirmation dialog, click **Start update** to proceed with the update.
 
 {% hint style="warning" %}
-Remember to [back up your Portainer installation](../../admin/settings/#backup-portainer) before updating!
+Remember to [back up your Portainer installation](../../admin/settings/general.md#back-up-portainer) before updating!
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/2.42-update.png" alt="" width="375"><figcaption></figcaption></figure>
