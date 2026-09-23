@@ -9,7 +9,7 @@ metaLinks:
 
 See below for our current products and subscriptions.
 
-You can purchase our Home & Student or Starter licenses online (see below for more details). If you would like a quote for Scale, Enterprise or Edge/IIoT please [Contact Sales](https://www.portainer.io/contact-sales?hsLang=en).&#x20;
+You can purchase our Home & Student or Starter licenses online (see below for more details). If you would like a quote for Scale, Enterprise or Edge/IIoT please [Contact Sales](https://www.portainer.io/contact-sales?hsLang=en).
 
 Always check for the most up to date information at: [https://www.portainer.io/pricing](https://www.portainer.io/pricing?hsLang=en)
 
@@ -17,9 +17,9 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 
 ***
 
-## Home & Student &#x20;
+## Home & Student
 
-### **Home & Student Plan**&#x20;
+### **Home & Student Plan**
 
 **$149/year -** [**Purchase here**](https://www.portainer.io/homeandstudent-payment)
 
@@ -31,7 +31,7 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 
 ***
 
-## Business/Enterprise&#x20;
+## Business/Enterprise
 
 ### **Starter**
 
@@ -44,8 +44,7 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 * Max of 16 vCPUs per node
 * Payment via online purchase only
 * Click-through license agreement
-* For commercial (business) use&#x20;
-* Limited to organizations with ≤ $50 million in annual revenue.
+* For commercial (business) use
 
 ### **Scale**
 
@@ -59,8 +58,7 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 * Max of 24 vCPUs per node
 * Payment via invoice (bank transfer or credit card)
 * Vendor onboarding (ability to purchase via Reseller)
-* For commercial (business) use&#x20;
-* Limited to organizations with ≤ $100 million in annual revenue.
+* For commercial (business) use
 
 ### Enterprise
 
@@ -68,13 +66,13 @@ To find out what we mean by node check out: [What is a node for licensing purpos
 
 **For business-critical deployments when full access to Portainer's deep expertise is required.**
 
-Everything in Scale plus:&#x20;
+Everything in Scale plus:
 
 * From 32 vCPUs to unlimited vCPUs per node
 * Production and Non-Production node options
 * Assigned support engineer
 * Customizable license agreement
-* Security assessment report&#x20;
+* Security assessment report
 * 24/7 Support option
 * Managed Platform Services option
 
@@ -84,7 +82,7 @@ Everything in Scale plus:&#x20;
 
 [**Contact sales**](https://www.portainer.io/contact-sales?hsLang=en) **to explore your options and pricing**
 
-### **Professional**&#x20;
+### **Professional**
 
 * Manage up to 100 Edge / IIoT devices with one Portainer Server (nodes licensed separately)
 * Onboarding assistance
@@ -93,7 +91,7 @@ Everything in Scale plus:&#x20;
 * Can manage up to a maximum of 100 nodes
 * Professional Services available as additional option
 
-### **Enterprise**&#x20;
+### **Enterprise**
 
 * Manage all your Edge / IIoT devices with one Portainer Server (nodes licensed separately)
 * Onboarding assistance
