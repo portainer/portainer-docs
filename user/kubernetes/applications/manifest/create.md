@@ -4,7 +4,7 @@ When creating an application from a Manifest, first select your deployment metho
 
 <figure><img src="../../../../.gitbook/assets/2.35-K8-from-manifest.png" alt=""><figcaption></figcaption></figure>
 
-Then, select the **Namespace** to deploy to and optionally provide a **Name** for your deployment in the **Deploy to** section.
+Then, select the **Namespace** to deploy to and optionally provide a **Name** for your deployment in the **Deploy to** section. If you wish to group your stacks, specify a **Stack** name to label the resource.
 
 {% hint style="info" %}
 If you want to use namespaces defined in your manifest, you can leave **Namespace** set to `default` and toggle on the **Use namespace(s) specified from manifest** option.
@@ -16,41 +16,16 @@ Your next options will depend on the deployment method you selected.
 
 Use the provided fields to enter the details of your Git repository containing your Kubernetes manifests.
 
-| Field/Option         | Overview                                                                                                                                                                                                          |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). Select **Create new source** to navigate to the [source creation view](/broken/pages/tHkiYwfwbWNoBDw6C8FS). |
-| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                                   |
-| Manifest path        | Enter the path to your manifest file relative to the root of your repository.                                                                                                                                     |
-| Additional paths     | Click **Add file** to define additional manifests or compose files to process as part of the deployment.                                                                                                          |
-| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                                                                                                                              |
+| Field/Option         | Overview                                                                                                                                                                                                                                                                                                                                                                                        |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). Select **Create new source** to navigate to the [source creation view](../../../app-delivery/sources/add-a-new-git-repository-source.md).                                                                                                                                                 |
+| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                                                                                                                                                                                                                                                                                 |
+| Manifest path        | Enter the path to your manifest file relative to the root of your repository.                                                                                                                                                                                                                                                                                                                   |
+| Additional paths     | Click **Add file** to define additional manifests or compose files to process as part of the deployment.                                                                                                                                                                                                                                                                                        |
+| Create a Webhook     | <p>When enabled, the webhook URL to use is displayed. Click <strong>Copy link</strong> to copy the webhook to your clipboard.<br>For more on webhooks, refer to the <a href="../webhooks.md">webhook documentation</a>.</p>                                                                                                                                                                     |
+| Force redeployment   | <p>When enabled, when redeploy is triggered via the webhook, <code>kubectl apply</code> is always performed, even if Portainer detects no difference between the git repo and what was stored locally on the last git pull.</p><p>This is useful if you want your git repo to be the source of truth and are fine with changes made directly to resources in the cluster being overwritten.</p> |
 
-<figure><img src="../../../../.gitbook/assets/2.43-new-application-repo.png" alt=""><figcaption></figcaption></figure>
-
-### GitOps updates
-
-Enabling GitOps updates gives Portainer the ability to update your application automatically, either by polling the repository at a defined interval for changes or by using a webhook to trigger an update.
-
-{% hint style="warning" %}
-If your application is configured for GitOps updates and you make changes locally, these changes will be overridden by the application definition in the Git repository. Bear this in mind when making configuration changes.
-{% endhint %}
-
-| Field/Option   | Overview                                                                                                                                                                                                                                                       |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mechanism      | Choose from **Polling** or **Webhook**.                                                                                                                                                                                                                        |
-| Fetch interval | When using the **Polling** method, choose how often you wish to check the Git repository for updates to your application.                                                                                                                                      |
-| Webhook        | <p>When using the <strong>Webhook</strong> method, this displays the webhook URL to use. Click <strong>Copy link</strong> to copy the webhook to your clipboard.<br>For more on webhooks, refer to the <a href="../webhooks.md">webhook documentation</a>.</p> |
-
-<figure><img src="../../../../.gitbook/assets/2.19-stacks-add-git-polling.png" alt=""><figcaption><p>GitOps updates using the polling mechanism</p></figcaption></figure>
-
-<figure><img src="../../../../.gitbook/assets/2.19-stacks-add-git-webhook.png" alt=""><figcaption><p>GitOps updates using the webhook mechanism</p></figcaption></figure>
-
-| Field/Option          | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Always apply manifest | <p>Enable this setting to force the redeployment of your application (kubectl apply) at the specified interval (or when the webhook is triggered), overwriting any changes that have been made in the local environment, even if there has been no update to the application in Git. This is useful if you want to ensure that your Git repository is the source of truth for your applications and are happy with the local application being replaced.</p><p>If this option is left disabled, automatic updates will only trigger if Portainer detects a change in the remote Git repository.</p> |
-
-<figure><img src="../../../../.gitbook/assets/2.19-kubernetes-ingress-add-manifest-git-alwaysapply.png" alt=""><figcaption></figcaption></figure>
-
-When you're ready, click **Deploy**.
+<figure><img src="../../../../.gitbook/assets/3.0-application-git-repo.png" alt=""><figcaption></figcaption></figure>
 
 ## Web editor
 
@@ -62,20 +37,27 @@ Use the Web editor to write or paste in your Kubernetes manifest.
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
 {% endhint %}
 
-When you're ready, click **Deploy**.
-
 ## URL
 
 Enter the **URL** to your manifest file in the provided field.
 
 <figure><img src="../../../../.gitbook/assets/2.20-kubernetes-applications-manifest-url.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Deploy**.
-
 ## Custom template
 
 From the **Template** dropdown, select the custom template to use. Depending on the template, you may need (or be able) to set template variables that will adjust the deployment configuration. As an optional step, you can edit the template before deploying the application. If you have no custom templates you will be given a link to the [Custom Templates](../../templates/) section.
 
 <figure><img src="../../../../.gitbook/assets/2.20-kubernetes-applications-manifest-customtemplate.png" alt=""><figcaption></figcaption></figure>
+
+## Additional fields
+
+### Deployment options
+
+| Field/Option    | Overview                                                                                                                                                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Prune resources | When enabled, updating this artifact will also delete the resources it previously created that the manifest no longer declares. Turning this off leaves those resources running on the cluster with nothing in Portainer pointing at them. |
+| Force recreate  | For fields that cannot be changed after a resource is created, enable force recreate to let Portainer delete and recreate resources instead of failing the deployment.                                                                     |
+
+<figure><img src="../../../../.gitbook/assets/3.0-deployment-options.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Deploy**.

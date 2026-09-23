@@ -3,11 +3,11 @@
 {% hint style="info" %}
 Creating a workflow assumes you have:
 
-* At least one [source](/broken/pages/tHkiYwfwbWNoBDw6C8FS)
+* At least one [source](../sources/)
 * At least one [edge group](../../edge/groups.md)
 {% endhint %}
 
-To create a new workflow, in the left-hand menu select **Workflows**, then select **Add new** at the top right of the page.&#x20;
+To create a new workflow, in the left-hand menu select **Workflows**, then select **Add new** at the top right of the page.
 
 <figure><img src="../../../.gitbook/assets/2.44-gitops-workflow-create.gif" alt=""><figcaption></figcaption></figure>
 
@@ -15,7 +15,7 @@ To create a new workflow, in the left-hand menu select **Workflows**, then selec
 {% step %}
 ### Select a source
 
-Choose a GitOps [source](../sources/) to pull a deployment artifact from, then press **Continue**.&#x20;
+Choose a GitOps [source](../sources/) to pull a deployment artifact from, then press **Continue**.
 
 <figure><img src="../../../.gitbook/assets/2.44-workflow-creation-1.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -43,17 +43,24 @@ Select one or more [edge groups](../../edge/groups.md) to deploy this stack to. 
 {% step %}
 #### Select your advanced configurations
 
-**Use namespace(s) from manifest:** \
-When on, Portainer enforces the namespace(s) declared in the manifest file itself, rather than letting the deployment use or be overridden by a default namespace. Only visible when the selected file was detected as a Kubernetes deployment.
+{% tabs %}
+{% tab title="Kubernetes" %}
+**Use namespace(s) from manifest:** When on, Portainer enforces the namespace(s) declared in the manifest file itself, rather than letting the deployment use or be overridden by a default namespace. Only visible when the selected file was detected as a Kubernetes deployment.
 
+**Prune resources:** When enabled, updating this artifact will also delete the resources it previously created that the manifest no longer declares. Turning this off leaves those resources running on the cluster with nothing in Portainer pointing at them.
+
+**Force recreate:** For fields that cannot be changed after a resource is created, enable force recreate to let Portainer delete and recreate resources instead of failing the deployment.
+
+**Enable relative path volumes:** Allows the deployment file to reference paths relative to the repository root as bind-mount volumes. When enabled, Portainer clones the repository to the specified filesystem path on the edge device before deploying, making those relative paths valid on the host.
+
+**Always clone git repository:** When on, Portainer always performs a full clone of the repository on every deploy cycle, rather than reusing a previously cloned copy. Ensures the edge device always has the exact current state of the repository but increases deploy time and bandwidth.
+
+**GitOps edge configurations:** Enables per-device configuration using folder or file names that match the Portainer Edge ID of each device. When a deploy runs, Portainer looks for a folder or file in the repository whose name matches the device's Edge ID and applies it as the configuration for that device. The Edge ID is also injected as an environment variable: `PORTAINER_EDGE_ID`. This makes it possible to ship a single workflow that deploys different configuration to different edge devices from one repository.
+{% endtab %}
+
+{% tab title="Docker" %}
 **Enable relative path volumes:**\
 Allows the deployment file to reference paths relative to the repository root as bind-mount volumes. When enabled, Portainer clones the repository to the specified filesystem path on the edge device before deploying, making those relative paths valid on the host.
-
-**Local filesystem path:**\
-The absolute path on the edge device where Portainer clones the repository content. Example: `/mnt/portainer/repos`.
-
-**Always clone git repository:**\
-When on, Portainer always performs a full clone of the repository on every deploy cycle, rather than reusing a previously cloned copy. Ensures the edge device always has the exact current state of the repository but increases deploy time and bandwidth.
 
 **GitOps edge configurations:**\
 Enables per-device configuration using folder or file names that match the Portainer Edge ID of each device. When a deploy runs, Portainer looks for a folder or file in the repository whose name matches the device's Edge ID and applies it as the configuration for that device. The Edge ID is also injected as an environment variable: `PORTAINER_EDGE_ID`.
@@ -63,6 +70,8 @@ This makes it possible to ship a single workflow that deploys different configur
 {% hint style="info" %}
 Files named `${PORTAINER_EDGE_ID}.env` or `${PORTAINER_EDGE_GROUP}.env` inside the config folder are automatically loaded for Compose variable interpolation.
 {% endhint %}
+{% endtab %}
+{% endtabs %}
 {% endstep %}
 
 {% step %}
@@ -117,7 +126,7 @@ What Portainer does when a batch fails or times out:
 {% endstep %}
 {% endstepper %}
 
-Select **Continue** when you've finished configuring your workflow.&#x20;
+Select **Continue** when you've finished configuring your workflow.
 
 <figure><img src="../../../.gitbook/assets/2.44-workflow-creation-3.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -125,7 +134,7 @@ Select **Continue** when you've finished configuring your workflow.&#x20;
 {% step %}
 ### Name and review your workflow
 
-Name the workflow and confirm everything before it's created.&#x20;
+Name the workflow and confirm everything before it's created.
 
 <figure><img src="../../../.gitbook/assets/2.44-workflow-creation-4.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}

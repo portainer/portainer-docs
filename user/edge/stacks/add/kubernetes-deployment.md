@@ -32,34 +32,18 @@ Click **Select a file** to upload a file from your computer containing your stac
 
 Enter the information about your Git repository to deploy your Edge Stack from Git.
 
-| Field/Option         | Overview                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------ |
-| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/).  |
-| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                        |
-| Manifest path        | Enter the path to the manifest file from the root of the repository.                                   |
-| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                   |
+| Field/Option         | Overview                                                                                                                                    |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/).                                       |
+| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                                                             |
+| Manifest path        | Enter the path to the manifest file from the root of the repository.                                                                        |
+| Create a Webhook     | When this is enabled, it displays the webhook URL to use in your integration. Click **Copy link** to copy the webhook URL to the clipboard. |
 
 <figure><img src="../../../../.gitbook/assets/2.43-edge-stack-kube-repo.png" alt=""><figcaption></figcaption></figure>
 
-#### GitOps updates
 
-Portainer supports automatically updating your Edge Stacks deployed from Git repositories. To enable this, toggle on **GitOps updates** and configure your settings.
 
-{% hint style="info" %}
-For more detail on how automatic updates function under the hood, have a look at [this FAQ](../../../../faqs/troubleshooting/stacks-deployments-and-updates/how-do-automatic-updates-for-stacks-applications-work.md).
-{% endhint %}
-
-| Field/Option   | Overview                                                                                                                                                                                                                                                                                                                                      |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mechanism      | <p>Select the method to use when checking for updates:</p><p><strong>Polling:</strong> Periodically poll the Git repository from Portainer to check for updates to the repository.</p><p><strong>Webhook:</strong> Generate a webhook URL to add to your Git repository to trigger the update on demand (for example via GitHub actions).</p> |
-| Fetch interval | If **Polling** is selected, how often Portainer will check the Git repository for updates.                                                                                                                                                                                                                                                    |
-| Webhook        | When **Webhook** is selected, displays the webhook URL to use in your integration. Click **Copy link** to copy the webhook URL to the clipboard.                                                                                                                                                                                              |
-
-<figure><img src="../../../../.gitbook/assets/2.19-stacks-add-git-polling.png" alt=""><figcaption><p>GitOps updates when using polling</p></figcaption></figure>
-
-<figure><img src="../../../../.gitbook/assets/2.19-stacks-add-git-webhook.png" alt=""><figcaption><p>GitOps updates when using webhooks</p></figcaption></figure>
-
-|                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Field/Option       | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Re-pull image      | When enabled, Portainer checks for an updated image when a redeploy is triggered via webhook or polling. It uses the tag you configured; if no tag is set, or you set `latest`, it uses `latest`. If that tag now points to a new image, Portainer pulls it and redeploys the workload.                                                                                                                                                                                                                                                                     |
 | Force redeployment | <p>Enable this setting to force the redeployment of your stack at the specified interval (or when the webhook is triggered), overwriting any changes that have been made in the local environment, even if there has been no update to the stack in Git. This is useful if you want to ensure that your Git repository is the source of truth for your stacks and are happy with the local stack being replaced.</p><p>If this option is left disabled, automatic updates will only trigger if Portainer detects a change in the remote Git repository.</p> |
@@ -72,17 +56,26 @@ For more detail on how automatic updates function under the hood, have a look at
 
 For the Web editor and Upload build methods you can choose to enable an Edge Stack webhook. This webhook will allow you to trigger updates to the stack by sending a POST request to a specific URL, instructing Portainer to pull the most up to date version of the associated image and re-deploy the stack.
 
-{% hint style="info" %}
-For Git deployed stacks, this functionality is available via [GitOps updates](kubernetes-deployment.md#gitops-updates).
-{% endhint %}
+<figure><img src="../../../../.gitbook/assets/3.0-webhooks.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/2.19-edge-stacks-add-webhook.png" alt=""><figcaption></figcaption></figure>
+{% hint style="info" %}
+For Git deployed stacks, this functionality is available via the **Create a Webhook** option.&#x20;
+{% endhint %}
 
 ### Registry
 
 If your stack requires access to images in private registries, you can specify which registry to use as part of the deployment.
 
 <figure><img src="../../../../.gitbook/assets/2.15-edge-stacks-add-registry.png" alt=""><figcaption></figcaption></figure>
+
+### Deployment options
+
+| Field/Option    | Overview                                                                                                                                                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Prune resources | When enabled, updating this artifact will also delete the resources it previously created that the manifest no longer declares. Turning this off leaves those resources running on the cluster with nothing in Portainer pointing at them. |
+| Force recreate  | For fields that cannot be changed after a resource is created, enable force recreate to let Portainer delete and recreate resources instead of failing the deployment.                                                                     |
+
+<figure><img src="../../../../.gitbook/assets/3.0-edge-deployment-options.png" alt="" width="265"><figcaption></figcaption></figure>
 
 ### Update configurations
 
