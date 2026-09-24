@@ -51,7 +51,7 @@ Redeploys run in the background. A successful response means the request was acc
 
 #### Edit stack settings
 
-If the stack was deployed from a Git repository, you can select **Edit Git settings**, allowing you to:
+If the stack was deployed from a Git repository, you can select **Edit stack settings**, allowing you to:
 
 * Edit the [Git repository details](add.md#option-3-git-repository).
 * Configure [GitOps updates](add.md#gitops-updates) or manually pull and redeploy the stack.
