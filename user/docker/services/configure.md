@@ -32,7 +32,7 @@ It's best to set environment variables when you [create a container](../containe
 
 ### Container labels
 
-Labels give you a way to record information about a container, such as the way it's configured. Labels can also be used by Portainer to [hide containers from the interface](../../../admin/settings/#hidden-containers).
+Labels give you a way to record information about a container, such as the way it's configured. Labels can also be used by Portainer to [hide containers from the interface](../../../admin/settings/general.md#hidden-containers).
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_services_service_container_labels.png" alt=""><figcaption></figcaption></figure>
 

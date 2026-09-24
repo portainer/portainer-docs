@@ -10,7 +10,7 @@ You must be accessing Portainer via HTTPS for the kubeconfig button to appear. I
 
 <figure><img src="../../../.gitbook/assets/kubeconfig (1).gif" alt=""><figcaption></figcaption></figure>
 
-You will be asked to select the Kubernetes environments that you would like in your `kubeconfig` file. If you have configured a [kubeconfig expiry](../../../admin/settings/#kubeconfig-expiry) value, this will also be shown.
+You will be asked to select the Kubernetes environments that you would like in your `kubeconfig` file. If you have configured a [kubeconfig expiry](../../../admin/settings/general.md#kubeconfig) value, this will also be shown.
 
 <figure><img src="../../../.gitbook/assets/2.15-k8s-kubeconfig-confirm.png" alt=""><figcaption></figcaption></figure>
 
@@ -45,7 +45,7 @@ users:
 
 Each environment in the `kubeconfig` will be accessible via contexts. Access is set based on the specific user that created the `kubeconfig` file.
 
-Unless set to never expire, tokens will expire after the defined period, at which point a new `kubeconfig` file will need to be generated. An administrator can [adjust the token expiry behavior](../../../admin/settings/#kubeconfig-expiry) on the **Settings** page.
+Unless set to never expire, tokens will expire after the defined period, at which point a new `kubeconfig` file will need to be generated. An administrator can [adjust the token expiry behavior](../../../admin/settings/general.md#kubeconfig) on the **Settings** page.
 
 {% hint style="info" %}
 Adjusting the token expiry will not affect previously generated `kubeconfig` files.

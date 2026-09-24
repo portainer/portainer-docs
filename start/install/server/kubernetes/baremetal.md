@@ -98,7 +98,7 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
 ```
 
 {% hint style="info" %}
-By default, Portainer generates and uses a self-signed SSL certificate to secure port `30779`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `30779`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](../../../../admin/settings/general.md#ssl-certificate) after installation is complete.
 {% endhint %}
 
 {% hint style="info" %}
@@ -147,7 +147,7 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
 ```
 
 {% hint style="info" %}
-By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](../../../../admin/settings/general.md#ssl-certificate) after installation is complete.
 {% endhint %}
 
 {% hint style="info" %}
@@ -177,7 +177,7 @@ kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer.ya
 ```
 
 {% hint style="info" %}
-By default, Portainer generates and uses a self-signed SSL certificate to secure port `30779`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `30779`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](../../../../admin/settings/general.md#ssl-certificate) after installation is complete.
 {% endhint %}
 {% endtab %}
 
@@ -189,7 +189,7 @@ kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer-lb
 ```
 
 {% hint style="info" %}
-By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](../../../../admin/settings/#ssl-certificate) after installation is complete.
+By default, Portainer generates and uses a self-signed SSL certificate to secure port `9443`. Alternatively you can provide your own SSL certificate [during installation](../../../../advanced/ssl.md#using-your-own-ssl-certificate-on-kubernetes-via-helm) or [via the Portainer UI](../../../../admin/settings/general.md#ssl-certificate) after installation is complete.
 {% endhint %}
 {% endtab %}
 {% endtabs %}

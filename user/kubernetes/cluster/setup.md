@@ -49,7 +49,7 @@ If this setting is enabled and an update is made to an application outside of th
 This section allows you to override any global deployment options set for Kubernetes environments.
 
 {% hint style="info" %}
-This section only appears if the **Allow per environment override** option is enabled in [Settings](../../../admin/settings/#deployment-options).
+This section only appears if the **Allow per environment override** option is enabled in [Settings](../../../admin/settings/general.md#deployment-options).
 {% endhint %}
 
 | Field/Option                             | Overview                                                                                                                                                                       |

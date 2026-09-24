@@ -16,7 +16,7 @@ Complete the required information, using the sections below as a guide.
 | Name         | Give the application a descriptive name.                                                                                                                                                                      |
 | Registry     | Select the registry to pull the image from. If you want to pull from a registry that is not configured with Portainer, click **Advanced mode** then enter the URL and image manually.                         |
 | Image        | Enter the name (and optionally the tag) of the image that will be used to deploy the application.                                                                                                             |
-| Note         | Enter a note to provide additional details about the application. This field is mandatory if the [Require a note on applications](../../../admin/settings/#deployment-options) toggle is enabled in Settings. |
+| Note         | Enter a note to provide additional details about the application. This field is mandatory if the [Require a note on applications](../../../admin/settings/general.md#deployment-options) toggle is enabled in Settings. |
 | Annotations  | You can add annotations to your application as required by clicking **Add annotation** and filling in the **Key** and **Value** fields.                                                                       |
 | Stack        | Portainer can automatically bundle multiple applications inside a stack. You can either enter the name of a new stack, select an existing stack from the list, or leave empty to use the application name.    |
 
