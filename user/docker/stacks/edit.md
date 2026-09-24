@@ -59,7 +59,7 @@ If the stack was deployed from a Git repository, you can select **Edit stack set
 
 Check **Redeploy** if you would like the stack to redeploy on saving. Click **Save settings** when you are done.
 
-<figure><img src="../../../.gitbook/assets/2.40.0-Edit-Git-settings-view.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3.0-edit-stack-settings.png" alt="" width="563"><figcaption></figcaption></figure>
 
 #### Pull and redeploy
 
