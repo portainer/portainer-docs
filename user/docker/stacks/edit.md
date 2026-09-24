@@ -4,7 +4,7 @@ From the menu select **Stacks** then select the stack you want to inspect or edi
 
 <figure><img src="../../../.gitbook/assets/2.41-stacks-details.gif" alt=""><figcaption></figcaption></figure>
 
-From the **Stack details** section at the top of the page, you can stop, delete, [migrate the stack](migrate.md) or [create a template from the stack](template.md). If the stack is deployed from Git you can [edit the Git settings](edit.md#edit-git-settings), [Pull and redeploy](edit.md#pull-and-redeploy) and [detach the stack from the Git repository](edit.md#detach-from-git) directly from this stack details view.
+From the **Stack details** section at the top of the page, you can stop, delete, [migrate the stack](migrate.md) or [create a template from the stack](template.md). If the stack is deployed from Git you can [edit the stack settings](edit.md#edit-git-settings), [Pull and redeploy](edit.md#pull-and-redeploy) and [detach the stack from the Git repository](edit.md#detach-from-git) directly from this stack details view.
 
 ## Inspect a stack
 
@@ -47,11 +47,11 @@ Redeploys run in the background. A successful response means the request was acc
 
 ### Edit a stack deployed from Git
 
-<figure><img src="../../../.gitbook/assets/2.41-Edit-git-stack.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3.0-stack-details.png" alt=""><figcaption></figcaption></figure>
 
-#### Edit Git settings
+#### Edit stack settings
 
-If the stack was deployed from a Git repository, you can select **Edit Git settings**, allowing you to:
+If the stack was deployed from a Git repository, you can select **Edit stack settings**, allowing you to:
 
 * Edit the [Git repository details](add.md#option-3-git-repository).
 * Configure [GitOps updates](add.md#gitops-updates) or manually pull and redeploy the stack.
@@ -59,7 +59,7 @@ If the stack was deployed from a Git repository, you can select **Edit Git setti
 
 Check **Redeploy** if you would like the stack to redeploy on saving. Click **Save settings** when you are done.
 
-<figure><img src="../../../.gitbook/assets/2.40.0-Edit-Git-settings-view.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3.0-edit-stack-settings.png" alt="" width="563"><figcaption></figcaption></figure>
 
 #### Pull and redeploy
 

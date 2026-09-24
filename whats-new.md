@@ -16,9 +16,9 @@ You can read more about our release principles in our [lifecycle policy](start/l
 
 The [home page](user/home/) has been refreshed as part of Portainer's ongoing UI update. Environments are now displayed in helpful groupings, making it easier to spot environments that are down or unassigned. You can now sort your environments by group, platform, or health.
 
-<figure><img src=".gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
-### Portainer Add-ons ![](.gitbook/assets/button_be.png)&#x20;
+### Portainer Add-ons ![](.gitbook/assets/button_be.png)
 
 Portainer now supports installable [add-ons](admin/add-ons/) - purpose-built tools that extend Portainer and run alongside it in your local Kubernetes cluster. Each add-on deploys as a Helm release and appears in the sidebar switcher; admins can install, upgrade, restart, and uninstall add-ons from a central catalog, monitor health via Resources, Events, and Logs tabs, and control team access. The first add-on, [Portainer-Run](https://portainer.ai/), is available now.
 
@@ -44,7 +44,7 @@ GitOps management is now centralized and easier to configure end to end:
 * A new guided [GitOps workflow creation](user/app-delivery/workflows/) flow lets you configure a source, stack file, deployment targets, environment variables, registry settings, and rollout strategy (including parallel batches with automatic pause or rollback) in one operation.
 * A new [Workflows dashboard](user/app-delivery/workflows/) gives a unified view of Docker, Edge, and Kubernetes workloads deployed from Git, so you can assess deployment health and jump to any stack that needs attention.
 
-<figure><img src=".gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 ### Docker image cleanup ![](.gitbook/assets/button_be.png)
 
@@ -70,7 +70,7 @@ Two [new backup destinations](admin/settings/general.md#back-up-portainer) are a
 
 <figure><img src=".gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
-### Add KubeSolo edge environments directly from Portainer ![](.gitbook/assets/button_be.png)&#x20;
+### Add KubeSolo edge environments directly from Portainer ![](.gitbook/assets/button_be.png)
 
 You can now [onboard KubeSolo edge environments](admin/environments/add/add-a-kubesolo-edge-environment/) through the Environment Wizard, which generates the setup command and walks you through deploying the Portainer Edge Agent, whether KubeSolo is already running or being installed fresh.
 
@@ -80,7 +80,7 @@ You can now [onboard KubeSolo edge environments](admin/environments/add/add-a-ku
 
 Administrators can now open a root shell directly on any cluster node from the [Nodes table](user/kubernetes/cluster/details/#nodes), without needing SSH. Disabled by default; enable per cluster in Cluster → Setup → [Security](user/kubernetes/cluster/setup.md#security), or centrally through a [Kubernetes Security Policy](admin/environments/policies/kubernetes-policies/kubernetes-security-policy.md).
 
-<figure><img src=".gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
 ### SSRF mitigation ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
@@ -94,20 +94,20 @@ The new [Recommendations](admin/recommendations.md) view surfaces actionable sug
 
 <figure><img src=".gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
-### Default Service Account imagePullSecret management  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+### Default Service Account imagePullSecret management ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
 Portainer now automatically updates the default [Service Account](user/kubernetes/more-resources/service-accounts.md) in a namespace when registry access is added or removed as part of a [registry policy](admin/environments/policies/kubernetes-policies/kubernetes-registry-policy.md) (BE only) or from the [Registries view](user/kubernetes/cluster/registries.md#managing-access). When access is granted, the registry secret is added as an imagePullSecret to the default Service Account, allowing Pods in the namespace to pull images from the private registry automatically. When access is removed, the secret is removed from the default Service Account while any other existing imagePullSecrets are retained. This change is accompanied by an improved Service account details view, which allows you to view Service Account details and edit the YAML.
 
 <figure><img src=".gitbook/assets/2.40-service-account-details.png" alt=""><figcaption></figcaption></figure>
 
-### Kubernetes volumes page restructure and improvements  ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
+### Kubernetes volumes page restructure and improvements ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
-Previous Volumes and Storage tabs found on the [Kubernetes volumes page](user/kubernetes/volumes/) have been replaced with three sections - Persistent Volumes, Persistent Volume Claims, and Storage Classes - giving each resource type its own focused view. You can now edit a volume's reclaim policy and resize persistent volume claims directly from the Actions menu, and storage classes can be set as the cluster default with a single click.&#x20;
+Previous Volumes and Storage tabs found on the [Kubernetes volumes page](user/kubernetes/volumes/) have been replaced with three sections - Persistent Volumes, Persistent Volume Claims, and Storage Classes - giving each resource type its own focused view. You can now edit a volume's reclaim policy and resize persistent volume claims directly from the Actions menu, and storage classes can be set as the cluster default with a single click.
 
 <figure><img src=".gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 ### Manage Portainer using Terraform ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
-[Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), letting you manage environments, users, teams, stacks, and other resources as code, and integrate Portainer into existing Infrastructure as Code and CI/CD workflows.&#x20;
+[Portainer can now be automated](whats-new.md#manage-portainer-using-terraform) using our [official Terraform provider](https://registry.terraform.io/providers/portainer/portainer/latest/docs), letting you manage environments, users, teams, stacks, and other resources as code, and integrate Portainer into existing Infrastructure as Code and CI/CD workflows.
 
 You can find a full walkthrough of how to deploy a Docker stack with Terraform in our [How-to articles](https://www.portainer.io/how-to/how-to-deploy-a-docker-stack-with-terraform).
