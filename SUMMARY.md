@@ -288,7 +288,7 @@
   * [Shared credentials](admin/settings/credentials/README.md)
     * [Add Sidero Omni credentials](admin/settings/credentials/omni.md)
     * [Add SSH credentials](admin/settings/credentials/ssh.md)
-    * [Add Git credentials](admin/settings/credentials/add-git-credentials.md)
+    * [Add Git credentials](admin/settings/credentials/git.md)
   * [Edge Compute](admin/settings/edge.md)
 
 ## Frequently Asked Questions <a href="#faqs" id="faqs"></a>
