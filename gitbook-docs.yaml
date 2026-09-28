@@ -1,0 +1,24 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Portainer Documentation
+  structure:
+    - type: space
+      key: space-2
+      title: 2.45 LTS
+      path: lts
+      default: true
+      content:
+        directory: ./lts
+    - type: space
+      key: space-1
+      title: 2.39 LTS
+      path: 2.39-lts
+      content:
+        directory: ./2.39-lts
+    - type: space
+      key: space-3
+      title: 3.0 STS
+      path: 3.0-sts
+      hidden: true
+      content:
+        directory: ./3.0-sts
