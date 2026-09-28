@@ -1,0 +1,61 @@
+# Requirements and prerequisites
+
+Requirements specific to your environment will be covered in the installation process.
+
+## Valid configurations
+
+Every Portainer release goes through functional, release and post-release testing to ensure it works as expected. Because we cannot test against every configuration variant out there, we test against a subset.
+
+The following tables list all of the configurations that we have tested, validated and consider to be functional. If a variant is not listed, it doesn't mean it won't work, it just means it hasn't been tested.
+
+### Portainer Business Edition (BE)
+
+| Portainer Version                                             | Release Date      | Docker Version | Kubernetes Version | Podman Version | Architectures                                                                |
+| ------------------------------------------------------------- | ----------------- | -------------- | ------------------ | -------------- | ---------------------------------------------------------------------------- |
+| Business 3.0.0 STS                                            | Sept 24, 2026     |                |                    |                | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.45.0 LTS](../release-notes.md#release-2.44.0-sts) | August 27, 2026   | 28.5.1 29.7.1  | 1.34 1.35 1.36     | 5.8.5          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.39.6 LTS](../release-notes.md#release-2.39.6-lts) | August 13, 2026   | 28.5.1 29.7.1  | 1.34 1.35 1.36     | 5.8.5          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.44.0 STS](../release-notes.md#release-2.44.0-sts) | July 30, 2026     | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.39.5 LTS](../release-notes.md#release-2.39.5-lts) | July 14, 2026     | 28.5.1 29.6.1  | 1.34 1.35 1.36     | 5.8.3          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.39.4 LTS](../release-notes.md#release-2.39.4-lts) | June 25, 2026     | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.43.0 STS](../release-notes.md#release-2.43.0-sts) | June 25, 2026     | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.39.3 LTS](../release-notes.md#release-2.39.3-lts) | June 4, 2026      | 28.5.1 29.5.2  | 1.33 1.34 1.35     | 5.8.2          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.42.0 STS](../release-notes.md#release-2.42.0-sts) | May 21, 2026      | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.39.2 LTS](../release-notes.md#release-2.39.2-lts) | May 7, 2026       | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.41.0 STS](../release-notes.md#release-2.41.0-sts) | April 30, 2026    | 28.5.1 29.3.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.40.0 STS](../release-notes.md#release-2.40.0-sts) | March 26, 2026    | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.39.1 LTS](../release-notes.md#release-2.39.1-lts) | March 19, 2026    | 28.5.1 29.2.1  | 1.33 1.34 1.35     | 5.8.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+| [Business 2.39.0 LTS](../release-notes.md#release-2.39.0-lts) | February 26, 2026 | 28.5.1 29.2.1  | 1.32 1.33 1.34     | 5.6.0          | [ARM64](../faqs/getting-started/what-is-portainers-architecture.md), x86\_64 |
+
+## Persistent storage
+
+The Portainer Server requires persistent storage in order to maintain the database and configuration information it needs to function. The installation process provides a basic storage configuration for your platform. By default, both Docker and Kubernetes provide local (to the node) storage only, and if cluster-wide persistent storage is desired we recommend implementing it at the infrastructure level.
+
+Additionally, you will want to ensure that your persistent storage for Portainer's data volume is right-sized for your needs. If you intend to use Portainer's Git deployment functionality for example, you will need to be aware that as part of the deployment from Git, Portainer will clone the remote repository locally to the Portainer data volume, which in the case of larger or multiple Git repos may consume significant amounts of disk space.
+
+For larger or performance-critical deployments, we suggest you look to provision persistent storage with the highest possible throughput and lowest available latency. SSD-level performance (\~3.5 MB/s, 30,000 IOPS or above, under 10ms write IO latency) is ideal. Be careful when using cloud provider storage both in terms of latency and "burstable" or noisy-neighbor performance characteristics.
+
+If you would like more assistance with verifying your scaled deployment please [get in touch](https://www.portainer.io/contact-sales) with our team.
+
+## Ports
+
+In order to access the UI and API, and for the Portainer Server instance and the Portainer Agents to communicate, certain ports need to be accessible.
+
+On the Portainer Server the following ports must be open:
+
+* TCP port `9443` (or `30779` for Kubernetes with NodePort) for the UI and API
+* TCP port `8000` (or `30776` for Kubernetes with NodePort) for the TCP tunnel server for Edge Agents. This port is optional and only required if using Edge Compute features with Edge Agents.
+
+For the Portainer Agent:
+
+* TCP port `9001` (or `30778` for Kubernetes with NodePort) must be accessible on the Agent from the Portainer Server instance.
+
+The Portainer Edge Agent does not require any open ports.
+
+{% hint style="info" %}
+All ports can be changed during installation.
+{% endhint %}
+
+{% content-ref url="install/" %}
+[install](install/)
+{% endcontent-ref %}
