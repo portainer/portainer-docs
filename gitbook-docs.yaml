@@ -2,23 +2,42 @@ $schema: https://api.gitbook.com/gitbook-docs.yaml
 site:
   title: Portainer Documentation
   structure:
-    - type: space
-      key: space-2
-      title: 2.45 LTS
-      path: lts
+    - type: section
+      key: section-1
+      title: Portainer Documentation
+      path: portainer-documentation
       default: true
-      content:
-        directory: ./lts
-    - type: space
-      key: space-1
-      title: 2.39 LTS
-      path: 2.39-lts
-      content:
-        directory: ./2.39-lts
-    - type: space
-      key: space-3
-      title: 3.0 STS
-      path: 3.0-sts
-      hidden: true
-      content:
-        directory: ./3.0-sts
+      children:
+        - type: space
+          key: space-2
+          title: 2.45 LTS
+          path: lts
+          default: true
+          content:
+            directory: ./lts
+        - type: space
+          key: space-1
+          title: 2.39 LTS
+          path: 2.39-lts
+          content:
+            directory: ./2.39-lts
+        - type: space
+          key: space-3
+          title: 3.0 STS
+          path: 3.0-sts
+          hidden: true
+          content:
+            directory: ./3.0-sts
+    - type: section
+      key: section-2
+      title: Portainer-IDP
+      path: portainer-idp
+      children:
+        - type: space
+          key: space-4
+          title: Portainer-IDP
+          path: portainer-idp
+          default: true
+          draft: true
+          content:
+            directory: ./portainer-idp
