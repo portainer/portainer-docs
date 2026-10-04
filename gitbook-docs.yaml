@@ -41,3 +41,16 @@ site:
           draft: true
           content:
             directory: ./portainer-idp
+    - type: section
+      key: section-3
+      title: Portainer-Migrate
+      path: portainer-migrate
+      children:
+        - type: space
+          key: space-5
+          title: Portainer-Migrate
+          path: portainer-migrate
+          default: true
+          draft: true
+          content:
+            directory: ./portainer-migrate
