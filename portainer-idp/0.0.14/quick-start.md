@@ -49,4 +49,4 @@ Before you invite developers, work through [Initial configuration](initial-confi
 ## What's next
 
 * [Initial configuration](initial-configuration.md): get Portainer and Portainer-IDP set up for your teams.
-* [Using Portainer-IDP](/broken/pages/m3kc1WKN20D27T6IWPnL): a full tour of the interface.
+* [Using Portainer-IDP](using-portainer-idp/overview.md): a full tour of the interface.

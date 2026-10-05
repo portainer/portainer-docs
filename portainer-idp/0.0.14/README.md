@@ -2,7 +2,7 @@
 
 Portainer-IDP is a self-service developer portal for Kubernetes that runs as a Portainer add-on. Developers deploy, watch and manage their own applications across many clusters at once, and platform teams decide where those applications may run, who may deploy them and what they may contain.
 
-<a href="/broken/pages/CeDpBMXTmOdO8V4idbrl" class="button secondary" data-icon="buildings">Architecture</a><a href="requirements.md" class="button secondary" data-icon="clipboard-list-check">Requirements</a><a href="quick-start.md" class="button primary" data-icon="rocket-launch">Quick Start</a>
+<a href="architecture/overview.md" class="button secondary" data-icon="buildings">Architecture</a><a href="requirements.md" class="button secondary" data-icon="clipboard-list-check">Requirements</a><a href="quick-start.md" class="button primary" data-icon="rocket-launch">Quick Start</a>
 
 ## Why Portainer-IDP exists
 
@@ -31,4 +31,4 @@ Underneath all of it, every deployment is a Kubernetes manifest committed to Git
 ## Where to go next
 
 * New to Portainer-IDP? Start with [Requirements](requirements.md) and then [Quick Start](quick-start.md).
-* Already running it? Jump to [Using Portainer-IDP](/broken/pages/m3kc1WKN20D27T6IWPnL) to explore the interface, or [Architecture](/broken/pages/CeDpBMXTmOdO8V4idbrl) to understand how it fits together with Portainer.
+* Already running it? Jump to [Using Portainer-IDP](https://app.gitbook.com/s/EQDMEQ53IxZJXhaQq1Az/using-portainer-idp) to explore the interface, or [Architecture](architecture/overview.md) to understand how it fits together with Portainer.
