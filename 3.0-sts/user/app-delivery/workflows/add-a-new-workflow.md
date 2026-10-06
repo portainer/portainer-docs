@@ -37,7 +37,7 @@ Give the stack a name, then browse the source's file structure to select the fil
 {% step %}
 #### Select a deployment target
 
-Select one or more [edge groups](../../edge/groups.md) to deploy this stack to. Each group shows its platform badge (Docker or Kubernetes) and the number of environments it contains. Only groups that match the detected deployment type from the previous step are listed.
+Select one or more [edge groups](../../edge/groups.md) to deploy this stack to. Each group shows its platform badge (Docker or Kubernetes) and the number of environments it contains. Only groups that match the detected deployment type from the previous step are listed, and a group must contain only environments of that one type (Docker or Kubernetes), or it won't appear.
 {% endstep %}
 
 {% step %}
