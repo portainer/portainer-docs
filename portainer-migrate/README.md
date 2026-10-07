@@ -1,5 +1,9 @@
 # Welcome to Portainer-Migrate
 
+{% hint style="warning" %}
+Portainer-Migrate is in active development and is not currently intended for production use. Features may change without notice, and this documentation may not always reflect the latest updates.
+{% endhint %}
+
 Portainer-Migrate is a Portainer Business add-on that moves your existing Docker and Docker Swarm workloads onto Kubernetes. It finds what is running today, converts it to Kubernetes manifests you can review, commits those manifests to Git, and has Portainer deploy them with GitOps, all from inside the Portainer interface.
 
 <a href="https://app.gitbook.com/s/bGMpSuxXxaNqOTCFVjVA/architecture" class="button secondary" data-icon="buildings">Architecture</a><a href="requirements.md" class="button secondary" data-icon="clipboard-list-check">Requirements</a><a href="quick-start.md" class="button primary" data-icon="rocket-launch">Quick Start</a>
