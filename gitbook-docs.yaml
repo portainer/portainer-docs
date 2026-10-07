@@ -26,6 +26,7 @@ site:
           title: 3.0 STS
           path: 3.0-sts
           hidden: true
+          draft: true
           content:
             directory: ./3.0-sts
     - type: section
@@ -34,17 +35,10 @@ site:
       path: portainer-idp
       children:
         - type: space
-          key: space-4
-          title: Portainer-IDP
-          path: portainer-idp
-          default: true
-          draft: true
-          content:
-            directory: ./portainer-idp
-        - type: space
           key: space-6
           title: 0.0.14
           path: 0.0.14
+          default: true
           draft: true
           content:
             directory: ./portainer-idp/0.0.14
