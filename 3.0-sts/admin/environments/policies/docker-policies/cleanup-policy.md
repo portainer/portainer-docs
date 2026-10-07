@@ -32,9 +32,13 @@ Once the initial policy setup is complete, select how you would like automatic i
 
 <figure><img src="../../../../.gitbook/assets/2.43-cleanup-policy-4.png" alt=""><figcaption></figcaption></figure>
 
-Finally, specify any images that should never be removed. To exclude images from custom repositories, ensure you use the full repository path.
+Finally, specify any images that should never be removed. Each entry matches by image reference: including a tag (for example `nginx:1.25.3`) excludes only that tag, while a bare repository name (for example `nginx`) excludes all tags of that repository. To exclude images from custom repositories, ensure you use the full repository path, for example `harbor.example.com/myorg/myapp` - a bare name like `myapp` does not protect an image hosted at a private registry.
 
-<figure><img src="../../../../.gitbook/assets/2.43-cleanup-policy-3.png" alt=""><figcaption></figcaption></figure>
+{% hint style="info" %}
+An entry can also be a wildcard pattern using `*` or `?`, matched the same way as `docker images --filter reference=<pattern>`, for example `my-app-*` or `my-app:v1.*`. Note that `*` does not match across a `/`.
+{% endhint %}
+
+<figure><img src="../../../../.gitbook/assets/2.45-image-cleanup.png" alt=""><figcaption></figcaption></figure>
 
 When you have completed the form, click **Create policy.** A confirmation screen displays the changes being made and any existing policy that will be replaced. Click **Confirm** to acknowledge the changes and create the policy.
 
