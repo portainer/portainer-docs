@@ -1,5 +1,9 @@
 # Welcome to Portainer-IDP
 
+{% hint style="warning" %}
+Portainer-IDP is in active development and is not currently intended for production use. Features may change without notice, and this documentation may not always reflect the latest updates.
+{% endhint %}
+
 Portainer-IDP is a self-service developer portal for Kubernetes that runs as a Portainer add-on. Developers deploy, watch and manage their own applications across many clusters at once, and platform teams decide where those applications may run, who may deploy them and what they may contain.
 
 <a href="architecture/overview.md" class="button secondary" data-icon="buildings">Architecture</a><a href="requirements.md" class="button secondary" data-icon="clipboard-list-check">Requirements</a><a href="quick-start.md" class="button primary" data-icon="rocket-launch">Quick Start</a>
