@@ -51,6 +51,5 @@ site:
           title: Portainer-Migrate
           path: portainer-migrate
           default: true
-          draft: true
           content:
             directory: ./portainer-migrate
