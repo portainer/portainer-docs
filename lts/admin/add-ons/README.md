@@ -8,7 +8,7 @@ Portainer Add-ons are applications that extend Portainer. From this view, you ca
 
 ### Add-ons catalog
 
-The catalog lists every add-on available and is updated dynamically from the [catalog URL](../settings/general.md#add-on-settings). Each card shows the add-on's name, description, installed version, and current status, along with the actions available for that state.
+The catalog lists every add-on available and is updated dynamically from the [catalog URL](../settings/general.md#add-on-settings), so new and updated add-ons appear without updating Portainer. Each card shows the add-on's name, description, installed version, and current status, along with the actions available for that state.
 
 These are the current add-ons listed in the default add-on catalog:
 
