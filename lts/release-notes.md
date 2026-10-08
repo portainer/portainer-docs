@@ -8,7 +8,7 @@ October 8, 2026
 
 ### Breaking Changes
 
-* `POST` and `PUT /api/cloud/gitcredentials` now require `urlPattern`: one or more comma-separated glob patterns (for example `github.com/portainer/*`) that a repository URL must match before the shared credential is used. matches a single path segment; or `scheme://*` alone matches everything. Requests without `urlPattern` return 400. Credentials saved before upgrading keep working against any URL until they are edited; administrators should set a pattern on each existing shared credential
+* `POST` and `PUT /api/cloud/gitcredentials` now require `urlPattern`: one or more comma-separated glob patterns (for example `github.com/portainer/*`) that a repository URL must match before the shared credential is used. `*` matches a single path segment; or `scheme://*` alone matches everything. Requests without `urlPattern` return 400. Credentials saved before upgrading keep working against any URL until they are edited; administrators should set a pattern on each existing shared credential
 
 ### Known Issues <a href="#known-issues" id="known-issues"></a>
 
