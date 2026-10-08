@@ -189,7 +189,7 @@
     * [Add a new workflow](user/app-delivery/workflows/add-a-new-workflow.md)
     * [Manage a workflow](user/app-delivery/workflows/manage-a-workflow.md)
   * [Sources](user/app-delivery/sources/README.md)
-    * [Add a new Git Repository source](user/app-delivery/sources/add-a-new-git-repository-source.md)
+    * [Add a new Git Repository source](user/app-delivery/sources/git.md)
 * [Edge Compute](user/edge/README.md)
   * [Edge Groups](user/edge/groups.md)
   * [Edge Stacks](user/edge/stacks/README.md)
@@ -302,7 +302,7 @@
   * [Shared credentials](admin/settings/credentials/README.md)
     * [Add Sidero Omni credentials](admin/settings/credentials/omni.md)
     * [Add SSH credentials](admin/settings/credentials/ssh.md)
-    * [Add Git credentials](admin/settings/credentials/add-git-credentials.md)
+    * [Add Git credentials](admin/settings/credentials/git.md)
   * [Edge Compute](admin/settings/edge.md)
 
 ## Frequently Asked Questions <a href="#faqs" id="faqs"></a>
@@ -320,6 +320,7 @@
   * [Why shouldn’t I give all Portainer users admin access?](faqs/getting-started/why-shouldnt-i-give-all-portainer-users-admin-access.md)
   * [Why do we recommend using the Edge Agent instead of the traditional Agent?](faqs/getting-started/why-do-we-recommend-using-the-edge-agent-instead-of-the-traditional-agent.md)
   * [What scopes are required for GitHub, GitLab and Bitbucket tokens?](faqs/getting-started/what-scopes-are-required-for-github-gitlab-and-bitbucket-tokens.md)
+  * [What are the requirements for installing add-ons?](faqs/getting-started/add-on-requirements.md)
 * [Installing](faqs/installing/README.md)
   * [How do I install Portainer?](faqs/installing/how-do-i-install-portainer.md)
   * [Can I run Portainer on my configuration?](faqs/installing/can-i-run-portainer-on-my-configuration.md)

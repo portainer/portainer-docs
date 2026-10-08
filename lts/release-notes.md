@@ -2,11 +2,72 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.45.2 LTS <a href="#release-2.45.2-lts" id="release-2.45.2-lts"></a>
+
+October 8, 2026
+
+### Breaking Changes
+
+* `POST` and `PUT /api/cloud/gitcredentials` now require `urlPattern`: one or more comma-separated glob patterns (for example `github.com/portainer/*`) that a repository URL must match before the shared credential is used. matches a single path segment; or `scheme://*` alone matches everything. Requests without `urlPattern` return 400. Credentials saved before upgrading keep working against any URL until they are edited; administrators should set a pattern on each existing shared credential
+
+### Known Issues <a href="#known-issues" id="known-issues"></a>
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this release <a href="#new-in-this-release" id="new-in-this-release"></a>
+
+**Security**
+
+* Fixed a bypass of the "Hide bind mounts for non-administrators" setting. When it is enabled, Compose files deployed by non-administrators can no longer reference host files outside the stack directory (for example in configs, secrets or env\_file), and include is disabled for them
+* Fixed a denied, failed or dry-run Kubernetes namespace deletion still removing Portainer's namespace access policies, stack records and registry bindings. These records are now removed only after Kubernetes accepts the deletion
+* Fixed in-cluster HTTPS connections to the Kubernetes API server skipping TLS certificate verification during stack deploy and removal, on both the server and the agent
+* Scoped shared Git credentials to URL patterns, so a credential is only sent to repository URLs that match its pattern. Previously any user could point a source at any saved credential and send it to any host
+* Fixed revoked namespace access staying in effect. Removing a user's or team's access through namespace access settings, Kubernetes RBAC policies or team membership changes now applies immediately. Previously cached Kubernetes clients kept read access for up to 8 hours, and the user's service account could keep write access until restart
+* Restricted kubeconfig tokens to Kubernetes API calls, so they can no longer be used against the rest of the Portainer API
+* Fixed the LDAP Kerberos service account password being returned in plaintext by `GET /api/settings`
+* Enforced the FIPS mode restriction on custom S3-compatible hosts on the server, for saving S3 backup settings, running a backup and restoring from S3, instead of relying on the UI alone
+* Added a FIPS mode warning to Azure Blob backup settings that ensuring the endpoint is FIPS compliant is the user's responsibility. Restoring from Azure with an auth method FIPS mode disallows is now rejected up front, and a scheduled Azure backup that FIPS mode makes invalid now logs why it isn't running
+
+**Features**
+
+* Added a Node group column to the Kubernetes cluster node list for clusters using EKS, GKE, AKS, Karpenter or kops node pools, plus optional Instance type, Labels and Taints columns that can be turned on from the column menu
+* Added an API to issue, inspect and revoke scoped kubeconfigs (`/api/kubernetes/{id}/scoped_kubeconfig`). A scoped kubeconfig is read-only, limited to chosen namespaces within the caller's own access, expires after at most 7 days, and includes secrets only when requested. Its use is recorded in the activity log as `<user> (via scoped kubeconfig <id>)`&#x20;
+* Added `*` and `?` wildcards to excluded images in Docker image cleanup policies. The excluded-image badge now reads "Docker Hub or local", since names without a registry host also match locally built images
+* Added a link from add-on management to the add-on requirements FAQ, and made its warnings and status messages clearer. A failed uninstall now shows as "Uninstall failed" instead of "Upgrade failed" and can be retried
+* Added automatic recovery when the cluster rejects a cached Kubernetes service account token: Portainer drops the cached token and retries the request once
+
+**Bug Fixes**
+
+* Fixed the GitOps Sources page failing to load with "Object not found inside the database (bucket=workflows)" when a stack referenced a deleted workflow. Orphaned references are now skipped, and deleting a stack now unlinks it from its workflow in the same save
+* Fixed deleting a Kubernetes stack with a namespace leaving behind objects whose manifest names no namespace
+* Fixed Kubernetes Edge agents retrying removal of workload-less Edge stacks forever, which delayed new deployments and check-ins
+* Fix the issue where the Docker dashboard volume count excludes volumes that restricted users have access to
+* Fix the issue where the Async Edge dashboard includes container statistics for resources that Standard users cannot access
+* Fix the issue where Compose stack undeploy operations do not respect the overall deployment timeout or cancellation context
+* Fixed the default Unassigned environment group being renameable. It is now read-only, and a group that was already renamed can be reset to "Unassigned"
+* Fixed an issue where Git-based Helm edge stacks ignored their values files. Existing stacks will apply their configured values files on the next deployment
+* Fixed the Helm upgrade modal's chart source dropdown opening behind the modal
+* Fixed the date range picker in container logs and the Activity Logs filter opening behind the sidebar
+* Fixed the GitOps workflow wizard advising users to create an Edge group when groups exist but none match the deployment type. It now distinguishes "no Edge groups exist" from "Edge groups exist but none match this deployment type"
+* Fixed installed add-ons failing to launch after switching to a catalog that no longer lists them. An add-on that can't be reached now shows an "Add-on unavailable" page instead of sending restricted users into a redirect loop
+* Fixed the add-on catalog serving a cached copy for up to 10 minutes after an administrator saved a new catalog URL or pressed refresh or Retry. It now reloads right away
+
 ## Release 2.45.1 LTS <a href="#release-2.45.1-lts" id="release-2.45.1-lts"></a>
 
 September 17, 2026
 
-#### Known Issues <a href="#known-issues" id="known-issues"></a>
+### Known Issues <a href="#known-issues" id="known-issues"></a>
 
 * On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
 * kubectl port-forward fails with Portainer kubeconfig in some configurations
@@ -52,7 +113,7 @@ September 17, 2026
 
 August 27, 2026
 
-#### Known Issues <a href="#known-issues" id="known-issues"></a>
+### Known Issues <a href="#known-issues" id="known-issues"></a>
 
 * On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
 * kubectl port-forward fails with Portainer kubeconfig in some configurations
@@ -165,7 +226,7 @@ August 27, 2026
 
 August 13, 2026
 
-#### Known Issues <a href="#known-issues" id="known-issues"></a>
+### Known Issues <a href="#known-issues" id="known-issues"></a>
 
 * On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
 * kubectl port-forward fails with Portainer kubeconfig in some configurations
@@ -355,9 +416,9 @@ July 14, 2026
 * Upgraded `go.mongodb.org/mongo-driver` to 1.17.7 to address CVE-2026-2303
 * Upgraded the Alpine base image from 3.23.4 to 3.24.1 to address OS-level package CVEs, including the jq advisories (CVE-2026-32316, CVE-2026-40164 and others)
 * Upgraded `github.com/containerd/containerd/v2` to 2.2.5 to address the following CVEs:
-  * CVE-2026-53488,&#x20;
-  * CVE-2026-53492,&#x20;
-  * CVE-2026-53489,&#x20;
+  * CVE-2026-53488,
+  * CVE-2026-53492,
+  * CVE-2026-53489,
   * CVE-2026-47262,
   * CVE-2026-50195
 
@@ -393,8 +454,8 @@ June 25, 2026
 * Fixed GitOps auto-update failure with private registry
 * Fixed stack redeploy when stack references env\_file for non-admins
 * Bumped go-git to 5.19.1 to address the following CVEs:
-  * CVE-2026-45570,&#x20;
-  * CVE-2026-45571,&#x20;
+  * CVE-2026-45570,
+  * CVE-2026-45571,
   * GHSA-w5pp-99ch-qj29
 * Bumped go stdlib to 1.25.11 to remediate the following stdlib CVEs:
   * CVE-2026-42504

@@ -20,9 +20,16 @@ The [home page](user/home/) has been refreshed as part of Portainer's ongoing UI
 
 ### Portainer Add-ons ![](.gitbook/assets/button_be.png)
 
-Portainer now supports installable [add-ons](admin/add-ons/) - purpose-built tools that extend Portainer and run alongside it in your local Kubernetes cluster. Each add-on deploys as a Helm release and appears in the sidebar switcher; admins can install, upgrade, restart, and uninstall add-ons from a central catalog, monitor health via Resources, Events, and Logs tabs, and control team access. The first add-on, [Portainer-Run](https://portainer.ai/), is available now.
+[Add-ons](admin/add-ons/) are purpose-built tools that extend Portainer and run alongside it in the Kubernetes cluster where Portainer is installed. Each add-on is deployed as a Helm release and appears in the sidebar switcher.
 
-<figure><img src=".gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+From a central catalog, administrators can install, upgrade, restart, and uninstall add-ons, and control which teams have access to each one. Each add-on has **Resources**, **Events**, and **Logs** tabs for monitoring its health.
+
+The following add-ons are available:
+
+* [**Portainer-Run**](https://app.gitbook.com/o/-MgDK9ndL1-o2MHHFiXo/s/GwxJJZcdHkdw08WBsjrl/) and [**Portainer-Command**](https://app.gitbook.com/s/ypmd3gtxKLcOeVHnIvOD/) are generally available (GA).
+* [**Portainer-IDP**](https://app.gitbook.com/o/-MgDK9ndL1-o2MHHFiXo/s/aS3eIqlZz1528rB0lUBu/) and [**Portainer-Migrate**](https://app.gitbook.com/o/-MgDK9ndL1-o2MHHFiXo/s/bGMpSuxXxaNqOTCFVjVA/) are in Pre-release, we'd love for you to try them and tell us what you think, but please don't use them in production environments.
+
+<figure><img src=".gitbook/assets/2.45.2-whats-new-add-ons.png" alt=""><figcaption></figcaption></figure>
 
 ### New policies ![](.gitbook/assets/button_be.png)
 

@@ -7,7 +7,7 @@ Creating a workflow assumes you have:
 * At least one [edge group](../../edge/groups.md)
 {% endhint %}
 
-To create a new workflow, in the left-hand menu select **Workflows**, then select **Add new** at the top right of the page.&#x20;
+To create a new workflow, in the left-hand menu select **Workflows**, then select **Add new** at the top right of the page.
 
 <figure><img src="../../../.gitbook/assets/2.44-gitops-workflow-create.gif" alt=""><figcaption></figcaption></figure>
 
@@ -15,7 +15,7 @@ To create a new workflow, in the left-hand menu select **Workflows**, then selec
 {% step %}
 ### Select a source
 
-Choose a GitOps [source](../sources/) to pull a deployment artifact from, then press **Continue**.&#x20;
+Choose a GitOps [source](../sources/) to pull a deployment artifact from, then press **Continue**.
 
 <figure><img src="../../../.gitbook/assets/2.44-workflow-creation-1.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -37,13 +37,13 @@ Give the stack a name, then browse the source's file structure to select the fil
 {% step %}
 #### Select a deployment target
 
-Select one or more [edge groups](../../edge/groups.md) to deploy this stack to. Each group shows its platform badge (Docker or Kubernetes) and the number of environments it contains. Only groups that match the detected deployment type from the previous step are listed.
+Select one or more [edge groups](../../edge/groups.md) to deploy this stack to. Each group shows its platform badge (Docker or Kubernetes) and the number of environments it contains. Only groups that match the detected deployment type from the previous step are listed, and a group must contain only environments of that one type (Docker or Kubernetes), or it won't appear.
 {% endstep %}
 
 {% step %}
 #### Select your advanced configurations
 
-**Use namespace(s) from manifest:** \
+**Use namespace(s) from manifest:**\
 When on, Portainer enforces the namespace(s) declared in the manifest file itself, rather than letting the deployment use or be overridden by a default namespace. Only visible when the selected file was detected as a Kubernetes deployment.
 
 **Enable relative path volumes:**\
@@ -117,7 +117,7 @@ What Portainer does when a batch fails or times out:
 {% endstep %}
 {% endstepper %}
 
-Select **Continue** when you've finished configuring your workflow.&#x20;
+Select **Continue** when you've finished configuring your workflow.
 
 <figure><img src="../../../.gitbook/assets/2.44-workflow-creation-3.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -125,7 +125,7 @@ Select **Continue** when you've finished configuring your workflow.&#x20;
 {% step %}
 ### Name and review your workflow
 
-Name the workflow and confirm everything before it's created.&#x20;
+Name the workflow and confirm everything before it's created.
 
 <figure><img src="../../../.gitbook/assets/2.44-workflow-creation-4.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}

@@ -45,6 +45,8 @@ users:
 
 Each environment in the `kubeconfig` will be accessible via contexts. Access is set based on the specific user that created the `kubeconfig` file.
 
+Each environment's context has its own token, generated separately for that environment. A token is only valid for proxying Kubernetes API requests to the environment it was issued for - it cannot be used to access any other environment in the kubeconfig, and it cannot be used to call the Portainer API directly.
+
 Unless set to never expire, tokens will expire after the defined period, at which point a new `kubeconfig` file will need to be generated. An administrator can [adjust the token expiry behavior](../../../admin/settings/general.md#kubeconfig) on the **Settings** page.
 
 {% hint style="info" %}

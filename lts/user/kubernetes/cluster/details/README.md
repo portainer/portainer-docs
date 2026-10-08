@@ -39,17 +39,15 @@ The GPU section is available for environments where GPU nodes are detected. The 
 
 ## Nodes
 
-This section lists the nodes in your cluster with information about each node. To view [details of a specific node](node.md), click the name of the node in the list.
+This section lists the nodes in your cluster with information about each node. To view [details of a specific node](node.md), click the name of the node in the list. You can customize which columns are shown or hidden by clicking the **\[|]** icon next to the search bar. Some details, such as **labels** and **taints**, are hidden by default.
 
-<figure><img src="../../../../.gitbook/assets/2.40-Nodes-table.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/3.0-node-details-table.png" alt=""><figcaption></figcaption></figure>
 
 The **Conditions** column shows any conditions that are currently active on the node. If no conditions are displayed, this indicates the node is healthy. Any active conditions (DiskPressure, MemoryPressure, PIDPressure, NetworkUnavailable) will be displayed for the particular node.
 
 The **Cached images** column shows the number of cached images on each node. Click the displayed number to view a list of those images, including details of the image size and alias count.
 
 <figure><img src="../../../../.gitbook/assets/2.41-Cached-images.png" alt=""><figcaption></figcaption></figure>
-
-
 
 To view usage stats for a node, including details of memory usage and CPU usage, click the **stats icon** under **Actions.**
 
@@ -59,21 +57,17 @@ Node stats are only available when you have [enabled features using the metrics 
 
 <figure><img src="../../../../.gitbook/assets/2.17-k8s-cluster-nodestats.png" alt=""><figcaption></figcaption></figure>
 
-
-
-To open a dedicated shell for the node, click the Shell **>\_** icon under **Actions**.&#x20;
+To open a dedicated shell for the node, click the Shell **>\_** icon under **Actions**.
 
 {% hint style="warning" %}
-Opening the node shell is only available to admins when [enabled node shell for admins](../setup.md#enable-node-shell-for-admins) has been enabled. This feature is disabled by default.&#x20;
+Opening the node shell is only available to admins when [enabled node shell for admins](../setup.md#enable-node-shell-for-admins) has been enabled. This feature is disabled by default.
 {% endhint %}
 
 {% hint style="info" %}
-This feature is avaliable on Business Edition only.&#x20;
+This feature is avaliable on Business Edition only.
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/2.44-an-open-node-shell.png" alt=""><figcaption></figcaption></figure>
-
-
 
 On Talos Kubernetes or MicroK8s environments provisioned with the [Create a Kubernetes cluster](../../../../admin/environments/add/kube-create/) feature, you will also see buttons to add and remove nodes as well as additional action icons on MicroK8s environments to view the MicroK8s status (for control plane nodes) and to connect to the environment via SSH console.
 

@@ -1,6 +1,6 @@
 # Sources
 
-The GitOps Sources screen provides a central place to create, view and manage external sources connected to your Portainer instance, including Git repositories, registries, and GitOps-created authentication tokens.&#x20;
+The GitOps Sources screen provides a central place to create, view and manage external sources connected to your Portainer instance, including Git repositories, registries, and GitOps-created authentication tokens.
 
 {% hint style="info" %}
 Supporting resources such as Service Accounts, ConfigMaps, and Secrets deployed via Create from code are not included in the Sources view.
@@ -10,9 +10,9 @@ To view your GitOps sources, select **Sources** from the left-hand menu.
 
 <figure><img src="../../../.gitbook/assets/2.43-navigate-to-sources.gif" alt=""><figcaption></figcaption></figure>
 
-From this view, admin users can [add a new source](add-a-new-git-repository-source.md), monitor the connectivity status of each source, and manage credentials - maintaining consistency across the platform without navigating between multiple configuration screens.&#x20;
+From this view, admin users can [add a new source](git.md), monitor the connectivity status of each source, and manage credentials - maintaining consistency across the platform without navigating between multiple configuration screens.
 
-Each source displays its current connectivity status, calculated at the time of the last connection attempt, whether triggered manually or via an automated GitOps polling workflow. If a credential expires or a network change blocks access, the status updates to reflect this. It also displays the source URL, the number of workflows and environments the source is connected to, and the time of the last sync.&#x20;
+Each source displays its current connectivity status, calculated at the time of the last connection attempt, whether triggered manually or via an automated GitOps polling workflow. If a credential expires or a network change blocks access, the status updates to reflect this. It also displays the source URL, the number of workflows and environments the source is connected to, and the time of the last sync.
 
 <figure><img src="../../../.gitbook/assets/2.42-Gitops-source.png" alt=""><figcaption></figcaption></figure>
 
@@ -35,11 +35,11 @@ The **Workflows** tab lists any [workflows](../workflows/) using this source.
 
 <figure><img src="../../../.gitbook/assets/2.34-workflows-view.png" alt=""><figcaption></figcaption></figure>
 
-The **Access** tab displays the access level that is in place for this source. The access level defines who can use and edit the source.&#x20;
+The **Access** tab displays the access level that is in place for this source. The access level defines who can use and edit the source.
 
 <figure><img src="../../../.gitbook/assets/2.43-view-source-access.png" alt=""><figcaption></figcaption></figure>
 
-### Edit a source&#x20;
+### Edit a source
 
 To edit a source, select **Edit** in the top-right corner of the **Settings** or **Access** view. Note that only users with edit access to the source can open it in edit mode. In edit mode, you can update connection details and authentication settings from the **Settings** tab, optionally select **Test Connection** to verify your changes before saving. To update access settings, make your selection from the **Access** tab - only admin users can modify access settings. Select **Save Changes** when done.
 
