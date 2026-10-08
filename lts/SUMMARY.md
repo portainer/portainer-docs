@@ -480,7 +480,8 @@
 
 ## Get More Help <a href="#help" id="help"></a>
 
-* [Portainer Academy](https://academy.portainer.io)
+* [Learn Portainer](https://learn.portainer.io/)
+* [KubeSchool](https://kubeschool.portainer.io/)
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
 * [GitHub](https://github.com/orgs/portainer/discussions)
 * [Slack](https://portainer.io/slack)
