@@ -26,8 +26,8 @@ From a central catalog, administrators can install, upgrade, restart, and uninst
 
 The following add-ons are available:
 
-* [**Portainer-Run**](https://app.gitbook.com/o/-MgDK9ndL1-o2MHHFiXo/s/GwxJJZcdHkdw08WBsjrl/) and [**Portainer-Command**](https://app.gitbook.com/s/ypmd3gtxKLcOeVHnIvOD/) are generally available (GA).
-* [**Portainer-IDP**](https://app.gitbook.com/o/-MgDK9ndL1-o2MHHFiXo/s/aS3eIqlZz1528rB0lUBu/) and [**Portainer-Migrate**](https://app.gitbook.com/o/-MgDK9ndL1-o2MHHFiXo/s/bGMpSuxXxaNqOTCFVjVA/) are in Pre-release, we'd love for you to try them and tell us what you think, but please don't use them in production environments.
+* [**Portainer-Run**](https://docs.portainer.ai/portainer-run) and [**Portainer-Command**](https://docs.portainer.ai/portainer-command) are generally available (GA).
+* [**Portainer-IDP**](https://docs.portainer.io/portainer-idp) and [**Portainer-Migrate**](https://docs.portainer.io/portainer-migrate) are in Pre-release, we'd love for you to try them and tell us what you think, but please don't use them in production environments.
 
 <figure><img src=".gitbook/assets/2.45.2-whats-new-add-ons.png" alt=""><figcaption></figcaption></figure>
 
