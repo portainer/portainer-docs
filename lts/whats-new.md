@@ -29,7 +29,7 @@ The following add-ons are available:
 * [**Portainer-Run**](https://docs.portainer.ai/portainer-run) and [**Portainer-Command**](https://docs.portainer.ai/portainer-command) are generally available (GA).
 * [**Portainer-IDP**](https://docs.portainer.io/portainer-idp) and [**Portainer-Migrate**](https://docs.portainer.io/portainer-migrate) are in Pre-release, we'd love for you to try them and tell us what you think, but please don't use them in production environments.
 
-<figure><img src=".gitbook/assets/2.45.2-whats-new-add-ons.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/2.45.2-add-ons.png" alt=""><figcaption></figcaption></figure>
 
 ### New policies ![](.gitbook/assets/button_be.png)
 
