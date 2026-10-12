@@ -33,9 +33,9 @@ See [Migrating data](../migrating-data.md) for how each path works.
 
 ### Start empty
 
-Mounts that would be copied (other than single files and NFS volumes) have a **Start empty** checkbox. Tick it to skip copying that mount: the pod gets an empty directory (`emptyDir`) instead of a volume, and anything written there is lost when the pod is recreated.
+Directory mounts at runtime paths that would be copied (other than database volumes) have a **Start empty** checkbox. A volume mounted at several paths starts empty only when every mount is ticked. Tick it to skip copying that mount: the pod gets an empty directory (`emptyDir`) instead of a volume, and anything written there is lost when the pod is recreated.
 
-Use it only for runtime state that the application recreates on start, such as sockets, PID files and caches. Paths under `/run`, `/var/run`, `/tmp` and `/var/tmp` are marked **looks like runtime state** to help you spot them. A mount containing named pipes or device files can't be copied, so **Start empty** is the way to migrate it.
+Use it only for runtime state that the application recreates on start, such as sockets, PID files and caches. A mount containing named pipes or device files can't be copied, so **Start empty** is the way to migrate it.
 
 {% hint style="danger" %}
 Don't tick **Start empty** on a database volume or any mount that holds data you need. Its contents are not migrated.
@@ -43,7 +43,11 @@ Don't tick **Start empty** on a database volume or any mount that holds data you
 
 ## Manifests
 
-Below the storage panel, a summary line shows how many components and manifests were generated and the namespace they go into, followed by the full YAML. This is the exact file that will be committed to your repository as `<namespace>.yaml`.
+Below the storage panel, a summary line shows how many components and manifests were generated and the namespace they go into, followed by the full YAML. Each app's manifests are committed as their own file, `<namespace>/<app>.yaml`.
+
+A one-shot service (one that exited with code 0 and has no restart policy) is left out, and a note says so. Settings that don't carry over, such as privileged mode, host networking, healthchecks and limits, are listed as notes. Environment variable names Kubernetes rejects are dropped with a note, and variables the image already sets with the same value aren't copied. Variables whose names look like credentials (password, secret, token or key) are listed per component, because they're written to your repository in plain text.
+
+For the official WordPress image, a **Site URL** field sets `WP_HOME` and `WP_SITEURL` so the site stops redirecting to its old address. It defaults to the Ingress URL and doesn't change the database. If you don't use an Ingress, set it to an address in front of the app (DNS, a proxy or a load balancer), or change it in WordPress under **Settings → General** after migrating.
 
 ## Errors
 

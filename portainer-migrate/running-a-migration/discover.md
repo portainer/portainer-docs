@@ -19,7 +19,7 @@ Portainer-Migrate reads the workloads straight from the environment, so it finds
 | Swarm       | **Swarm stacks**          | The number of services in the stack.           | Swarm stack |
 | Swarm       | **Standalone services**   | The replica count (or `global`) and the image. | Service     |
 
-Compose projects are recognized by the `com.docker.compose.project` label and Swarm stacks by the `com.docker.stack.namespace` label. Stopped containers are included. Portainer's own Server and Agent containers are never listed.
+Compose projects are recognized by the `com.docker.compose.project` label and Swarm stacks by the `com.docker.stack.namespace` label. Stopped containers are included. Portainer's own Server and Agent containers, and containers started with `docker compose run`, are never listed. Portainer's access control applies: if you aren't an administrator, you only see the workloads you own.
 
 Tick each workload you want to migrate. Selecting a stack migrates all of its services or containers. The footer shows how many workloads you've selected.
 

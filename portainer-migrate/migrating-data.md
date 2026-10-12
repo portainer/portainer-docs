@@ -34,7 +34,7 @@ The server and path are read from the volume's driver options (`o: addr=...` and
 With NFS in place, the Docker workload and the Kubernetes workload use the **same files at the same time**. That's fine for static content, but a database must never run on both sides at once. Stop the source database before the Kubernetes one starts, or it can corrupt its data or fail to start.
 {% endhint %}
 
-An NFS directory mounted on the Docker host and passed in as a bind mount isn't recognized as NFS. It is cold-copied instead. To mount it in place, declare it as an NFS volume in your Compose file.
+An NFS directory mounted on the Docker host and passed in as a bind mount isn't recognized as NFS on its own, so it is cold-copied. To mount it in place, add an **NFS path mapping** for its host path on [Pre-flight](running-a-migration/pre-flight.md#nfs-path-mappings), or declare it as an NFS volume in your Compose file. Swarm bind mounts can only be migrated with a mapping.
 
 ## Cold copy
 
@@ -95,7 +95,7 @@ New PersistentVolumeClaims are 3 GiB, `ReadWriteOnce`, on the target's default S
 | Limit             | Value                                                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Source            | Standalone Docker only. Swarm data can't be copied.                                                                           |
-| Staging space     | 2 GiB in total, shared by all copies in progress.                                                                             |
+| Staging space     | 512 MiB in total, shared by all copies in progress. Larger data needs NFS in place.                                           |
 | Snapshot lifetime | 30 minutes from staging to delivery.                                                                                          |
 | Concurrent copies | One at a time.                                                                                                                |
 | Mount types       | Regular files and directories. Sockets, devices and symbolic-link mounts can't be copied, nor can a bind mount of `/`.        |
