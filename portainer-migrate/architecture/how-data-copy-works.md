@@ -43,7 +43,7 @@ All of a container's mounts are archived during one stop, so they are consistent
 {% step %}
 ## Staging
 
-The add-on holds each archive on its temporary disk, with its size and SHA-256 checksum, and generates a one-time token for it. Staged archives share 2 GiB of space and expire after 30 minutes.
+The add-on holds each archive on its temporary disk, with its size and SHA-256 checksum, and generates a one-time token for it. Staged archives share 512 MiB of space and expire after 30 minutes.
 {% endstep %}
 
 {% step %}

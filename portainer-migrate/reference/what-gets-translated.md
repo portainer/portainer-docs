@@ -4,20 +4,22 @@ Portainer-Migrate translates workloads with a fixed set of rules. The same workl
 
 ## What is generated
 
-For each migration, all manifests go into one namespace and one file, `<namespace>.yaml`:
+For each migration, all manifests go into one namespace. Each app gets its own file, `<namespace>/<app>.yaml`, and its own stack:
 
 | Kubernetes object     | Generated for                                                             |
 | --------------------- | ------------------------------------------------------------------------- |
-| Namespace             | The migration's namespace.                                                |
+| Namespace             | The migration's namespace, created outside the stacks if it's missing.    |
 | Deployment            | Each component: a Compose service, Swarm service or standalone container. |
-| Service (NodePort)    | Each component with at least one TCP port.                                |
+| Service (ClusterIP)   | Each component's unpublished ports.                                       |
+| Service (NodePort)    | Only ports the source published on the host.                              |
+| Ingress               | Each component that publishes a port, when you turn on Ingress.          |
 | PersistentVolumeClaim | Each volume and bind mount, unless you marked it **Start empty**.         |
 | PersistentVolume      | Each NFS volume, when **Migrate NFS volumes in place** is on.             |
 
 ## Names
 
 * Components are named after the Compose service, the Swarm service (without its stack prefix) or the container.
-* When you migrate more than one workload in a run, each component's name is prefixed with its stack's name, so components from different stacks can't collide.
+* Stacks that share a service name get a stack prefix on that name only, and a note says which. In the environment of that stack's own components, a value that names a host by the old name is rewritten to the new name, and the note lists each variable. Swarm names such as `stack_db` and `tasks.stack_db` are rewritten to the Service name too. Other stacks' environment is not touched.
 * Names are converted to valid Kubernetes names: lowercase letters, numbers and hyphens, at most 63 characters. Longer names are shortened and given a short hash suffix.
 * Each Deployment and its pods are labelled `app: <name>`.
 
@@ -28,14 +30,14 @@ For each migration, all manifests go into one namespace and one file, `<namespac
 | Image                                   | `image`, unchanged.                         |
 | Entrypoint                              | `command`                                   |
 | Command                                 | `args`                                      |
-| Environment variables                   | `env`, as plain values. `PATH` is left out. |
+| Environment variables                   | `env`, as plain values. `PATH` is left out, as are names Kubernetes rejects and values the image already sets. |
 | Swarm replicated service replicas       | `replicas`, unchanged.                      |
 | Swarm global service                    | `replicas: 1`                               |
 | Standalone container or Compose service | `replicas: 1`                               |
 
 ### Environment variables
 
-Every environment variable the container has is copied into the Deployment as a plain value. That includes variables set by the image itself, and any passwords, API keys or connection strings you passed in.
+Environment variables you set are copied into the Deployment as plain values, including any passwords, API keys or connection strings you passed in. Variables the image already sets with the same name and value aren't copied.
 
 {% hint style="danger" %}
 Environment variables are committed to your Git repository **in plain text**. Use a private repository, limit who can read it, and after migrating, move secrets into Kubernetes Secrets and rotate any that were exposed.
@@ -45,7 +47,7 @@ Environment variables are committed to your Git repository **in plain text**. Us
 
 Each pod is hardened to the Kubernetes **baseline** pod-security profile:
 
-* `allowPrivilegeEscalation: false`
+* `allowPrivilegeEscalation: false`, unless you turn off **Block privilege escalation** on Pre-flight
 * `seccompProfile: RuntimeDefault`
 * `automountServiceAccountToken: false`, so pods don't get a Kubernetes API token.
 
@@ -53,10 +55,11 @@ Linux capabilities are left at the container runtime's defaults, because droppin
 
 ## Ports
 
-* Each component with at least one TCP port gets a **NodePort** Service. Each port is exposed with the same port and target port as the container, named `port-<number>`.
-* On Docker, this covers every TCP port the container exposes, including ports declared by the image that you never published.
-* On Swarm, it covers the service's published ports.
-* The host port you published on Docker isn't kept. Kubernetes assigns a NodePort, shown on the [Migrate](../running-a-migration/migrate.md) step.
+* Each port the source published on the host gets a **NodePort** Service. The host port isn't kept: Kubernetes picks the node port, a note says so, and it's shown on the [Migrate](../running-a-migration/migrate.md) step.
+* Unpublished ports get a **ClusterIP** Service, so other components can reach them by name.
+* UDP ports stay UDP.
+* For a Swarm service, the image's `EXPOSE` ports (or a well-known port for common databases) become internal ports, so its clients can reach it.
+* With **Expose web workloads through an Ingress** on, each component that publishes a port also gets an Ingress at `<deployment>.<domain>`, routed to its HTTP-looking port. Databases are skipped.
 
 ## Volumes
 
@@ -64,9 +67,10 @@ Linux capabilities are left at the container runtime's defaults, because droppin
 * NFS volumes migrated in place become a static PersistentVolume and a claim bound to it. See [Migrating data](../migrating-data.md#nfs-volumes-in-place).
 * Read-only mounts stay read-only.
 * A bind-mounted single file is placed inside its claim and mounted at its original path with `subPath`.
+* A scaled Compose service becomes one Deployment with that many replicas (one when it has storage).
 * A mount marked **Start empty** becomes an `emptyDir`.
 
-To change a claim's size or StorageClass, edit `<namespace>.yaml` in your repository after migrating and redeploy the stack. A claim that is already bound can only be enlarged, and only if its StorageClass allows expansion.
+To change a claim's size or StorageClass, edit the app's `<namespace>/<app>.yaml` in your repository after migrating and redeploy the stack. A claim that is already bound can only be enlarged, and only if its StorageClass allows expansion.
 
 ## Not translated
 
@@ -80,10 +84,9 @@ These settings aren't carried over. If your workload depends on one, add it to t
 | Restart policies                                   | Deployments always restart their pods.                                                                                   |
 | Docker secrets and configs                         | Not migrated. Recreate them as Kubernetes Secrets or ConfigMaps.                                                         |
 | Networks and aliases                               | All components share the namespace's network. Components are reachable by their Service name, and only if they have one. |
-| UDP ports                                          | Not exposed.                                                                                                             |
 | tmpfs mounts                                       | Not created.                                                                                                             |
 | User, privileged mode, added capabilities, devices | Not set.                                                                                                                 |
 | Labels                                             | Only `app: <name>` is set.                                                                                               |
 | Placement constraints                              | Pods can be scheduled on any node.                                                                                       |
 | The Docker socket                                  | Can't be migrated. A workload that mounts it fails to translate.                                                         |
-| Ingress                                            | None. Apps are reached on their NodePort.                                                                                |
+| Ingress                                            | Only if you turn on **Expose web workloads through an Ingress** on Pre-flight. Otherwise apps are reached on their NodePort. |

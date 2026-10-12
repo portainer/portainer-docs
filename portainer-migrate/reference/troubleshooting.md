@@ -37,7 +37,7 @@ If any step says "The request was redirected by Portainer — your session may h
 | Message                                                                       | What to do                                                                                                                                                        |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cannot migrate bind mount … Only regular files and directories can be copied  | The mount is a socket (such as `/var/run/docker.sock`), a device or a symbolic link. Remove the mount from the source workload, or migrate without that workload. |
-| Swarm service … uses bind mounts                                              | Swarm bind mounts can't be migrated. Use an NFS volume, or run the workload on standalone Docker.                                                                 |
+| Swarm service … uses bind mounts                                              | Swarm bind mounts migrate only through an NFS path mapping on Pre-flight. Add one, use an NFS volume, or run the workload on standalone Docker.                    |
 | **N volume(s) can't be migrated**: NFS — not mounted in place                 | Turn on **Migrate NFS volumes in place** on Pre-flight.                                                                                                           |
 | **N volume(s) can't be migrated**: Not migrated — Swarm data copy unsupported | Swarm volumes can't be copied. See [Migrating data](../migrating-data.md).                                                                                        |
 
@@ -53,7 +53,7 @@ If any step says "The request was redirected by Portainer — your session may h
 | Another running container writes a source volume; stop it before migrating     | Stop the container named in the message, then retry.                                                                                                                    |
 | Cannot stop source container; refusing a live copy                             | Your account can't stop the source container, or Docker refused. Check your access to the source environment.                                                           |
 | These mounts contain named pipes or device files                               | If the mount only holds runtime state (for example `/run`), tick **Start empty** for it on Translate and migrate again. Nothing was deployed.                           |
-| Copy exceeds the available 2 GiB staging capacity / Copy staging space is full | The data is larger than the add-on can stage, or other copies are using the space. Wait up to 30 minutes for staged copies to expire, or migrate fewer volumes at once. |
+| Copy exceeds the 512 MiB the add-on can stage / Copy staging space is full    | The data is larger than the add-on can stage, or other copies are using the space. Wait up to 30 minutes for staged copies to expire, migrate fewer volumes at once, or use NFS in place for large data. |
 | Source restart failed …; restart … in Portainer before retrying                | The data was archived but the source didn't start again. Start the container in Portainer, then retry.                                                                  |
 
 ### After the commit

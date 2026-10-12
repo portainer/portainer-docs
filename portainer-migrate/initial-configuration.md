@@ -88,7 +88,8 @@ These values are only needed for private or air-gapped registries:
 
 | Value              | Default                       | Description                                                                |
 | ------------------ | ----------------------------- | -------------------------------------------------------------------------- |
-| `image.repository` | `portainer/portainer-migrate` | Pull the add-on image from a different (for example, mirrored) repository. |
+| `imageNamespace`   | `portainer`                   | The registry namespace the image repository is derived from, as `<imageNamespace>/portainer-migrate`. |
+| `image.repository` | Empty                         | Pull the add-on image from a different (for example, mirrored) repository. A repository you set takes priority over `imageNamespace`. |
 | `image.tag`        | The chart's app version       | Pin a specific image tag.                                                  |
 | `image.pullPolicy` | `Always`                      | Set to `IfNotPresent` to use an image already present on the node.         |
 | `imagePullSecrets` | `[]`                          | Pull secrets for a private registry.                                       |

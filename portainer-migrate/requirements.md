@@ -10,7 +10,7 @@ Before you install Portainer-Migrate, check that you have the following in place
 * **A Portainer administrator account** to run migrations. See [Permissions](architecture/permissions.md).
 
 {% hint style="info" %}
-Portainer-Migrate needs about 50m CPU and 64 MiB of memory (limits of 250m CPU and 256 MiB), plus up to 2 GiB of temporary disk on the node it runs on, used while it stages volume data for a copy.
+Portainer-Migrate needs about 50m CPU and 64 MiB of memory (limits of 250m CPU and 256 MiB), plus up to 1 GiB of temporary disk on the node it runs on, used while it stages volume data for a copy.
 {% endhint %}
 
 ## Source environments
