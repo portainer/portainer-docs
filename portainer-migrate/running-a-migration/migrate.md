@@ -21,6 +21,13 @@ The button shows the current stage while the migration runs.
 ### Checks
 
 Every volume must either mount NFS in place or be copied. If any volume can't be migrated, or a Swarm workload has data that needs copying, the migration stops here and nothing is changed.
+
+**Commit** also stays disabled, and nothing is written or stopped, until all of these pass:
+
+* The namespace and repository folder are valid, and the token can write to the repository and branch.
+* Your role can create stacks on the target and write to the namespace. A new namespace needs access to all namespaces (Environment Administrator or an administrator). Other roles need write access to an existing namespace.
+* No stack on the environment already has a name Portainer-Migrate would create, and no other app in the namespace owns a Deployment, Service, PersistentVolumeClaim or Ingress it would create. The message names the stack or object. Remove it in Portainer or pick another namespace.
+* The selected volumes fit the 512 MiB staging limit together.
 {% endstep %}
 
 {% step %}
@@ -32,7 +39,9 @@ Only if data is being copied. For each source container, Portainer-Migrate stops
 {% step %}
 ### Committing & creating stack
 
-The manifests are committed to `<folder>/portainer-migrate/<namespace>.yaml` with the message `Migrate <namespace> to Kubernetes`. Portainer-Migrate then creates a Kubernetes GitOps stack on the target environment, named after the namespace, that deploys that file.
+Each app's manifests are committed to `<folder>/portainer-migrate/<namespace>/<app>.yaml`. Portainer-Migrate then creates one Kubernetes GitOps stack per app on the target environment, named `<namespace>-<app>`, that deploys that file. A missing namespace is created first, outside the stacks, so removing a stack never deletes the namespace or the other apps in it.
+
+Each stack pulls from Git with the token from Connections. To rotate the token, edit the stack's Git settings in Portainer.
 {% endstep %}
 
 {% step %}
@@ -48,13 +57,13 @@ Keep this page open while you see **Restoring target volumes**. If you navigate 
 
 ## When it succeeds
 
-You'll see **Committed and GitOps stack created** with the path of the committed file and the ID of the new stack. The stack also appears in Portainer under the target environment.
+You'll see **Committed and GitOps stack created** with the path of the committed file and the ID of each new stack. The stacks also appear in Portainer under the target environment.
 
 Below that:
 
 * **Badges** count the workloads that are migrated, still starting, and failed.
 * **Local-volume data** lists each copied volume as **restored**, **staged** or **not staged**.
-* **Running on Kubernetes** lists each deployed app with its pod name, a link to open it on its NodePort, and its live status, refreshed every few seconds.
+* **Running on Kubernetes** lists each deployed app with its pod name, a link to open it (on its Ingress address if you enabled one, otherwise on its NodePort), and its live status, refreshed every few seconds.
 
 | Status       | Meaning                                                                                                                                                                                                    |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -70,6 +79,12 @@ Each run can be committed once. The button stays disabled after a successful mig
 Your source workload is still running on Docker. Test the Kubernetes deployment, then switch your users over and remove the original when you're ready. Anything written to the source after its data was copied is not on Kubernetes.
 {% endhint %}
 
+### Cutover for databases on NFS
+
+The exception is a database on a writable NFS volume that is mounted in place, because two servers would write the same files. Portainer-Migrate asks you to acknowledge the **cutover**. After staging, and before anything is committed, it stops the source (a container stop, or a Swarm service scaled to 0), waits until it has stopped and leaves it stopped. A global Swarm service can't be scaled to 0 and is refused. Other components that write the same NFS files get a warning to stop them when you cut over.
+
+Until the commit succeeds, leaving the page, **Cancel** and **Finish** ask first and name the stopped source. If the commit fails, click **Start the source again**. It is never automatic, because a stack create that timed out may still deploy. Before it starts the source, it scales to 0 any Deployment the migration created in the target namespace and waits for its pods to stop. If it can't, the source stays stopped and the page names the Deployment to delete.
+
 ## When it fails
 
 * **Migration preparation failed**: something went wrong before the commit, such as staging data. Nothing has been committed or deployed. Fix the cause and click the button again.
@@ -80,4 +95,4 @@ For specific messages, see [Troubleshooting](../reference/troubleshooting.md).
 
 ## After the migration
 
-The migrated app is an ordinary Portainer GitOps stack. To change it, edit `<namespace>.yaml` in your repository, then redeploy the stack from Git in Portainer. Don't rely on automatic polling to pick up changes; see [Known issues and limitations](../reference/known-issues-and-limitations.md).
+Each migrated app is an ordinary Portainer GitOps stack. To change it, edit `<namespace>/<app>.yaml` in your repository, then redeploy the stack from Git in Portainer. Don't rely on automatic polling to pick up changes; see [Known issues and limitations](../reference/known-issues-and-limitations.md).

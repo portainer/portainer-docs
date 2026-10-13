@@ -2,9 +2,7 @@
 
 Portainer-Migrate has no permissions model of its own. It acts with your Portainer session, so what you can migrate is governed by your Portainer role and your access to each environment.
 
-{% hint style="warning" %}
-Today, migrations must be run by a **Portainer administrator**. Portainer-Migrate saves a Git credential in Portainer during every migration, and only administrators can do that. See [Known issues and limitations](../reference/known-issues-and-limitations.md#migrations-need-a-portainer-administrator).
-{% endhint %}
+A new namespace needs access to all namespaces (Environment Administrator or an administrator). Other roles can migrate into an existing namespace they have write access to. Portainer-Migrate checks this before it commits or stops anything.
 
 ## In Portainer
 
@@ -14,7 +12,7 @@ Today, migrations must be run by a **Portainer administrator**. Portainer-Migrat
 | Discover workloads                    | Access to the source Docker or Swarm environment, and to the containers, services and stacks you want to migrate. |
 | Copy volume data                      | Permission to inspect, stop and start the source containers, and to read files from them.                         |
 | Choose a target                       | Access to the target Kubernetes environment, and permission to list its namespaces.                               |
-| Deploy                                | Permission to create Git credentials and Kubernetes stacks on the target environment.                             |
+| Deploy                                | Permission to create Kubernetes stacks on the target environment, and to write to the target namespace.           |
 | Deliver copied data and report health | Permission to list pods, services and nodes in the target namespace, and to use Portainer's Kubernetes pod proxy. |
 
 ## On the target cluster
@@ -22,7 +20,7 @@ Today, migrations must be run by a **Portainer administrator**. Portainer-Migrat
 The GitOps stack is deployed by Portainer, so the identity Portainer uses on the target must be able to create everything in the manifest:
 
 * The Namespace, if it doesn't exist yet.
-* Deployments, Services and PersistentVolumeClaims in that namespace.
+* Deployments, Services, PersistentVolumeClaims and, if you enable Ingress, Ingresses in that namespace.
 * **Cluster-scoped PersistentVolumes**, if you migrate NFS volumes in place.
 
 If the target enforces pod security admission:

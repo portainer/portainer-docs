@@ -110,4 +110,4 @@ Portainer installs Portainer-Migrate with Helm into the `portainer-addon-portain
 * Runs one replica as a non-root user, with a read-only root filesystem, all Linux capabilities dropped and the `RuntimeDefault` seccomp profile.
 * Has no Kubernetes service account token. It has no access to any cluster's API of its own.
 * Is exposed only as a ClusterIP Service, reached through Portainer's add-on gateway. It isn't reachable from outside the cluster.
-* Has a 2 GiB temporary volume for staging copies.
+* Has a 1 GiB temporary volume for staging copies.
