@@ -41,6 +41,13 @@ site:
           default: true
           content:
             directory: ./portainer-idp/0.0.14
+        - type: space
+          key: space-4
+          title: 0.1.0
+          path: portainer-idp
+          draft: true
+          content:
+            directory: ./portainer-idp
     - type: section
       key: section-3
       title: Portainer-Migrate
