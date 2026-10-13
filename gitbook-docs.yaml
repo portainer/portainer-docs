@@ -36,14 +36,14 @@ site:
       children:
         - type: space
           key: space-6
-          title: 0.0.14
+          title: 0.1.0
           path: 0.0.14
           default: true
           content:
             directory: ./portainer-idp/0.0.14
         - type: space
           key: space-4
-          title: 0.1.0
+          title: 0.1.1
           path: portainer-idp
           draft: true
           content:
@@ -58,5 +58,12 @@ site:
           title: Portainer-Migrate
           path: portainer-migrate
           default: true
+          content:
+            directory: ./portainer-migrate
+        - type: space
+          key: space-7
+          title: Portainer-Migrate
+          path: portainer-migrate-1
+          draft: true
           content:
             directory: ./portainer-migrate
