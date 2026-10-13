@@ -30,9 +30,9 @@ Clicking on an individual node's name will take you to an overview page for that
 
 ### Host Details
 
-This section describes the node's basic configuration, including the hostname, OS information, and total CPU and memory.
+This section describes the node's basic configuration, including the hostname, OS information, and total CPU, memory and the disk usage on the partition backing Docker's data directory.
 
-<figure><img src="../../../.gitbook/assets/2.15-swarm-nodedetail.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3.0-swarm-node-details.png" alt=""><figcaption></figcaption></figure>
 
 ### Engine Details
 
