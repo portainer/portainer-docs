@@ -15,6 +15,7 @@
 * [Deploy](using-portainer-idp/deploy.md)
 * [Admin](using-portainer-idp/admin/README.md)
   * [Cluster readiness](using-portainer-idp/admin/cluster-readiness.md)
+  * [Doctor](using-portainer-idp/admin/doctor.md)
   * [Helm charts](using-portainer-idp/admin/helm-charts.md)
   * [Audit log](using-portainer-idp/admin/audit-log.md)
   * [Settings](using-portainer-idp/admin/settings.md)

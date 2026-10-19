@@ -2,6 +2,8 @@
 
 If you have completed the [Quick Start](quick-start.md), Portainer-IDP is installed and has its Edge Admin credential. Before developers can deploy, an administrator needs to set up a few things: who gets which role, which repository manifests are committed to, and which clusters and namespaces teams may deploy into.
 
+Administrators can follow this setup on the **Getting started** page under **Admin**, which ticks each step off as it's done. See [Admin](using-portainer-idp/admin/README.md).
+
 Everything in Portainer-IDP is set up in this order, and each step needs the one before it:
 
 {% stepper %}

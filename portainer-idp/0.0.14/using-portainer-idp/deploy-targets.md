@@ -46,6 +46,8 @@ Check the details, then choose **Create deploy target**.
 
 Each namespace is itself committed to Git, as `<path>/<namespace>/namespace.yml`, and deployed as an Edge Stack, so it's created on every environment in the target. Applications can only be deployed into namespaces declared here, and a target with no namespaces can't take deployments.
 
+A Kubernetes namespace belongs to its whole cluster, so the same name can't be declared twice on one environment. Portainer-IDP refuses a namespace that another deploy target (or a namespace that already exists and isn't managed by Portainer-IDP) already has on any of the target's environments, and refuses to remove one that another target shares. Choose another name, or leave those environments out of the target. An administrator can choose **Remove anyway** on a shared namespace. Removing a namespace also removes its `namespace.yml` from Git.
+
 ## The deploy target detail page
 
 | Tab               | What it's for                                                                                                                     |

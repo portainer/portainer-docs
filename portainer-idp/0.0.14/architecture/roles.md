@@ -40,7 +40,7 @@ Whoever creates something gets all three rights on it. Something with no access 
 
 Deploy targets use **View**, **Deploy** and **Manage** instead. See [Deploy Targets](../using-portainer-idp/deploy-targets.md#access).
 
-Git targets have no access list of their own: Portainer's sharing setting on the GitOps source applies. See [Git Targets](../using-portainer-idp/git-targets.md#sharing).
+Git targets have no access list of their own: Portainer's sharing setting on the GitOps source applies, and only Portainer administrators and edge administrators can edit or delete one. See [Git Targets](../using-portainer-idp/git-targets.md#sharing).
 
 ## How role and access combine
 
