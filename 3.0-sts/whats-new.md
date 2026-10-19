@@ -22,10 +22,18 @@ Attach a [vulnerability scanning policy](admin/environments/policies/kubernetes-
 
 <figure><img src=".gitbook/assets/3.0-image-vulnerabilities-2.png" alt="" width="374"><figcaption></figcaption></figure>
 
-#### Unified namespace resource quotas
+### Unified namespace resource quotas
 
 The new [Resource Quotas tab on the namespace details view](user/kubernetes/namespaces/manage.md#resource-quotas-tab) lists every resource quota in a namespace, not just the one Portainer manages - including quotas that already existed on namespaces onboarded from another tool. Effective ceiling dials show the limit actually binding each resource across the namespace, so when more than one quota constrains the same CPU or memory value, it's clear at a glance which one is in control.
 
 Resource quota limits are now also checked against the cluster's real available capacity when you create or update a namespace, accounting for every quota in the cluster - so the limit you set is always one the cluster can actually honour.
 
 <figure><img src=".gitbook/assets/3.0-resource-quotas.png" alt=""><figcaption></figcaption></figure>
+
+### A reconciliation engine for GitOps workflows
+
+GitOps workflows can now target Kubernetes environments with a new [Reconciliation engine](user/app-delivery/workflows/add-a-new-workflow.md#choose-an-engine) (Beta), alongside the existing Edge stack engine. Rather than deploying as an Edge stack, it keeps Edge Kubernetes environments continuously matching their source, and either reports or automatically corrects anything that drifts.
+
+A workflow can also now deploy more than one stack at once. Add an artifact for each one, pulling from multiple sources if needed, and set dependencies between them to control deploy order.
+
+<figure><img src=".gitbook/assets/recon-engine (1).png" alt=""><figcaption></figcaption></figure>
