@@ -3,7 +3,8 @@
 [Add-ons](../../admin/add-ons/) can only be installed when Portainer runs on Kubernetes, with cluster-admin access, outside FIPS mode, and under its default Helm release name and namespace. Some add-ons also need additional configuration in Portainer before they will work. This page lists the requirements that apply to all add-ons.
 
 {% hint style="warning" %}
-Add-ons marked as **Beta** may change in future releases and should not be used in production environments.
+Add-ons marked as **Beta** may change in future releases and should not be used in production environments.\
+Add-ons marked as **Alpha** are in early development. They may change significantly or be removed in future releases, and should not be used in production environments.
 {% endhint %}
 
 ### Requirements for all add-ons <a href="#requirements-for-all-add-ons" id="requirements-for-all-add-ons"></a>
