@@ -53,10 +53,3 @@ site:
           default: true
           content:
             directory: ./portainer-migrate
-        - type: space
-          key: space-7
-          title: 0.3.1
-          path: portainer-migrate-1
-          draft: true
-          content:
-            directory: ./portainer-migrate
