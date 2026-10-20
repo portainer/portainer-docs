@@ -18,13 +18,9 @@ Portainer-IDP deploys every Edge Stack and Edge Group with one Portainer account
 When Portainer signs users in with LDAP or OAuth, it can't issue a token to a user created through its API, so the one-click setup isn't available. Create the account and its access token in Portainer, then paste the token.
 {% endhint %}
 
-## Orphaned manifests
+## Undeployed manifests
 
-Lists manifest files in a deploy target's folder that nothing deploys, for example because someone committed them directly or an Edge Stack was deleted in Portainer.
-
-For each one, choose **Register** to deploy it as an application, or **Delete from Git**.
-
-Files found outside every deploy target's folder are listed under **Outside any deploy target**, and can only be deleted.
+Reports on manifest files that nothing deploys now run from [Doctor](doctor.md), only when you ask.
 
 ## System applications in Git
 

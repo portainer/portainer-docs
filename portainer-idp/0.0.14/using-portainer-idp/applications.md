@@ -48,7 +48,7 @@ Which of these you can use depends on your [role](../architecture/roles.md) and 
 
 ## Changing manifests in Git directly
 
-You can. Portainer checks the manifest file for changes (every 5 minutes by default) and deploys them. Changes made in Portainer-IDP are commits to the same file, so the two stay in step, and the **Revisions** tab shows commits made either way.
+You can. Changes made in Portainer-IDP are commits to the same file, so the two stay in step, and the **Revisions** tab shows commits made either way. Whether, and how often, Portainer checks the repository for changes is set on the Git target's GitOps source in Portainer. Portainer-IDP doesn't change that setting.
 
 ## System applications
 

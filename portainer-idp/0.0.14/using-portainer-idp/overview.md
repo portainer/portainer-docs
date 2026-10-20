@@ -11,6 +11,8 @@ Portainer-IDP's navigation is organized into four areas: **Main**, **Deploy**, *
 * [**Deploy**](deploy.md): Simple Deploy, Helm Chart, Source Deploy, and Application Builder.
 * [**Admin**](admin/): visible only to administrators.
   * [Cluster Readiness](admin/cluster-readiness.md): environment health checks, Sealed Secrets, and enable or disable controls.
+  * **Getting started**: a setup checklist for new installations.
+  * [Doctor](admin/doctor.md): on-demand checks for manifests that nothing deploys, with repairs.
   * [Helm Charts](admin/helm-charts.md): the curated Helm catalog and the chart hosts developers may use.
   * [Audit log](admin/audit-log.md): every change made through Portainer-IDP, and who made it.
   * [Settings](admin/settings.md): the Edge Admin credential and other installation-wide settings.

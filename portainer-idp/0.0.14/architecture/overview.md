@@ -8,11 +8,11 @@ This section covers how Portainer-IDP is built and how it relates to Portainer: 
 Developer (browser)
   → Portainer-IDP (checks access, commits with the developer's token)
     → Git repository (source of truth, one folder per deploy target)
-      → Portainer Edge Stack (pulls the file, polls it for changes)
+      → Portainer Edge Stack (pulls the file and deploys it)
         → Edge Agent on each environment in the deploy target (applies it)
 ```
 
-When you deploy, Portainer-IDP writes a manifest file to the Git repository and branch configured on the deploy target, under a folder per namespace, for example `clusters/production/team-a/web.yml`. It commits with your own personal access token, so the commit is attributed to you. It then registers a Portainer Edge Stack that points at that file, targeted at the deploy target's Edge Group. Portainer deploys it to every environment in the group and checks the file for changes every 5 minutes by default.
+When you deploy, Portainer-IDP writes a manifest file to the Git repository and branch configured on the deploy target, under a folder per namespace, for example `clusters/production/team-a/web.yml`. It commits with your own personal access token, so the commit is attributed to you. It then registers a Portainer Edge Stack that points at that file, targeted at the deploy target's Edge Group. Portainer deploys it to every environment in the group. Whether, and how often, Portainer also checks the repository for changes is set on its GitOps source in Portainer.
 
 Every change after that, such as editing, scaling, or rolling back, is a new commit to the same file, followed by a redeploy.
 

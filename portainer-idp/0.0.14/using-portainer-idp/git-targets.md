@@ -5,7 +5,7 @@ Everything Portainer-IDP deploys is committed to Git first. A **Git target** is 
 A Git target is only the repository. The branch and folder are chosen on each [deploy target](deploy-targets.md), so several deploy targets can share one repository, each with its own folder.
 
 {% hint style="info" %}
-The credential on a Git target is used by Portainer to **read**. Commits are made with each person's own [Git commit identity](git-commit-identity.md), so Git history shows who changed what.
+The credential on a Git target is used to **read**: by Portainer to check manifests, and by Portainer-IDP to show an application's **Revisions**, its files and its Helm releases. Commits are made with each person's own [Git commit identity](git-commit-identity.md), so Git history shows who changed what.
 {% endhint %}
 
 ## Adding a Git target
@@ -23,6 +23,17 @@ Open **Git Targets** and choose **Add Git Target**.
 | **Shared with everyone**  | Administrators only. Lets every user pick this repository in deploy flows. Turn it on for the repositories teams should deploy to. |
 
 Choose **Test connection** to check the details, then **Add Git Target**.
+
+## The Git target page
+
+Choose a Git target in the list to open its page. The header shows the repository, its provider and when Portainer last checked it, with **Test connection** and **Refresh**.
+
+| Tab          | What it shows                                                                                                                           |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Settings** | The name, repository URL, credential and sharing, read-only. Choose **Edit** in the card's header to change them.                       |
+| **Usage**    | The deploy targets that commit to the Git target, and the deployments that sync from it, each linked to its own page.                   |
+
+Only Portainer administrators and edge administrators can **Edit** or **Delete** a Git target, because Portainer decides who may change a GitOps source. Anyone allowed to add one can still add it. A person who created a Git target but isn't an administrator changes it in Portainer.
 
 ## Sharing
 
@@ -44,4 +55,4 @@ For example, a deploy target with the path `clusters/production` puts the applic
 
 ## Deleting a Git target
 
-A Git target can't be deleted while a deploy target commits to it or an application still deploys from it. Its row shows **In use** with a count.
+A Git target can't be deleted while a deploy target commits to it or an application still deploys from it. Its row shows **In use** with a count, and its **Usage** tab lists what to move first.

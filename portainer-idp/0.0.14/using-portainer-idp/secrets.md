@@ -60,11 +60,14 @@ In the Application Builder and Simple Deploy, an application can read a single k
 
 | Tab           | What it shows                                                                                                                                                                     |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Placement** | Each deploy target and namespace the secret is deployed to, with its status. **Edit placement** adds or removes namespaces; **Redeploy** pulls a namespace's file from Git again. |
+| **Placement** | Each deploy target and namespace the secret is deployed to, with its status (**Synced** once deployed). **Edit placement** adds or removes namespaces; **Redeploy** pulls a namespace's file from Git again. |
 | **Keys**      | The key names. **Update keys** replaces values: leave a key empty to keep its current value, or type a new one.                                                                   |
+| **Used by**   | The applications that read the secret, in each namespace, and how: as an environment variable or as a mounted volume. A key an application reads that the secret doesn't hold is flagged, because its pod fails to start. |
 | **Revisions** | The secret's Git history. Rolling back restores every namespace to the chosen commit.                                                                                             |
 | **Access**    | Who can view, change and delete this secret.                                                                                                                                      |
 | **Activity**  | Every change made to this secret through Portainer-IDP, and by whom.                                                                                                              |
+
+Environment variables are read when a pod starts, so changing a key doesn't reach a running application that reads it that way, while mounted volumes update on their own. When you choose **Update keys**, tick **Also restart apps that use this secret** to restart those applications once the new values are deployed. Applications you can't restart, and applications you can't see, are skipped and the dialog says so.
 
 A secret can't be deleted while an application still uses it. Remove it from those applications first.
 

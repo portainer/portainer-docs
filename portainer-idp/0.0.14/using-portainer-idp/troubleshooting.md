@@ -77,6 +77,30 @@ The chart, with your values, creates something the Helm policy doesn't allow. Th
 
 <details>
 
+<summary>This application was changed since you opened it</summary>
+
+Someone else saved a change to the file after you opened it, and saving yours would have undone it. Reload to see the latest, then reapply your changes.
+
+</details>
+
+<details>
+
+<summary>A namespace is already declared by another deploy target</summary>
+
+Two deploy targets can't declare the same namespace on one environment, because they'd share one Kubernetes namespace and removing it from either would delete it for both. Choose another name, or leave the shared environments out. See [Deploy targets](deploy-targets.md#creating-a-deploy-target).
+
+</details>
+
+<details>
+
+<summary>Enter a host for the Ingress</summary>
+
+Portainer-IDP refuses an Ingress with no host, because it would take every request that no other application claims. Enter a host, or expose the application as a NodePort or not at all. See [What Portainer-IDP refuses](deploy.md#what-portainer-idp-refuses).
+
+</details>
+
+<details>
+
 <summary>A namespace or deploy target is missing from a deploy form</summary>
 
 You don't have access to it. Ask an administrator to add you under **Who may use it** on the namespace.
@@ -105,7 +129,7 @@ No. Portainer-IDP deploys with its own Edge Admin credential and checks access i
 
 <summary>Can I edit the manifests in Git directly?</summary>
 
-Yes. Portainer checks the file for changes and deploys them. Changes made in Portainer-IDP are commits to the same file, so the two stay in step.
+Yes. Changes made in Portainer-IDP are commits to the same file, so the two stay in step. Whether, and how often, Portainer checks the repository for changes is set on the Git target's GitOps source in Portainer.
 
 </details>
 

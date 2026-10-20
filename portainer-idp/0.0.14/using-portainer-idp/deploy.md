@@ -29,7 +29,7 @@ Only deploy targets and namespaces you're allowed to deploy into are listed. If 
 
 The **Catalog** page lists ready-made applications. Filter by type (**IDP**, **Kubernetes** or **Helm**) or by category: Starters, Database, Messaging, Storage, Search, Observability, Dev Tools, Web, CMS, Apps, and Edge & IoT.
 
-The built-in catalog includes, among others, WordPress + MySQL, Ghost, Nginx, PostgreSQL, PostgreSQL + pgAdmin, MariaDB, Valkey, RabbitMQ, NATS, Gitea, Zot, Mailpit, Keycloak, Grafana, Uptime Kuma, Meilisearch, n8n, Mosquitto, Node-RED, InfluxDB, Garage (S3-compatible storage) and a Scheduled job (CronJob) starter. Administrators can add their own Helm charts; see [Helm Charts](admin/helm-charts.md).
+The built-in catalog includes, among others, WordPress + MySQL, Ghost, Nginx, PostgreSQL, PostgreSQL + pgAdmin, MySQL, MariaDB, MongoDB, Adminer, Valkey, Kafka, RabbitMQ, NATS, Qdrant, OpenSearch, Meilisearch, Garage and SeaweedFS (S3-compatible storage), Gitea, Zot, Mailpit, Keycloak, WireMock, Grafana, Prometheus, Loki, OpenTelemetry Collector, Jaeger, Uptime Kuma, Metabase, n8n, Mosquitto, Node-RED, InfluxDB, Telegraf, podinfo, a Static site from Git and a Scheduled job (CronJob) starter. Administrators can add their own Helm charts; see [Helm Charts](admin/helm-charts.md).
 
 Choose **Deploy** on a card for three steps:
 
@@ -53,7 +53,7 @@ Shows the progress as it happens: committing to Git, registering with Portainer,
 {% endstep %}
 {% endstepper %}
 
-On a template, **Customize** opens it in the Application Builder first, so you can change anything before deploying.
+On a template, **Customize** opens it in the Application Builder first, so you can change anything before deploying. A template that is only an example until you set something, such as **Static site from Git** and its repository, is marked **Customize required**: **Deploy** waits until you've set the value in the Application Builder.
 
 ## Simple Deploy
 
@@ -121,14 +121,24 @@ The installation default is **Standard**, shown as a badge on the review step. A
 * Containers, ports, resources and environment variables.
 * ConfigMaps, secrets (as single environment variables, all keys as environment variables, or files), and persistent storage.
 * Auto-scaling, placement rules, Services and Ingress.
+* **Other settings**, at the end of the form and of each container: anything an imported manifest holds that the form has no field for, edited as YAML.
 
 Use **Add pod** to deploy several applications together as a [group](applications.md#application-groups).
 
-When you edit an application whose manifest also contains ConfigMaps, Jobs or CronJobs, the Application Builder keeps them and writes them back unchanged. Other kinds it can't edit, plain Secrets above all, are dropped with a warning.
+When you edit an application whose manifest also contains ConfigMaps, Jobs or CronJobs, the Application Builder keeps them and writes them back unchanged. Every built-in catalog template can be opened here with **Customize**. Other kinds it can't edit, plain Secrets above all, are dropped with a warning.
+
+### What Portainer-IDP refuses
+
+Before it commits anything, Portainer-IDP refuses:
+
+* **An Ingress with no host, or with a default backend.** It would take every request no other application claims. Enter a host, or expose the application as a NodePort or not at all.
+* **An Ingress host and path another application on the same environments already routes.** The second application would silently get none of the traffic.
+* **A credential set to a literal value**, such as an environment variable named `DB_PASSWORD` with a plain `value`, in Simple Deploy, the Application Builder or a manifest. Use a [secret](secrets.md) instead. Helm values with credential-like names are refused the same way when the chart has **Refuse values that look like plaintext secrets** on. Names that point at a secret, such as `existingSecret`, are fine.
+* **An edit made on a stale copy of a file.** If the application changed after you opened it, the save is refused and says what changed, so you can reload and reapply your changes.
 
 ## Source Deploy
 
-**Deploy** > **Source Deploy** adopts Kubernetes manifests that already exist in a source repository: either one of Portainer's GitOps sources, or a public Git repository by URL. Choose the files, and Portainer-IDP pushes a copy of them to the deploy target's repository, one application per file. The source is only read.
+**Deploy** > **Source Deploy** adopts Kubernetes manifests that already exist in a source repository: either one of Portainer's GitOps sources, or a public Git repository by URL. Choose the files, and Portainer-IDP pushes a copy of them to the deploy target's repository, one application per file. The source is only read. Files that aren't Kubernetes objects, such as a Helm chart's `Chart.yaml`, a CI pipeline or a Kustomize config, can't be deployed; select the manifests they refer to instead.
 
 An administrator chooses which hosts a repository URL may name, under **Source hosts** in [Settings](admin/settings.md).
 
