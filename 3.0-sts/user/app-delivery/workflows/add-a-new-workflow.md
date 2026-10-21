@@ -67,6 +67,10 @@ With the Reconciliation engine you can also select whole directories, which Port
 {% step %}
 #### Name and configure your artifacts
 
+{% hint style="warning" %}
+With the Edge stack engine, you can select more than one file here regardless of your targets' Edge Agent version. Only an Edge Agent running version 3.0 or later actually deploys every selected file - an older agent ignores everything beyond the entry file and deploys only that one.
+{% endhint %}
+
 Each stack to deploy is configured as its own **artifact** card:
 
 | Field           | Overview                                                                                                                                                                             |
