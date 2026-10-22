@@ -87,13 +87,17 @@ Saving migrates this workflow to the reconciliation engine and removes its Edge 
 
 ### Delete a workflow
 
+{% hint style="info" %}
+Only administrators and edge administrators can delete a workflow.
+{% endhint %}
+
 To delete a workflow, from the workflow details view, click **Delete.** You will then be asked to choose what happens to the stacks and resources it has already deployed. Choose between the following:
 
 **Detach (default):**\
 Removes the workflow record from Portainer but leaves all deployed stacks and resources running exactly as they are, no longer linked to any GitOps workflow. Choose this when you want to take manual control of the resources without interrupting live workloads.
 
 {% hint style="info" %}
-Workflows using the reconciliation engine cannot be detached — only destroyed. Because the reconciliation engine manages resources directly rather than through named Edge stacks, there is no intermediate state to hand off to.
+Workflows using the reconciliation engine cannot be detached - only destroyed. Because the reconciliation engine manages resources directly rather than through named Edge stacks, there is no intermediate state to hand off to.
 {% endhint %}
 
 **Destroy:**\
