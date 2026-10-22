@@ -417,6 +417,7 @@
   * [Certificates and security](faqs/troubleshooting/certificates-and-security/README.md)
     * [How to enable/disable image Up-to-date indicator](faqs/troubleshooting/certificates-and-security/how-to-enable-disable-image-up-to-date-indicator.md)
     * [How can I use my custom certificate authority (CA) with Portainer?](faqs/troubleshooting/certificates-and-security/how-can-i-use-my-custom-certificate-authority-ca-with-portainer.md)
+    * [eMudhra certificate distrust in Portainer 2.45.3 LTS](faqs/troubleshooting/certificates-and-security/emudhra-certificate-distrust.md)
   * [Registry and image management](faqs/troubleshooting/registry-and-image-management/README.md)
     * [Why is my node count higher than it should be?](faqs/troubleshooting/registry-and-image-management/why-is-my-node-count-higher-than-it-should-be.md)
     * [I am unable to push an image to an AWS Elastic Container Registry](faqs/troubleshooting/registry-and-image-management/i-am-unable-to-push-an-image-to-an-aws-elastic-container-registry.md)

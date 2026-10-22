@@ -2,6 +2,59 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.45.3 LTS <a href="#release-2.45.2-lts" id="release-2.45.2-lts"></a>
+
+October 22, 2026
+
+### Breaking Changes
+
+* Portainer no longer trusts TLS certificates issued by eMudhra (emSign), following the compromise of eight eMudhra intermediate CAs (CVE-2026-111943). Connections to services that present an affected certificate, including OAuth/OIDC and LDAPS providers, registries and Git hosts, will fail after the upgrade. If your single sign-on or LDAP provider is affected, only the initial admin will be able to sign in. Check your services before upgrading. [See this FAQ for details.](https://hubs.li/Q04B-qY30)
+* In BE, `DELETE /api/gitops/workflows/{id}/detach` and `DELETE /api/gitops/workflows/{id}/destroy` now require an administrator or edge administrator. Environment administrators, and regular users where stack management was allowed, could call them before and now get a 403; scripts that detach or destroy workflows must use an administrator account
+
+### Known Issues <a href="#known-issues" id="known-issues"></a>
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this release <a href="#new-in-this-release" id="new-in-this-release"></a>
+
+**Security**
+
+* Rejected Compose and Swarm stacks using volumes\_from when non-administrators create, update, start or redeploy them with Hide bind mounts for non-administrators enabled, which let them inherit another container's host bind mounts
+* Updated the Go toolchain to 1.26.10, fixing CVE-2026-56857 and CVE-2026-78663 (both Critical), along with CVE-2026-111943, CVE-2026-97032, CVE-2026-97031, CVE-2026-94440, CVE-2026-94439, CVE-2026-78669, CVE-2026-78667, CVE-2026-78660, CVE-2026-78659, CVE-2026-56866, CVE-2026-94448 and CVE-2026-97030
+* Removed the eMudhra emSign root certificates from the CA bundle in Linux images, and rejected certificate chains that contain the compromised eMudhra intermediates (CVE-2026-111943). [See this FAQ for details.](https://hubs.li/Q04B-qY30)
+* Updated [golang.org/x/net](http://golang.org/x/net) to 0.60.0, fixing CVE-2026-78663 (Critical), CVE-2026-97032, CVE-2026-78669, CVE-2026-78660 and CVE-2026-78659 (all High)
+* Updated helm in the kubectl shell image to v4.3.1, taking its Go toolchain to 1.27.2 and oras.land/oras-go/v2 to 2.6.2, fixing CVE-2026-39821 (Critical) and CVE-2026-50163 (High)
+* Restricted DELETE /api/gitops/workflows/{id}/detach and DELETE /api/gitops/workflows/{id}/destroy to administrators and edge administrators. Before, non-admin users could detach a workflow that deploys stacks, or destroy it and remove its stacks and volumes, even on environments they had no access to
+
+**Bug Fixes**
+
+* Fixed starting a container with an empty request body failing with a 400 error on Docker standalone and Swarm agent environments
+* Fixed GitOps sources starting a new poll while the previous one was still running, which could pile up overlapping redeploys on slow repositories. A poll that is still running now causes the next scheduled poll to be skipped
+* Fixed GitOps workflows showing the Git reference and file path status as unknown after a stack was manually redeployed from Git. A manual redeploy now records these statuses for the stack's workflow artifact
+* Fixed the YAML tab on the Kubernetes node details page going blank after switching tabs or refocusing the browser, and restored the missing gap between the tab content and the Applications table
+* Fixed DockerHub pull rate limits and agent version detection failing on Docker engines newer than API 1.47, and, in BE, non-admin users with environment access getting 403 errors on `/agent/docker` and `/agent/host` routes, which left Swarm node selectors empty
+* Fixed the search box on the Authentication logs page not filtering events by username
+* Fixed namespace access grants for teams with no members not being saved, and being removed whenever environment or group access changed. Deleting such a team now removes its grants at once, and grants lost before the upgrade must be re-added
+* Fixed high CPU and Kubernetes API load from Edge agents running Helm Edge stacks. The agent no longer keeps re-checking the status of deployed Helm Edge stacks, and Helm Edge stack releases now keep at most 20 revisions
+* Improved GitOps polling when several stacks or Edge stacks use the same source: each poll now checks the Git reference and clones the repository once and shares the result. Stuck clones now time out after 10 minutes
+* Fixed Edge stack configuration files from Git not reaching devices on redeploy when relative paths were enabled. The renamed "Refresh files on the device at every redeployment" option can now be changed when editing an Edge stack or its GitOps workflow
+* Fixed installed add-ons losing their connection to Portainer after its TLS certificate changed, which needed a Repair on each add-on. On startup Portainer now republishes the certificate it serves to each add-on, and install and Repair publish that certificate instead of the default certificate file
+* Fixed Edge update schedules staying "In progress" forever, and so not being deletable from the UI, when an online agent never reported update status. Such environments are now marked as failed 7 days after the scheduled time, which is now read in the environment's time zone&#x20;
+* Fixed Git-based Helm Edge stacks accepting values file paths with `${PORTAINER_EDGE_GROUP}` or `${PORTAINER_EDGE_ID}` placeholders that their per-device configuration settings would never resolve, which made deployments fail on every environment. Creating or updating such a stack is now rejected with a validation error
+* Fixed the container and pod log viewer showing no logs when a JSON log line had its `stack_trace` as a string, as in Java logback output. String stack traces now display one line per row, and any other line the viewer can't parse is shown as raw text
+* Fixed the Edge Configurations list showing an "Unable to retrieve user details" error when a configuration was created or updated by a deleted user. These rows now show "(deleted user)", and the Updated column now shows who last updated the configuration rather than its creator
+
 ## Release 2.45.2 LTS <a href="#release-2.45.2-lts" id="release-2.45.2-lts"></a>
 
 October 8, 2026
