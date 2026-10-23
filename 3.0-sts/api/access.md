@@ -109,4 +109,8 @@ The user would be presented with the following response:
 }
 ```
 
+{% hint style="info" %}
+Use an access token or a session token to call the Portainer API. Tokens in a downloaded `kubeconfig` file are only valid for proxying Kubernetes API requests to the environment they were issued for. Any other API request made with one returns a `403` response with the message `Access denied` and the details `The token scope is not allowed on this route`.
+{% endhint %}
+
 Now that you have access to the Portainer API, you can learn more about how to use it from the [API documentation](docs.md) and our [usage examples](examples.md).
