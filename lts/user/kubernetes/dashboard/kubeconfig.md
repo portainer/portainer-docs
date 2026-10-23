@@ -47,6 +47,14 @@ Each environment in the `kubeconfig` will be accessible via contexts. Access is 
 
 Each environment's context has its own token, generated separately for that environment. A token is only valid for proxying Kubernetes API requests to the environment it was issued for - it cannot be used to access any other environment in the kubeconfig, and it cannot be used to call the Portainer API directly.
 
+Each user entry in the `kubeconfig` file is named after your Portainer service account, followed by the ID of the environment its token is issued for.
+
+If a `kubeconfig` token is used to call the Portainer API, the request returns a `403` response with the message `Access denied` and the details `The token scope is not allowed on this route`. To use the Portainer API from a script or tool, create an access token instead.
+
+{% hint style="info" %}
+A `kubeconfig` file downloaded from an earlier version of Portainer uses a single token for all of its environments. That token can no longer call the Portainer API, but it can still proxy requests to every environment you have access to until it expires. Download a new `kubeconfig` file to replace it with per-environment tokens.
+{% endhint %}
+
 Unless set to never expire, tokens will expire after the defined period, at which point a new `kubeconfig` file will need to be generated. An administrator can [adjust the token expiry behavior](../../../admin/settings/general.md#kubeconfig) on the **Settings** page.
 
 {% hint style="info" %}
