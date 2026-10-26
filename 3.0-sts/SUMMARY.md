@@ -248,6 +248,7 @@
       * [Create a Kubernetes observability policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-observability-policy.md)
       * [Create a Kubernetes pod security standards policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-pod-security-standards-policy.md)
       * [Create a Kubernetes vulnerability scanning policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-vulnerability-scanning-policy.md)
+      * [Create a Kubernetes automatic namespace provisioning policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-automatic-namespace-provisioning-policy.md)
     * [Docker, Swarm, or Podman Policies](admin/environments/policies/docker-policies/README.md)
       * [Create a Docker, Swarm or Podman RBAC policy](admin/environments/policies/docker-policies/rbac-policy.md)
       * [Create a Docker, Swarm or Podman security policy](admin/environments/policies/docker-policies/security-policy.md)

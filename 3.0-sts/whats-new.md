@@ -37,3 +37,9 @@ GitOps workflows can now target Kubernetes environments with a new [Reconciliati
 A workflow can also now deploy more than one stack at once. Add an artifact for each one, pulling from multiple sources if needed, and set dependencies between them to control deploy order.
 
 <figure><img src=".gitbook/assets/recon-engine (1).png" alt=""><figcaption></figcaption></figure>
+
+### Automatic namespace provisioning policy
+
+Attach an [automatic namespace provisioning policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-automatic-namespace-provisioning-policy.md) to a Kubernetes environment group and Portainer gives every eligible user their own namespace and a namespace-scoped role inside it, generated from a pattern you define - no more creating namespaces and granting access by hand as users join, change their authentication method, or leave.
+
+<figure><img src=".gitbook/assets/3.0-namespace-policy-configuration.png" alt=""><figcaption></figcaption></figure>
