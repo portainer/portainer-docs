@@ -57,7 +57,7 @@ With the Edge stack engine, an artifact's files must all come from a single sour
 {% step %}
 #### Select your files
 
-For the artifact marked **Selecting files**, browse the file tree in each source's panel, or search for a file using a wildcard expression, then select the files that define it. Based on the files you select, Portainer automatically detects whether the artifact is a Docker Compose or Kubernetes deployment.
+For the artifact marked **Selecting files**, browse the file tree in each source's panel, or search for a file using a wildcard expression, then select the files that define it. You can also drag a file straight from a source's file tree onto the artifact card you want it in - this assigns the file and makes that artifact the active one, without needing to select it first. Based on the files you select, Portainer automatically detects whether the artifact is a Docker Compose or Kubernetes deployment.
 
 {% hint style="info" %}
 With the Reconciliation engine you can also select whole directories, which Portainer applies the way `kubectl apply -f <directory>` would. If a selected directory contains a `Chart.yaml`, it's detected as a Helm chart automatically - see [Helm chart options](../../../advanced/helm-chart-configuration-options.md) in the next step. Selecting a different chart later replaces the one already configured, which removes its release from every environment and installs the new one in its place.
@@ -76,7 +76,7 @@ Each stack to deploy is configured as its own **artifact** card:
 | Field           | Overview                                                                                                                                                                             |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Name            | A name for the artifact. This name can't be changed once the workflow is created.                                                                                                    |
-| Selecting files | Shows which artifact the file browser above is currently adding files to. Select **Select files here** on another artifact's card to switch to it.                                   |
+| Selecting files | Shows which artifact the file browser above is currently adding files to. Select **Select files here** on another artifact's card, or drag a file onto it, to make it active.        |
 | Depends on      | Choose other artifacts in this workflow that must be deployed before this one.                                                                                                       |
 | File list       | The files selected for this artifact. Drag to reorder them - for the Edge stack engine, the first file in the list is the entrypoint. Select the X icon next to a file to remove it. |
 

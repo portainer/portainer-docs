@@ -14,34 +14,19 @@ To configure settings of your created stack, from the workflow details view, cli
 
 ### Reconciliation engine status view
 
-Workflows using the [reconciliation engine](add-a-new-workflow.md#reconciliation-engine) replace the Stacks card with an **Environments** table that reports what each environment applied and whether it matches the source.
-
-#### Status summary bar
-
-A status bar above the table shows the count of environments in each state:
-
-| Status      | Meaning                                                                                                         |
-| ----------- | --------------------------------------------------------------------------------------------------------------- |
-| **Error**   | The environment failed to apply the deployment.                                                                 |
-| **Drifted** | The environment applied the deployment, but one or more resources have since been changed outside of Portainer. |
-| **Syncing** | The environment is currently applying the deployment.                                                           |
-| **Healthy** | The environment's resources match what the source declares.                                                     |
-| **Unknown** | The environment has not yet reported back, or its status cannot be determined.                                  |
-
-Click any segment to filter the table to environments in that state. Click the same segment again to clear the filter.
+Workflows using the [reconciliation engine](add-a-new-workflow.md#reconciliation-engine) show an **Environments** table that reports what each environment applied and whether it matches the source.
 
 #### Environment table
 
-The table lists one row per environment per artifact. When a workflow has more than one artifact, an **Artifact** column appears to identify which deployment each row belongs to.
+Click a workflow and scroll to the bottom of the page to view the environments table. The table lists one row per environment per artifact. When a workflow has more than one artifact, an **Artifact** column appears to identify which deployment each row belongs to.
 
-| Column          | Description                                                                                                                               |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Environment** | The environment name. Click to open the environment dashboard.                                                                            |
-| **Status**      | The current reconciliation status. A **Unreachable** badge appears alongside the status when the environment has not checked in recently. |
-| **Revision**    | The short Git commit hash of the source revision this environment last applied.                                                           |
-| **Resources**   | The number of Kubernetes resources the deployment declares. Click to open the deployment resources list.                                  |
-| **Drift**       | The number of resources that have drifted from the source. Click to see exactly which fields changed and in which direction.              |
-| **Actions**     | Per-environment actions, including opening the Helm release details for chart-based deployments.                                          |
+| Column          | Description                                                                                                                                                                                                         |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Environment** | The environment name. Click to open the environment dashboard.                                                                                                                                                      |
+| **Status**      | The current reconciliation status. A **Unreachable** badge appears alongside the status when the environment has not checked in recently.                                                                           |
+| **Revision**    | The short Git commit hash of the source revision this environment last applied.                                                                                                                                     |
+| **Resources**   | The number of Kubernetes resources the deployment declares. Click to open the deployment resources list.                                                                                                            |
+| **Details**     | A message describing the environment's status, and the number of resources that have drifted from the source. Click to expand, or click the drift count to see exactly which fields changed and in which direction. |
 
 **Drift details**
 
@@ -57,15 +42,13 @@ Drift entries can show one of the following operation types:
 | `unmanaged` | The field is on the cluster but owned by another manager; re-applying leaves it. |
 | `missing`   | The entire resource is in the source but not on the cluster.                     |
 
-**Reconcile now**
+#### Reconcile now
 
-The **Reconcile** button, available on the workflow detail header and on each environment row, asks the workflow to apply immediately rather than waiting for the next reconcile interval. Use this to push a source change without waiting, or to manually correct drift when drift detection is set to **Report drift** rather than **Reconcile drift**.
+The **Reconcile** button, available on the workflow's row in the Workflows list and on its detail header, asks the workflow to apply immediately rather than waiting for the next reconcile interval. Use this to push a source change without waiting, or to manually correct drift when drift detection is set to **Report drift** rather than **Reconcile drift**.
 
 {% hint style="info" %}
 Reconcile now triggers a re-apply on all environments at their next check-in. It does not wait for confirmation that the apply completed - use the **Refresh** button on the Environments table to re-read what each environment has reported after a reconcile.
 {% endhint %}
-
-<figure><img src="../../../.gitbook/assets/3.0-environments-table.png" alt=""><figcaption></figcaption></figure>
 
 ### Migrate to the reconciliation engine
 
