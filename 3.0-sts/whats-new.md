@@ -43,3 +43,9 @@ A workflow can also now deploy more than one stack at once. Add an artifact for 
 Attach an [automatic namespace provisioning policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-automatic-namespace-provisioning-policy.md) to a Kubernetes environment group and Portainer gives every eligible user their own namespace and a namespace-scoped role inside it, generated from a pattern you define - no more creating namespaces and granting access by hand as users join, change their authentication method, or leave.
 
 <figure><img src=".gitbook/assets/3.0-namespace-policy-configuration.png" alt=""><figcaption></figcaption></figure>
+
+### Add a D2K environment
+
+Add a [D2K environment](admin/environments/add/add-a-d2k-environment.md) to run Docker workloads - containers, stacks, volumes, and networks - on a Kubernetes cluster, without installing a second agent or giving up Kubernetes as the underlying platform. D2K serves the Docker API from a namespace of an existing Kubernetes environment with an Edge agent, so standard Docker RBAC and the familiar Docker views apply to it like any other Docker environment.
+
+<figure><img src=".gitbook/assets/3.0-d2k-configs.png" alt=""><figcaption></figcaption></figure>

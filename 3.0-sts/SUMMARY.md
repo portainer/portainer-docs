@@ -236,6 +236,7 @@
       * [Install Edge Agent Async on KubeSolo](admin/environments/add/add-a-kubesolo-edge-environment/install-edge-agent-async-on-kubesolo.md)
     * [Create a Kubernetes cluster](admin/environments/add/kube-create/README.md)
       * [Talos Kubernetes](admin/environments/add/kube-create/omni.md)
+    * [Add a D2K environment](admin/environments/add/add-a-d2k-environment.md)
     * [Add an environment via the Portainer API](admin/environments/add/api.md)
   * [Auto onboarding](admin/environments/aeec.md)
   * [Groups](admin/environments/groups.md)
