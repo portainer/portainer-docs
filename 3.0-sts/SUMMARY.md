@@ -195,10 +195,11 @@
 ## Administering Portainer <a href="#admin" id="admin"></a>
 
 * [User-related](admin/user/README.md)
-  * [Users](admin/user/users.md)
-  * [Add a new user](admin/user/add.md)
-  * [Turn a user into an administrator](admin/user/promote.md)
-  * [Reset a user's password](admin/user/password.md)
+  * [Users](admin/user/users/README.md)
+    * [Add a new user](admin/user/users/add.md)
+    * [Manage a user](admin/user/users/manage-a-user.md)
+    * [Reset a user's password](admin/user/users/password.md)
+    * [Turn a user into an administrator](admin/user/users/promote.md)
   * [Teams](admin/user/teams/README.md)
     * [Add a new team](admin/user/teams/add.md)
     * [Add a user to a team](admin/user/teams/add-user.md)

@@ -12,8 +12,8 @@ API access is provided on a per-user basis, with each users' API access dependen
 
 To create a new user within Portainer, refer to our documentation:
 
-{% content-ref url="../admin/user/add.md" %}
-[add.md](../admin/user/add.md)
+{% content-ref url="../admin/user/users/add.md" %}
+[add.md](../admin/user/users/add.md)
 {% endcontent-ref %}
 
 Once the user has been created, log in to Portainer as that user to create an API access token.

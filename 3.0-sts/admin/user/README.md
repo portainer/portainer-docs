@@ -2,20 +2,20 @@
 
 Give access to individual users then manage them as their needs change over time.
 
-{% content-ref url="users.md" %}
-[users.md](users.md)
+{% content-ref url="users/" %}
+[users](users/)
 {% endcontent-ref %}
 
-{% content-ref url="add.md" %}
-[add.md](add.md)
+{% content-ref url="users/add.md" %}
+[add.md](users/add.md)
 {% endcontent-ref %}
 
-{% content-ref url="promote.md" %}
-[promote.md](promote.md)
+{% content-ref url="users/promote.md" %}
+[promote.md](users/promote.md)
 {% endcontent-ref %}
 
-{% content-ref url="password.md" %}
-[password.md](password.md)
+{% content-ref url="users/password.md" %}
+[password.md](users/password.md)
 {% endcontent-ref %}
 
 Add users to teams then assign them to roles.
