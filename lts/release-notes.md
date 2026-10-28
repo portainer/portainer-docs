@@ -2,7 +2,7 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
-## Release 2.45.3 LTS <a href="#release-2.45.2-lts" id="release-2.45.2-lts"></a>
+## Release 2.45.3 LTS <a href="#release-2.45.3-lts" id="release-2.45.3-lts"></a>
 
 October 22, 2026
 
