@@ -98,6 +98,7 @@
     * [Security constraints](user/kubernetes/cluster/security.md)
     * [Registries](user/kubernetes/cluster/registries.md)
     * [Policies](user/kubernetes/cluster/policies.md)
+    * [KubeSolo](user/kubernetes/cluster/kubesolo.md)
 * [Docker/Swarm/Podman](user/docker/README.md)
   * [Dashboard](user/docker/dashboard.md)
   * [Templates](user/docker/templates/README.md)
