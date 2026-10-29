@@ -6,7 +6,7 @@ metaLinks:
 
 # Set up a macOS build environment
 
-As an open source product, we encourage users to edit our code and submit patches to it.  This article explains how to set up a local environment on Mac so you can build your own copy of Portainer and test your changes.
+As an open source product, we encourage users to edit our code and submit patches to it. This article explains how to set up a local environment on Mac so you can build your own copy of Portainer and test your changes.
 
 {% hint style="info" %}
 We tested these instructions on macOS 10.14.3 (Mojave).
@@ -47,7 +47,7 @@ If you have issues installing or using pnpm, read their [official documentation]
 {% endhint %}
 
 {% hint style="info" %}
-This procedure uses the [Corepack](https://github.com/nodejs/corepack) package manager.&#x20;
+This procedure uses the [Corepack](https://github.com/nodejs/corepack) package manager.
 {% endhint %}
 
 Corepack must be enabled before it can manage pnpm. Run `corepack enable` from the macOS terminal, then install and activate pnpm version 10.26.2 by running `corepack use pnpm@10.26.2`.
@@ -86,7 +86,7 @@ node --version
 
 First, [download](https://golang.org/dl/) the appropriate version of Go for your system. The package installs the Go distribution to `/usr/local/go`. The package should put the `/usr/local/go/bin` directory in your `PATH` environment variable. You may need to restart any open terminal sessions for the change to take effect.
 
-Verify that Go has been installed correctly by running `go version`  in your terminal.&#x20;
+Verify that Go has been installed correctly by running `go version` in your terminal.
 
 ## Part 5: Installing Wget
 
@@ -94,5 +94,4 @@ Verify that Go has been installed correctly by running `go version`  in your ter
 If you have issues installing or updating Wget using Homebrew, read [Homebrew's troubleshooting guide](https://docs.brew.sh/Common-Issues).
 {% endhint %}
 
-To install or update Wget on your Mac, use [Homebrew](https://formulae.brew.sh/formula/wget) by running `brew install wget` .&#x20;
-
+To install or update Wget on your Mac, use [Homebrew](https://formulae.brew.sh/formula/wget) by running `brew install wget` .

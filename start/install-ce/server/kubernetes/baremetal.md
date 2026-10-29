@@ -161,7 +161,7 @@ Our YAML manifests support exposing Portainer via either NodePort or Load Balanc
 
 {% tabs %}
 {% tab title="Expose via NodePort" %}
-To expose via NodePort, you can use the following command (Portainer will be available on port `30777`  for HTTP and `30779` for  HTTPS):
+To expose via NodePort, you can use the following command (Portainer will be available on port `30777` for HTTP and `30779` for HTTPS):
 
 ```
 kubectl apply -n portainer -f https://downloads.portainer.io/ce-lts/portainer.yaml

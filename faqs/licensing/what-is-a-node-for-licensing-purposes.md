@@ -11,7 +11,7 @@ metaLinks:
 
 A "node" can be simply described as a "server" (whether this is an actual physical server, a VM, a Raspberry Pi, your desktop or laptop, an industrial computer, or an embedded compute device) that is capable of running containers (via Docker, Kubernetes or another orchestrator) which is either running the Portainer Server or is under the management of a Portainer Server installation.
 
-Nodes that are used solely as management environments are not counted toward your node limit. A management environment is only counted as a node if it is also being managed by Portainer.&#x20;
+Nodes that are used solely as management environments are not counted toward your node limit. A management environment is only counted as a node if it is also being managed by Portainer.
 
 {% hint style="info" %}
 Node pricing is also dependent on the [type of node](what-is-the-pricing-for-business-edition.md) you are using.
@@ -87,7 +87,7 @@ kube03      Ready    <none>   273d   v1.23.14-2+55c3aa5b608650
 
 Each entry in the list counts as one node.
 
-### Multiple Environments&#x20;
+### Multiple Environments
 
 But what if you're running multiple environments? Let's combine what we have above into something more complex: one "management" server (running Docker Standalone) that manages a three node Docker Swarm and a three node Kubernetes cluster:
 

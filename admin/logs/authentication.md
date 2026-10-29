@@ -23,4 +23,3 @@ If you want to export logs, filter by date range then click **Export to CSV**.
 Authentication events are searchable and filterable, and the date and time, origin IP address, context, user and result are provided for each.
 
 <figure><img src="../../.gitbook/assets/2.15-settings-authlogs-list.png" alt=""><figcaption></figcaption></figure>
-

@@ -12,7 +12,7 @@ To browse your Edge device, on the [home page](./) locate your Edge device and c
 
 <figure><img src="../../.gitbook/assets/2.33-home-edge-async-tile.png" alt=""><figcaption></figcaption></figure>
 
-You will be directed to the dashboard for the Edge device, with a **Browsing snapshot** drop down that details the last updated and next updated date, how often the snapshots are taken and the environment status.  You can refer to the [deployment sync options ](../../admin/settings/edge.md#deployment-sync-options)for more details.&#x20;
+You will be directed to the dashboard for the Edge device, with a **Browsing snapshot** drop down that details the last updated and next updated date, how often the snapshots are taken and the environment status. You can refer to the [deployment sync options ](../../admin/settings/edge.md#deployment-sync-options)for more details.
 
 {% hint style="warning" %}
 The information displayed in Portainer for your Edge device is up to date as of the time the latest snapshot (as indicated in the dropdown) was taken. Depending on the [age of the snapshot](../../admin/settings/edge.md#deployment-sync-options) and the environment, this may not be an up to date representation of the current state of the device, so bear this in mind when taking actions on the device.

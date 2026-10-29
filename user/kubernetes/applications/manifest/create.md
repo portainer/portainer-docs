@@ -14,7 +14,7 @@ When creating an application from a Manifest, first select your deployment metho
 Then, select the **Namespace** to deploy to and optionally provide a **Name** for your deployment in the **Deploy to** section.
 
 {% hint style="info" %}
-If you want to use namespaces defined in your manifest, you can leave **Namespace** set to `default` and toggle on the **Use namespace(s) specified from manifest** option.&#x20;
+If you want to use namespaces defined in your manifest, you can leave **Namespace** set to `default` and toggle on the **Use namespace(s) specified from manifest** option.
 {% endhint %}
 
 Your next options will depend on the deployment method you selected.
@@ -75,9 +75,9 @@ If your application is configured for GitOps updates and you make changes locall
 
 <figure><img src="../../../../.gitbook/assets/2.19-stacks-add-git-webhook.png" alt=""><figcaption><p>GitOps updates using the webhook mechanism</p></figcaption></figure>
 
-| Field/Option          | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Always apply manifest | <p>Enable this setting to force the redeployment of your application (kubectl apply) at the specified interval (or when the webhook is triggered), overwriting any changes that have been made in the local environment, even if there has been no update to the application in Git. This is useful if you want to ensure that your Git repository is the source of truth for your applications and are happy with the local application being replaced.</p><p></p><p>If this option is left disabled, automatic updates will only trigger if Portainer detects a change in the remote Git repository.</p> |
+| Field/Option          | Overview                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Always apply manifest | <p>Enable this setting to force the redeployment of your application (kubectl apply) at the specified interval (or when the webhook is triggered), overwriting any changes that have been made in the local environment, even if there has been no update to the application in Git. This is useful if you want to ensure that your Git repository is the source of truth for your applications and are happy with the local application being replaced.</p><p>If this option is left disabled, automatic updates will only trigger if Portainer detects a change in the remote Git repository.</p> |
 
 <figure><img src="../../../../.gitbook/assets/2.19-kubernetes-ingress-add-manifest-git-alwaysapply.png" alt=""><figcaption></figcaption></figure>
 
@@ -85,7 +85,7 @@ When you're ready, click **Deploy**.
 
 ## Web editor
 
-Use the Web editor to write or paste in your Kubernetes manifest.&#x20;
+Use the Web editor to write or paste in your Kubernetes manifest.
 
 <figure><img src="../../../../.gitbook/assets/2.20-kubernetes-applications-manifest-webeditor.png" alt=""><figcaption></figcaption></figure>
 
@@ -93,7 +93,7 @@ Use the Web editor to write or paste in your Kubernetes manifest.&#x20;
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
 {% endhint %}
 
-When you're ready, click **Deploy**. &#x20;
+When you're ready, click **Deploy**.
 
 ## URL
 

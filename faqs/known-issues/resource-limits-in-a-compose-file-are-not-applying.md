@@ -38,4 +38,4 @@ Update Portainer to 2.15.0 or above.
 
 #### Workaround
 
-You can manually apply limits on a per-container basis after deployment [through the Portainer UI](../../user/docker/containers/edit.md).&#x20;
+You can manually apply limits on a per-container basis after deployment [through the Portainer UI](../../user/docker/containers/edit.md).

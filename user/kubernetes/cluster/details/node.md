@@ -31,7 +31,7 @@ The **Node** tab summarizes the following information about the selected node:
 
 ### Resource reservation
 
-This section provides details about resource reservations assigned on the node as well as the node's resource usage.&#x20;
+This section provides details about resource reservations assigned on the node as well as the node's resource usage.
 
 {% hint style="info" %}
 **Memory used** and **CPU used** are only displayed if you have [enabled using the metrics API](../setup.md#enable-features-using-metrics-server).
@@ -63,7 +63,7 @@ This section shows information about node-related events.
 Editing the YAML in this view is only available in Portainer Business Edition.
 {% endhint %}
 
-This section shows the node YAML within an editor. To apply any changes you make within the YAML editor, select the **Apply changes** button, and select **Apply changes** if you are sure. Changes are made by calling the Kubernetes API to patch the relevant resources. Any resource removals or unexpected resource additions that you make in the YAML will be ignored. Note that editing is disabled for resources in namespaces marked as system.&#x20;
+This section shows the node YAML within an editor. To apply any changes you make within the YAML editor, select the **Apply changes** button, and select **Apply changes** if you are sure. Changes are made by calling the Kubernetes API to patch the relevant resources. Any resource removals or unexpected resource additions that you make in the YAML will be ignored. Note that editing is disabled for resources in namespaces marked as system.
 
 <figure><img src="../../../../.gitbook/assets/Recording 2025-09-11 at 10.05.33.gif" alt=""><figcaption></figcaption></figure>
 
@@ -74,6 +74,3 @@ This section shows the node YAML within an editor. To apply any changes you make
 This section provides information about the applications running on the selected node. Clicking the application name will take you to the application details page for that application.
 
 <figure><img src="../../../../.gitbook/assets/2.15-k8s-cluster-node-apps.png" alt=""><figcaption></figcaption></figure>
-
-
-

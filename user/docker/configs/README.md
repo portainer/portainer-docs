@@ -23,4 +23,3 @@ In Portainer you can add and remove custom configurations for use in deployments
 {% content-ref url="remove.md" %}
 [remove.md](remove.md)
 {% endcontent-ref %}
-

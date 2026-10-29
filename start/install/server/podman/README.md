@@ -15,4 +15,3 @@ Installation instructions can differ between platforms. Please choose your platf
 {% content-ref url="linux.md" %}
 [linux.md](linux.md)
 {% endcontent-ref %}
-

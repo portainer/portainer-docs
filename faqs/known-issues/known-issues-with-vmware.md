@@ -33,7 +33,7 @@ Alternatively you can (depending on your setup) reconfigure NSX to use a differe
 
 When running Docker Swarm under VMware you may run into issues with communication over the swarm node routing mesh. We have traced this back to UDP packets being dropped by the source node. Disabling checksum offloading appears to resolve this issue.
 
-Run the following on **all** the VMs in your cluster:&#x20;
+Run the following on **all** the VMs in your cluster:
 
 ```
 ethtool -K [network] tx-checksum-ip-generic off
@@ -51,7 +51,7 @@ Note: Changes made via ethtool only apply until your server is rebooted, at whic
 
 In certain configurations, packets being sent on overlay networks can be silently dropped, in particular when vmw\_conn\_notifyd is being used. There is an open issue with VMware discussing the behavior which we are following, and is worth reading for potential workarounds until this is patched.
 
-#### Fault Tolerance&#x20;
+#### Fault Tolerance
 
 The "Failed Loading Environment - Unable to find an agent on any Manager Node" error can occur when the VMware "Fault Tolerance" feature is enabled on the virtual machine (VM) of the swarm manager node. This feature can disrupt communication. To resolve the communication issue, follow these steps:
 

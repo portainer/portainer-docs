@@ -7,7 +7,7 @@ metaLinks:
 
 # Is there a way to specify the license at the command line?
 
-You can use the \`PORTAINER\_LICENSE\_KEY\` environment variable. &#x20;
+You can use the \`PORTAINER\_LICENSE\_KEY\` environment variable.
 
 For example:
 

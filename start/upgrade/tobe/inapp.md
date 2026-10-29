@@ -25,4 +25,3 @@ Your license should be sent automatically within a few minutes. If you have not 
 <figure><img src="../../../.gitbook/assets/2.17-upgrade-tobe-inapp-licensesent.png" alt=""><figcaption></figcaption></figure>
 
 When you receive your license, paste the key into the box and click **Start upgrade** to begin the upgrade process.
-

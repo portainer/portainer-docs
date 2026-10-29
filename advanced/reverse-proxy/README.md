@@ -15,4 +15,3 @@ If you need to, you can run Portainer behind a reverse proxy. We have guides for
 {% content-ref url="nginx.md" %}
 [nginx.md](nginx.md)
 {% endcontent-ref %}
-

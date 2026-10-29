@@ -24,10 +24,10 @@ For more detail on custom template creation, refer to the [custom template](../.
 
 ## Edit an existing template
 
-To edit an existing custom template, click the **Edit** button for the template you want to change.&#x20;
+To edit an existing custom template, click the **Edit** button for the template you want to change.
 
 <figure><img src="../../../.gitbook/assets/2.20-edge-templates-custom-edit.png" alt=""><figcaption></figcaption></figure>
 
 ## Remove a custom template
 
-To remove a custom template, click the **Delete** button for the template you want to remove. This will not remove any Edge stacks that had been previously created with this template.&#x20;
+To remove a custom template, click the **Delete** button for the template you want to remove. This will not remove any Edge stacks that had been previously created with this template.

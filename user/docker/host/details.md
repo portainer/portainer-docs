@@ -14,7 +14,7 @@ This page is only available on Docker Standalone environments.
 
 ## Host Details
 
-This section describes the host's basic configuration, including the hostname, OS information, kernel version, total CPU and memory. If the environment has the Portainer Agent installed, [host management features](setup.md#enable-host-management-features) are enabled, and a `/host` mount has been configured, you can also browse the host file system from here.&#x20;
+This section describes the host's basic configuration, including the hostname, OS information, kernel version, total CPU and memory. If the environment has the Portainer Agent installed, [host management features](setup.md#enable-host-management-features) are enabled, and a `/host` mount has been configured, you can also browse the host file system from here.
 
 <figure><img src="../../../.gitbook/assets/2.15-docker-host-details.png" alt=""><figcaption></figcaption></figure>
 
@@ -33,4 +33,3 @@ These sections are only visible when [host management features](setup.md#enable-
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/2.15-docker-host-pci.png" alt=""><figcaption></figcaption></figure>
-

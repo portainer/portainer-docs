@@ -28,7 +28,7 @@ In the **Stack duplication / migration** section, give the new stack a descripti
 
 ## Rename a stack
 
-In the **Stack duplication / migration** section, give the stack a new descriptive name and select the environment that the stack is currently on. When you're ready, click **Rename**.&#x20;
+In the **Stack duplication / migration** section, give the stack a new descriptive name and select the environment that the stack is currently on. When you're ready, click **Rename**.
 
 <figure><img src="../../../.gitbook/assets/2.36.0-stacks-rename.png" alt=""><figcaption></figcaption></figure>
 

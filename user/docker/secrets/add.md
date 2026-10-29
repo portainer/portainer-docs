@@ -14,4 +14,4 @@ Next, give the secret a descriptive name and write a definition of the secret in
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_secrets_secret_create.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;When you're finished, click **Create the secret**.
+When you're finished, click **Create the secret**.

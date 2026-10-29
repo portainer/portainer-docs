@@ -43,7 +43,7 @@ As an optional step you can expand the **More settings** section and adjust the 
 
 <figure><img src="../../../../.gitbook/assets/2.15-edge_agent_more_settings.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Create**. If you are pre-staging your Edge Agent deployment, you can now retrieve the join token for use in your deployment.&#x20;
+When you're ready, click **Create**. If you are pre-staging your Edge Agent deployment, you can now retrieve the join token for use in your deployment.
 
 <figure><img src="../../../../.gitbook/assets/2.18-environments-add-docker-edge-jointoken.png" alt=""><figcaption></figcaption></figure>
 
@@ -62,8 +62,8 @@ Copy the generated command and run the command on your Edge environment to compl
 If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by specifying an AGENT\_SECRET environment variable when starting the Portainer Server container) you **must** remember to explicitly provide the same secret to your Edge Agent in the same way (as an environment variable) when deploying your Edge Agent, within the agent deployment definition:
 
 `env:`\
-&#x20; `- name: AGENT_SECRET`\
-&#x20;   `value: yoursecret`
+`- name: AGENT_SECRET`\
+`value: yoursecret`
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/2.18-environments-add-k8s-edge-command.png" alt=""><figcaption></figcaption></figure>

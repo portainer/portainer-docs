@@ -33,4 +33,3 @@ For Agent-only deployments, you do not need to upgrade the Agent to Business Edi
 {% content-ref url="agent.md" %}
 [agent.md](agent.md)
 {% endcontent-ref %}
-

@@ -69,6 +69,3 @@ If you no longer need a container, you can remove it.
 {% content-ref url="remove.md" %}
 [remove.md](remove.md)
 {% endcontent-ref %}
-
-
-

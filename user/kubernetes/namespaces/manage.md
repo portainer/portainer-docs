@@ -21,7 +21,7 @@ Toggle on **Resource assignment** to enable quotas for this namespace, then defi
 
 ## Load balancers
 
-With this setting you can configure the amount of external load balancers that can be created in this namespace.&#x20;
+With this setting you can configure the amount of external load balancers that can be created in this namespace.
 
 {% hint style="info" %}
 This option only appears when **Allow users to use external load balancer** is enabled in the [cluster setup](../cluster/setup.md#allow-users-to-use-external-load-balancer).

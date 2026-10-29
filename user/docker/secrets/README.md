@@ -35,6 +35,3 @@ In Portainer you can add and remove secrets for use in deployments.
 {% content-ref url="remove.md" %}
 [remove.md](remove.md)
 {% endcontent-ref %}
-
-
-

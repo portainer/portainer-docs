@@ -6,7 +6,7 @@ metaLinks:
 
 # Edge Compute
 
-To enable and configure Edge Compute functionality in Portainer, select **Settings** from the menu then select **Edge Compute**.&#x20;
+To enable and configure Edge Compute functionality in Portainer, select **Settings** from the menu then select **Edge Compute**.
 
 {% hint style="info" %}
 To learn how to use our Edge Compute functionality, please refer to the [Edge Compute](../../user/edge/) section of this documentation.
@@ -67,7 +67,7 @@ This section lets you configure access to your Edge Compute environments through
 
 <figure><img src="../../.gitbook/assets/2.20-settings-edge-access.png" alt=""><figcaption></figcaption></figure>
 
-To add a user as an Edge Administrator, select the username from the **Select user(s)** dropdown and click **Create access**.&#x20;
+To add a user as an Edge Administrator, select the username from the **Select user(s)** dropdown and click **Create access**.
 
 To remove a user from the Edge Administrator role, check the box next to their username in the Edge administrators list and click **Remove**.
 
@@ -89,15 +89,15 @@ OpenAMT integration is now deprecated and will be removed in a future release.
 
 This section controls the configuration of the [Intel OpenAMT](../../user/home/openamt.md) functionality in Portainer.
 
-| Field/Option                         | Overview                                                                                                                                                                                                                                          |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enable OpenAMT                       | Toggle this option on to enable Portainer's OpenAMT functionality. This can only be enabled when **Enable Edge Compute features** is toggled on, and when on will reveal the below fields.                                                        |
-| MPS Server                           | Enter the FQDN or IP address of your MPS server.                                                                                                                                                                                                  |
-| MPS User                             | Enter the username used to connect to your MPS server.                                                                                                                                                                                            |
-| MPS Password                         | Enter the password for the MPS User defined above. The password must be between 8 and 32 characters and include at least one upper case letter, at least one lower case letter, at least one base-10 digit and at least one special character.    |
-| Domain Name                          | Enter the fully-qualified domain name associated with the provisioning certificate.                                                                                                                                                               |
-| Provisioning Certificate File (.pfx) | <p>Click <strong>Upload file</strong> to upload your PFX-format certificate. The PFX must contain the private key. On AMT 15 based devices you must use SHA2.</p><p></p><p>Currently supported CAs are Comodo, DigiCert, Entrust and GoDaddy.</p> |
-| Provisioning Certificate Password    | Enter the password for the provisioning certificate. The password must be between 8 and 32 characters and include at least one upper case letter, at least one lower case letter, at least one base-10 digit and at least one special character.  |
+| Field/Option                         | Overview                                                                                                                                                                                                                                         |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Enable OpenAMT                       | Toggle this option on to enable Portainer's OpenAMT functionality. This can only be enabled when **Enable Edge Compute features** is toggled on, and when on will reveal the below fields.                                                       |
+| MPS Server                           | Enter the FQDN or IP address of your MPS server.                                                                                                                                                                                                 |
+| MPS User                             | Enter the username used to connect to your MPS server.                                                                                                                                                                                           |
+| MPS Password                         | Enter the password for the MPS User defined above. The password must be between 8 and 32 characters and include at least one upper case letter, at least one lower case letter, at least one base-10 digit and at least one special character.   |
+| Domain Name                          | Enter the fully-qualified domain name associated with the provisioning certificate.                                                                                                                                                              |
+| Provisioning Certificate File (.pfx) | <p>Click <strong>Upload file</strong> to upload your PFX-format certificate. The PFX must contain the private key. On AMT 15 based devices you must use SHA2.</p><p>Currently supported CAs are Comodo, DigiCert, Entrust and GoDaddy.</p>       |
+| Provisioning Certificate Password    | Enter the password for the provisioning certificate. The password must be between 8 and 32 characters and include at least one upper case letter, at least one lower case letter, at least one base-10 digit and at least one special character. |
 
 <figure><img src="../../.gitbook/assets/2.15-settings-edgecompute-openamt.png" alt=""><figcaption></figcaption></figure>
 

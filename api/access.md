@@ -32,11 +32,11 @@ Once logged in as the user, click on your username in the top right and then sel
 
 <figure><img src="../.gitbook/assets/2.20-api-access-myaccount.gif" alt=""><figcaption></figcaption></figure>
 
-Scroll down to the **Access tokens** section. Here you can see any access tokens that exist for the user.&#x20;
+Scroll down to the **Access tokens** section. Here you can see any access tokens that exist for the user.
 
 <figure><img src="../.gitbook/assets/2.15-accountsettings-apitokens.png" alt=""><figcaption></figcaption></figure>
 
-To add a new access token, click the **Add access token** button. You will be taken to a new page where you can set a **Description** for your access token. We recommend making this something recognizable for future reference.&#x20;
+To add a new access token, click the **Add access token** button. You will be taken to a new page where you can set a **Description** for your access token. We recommend making this something recognizable for future reference.
 
 {% hint style="info" %}
 For security we require you to re-enter your password when creating an access token.

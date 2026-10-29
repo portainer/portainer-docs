@@ -25,7 +25,7 @@ To configure access to a registry, from the menu select **Swarm** then select **
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_swarm_registries_manage_access.gif" alt=""><figcaption></figcaption></figure>
 
-Find the registry you want to manage then select **Manage access**.&#x20;
+Find the registry you want to manage then select **Manage access**.
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_swarm_registry_manage_access.png" alt=""><figcaption></figcaption></figure>
 

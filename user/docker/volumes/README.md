@@ -27,6 +27,3 @@ If you're running Docker Swarm or the Portainer Agent on your environment, you c
 {% content-ref url="browse.md" %}
 [browse.md](browse.md)
 {% endcontent-ref %}
-
-
-

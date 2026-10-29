@@ -44,7 +44,7 @@ This example shows how to trigger the webhook to update the stack to use a diffe
 
 ## Preventing a pull
 
-In some cases you may want to override the pulling of images when using the webhook to do a redeploy. In that scenario, you can specify `pullimage=false` as a parameter on your webhook to disable pulling of images.&#x20;
+In some cases you may want to override the pulling of images when using the webhook to do a redeploy. In that scenario, you can specify `pullimage=false` as a parameter on your webhook to disable pulling of images.
 
 {% hint style="info" %}
 This option is only available in Portainer Business Edition.

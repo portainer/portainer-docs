@@ -6,7 +6,7 @@ metaLinks:
 
 # Add a new team
 
-From the menu expand **User-related** then select **Teams**.&#x20;
+From the menu expand **User-related** then select **Teams**.
 
 <figure><img src="../../../.gitbook/assets/Add-team-new.gif" alt=""><figcaption></figcaption></figure>
 

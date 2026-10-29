@@ -24,9 +24,9 @@ The installation instructions also make the following additional assumption abou
 
     `env:`
 
-    &#x20; `- name: AGENT_SECRET`
+    `- name: AGENT_SECRET`
 
-    &#x20;   `value: yoursecret`
+    `value: yoursecret`
 
 To deploy Portainer Agent within a Kubernetes cluster you can use our provided YAML manifests.
 

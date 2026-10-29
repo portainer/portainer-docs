@@ -12,7 +12,7 @@ Portainer provides its own internal authentication mechanism, encrypting user pa
 {% hint style="info" %}
 For all authentication types you can adjust the session lifetime (the time before users are forced to reauthenticate). The default is 8 hours.
 
-Session lifetime changes apply only to new logins, existing sessions keep their original expiry.&#x20;
+Session lifetime changes apply only to new logins, existing sessions keep their original expiry.
 
 Expired sessions redirect to login without ending the upstream OAuth session.
 {% endhint %}
@@ -32,6 +32,3 @@ When using internal authentication, an administrator can set the minimum length 
 {% content-ref url="oauth.md" %}
 [oauth.md](oauth.md)
 {% endcontent-ref %}
-
-
-

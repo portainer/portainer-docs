@@ -10,7 +10,7 @@ Tags can be applied to environments and are useful for defining node or resource
 
 ## Creating a tag
 
-From the menu expand **Environment-related** then select **Tags**.&#x20;
+From the menu expand **Environment-related** then select **Tags**.
 
 <figure><img src="../../.gitbook/assets/Tags-page-new.gif" alt=""><figcaption></figcaption></figure>
 

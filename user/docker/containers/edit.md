@@ -29,4 +29,3 @@ From the menu select **Containers**, select the container you want to duplicate 
 <figure><img src="../../../.gitbook/assets/duplicate-container.gif" alt=""><figcaption></figcaption></figure>
 
 Make the required changes to the container configuration, making sure you enter a new container name in order to create a duplicate. When you're finished, click **Deploy the container**.
-

@@ -31,7 +31,7 @@ If you want to redeploy, click **Pull and update application**. If you're simply
 
 ## Applications deployed from the Web Editor
 
-If the application was deployed from the Web Editor, you will be given the ability to edit the manifest manually.&#x20;
+If the application was deployed from the Web Editor, you will be given the ability to edit the manifest manually.
 
 {% hint style="info" %}
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
@@ -48,4 +48,3 @@ If the application was deployed from an Edge stack, selecting **Edit this applic
 ## Applications deployed from a form
 
 When editing an application deployed from a form, you will be able to update the configuration using the same form. Refer to [adding a new application using a form](add.md) for details.
-

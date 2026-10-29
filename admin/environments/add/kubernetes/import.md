@@ -74,13 +74,13 @@ Once you have your kubeconfig file created, from the menu expand **Environment-r
 
 <figure><img src="../../../../.gitbook/assets/Add-env-new.gif" alt=""><figcaption></figcaption></figure>
 
-&#x20;Select the **Kubernetes** option and click **Start Wizard**. Under **More options**, select the **Import** option.
+Select the **Kubernetes** option and click **Start Wizard**. Under **More options**, select the **Import** option.
 
 {% hint style="info" %}
 The import option is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=k8s-create-from-kubeconfig).
 {% endhint %}
 
-Enter a **name** for cluster then click **Select a file** to browse for your kubeconfig file.&#x20;
+Enter a **name** for cluster then click **Select a file** to browse for your kubeconfig file.
 
 <figure><img src="../../../../.gitbook/assets/2.39-k8s-import.png" alt=""><figcaption></figcaption></figure>
 

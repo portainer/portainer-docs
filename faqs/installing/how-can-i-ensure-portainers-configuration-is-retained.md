@@ -23,7 +23,7 @@ Next, from the menu select **Services** then the `portainer_portainer` service, 
 
 Click the **placement constraint** button to add a new constraint. Enter `node.hostname` for the **Name** and the hostname you gathered previously for the **Value**.
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 #### Kubernetes
 

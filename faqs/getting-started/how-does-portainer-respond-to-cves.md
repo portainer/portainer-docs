@@ -59,4 +59,4 @@ Based on the CVSS score and exploitability of the CVE, as well as whether it aff
 
 One final important note: The CVE system has little enforced validation of reports. The responsibility is on the CVE submitter to ensure they have properly validated the vulnerability as existing and for the report to have accurate and detailed information on the vulnerability. This can result in some [very unhelpful CVEs](https://www.cvedetails.com/cve/CVE-2021-41874/) that provide little to no information on the apparent exploit, making it very hard or impossible for us to identify and fix the issue. When this happens to Portainer, as the vendor we can mark the CVE as "disputed" but it will still appear open and public.
 
-If you have any questions about any open CVEs with Portainer (and not one of our included binaries), please get in touch with our team and we can provide further detail.&#x20;
+If you have any questions about any open CVEs with Portainer (and not one of our included binaries), please get in touch with our team and we can provide further detail.

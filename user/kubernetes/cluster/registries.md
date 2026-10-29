@@ -8,7 +8,7 @@ metaLinks:
 # Registries
 
 {% hint style="warning" %}
-If access to an environment is being managed by a Kubernetes registry [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
+If access to an environment is being managed by a Kubernetes registry [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -26,14 +26,14 @@ From the menu expand **Cluster**, select **Registries** then click **Add registr
 ## Managing access
 
 {% hint style="warning" %}
-If access to a registry is being managed by a Kubernetes registry [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
+If access to a registry is being managed by a Kubernetes registry [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.
 {% endhint %}
 
 To configure access to a registry, from the menu expand **Cluster** then select **Registries**.
 
 <figure><img src="../../../.gitbook/assets/2.15-k8s-cluster-registries.gif" alt=""><figcaption></figcaption></figure>
 
-Find the registry you want to manage then select **Manage access**.&#x20;
+Find the registry you want to manage then select **Manage access**.
 
 <figure><img src="../../../.gitbook/assets/2.15-k8s-cluster-registries-manage.png" alt=""><figcaption></figcaption></figure>
 

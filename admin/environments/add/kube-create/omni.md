@@ -77,7 +77,7 @@ Here you can select the credentials to use to connect to Omni as well as the ver
 
 #### Cluster machines
 
-Here you can specify the machines to use for your cluster. The dropdowns will display the list of available machines alongside any labels on each machine to help with identification.&#x20;
+Here you can specify the machines to use for your cluster. The dropdowns will display the list of available machines alongside any labels on each machine to help with identification.
 
 | Field/Option     | Overview                                                                                                                                                 |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -94,15 +94,11 @@ Machines that have had their networking configuration adjusted in this way will 
 
 <figure><img src="../../../../.gitbook/assets/2.26-environments-add-kube-create-omni-machines-customconfig.png" alt=""><figcaption><p>talos-w1e-4a0 has a modified network configuration whereas talos-y3d-vuj does not.</p></figcaption></figure>
 
-
-
 #### Cluster Configuration patch
 
 This section allows you to apply a custom YAML configuration to your cluster if required. You can click **Cluster Configuration patch** to display the section and provide your YAML in the editor.
 
 <figure><img src="../../../../.gitbook/assets/2.26-environments-add-kube-create-omni-clusterpatch.png" alt=""><figcaption></figcaption></figure>
-
-
 
 #### More settings
 
@@ -128,4 +124,3 @@ From the Environments page you will be able to see the progress of any running K
 <figure><img src="../../../../.gitbook/assets/2.26-environments-add-kube-create-omni-progress.png" alt=""><figcaption></figcaption></figure>
 
 Once the provision completes, you will be able to access the environment as you would any other Portainer-configured environment.
-

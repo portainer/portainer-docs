@@ -9,7 +9,7 @@ Portainer can be automated using our [official Terraform provider](https://regis
 ### Initial set up and authentication
 
 {% hint style="info" %}
-For more information and additional configuration options, refer to the [Terraform provider documentation](https://registry.terraform.io/providers/portainer/portainer/latest/docs).&#x20;
+For more information and additional configuration options, refer to the [Terraform provider documentation](https://registry.terraform.io/providers/portainer/portainer/latest/docs).
 {% endhint %}
 
 To configure the Portainer Terraform provider, add the following configuration to your `main.tf` file.\

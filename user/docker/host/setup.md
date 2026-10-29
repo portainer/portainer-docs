@@ -11,7 +11,7 @@ The **Host Setup** section is only available to Docker Standalone environments.
 {% endhint %}
 
 {% hint style="warning" %}
-If access to an environment is being managed by a Docker setup [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
+If access to an environment is being managed by a Docker setup [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.
 {% endhint %}
 
 Under **Setup**, you can make changes to your environment, enabling and disabling features and security settings.
@@ -56,7 +56,7 @@ If this setting is enabled and an update is made to an application outside of th
 
 ## Docker Security Settings
 
-This section allows you to toggle assorted Docker-related security settings for the environment.&#x20;
+This section allows you to toggle assorted Docker-related security settings for the environment.
 
 <figure><img src="../../../.gitbook/assets/2.38-docker-security.png" alt=""><figcaption></figcaption></figure>
 

@@ -28,7 +28,7 @@ The Portainer Agent installation instructions also make the following additional
 
     `environment:`
 
-    &#x20; `- AGENT_SECRET: yoursecret`
+    `- AGENT_SECRET: yoursecret`
 
 From the menu expand **Environment-related**, click **Environments**, then click **Add environment**.
 
@@ -53,7 +53,7 @@ If you want to use the [host management features](../../../../user/docker/swarm/
 {% endhint %}
 
 {% hint style="info" %}
-If Docker on the environment you're deploying the Agent to has the Docker volume path at a non-standard location (instead of `/var/lib/docker/volumes`) you will need to adjust the volume mount in the deployment command to suit.&#x20;
+If Docker on the environment you're deploying the Agent to has the Docker volume path at a non-standard location (instead of `/var/lib/docker/volumes`) you will need to adjust the volume mount in the deployment command to suit.
 
 For example, if your volume path was `/srv/data/docker`, you would change the line in the command to:
 
@@ -75,7 +75,7 @@ Creating network portainer-agent_portainer_agent
 Creating service portainer-agent_agent
 ```
 
-To validate the agent is running,  run the following command:
+To validate the agent is running, run the following command:
 
 ```
  docker service ls

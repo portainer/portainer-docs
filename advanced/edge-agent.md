@@ -8,7 +8,7 @@ metaLinks:
 
 ## The back story
 
-For standard deployments, we used to assume that the Portainer instance and any environments shared the same network and could communicate seamlessly. If remote environments were on a different network (say, across the Internet) we could not manage them.
+For standard deployments, we used to assume that the Portainer instance and any environments shared the same network and could communicate seamlessly. If remote environments were on a different network (say, across the Internet) we could not manage them.
 
 Then we changed the Edge agent architecture so only the environments need to access Portainer. There is now no need to expose the Portainer agents to the Internet.
 
@@ -20,13 +20,13 @@ If your Portainer instance is deployed with TLS, the agent will use HTTPS for th
 
 ## Creating an Edge Agent in Portainer
 
-When you create an Edge Agent, you are first asked for a human-friendly endpoint name. You are then asked to confirm the FQDN:PORT of your Portainer instance. This is what agents will use to connect, so make sure it’s correct and that the DNS resolves.
+When you create an Edge Agent, you are first asked for a human-friendly endpoint name. You are then asked to confirm the FQDN:PORT of your Portainer instance. This is what agents will use to connect, so make sure it’s correct and that the DNS resolves.
 
 During the creation process, an Edge ID is dynamically generated. This is a random UUID which is assigned to each environment. You can see it in the command syntax which is provided during the setup process.
 
 <figure><img src="../.gitbook/assets/2.15-advanced-edgeagent-command.png" alt=""><figcaption></figcaption></figure>
 
-The Edge ID and the join token are unique per environment. The join token (`EDGE_KEY`) is made up of the following base64 encoded data separated by the pipe (`|`) character:
+The Edge ID and the join token are unique per environment. The join token (`EDGE_KEY`) is made up of the following base64 encoded data separated by the pipe (`|`) character:
 
 * The Portainer instance API URL. This is how the Edge Agent knows how to ‘call home’ to your Portainer instance.
 * The Portainer instance reverse tunnel server address. This is identical to the API URL (unless [changed during deployment](../admin/environments/add/docker/edge.md#deploying) or in [Edge Compute settings](../admin/settings/edge.md#edge-compute-settings)) but with the tunnel server port (`8000` is the default).
@@ -39,7 +39,7 @@ Use the command syntax to deploy an Edge Agent across your remote node or remote
 
 ### Polling
 
-Agents poll the Portainer instance every 5 seconds by default (this is defined in Portainer settings).
+Agents poll the Portainer instance every 5 seconds by default (this is defined in Portainer settings).
 
 ### Connection process and checks
 

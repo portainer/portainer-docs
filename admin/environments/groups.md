@@ -14,7 +14,7 @@ Portainer Community Edition supports basic user and group assignments. For more 
 
 ## Creating a group
 
-From the menu expand **Environment-related**, select **Groups**, then click **Add group**.&#x20;
+From the menu expand **Environment-related**, select **Groups**, then click **Add group**.
 
 <figure><img src="../../.gitbook/assets/2.39-add-group.gif" alt=""><figcaption></figcaption></figure>
 
@@ -43,7 +43,7 @@ Removing a group will not delete environments and users in that group. However, 
 
 [Policies](policies/) allow you to apply configuration, security rules, and cluster settings to groups of environments, rather than configuring each environment individually.
 
-To manage the policies of a group, in the menu expand **Environment-related** then select **Groups**. Locate the environment group you want to manage the policies for, then select **Manage policies** under the **Actions** table header. This will direct you to the [Policies](policies/) page where you can manage existing polices or create new policies.&#x20;
+To manage the policies of a group, in the menu expand **Environment-related** then select **Groups**. Locate the environment group you want to manage the policies for, then select **Manage policies** under the **Actions** table header. This will direct you to the [Policies](policies/) page where you can manage existing polices or create new policies.
 
 <figure><img src="../../.gitbook/assets/2.39-group-to-policy-nav.gif" alt=""><figcaption></figcaption></figure>
 

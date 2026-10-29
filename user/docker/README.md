@@ -59,4 +59,3 @@ The following sections describe how to manage a Docker Standalone, Docker Swarm 
 {% content-ref url="swarm/" %}
 [swarm](swarm/)
 {% endcontent-ref %}
-

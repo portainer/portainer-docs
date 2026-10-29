@@ -11,9 +11,9 @@ Git credentials added here will be usable by any admin-level user, though they w
 
 ## Adding your credentials
 
-To add your Git credentials, from the [Shared credentials](https://docs.portainer.io/admin/settings/credentials) page click **Add credentials**, then select the **Git** option.&#x20;
+To add your Git credentials, from the [Shared credentials](https://docs.portainer.io/admin/settings/credentials) page click **Add credentials**, then select the **Git** option.
 
-Select either **Basic** or **Token** authorization depending on what your Git repository requires. For example, GitHub uses Basic authorization and Bitbucket uses Token authorization. Then supply a name for your shared credentials, your Git username, and your personal access token.&#x20;
+Select either **Basic** or **Token** authorization depending on what your Git repository requires. For example, GitHub uses Basic authorization and Bitbucket uses Token authorization. Then supply a name for your shared credentials, your Git username, and your personal access token.
 
 {% hint style="info" %}
 Ensure your token has repository read permissions (scopes), otherwise authentication will fail. See the [Git authentication token permissions FAQ](../../../faqs/getting-started/what-scopes-are-required-for-github-gitlab-and-bitbucket-tokens.md) for more information.

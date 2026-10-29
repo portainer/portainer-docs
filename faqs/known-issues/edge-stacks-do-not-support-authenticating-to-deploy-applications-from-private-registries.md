@@ -21,7 +21,7 @@ When using Edge Stacks to deploy services from a private repository, images are 
 
 Update Portainer to 2.15.0 or above.
 
-#### Workaround&#x20;
+#### Workaround
 
 Deploy a [Docker registry container](https://hub.docker.com/_/registry), put it in ["cache" mode](https://docs.docker.com/registry/recipes/mirror/), and configure it to authenticate using your Docker Hub credentials. Locally to the edge device, it pulls from the cache locally as anonymous, but the cache knows how to retrieve from a secure repository.
 

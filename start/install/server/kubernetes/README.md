@@ -20,4 +20,3 @@ Installation instructions can differ between platforms. Please choose your platf
 {% content-ref url="wsl.md" %}
 [wsl.md](wsl.md)
 {% endcontent-ref %}
-

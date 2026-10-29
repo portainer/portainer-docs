@@ -34,4 +34,4 @@ Scopes: openid profile
 
 You will also need to have following permissions on your App Registration in Azure:
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>

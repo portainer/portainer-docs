@@ -15,7 +15,7 @@ Namespaces can also be added [using a manifest](../applications/manifest/) by cl
 
 <figure><img src="../../../.gitbook/assets/add-namespace.gif" alt=""><figcaption></figcaption></figure>
 
-Give the namespace a descriptive **name**. As an optional step you can add annotations to your namespace as required by clicking **Add annotation** and filling in the **Key** and **Value** fields.&#x20;
+Give the namespace a descriptive **name**. As an optional step you can add annotations to your namespace as required by clicking **Add annotation** and filling in the **Key** and **Value** fields.
 
 <figure><img src="../../../.gitbook/assets/2.18-k8s-namespaces-add-name.png" alt=""><figcaption></figcaption></figure>
 
@@ -53,13 +53,13 @@ You can define the registries that are available within this namespace in this s
 
 ### Storage
 
-Use this section to enable quotas on your storage options for this namespace. To enable the use of quotas on a storage option, toggle **Enable quota** to on and set the **Maximum usage**. A Maximum usage value of `0` effectively prevents the usage of that storage option within the namespace.&#x20;
+Use this section to enable quotas on your storage options for this namespace. To enable the use of quotas on a storage option, toggle **Enable quota** to on and set the **Maximum usage**. A Maximum usage value of `0` effectively prevents the usage of that storage option within the namespace.
 
 <figure><img src="../../../.gitbook/assets/2.18-k8s-namespaces-add-storage.png" alt=""><figcaption></figcaption></figure>
 
 ### Summary
 
-This section displays a summary of the actions that will be taken when clicking the Add namespace button.&#x20;
+This section displays a summary of the actions that will be taken when clicking the Add namespace button.
 
 <figure><img src="../../../.gitbook/assets/2.18-k8s-namespaces-add-summary.png" alt=""><figcaption></figcaption></figure>
 

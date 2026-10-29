@@ -24,4 +24,3 @@ Installation instructions can differ between platforms. Please choose your platf
 {% content-ref url="wcs.md" %}
 [wcs.md](wcs.md)
 {% endcontent-ref %}
-

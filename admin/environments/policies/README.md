@@ -24,7 +24,7 @@ From the menu, under **Environment-related**, select **Policies** then select **
 
 There are multiple policy types available, depending on the environment type you are managing and the kind of access you want to enforce. You can use the search function or filter by environment type or policy category to narrow down the list.
 
-After selecting a policy type, select **Continue** at the bottom of the page to open the configuration form. The fields shown will vary depending on the policy you are creating, each form guides you through creation of that specific policy. Select an environment type below for more details on creating the policy.&#x20;
+After selecting a policy type, select **Continue** at the bottom of the page to open the configuration form. The fields shown will vary depending on the policy you are creating, each form guides you through creation of that specific policy. Select an environment type below for more details on creating the policy.
 
 {% content-ref url="kubernetes-policies/" %}
 [kubernetes-policies](kubernetes-policies/)
@@ -36,7 +36,7 @@ After selecting a policy type, select **Continue** at the bottom of the page to 
 
 ## View policy details
 
-From the menu, under **Environment-related**, select **Policies**. The policies page lists all existing policies. To see the details of an existing policy, click on the policy name.&#x20;
+From the menu, under **Environment-related**, select **Policies**. The policies page lists all existing policies. To see the details of an existing policy, click on the policy name.
 
 <figure><img src="../../../.gitbook/assets/2.39-policy-details.gif" alt=""><figcaption></figcaption></figure>
 
@@ -55,25 +55,25 @@ The **Info** tab displays general information about the policy setup.
 
 <figure><img src="../../../.gitbook/assets/2.39-policy-info.png" alt=""><figcaption></figcaption></figure>
 
-### Attachments&#x20;
+### Attachments
 
-The attachment tab displays details about the environments attached to the policy. Within this view, you can filter on status, or use the search bar to find specific environments.&#x20;
+The attachment tab displays details about the environments attached to the policy. Within this view, you can filter on status, or use the search bar to find specific environments.
 
 {% hint style="info" %}
 If a policy attachment fails, it is automatically retried every 15 minutes. If the **Message** field shows “Failed to install/upgrade Helm chart”, the issue is at the environment level and must be resolved before the policy can be applied.
 {% endhint %}
 
-| Field/Option       | Overview                                                                                                                                                       |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Environment groups | <p>The environments applied to this policy.<br>Add environments to the policy by selecting groups from the dropdown menu.</p>                                  |
-| Environment name   | The name of the environment within the attached group. Click the environment name to open the environment dashboard.                                           |
-| Status             | A status indicating whether the policy is successfully applied to the environment. If the status is not Active, the policy will not apply to the environment.  |
-| Message            | If the status is not Active, the displayed message explains why the policy could not be applied to the environment.                                            |
-| Last Attempt       | The date and time the policy was last applied or attempted to be applied to the environment.                                                                   |
+| Field/Option       | Overview                                                                                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Environment groups | <p>The environments applied to this policy.<br>Add environments to the policy by selecting groups from the dropdown menu.</p>                                 |
+| Environment name   | The name of the environment within the attached group. Click the environment name to open the environment dashboard.                                          |
+| Status             | A status indicating whether the policy is successfully applied to the environment. If the status is not Active, the policy will not apply to the environment. |
+| Message            | If the status is not Active, the displayed message explains why the policy could not be applied to the environment.                                           |
+| Last Attempt       | The date and time the policy was last applied or attempted to be applied to the environment.                                                                  |
 
 <figure><img src="../../../.gitbook/assets/2.39-policy-attachments-1.png" alt=""><figcaption></figcaption></figure>
 
-### Settings&#x20;
+### Settings
 
 The Settings tab shows the policy configuration. Settings vary by policy type. Details for each policy type are covered in the [Kubernetes policies](kubernetes-policies/) and [Docker policies](docker-policies/) sections of this documentation.
 

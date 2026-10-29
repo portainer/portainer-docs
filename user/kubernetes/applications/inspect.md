@@ -41,7 +41,7 @@ Shows information about application-related events.
 
 ## YAML tab
 
-This displays the YAML generated from the application deployment, and lets you edit the YAML for an application directly. Updates to your manifest made here are applied using the Kubernetes `patch` mechanism.&#x20;
+This displays the YAML generated from the application deployment, and lets you edit the YAML for an application directly. Updates to your manifest made here are applied using the Kubernetes `patch` mechanism.
 
 {% hint style="info" %}
 Editing your YAML through this section is only available in Portainer Business Edition.

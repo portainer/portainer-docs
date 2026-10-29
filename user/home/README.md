@@ -20,10 +20,10 @@ You can view the build information for your Portainer installation by clicking o
 
 <figure><img src="../../.gitbook/assets/2.32-user-home-buildinfo.png" alt=""><figcaption></figcaption></figure>
 
-In the box that appears you can see the server version, database version, build number and image tag, as well as the versions of the compilation tools, dependencies, and environment variables used to build Portainer.&#x20;
+In the box that appears you can see the server version, database version, build number and image tag, as well as the versions of the compilation tools, dependencies, and environment variables used to build Portainer.
 
 ## Getting help
 
-From any page in the Portainer UI, you can click on the **question mark icon** in the top right next to your username to access the related section of this documentation. You can also click the **robot icon** to start a conversation with our [AI chatbot](https://portainer.io/ask-the-ai).&#x20;
+From any page in the Portainer UI, you can click on the **question mark icon** in the top right next to your username to access the related section of this documentation. You can also click the **robot icon** to start a conversation with our [AI chatbot](https://portainer.io/ask-the-ai).
 
 <figure><img src="../../.gitbook/assets/2.25.0-icons.png" alt=""><figcaption></figcaption></figure>

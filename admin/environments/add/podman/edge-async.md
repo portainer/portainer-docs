@@ -15,11 +15,11 @@ For a technical summary of how the Edge Agent works, refer to our [advanced docu
 
 ## Async mode vs Standard mode
 
-The Portainer Edge Agent can be deployed in two different modes - standard mode and async mode. In standard mode, we provide the ability to connect to the remote Edge Agent through a tunnel that is established on-demand from the Edge Agent to the Portainer Server, letting you interact directly with the environment in real time.&#x20;
+The Portainer Edge Agent can be deployed in two different modes - standard mode and async mode. In standard mode, we provide the ability to connect to the remote Edge Agent through a tunnel that is established on-demand from the Edge Agent to the Portainer Server, letting you interact directly with the environment in real time.
 
-In async mode, this tunnel connectivity is not available. Instead, we provide the ability to browse snapshots of the remote environment, allowing you to see the state of the Edge Agent's environment based on a recent state capture sent through to the Portainer Server, as well as use this snapshot to perform actions on the remote environment.&#x20;
+In async mode, this tunnel connectivity is not available. Instead, we provide the ability to browse snapshots of the remote environment, allowing you to see the state of the Edge Agent's environment based on a recent state capture sent through to the Portainer Server, as well as use this snapshot to perform actions on the remote environment.
 
-Async mode has been developed to use very small amounts of data and as such is suitable for environments that have limited or intermittent connectivity as well as connections with limited data caps, for example mobile networks.&#x20;
+Async mode has been developed to use very small amounts of data and as such is suitable for environments that have limited or intermittent connectivity as well as connections with limited data caps, for example mobile networks.
 
 {% hint style="info" %}
 Edge Agent Async mode is only available in Portainer Business Edition.
@@ -50,13 +50,13 @@ Select **Podman** then click **Start Wizard**. Then select the **Edge Agent Asyn
 | Name                     | Enter a name for your environment.                                                                                                                                               |
 | Portainer API server URL | Enter the URL and port of your Portainer Server instance as it will be seen from your Edge environment. If using a FQDN, ensure that DNS is properly configured to provide this. |
 
-As an optional step you can expand the **More settings** section and adjust the **Ping**, **Snapshot** and **Command** intervals for the environment - this defines how often this Edge Agent will check in with the Portainer Server for status updates, snapshot updates and to see if there are new pending commands to run, respectively. The default for each is once a minute, but the defaults can be adjusted in the [Edge Compute settings](../../../settings/edge.md#async-check-in-intervals).&#x20;
+As an optional step you can expand the **More settings** section and adjust the **Ping**, **Snapshot** and **Command** intervals for the environment - this defines how often this Edge Agent will check in with the Portainer Server for status updates, snapshot updates and to see if there are new pending commands to run, respectively. The default for each is once a minute, but the defaults can be adjusted in the [Edge Compute settings](../../../settings/edge.md#async-check-in-intervals).
 
 You can also categorize the environment by adding it to a [group](../../groups.md) or [tagging](../../tags.md) it for better searchability.
 
 <figure><img src="../../../../.gitbook/assets/2.18-environments-add-docker-edge-async-settings.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Create**. If you are pre-staging your Edge Agent deployment, you can now retrieve the join token for use in your deployment.&#x20;
+When you're ready, click **Create**. If you are pre-staging your Edge Agent deployment, you can now retrieve the join token for use in your deployment.
 
 <figure><img src="../../../../.gitbook/assets/2.18-environments-add-docker-edge-jointoken.png" alt=""><figcaption></figcaption></figure>
 
@@ -72,12 +72,12 @@ Otherwise, complete the new fields that have appeared using the table below as a
 Copy the generated command and run the command on your Edge environment to complete the installation.
 
 {% hint style="warning" %}
-If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by specifying an AGENT\_SECRET environment variable when starting the Portainer Server container) you **must** remember to explicitly provide the same secret to your Edge Agent in the same way (as an environment variable) when deploying your Edge Agent, for example by adding the following to your `docker run` command: \
+If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by specifying an AGENT\_SECRET environment variable when starting the Portainer Server container) you **must** remember to explicitly provide the same secret to your Edge Agent in the same way (as an environment variable) when deploying your Edge Agent, for example by adding the following to your `docker run` command:\
 `-e AGENT_SECRET=yoursecret`
 {% endhint %}
 
 {% hint style="info" %}
-If Podman on the environment you're deploying the Edge Agent to has the Podman volume path at a non-standard location (instead of `/var/lib/containers/storage/volumes`) you will need to adjust the volume mount in the deployment command to suit.&#x20;
+If Podman on the environment you're deploying the Edge Agent to has the Podman volume path at a non-standard location (instead of `/var/lib/containers/storage/volumes`) you will need to adjust the volume mount in the deployment command to suit.
 
 For example, if your volume path was `/srv/data/podman`, you would change the line in the command to:
 

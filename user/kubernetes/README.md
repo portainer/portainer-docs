@@ -51,4 +51,3 @@ The following sections describe how to manage a Kubernetes environment using men
 {% content-ref url="cluster/" %}
 [cluster](cluster/)
 {% endcontent-ref %}
-

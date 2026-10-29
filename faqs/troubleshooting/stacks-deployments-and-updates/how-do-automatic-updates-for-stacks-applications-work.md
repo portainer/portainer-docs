@@ -10,7 +10,7 @@ metaLinks:
 When you configure automatic updates for a [stack](../../../user/docker/stacks/) or [application](../../../user/kubernetes/applications/manifest/) deployed from a Git repository, you can choose for Portainer to either poll the Git repository for updates on a defined interval, or use a webhook to trigger a check on-demand (generally as part of an automated process). Regardless of the method you choose, the following events occur when a check is performed:
 
 * Portainer connects to the remote Git repository and retrieves the hash of the latest commit.
-* If the latest commit hash matches the hash that Portainer has in its database for the stack/application, Portainer assumes that the stack/application is up to date, and no further action is taken.&#x20;
+* If the latest commit hash matches the hash that Portainer has in its database for the stack/application, Portainer assumes that the stack/application is up to date, and no further action is taken.
 
 {% hint style="info" %}
 Portainer stores the commit hash of the latest deploy of a stack/application in its database. This is first populated on initial deployment and updated on each deployment.

@@ -18,4 +18,3 @@ From the menu select **Custom Templates** then click **Delete** next to the temp
 When the confirmation message appears, click **Remove**.
 
 <figure><img src="../../../.gitbook/assets/2.15-k8s-templates-remove-confirm.png" alt=""><figcaption></figcaption></figure>
-

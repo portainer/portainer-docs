@@ -37,13 +37,13 @@ When adding an allowed image, you can choose the scope:
 Restricting container images requires Kubernetes 1.30 or later.
 {% endhint %}
 
-The **Allowed sources** list is pre-populated with common images, including those required for Portainer to operate.&#x20;
+The **Allowed sources** list is pre-populated with common images, including those required for Portainer to operate.
 
-| Field/Option        | Overview                                                                                                                                                                                                                                                                            |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Restrict sources    | When enabled, Portainer creates a Kubernetes `ValidatingAdmissionPolicy` to ensure only container images from approved registries can be deployed. Any Pod that references an image from an unapproved source will be rejected at admission time and will not be created.           |
-| Registry URL prefix | <p>The container image or <a href="../../../../user/docker/host/registries.md">registry</a> that is permitted for deployment. </p><p>Enter the registry hostname and optional path prefix. Only images whose fully-qualified reference starts with this prefix will be allowed.</p> |
-| Scope               | Specify whether the allowed access should apply cluster-wide (Global) or be restricted to selected [namespaces](../../../../user/kubernetes/namespaces/) only.                                                                                                                      |
+| Field/Option        | Overview                                                                                                                                                                                                                                                                           |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Restrict sources    | When enabled, Portainer creates a Kubernetes `ValidatingAdmissionPolicy` to ensure only container images from approved registries can be deployed. Any Pod that references an image from an unapproved source will be rejected at admission time and will not be created.          |
+| Registry URL prefix | <p>The container image or <a href="../../../../user/docker/host/registries.md">registry</a> that is permitted for deployment.</p><p>Enter the registry hostname and optional path prefix. Only images whose fully-qualified reference starts with this prefix will be allowed.</p> |
+| Scope               | Specify whether the allowed access should apply cluster-wide (Global) or be restricted to selected [namespaces](../../../../user/kubernetes/namespaces/) only.                                                                                                                     |
 
 <figure><img src="../../../../.gitbook/assets/2.39-container-image-restrictions.png" alt=""><figcaption></figcaption></figure>
 

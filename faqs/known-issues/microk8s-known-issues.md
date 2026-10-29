@@ -45,7 +45,7 @@ There may be a chance that a cluster could have nodes not upgraded and left with
 
 When attempting to upgrade from 1.25 to 1.26 on Hetzner environments, the upgrade reports successful but the cluster remains at 1.25. The upgrade logs show errors similar to the following:
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 We recommend either remaining at 1.25 or upgrading manually.
 

@@ -10,7 +10,7 @@ metaLinks:
 Namespaces used to be called 'resource pools' prior to Portainer CE 2.6.0.
 {% endhint %}
 
-In Kubernetes, a single physical cluster can support multiple virtual clusters. These are known as namespaces.&#x20;
+In Kubernetes, a single physical cluster can support multiple virtual clusters. These are known as namespaces.
 
 <figure><img src="../../../.gitbook/assets/2.24.0-kubernetes-namespaces-list.png" alt=""><figcaption></figcaption></figure>
 

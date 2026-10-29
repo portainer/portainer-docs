@@ -12,7 +12,7 @@ The Edge Groups feature lets you group together Edge environments either by manu
 This functionality requires you to [enable Edge Compute](../../admin/settings/edge.md) features.
 {% endhint %}
 
-From the menu select **Edge Groups** then click **Add Edge group**.&#x20;
+From the menu select **Edge Groups** then click **Add Edge group**.
 
 <figure><img src="../../.gitbook/assets/2.15-edge-groups.gif" alt=""><figcaption></figcaption></figure>
 

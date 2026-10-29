@@ -7,13 +7,13 @@ metaLinks:
 
 # How can I use my custom certificate authority (CA) with Portainer?
 
-If you need to reference external resources (for example, a custom template URL) that use certificates signed by a custom certificate authority (CA), you may run into issues with Portainer out of the box.&#x20;
+If you need to reference external resources (for example, a custom template URL) that use certificates signed by a custom certificate authority (CA), you may run into issues with Portainer out of the box.
 
 To resolve this you will need to inject your CA certificate into the Portainer containers (both the Portainer Server and any Portainer Agent containers) by first adding it to the CA store on your hosts then mounting that CA store into the Portainer containers.
 
 #### Adding your CA to the local store
 
-The procedure for this may differ depending on the underlying OS of your host. For most Linux distributions you can use the `ca-certificates` package to manage your local CA store. In Ubuntu for example, you can follow [this guide](https://ubuntu.com/server/docs/install-a-root-ca-certificate-in-the-trust-store).&#x20;
+The procedure for this may differ depending on the underlying OS of your host. For most Linux distributions you can use the `ca-certificates` package to manage your local CA store. In Ubuntu for example, you can follow [this guide](https://ubuntu.com/server/docs/install-a-root-ca-certificate-in-the-trust-store).
 
 Remember you will need to do this on all hosts that run either Portainer or the Portainer Agent.
 

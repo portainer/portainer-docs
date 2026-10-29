@@ -6,7 +6,7 @@ metaLinks:
 
 # Edge Stacks
 
-Edge Stacks is a feature that lets you deploy applications to multiple environments from a single page, regardless of their current state.&#x20;
+Edge Stacks is a feature that lets you deploy applications to multiple environments from a single page, regardless of their current state.
 
 {% hint style="info" %}
 This functionality requires you to [enable Edge Compute](../../../admin/settings/edge.md) features.
@@ -99,12 +99,12 @@ For an exponential rollout, choose the **Exponential rollout** option and specif
 
 <figure><img src="../../../.gitbook/assets/2.19-edge-stacks-parallel-exponential.png" alt=""><figcaption></figcaption></figure>
 
-When using parallel rollouts, you can also specify the **Timeout** (in minutes) before Portainer considers the update to have failed, as well as the **Update delay** (in minutes) between each group of updates are applied.&#x20;
+When using parallel rollouts, you can also specify the **Timeout** (in minutes) before Portainer considers the update to have failed, as well as the **Update delay** (in minutes) between each group of updates are applied.
 
-In addition, you can define the **Update failure action** that will be taken if the update fails:&#x20;
+In addition, you can define the **Update failure action** that will be taken if the update fails:
 
-* **Continue** will move on to the next group of devices to update.&#x20;
-* **Pause** will halt the update process but will keep the update applied to any devices that have already been deployed to.&#x20;
+* **Continue** will move on to the next group of devices to update.
+* **Pause** will halt the update process but will keep the update applied to any devices that have already been deployed to.
 * **Rollback** will halt the update process and roll back the update on devices already updated.
 
 <figure><img src="../../../.gitbook/assets/2.19-edge-stacks-parallel-failureaction.png" alt=""><figcaption></figcaption></figure>

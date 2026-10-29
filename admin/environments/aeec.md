@@ -11,11 +11,11 @@ This section allows you to create customized scripts to quickly onboard a number
 First, select the type of Edge Agent deployment: **Edge Agent Standard** or **Edge Agent Async**.
 
 {% hint style="info" %}
-The Portainer Edge Agent can be deployed in two different modes - **standard mode** and **async mode**. In standard mode, we provide the ability to connect to the remote Edge Agent through a tunnel that is established on-demand from the Edge Agent to the Portainer Server, letting you interact directly with the environment in real time.&#x20;
+The Portainer Edge Agent can be deployed in two different modes - **standard mode** and **async mode**. In standard mode, we provide the ability to connect to the remote Edge Agent through a tunnel that is established on-demand from the Edge Agent to the Portainer Server, letting you interact directly with the environment in real time.
 
-In async mode, this tunnel connectivity is not available. Instead, we provide the ability to browse snapshots of the remote environment, allowing you to see the state of the Edge Agent's environment based on a recent state capture sent through to the Portainer Server, as well as use this snapshot to perform actions on the remote environment.&#x20;
+In async mode, this tunnel connectivity is not available. Instead, we provide the ability to browse snapshots of the remote environment, allowing you to see the state of the Edge Agent's environment based on a recent state capture sent through to the Portainer Server, as well as use this snapshot to perform actions on the remote environment.
 
-Async mode has been developed to use very small amounts of data and as such is suitable for environments that have limited or intermittent connectivity as well as connections with limited data caps, for example mobile networks.&#x20;
+Async mode has been developed to use very small amounts of data and as such is suitable for environments that have limited or intermittent connectivity as well as connections with limited data caps, for example mobile networks.
 {% endhint %}
 
 Your **Edge key** will also be shown here if you need to access it directly.

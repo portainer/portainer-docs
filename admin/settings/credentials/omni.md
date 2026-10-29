@@ -23,8 +23,6 @@ Next click the **Create Service Account** button and complete the fields as per 
 | Expiration Days | Set the number of days you want the service account to be valid for.                                                |
 | Role            | Select the `Admin` role from the dropdown. Portainer needs Admin privileges in order to create and manage clusters. |
 
-
-
 <figure><img src="../../../.gitbook/assets/2.26-settings-credentials-omni-service-webui-2.png" alt=""><figcaption></figcaption></figure>
 
 Once you have entered all the details click the **Create Service Account** button. The service account will be crated and you'll be shown the **Service account key**. Make a note of this key as it will not be shown again.

@@ -53,4 +53,3 @@ You can also configure webhooks for your services.
 {% content-ref url="webhooks.md" %}
 [webhooks.md](webhooks.md)
 {% endcontent-ref %}
-

@@ -9,7 +9,7 @@ metaLinks:
 
 When performing actions within Portainer that involve interacting with the Docker engine (for example creating or updating a container) you may run into issues where Portainer returns a 500 error message when performing the action. This can make it difficult to understand the underlying cause of the error.
 
-Improving the way that we display error messages that are passed to us from the containerization engine is something that is a high priority for us, so you can expect to see this coming in future releases. In the meantime, you can dig into the detail in many cases by first opening your web browser's developer console and then performing the action that results in the error.&#x20;
+Improving the way that we display error messages that are passed to us from the containerization engine is something that is a high priority for us, so you can expect to see this coming in future releases. In the meantime, you can dig into the detail in many cases by first opening your web browser's developer console and then performing the action that results in the error.
 
 To open the developer tools:
 

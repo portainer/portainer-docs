@@ -133,7 +133,7 @@ In addition, we require two custom policies, which you should create and assign 
 }
 ```
 
-Once you have your IAM user set up, log in to the AWS portal with the IAM user and in the top right menu - the user's name - select **Security Credentials**. Expand the **Access keys** section and click **Create New Access Key**.&#x20;
+Once you have your IAM user set up, log in to the AWS portal with the IAM user and in the top right menu - the user's name - select **Security Credentials**. Expand the **Access keys** section and click **Create New Access Key**.
 
 Copy the **Access key ID** and the **Secret access key** that are generated.
 

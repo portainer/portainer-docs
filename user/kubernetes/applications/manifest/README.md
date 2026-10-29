@@ -24,4 +24,3 @@ From the menu, select **Applications** and click **Create from code**. Next, cho
 {% content-ref url="helm.md" %}
 [helm.md](helm.md)
 {% endcontent-ref %}
-

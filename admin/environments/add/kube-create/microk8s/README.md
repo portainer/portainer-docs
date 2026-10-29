@@ -27,7 +27,7 @@ In order to connect to and deploy MicroK8s and the Portainer Agent on your exist
 
 By necessity, our MicroK8s deployment makes some configuration decisions for you.
 
-* The Portainer Agent is deployed using NodePort, on port `30778`.&#x20;
+* The Portainer Agent is deployed using NodePort, on port `30778`.
 * There may be some configuration differences between versions of MicroK8s deployed. One notable difference is from version 1.25, if the `ingress` addon is installed an additional ingress named `nginx` is configured. This does not occur on version 1.24. We recommend referring to the [MicroK8s release notes](https://microk8s.io/docs/release-notes) for further detail.
 * The deployment does not configure any storage classes on your cluster (unless the `hostpath-storage` addon is installed, though this is not recommended for multiple node clusters). Due to the vast amount of potential storage class configurations, this is not something we currently provide automatically. We recommend configuring a storage class once provision completes.
 

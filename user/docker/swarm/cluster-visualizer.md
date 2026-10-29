@@ -21,7 +21,7 @@ View the details about the cluster including the number of nodes, services and t
 
 ### Options
 
-**Only display running tasks** filters the task list in the visualizer to only include running tasks.&#x20;
+**Only display running tasks** filters the task list in the visualizer to only include running tasks.
 
 **Display node labels** toggles the display of labels on the nodes in the visualizer.
 
@@ -31,7 +31,6 @@ Use this option to define the refresh rate of the visualizer (the default is eve
 
 ## Cluster visualizer
 
-The **Cluster visualizer** section gives you a visual representation of the nodes in your cluster and the tasks on each node.&#x20;
+The **Cluster visualizer** section gives you a visual representation of the nodes in your cluster and the tasks on each node.
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_swarm_cluster_info.png" alt=""><figcaption></figcaption></figure>
-

@@ -20,7 +20,7 @@ Once the Edge Agent has been set up and deployed on the remote device, the devic
 
 ## Associate your device
 
-To associate an existing Edge Agent deployment with OpenAMT, from the Home page click the **Associate with OpenAMT** button.&#x20;
+To associate an existing Edge Agent deployment with OpenAMT, from the Home page click the **Associate with OpenAMT** button.
 
 <figure><img src="../../.gitbook/assets/2.18-home-openamt-associate-button.png" alt=""><figcaption></figcaption></figure>
 
@@ -28,7 +28,7 @@ Check the box next to the device(s) you want to associate, then click the **Asso
 
 <figure><img src="../../.gitbook/assets/2.18-home-openamt-associate-dialog.png" alt=""><figcaption></figcaption></figure>
 
-Once activation completes you will be returned to the Home page.&#x20;
+Once activation completes you will be returned to the Home page.
 
 ## Interact with your device
 

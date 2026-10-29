@@ -6,7 +6,7 @@ metaLinks:
 
 # Add a new environment
 
-Portainer can manage multiple environments in addition to the local environment on which it is installed.&#x20;
+Portainer can manage multiple environments in addition to the local environment on which it is installed.
 
 You can choose to connect to existing environments:
 
@@ -21,4 +21,3 @@ You can also add environments via the Portainer API.
 {% content-ref url="api.md" %}
 [api.md](api.md)
 {% endcontent-ref %}
-

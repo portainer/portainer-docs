@@ -7,7 +7,7 @@ metaLinks:
 
 # Docker Policies
 
-The following section describes the details of creating a policy for Docker, Swarm or Podman environments.&#x20;
+The following section describes the details of creating a policy for Docker, Swarm or Podman environments.
 
 {% content-ref url="rbac-policy.md" %}
 [rbac-policy.md](rbac-policy.md)

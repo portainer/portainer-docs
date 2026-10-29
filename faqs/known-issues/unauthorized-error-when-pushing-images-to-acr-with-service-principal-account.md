@@ -15,7 +15,7 @@ metaLinks:
 
 #### Issue Description
 
-Users are unable to push images to the Azure Container Registry.  The following error appears:
+Users are unable to push images to the Azure Container Registry. The following error appears:
 
 ```
 `Unauthorized: authentication required, visit  for more information."},"error":"unauthorized: authentication required, visit  for more information."}`

@@ -39,7 +39,7 @@ If you want to use the [host management features](../../../../user/docker/host/s
 {% endhint %}
 
 {% hint style="info" %}
-If Podman on the environment you're deploying the Agent to has the Podman volume path at a non-standard location (instead of `/var/lib/containers/storage/volumes`) you will need to adjust the volume mount in the deployment command to suit.&#x20;
+If Podman on the environment you're deploying the Agent to has the Podman volume path at a non-standard location (instead of `/var/lib/containers/storage/volumes`) you will need to adjust the volume mount in the deployment command to suit.
 
 For example, if your volume path was `/srv/data/podman`, you would change the line in the command to:
 

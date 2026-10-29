@@ -19,7 +19,7 @@ In the case of changing the way you connect to an environment (for example by mo
 
 Under **Administration**, navigate to **Environment-related**, then to **Environments**. Select the environment you would like to remove and click **Remove.** The stacks in this environment will become orphaned, and therefore available to be re-associated once you re-add the environment in the next step.
 
-<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}

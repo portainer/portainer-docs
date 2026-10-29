@@ -48,7 +48,7 @@ Information such as the Docker version and the available volume and network plug
 
 ### PCI Devices and Physical Disks
 
-These sections list the available PCI devices and physical disks on the node.&#x20;
+These sections list the available PCI devices and physical disks on the node.
 
 {% hint style="info" %}
 These sections are only visible when [host management features](setup.md#host-and-filesystem) are enabled for the cluster.
@@ -61,4 +61,3 @@ These sections are only visible when [host management features](setup.md#host-an
 Here you'll find details about the node's configuration as part of the cluster. You can view the role, set the availability status of the node, view the current status and apply labels to the node.
 
 <figure><img src="../../../.gitbook/assets/2.15-swarm-nodedetail-detail.png" alt=""><figcaption></figcaption></figure>
-

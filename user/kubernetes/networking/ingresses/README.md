@@ -13,7 +13,7 @@ To view, edit or create ingresses in your environment, expand **Networking** and
 
 <figure><img src="../../../../.gitbook/assets/Ingresses.gif" alt=""><figcaption></figcaption></figure>
 
-All the Ingresses that a user has access to are listed on this page.&#x20;
+All the Ingresses that a user has access to are listed on this page.
 
 <figure><img src="../../../../.gitbook/assets/2.20-kubernetes-networking-ingresses-list.png" alt=""><figcaption></figcaption></figure>
 

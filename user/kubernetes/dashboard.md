@@ -6,7 +6,7 @@ metaLinks:
 
 # Dashboard
 
-The Kubernetes dashboard summarizes your Kubernetes environment and shows the components that make up the environment.&#x20;
+The Kubernetes dashboard summarizes your Kubernetes environment and shows the components that make up the environment.
 
 ## Environment info
 

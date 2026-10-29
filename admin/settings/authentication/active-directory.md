@@ -103,7 +103,7 @@ Configure the group search configurations using the table below as a guide. Clic
 
 ## Auto-populate team admins
 
-If desired, Portainer can configure specified AD groups of users to become Portainer administrators automatically.&#x20;
+If desired, Portainer can configure specified AD groups of users to become Portainer administrators automatically.
 
 To configure this, first click **add group search configuration** and define the **Group Base DN**, **Groups** and **Group Filter** as required. Once done, click the **Fetch Admin Group(s)** button to retrieve the list of groups matching your search configuration.
 

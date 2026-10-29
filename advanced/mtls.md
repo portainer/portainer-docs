@@ -8,7 +8,7 @@ metaLinks:
 
 Mutual TLS (or **mTLS**) is a certificate-based system whereby the client and server (in this case, the Portainer Edge Agent and the Portainer Server) authenticate each other cryptographically via a trusted source (a certificate authority). This can be used as an extra layer of security to protect the communications between the Edge Agent and Portainer. Under this setup, if a third-party system attempts to communicate with the Portainer Server and is not using a certificate signed by the certificate authority it will be rejected.
 
-This article will walk you through the process of deploying the Portainer Server and the Edge Agents with mTLS support.&#x20;
+This article will walk you through the process of deploying the Portainer Server and the Edge Agents with mTLS support.
 
 {% hint style="info" %}
 mTLS support is only available in Portainer Business Edition.
@@ -55,7 +55,7 @@ This will start Portainer using your provided CA and certificates.
 
 #### Docker Swarm
 
-To add mTLS certificates to Portainer Server on Docker Swarm during installation, we recommend adding the necessary files as secrets and then referencing those secrets within the YAML used to deploy Portainer.&#x20;
+To add mTLS certificates to Portainer Server on Docker Swarm during installation, we recommend adding the necessary files as secrets and then referencing those secrets within the YAML used to deploy Portainer.
 
 First, upload your CA certificate (`mtlsca.crt`), server certificate (`mtlsserver.crt`) and server key (`mtlsserver.key`) into a directory that will be referenced by the secret creation. In this example we assume your certificates are located at `/root/certs`. Once you have uploaded the files, create your secrets as follows:
 
@@ -166,7 +166,7 @@ When deploying an Edge Agent you will be provided with a command to run by the P
 
 On your Docker host, upload your CA certificate (`mtlsca.crt`), client certificate (`client.crt`) and client key (`client.key`) into a directory that will be bind mounted into the Edge Agent container. In this example we assume your certificates are located at `/root/certs`.
 
-Once the certificates are in place and the secrets created, you can begin to set up your Edge Agent within the Portainer UI.&#x20;
+Once the certificates are in place and the secrets created, you can begin to set up your Edge Agent within the Portainer UI.
 
 {% hint style="warning" %}
 When doing so, remember to use the domain (or subdomain) you chose for mTLS usage (and that the server certificate was issued for) as the Portainer API server URL and tunnel address (if appropriate).
@@ -197,7 +197,7 @@ Run the command to deploy your Edge Agent with mTLS support.
 
 ### Docker Swarm
 
-To add mTLS certificates to the Edge Agent, we recommend adding the necessary files as secrets and then referencing those secrets within the YAML used to deploy Portainer.&#x20;
+To add mTLS certificates to the Edge Agent, we recommend adding the necessary files as secrets and then referencing those secrets within the YAML used to deploy Portainer.
 
 First, upload your CA certificate (`mtlsca.crt`), client certificate (`client.crt`) and client key (`client.key`) into a directory that will be referenced by the secret creation. In this example we assume your certificates are located at `/root/certs`. Once you have uploaded the files, create your secrets as follows:
 

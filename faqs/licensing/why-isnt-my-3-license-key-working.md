@@ -13,7 +13,7 @@ When attempting to enter your license key into Portainer Business Edition, that 
 
 #### Cause
 
-This issue arises when using versions of Portainer 2.18.3 or older. These previous versions do not support the 3-  license key type.&#x20;
+This issue arises when using versions of Portainer 2.18.3 or older. These previous versions do not support the 3- license key type.
 
 #### Fix
 

@@ -13,6 +13,3 @@ Learn about the [architecture](architecture.md) first, get familiar with the [pr
 {% content-ref url="architecture.md" %}
 [architecture.md](architecture.md)
 {% endcontent-ref %}
-
-
-

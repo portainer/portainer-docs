@@ -10,7 +10,7 @@ From the menu select **Services**, select the service whose logs you want to vie
 
 <figure><img src="../../../.gitbook/assets/Service-logs-new.gif" alt=""><figcaption></figcaption></figure>
 
-Here you can see the contents of the Docker logs for your service.&#x20;
+Here you can see the contents of the Docker logs for your service.
 
 <table><thead><tr><th width="236">Field/Option</th><th>Overview</th></tr></thead><tbody><tr><td>Search</td><td>Enter a string to search the log output. You can see the number of results for your search and move through each result with the up and down arrows.</td></tr><tr><td>Filter search results</td><td>When enabled, display only the log lines that contain your search string.</td></tr><tr><td>Copy</td><td>Click this button to copy the currently displayed log lines to your clipboard.</td></tr><tr><td>Download logs</td><td>Click this button to download your log.</td></tr></tbody></table>
 

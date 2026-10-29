@@ -11,7 +11,7 @@ Before you can add your Azure credentials to Portainer, you will need to retriev
 
 ## Configuring your Azure account
 
-Log in to the Azure portal. First, click **Subscriptions** and note down your **Subscription ID**.&#x20;
+Log in to the Azure portal. First, click **Subscriptions** and note down your **Subscription ID**.
 
 Then click the menu in the top left and select **Azure Active Directory**. Click **App registrations** in the left hand menu and select **New Registration**.
 
@@ -19,7 +19,7 @@ Enter a name for your registration that makes sense to you and leave the other f
 
 Next click on **Certificates & secrets** in the left hand menu. Click **New client secret** and enter a name for your secret. Select an expiry date for the secret and click **Add**. Copy the **Client Secret (value)** - you don't need the secret ID.
 
-Now we need to set permissions. Click the menu in the top left, then **Resource Groups** and select your resource group. If you don't already have one, you can create a new one.&#x20;
+Now we need to set permissions. Click the menu in the top left, then **Resource Groups** and select your resource group. If you don't already have one, you can create a new one.
 
 Click on **Access control (IAM)** in the left hand menu then click **Add role assignment**. We recommend selecting the `Contributor` role, but if you want to specify the exact set of permissions they are as follows:
 

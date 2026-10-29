@@ -29,4 +29,3 @@ You can also view a list of the images that are currently available in an enviro
 {% content-ref url="export.md" %}
 [export.md](export.md)
 {% endcontent-ref %}
-

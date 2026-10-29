@@ -7,7 +7,7 @@ metaLinks:
 
 # Add a new application using a form
 
-There are two ways to add a new application: manually by using a form, or automatically by [using code](manifest/). This article explains how to add an application using a form.&#x20;
+There are two ways to add a new application: manually by using a form, or automatically by [using code](manifest/). This article explains how to add an application using a form.
 
 From the menu select **Applications** then click **Add with form**.
 

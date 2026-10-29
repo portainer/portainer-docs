@@ -71,7 +71,7 @@ If your application is configured for GitOps updates and you make changes locall
 
 ### Deploy to
 
-Once you have selected a **Namespace** for your Helm deployment you will need to specify a **Release name** for your deployment.&#x20;
+Once you have selected a **Namespace** for your Helm deployment you will need to specify a **Release name** for your deployment.
 
 <figure><img src="../../../../.gitbook/assets/2.35-Git-Helm-Deploy-to.png" alt=""><figcaption></figcaption></figure>
 
@@ -113,8 +113,8 @@ When a Helm chart source is chosen for the first time, it may take some time to 
 
 <figure><img src="../../../../.gitbook/assets/2.35-Helm-repo-deploy-to.png" alt=""><figcaption></figcaption></figure>
 
-Once you have selected a chart, Portainer will import the `values.yaml` file for the latest version of the chart and display it in the right hand pane as a reference. You can make any necessary customizations to the `values.yaml` file in the left-hand pane. You can also choose to deploy a different version of the chart by choosing the version from the **Version** dropdown. To view a preview of the manifest you will create when you deploy the Helm chart, click the **Manifest preview** heading.&#x20;
+Once you have selected a chart, Portainer will import the `values.yaml` file for the latest version of the chart and display it in the right hand pane as a reference. You can make any necessary customizations to the `values.yaml` file in the left-hand pane. You can also choose to deploy a different version of the chart by choosing the version from the **Version** dropdown. To view a preview of the manifest you will create when you deploy the Helm chart, click the **Manifest preview** heading.
 
 Once you've made your customizations, click **Install** to begin the deployment.
 
-<figure><img src="../../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>

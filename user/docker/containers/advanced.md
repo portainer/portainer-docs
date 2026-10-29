@@ -43,7 +43,7 @@ Here you can configure volume mappings for your container. You can map to [exist
 
 ## Network
 
-In this section you can configure the network settings for the container.&#x20;
+In this section you can configure the network settings for the container.
 
 {% hint style="warning" %}
 Note that you cannot assign a static IP address to a container that is in Docker's default `bridge` network. This is a Docker limitation rather than Portainer. If you need to specify the IP for your container then you will need to [create a custom network](../networks/add.md) and assign the container to it.

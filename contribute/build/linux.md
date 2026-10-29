@@ -17,7 +17,7 @@ We tested these instructions on Ubuntu 18.04.2 LTS. For instructions that relate
 * [Docker CE](https://docs.docker.com/install/) is the Docker application that runs on your machine to enable the use of Docker features. The latest version is not a requirement for this development stack, however we recommend staying up to date with the latest improvements and security fixes.
 * ​[pnpm](https://pnpm.io/) is a package manager for installing new software packages on your system, and is used to run the Portainer development environment.
 * [Node.JS](https://nodejs.org/en/download/) is a JavaScript package used when building applications that leverage networking, such as Portainer. Version 22 is required.
-* [Golang](https://golang.org/dl/) is the open source language that we use to build the majority of Portainer software.&#x20;
+* [Golang](https://golang.org/dl/) is the open source language that we use to build the majority of Portainer software.
 * [Wget](https://www.gnu.org/software/wget/manual/) is a package used to retrieve files using common internet protocols such as HTTP and FTP.
 
 ## Part 1: Installing Docker

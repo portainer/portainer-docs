@@ -20,7 +20,7 @@ On a multi-node environment, the image you import will only be available on the 
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_images_upload_file.png" alt=""><figcaption></figcaption></figure>
 
-When importing an image you can also select to tag the image using a registry you have preconfigured in Portainer. Select the **Registry** from the dropdown and enter the image name and tag.&#x20;
+When importing an image you can also select to tag the image using a registry you have preconfigured in Portainer. Select the **Registry** from the dropdown and enter the image name and tag.
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_images_upload_file_tag_image.png" alt=""><figcaption></figcaption></figure>
 
@@ -33,4 +33,3 @@ If you want to tag the image locally rather than in a registry, use **Advanced m
 <figure><img src="../../../.gitbook/assets/2.15-docker_images_import_simple.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Upload** to import your image.
-

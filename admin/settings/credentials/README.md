@@ -14,7 +14,7 @@ The Shared credentials feature is only available in Portainer Business Edition.
 
 <figure><img src="../../../.gitbook/assets/2.18-settings-sharedcreds.png" alt=""><figcaption></figcaption></figure>
 
-To add a new set of credentials, click the **Add credentials** button.&#x20;
+To add a new set of credentials, click the **Add credentials** button.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-09-15 at 10.30.00 AM.png" alt=""><figcaption></figcaption></figure>
 

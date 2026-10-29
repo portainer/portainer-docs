@@ -7,7 +7,7 @@ metaLinks:
 
 # Add a ConfigMap
 
-From the menu select **ConfigMaps & Secrets**, ensure the **ConfigMaps** tab is selected, then click **Add with form**.&#x20;
+From the menu select **ConfigMaps & Secrets**, ensure the **ConfigMaps** tab is selected, then click **Add with form**.
 
 {% hint style="info" %}
 ConfigMaps can also be added [using a manifest](../applications/manifest/) by clicking **Create from manifest**.
@@ -17,11 +17,11 @@ ConfigMaps can also be added [using a manifest](../applications/manifest/) by cl
 
 Define the ConfigMap, using the table below as a guide.
 
-| Field/Option | Overview                                                                                                                               |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Namespace    | Select the namespace where the ConfigMap will be saved.                                                                                |
-| Name         | Give the ConfigMap a descriptive name.                                                                                                 |
-| Annotations  | You can add annotations to your ConfigMap as required by clicking **Add annotation** and filling in the **Key** and **Value** fields.  |
+| Field/Option | Overview                                                                                                                              |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Namespace    | Select the namespace where the ConfigMap will be saved.                                                                               |
+| Name         | Give the ConfigMap a descriptive name.                                                                                                |
+| Annotations  | You can add annotations to your ConfigMap as required by clicking **Add annotation** and filling in the **Key** and **Value** fields. |
 
 <figure><img src="../../../.gitbook/assets/2.19-kubernetes-configurations-configmaps-add.png" alt=""><figcaption></figcaption></figure>
 

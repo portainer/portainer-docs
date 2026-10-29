@@ -26,6 +26,4 @@ From this page you can add a new container or remove existing containers:
 [remove.md](remove.md)
 {% endcontent-ref %}
 
-
-
 <br>

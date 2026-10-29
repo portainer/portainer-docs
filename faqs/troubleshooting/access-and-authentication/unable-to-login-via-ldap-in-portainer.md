@@ -33,17 +33,17 @@ Use a local Portainer admin account to access the Portainer web interface.
 {% step %}
 **Update LDAP Credentials**
 
-&#x20;• Navigate to **Settings** > **Authentication** in the Portainer interface.
+• Navigate to **Settings** > **Authentication** in the Portainer interface.
 
-&#x20;• Update the **LDAP password** with the correct credentials for the LDAP account.
+• Update the **LDAP password** with the correct credentials for the LDAP account.
 {% endstep %}
 
 {% step %}
 **Verify Connectivity**
 
-&#x20;• Perform a **Connectivity Check** to confirm the LDAP configuration is valid.
+• Perform a **Connectivity Check** to confirm the LDAP configuration is valid.
 
-&#x20;• Ensure the test passes before saving changes.
+• Ensure the test passes before saving changes.
 {% endstep %}
 
 {% step %}

@@ -36,8 +36,6 @@ Define or paste the contents of your manifest file into the web editor. When dep
 You can search within the web editor at any time by pressing `Ctrl-F` (or `Cmd-F` on Mac).
 {% endhint %}
 
-
-
 <figure><img src="../../../.gitbook/assets/2.19-kubernetes-templates-add-web.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Create custom template**.
@@ -45,8 +43,6 @@ When you're ready, click **Create custom template**.
 ### Method 2: Upload
 
 If you have a manifest file locally, you can upload it directly to Portainer. Click **Select file** to browse to the file.
-
-
 
 <figure><img src="../../../.gitbook/assets/2.19-kubernetes-templates-add-upload.png" alt=""><figcaption></figcaption></figure>
 

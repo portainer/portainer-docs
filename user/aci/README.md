@@ -19,4 +19,3 @@ The following sections describe how to manage an Azure ACI environment using men
 {% content-ref url="containers/" %}
 [containers](containers/)
 {% endcontent-ref %}
-

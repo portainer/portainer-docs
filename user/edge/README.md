@@ -35,4 +35,3 @@ This functionality requires you to [enable Edge Compute](../../admin/settings/ed
 {% content-ref url="waiting-room.md" %}
 [waiting-room.md](waiting-room.md)
 {% endcontent-ref %}
-

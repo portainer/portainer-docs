@@ -32,7 +32,7 @@ When you're finished, click **Create the volume**.
 In Portainer, you can mount an NFS volume to persist the data of your containers.
 {% endhint %}
 
-From the menu select **Volumes** then click **Add volume**.&#x20;
+From the menu select **Volumes** then click **Add volume**.
 
 <figure><img src="../../../.gitbook/assets/Add-volume.gif" alt=""><figcaption></figcaption></figure>
 
@@ -99,7 +99,7 @@ When you're finished, click **Create the volume**.
 
 ## Adding a tmpfs volume
 
-From the menu select **Volumes** then click **Add volume**.&#x20;
+From the menu select **Volumes** then click **Add volume**.
 
 <figure><img src="../../../.gitbook/assets/Add-volume.gif" alt=""><figcaption></figcaption></figure>
 
@@ -124,4 +124,3 @@ When you're finished, click **Create the volume**. The volume can now be attache
 Once attached, you can confirm that the tmpfs volume has been mounted correctly within the container:
 
 <figure><img src="../../../.gitbook/assets/2.15-docker_volumes_volume_console_exec_tmpfs.png" alt=""><figcaption></figcaption></figure>
-

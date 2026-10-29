@@ -84,7 +84,7 @@ You can also toggle the stack [webhook](webhooks.md) and retrieve the webhook UR
 
 You can choose to **Prune services** if you have made changes that remove some services from the stack.
 
-<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 When you have finished making changes, click **Update the stack**.
 

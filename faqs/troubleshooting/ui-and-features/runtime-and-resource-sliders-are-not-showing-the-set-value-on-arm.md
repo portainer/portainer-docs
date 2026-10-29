@@ -9,7 +9,7 @@ metaLinks:
 
 #### Issue Description
 
-When you try to "Duplicate/Edit" a container, the tab Runtime & Resources shows the already selected value for CPU limit slider, but Memory reservation and Memory limit sliders are always reset to zero.&#x20;
+When you try to "Duplicate/Edit" a container, the tab Runtime & Resources shows the already selected value for CPU limit slider, but Memory reservation and Memory limit sliders are always reset to zero.
 
 #### Cause
 

@@ -73,4 +73,3 @@ To schedule a rollback, Portainer must have a snapshot of all the environments y
 <figure><img src="../../.gitbook/assets/2.32-environments-rollback-schedule-create.png" alt=""><figcaption></figcaption></figure>
 
 When you're ready, click **Create Schedule** to schedule the rollback. You will be returned to the Update & Rollback page where you can check the status of your scheduled rollback.
-

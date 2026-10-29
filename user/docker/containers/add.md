@@ -61,4 +61,3 @@ Once complete, set any advanced options (see below) then click **Deploy the cont
 Choose from a [range of options](advanced.md) to customize the deployment.
 
 <figure><img src="../../../.gitbook/assets/2.15-containers-advanced.png" alt=""><figcaption></figcaption></figure>
-

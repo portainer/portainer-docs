@@ -8,7 +8,7 @@ metaLinks:
 # Setup
 
 {% hint style="warning" %}
-If access to an environment is being managed by a Kubernetes setup [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.&#x20;
+If access to an environment is being managed by a Kubernetes setup [policy](../../../admin/environments/policies/), access can not be changed or modified from this view as the policy access takes precedence.
 {% endhint %}
 
 You can make changes to your environment's Kubernetes configuration by expanding **Cluster** from the menu then selecting **Setup**.
@@ -95,7 +95,7 @@ Enabling this feature lets you allocate more resources to namespaces than are ph
 ### Enable features using the metrics API
 
 {% hint style="info" %}
-&#x20;Ensure that the Kubernetes [metrics server](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/#metrics-server) or [Prometheus](https://github.com/kubernetes-sigs/prometheus-adapter) is running inside your cluster.
+Ensure that the Kubernetes [metrics server](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/#metrics-server) or [Prometheus](https://github.com/kubernetes-sigs/prometheus-adapter) is running inside your cluster.
 {% endhint %}
 
 Enabling this feature will allow users to use specific features that leverage the metrics API component, such as the memory and CPU usage graphs at the cluster and node level. If Portainer detects you are using a metrics server and is able to connect, this will default to on.

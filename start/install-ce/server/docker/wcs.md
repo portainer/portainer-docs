@@ -65,7 +65,7 @@ By default, Portainer generates and uses a self-signed SSL certificate to secure
 {% endhint %}
 
 {% hint style="warning" %}
-If you see an error message similar to:&#x20;
+If you see an error message similar to:
 
 `"\\.\pipe\dockerDesktopEngine" includes invalid characters for a local volume name`
 

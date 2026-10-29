@@ -43,7 +43,7 @@ As an optional step you can expand the **More settings** section and adjust the 
 
 <figure><img src="../../../../.gitbook/assets/2.15-edge_agent_more_settings.png" alt=""><figcaption></figcaption></figure>
 
-When you're ready, click **Create**. If you are pre-staging your Edge Agent deployment, you can now retrieve the join token for use in your deployment.&#x20;
+When you're ready, click **Create**. If you are pre-staging your Edge Agent deployment, you can now retrieve the join token for use in your deployment.
 
 <figure><img src="../../../../.gitbook/assets/2.18-environments-add-docker-edge-jointoken.png" alt=""><figcaption></figcaption></figure>
 
@@ -59,12 +59,12 @@ Otherwise, complete the new fields that have appeared using the table below as a
 Copy the generated command and run the command on your Edge environment to complete the installation.
 
 {% hint style="warning" %}
-If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by specifying an AGENT\_SECRET environment variable when starting the Portainer Server container) you **must** remember to explicitly provide the same secret to your Edge Agent in the same way (as an environment variable) when deploying your Edge Agent, for example by adding the following to your `podman run` command: \
+If you have set a custom `AGENT_SECRET` on your Portainer Server instance (by specifying an AGENT\_SECRET environment variable when starting the Portainer Server container) you **must** remember to explicitly provide the same secret to your Edge Agent in the same way (as an environment variable) when deploying your Edge Agent, for example by adding the following to your `podman run` command:\
 `-e AGENT_SECRET=yoursecret`
 {% endhint %}
 
 {% hint style="info" %}
-If Podman on the environment you're deploying the Edge Agent to has the Podman volume path at a non-standard location (instead of `/var/lib/containers/storage/volumes`) you will need to adjust the volume mount in the deployment command to suit.&#x20;
+If Podman on the environment you're deploying the Edge Agent to has the Podman volume path at a non-standard location (instead of `/var/lib/containers/storage/volumes`) you will need to adjust the volume mount in the deployment command to suit.
 
 For example, if your volume path was `/srv/data/podman`, you would change the line in the command to:
 

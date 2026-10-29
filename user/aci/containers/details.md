@@ -12,7 +12,7 @@ To view the details of an existing container, from the **Container instances** l
 
 ### Container
 
-The Container Instance details page displays information about the selected container under the **Container** tab.&#x20;
+The Container Instance details page displays information about the selected container under the **Container** tab.
 
 <figure><img src="../../../.gitbook/assets/2.22.0-aci-container-details.png" alt=""><figcaption></figcaption></figure>
 

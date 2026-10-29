@@ -149,7 +149,7 @@ For more detail on how this feature works, have a look at [this article](../../.
 This feature is only available in [Portainer Business Edition](https://www.portainer.io/business-upsell?from=ca-file).
 {% endhint %}
 
-With relative path volumes enabled, you can also toggle **Always clone git repository.**  Enabling this option ensures that the Git repository is always cloned for any relative paths defined in your Compose files. The referenced content is then pulled directly from your Git repository to the environment where the stack is deployed.
+With relative path volumes enabled, you can also toggle **Always clone git repository.** Enabling this option ensures that the Git repository is always cloned for any relative paths defined in your Compose files. The referenced content is then pulled directly from your Git repository to the environment where the stack is deployed.
 
 ### GitOps Edge configurations
 
@@ -169,7 +169,7 @@ If you have previously enabled [Relative path volumes](add.md#relative-path-volu
 If you set both a **Device matching rule** and a **Group matching rule**, the Device matching rule will take precedence. If the Device matching rule cannot be matched (in other words, if a file or folder name matching the device name is then unable to be located), Portainer will fall back to the Group matching rule instead.
 {% endhint %}
 
-Within your Git repository at the **Directory** you define, you should have file names or folder names (depending on your **Matching rule** selection) that correspond to the Portainer Edge IDs or Edge Group for the devices you will be deploying the stack to. You can reference this ID in your stack files with the `PORTAINER_EDGE_ID` and `PORTAINER_EDGE_GROUP` environment variables.&#x20;
+Within your Git repository at the **Directory** you define, you should have file names or folder names (depending on your **Matching rule** selection) that correspond to the Portainer Edge IDs or Edge Group for the devices you will be deploying the stack to. You can reference this ID in your stack files with the `PORTAINER_EDGE_ID` and `PORTAINER_EDGE_GROUP` environment variables.
 
 {% hint style="info" %}
 You can find the Edge IDs for your Edge environments under **Environments**, select the environment, and note the **Edge identifier** value in the **Edge information** box. It will look like the following:
@@ -301,12 +301,12 @@ For an exponential rollout, choose the **Exponential rollout** option and specif
 
 <figure><img src="../../../.gitbook/assets/2.19-edge-stacks-parallel-exponential.png" alt=""><figcaption></figcaption></figure>
 
-When using parallel rollouts, you can also specify the **Timeout** (in minutes) before Portainer considers the update to have failed, as well as the **Update delay** (in minutes) between each group of updates are applied.&#x20;
+When using parallel rollouts, you can also specify the **Timeout** (in minutes) before Portainer considers the update to have failed, as well as the **Update delay** (in minutes) between each group of updates are applied.
 
-In addition, you can define the **Update failure action** that will be taken if the update fails:&#x20;
+In addition, you can define the **Update failure action** that will be taken if the update fails:
 
-* **Continue** will move on to the next group of devices to update.&#x20;
-* **Pause** will halt the update process but will keep the update applied to any devices that have already been deployed to.&#x20;
+* **Continue** will move on to the next group of devices to update.
+* **Pause** will halt the update process but will keep the update applied to any devices that have already been deployed to.
 * **Rollback** will halt the update process and roll back the update on devices already updated.
 
 <figure><img src="../../../.gitbook/assets/2.19-edge-stacks-parallel-failureaction.png" alt=""><figcaption></figcaption></figure>
