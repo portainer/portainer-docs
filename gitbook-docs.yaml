@@ -25,7 +25,6 @@ site:
           key: space-3
           title: 3.0 STS
           path: sts
-          hidden: true
           content:
             directory: ./3.0-sts
     - type: section
