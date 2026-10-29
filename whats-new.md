@@ -20,9 +20,16 @@ The [home page](user/home/) has been refreshed as part of Portainer's ongoing UI
 
 ### Portainer Add-ons ![](.gitbook/assets/button_be.png)
 
-Portainer now supports installable [add-ons](admin/add-ons/) - purpose-built tools that extend Portainer and run alongside it in your local Kubernetes cluster. Each add-on deploys as a Helm release and appears in the sidebar switcher; admins can install, upgrade, restart, and uninstall add-ons from a central catalog, monitor health via Resources, Events, and Logs tabs, and control team access. The first add-on, [Portainer-Run](https://portainer.ai/), is available now.
+[Add-ons](admin/add-ons/) are purpose-built tools that extend Portainer and run alongside it in the Kubernetes cluster where Portainer is installed. Each add-on is deployed as a Helm release and appears in the sidebar switcher.
 
-<figure><img src=".gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+From a central catalog, administrators can install, upgrade, restart, and uninstall add-ons, and control which teams have access to each one. Each add-on has **Resources**, **Events**, and **Logs** tabs for monitoring its health.
+
+The following add-ons are available:
+
+* [**Portainer-Run**](https://docs.portainer.ai/portainer-run) and [**Portainer-Command**](https://docs.portainer.ai/portainer-command) are generally available (GA).
+* [**Portainer-IDP**](https://docs.portainer.io/portainer-idp) and [**Portainer-Migrate**](https://docs.portainer.io/portainer-migrate) are in Pre-release, we'd love for you to try them and tell us what you think, but please don't use them in production environments.
+
+<figure><img src=".gitbook/assets/2.45.2-add-ons.png" alt=""><figcaption></figcaption></figure>
 
 ### New policies ![](.gitbook/assets/button_be.png)
 
@@ -44,7 +51,7 @@ GitOps management is now centralized and easier to configure end to end:
 * A new guided [GitOps workflow creation](user/app-delivery/workflows/) flow lets you configure a source, stack file, deployment targets, environment variables, registry settings, and rollout strategy (including parallel batches with automatic pause or rollback) in one operation.
 * A new [Workflows dashboard](user/app-delivery/workflows/) gives a unified view of Docker, Edge, and Kubernetes workloads deployed from Git, so you can assess deployment health and jump to any stack that needs attention.
 
-<figure><img src=".gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 ### Docker image cleanup ![](.gitbook/assets/button_be.png)
 
@@ -62,7 +69,7 @@ Keeping Docker environments tidy is easier with two new capabilities: [manual im
 
 Kubernetes environments with detected GPU nodes now display a dedicated [GPU view](user/kubernetes/gpu.md) with three tables: a GPU summary (capacity, allocatable, allocated, and available counts, plus node health), a GPU Nodes table, and a GPU Workloads table showing per-pod GPU requests and scheduling status.
 
-<figure><img src=".gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 ### New ways to back up Portainer ![](.gitbook/assets/button_be.png)
 
@@ -80,7 +87,7 @@ You can now [onboard KubeSolo edge environments](admin/environments/add/add-a-ku
 
 Administrators can now open a root shell directly on any cluster node from the [Nodes table](user/kubernetes/cluster/details/#nodes), without needing SSH. Disabled by default; enable per cluster in Cluster → Setup → [Security](user/kubernetes/cluster/setup.md#security), or centrally through a [Kubernetes Security Policy](admin/environments/policies/kubernetes-policies/kubernetes-security-policy.md).
 
-<figure><img src=".gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 ### SSRF mitigation ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 
@@ -92,7 +99,7 @@ Portainer now includes [built-in SSRF mitigation](admin/settings/general.md#ssrf
 
 The new [Recommendations](admin/recommendations.md) view surfaces actionable suggestions when Portainer detects environment issues or configuration gaps, each with a direct action to take you straight to the relevant area for resolution.
 
-<figure><img src=".gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
 ### Default Service Account imagePullSecret management ![](.gitbook/assets/button_be.png) ![](.gitbook/assets/button_ce.png)
 

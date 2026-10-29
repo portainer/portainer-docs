@@ -27,7 +27,7 @@ Choose the right YAML manifest based on your original deployment:
 Use the following `kubectl` command to update a NodePort deployment:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer.yaml
 ```
 {% endtab %}
 
@@ -35,7 +35,7 @@ kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer.ya
 Use the following `kubectl` command to update a Load Balancer deployment:
 
 ```
-kubectl apply -n portainer -f https://downloads.portainer.io/ee-sts/portainer-lb.yaml
+kubectl apply -n portainer -f https://downloads.portainer.io/ee-lts/portainer-lb.yaml
 ```
 {% endtab %}
 {% endtabs %}

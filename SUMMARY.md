@@ -189,7 +189,7 @@
     * [Add a new workflow](user/app-delivery/workflows/add-a-new-workflow.md)
     * [Manage a workflow](user/app-delivery/workflows/manage-a-workflow.md)
   * [Sources](user/app-delivery/sources/README.md)
-    * [Add a new Git Repository source](user/app-delivery/sources/add-a-new-git-repository-source.md)
+    * [Add a new Git Repository source](user/app-delivery/sources/git.md)
 * [Edge Compute](user/edge/README.md)
   * [Edge Groups](user/edge/groups.md)
   * [Edge Stacks](user/edge/stacks/README.md)
@@ -302,7 +302,7 @@
   * [Shared credentials](admin/settings/credentials/README.md)
     * [Add Sidero Omni credentials](admin/settings/credentials/omni.md)
     * [Add SSH credentials](admin/settings/credentials/ssh.md)
-    * [Add Git credentials](admin/settings/credentials/add-git-credentials.md)
+    * [Add Git credentials](admin/settings/credentials/git.md)
   * [Edge Compute](admin/settings/edge.md)
 
 ## Frequently Asked Questions <a href="#faqs" id="faqs"></a>
@@ -320,6 +320,7 @@
   * [Why shouldn’t I give all Portainer users admin access?](faqs/getting-started/why-shouldnt-i-give-all-portainer-users-admin-access.md)
   * [Why do we recommend using the Edge Agent instead of the traditional Agent?](faqs/getting-started/why-do-we-recommend-using-the-edge-agent-instead-of-the-traditional-agent.md)
   * [What scopes are required for GitHub, GitLab and Bitbucket tokens?](faqs/getting-started/what-scopes-are-required-for-github-gitlab-and-bitbucket-tokens.md)
+  * [What are the requirements for installing add-ons?](faqs/getting-started/add-on-requirements.md)
 * [Installing](faqs/installing/README.md)
   * [How do I install Portainer?](faqs/installing/how-do-i-install-portainer.md)
   * [Can I run Portainer on my configuration?](faqs/installing/can-i-run-portainer-on-my-configuration.md)
@@ -416,6 +417,7 @@
   * [Certificates and security](faqs/troubleshooting/certificates-and-security/README.md)
     * [How to enable/disable image Up-to-date indicator](faqs/troubleshooting/certificates-and-security/how-to-enable-disable-image-up-to-date-indicator.md)
     * [How can I use my custom certificate authority (CA) with Portainer?](faqs/troubleshooting/certificates-and-security/how-can-i-use-my-custom-certificate-authority-ca-with-portainer.md)
+    * [eMudhra certificate distrust in Portainer 2.45.3 LTS](faqs/troubleshooting/certificates-and-security/emudhra-certificate-distrust.md)
   * [Registry and image management](faqs/troubleshooting/registry-and-image-management/README.md)
     * [Why is my node count higher than it should be?](faqs/troubleshooting/registry-and-image-management/why-is-my-node-count-higher-than-it-should-be.md)
     * [I am unable to push an image to an AWS Elastic Container Registry](faqs/troubleshooting/registry-and-image-management/i-am-unable-to-push-an-image-to-an-aws-elastic-container-registry.md)
@@ -479,7 +481,8 @@
 
 ## Get More Help <a href="#help" id="help"></a>
 
-* [Portainer Academy](https://academy.portainer.io)
+* [Learn Portainer](https://learn.portainer.io/)
+* [KubeSchool](https://kubeschool.portainer.io/)
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
 * [GitHub](https://github.com/orgs/portainer/discussions)
 * [Slack](https://portainer.io/slack)
