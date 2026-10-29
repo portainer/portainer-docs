@@ -68,13 +68,13 @@ We aim to release a new version every month, with a new LTS release every 4 mont
 
 We intend to release a new version every month, with a new LTS release (in bold below) every 4 months.
 
-| Release     | Release Date        | End of support/maintenance |
-| ----------- | ------------------- | -------------------------- |
-| 3.1 STS     | Early November 2026 | December 2026              |
-| 3.2 STS     | Late November 2026  | December 2026              |
-| **3.3 LTS** | **December 2026**   | **September 2027**         |
-| 3.4 STS     | January 2026        | February 2027              |
-| 3.5 STS     | February 2027       | March 2027                 |
+| Release     | Release Date      | End of support/maintenance |
+| ----------- | ----------------- | -------------------------- |
+| 3.1 STS     | November 2026     | December 2026              |
+| 3.2 STS     | November 2026     | December 2026              |
+| **3.3 LTS** | **December 2026** | **September 2027**         |
+| 3.4 STS     | January 2026      | February 2027              |
+| 3.5 STS     | February 2027     | March 2027                 |
 
 <figure><img src="../.gitbook/assets/2.45-release-schedue-from3.0.png" alt=""><figcaption></figcaption></figure>
 

@@ -54,6 +54,6 @@ Add a [D2K environment](admin/environments/add/add-a-d2k-environment.md) to run 
 
 The KubeSolo (Edge) wizard can now [install KubeSolo on many machines at once over SSH](admin/environments/add/add-a-kubesolo-edge-environment/install-edge-agent-async-on-kubesolo.md#install-kubesolo-on-many-machines), instead of running `kubesoloctl` by hand on each one. Portainer tests every machine first - connectivity, sudo access, architecture, and more - groups any failures by cause with a suggested fix, then installs KubeSolo only on the machines that passed, each becoming its own environment automatically. Air-gapped machines are supported with an uploaded offline install bundle.
 
-Every KubeSolo environment also gets a new KubeSolo page showing its running version and configuration, and removing a KubeSolo environment now offers the option to uninstall it from the machine at the same time.
+Every KubeSolo environment also gets a [new KubeSolo page](user/kubernetes/cluster/kubesolo.md) showing its running version and configuration, and removing a KubeSolo environment now offers the option to uninstall it from the machine at the same time.
 
 <figure><img src=".gitbook/assets/3.0-kubesolo-many-machines-async.png" alt=""><figcaption></figcaption></figure>
