@@ -53,7 +53,7 @@ This section contains other assorted environment-specific settings.
 
 <figure><img src="../../../.gitbook/assets/2.18-swarm-setup-other.png" alt=""><figcaption></figcaption></figure>
 
-| Option                                                                    | Overview                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Show GPU in the UI                                                        | GPU functionality is currently not available in Docker Swarm environments so this toggle is disabled.                                                                                                                  |
-| Show an image(s) up to date indicator for Stacks, Services and Containers | <p>Toggle on to enable the <a href="../services/">new image notification</a> feature for this environment. Toggle off to disable the feature.</p> |
+| Option                                                                    | Overview                                                                                                                        |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Show GPU in the UI                                                        | GPU functionality is currently not available in Docker Swarm environments so this toggle is disabled.                           |
+| Show an image(s) up to date indicator for Stacks, Services and Containers | Toggle on to enable the [new image notification](../services/) feature for this environment. Toggle off to disable the feature. |

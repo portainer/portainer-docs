@@ -102,11 +102,11 @@ Environments in the Unassigned group are not subject to any governance policy an
 
 <details>
 
-<summary>No automated backup configured </summary>
+<summary>No automated backup configured</summary>
 
 **Severity:** Warning
 
-**Trigger condition:** Portainer has no automated backup scheduled.&#x20;
+**Trigger condition:** Portainer has no automated backup scheduled.
 
 A scheduled backup protects your Portainer data against accidental loss and corruption.
 

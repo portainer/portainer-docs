@@ -13,7 +13,7 @@ Currently, only custom registry policies can be created. Future improvements to 
 | Name                      | Define a name for this policy.                                                                                                                                                                                            |
 | Environment groups        | <p>Select one or more environment <a href="../../groups.md">groups</a> from the dropdown menu.<br>If the selected group is already included in an existing policy, a warning icon will appear next to the group name.</p> |
 | Select registry           | ​Select a [registry](../../../../user/kubernetes/cluster/registries.md) from the dropdown menu. ​                                                                                                                         |
-| Select users and/or teams | Select one or more [user](../../../user/users.md) or [team](../../../user/teams/) that you want to have access to the selected registry.                                                                                  |
+| Select users and/or teams | Select one or more [user](../../../user/users/) or [team](../../../user/teams/) that you want to have access to the selected registry.                                                                                    |
 
 <figure><img src="../../../../.gitbook/assets/2.40.0-registry-policy-configuration.png" alt=""><figcaption></figcaption></figure>
 

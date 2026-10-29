@@ -10,9 +10,13 @@ Give the namespace a descriptive **name**. As an optional step you can add annot
 
 ### Resource quota
 
+{% hint style="info" %}
+The limit you set here must fit within what the cluster actually has available. This check takes into account every resource quota in the cluster, including quotas that were not created by Portainer. This only applies when the cluster's resource over-commit option is off.
+{% endhint %}
+
 You can assign a quota by toggling **Resource assignment** on, then setting resource limits like how much memory and CPU will be assigned.
 
-<figure><img src="../../../.gitbook/assets/2.20-kubernetes-namespaces-add-resourcequota.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3.0-add-namespace-resource-limits.png" alt=""><figcaption></figcaption></figure>
 
 ### Load balancers
 

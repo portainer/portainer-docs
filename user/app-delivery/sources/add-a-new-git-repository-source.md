@@ -8,11 +8,11 @@ Portainer's Git deployment functionality does not currently support the use of G
 Symlinks within a Git repository are not supported. Repositories containing symlinks will not be deployed successfully.
 {% endhint %}
 
-To add a new source from a Git Repository (GitHub, GitLab, Bitbucket, etc.), select **Sources** in the left hand menu, select **Add new** at the top right of the page, then fill in the form using the details below as a guide.&#x20;
+To add a new source from a Git Repository (GitHub, GitLab, Bitbucket, etc.), select **Sources** in the left hand menu, select **Add new** at the top right of the page, then fill in the form using the details below as a guide.
 
 <figure><img src="../../../.gitbook/assets/2.45-add-a-source.gif" alt=""><figcaption></figcaption></figure>
 
-As you enter your details, your connection will be checked and reported at the bottom of the form.&#x20;
+As you enter your details, your connection will be checked and reported at the bottom of the form.
 
 |                                  |                                                                                                                                                                                                                                                                                                                  |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,7 +30,7 @@ As you enter your details, your connection will be checked and reported at the b
 
 <figure><img src="../../../.gitbook/assets/2.44-create-git-source.png" alt=""><figcaption></figcaption></figure>
 
-Select **Continue** when you have completed your details and have a successful connection.&#x20;
+Select **Continue** when you have completed your details and have a successful connection.
 
 Finally, configure who can use the source or edit the source's connection details. Choose one of the following access levels:
 

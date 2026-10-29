@@ -14,6 +14,10 @@ Regardless of the deployment method, you can [edit an application's YAML directl
 
 If the application was [deployed from a Git repository](manifest/#repository) you can edit any [Git settings](manifest/create.md#repository) that you set on the application deployment.
 
+{% hint style="info" %}
+If this application is deployed by a [GitOps workflow](../../app-delivery/workflows/), it also shows a **Managed by Workflow** card, and its **Remove** action is not available - see [Workflow-managed resources](../../app-delivery/workflows/manage-a-workflow.md).
+{% endhint %}
+
 <figure><img src="../../../.gitbook/assets/2.41-edit-apps-deployed-from-git.png" alt=""><figcaption></figcaption></figure>
 
 If you want to redeploy, select the **Redeploy** tickbox before saving. If you're simply updating the repository settings and don't need to redeploy, click **Save settings**.

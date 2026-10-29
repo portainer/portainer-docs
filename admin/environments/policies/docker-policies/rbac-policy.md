@@ -12,7 +12,7 @@ Currently, only custom RBAC policies can be created. Future improvements to the 
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name               | Define a name for this policy.                                                                                                                                                                                            |
 | Environment groups | <p>Select one or more environment <a href="../../groups.md">groups</a> from the dropdown menu.<br>If the selected group is already included in an existing policy, a warning icon will appear next to the group name.</p> |
-| Users/teams        | Select one or more [users](../../../user/users.md) or [teams](../../../user/teams/) from the dropdown menu.                                                                                                               |
+| Users/teams        | Select one or more [users](../../../user/users/) or [teams](../../../user/teams/) from the dropdown menu.                                                                                                                 |
 | Role               | Select the role you want to assign to the users or teams.                                                                                                                                                                 |
 
 <figure><img src="../../../../.gitbook/assets/2.40.0-RBAC-policy-configuration.png" alt=""><figcaption></figcaption></figure>

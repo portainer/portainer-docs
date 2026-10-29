@@ -21,7 +21,7 @@ Within your logs, you can find the setup token by searching for the following li
 
 The setup token is one-time use, you do not need to store or remember it after setup is complete.
 
-If the token is missing or incorrect, setup will be refused with an error directing you back to your server logs. Simply retrieve the token from your logs and try again. Note that the user must be created within 5 minutes [to ensure a secure setup](your-portainer-instance-has-timed-out-for-security-purposes-error-fix.md).&#x20;
+If the token is missing or incorrect, setup will be refused with an error directing you back to your server logs. Simply retrieve the token from your logs and try again. Note that the user must be created within 5 minutes [to ensure a secure setup](your-portainer-instance-has-timed-out-for-security-purposes-error-fix.md).
 
 ### How can I skip or customize the setup token?
 

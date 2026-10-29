@@ -1,4 +1,4 @@
-# Install Portainer BE
+# Install Portainer
 
 {% hint style="info" %}
 These installation instructions are for Portainer Business Edition (BE).

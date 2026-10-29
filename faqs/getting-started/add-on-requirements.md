@@ -3,29 +3,20 @@
 [Add-ons](../../admin/add-ons/) can only be installed when Portainer runs on Kubernetes, with cluster-admin access, outside FIPS mode, and under its default Helm release name and namespace. Some add-ons also need additional configuration in Portainer before they will work. This page lists the requirements that apply to all add-ons.
 
 {% hint style="warning" %}
-Add-ons marked as **Beta** may change in future releases and should not be used in production environments.
+Add-ons marked as **Pre-release** may change in future releases and should not be used in production environments.
+
+Add-ons marked as **Alpha** are in early development. They may change significantly or be removed in future releases, and should not be used in production environments.
 {% endhint %}
 
-### Requirements for all add-ons <a href="#requirements-for-all-add-ons" id="requirements-for-all-add-ons"></a>
+## Requirements for all add-ons <a href="#requirements-for-all-add-ons" id="requirements-for-all-add-ons"></a>
 
 Before you can install any add-on, your Portainer server must meet the following requirements. Only Portainer administrators can install, uninstall, or repair add-ons.
 
 #### Portainer must run on Kubernetes <a href="#portainer-must-run-on-kubernetes" id="portainer-must-run-on-kubernetes"></a>
 
-Add-ons are installed into the Kubernetes cluster that Portainer itself runs on. If Portainer runs on Docker or Docker Swarm, the add-on list still displays, but installation is unavailable.
+Add-ons are installed into the Kubernetes cluster that Portainer itself runs on. If Portainer runs on Docker or Docker Swarm, the add-on list still displays, but installation is unavailable.&#x20;
 
-#### The add-on secret key must be available (Portainer 3.0 and later) <a href="#the-add-on-secret-key-must-be-available-portainer-30-and-later" id="the-add-on-secret-key-must-be-available-portainer-30-and-later"></a>
-
-The `--addons-secret-key-name` flag must point to a file that exists. This flag is separate from `--secret-key-name`, and Portainer does not fall back to the main secret key if the add-on key is missing.
-
-The simplest way to meet this requirement is to reuse your existing database encryption key. Point `--addons-secret-key-name` at the same key file that `--secret-key-name` uses, so no new secret or volume mount is needed.
-
-If you installed Portainer using the Helm chart, add the flag to the `feature.flags` value. If you already set other flags in `feature.flags`, include them as well, or they will be removed:
-
-```
-helm upgrade portainer portainer/portainer -n portainer --reuse-values \
-  --set feature.flags="--addons-secret-key-name=<path-to-key-file>"
-```
+***
 
 #### Portainer must have cluster-admin access <a href="#portainer-must-have-cluster-admin-access" id="portainer-must-have-cluster-admin-access"></a>
 
@@ -33,9 +24,13 @@ Portainer installs add-ons using Helm, running as Portainer's in-cluster Service
 
 If you installed Portainer using the official Helm chart, set `localMgmt=true` to create this binding.
 
+***
+
 #### Portainer must not run in FIPS mode <a href="#portainer-must-not-run-in-fips-mode" id="portainer-must-not-run-in-fips-mode"></a>
 
 Add-ons are not available when Portainer runs in FIPS mode, and there is no option to enable them.
+
+***
 
 #### Portainer must use the default release name, namespace, and ports <a href="#the-add-on-secret-key-must-be-available-portainer-30-and-later" id="the-add-on-secret-key-must-be-available-portainer-30-and-later"></a>
 
@@ -53,15 +48,86 @@ Could not check setup status — Unauthorized
 
 To fix it, reinstall Portainer using the default release name, namespace, and ports.
 
+***
+
 #### Only one Portainer server per cluster can install add-ons <a href="#only-one-portainer-server-per-cluster-can-install-add-ons" id="only-one-portainer-server-per-cluster-can-install-add-ons"></a>
 
 Each add-on is installed into a namespace named `portainer-addon-<id>`, based on the add-on rather than on the Portainer server that installed it. If two Portainer servers on the same cluster install add-ons, they compete for the same namespaces and Helm release names.
 
 A common symptom is a running `portainer-addon-*` namespace for an add-on that Portainer shows as not installed. This happens because each Portainer server tracks installation status in its own database.
 
-### Do I need to change the add-on catalog URL? <a href="#do-i-need-to-change-the-add-on-catalog-url" id="do-i-need-to-change-the-add-on-catalog-url"></a>
+***
 
-In most cases, no. When the Add-on **Catalog URL** field is empty, Portainer uses its own published catalog, which is the correct choice for almost all deployments. You can find this setting under **Administration** > **Settings** > **General** > **Add-on settings**.
+## Additional requirements for specific add-ons
+
+Each add-on has its own setup step in its interface. The requirements below are the Portainer-side prerequisites that apply in addition to the requirements for all add-ons.
+
+### Portainer-Command
+
+Portainer-Command needs a credential configured on its settings page before it can create sessions. See the [Portainer-Command documentation](https://docs.portainer.ai/portainer-command/initial-configuration) for details.&#x20;
+
+Portainer-Command also runs its own Postgres database in its add-on namespace. Include this database in your resource planning and backup strategy.
+
+***
+
+### Portainer-IDP
+
+{% hint style="info" %}
+Portainer embeds the Edge Compute addresses in each Edge key when it creates the environment. It doesn't read them again afterwards. If you change the addresses later, existing Edge environments keep the old values, and you must recreate them for the change to take effect.
+{% endhint %}
+
+In the add-on, you must provide:
+
+* An [Edge Admin API key](../../user/account-settings.md#access-tokens).
+* A Git credential encryption key.
+
+In Portainer, you must have:
+
+1. [Edge Compute features enabled](../../admin/settings/edge.md).
+2. Valid Edge Compute server addresses. Set the **Portainer API server URL** and **Tunnel server address** to addresses that the Edge agent can resolve from its own network location. Do not use `localhost`. Inside an agent container, `localhost` refers to the agent itself, not the Portainer server.&#x20;
+3. An [Edge environment on Kubernetes](../../admin/environments/add/kubernetes/edge.md) with an associated agent. A local Kubernetes environment is not a valid deployment target for Portainer-IDP.
+4. An [Edge group](../../user/edge/groups.md) that contains that environment. If no Edge groups exist, the deployment target list is empty.
+
+Each user must also add a Git personal access token, which Portainer-IDP uses for their commit identity.
+
+***
+
+### Portainer-Migrate
+
+**To install**
+
+* The Kubernetes cluster that hosts the add-on must run Kubernetes 1.21 or later. The add-on image is `portainer/portainer-migrate`. For air-gapped installs, you can point the chart at a mirror of this image.
+* The add-on's backend must be able to reach the Portainer API. In most setups it discovers the address by itself, and the **Pre-flight** check reports the result. If discovery fails, set the chart value `portainerUrl`. If Portainer uses a self-signed certificate, also set `portainerTlsSkipVerify`.
+
+**To migrate**
+
+* **Source:** a Docker standalone or Docker Swarm environment in Portainer.
+* **Target:** a Kubernetes environment in Portainer. This can be the same cluster that hosts the add-on. The target needs a StorageClass that can provision PersistentVolumeClaims (PVCs) for named volumes.
+* **A Git repository and an access token.** Portainer-Migrate is GitOps-only. It commits the generated manifests to your repository, then creates a Portainer Kubernetes Git stack for each application. The token needs read/write access to repository contents. For a GitHub fine-grained token, this means **Contents: Read and write** and **Metadata: Read**.
+
+**Requirements for some workloads**
+
+The following apply only if your applications use these features:
+
+* **Copying volume data (cold copy):** the target cluster must be able to pull `python:3.13-alpine`, which Portainer-Migrate uses for a short-lived restore init container. Clusters with restricted admission policies may need to allow this image. The source container is stopped briefly while its data is copied.
+* **NFS-backed volumes or bind mounts:** the target nodes must be able to reach the same NFS server, which lets the data stay in place. Bind mounts also need a host path to `server:/export` mapping, which you set in the migration wizard.
+* **Ingress:** the target needs an Ingress controller. Without one, Portainer-Migrate falls back to NodePort Services.
+
+**Permissions**
+
+A non-administrator user needs access to the target namespace and, for Docker sources, permission to stop and start containers.
+
+***
+
+## Some add-on versions need a newer version of Portainer
+
+A chart version can declare that it needs capabilities a given Portainer may not have - for example, a newer way of authenticating the add-on's own calls back to Portainer. Portainer only offers versions it can actually run: an incompatible version never appears in the install wizard's or the Configuration tab's version list, and if every published version is incompatible, the add-on's card in the catalog shows a disabled **Needs a newer Portainer** button instead of **Install**. Upgrading Portainer to a newer release resolves this.
+
+***
+
+## Do I need to change the add-on catalog URL? <a href="#do-i-need-to-change-the-add-on-catalog-url" id="do-i-need-to-change-the-add-on-catalog-url"></a>
+
+In most cases, no. When the Add-on **Catalog URL** field is empty, Portainer uses its own published catalog, which is the correct choice for almost all deployments. You can find this setting under **Administration** > **Settings** > **General** > [**Add-on settings**](../../admin/settings/general.md#add-on-settings).
 
 You might set a custom catalog URL if you need to:
 

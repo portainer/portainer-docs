@@ -7,4 +7,3 @@ These installation instructions are for Portainer Business Edition (BE).
 {% content-ref url="linux.md" %}
 [linux.md](linux.md)
 {% endcontent-ref %}
-

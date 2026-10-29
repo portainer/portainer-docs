@@ -19,5 +19,5 @@ Authentication events are searchable and filterable, and the date and time, orig
 <figure><img src="../../.gitbook/assets/2.15-settings-authlogs-list.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-If you are using a forwarding proxy in front of Portainer we recommend using the `--trusted-proxies` [CLI option](../../advanced/cli.md) to ensure that `X-Forwarded-For` / `Forwarded` headers are read to show the real Origin IP address.&#x20;
+If you are using a forwarding proxy in front of Portainer we recommend using the `--trusted-proxies` [CLI option](../../advanced/cli.md) to ensure that `X-Forwarded-For` / `Forwarded` headers are read to show the real Origin IP address.
 {% endhint %}

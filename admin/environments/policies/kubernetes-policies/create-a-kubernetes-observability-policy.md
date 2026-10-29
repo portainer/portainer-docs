@@ -30,12 +30,12 @@ Enter the following details to connect Portainer to your OneUptime project.
 
 After connecting to your OneUptime instance, choose whether to connect to an existing OneUptime agent or deploy a new one.
 
-#### Connect to existing agents&#x20;
+#### Connect to existing agents
 
-| Field / Option             | Overview                                                                |
-| -------------------------- | ----------------------------------------------------------------------- |
-| Expected namespace         | The namespace that the OneUptime agent was deployed into.               |
-| Expected Helm release name | The Helm release name that was used to deploy your OneUptime instance.  |
+| Field / Option             | Overview                                                               |
+| -------------------------- | ---------------------------------------------------------------------- |
+| Expected namespace         | The namespace that the OneUptime agent was deployed into.              |
+| Expected Helm release name | The Helm release name that was used to deploy your OneUptime instance. |
 
 <figure><img src="../../../../.gitbook/assets/2.44-oneuptime-policy-3.png" alt=""><figcaption></figcaption></figure>
 
@@ -66,10 +66,9 @@ Policy templates come with a pre-configured setup that you can adjust before cre
 ### View your OneUptime logs and metrics
 
 {% hint style="info" %}
-The Portainer environment name must match the cluster name registered in OneUptime for data to be retrieved.&#x20;
+The Portainer environment name must match the cluster name registered in OneUptime for data to be retrieved.
 {% endhint %}
 
-If your Observability policy has been successfully deployed, you can view OneUptime log data and metrics for environments within the policy groups. Access these details from the [namespace details view](../../../../user/kubernetes/namespaces/manage.md).&#x20;
+If your Observability policy has been successfully deployed, you can view OneUptime log data and metrics for environments within the policy groups. Access these details from the [namespace details view](../../../../user/kubernetes/namespaces/manage.md).
 
 <figure><img src="../../../../.gitbook/assets/2.44-oneuptime-policy-logs-metrics.png" alt=""><figcaption></figcaption></figure>
-

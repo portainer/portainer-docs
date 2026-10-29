@@ -36,6 +36,6 @@ Shows Kubernetes events scoped to the Helm release's resources. A warning badge 
 
 ### Logs
 
-A live log viewer. Select a **Pod** from the dropdown (only pods with running containers are listed), then select a **Container** if the pod has more than one. Supports timestamps and tail configuration. **Copy** or **Download logs** using the buttons in the top right corner of the logs.&#x20;
+A live log viewer. Select a **Pod** from the dropdown (only pods with running containers are listed), then select a **Container** if the pod has more than one. Supports timestamps and tail configuration. **Copy** or **Download logs** using the buttons in the top right corner of the logs.
 
 <figure><img src="../../.gitbook/assets/2.44-add-ons-6.png" alt=""><figcaption></figcaption></figure>

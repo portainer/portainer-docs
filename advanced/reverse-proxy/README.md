@@ -58,7 +58,7 @@ Portainer sends a `Content-Security-Policy` header by default (controlled by the
 If you need to embed Portainer in a frame, you will need to disable or customise the CSP header by setting `--no-csp`.
 
 {% hint style="warning" %}
-Disabling CSP reduces your security posture. Only do this if your deployment specifically requires iframe embedding, and ensure other controls are in place.&#x20;
+Disabling CSP reduces your security posture. Only do this if your deployment specifically requires iframe embedding, and ensure other controls are in place.
 {% endhint %}
 
 ### Authentication logs
@@ -76,4 +76,3 @@ We have guides to walk you through deploying Portainer behind a proxy for Traefi
 {% content-ref url="nginx.md" %}
 [nginx.md](nginx.md)
 {% endcontent-ref %}
-

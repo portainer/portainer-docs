@@ -98,6 +98,7 @@
     * [Security constraints](user/kubernetes/cluster/security.md)
     * [Registries](user/kubernetes/cluster/registries.md)
     * [Policies](user/kubernetes/cluster/policies.md)
+    * [KubeSolo](user/kubernetes/cluster/kubesolo.md)
 * [Docker/Swarm/Podman](user/docker/README.md)
   * [Dashboard](user/docker/dashboard.md)
   * [Templates](user/docker/templates/README.md)
@@ -195,10 +196,11 @@
 ## Administering Portainer <a href="#admin" id="admin"></a>
 
 * [User-related](admin/user/README.md)
-  * [Users](admin/user/users.md)
-  * [Add a new user](admin/user/add.md)
-  * [Turn a user into an administrator](admin/user/promote.md)
-  * [Reset a user's password](admin/user/password.md)
+  * [Users](admin/user/users/README.md)
+    * [Add a new user](admin/user/users/add.md)
+    * [Manage a user](admin/user/users/manage-a-user.md)
+    * [Reset a user's password](admin/user/users/password.md)
+    * [Turn a user into an administrator](admin/user/users/promote.md)
   * [Teams](admin/user/teams/README.md)
     * [Add a new team](admin/user/teams/add.md)
     * [Add a user to a team](admin/user/teams/add-user.md)
@@ -235,6 +237,7 @@
       * [Install Edge Agent Async on KubeSolo](admin/environments/add/add-a-kubesolo-edge-environment/install-edge-agent-async-on-kubesolo.md)
     * [Create a Kubernetes cluster](admin/environments/add/kube-create/README.md)
       * [Talos Kubernetes](admin/environments/add/kube-create/omni.md)
+    * [Add a D2K environment](admin/environments/add/add-a-d2k-environment.md)
     * [Add an environment via the Portainer API](admin/environments/add/api.md)
   * [Auto onboarding](admin/environments/aeec.md)
   * [Groups](admin/environments/groups.md)
@@ -248,6 +251,7 @@
       * [Create a Kubernetes observability policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-observability-policy.md)
       * [Create a Kubernetes pod security standards policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-pod-security-standards-policy.md)
       * [Create a Kubernetes vulnerability scanning policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-vulnerability-scanning-policy.md)
+      * [Create a Kubernetes automatic namespace provisioning policy](admin/environments/policies/kubernetes-policies/create-a-kubernetes-automatic-namespace-provisioning-policy.md)
     * [Docker, Swarm, or Podman Policies](admin/environments/policies/docker-policies/README.md)
       * [Create a Docker, Swarm or Podman RBAC policy](admin/environments/policies/docker-policies/rbac-policy.md)
       * [Create a Docker, Swarm or Podman security policy](admin/environments/policies/docker-policies/security-policy.md)
@@ -464,7 +468,8 @@
 
 ## Get More Help <a href="#help" id="help"></a>
 
-* [Portainer Academy](https://academy.portainer.io)
+* [Learn Portainer](https://learn.portainer.io/)
+* [KubeSchool](https://kubeschool.portainer.io/)
 * [YouTube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos)
 * [GitHub](https://github.com/orgs/portainer/discussions)
 * [Slack](https://portainer.io/slack)

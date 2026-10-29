@@ -125,6 +125,4 @@ These permissions are the same as [portainer-cluster-operator](kubernetes-roles-
 | Application Error Details   | R              | R                  | R                  |                    |                    |
 | Storage Class Disabled      | R              | R                  | R                  |                    |                    |
 
-| storage.k8s.io    | storageclasses          | list      |
-| metrics.k8s.io    | namespaces, pods, nodes | get, list |
-| networking.k8s.io | ingresses               | list      |
+\| storage.k8s.io | storageclasses | list | | metrics.k8s.io | namespaces, pods, nodes | get, list | | networking.k8s.io | ingresses | list |

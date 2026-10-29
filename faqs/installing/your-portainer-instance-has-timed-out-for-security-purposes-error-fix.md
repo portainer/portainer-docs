@@ -12,7 +12,7 @@ When you first install Portainer, if you do not log in and complete the initial 
 
 #### Resolution
 
-If you are receiving the above error message, you can resolve this by stopping and restarting the Portainer container. This will give you another 5 minutes to complete the initial setup.&#x20;
+If you are receiving the above error message, you can resolve this by stopping and restarting the Portainer container. This will give you another 5 minutes to complete the initial setup.
 
 {% tabs %}
 {% tab title="Docker" %}

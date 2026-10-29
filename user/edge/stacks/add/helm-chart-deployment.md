@@ -13,11 +13,11 @@ Define how to deploy your app from one of the **Build Method** options.
 
 Enter the information about your Git repository to deploy your Edge Stack from Git.
 
-| Field/Option         | Overview                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------ |
-| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/).  |
-| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                        |
-| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                   |
+| Field/Option         | Overview                                                                                              |
+| -------------------- | ----------------------------------------------------------------------------------------------------- |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). |
+| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                       |
+| GitOps updates       | Toggle this on to enable GitOps updates (see below).                                                  |
 
 <figure><img src="../../../../.gitbook/assets/2.43-edge-stack-helm-repo.png" alt=""><figcaption></figcaption></figure>
 

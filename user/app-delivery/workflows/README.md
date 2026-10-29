@@ -16,13 +16,14 @@ At the top of the page, a count of all your workflows is displayed, broken down 
 
 A workflow will have one of the following statuses:
 
-| Status  | Definition                                                                                                          |
-| ------- | ------------------------------------------------------------------------------------------------------------------- |
-| Error   | The last deploy attempt failed. When in error state, a reason for the error will be displayed in the workflow card. |
-| Syncing | A deploy is currently in progress (pulling, deploying, or rolling back).                                            |
-| Healthy | The last deploy completed successfully.                                                                             |
-| Paused  | The stack or Edge Stack is inactive or paused.                                                                      |
-| Unknown | No deployment status is available yet, or the state cannot be classified.                                           |
+| Status  | Definition                                                                                                                                                                                                                                                                                                                                                           |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Error   | The last deploy attempt failed. When in error state, a reason for the error will be displayed in the workflow card.                                                                                                                                                                                                                                                  |
+| Drifted | <p>Only appears for workflows using the <a href="add-a-new-workflow.md#choose-an-engine">reconciliation engine</a>. Edge stack workflows do not report drift.<br>One or more resources on the cluster no longer match what the source declares. The deployment is still running; drift persists until a reconcile corrects it or the source is updated to match.</p> |
+| Syncing | A deploy is currently in progress (pulling, deploying, or rolling back).                                                                                                                                                                                                                                                                                             |
+| Healthy | The last deploy completed successfully.                                                                                                                                                                                                                                                                                                                              |
+| Paused  | The stack or Edge Stack is inactive or paused.                                                                                                                                                                                                                                                                                                                       |
+| Unknown | No deployment status is available yet, or the state cannot be classified.                                                                                                                                                                                                                                                                                            |
 
 The workflows table lists each GitOps-configured stack or application as a workflow card. The list is searchable and sortable, and can be filtered by status, type, or platform.
 

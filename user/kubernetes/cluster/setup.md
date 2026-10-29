@@ -73,7 +73,7 @@ By default, users are able to view and edit Kubernetes secrets within the Portai
 
 ### Enable node shell for admins
 
-By default, users can not [open a shell](details/#nodes) directly on any Kubernetes node's host OS. Enable this option to allow admin users to do so.&#x20;
+By default, users can not [open a shell](details/#nodes) directly on any Kubernetes node's host OS. Enable this option to allow admin users to do so.
 
 <figure><img src="../../../.gitbook/assets/2.44-cluster-security.png" alt=""><figcaption></figcaption></figure>
 

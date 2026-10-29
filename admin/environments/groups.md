@@ -25,7 +25,7 @@ When you're finished, click **Create**.
 
 #### Manage the environments in a group
 
-To add [environments](environments.md) to a group, find the group in the **Environment groups** list and select it to open the edit view. Click **Add environments**, select the environments you want to add, then click **Confirm**.&#x20;
+To add [environments](environments.md) to a group, find the group in the **Environment groups** list and select it to open the edit view. Click **Add environments**, select the environments you want to add, then click **Confirm**.
 
 To remove any environments from the group, select the checkbox next to the environments name in the **Associated environments** table, then select **Remove.**
 
@@ -53,7 +53,7 @@ Once all have been selected, click **Create access**.
 
 #### Delete a group
 
-When you no longer need a group, locate the group you want to delete from the **Environment groups** list and select it to open the edit view, remove it by selecting **Delete** in the panel under the environments name.&#x20;
+When you no longer need a group, locate the group you want to delete from the **Environment groups** list and select it to open the edit view, remove it by selecting **Delete** in the panel under the environments name.
 
 {% hint style="info" %}
 Removing a group will not delete environments and users in that group. However, it may change the environments accessible to users who have their access assigned via a group.

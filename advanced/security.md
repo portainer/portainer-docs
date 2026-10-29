@@ -32,7 +32,7 @@ Running Portainer securely - especially if you expose it - combines Portainer's 
 * [Using your own SSL certificate](ssl.md) and [deploying behind a reverse proxy](reverse-proxy/) - serve HTTPS, disable plain HTTP, and set trusted origins.
 * [The Portainer Edge Agent](edge-agent.md) and [using mTLS](mtls.md) - prefer outbound Edge connectivity and mutual TLS for anything internet-facing.
 * [Access control](access-control.md), [Docker roles and permissions](docker-roles-and-permissions.md), and [Kubernetes roles and bindings](kubernetes-roles-and-bindings.md) - grant least privilege and tighten the per-environment security settings.
-* [Encrypting the Portainer database](db-encryption.md)  protect API keys, agent secrets, and stored credentials at rest.
+* [Encrypting the Portainer database](db-encryption.md) protect API keys, agent secrets, and stored credentials at rest.
 * [Streaming auth and activity logs to a SIEM](siem.md) - watch for repeated authentication failures and unexpected activity.
 * [CLI configuration options](cli.md) - the flags behind all of the above.
 
@@ -41,4 +41,3 @@ For the architecture behind this model, see the [Portainer architecture guide](h
 ### **Reporting a vulnerability** <a href="#id-25a5037b-f7dc-4189-abb5-07decfd426c5" id="id-25a5037b-f7dc-4189-abb5-07decfd426c5"></a>
 
 For details on reporting a Portainer vulnerability, see the FAQ [How do I report a security vulnerability?](https://docs.portainer.io/faqs/contributing/how-do-i-report-a-security-vulnerability)
-

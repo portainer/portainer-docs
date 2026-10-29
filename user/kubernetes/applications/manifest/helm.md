@@ -8,10 +8,10 @@ When creating an application from a Helm chart, you can deploy it from either a 
 
 Use the provided fields to enter the details of your Git repository containing your Helm chart and values files.
 
-| Field/Option         | Overview                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------ |
-| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/).  |
-| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                        |
+| Field/Option         | Overview                                                                                              |
+| -------------------- | ----------------------------------------------------------------------------------------------------- |
+| Source               | Select your Git repository from your list of preconfigured [sources](../../../app-delivery/sources/). |
+| Repository reference | Select the reference to use when deploying the stack (for example, the branch).                       |
 
 <figure><img src="../../../../.gitbook/assets/2.43-helm-chart-repo.png" alt=""><figcaption></figcaption></figure>
 

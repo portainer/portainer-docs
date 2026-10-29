@@ -10,15 +10,15 @@ Information about the cluster is separated into three screen tabs: **Node**, **E
 
 The **Node** tab summarizes the following information about the selected node:
 
-| Field/Option    | Overview                                                                                                                                                                                                         |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hostname        | The hostname of the node.                                                                                                                                                                                        |
-| Kubernetes API  | The address and port of the Kubernetes API for this node.                                                                                                                                                        |
-| Role            | The role of the node.                                                                                                                                                                                            |
-| Kubelet version | The version of kubelet on the node.                                                                                                                                                                              |
-| Creation date   | The date when this node was created.                                                                                                                                                                             |
-| Status          | The status of the node.                                                                                                                                                                                          |
-| Availability    | Defines the availability of the node. Options are **Active**, **Pause** and **Drain**.  If drain is selected, continue to configure the availability by defining the [**Drain options**](node.md#drain-options). |
+| Field/Option    | Overview                                                                                                                                                                                                        |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hostname        | The hostname of the node.                                                                                                                                                                                       |
+| Kubernetes API  | The address and port of the Kubernetes API for this node.                                                                                                                                                       |
+| Role            | The role of the node.                                                                                                                                                                                           |
+| Kubelet version | The version of kubelet on the node.                                                                                                                                                                             |
+| Creation date   | The date when this node was created.                                                                                                                                                                            |
+| Status          | The status of the node.                                                                                                                                                                                         |
+| Availability    | Defines the availability of the node. Options are **Active**, **Pause** and **Drain**. If drain is selected, continue to configure the availability by defining the [**Drain options**](node.md#drain-options). |
 
 <figure><img src="../../../../.gitbook/assets/2.15-k8s-cluster-node-details.png" alt=""><figcaption></figcaption></figure>
 

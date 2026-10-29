@@ -1,6 +1,6 @@
 # Portainer MCP Server
 
-Portainer provides an MCP server generated from the Portainer OpenAPI spec (via [FastMCP](https://github.com/PrefectHQ/fastmcp)). It exposes the Portainer REST API as MCP tools, letting an MCP client:&#x20;
+Portainer provides an MCP server generated from the Portainer OpenAPI spec (via [FastMCP](https://github.com/PrefectHQ/fastmcp)). It exposes the Portainer REST API as MCP tools, letting an MCP client:
 
 * List and inspect environments
 * Manage GitOps workflows
@@ -159,7 +159,7 @@ To restrict or expand this set, see [`docs/profiles.md`](https://github.com/port
 
 Match the MCP server's minor version to your Portainer minor version. The major and minor version together indicate which Portainer API version the embedded spec targets.
 
-&#x20;see [`docs/versioning.md`](https://github.com/portainer/portainer-mcp/blob/main/docs/versioning.md) for the full versioning policy.
+see [`docs/versioning.md`](https://github.com/portainer/portainer-mcp/blob/main/docs/versioning.md) for the full versioning policy.
 
 ## Configuration
 

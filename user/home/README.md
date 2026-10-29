@@ -1,10 +1,10 @@
 # Home
 
-The Home page is the first page you will see after logging into Portainer. It provides a grouped, card-based view of your environments with at-a-glance health and performance metrics.&#x20;
+The Home page is the first page you will see after logging into Portainer. It provides a grouped, card-based view of your environments with at-a-glance health and performance metrics.
 
 <figure><img src="../../.gitbook/assets/2.41.1-home.png" alt=""><figcaption></figcaption></figure>
 
-A header bar above the environment list shows a live breakdown of your fleet by health, calling out any environments that are **unassigned** and therefore do not belong to a group. Clicking any of these segments filters the list, replacing any existing filter or grouping.&#x20;
+A header bar above the environment list shows a live breakdown of your fleet by health, calling out any environments that are **unassigned** and therefore do not belong to a group. Clicking any of these segments filters the list, replacing any existing filter or grouping.
 
 Environments are sorted by age by default; clicking the **Age** option toggles between newest and oldest. You can also filter your environment list by **Group**, **Platform**, or **Health**. You can search for specific environments by name, which will filter the list by your search term. If your list includes Kubernetes environments, you can also download a combined [Kubeconfig](../kubernetes/dashboard/kubeconfig.md) file from this panel.
 

@@ -1,10 +1,10 @@
 # Add SSH credentials
 
-SSH credentials are currently used by Portainer in our Kubernetes provisioning feature. Credentials created here will be usable by any admin-level user, though they will not be able to view the actual credentials directly.
+SSH credentials are used by Portainer in our Kubernetes provisioning feature, and to install KubeSolo on many machines at once over SSH. Credentials created here will be usable by any admin-level user, though they will not be able to view the actual credentials directly.
 
 ## Setting up your SSH user
 
-The exact method for configuring your SSH user will differ from platform to platform. For the Kubernetes provisioning feature, we assume the following for the user you create:
+The exact method for configuring your SSH user will differ from platform to platform. For the Kubernetes provisioning and KubeSolo installation features, we assume the following for the user you create:
 
 * The user has sudo privileges or is a root user - this is because Portainer needs this level of access in order to install Kubernetes.
 * SSH is listening on port `22` on the server.
@@ -15,14 +15,14 @@ We generally recommend the use of a SSH key for authentication rather than passw
 
 To add your SSH credentials, from the [Shared credentials](./) page click **Add credentials**, then select the **SSH** option. Fill out the relevant fields as below.
 
-| Field/Option               | Overview                                                                                                             |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Credentials name           | Enter a name you will use to identify your credential set in the Portainer application.                              |
-| SSH username               | Enter the username for your SSH account.                                                                             |
-| SSH password               | Enter the password for your SSH account. You can leave this field blank if you intend to use SSH key authentication. |
-| Use SSH key authentication | Enable this toggle to use SSH key authentication instead of password authentication.                                 |
-| SSH private key passphrase | If your SSH private key is encrypted, provide the passphrase here.                                                   |
-| SSH private key            | Paste your SSH private key in this field.                                                                            |
+| Field/Option               | Overview                                                                                                                                                                                                                                                                             |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Credentials name           | Enter a name you will use to identify your credential set in the Portainer application.                                                                                                                                                                                              |
+| SSH username               | Enter the username for your SSH account.                                                                                                                                                                                                                                             |
+| SSH password               | The password used to run privileged (`sudo`) commands on the host machine. It's also used for SSH password authentication if no SSH key is set below. You can leave this field blank if you intend to use SSH key authentication and your SSH user has passwordless sudo configured. |
+| Use SSH key authentication | Enable this toggle to use SSH key authentication instead of password authentication.                                                                                                                                                                                                 |
+| SSH private key passphrase | If your SSH private key is encrypted, provide the passphrase here.                                                                                                                                                                                                                   |
+| SSH private key            | Paste your SSH private key in this field.                                                                                                                                                                                                                                            |
 
 <figure><img src="../../../.gitbook/assets/2.44-add-ssh-credentials.png" alt=""><figcaption></figcaption></figure>
 
