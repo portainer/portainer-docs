@@ -24,7 +24,7 @@ site:
         - type: space
           key: space-3
           title: 3.0 STS
-          path: 3.0-sts
+          path: sts
           hidden: true
           draft: true
           content:
