@@ -18,6 +18,21 @@ Add-ons are installed into the Kubernetes cluster that Portainer itself runs on.
 
 ***
 
+#### The add-on secret key must be available (Portainer 3.0 and later)
+
+The `--addons-secret-key-name` flag must point to a file that exists. This flag is separate from `--secret-key-name`, and Portainer does not fall back to the main secret key if the add-on key is missing.
+
+The simplest way to meet this requirement is to reuse your existing database encryption key. Point `--addons-secret-key-name` at the same key file that `--secret-key-name` uses, so no new secret or volume mount is needed.
+
+If you installed Portainer using the Helm chart, add the flag to the `feature.flags` value. If you already set other flags in `feature.flags`, include them as well, or they will be removed:
+
+```
+helm upgrade portainer portainer/portainer -n portainer --reuse-values \
+  --set feature.flags="--addons-secret-key-name=<path-to-key-file>"
+```
+
+***
+
 #### Portainer must have cluster-admin access <a href="#portainer-must-have-cluster-admin-access" id="portainer-must-have-cluster-admin-access"></a>
 
 Portainer installs add-ons using Helm, running as Portainer's in-cluster ServiceAccount. That ServiceAccount must be bound to the `cluster-admin` role. Without it, the add-on pages load but every installation fails.
