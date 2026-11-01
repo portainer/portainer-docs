@@ -1,6 +1,6 @@
 # Release Notes
 
-## Release 3.0.0 STS <a href="#release-2.45.0-lts" id="release-2.45.0-lts"></a>
+## Release 3.0.0 STS <a href="#release-3.0.0-sts" id="release-3.0.0-sts"></a>
 
 October 29, 2026
 
