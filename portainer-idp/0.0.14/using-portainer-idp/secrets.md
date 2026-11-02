@@ -52,6 +52,24 @@ Choose **Deploy secret**. Portainer-IDP commits one SealedSecret per namespace, 
 
 You don't need to leave a deploy form to make a secret. Next to every secret picker, in Simple Deploy, the Application Builder, the catalog and the Helm forms, **Create secret** opens the same form with the destination fixed to the application's own deploy target and namespace, and the keys the application needs already filled in. The new secret is selected for you when it's created.
 
+## Registry credentials
+
+To run an image from a private registry (GitHub Container Registry, GitLab, Harbor, a private Docker Hub repository), the cluster needs registry credentials, referenced as the pod's **image pull secret**. Without them, pods stop in `ImagePullBackOff` or `ErrImagePull`.
+
+1. Choose **New Secret**, then **Registry credentials**. Enter the registry server (the image's host, such as `ghcr.io`; for Docker Hub, `https://index.docker.io/v1/`), a user name, and a password or access token. For GHCR, use a personal access token with `read:packages`.
+2. Pick the same deploy targets and namespaces as the application, then **Deploy secret**. Portainer-IDP builds a `kubernetes.io/dockerconfigjson` secret, seals it like any other, and commits it per namespace.
+3. In Simple Deploy or the Application Builder, choose it under **Image pull secret**. The picker lists the registry credentials in the application's namespace on every chosen deploy target, and **Create secret** beside it makes new ones for the image's registry. You can also type the name of a pull secret created outside Portainer-IDP. When exactly one is for the image's registry, the picker selects it for you; clear it if the image doesn't need it. Registry credentials created before Portainer-IDP recorded their registry aren't matched until you update their credentials once.
+
+Before you deploy, the form warns when the chosen pull secret is missing from a deploy target, isn't registry credentials, or isn't one of your secrets in that namespace. If an application's pods can't pull their image, its page links to **Add registry credentials**.
+
+{% hint style="warning" %}
+**Amazon ECR:** don't use a pull secret. ECR passwords expire after 12 hours, so a pull secret sealed into Git stops working, and GitOps keeps applying the expired one. Portainer-IDP refuses an ECR server under **Registry credentials** and offers no **Create secret** for an ECR image. Leave **Image pull secret** empty and let the cluster authenticate: on EKS, nodes pull with their IAM role; elsewhere, an administrator can add the registry to Portainer and grant the namespace access to it. Images on `public.ecr.aws` are public and need no credentials.
+
+Google Container Registry and Artifact Registry have the same problem with the `oauth2accesstoken` user name, whose tokens last an hour. A service-account key, with the user name `_json_key` and the key's JSON as the password, doesn't expire and works as registry credentials.
+{% endhint %}
+
+When a [release from CI](releasing-from-ci.md#private-images) moves an application to a new image, it can add matching registry credentials to the pod's pull secrets.
+
 ## Using a secret in an application
 
 In the Application Builder and Simple Deploy, an application can read a single key as an environment variable, or the whole secret as environment variables or as files. Catalog templates and Helm charts that need credentials ask for a secret by name.

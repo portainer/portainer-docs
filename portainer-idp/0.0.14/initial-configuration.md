@@ -8,7 +8,7 @@ Everything in Portainer-IDP is set up in this order, and each step needs the one
 
 {% stepper %}
 {% step %}
-## Git target
+## Git repository
 
 A repository Portainer can read.
 {% endstep %}
@@ -76,17 +76,17 @@ Use **Disable** on an environment to stop it being added to deploy targets, for 
 {% endstep %}
 
 {% step %}
-## Create a Git target
+## Create a Git repository
 
-Open **Git Targets** and choose **Add Git Target**. Enter the repository URL and provider, give Portainer read access, and turn on **Shared with everyone** so developers can use it. Choose **Test connection**, then **Add Git Target**.
+Open **Git Repositories** and choose **Add Git Repository**. Enter the repository URL and provider, give Portainer read access, and turn on **Shared with everyone** so developers can use it. Choose **Test connection**, then **Add Git Repository**.
 
-See [Git Targets](using-portainer-idp/git-targets.md) for the details.
+See [Git Repositories](using-portainer-idp/git-repositories.md) for the details.
 {% endstep %}
 
 {% step %}
 ## Create deploy targets
 
-Open **Deploy Targets** and choose **New deploy target**. Give it a name developers will recognize, such as `production-eu`, pick its environments, choose the Git target, branch and folder its manifests live in, and add a namespace for each team.
+Open **Deploy Targets** and choose **New deploy target**. Give it a name developers will recognize, such as `production-eu`, pick its environments, choose the Git repository, branch and folder its manifests live in, and add a namespace for each team.
 
 On each namespace, add the people or teams who may deploy into it under **Who may use it**. That also shows them the deploy target and lets them deploy onto it, into that namespace only.
 

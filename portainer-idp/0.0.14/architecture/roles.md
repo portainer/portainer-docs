@@ -16,8 +16,8 @@ Each user has one of four roles in Portainer-IDP, shown as a badge in the accoun
 | Portainer-IDP role   | Comes from (Portainer)                                          | Can do                                                                                                                                                                                     |
 | -------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Admin**            | Portainer administrator                                         | Everything, including Cluster Readiness, Helm Charts, Audit log and Settings. Bypasses every access list.                                                                                  |
-| **Standard**         | Environment Administrator or Standard User, or no role assigned | Deploy, edit and delete applications, including any Helm chart from an allowed host; create and change secrets, Git targets and deploy targets; plus everything a Limited Operator can do. |
-| **Limited Operator** | Operator or Namespace Operator                                  | Scale, restart and roll back applications.                                                                                                                                                 |
+| **Standard**         | Environment Administrator or Standard User, or no role assigned | Deploy, edit and delete applications, including any Helm chart from an allowed host; create and change secrets, Git repositories and deploy targets; plus everything a Limited Operator can do. |
+| **Limited Operator** | Operator or Namespace Operator                                  | Scale, restart, redeploy and roll back applications, and release images to those they hold Release on.                                                                                                                                                 |
 | **Read Only**        | Helpdesk or Read-only User                                      | View only.                                                                                                                                                                                 |
 
 When a user has different roles on different environments, the **most restrictive** one applies everywhere. Buttons your role doesn't allow are disabled, with a tooltip saying why, and the backend checks the same role before it writes to Git.
@@ -28,19 +28,20 @@ Users with Portainer's Edge Administrator role are treated like any other user i
 
 ## Access lists
 
-Applications, secrets and namespaces each have an **Access** list of users and teams, with three rights:
+Applications, secrets and namespaces each have an **Access** list of users and teams, with three rights, and applications a fourth:
 
 | Right      | Allows                                                                                  |
 | ---------- | --------------------------------------------------------------------------------------- |
 | **View**   | See it in lists, and read its status, logs, revisions and activity.                     |
 | **Change** | Edit, restart, redeploy, scale, roll back and retarget it.                              |
 | **Delete** | Remove it. Someone with both **Change** and **Delete** can also change the access list. |
+| **Release** | Applications only. Release a new container image from CI, and nothing else. **Change** includes it. See [Releasing from CI](../using-portainer-idp/releasing-from-ci.md). |
 
-Whoever creates something gets all three rights on it. Something with no access list is visible to administrators only.
+Whoever creates something gets View, Change and Delete on it (Change includes Release on an application). Something with no access list is visible to administrators only.
 
 Deploy targets use **View**, **Deploy** and **Manage** instead. See [Deploy Targets](../using-portainer-idp/deploy-targets.md#access).
 
-Git targets have no access list of their own: Portainer's sharing setting on the GitOps source applies, and only Portainer administrators and edge administrators can edit or delete one. See [Git Targets](../using-portainer-idp/git-targets.md#sharing).
+Git repositories have no access list of their own: Portainer's sharing setting on the GitOps source applies, and only Portainer administrators and edge administrators can edit or delete one. See [Git Repositories](../using-portainer-idp/git-repositories.md#sharing).
 
 ## How role and access combine
 

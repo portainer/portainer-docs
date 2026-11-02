@@ -6,16 +6,16 @@ Portainer-IDP's navigation is organized into four areas: **Main**, **Deploy**, *
   * [**Applications**](applications.md): the page you land on. Status, logs, metrics, revisions, and controls for every application you can see.
   * **Catalog**: ready-made templates and Helm charts. See [Deploy](deploy.md#catalog).
   * [**Secrets**](secrets.md): Kubernetes Secrets, sealed in your browser before they're committed to Git.
-  * [**Git Targets**](git-targets.md): the repositories manifests are stored in.
+  * [**Git Repositories**](git-repositories.md): the repositories manifests are stored in.
   * [**Deploy Targets**](deploy-targets.md): the groups of environments and namespaces applications are deployed to.
 * [**Deploy**](deploy.md): Simple Deploy, Helm Chart, Source Deploy, and Application Builder.
 * [**Admin**](admin/): visible only to administrators.
-  * [Cluster Readiness](admin/cluster-readiness.md): environment health checks, Sealed Secrets, and enable or disable controls.
   * **Getting started**: a setup checklist for new installations.
-  * [Doctor](admin/doctor.md): on-demand checks for manifests that nothing deploys, with repairs.
-  * [Helm Charts](admin/helm-charts.md): the curated Helm catalog and the chart hosts developers may use.
-  * [Audit log](admin/audit-log.md): every change made through Portainer-IDP, and who made it.
-  * [Settings](admin/settings.md): the Edge Admin credential and other installation-wide settings.
+  * **Administration**: opens on the Audit log, and groups the install-wide pages:
+    * **Activity**: [Audit log](admin/audit-log.md), every change made through Portainer-IDP, and who made it.
+    * **Health**: [Doctor](admin/doctor.md), on-demand checks with repairs, and [Cluster Readiness](admin/cluster-readiness.md), environment health checks, Sealed Secrets, and enable or disable controls.
+    * **Delivery**: [Helm Charts](admin/helm-charts.md), the curated Helm catalog and the chart hosts developers may use, and [CI accounts and Release accounts](releasing-from-ci.md), for releasing from a CI pipeline.
+    * **Installation**: [Settings](admin/settings.md), the Edge Admin credential and other installation-wide settings.
 * **Help** > **Documentation**: this documentation, built into the product.
 
 Your own [Git commit identity](git-commit-identity.md) is under **Settings** in the account menu, which also shows your role as a badge.

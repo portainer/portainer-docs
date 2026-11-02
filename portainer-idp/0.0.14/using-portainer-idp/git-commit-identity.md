@@ -44,4 +44,4 @@ Enter a **Test repository URL** and choose **Test connection**. Portainer-IDP ch
 
 Your token is encrypted with the installation's encryption key and stored in Portainer-IDP's own database. It's never sent back to the browser. To replace it, for example before it expires, enter the new token and choose **Rotate token**.
 
-Your commit identity is separate from the credential on a [Git target](git-targets.md), which Portainer uses only to read the repository.
+Your commit identity is separate from the credential on a [Git repository](git-repositories.md), which Portainer uses only to read the repository.

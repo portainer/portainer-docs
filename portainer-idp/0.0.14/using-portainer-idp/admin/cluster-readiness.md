@@ -34,12 +34,12 @@ If a controller was installed outside Portainer-IDP, choose **Manage with GitOps
 
 ### Where system applications live in Git
 
-The Sealed Secrets controller is a **system application**: it's committed to Git and deployed as an Edge Stack like any other application, but only administrators can see or change it. The first time you choose **Install**, Portainer-IDP asks where system applications live in Git: a **Git Target**, **Branch** and **Path in repository**. Choose a folder only administrators write to.
+The Sealed Secrets controller is a **system application**: it's committed to Git and deployed as an Edge Stack like any other application, but only administrators can see or change it. The first time you choose **Install**, Portainer-IDP asks where system applications live in Git: a **Git Repository**, **Branch** and **Path in repository**. Choose a folder only administrators write to.
 
 The controller is committed to `<path>/sealed-secrets/controller.yml` and deployed through an automatically managed deploy target called `idp-system`. You can change the location later on the **System applications in Git** card, here or on [Settings](settings.md).
 
 {% hint style="warning" %}
-All environments share one sealing key, stored as the Secret `portainer-idp-sealing-key` in the `kube-system` namespace. Removing the controller leaves the key and the SealedSecret custom resource definition in place, so existing secrets are not lost. Back the key up somewhere safe; without it, secrets in Git can't be decrypted.
+All environments share one sealing key, stored as the Secret `portainer-sealing-key` in the `kube-system` namespace. Environments set up before 0.2.0 hold it as `portainer-idp-sealing-key`; they keep working, and **Install** or **Repair** copies the key to the new name without deleting the old one. Back up both names if both exist. Removing the controller leaves the key and the SealedSecret custom resource definition in place, so existing secrets are not lost. Back the key up somewhere safe; without it, secrets in Git can't be decrypted.
 {% endhint %}
 
 ## Disabling an environment
