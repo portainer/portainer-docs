@@ -24,7 +24,7 @@ Reports on manifest files that nothing deploys now run from [Doctor](doctor.md),
 
 ## System applications in Git
 
-Where system applications, such as the Sealed Secrets controller, are committed: a Git target, branch and folder only administrators write to. Choose **Change** to move it.
+Where system applications, such as the Sealed Secrets controller, are committed: a Git repository, branch and folder only administrators write to. Choose **Change** to move it.
 
 System applications already deployed keep their current file. See [Cluster Readiness](cluster-readiness.md#where-system-applications-live-in-git).
 

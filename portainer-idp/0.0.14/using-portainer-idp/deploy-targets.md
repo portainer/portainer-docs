@@ -3,7 +3,7 @@
 A **deploy target** is a named place applications are deployed to, such as `production-eu` or `staging`. It brings together three things:
 
 * **Environments**: one or more Kubernetes environments connected with the Edge Agent. A deployment to the target goes to all of them.
-* **A GitOps target**: a [Git target](git-targets.md), branch and folder that the target's manifests are committed to.
+* **A GitOps target**: a [Git repository](git-repositories.md), branch and folder that the target's manifests are committed to.
 * **Namespaces**: the namespaces applications may be deployed into, and who may use each one.
 
 Portainer-IDP creates a Portainer Edge Group for each deploy target, and every application deployed to it is an Edge Stack targeted at that group.
@@ -28,7 +28,7 @@ Choose one or more Kubernetes Edge environments. Environments an administrator h
 {% step %}
 ## GitOps target
 
-Choose the **Git Target**, **Branch** and **Path in repository**. The path is a folder this target owns, for example `clusters/production`.
+Choose the **Git Repository**, **Branch** and **Path in repository**. The path is a folder this target owns, for example `clusters/production`.
 {% endstep %}
 
 {% step %}
@@ -53,7 +53,7 @@ A Kubernetes namespace belongs to its whole cluster, so the same name can't be d
 | Tab               | What it's for                                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Environments**  | The environments in the target. Add or remove them.                                                                               |
-| **GitOps target** | The Git target, branch and folder manifests are committed to.                                                                     |
+| **GitOps target** | The Git repository, branch and folder manifests are committed to.                                                                     |
 | **Namespaces**    | Add and remove namespaces, and change who may use each one. Removing a namespace deletes it from every environment in the target. |
 | **Deployments**   | Every application and secret deployed to the target.                                                                              |
 | **Ingress**       | How catalog applications get their addresses. See [Ingress](deploy-targets.md#ingress).                                           |

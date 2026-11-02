@@ -32,7 +32,7 @@ Everything Portainer-IDP deploys is committed to Git first. You'll need a reposi
 
 You'll also need two kinds of credential:
 
-* **A read credential for Portainer**, stored on the [Git target](using-portainer-idp/git-targets.md). Portainer uses it to read manifests and check them for changes.
+* **A read credential for Portainer**, stored on the [Git repository](using-portainer-idp/git-repositories.md). Portainer uses it to read manifests and check them for changes.
 * **A personal access token for each person who deploys**, with permission to push to the repository. Portainer-IDP commits with it, so every commit is attributed to the person who made the change. See [Git commit identity](using-portainer-idp/git-commit-identity.md).
 
 ## Next step

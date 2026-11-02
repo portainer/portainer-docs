@@ -1,6 +1,6 @@
 # Audit log
 
-The Audit log is an admin-only page listing every change made through Portainer-IDP, newest first, with the Portainer user who made it. Choose any event to see its full record.
+The Audit log is an admin-only page, the first page under **Administration**, listing every change made through Portainer-IDP, newest first, with the Portainer user who made it. Choose any event to see its full record. Every resource an event names links to its page.
 
 ## What's recorded
 

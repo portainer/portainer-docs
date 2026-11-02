@@ -61,7 +61,7 @@ On a template, **Customize** opens it in the Application Builder first, so you c
 
 ## Helm Chart
 
-**Deploy** > **Helm Chart** deploys any chart from a Helm repository an administrator allows. It's available to the Standard and Admin [roles](../architecture/roles.md). The chart and your values are committed to your Git target, and Portainer deploys the release as an Edge Stack.
+**Deploy** > **Helm Chart** deploys any chart from a Helm repository an administrator allows. It's available to the Standard and Admin [roles](../architecture/roles.md). The chart and your values are committed to your Git repository, and Portainer deploys the release as an Edge Stack.
 
 {% stepper %}
 {% step %}
@@ -118,7 +118,7 @@ The installation default is **Standard**, shown as a badge on the review step. A
 **Deploy** > **Application Builder** is the full form, with a live YAML preview alongside. It covers:
 
 * **Workload type**: **Replicated** (Deployment), **StatefulSet**, **Global** (DaemonSet), **Run once** (Job) or **Scheduled** (CronJob, with a cron **Schedule** in the cluster's time zone).
-* Containers, ports, resources and environment variables.
+* Containers, ports, resources and environment variables. For a NodePort or LoadBalancer Service, each port has an optional **Node port** between 30000 and 32767; leave it empty for a random one.
 * ConfigMaps, secrets (as single environment variables, all keys as environment variables, or files), and persistent storage.
 * Auto-scaling, placement rules, Services and Ingress.
 * **Other settings**, at the end of the form and of each container: anything an imported manifest holds that the form has no field for, edited as YAML.

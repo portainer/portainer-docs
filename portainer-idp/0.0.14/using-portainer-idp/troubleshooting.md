@@ -4,7 +4,7 @@
 
 When a deployment fails on an environment, the failed row on the application's **Environments** tab explains the error in plain language and says what to do. Portainer's original message is under **Details**. Common causes are:
 
-* An image that can't be pulled.
+* An image that can't be pulled. For a private registry, add [registry credentials](secrets.md#registry-credentials) and choose them as the **Image pull secret**.
 * A missing namespace.
 * A quota or admission policy rejecting the manifest.
 * An environment whose Edge Agent isn't connected.
@@ -129,7 +129,7 @@ No. Portainer-IDP deploys with its own Edge Admin credential and checks access i
 
 <summary>Can I edit the manifests in Git directly?</summary>
 
-Yes. Changes made in Portainer-IDP are commits to the same file, so the two stay in step. Whether, and how often, Portainer checks the repository for changes is set on the Git target's GitOps source in Portainer.
+Yes. Changes made in Portainer-IDP are commits to the same file, so the two stay in step. Whether, and how often, Portainer checks the repository for changes is set on the Git repository's GitOps source in Portainer.
 
 </details>
 
@@ -137,7 +137,7 @@ Yes. Changes made in Portainer-IDP are commits to the same file, so the two stay
 
 <summary>Why do I need a personal access token?</summary>
 
-Commits are made as you, with your token, so Git history shows who changed what. Portainer's own credential on the Git target is only used to read.
+Commits are made as you, with your token, so Git history shows who changed what. Portainer's own credential on the Git repository is only used to read.
 
 </details>
 
