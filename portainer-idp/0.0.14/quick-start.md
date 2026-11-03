@@ -30,7 +30,7 @@ Once the install completes, open Portainer-IDP from the product switcher in the 
 
 Until it has an Edge Admin credential, every page in Portainer-IDP shows **Finish setting up**. As an administrator, choose **Go to settings**, then on the **Edge Admin credential** card choose **Set up the Edge Admin account**.
 
-Portainer-IDP creates a Portainer user named `portainer-idp-edge-admin` with the Edge Administrator role, creates an access token for it, checks that the token works, and stores it. This is the account Portainer-IDP deploys with on everyone's behalf. See [Architecture](/broken/pages/CeDpBMXTmOdO8V4idbrl) for why.
+Portainer-IDP creates a Portainer user named `portainer-idp-edge-admin` with the Edge Administrator role, creates an access token for it, checks that the token works, and stores it. This is the account Portainer-IDP deploys with on everyone's behalf. See [Architecture](https://app.gitbook.com/s/EQDMEQ53IxZJXhaQq1Az/architecture) for why.
 
 {% hint style="info" %}
 If Portainer signs users in with LDAP or OAuth, the one-click setup isn't available, because Portainer can't issue a token to a user created through its API. Create an account with the Edge Administrator role and an access token in Portainer yourself, paste the token into **Edge Admin API key**, and choose **Save pasted key**.
