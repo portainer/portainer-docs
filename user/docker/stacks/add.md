@@ -113,6 +113,11 @@ Select **Git Repository** then fill in the details of the repository.
 
 <figure><img src="../../../.gitbook/assets/2.43-add-a-docker-source-git-repo.png" alt=""><figcaption></figcaption></figure>
 
+
+{% hint style="warning" %}
+Portainer does not fetch Git submodules when deploying a stack from a Git repository. If your Compose file or build context depends on a submodule, vendor its contents into the repository itself, or fetch the dependency inside a build step for an image built by the stack.
+{% endhint %}
+
 ### GitOps updates
 
 Portainer supports automatically updating your stacks deployed from Git repositories. To enable this, toggle on **GitOps updates** and configure your settings.
