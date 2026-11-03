@@ -1,2 +1,0 @@
-# Logs, errors and debugging
-

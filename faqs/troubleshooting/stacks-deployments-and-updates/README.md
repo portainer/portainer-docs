@@ -1,2 +1,0 @@
-# Stacks, deployments and updates
-

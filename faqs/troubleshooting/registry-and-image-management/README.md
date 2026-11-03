@@ -1,2 +1,0 @@
-# Registry and image management
-

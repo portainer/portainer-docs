@@ -1,2 +1,0 @@
-# Agents and environment management
-
