@@ -1,12 +1,35 @@
 # Release Notes
 
+## Release 3.0.1 STS <a href="#release-3.0.1-sts" id="release-3.0.1-sts"></a>
+
+November 04, 2026
+
+### Known Issues <a href="#known-issues" id="known-issues"></a>
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this Release
+
+* Fixed add-ons being unavailable on every Kubernetes deployment after upgrading to 3.0.0. Add-ons are available again without it; the key set by `--addons-secret-key-name` is now optional
+
 ## Release 3.0.0 STS <a href="#release-3.0.0-sts" id="release-3.0.0-sts"></a>
 
 October 29, 2026
 
 ### Breaking Changes
 
-* &#x20;`GET /api/system/info`'s `addonsAvailable` field changed from a boolean to a string (available, kubernetes-required, fips-mode, encryption-key-required). API clients that parsed it as a boolean must update to compare against the new string values
+* `GET /api/system/info`'s `addonsAvailable` field changed from a boolean to a string (available, kubernetes-required, fips-mode, encryption-key-required). API clients that parsed it as a boolean must update to compare against the new string values
 * `PUT /gitops/sources/{id}/access` now returns the same sanitized detail as `GET /gitops/sources/{id}`: Git, public, administratorsOnly, userAccesses, teamAccesses and ownerID are replaced by url, connection and access, and type and status become strings instead of integers
 * The stack Git webhook `POST /stacks/webhooks/{webhookID}` now returns 202 Accepted with a JSON body instead of 200 with an empty body, and returns 400 Bad Request instead of 409 Conflict when auto-update is unavailable because the stack's author no longer exists. 409 is now returned only when a deployment is already in progress. A client or script checking for an exact 200, an empty response or a 409 must handle the new codes and parse the new body
 * &#x20;`PUT /gitops/sources/{id}/access` (the connection-test path) now requires write access to the source to send any field other than name or interval. A read-only user who previously could run a connection test with an overridden URL or credentials now gets a 403

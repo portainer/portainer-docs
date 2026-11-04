@@ -1,7 +1,7 @@
 # Updating on Docker Standalone
 
 {% hint style="info" %}
-Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 3.0.0 make sure all of the agents are also on version 3.0.0.
+Always match the agent version to the Portainer Server version. In other words, when you're installing or updating to Portainer 3.0.1 make sure all of the agents are also on version 3.0.1.
 {% endhint %}
 
 {% hint style="danger" %}
