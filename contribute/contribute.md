@@ -21,23 +21,23 @@ The Portainer CE codebase is available in [GitHub](https://github.com/portainer/
 ### Repository structure
 
 * Our main development occurs in private repositories, which are mirrored to public GitHub repos (e.g. [portainer/portainer](https://github.com/portainer/portainer/)).
-* The `develop` and `release/*` branches in public repositories are **read-only**: merges into these branches are blocked to preserve synchronization with our internal repositories.
+* The `release/*` branches in public repositories, including the default branch, are **read-only**: merges into these branches are blocked to preserve synchronization with our internal repositories.
 
 ### Contribution process
 
 1. **Fork the repository**
    * Create your own fork of the relevant Portainer public repository.
 2. **Create a feature branch**
-   * Base your changes on the current `develop` branch (not `main` or `release/*`). This ensures you are working off the latest version of the codebase.
+   * Base your changes on the default branch. This ensures you are working off the latest version of the codebase.
 3. **Submit a Pull Request (PR)**
-   * Open your PR against the `develop` branch.
+   * Open your PR against the default branch.
 4. **Review and feedback**
    * Contributions will be reviewed by Portainer engineers.
    * We may request changes to align with coding standards, tests, or design decisions.
    * In some cases, we may adapt or refactor a contribution before merging.
 5. **Integration**
    * Once approved, Portainer engineers will cherry-pick contributions into the upstream private repository.
-   * These changes will then flow into `develop` and subsequent releases through our normal sync process.
+   * These changes will then flow into the default branch and subsequent releases through our normal sync process.
    * Not all contributions will be integrated upstream. Decisions will be based on roadmap alignment, technical fit, and quality.
 
 ### Contribution expectations
