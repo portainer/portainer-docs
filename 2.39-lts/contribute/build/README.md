@@ -54,4 +54,4 @@ The frontend application will update and refresh when you save your changes to a
 
 ## Contribution Guidelines
 
-When contributing to the Portainer codebase, please follow [our contribution guidelines](https://github.com/portainer/portainer/blob/HEAD/CONTRIBUTING.md).
+When contributing to the Portainer codebase, please follow [our contribution guidelines](https://github.com/portainer/portainer/blob/develop/CONTRIBUTING.md).
