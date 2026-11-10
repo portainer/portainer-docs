@@ -6,7 +6,9 @@ From Portainer 2.44 STS, GitOps was reworked around [Sources](../../../user/app-
 
 Polling is now configured on the Git source rather than on each stack. Deployments that use a source inherit its polling behavior. Webhooks are also consolidated into one per source, and calling it triggers a check for changes across all deployments that use that source.
 
-To change polling, go to **GitOps** > **Sources**, select the source, then select **Edit**. You can enable or disable polling and set the fetch interval from the **Settings** tab.
+To change polling, go to **App Delivery** > **Sources**, select the source, then select **Edit**. You can enable or disable polling and set the fetch interval from the **Settings** tab.
+
+<figure><img src="../../../.gitbook/assets/faq-gitops.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Because polling is set on the source, any change you make applies to every workflow that uses that source.
@@ -59,7 +61,11 @@ No. Shared Git credentials were restored in 2.44.0 STS, so you can create a cred
 
 When you [add a new Git source](../../../user/app-delivery/sources/git.md), enable **Use a shared credential** and select an existing [credential](../../../admin/settings/credentials/) rather than entering a new token for each repository.
 
+<figure><img src="../../../.gitbook/assets/2.45-gitops-faq-2.png" alt=""><figcaption></figcaption></figure>
+
 If you change or rotate a credential that is used by several sources, select the **Test Connection** option on each of those sources afterwards to confirm they can still reach their repositories.
+
+<figure><img src="../../../.gitbook/assets/gitops-faq-3.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Don't change the repository URL of an existing source to point at a different repository. Workflows that already use the source will be affected.
