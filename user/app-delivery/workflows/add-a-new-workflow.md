@@ -47,7 +47,7 @@ How often each environment checks itself against the source, even when the sourc
 {% step %}
 #### Add your sources
 
-Select a GitOps [source](../sources/) to pull files from, then pick a branch or tag using the ref selector. Select **Add source** to pull files from additional sources in the same workflow, or select the remove icon on a source's panel to drop it.
+Select a GitOps [source](../sources/) to pull files from, then pick a branch or tag using the ref selector. Select **Add source** to pull files from additional sources in the same workflow, or select the remove icon on a source's panel to drop it. If you only have one source, Portainer selects it for you.
 
 {% hint style="info" %}
 With the Edge stack engine, an artifact's files must all come from a single source - selecting files from a different source for the active artifact replaces its current selection. With the Reconciliation engine, a single artifact can combine files from multiple sources and references.
@@ -57,10 +57,20 @@ With the Edge stack engine, an artifact's files must all come from a single sour
 {% step %}
 #### Select your files
 
-For the artifact marked **Selecting files**, browse the file tree in each source's panel, or search for a file using a wildcard expression, then select the files that define it. You can also drag a file straight from a source's file tree onto the artifact card you want it in - this assigns the file and makes that artifact the active one, without needing to select it first. Based on the files you select, Portainer automatically detects whether the artifact is a Docker Compose or Kubernetes deployment.
+For the artifact marked **Selecting files**, browse the file tree in each source's panel and select individual files, or type a wildcard expression into the search box above it. Selecting from the tree adds a fixed **File** entry; entering an expression instead adds a **Pattern** entry - the expression itself is kept as a rule and re-matched against the source on every workflow sync, rather than expanded once into whichever files matched at the time. This means files later added to, or removed from, the matched location are picked up automatically without editing the workflow. You can also drag a file straight from a source's file tree onto the artifact card you want it in - this assigns the file and makes that artifact the active one, without needing to select it first. Based on the files currently selected or matched, Portainer automatically detects whether the artifact is a Docker Compose or Kubernetes deployment.
+
+A pattern supports the following wildcards:
+
+| Wildcard                    | Matches                                                                 |
+| --------------------------- | ----------------------------------------------------------------------- |
+| `*`                         | Any sequence of characters, but not `/`                                 |
+| `**`                        | Any number of directories, when it stands alone as a whole path segment |
+| `?`                         | Any single character, but not `/`                                       |
+| `[a-z]`, `[^a-z]`, `[!a-z]` | One character from a set, or not from it                                |
+| `{a,b}`                     | Any one of the given alternatives                                       |
 
 {% hint style="info" %}
-With the Reconciliation engine you can also select whole directories, which Portainer applies the way `kubectl apply -f <directory>` would. If a selected directory contains a `Chart.yaml`, it's detected as a Helm chart automatically - see [Helm chart options](../../../advanced/helm-chart-configuration-options.md) in the next step. Selecting a different chart later replaces the one already configured, which removes its release from every environment and installs the new one in its place.
+With the Reconciliation engine you can also select whole directories, which Portainer applies the way `kubectl apply -f <directory>` would. If a selected directory contains a `Chart.yaml`, it's detected as a Helm chart automatically - see Helm chart options in the next step. Selecting a different chart later replaces the one already configured, which removes its release from every environment and installs the new one in its place. A pattern can't select a chart - adding one to an artifact that currently has a chart configured replaces it, and every file the pattern matches deploys as a plain manifest instead.
 {% endhint %}
 {% endstep %}
 
@@ -73,12 +83,12 @@ With the Edge stack engine, you can select more than one file here regardless of
 
 Each stack to deploy is configured as its own **artifact** card:
 
-| Field           | Overview                                                                                                                                                                             |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Name            | A name for the artifact. This name can't be changed once the workflow is created.                                                                                                    |
-| Selecting files | Shows which artifact the file browser above is currently adding files to. Select **Select files here** on another artifact's card, or drag a file onto it, to make it active.        |
-| Depends on      | Choose other artifacts in this workflow that must be deployed before this one.                                                                                                       |
-| File list       | The files selected for this artifact. Drag to reorder them - for the Edge stack engine, the first file in the list is the entrypoint. Select the X icon next to a file to remove it. |
+| Field           | Overview                                                                                                                                                                                                                                                             |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name            | A name for the artifact. This name can't be changed once the workflow is created.                                                                                                                                                                                    |
+| Selecting files | Shows which artifact the file browser above is currently adding files to. Select **Select files here** on another artifact's card, or drag a file onto it, to make it active.                                                                                        |
+| Depends on      | Choose other artifacts in this workflow that must be deployed before this one.                                                                                                                                                                                       |
+| File list       | The files and patterns selected for this artifact, each labelled **File** or **Pattern**. Use the up and down arrows to reorder entries - for the Edge stack engine, the first entry in the list is the entrypoint. Select the X icon next to an entry to remove it. |
 
 Select **Add artifact** to deploy more than one stack from this workflow, or the remove icon on an artifact's card to delete it.
 
