@@ -107,33 +107,6 @@ Each user must also add a Git personal access token, which Portainer-IDP uses fo
 
 ***
 
-### Portainer-Migrate
-
-**To install**
-
-* The Kubernetes cluster that hosts the add-on must run Kubernetes 1.21 or later. The add-on image is `portainer/portainer-migrate`. For air-gapped installs, you can point the chart at a mirror of this image.
-* The add-on's backend must be able to reach the Portainer API. In most setups it discovers the address by itself, and the **Pre-flight** check reports the result. If discovery fails, set the chart value `portainerUrl`. If Portainer uses a self-signed certificate, also set `portainerTlsSkipVerify`.
-
-**To migrate**
-
-* **Source:** a Docker standalone or Docker Swarm environment in Portainer.
-* **Target:** a Kubernetes environment in Portainer. This can be the same cluster that hosts the add-on. The target needs a StorageClass that can provision PersistentVolumeClaims (PVCs) for named volumes.
-* **A Git repository and an access token.** Portainer-Migrate is GitOps-only. It commits the generated manifests to your repository, then creates a Portainer Kubernetes Git stack for each application. The token needs read/write access to repository contents. For a GitHub fine-grained token, this means **Contents: Read and write** and **Metadata: Read**.
-
-**Requirements for some workloads**
-
-The following apply only if your applications use these features:
-
-* **Copying volume data (cold copy):** the target cluster must be able to pull `python:3.13-alpine`, which Portainer-Migrate uses for a short-lived restore init container. Clusters with restricted admission policies may need to allow this image. The source container is stopped briefly while its data is copied.
-* **NFS-backed volumes or bind mounts:** the target nodes must be able to reach the same NFS server, which lets the data stay in place. Bind mounts also need a host path to `server:/export` mapping, which you set in the migration wizard.
-* **Ingress:** the target needs an Ingress controller. Without one, Portainer-Migrate falls back to NodePort Services.
-
-**Permissions**
-
-A non-administrator user needs access to the target namespace and, for Docker sources, permission to stop and start containers.
-
-***
-
 ## Some add-on versions need a newer version of Portainer
 
 A chart version can declare that it needs capabilities a given Portainer may not have - for example, a newer way of authenticating the add-on's own calls back to Portainer. Portainer only offers versions it can actually run: an incompatible version never appears in the install wizard's or the Configuration tab's version list, and if every published version is incompatible, the add-on's card in the catalog shows a disabled **Needs a newer Portainer** button instead of **Install**. Upgrading Portainer to a newer release resolves this.
