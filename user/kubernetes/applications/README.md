@@ -2,7 +2,7 @@
 
 In Kubernetes, an application is a collection of configuration settings and variables required to run your app. This may consist of a single container or multiple containers with complex interoperability.
 
-<figure><img src="../../../.gitbook/assets/2.35-kubernetes-applications-list.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3.1-applications-download-yaml.png" alt=""><figcaption></figcaption></figure>
 
 You can filter the list of applications by namespace using the **Namespace** dropdown.
 
@@ -42,6 +42,12 @@ Applications can be edited, webhooks can be configured and volumes can be detach
 
 {% content-ref url="detach-volume.md" %}
 [detach-volume.md](detach-volume.md)
+{% endcontent-ref %}
+
+You can download the YAML of one or more applications:
+
+{% content-ref url="download-application-yaml.md" %}
+[download-application-yaml.md](download-application-yaml.md)
 {% endcontent-ref %}
 
 If you no longer require an application, it can be removed:

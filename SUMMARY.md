@@ -70,6 +70,7 @@
     * [Edit a Helm application](user/kubernetes/applications/edit-helm.md)
     * [Webhooks](user/kubernetes/applications/webhooks.md)
     * [Detach a volume from an application](user/kubernetes/applications/detach-volume.md)
+    * [Download application YAML](user/kubernetes/applications/download-application-yaml.md)
     * [Remove an application](user/kubernetes/applications/remove.md)
   * [Networking](user/kubernetes/networking/README.md)
     * [Services](user/kubernetes/networking/services.md)

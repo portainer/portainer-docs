@@ -8,3 +8,9 @@ Portainer version 3.1 includes a number of new features, fixes and updates. For 
 
 ## New in this release <a href="#new-in-this-release" id="new-in-this-release"></a>
 
+#### Download application YAML
+
+You can now select one or more Kubernetes applications from the list view and download their manifests as a single zip, with one folder per application covering its workload, Services, and HorizontalPodAutoscaler. Cluster-assigned fields are stripped automatically, so the YAML is ready to re-apply or check into Git.
+
+<figure><img src=".gitbook/assets/3.1-applications-download-yaml.png" alt=""><figcaption></figcaption></figure>
+
