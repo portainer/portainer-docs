@@ -144,4 +144,6 @@ Here you can configure resource limits for your container. You can use the slide
 
 In this section you can configure the individual capabilities for your container. For more information refer to the [Docker documentation](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities).
 
+Enable **Drop all capabilities** to start the container with none of them, equivalent to `--cap-drop ALL`, then switch back on only the ones it needs. This matches what Kubernetes' Pod Security "restricted" level requires - at most `NET_BIND_SERVICE` added back.
+
 <figure><img src="../../../.gitbook/assets/2.15-containers-advanced-capabilities.png" alt=""><figcaption></figcaption></figure>

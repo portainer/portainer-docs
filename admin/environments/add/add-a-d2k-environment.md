@@ -36,3 +36,12 @@ A few things aren't available, since d2k either can't support them yet or they d
 * Container **kill**, **pause**, and **resume** are not available.
 * The **Images** list is read-only - d2k stores no images, since the kubelet pulls them on the cluster's nodes, so pulling, building, removing, pruning, and importing/exporting images aren't available.
 * Host details don't show disk usage.
+
+#### Kubernetes Pod Security
+
+If a Pod Security Standards policy enforces a "baseline" or "restricted" level on a D2K environment's namespace, Portainer shows what that namespace will refuse at the top of the container and stack creation forms, before you submit rather than after Kubernetes rejects it:
+
+* **baseline** - the namespace refuses privileged containers, unconfined seccomp or AppArmor security options, and capabilities Docker doesn't grant by default, such as `SYS_ADMIN`.
+* **restricted** - the namespace only runs containers that set a numeric non-root user, drop all capabilities, and enable the `no-new-privileges` security option; privileged mode is refused outright. Creating a new container on a "restricted" namespace turns on **Drop all capabilities** and adds `no-new-privileges` for you, and the **User** field (under Commands & logging) must be set to a numeric non-root user, such as `1000:1000`, before the form can be submitted.
+
+The same levels are shown on the D2K environment creation wizard once a namespace is chosen, and privileged mode is disabled on the create form for any D2K environment at "baseline" or "restricted".
