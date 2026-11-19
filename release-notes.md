@@ -2,6 +2,103 @@
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.45.4 LTS <a href="#release-2.45.4-lts" id="release-2.45.4-lts"></a>
+
+November 19, 2026
+
+### Breaking Changes
+
+* **`curl` removed from the kubectl shell image.** `curl` and its libraries were removed from the kubectl shell image to cut the OS-package vulnerabilities they brought in. Upgraded installs keep their existing kubectl shell image until it is updated with `--kubectl-shell-image` (or `KUBECTL_SHELL_IMAGE`) or through `PUT /api/settings`; new installs get the new image. Anyone who runs commands or scripts in the kubectl shell that call `curl` now gets `curl: not found`. Use `wget` instead, which is still included through busybox, or point `--kubectl-shell-image` at your own image if you need `curl`
+* **FIPS mode: backup schedules need a password.** In FIPS mode, Portainer now refuses to write or read unencrypted backups, because an unencrypted copy of the database isn't FIPS-compliant. Existing S3, Azure or local backup schedules with no password stop running after the upgrade, with only a warning in the server log. Saving one of these schedules, or running a backup on demand without a password, returns 400. Restoring an unencrypted, legacy-format or non-FIPS backup also returns 400. After upgrading, set a backup password on each schedule and keep it somewhere safe, because restoring needs it
+* **Stacks can only use networks the user has access to.** Non-administrators could previously attach containers and stacks to Docker networks they had no access to, which bypassed network access control. Now, a non-administrator's Compose or Swarm stack that uses such a network (as `external`, through `network_mode`, or as a build `network`) fails on start, update, Git redeploy and auto-update. A container create that names the network fails with "forbidden to join this network". This mostly affects stacks that use a shared network created by an administrator or outside Portainer. Grant the users or teams access to the network through its access control, or have an administrator deploy the stack
+* **In-app updates pull a specific version.** In-app updates on Docker standalone and Swarm used to pull the `latest` tag, which on Kubernetes could report success without changing anything. They now pull the exact Portainer version tag, for example `portainer/portainer-ee:2.45.4`. Installs that pull images through a private registry mirror or proxy need that version tag mirrored, or the update fails. `POST /api/system/update` now returns 500 when no newer version is available or the release feed can't be reached
+* **GitOps source connection tests need write access.** A user with only read access to a GitOps source could run its connection test against a different repository URL, which sent the source's stored credentials there. In CE and BE, `POST /gitops/sources/{id}/test` now requires write access to the source to change any field other than name or interval, and read-only users get a 403 if they try. Give users who need to test with different settings write access to the source
+* **Kubernetes permissions follow each user's role (since 2.45.0).** Portainer used to carry out some Kubernetes actions with the agent's cluster-wide permissions, so a user's role wasn't always enforced. It now uses each user's own ServiceAccount, limited to the namespaces their role covers.
+  * **Who is affected:** users other than administrators and environment administrators.
+  * **What fails:** these actions now fail with a Kubernetes "forbidden" error if they include cluster-scoped resources, custom resources that Portainer's roles don't grant (for example a cert-manager `Certificate`), or resources in namespaces the user can't access:
+    * manifest stack deploys, updates and removals;
+    * Git and webhook redeploys;
+    * application rolling restarts;
+    * Helm charts deployed from Git.
+  * **Stacks created before the upgrade** are affected when they're updated or redeployed.
+  * **Access outside their namespaces:** Operators, Helpdesk, Read-only and Standard users also lose access they previously had outside their namespaces, including to system namespaces.
+  * **Read-only and Helpdesk users can no longer view secret values** in the UI or the API, or read secrets with kubectl or a kubeconfig. Helm release values, manifests and notes are hidden from them, and the helm CLI no longer works to list releases.
+  * **What to do:** for deployments that fail with “forbidden”, have an administrator deploy those resources, or grant the extra permissions in the cluster. For Read-only and Helpdesk users who need to read secrets, give them a role that allows it in that namespace, such as Standard user or Operator. See [Kubernetes roles and bindings](https://docs.portainer.io/advanced/kubernetes-roles-and-bindings) for the current roles and how to extend them.
+
+### Known Issues <a href="#known-issues" id="known-issues"></a>
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this release <a href="#new-in-this-release" id="new-in-this-release"></a>
+
+**Security**
+
+* Fixed `GET /stacks` returning stacks from environments the user cannot access. Non-admin users could list Public stacks, including their stored environment variables and Git configuration, on any environment; the list is now filtered by environment access as well as stack access control
+* Fixed non-administrators being able to mount the Docker socket through the Compose `use_api_socket` option. The stack validator now rejects it when bind mounts are disabled for regular users
+* Fixed the Compose stack validator skipping services that use `profiles:` and not checking `include:`. Non-administrator stack restrictions now apply to every service whatever its profile and `include` is rejected when bind mounts are disabled for regular users; in BE, the SSRF policy checks on build-context and image-registry URLs, including for Edge stacks, also cover profiled services
+* Fixed stack updates authorizing against a caller-chosen environment. `PUT /stacks/{id}`, `POST /stacks/{id}/git` and `PUT /stacks/{id}/git/redeploy` now return 403 when `endpointId` differs from the environment the stack already belongs to, so users can no longer update, re-source or redeploy stacks on environments they cannot access
+* Fixed Git stack redeploy disclosing another environment’s stored stack environment variables. `PUT /stacks/{id}/git/redeploy` now rejects an `endpointId` that differs from the environment the stack already belongs to, so a user can no longer redeploy a stack they cannot access and read its stored `Env` values in the response
+* Restricted joining Docker networks to users with access to them. Non-administrators can no longer attach to a network they cannot access through container create (`HostConfig.NetworkMode`, `NetworkingConfig.EndpointsConfig`), service create and update, image build (`networkmode`), or Compose and Swarm stack create, update, start, migrate, Git redeploy and auto-update (external networks, stack networks whose name matches an existing network, `network_mode` and build `network`)
+* Fixed Docker network connect and disconnect checking only the network in the URL. Non-administrators now also need access to the container named in the request body, so they can no longer connect or disconnect containers they cannot access
+* Fixed Docker network authorization ignoring `EndpointSettings.NetworkID`. Container create and network connect now also check the network named by `NetworkID`, so non-administrators can no longer use it to join a network they cannot access
+* Fixed Docker proxy access checks using the wrong resource ID when the URL has extra path segments. Container, network (including connect and disconnect) and volume requests with a slash in the ID, and config and secret updates, are now authorized against the full ID instead of being skipped or checked against the last path segment
+* Fixed the `/websocket/attach` and `/websocket/exec` endpoints bypassing container access control. Non-administrators can now attach to or exec into only the containers they can access, and are refused with a 403 otherwise
+* Fixed `PUT /endpoints/{id}/forceupdateservice` skipping the service's resource control. Non-administrators can now force-update only the Swarm services they can access, and get a 404 for both inaccessible and missing services
+* Fixed stack start and stop acting on a different environment from the one authorized. `POST /stacks/{id}/start` and `POST /stacks/{id}/stop` now return 403 when `endpointId` is not the stack's own environment, except for administrators (in BE, also edge administrators) acting on orphaned stacks, so users can no longer stop or overwrite same-named stacks elsewhere
+* Fixed a flaw letting a user with only read access to a GitOps source point its connection test at an attacker-controlled repository URL, sending the source's stored git credentials there. Testing a source now requires write access to send any field other than name and interval
+* Restricted GitOps workflows to environments and namespaces the user can access. `GET /gitops/workflows`, `/gitops/workflows/summary`, `/gitops/workflows/{id}` and source workflow counts no longer show workflows on inaccessible environments (including through the `default` namespace fallback) and Kubernetes workflows require access to every namespace they deploy into; in BE, edge administrators detaching or destroying a workflow on a non-Edge environment also need access to that environment, permission to delete stacks there and access to the stack or its namespace
+* Prevented deleting or demoting the last administrator. Delete and update now return 409, in BE OAuth and LDAP role sync keeps the administrator role, and concurrent user changes can no longer be lost
+* Stopped registry responses returning the stored access token Portainer holds for ECR. Every registry list, inspect, create and update response and the environment registries list now clear it, including for administrators, and non-administrators no longer receive `AccessTokenExpiry` either
+* Fixed Kubernetes RBAC policies giving users access in Portainer to namespaces the cluster denies them: team namespaces when a least-privilege policy also grants the user directly, and a restricted `default` namespace. These no longer appear in namespace and resource lists or Helm release access, and scoped kubeconfig requests for them return 403
+* Fixed a deleted user's Kubernetes access surviving deletion. Deleting a user now removes them from Kubernetes and Docker RBAC policies and namespace access, deletes their service account so their token stops working, and stops policy charts from recreating it&#x20;
+* Restricted orphaned stack listing to Portainer administrators. `GET /stacks` with `IncludeOrphanedStacks` now returns 403 for every other role, so environment administrators, operators, helpdesk users and edge administrators can no longer list orphaned stacks from deleted environments&#x20;
+* Fixed `GET /stacks` skipping per-environment access checks for roles other than Portainer administrator. Environment administrators, operators and helpdesk users could list Swarm stacks on other environments through the `SwarmID` filter, and edge administrators could list stacks on environments they cannot access&#x20;
+* Fixed stored git credentials being sent to a different repository through the git repo endpoints. Borrowing a stack, Edge Stack or custom template's stored credentials in `POST /gitops/repo/refs`, `/gitops/repo/files/search`, `/gitops/repo/file/preview` and `/gitops/repo/helm/values` now requires the requested URL to match the stored repository URL
+* Redacted the stored secret access key and backup password in the S3 backup settings response, resolving the placeholder back from the database when settings are saved or a backup runs, and routed S3 backup and restore connections through the SSRF allow list so S3CompatibleHost can no longer reach internal addresses
+* Enforced encrypted backups in FIPS mode. A FIPS-enabled server now refuses to create a backup without a password, and returns 400 when asked to restore a backup that is unencrypted, uses the legacy format or came from a non-FIPS server, without changing anything on the instance
+* Added password protection for local scheduled backups and required a backup password in FIPS mode. In FIPS mode, saving an S3, Azure or local schedule or running an S3, Azure or local backup on demand without a password returns 400, and an existing schedule with no password is paused until one is set
+* Restricted the files sent to edge devices for Git-based Helm Edge Stacks. Each environment now receives only the chart directory, its local `file://` dependency charts and its own resolved values files, instead of the whole repository
+* Fixed Git-based Helm Edge Stacks loading local chart dependencies from outside the repository. Relative `file://` dependencies in `Chart.yaml` or `requirements.yaml` that resolve outside the repository are now rejected on stack create and update, when sending the stack to agents, and by the agent before deploying&#x20;
+* Fixed per-device Helm values files for Git-based Helm Edge Stacks accepting Edge IDs that change the file path. An Edge ID of `.` or `..`, or containing `/`, `\` or `|`, is now rejected when resolving `${PORTAINER_EDGE_ID}`, so a device can no longer load another device's values file&#x20;
+* Switched the FIPS kubectl shell image to the `kubectl-1.37-fips` package, fixing CVE-2026-39821, CVE-2026-56857 and CVE-2026-78663 (Critical)
+
+**Bug Fixes**
+
+* Fixed stack webhooks silently doing nothing for inactive (stopped) Git stacks since 2.44.0. Invoking a webhook now redeploys the stack even when it is stopped, while scheduled automatic updates still skip inactive stacks
+* Fixed Helm chart installs by a standard user failing when the release namespace already existed, because Helm's automatic namespace creation tried to patch it despite the user lacking permission. Namespace creation is now skipped whenever the namespace already exists
+* Fixed the Atomic option being ignored on a Helm chart's first install. A failed first install with Atomic set is now rolled back and removed instead of being left in a failed state, and its default timeout is raised from 15 to 30 minutes as for upgrades
+* Team leaders can no longer remove themselves from, or change their own role in, a team they lead. `DELETE` and `PUT /team_memberships/{id}` return 403 for a non-admin's own membership, and their own row hides the Remove button
+* Fixed the Users list never loading for team leaders, caused by a call to the admin-only settings endpoint
+* The Users page's New User form, row selection and bulk delete are now shown to administrators only, not to team leaders who can't use them
+* Fixed the git auto-update toggle on a Workflow or stack edit page showing enabled just because a poll interval was set, even with no webhook configured. Fixed the displayed webhook URL always using the regular stack endpoint, including for Edge Stacks, which need the Edge Stack webhook URL instead
+* Fixed the container console shrinking to a single line. The attach and exec consoles now fill the available window height, with a minimum height so the terminal always stays usable
+* Fixed deleting a network from the Docker network details screen showing an error toast alongside the success toast. Portainer no longer refetches the deleted network and only refreshes the network list
+* Fixed the success toast appearing twice when removing environments from the environments list or hiding Edge devices from the waiting room
+* Fixed OAuth users who had been made administrators being reset to standard users on every login when automatic team membership was disabled. Roles are now only synced from OAuth claims when automatic team membership is on&#x20;
+* Fixed non-admin users getting a 500 error when viewing the file of, deleting or migrating a Git-backed stack they have access to, most visibly on Kubernetes stacks&#x20;
+* Fixed Environment Administrators being denied access to registries on Kubernetes environments, for example a Harbor registry. Roles with full environment resource access (Environment Administrator, Operator, Helpdesk) now have the same registry access as on Docker environments
+* Fixed updated configuration files from Git not reaching containers after redeploying an Edge Stack with relative paths. With 'Refresh files on the device at every redeployment' enabled, the agent now overwrites the files in place instead of deleting and recreating the stack folder, so running containers keep a valid mount&#x20;
+* Fixed Edge Stack status not updating on async Edge environments added by changing the stack's Edge Groups. Deploy commands for newly targeted environments are now queued after the stack is saved, from the stack editor, Git and Helm repository updates, and GitOps workflow updates
+* Fixed scheduled agent updates failing on async Edge agents that use an authenticated registry or AWS IAM Roles Anywhere with 'failed to validate the compose file content'. The updater template has a `version` key again for older agents, and the agent no longer requires one&#x20;
+* Fixed the rollback on failure setting not being saved for Git-based Helm deployments. The choice is now recorded when the release is created, can be turned off when updating, and is shown correctly in the upgrade dialog&#x20;
+* Fixed the workflow Edit button for a regular (non-edge) stack opening the stack’s page instead of the git settings modal that configures it. Helm releases and Edge stacks keep their existing edit views&#x20;
+* Fixed "Unable to retrieve stack" appearing when switching a Helm release from Git to manual. Deleting a stack by name no longer refetches the removed stack and only refreshes the stack lists&#x20;
+* Fixed in-app Update now on Kubernetes reporting success without updating when the deployment ran the `latest` tag, then blocking retries. Portainer now sends the concrete latest version, refuses an update when no newer version exists, and shows the updater's failure reason
+* Fixed Ctrl+C and SIGTERM stopping only the internal Alertmanager and leaving Portainer running until killed. Portainer now shuts down cleanly and exits 0, giving in-flight requests up to 5 seconds and a running scheduled backup up to 30 seconds, and SIGHUP reloads the Alertmanager config&#x20;
+* Fixed the embedded Prometheus TSDB failing on SMB or NFS-backed data volumes with "Failed to read meta.json" and compaction errors. The TSDB now lives in a private directory under the OS temp dir, and the old `<data>/prometheus/tsdb` directory and leftovers from earlier runs are removed on startup&#x20;
+* Recommendations now skip untrusted Edge devices in the waiting room, matching the Environments list
+
 ## Release 2.45.3 LTS <a href="#release-2.45.3-lts" id="release-2.45.3-lts"></a>
 
 October 22, 2026

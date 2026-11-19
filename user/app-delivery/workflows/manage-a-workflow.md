@@ -10,7 +10,10 @@ To manage a GitOps workflow, in the left-hand menu select **Workflows**, then cl
 
 ### Edit a workflow
 
-To edit a workflow, from the workflow details view, select **Edit**. This returns you to the [workflow creation](add-a-new-workflow.md) steps with your preconfigured values, allowing changes to any field.
+To edit a workflow, from the workflow details view, select **Edit**.
+
+* If the workflow deploys a single regular stack (not an Edge stack) with Git settings, **Edit** opens the [Edit stack settings](../../docker/stacks/edit.md#edit-stack-settings) dialog directly, letting you change its Git repository, GitOps update settings, and environment variables without leaving the page.
+* Otherwise - including every Edge stack and reconciliation engine-based workflow - **Edit** returns you to the [workflow creation](add-a-new-workflow.md) steps with your preconfigured values, allowing changes to any field.
 
 To configure settings of your created stack, from the workflow details view, click the stack name to be taken to the Edit [Edge stack](../../edge/stacks/) view.
 
