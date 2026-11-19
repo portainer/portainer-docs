@@ -8,6 +8,59 @@ metaLinks:
 
 The following release notes are for the **Business Edition** of Portainer. For **Community Edition** release notes, refer to the [GitHub releases page](https://github.com/portainer/portainer/releases).
 
+## Release 2.39.9 LTS <a href="#release-2.39.8-lts" id="release-2.39.8-lts"></a>
+
+November 19, 2026
+
+## Release Notes
+
+### Breaking Changes
+
+* **`curl` removed from the kubectl shell image.** `curl` and its libraries were removed from the kubectl shell image to cut the OS-package vulnerabilities they brought in. Anyone who runs commands or scripts in the kubectl shell that call `curl` now gets `curl: not found`. Use `wget` instead, which is still included through busybox, or point `--kubectl-shell-image` at your own image if you need `curl`
+* **Stacks can only use networks the user has access to.** Non-administrators could previously attach containers and stacks to Docker networks they had no access to, which bypassed network access control. Now, a non-administrator's Compose or Swarm stack that uses such a network (as `external`, through `network_mode`, or as a build `network`) fails on start, update, Git redeploy and auto-update. A container create that names the network fails with "forbidden to join this network". This mostly affects stacks that use a shared network created by an administrator or outside Portainer. Grant the users or teams access to the network through its access control, or have an administrator deploy the stack
+* Portainer no longer trusts TLS certificates issued by eMudhra (emSign), following the compromise of eight eMudhra intermediate CAs (CVE-2026-111943). Connections to services that present an affected certificate, including OAuth/OIDC and LDAPS providers, registries and Git hosts, will fail after the upgrade. If your single sign-on or LDAP provider is affected, only the initial admin will be able to sign in.
+
+### Known Issues
+
+* On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot
+* kubectl port-forward fails with Portainer kubeconfig in some configurations
+
+**Known issues with Podman**
+
+* Support for only CentOS 9, Podman 5 rootful
+* Auto onboarding a Podman environment defaults to “Standard” and not “Podman”
+* It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)
+
+**Known issues with Talos clusters managed by Omni (BE only)**
+
+* Loading Omni specific information in the Cluster Details view and configuring an existing Talos cluster is currently restricted to Portainer Admins. Environment Admins will get a forbidden error when attempting to do this. This only applies to Omni configuration, and does not affect authentication for any other functionality in the cluster
+
+### New in this Release
+
+* Fixed non-administrators being able to mount the Docker socket through the Compose `use_api_socket` option. The stack validator now rejects it when bind mounts are disabled for regular users
+* Fixed the Compose stack validator skipping services that use `profiles:` and not checking `include:`. Non-administrator stack restrictions now apply to every service whatever its profile and `include` is rejected when bind mounts are disabled for regular users; in BE, the SSRF policy checks on build-context and image-registry URLs in Edge stacks also cover profiled services
+* Fixed stack updates authorizing against a caller-chosen environment. `PUT /stacks/{id}`, `POST /stacks/{id}/git` and `PUT /stacks/{id}/git/redeploy` now return 403 when `endpointId` differs from the stack's own environment, so users can no longer update, re-source or redeploy stacks on environments they cannot access
+* Restricted joining Docker networks to users with access to them. Non-administrators can no longer attach to a network they cannot access through container create (`HostConfig.NetworkMode`, `NetworkingConfig.EndpointsConfig`), service create and update, image build (`networkmode`), or Compose and Swarm stack create, update, start, migrate, Git redeploy and auto-update (external networks, stack networks whose name matches an existing network, `network_mode` and build `network`)
+* Fixed Docker network connect and disconnect checking only the network in the URL. Non-administrators now also need access to the container named in the request body, so they can no longer connect or disconnect containers they cannot access
+* Fixed Docker network authorization ignoring `EndpointSettings.NetworkID`. Container create and network connect now also check the network named by `NetworkID`, so non-administrators can no longer use it to join a network they cannot access
+* Fixed Docker proxy access checks using the wrong resource ID when the URL has extra path segments. Container, network (including connect and disconnect) and volume requests with a slash in the ID, and config and secret updates, are now authorized against the full ID instead of being skipped or checked against the last path segment
+* Fixed the `/websocket/attach` and `/websocket/exec` endpoints bypassing container access control. Non-administrators can now attach to or exec into only the containers they can access, and are refused with a 403 otherwise
+* Fixed `PUT /endpoints/{id}/forceupdateservice` skipping the service's resource control. Non-administrators can now force-update only the Swarm services they can access, and get a 404 for both inaccessible and missing services
+* Fixed stack start and stop acting on a different environment from the one authorized. `POST /stacks/{id}/start` and `POST /stacks/{id}/stop` now return 403 when `endpointId` is not the stack's own environment, except for administrators (in BE, also edge administrators) acting on orphaned stacks, so users can no longer stop or overwrite same-named stacks elsewhere
+* Stopped registry responses returning the stored access token Portainer holds for ECR. Every registry list, inspect, create and update response and the environment registries list now clear it, including for administrators, and non-administrators no longer receive `AccessTokenExpiry` either
+* Fixed a bypass of the `Hide bind mounts for non-administrators` setting. When it is enabled, Compose files deployed by non-administrators can no longer reference host files outside the stack directory, for example in configs, secrets, env\_file, build contexts or extends
+* Rejected Compose and Swarm stacks using `volumes_from` when non-administrators create, update, start or redeploy them with `Hide bind mounts for non-administrators` enabled, which let them inherit another container's host bind mounts
+* Updated the Go toolchain from 1.25.14 to 1.26.10, fixing CVE-2026-56857 and CVE-2026-78663 (both Critical), along with CVE-2026-111943, CVE-2026-97032, CVE-2026-97031, CVE-2026-94440, CVE-2026-94439, CVE-2026-78669, CVE-2026-78667, CVE-2026-78660, CVE-2026-78659, CVE-2026-56866, CVE-2026-94448 and CVE-2026-97030
+* Updated `golang.org/x/net` to 0.62.0, fixing CVE-2026-78663 (Critical), CVE-2026-97032, CVE-2026-78669, CVE-2026-78661, CVE-2026-78660, CVE-2026-78659 and CVE-2026-97045
+* Updated `golang.org/x/crypto` to 0.58.0, fixing CVE-2026-78662 and CVE-2026-56855
+* Updated `google.golang.org/grpc` to 1.83.2, fixing CVE-2026-84304 (High), CVE-2026-84445 (High) and CVE-2026-84303
+* Updated `github.com/containerd/containerd` to 1.7.36 and `github.com/containerd/containerd/v2` to 2.2.10, fixing CVE-2026-95837 (High), CVE-2026-53493, CVE-2026-53495 and CVE-2026-95838
+* Updated `github.com/klauspost/compress` to 1.20.3, `github.com/moby/sys/user` to 0.4.1 and `go.opentelemetry.io/otel` to 1.45.0, fixing CVE-2026-116591 (High), CVE-2026-61801 and CVE-2026-81870
+* Updated the kubectl shell image to Alpine 3.24.4, kubectl v1.37.1 and helm v4.3.1 (CVEs cleared to be confirmed with Docker Scout during the build)
+* Fixed stored git credentials being sent to a different repository through the git repo endpoints. Borrowing a stack, Edge Stack or custom template's stored credentials in `POST /gitops/repo/refs`, `/gitops/repo/files/search`, `/gitops/repo/file/preview`, `/gitops/repo/helm/values` and `/edge_stacks/create/repository` now requires the requested URL to match the stored repository URL
+* Switched the FIPS kubectl shell image to the `kubectl-1.37-fips` package, fixing CVE-2026-39821, CVE-2026-56857 and CVE-2026-78663 (Critical)
+* Fixed scheduled agent updates failing on async Edge agents that use an authenticated registry or AWS IAM Roles Anywhere with 'failed to validate the compose file content'. The updater template has a `version` key again for older agents, and the agent no longer requires one
+
 ## Release 2.39.8 LTS <a href="#release-2.39.8-lts" id="release-2.39.8-lts"></a>
 
 September 17, 2026

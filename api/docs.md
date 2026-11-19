@@ -14,8 +14,8 @@ You will need an access token in order to use the Portainer API. If you have not
 
 You can find our API documentation here:
 
-* [Business Edition (BE) 2.39.8 API Documentation](https://api-docs.portainer.io/?edition=ee\&version=2.39.8)
-* [Community Edition (CE) 2.39.8 API Documentation](https://api-docs.portainer.io/?edition=ce\&version=2.39.8)
+* [Business Edition (BE) 2.39.9 API Documentation](https://api-docs.portainer.io/?edition=ee\&version=2.39.9)
+* [Community Edition (CE) 2.39.9 API Documentation](https://api-docs.portainer.io/?edition=ce\&version=2.39.9)
 
 We have also provided some examples of API usage.
 
